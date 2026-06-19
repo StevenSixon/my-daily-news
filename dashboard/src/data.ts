@@ -9,6 +9,14 @@ export interface AnalysisSection {
   bullets?: string[];
 }
 
+export interface Appearance {
+  date: string;
+  reason: string;
+  starsTotal: number;
+  starsGained: number;
+  release: string;
+}
+
 export interface Project {
   id: string;
   fullName: string;
@@ -29,13 +37,20 @@ export interface Project {
   latestRelease: string;
   firstSeen: string;
   topics: string[];
+  appearances: Appearance[];
   analysis: AnalysisSection[];
 }
 
-export interface Daily {
+export interface Edition {
   date: string;
   count: number;
   projects: Project[];
 }
 
-export const daily: Daily = rawDaily as Daily;
+const data = rawDaily as { editions: Edition[] };
+
+/** All daily editions, newest first. */
+export const editions: Edition[] = data.editions;
+
+/** The most recent edition (convenience). */
+export const daily: Edition = editions[0];

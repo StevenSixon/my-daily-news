@@ -11,13 +11,14 @@ import {
   Scale,
   CalendarDays,
   Sparkles,
+  TrendingUp,
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Sheet, SheetContent, SheetClose } from "@/components/ui/sheet";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { cn } from "@/lib/utils";
-import { daily, type Project } from "@/data";
+import { editions, type Project, type Appearance } from "@/data";
 
 const LANG_COLOR: Record<string, string> = {
   Python: "#3572A5",
@@ -26,34 +27,45 @@ const LANG_COLOR: Record<string, string> = {
   JavaScript: "#f1e05a",
   Go: "#00ADD8",
   Rust: "#dea584",
+  C: "#555555",
+  "C++": "#f34b7d",
+  Java: "#b07219",
+  Ruby: "#701516",
 };
 
 function fmt(n: number): string {
   return n.toLocaleString("en-US");
 }
 
+function mmdd(d: string): string {
+  return d.length >= 10 ? d.slice(5) : d;
+}
+
 type SortKey = "gained" | "total" | "newest";
 
 export default function App() {
   const [dark, setDark] = useState(false);
+  const [editionIdx, setEditionIdx] = useState(0);
   const [query, setQuery] = useState("");
   const [lang, setLang] = useState<string>("全部");
   const [sort, setSort] = useState<SortKey>("gained");
   const [active, setActive] = useState<Project | null>(null);
 
+  const edition = editions[editionIdx];
+
   const languages = useMemo(() => {
-    const set = new Set(daily.projects.map((p) => p.language));
+    const set = new Set(edition.projects.map((p) => p.language).filter(Boolean));
     return ["全部", ...Array.from(set)];
-  }, []);
+  }, [edition]);
 
   const totals = useMemo(() => {
-    const stars = daily.projects.reduce((s, p) => s + p.starsTotal, 0);
-    const gained = daily.projects.reduce((s, p) => s + p.starsGained, 0);
+    const stars = edition.projects.reduce((s, p) => s + p.starsTotal, 0);
+    const gained = edition.projects.reduce((s, p) => s + p.starsGained, 0);
     return { stars, gained };
-  }, []);
+  }, [edition]);
 
   const filtered = useMemo(() => {
-    let list = daily.projects.filter((p) => {
+    let list = edition.projects.filter((p) => {
       const matchLang = lang === "全部" || p.language === lang;
       const q = query.trim().toLowerCase();
       const matchQ =
@@ -70,7 +82,7 @@ export default function App() {
       return b.starsGained - a.starsGained;
     });
     return list;
-  }, [query, lang, sort]);
+  }, [edition, query, lang, sort]);
 
   return (
     <div className={cn(dark && "dark")}>
@@ -80,7 +92,27 @@ export default function App() {
           <header className="border-b-2 border-foreground pt-10">
             <div className="flex items-start justify-between gap-4">
               <div className="flex items-center gap-2 text-[11px] uppercase tracking-[0.25em] text-muted-foreground">
-                <span className="font-mono-num">EDITION · {daily.date}</span>
+                <span className="font-mono-num">EDITION</span>
+                <span>·</span>
+                {editions.length > 1 ? (
+                  <select
+                    value={editionIdx}
+                    onChange={(e) => {
+                      setEditionIdx(Number(e.target.value));
+                      setActive(null);
+                    }}
+                    className="font-mono-num border border-border bg-card px-1.5 py-0.5 text-[11px] tracking-normal outline-none focus:border-primary"
+                    aria-label="选择日期"
+                  >
+                    {editions.map((e, i) => (
+                      <option key={e.date} value={i}>
+                        {e.date}
+                      </option>
+                    ))}
+                  </select>
+                ) : (
+                  <span className="font-mono-num">{edition.date}</span>
+                )}
               </div>
               <button
                 onClick={() => setDark((d) => !d)}
@@ -96,14 +128,14 @@ export default function App() {
             <p className="mb-5 mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground">
               每日追踪 GitHub 上正在爆发的 AI 工程项目 —— Star 增量、技术栈与深度解读。
               <span className="ml-1 text-foreground">
-                今日命中 <span className="font-mono-num font-semibold">{daily.count}</span> 个项目。
+                {edition.date} 命中 <span className="font-mono-num font-semibold">{edition.count}</span> 个项目。
               </span>
             </p>
           </header>
 
           {/* ── Stat strip ─────────────────────────────────────── */}
           <section className="grid grid-cols-3 divide-x divide-border border-b border-border">
-            <Stat label="命中项目" value={fmt(daily.count)} icon={<Sparkles className="h-3.5 w-3.5" />} />
+            <Stat label="命中项目" value={fmt(edition.count)} icon={<Sparkles className="h-3.5 w-3.5" />} />
             <Stat
               label="今日新增 Star"
               value={`+${fmt(totals.gained)}`}
@@ -166,7 +198,7 @@ export default function App() {
 
           <footer className="mt-10 flex items-center justify-between text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
             <span>my-daily-news pipeline</span>
-            <span className="font-mono-num">{daily.date}</span>
+            <span className="font-mono-num">{edition.date}</span>
           </footer>
         </div>
 
@@ -253,12 +285,22 @@ function ProjectRow({
               New
             </Badge>
           )}
-          <Badge
-            variant="outline"
-            className="h-5 rounded-sm border-border px-1.5 text-[10px] font-normal text-muted-foreground"
-          >
-            {p.category}
-          </Badge>
+          {p.streakDays > 1 && (
+            <Badge
+              variant="outline"
+              className="h-5 rounded-sm border-border px-1.5 text-[10px] font-normal text-muted-foreground"
+            >
+              连榜 {p.streakDays} 天
+            </Badge>
+          )}
+          {p.category && (
+            <Badge
+              variant="outline"
+              className="h-5 rounded-sm border-border px-1.5 text-[10px] font-normal text-muted-foreground"
+            >
+              {p.category}
+            </Badge>
+          )}
         </div>
 
         <p className="mt-1.5 text-sm leading-relaxed text-foreground/80">{p.oneLiner}</p>
@@ -289,6 +331,77 @@ function ProjectRow({
   );
 }
 
+/** Compact star-gain trend across the project's appearances. */
+function Trend({ appearances }: { appearances: Appearance[] }) {
+  if (!appearances.length) return null;
+
+  const W = 480;
+  const H = 96;
+  const padX = 8;
+  const padTop = 16;
+  const padBottom = 22;
+  const chartH = H - padTop - padBottom;
+  const maxGain = Math.max(...appearances.map((a) => a.starsGained), 1);
+  const n = appearances.length;
+  const slot = (W - padX * 2) / n;
+  const barW = Math.min(slot * 0.5, 36);
+
+  return (
+    <section>
+      <h3 className="font-serif-sc flex items-center gap-2 text-base font-semibold">
+        <span className="inline-block h-3 w-1 bg-primary" />
+        上榜走势
+        <span className="font-mono-num text-xs font-normal text-muted-foreground">
+          · 共 {n} 次
+        </span>
+      </h3>
+      <div className="mt-3 w-full overflow-hidden rounded-sm border border-border bg-card/60 p-2">
+        <svg viewBox={`0 0 ${W} ${H}`} className="h-24 w-full" preserveAspectRatio="none">
+          {appearances.map((a, i) => {
+            const h = Math.max((a.starsGained / maxGain) * chartH, 2);
+            const x = padX + slot * i + (slot - barW) / 2;
+            const y = padTop + (chartH - h);
+            return (
+              <g key={a.date + i}>
+                <rect
+                  x={x}
+                  y={y}
+                  width={barW}
+                  height={h}
+                  rx={2}
+                  className="fill-accent"
+                />
+                <text
+                  x={x + barW / 2}
+                  y={y - 4}
+                  textAnchor="middle"
+                  className="fill-foreground"
+                  style={{ fontSize: 11, fontFamily: "IBM Plex Mono, monospace" }}
+                >
+                  +{fmt(a.starsGained)}
+                </text>
+                <text
+                  x={x + barW / 2}
+                  y={H - 7}
+                  textAnchor="middle"
+                  className="fill-muted-foreground"
+                  style={{ fontSize: 10, fontFamily: "IBM Plex Mono, monospace" }}
+                >
+                  {mmdd(a.date)}
+                </text>
+              </g>
+            );
+          })}
+        </svg>
+      </div>
+      <p className="mt-2 flex items-center gap-1 text-xs text-muted-foreground">
+        <TrendingUp className="h-3.5 w-3.5" />
+        每次上榜的当日 Star 增量
+      </p>
+    </section>
+  );
+}
+
 function Detail({ project: p }: { project: Project }) {
   return (
     <div className="flex h-full flex-col">
@@ -301,9 +414,11 @@ function Detail({ project: p }: { project: Project }) {
                 New
               </Badge>
             )}
-            <span className="text-[11px] uppercase tracking-wider text-muted-foreground">
-              {p.category}
-            </span>
+            {p.category && (
+              <span className="text-[11px] uppercase tracking-wider text-muted-foreground">
+                {p.category}
+              </span>
+            )}
           </div>
           <SheetClose className="text-xs uppercase tracking-wider text-muted-foreground hover:text-foreground">
             关闭 ✕
@@ -332,41 +447,50 @@ function Detail({ project: p }: { project: Project }) {
             value={`+${fmt(p.starsGained)}`}
             accent
           />
-          <Meta icon={<Tag className="h-3.5 w-3.5" />} label="版本" value={p.latestRelease} />
-          <Meta icon={<Scale className="h-3.5 w-3.5" />} label="许可" value={p.license} />
+          <Meta icon={<Tag className="h-3.5 w-3.5" />} label="版本" value={p.latestRelease || "—"} />
+          <Meta icon={<Scale className="h-3.5 w-3.5" />} label="许可" value={p.license || "—"} />
         </div>
       </div>
 
       {/* body */}
       <ScrollArea className="flex-1">
         <div className="px-6 py-6">
-          <div className="mb-6 flex flex-wrap gap-1.5">
-            {p.topics.map((t) => (
-              <span
-                key={t}
-                className="rounded-sm bg-secondary px-1.5 py-0.5 text-[11px] text-secondary-foreground"
-              >
-                #{t}
-              </span>
-            ))}
-          </div>
+          {p.topics.length > 0 && (
+            <div className="mb-6 flex flex-wrap gap-1.5">
+              {p.topics.map((t) => (
+                <span
+                  key={t}
+                  className="rounded-sm bg-secondary px-1.5 py-0.5 text-[11px] text-secondary-foreground"
+                >
+                  #{t}
+                </span>
+              ))}
+            </div>
+          )}
 
           <div className="mb-6 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-xs text-muted-foreground">
-            <span className="inline-flex items-center gap-1">
-              <GitBranch className="h-3.5 w-3.5" />
-              {p.language}
-            </span>
-            <span className="inline-flex items-center gap-1">
-              <CalendarDays className="h-3.5 w-3.5" />
-              创建 {p.createdAt}
-            </span>
-            <span className="inline-flex items-center gap-1">
-              <CalendarDays className="h-3.5 w-3.5" />
-              发现 {p.firstSeen}
-            </span>
+            {p.language && (
+              <span className="inline-flex items-center gap-1">
+                <GitBranch className="h-3.5 w-3.5" />
+                {p.language}
+              </span>
+            )}
+            {p.createdAt && (
+              <span className="inline-flex items-center gap-1">
+                <CalendarDays className="h-3.5 w-3.5" />
+                创建 {p.createdAt}
+              </span>
+            )}
+            {p.firstSeen && (
+              <span className="inline-flex items-center gap-1">
+                <CalendarDays className="h-3.5 w-3.5" />
+                首次上榜 {p.firstSeen}
+              </span>
+            )}
           </div>
 
           <div className="space-y-7">
+            <Trend appearances={p.appearances} />
             {p.analysis.map((sec) => (
               <section key={sec.heading}>
                 <h3 className="font-serif-sc flex items-center gap-2 text-base font-semibold">
