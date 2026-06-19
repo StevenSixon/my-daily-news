@@ -1,0 +1,52 @@
+#!/usr/bin/env bash
+# 公开仓库安全防护：拦截把密钥 / 凭据 / token 提交到仓库。
+#
+# 启用（克隆后执行一次）：
+#   git config core.hooksPath scripts/git-hooks
+#
+# 误报时跳过（请务必先确认确实不含密钥）：
+#   git commit --no-verify
+set -uo pipefail
+
+fail=0
+red() { printf '\033[31m%s\033[0m\n' "$*" >&2; }
+
+staged="$(git diff --cached --name-only --diff-filter=ACM)"
+[ -z "$staged" ] && exit 0
+
+# ── 1) 按文件名拦截疑似密钥/凭据文件 ───────────────────────────────────────
+while IFS= read -r f; do
+  [ -z "$f" ] && continue
+  case "$f" in
+    .env.example) : ;;                                   # 模板允许
+    .env | .env.*) red "拒绝提交环境变量文件: $f"; fail=1 ;;
+    *.pem | *.key | *.p12 | *.pfx | id_rsa* | id_ed25519*) red "拒绝提交密钥文件: $f"; fail=1 ;;
+    *secret*.json | *credential*.json | *.token) red "拒绝提交疑似凭据文件: $f"; fail=1 ;;
+    *.feishu_token.json | *token*.json) red "拒绝提交 token 缓存: $f"; fail=1 ;;
+  esac
+done <<EOF
+$staged
+EOF
+
+# ── 2) 按内容拦截真实密钥值（跳过由公开数据生成的产物，避免误报）──────────
+scan_files="$(printf '%s\n' "$staged" | grep -vE '^(dashboard/bundle\.html|dashboard/src/daily\.json|dashboard/pnpm-lock\.yaml)$' || true)"
+if [ -n "$scan_files" ]; then
+  added="$(git diff --cached -U0 --diff-filter=ACM -- $scan_files | grep '^+' | grep -v '^+++' || true)"
+  patterns='ghp_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{30,}|sk-ant-[A-Za-z0-9_-]{20,}|sk-[A-Za-z0-9]{20,}|xox[baprs]-[A-Za-z0-9-]{10,}|AKIA[0-9A-Z]{16}|AIza[0-9A-Za-z_-]{30,}|-----BEGIN [A-Z ]*PRIVATE KEY-----'
+  hits="$(printf '%s\n' "$added" | grep -nE "$patterns" || true)"
+  if [ -n "$hits" ]; then
+    red "检测到疑似密钥值，已拦截提交："
+    printf '%s\n' "$hits" | cut -c1-100 | sed 's/^/   /' >&2
+    fail=1
+  fi
+fi
+
+if [ "$fail" -ne 0 ]; then
+  red ""
+  red "提交被拦截（公开仓库密钥防护）。"
+  echo "  · 密钥请放进 .env（已被 .gitignore 忽略），切勿入库。" >&2
+  echo "  · 确认确实无密钥后，可用  git commit --no-verify  跳过。" >&2
+  echo "  · 规则与背景见 SECURITY.md。" >&2
+  exit 1
+fi
+exit 0

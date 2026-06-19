@@ -1,10 +1,24 @@
+# ⚠️ 公开仓库：绝不提交任何密钥 / 凭据 / token。详见 SECURITY.md
 # 密钥与本地配置（绝不入库）
 .env
 .env.*
 !.env.example
 
+# 通用密钥/凭据模式（防误提交）
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+*secret*.json
+*credential*.json
+*.token
+.secrets/
+
 # 本地缓存/临时文件
 data/.feishu_token.json
+data/*token*.json
 
 # 日志
 logs/
