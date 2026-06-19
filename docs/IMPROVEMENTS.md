@@ -175,7 +175,7 @@
 |---|---|---|---|
 | 推送形态 | 名称 + 一句话 + star | 加「为什么值得看」一句理由 + 标签 | ✅ I-11a |
 | 去噪 | 只过滤是否 AI | 个性化兴趣权重、已读/已忽略状态 | |
-| 趋势 | `metadata.appearances[]` 时间序列已存但没人用 | 「周/月热度榜」「谁在持续涨」二次报告（见 DESIGN §10） | |
+| 趋势 | `metadata.appearances[]` 时间序列已存但没人用 | 「周/月热度榜」「谁在持续涨」二次报告（见 DESIGN §10） | ✅ I-11b |
 | 多渠道 | 仅飞书 | summary 已结构化，加邮件/Telegram 近乎零成本 | |
 | 质量评估 | LLM 报告无校验 | 轻量「自检 prompt」或抽样人工评分，防幻觉/空洞 | |
 
@@ -184,6 +184,14 @@
 - [x] `analyze.learn`：`_clean_tags` 规整（去重/去 #/截断 4 个）；写入 `metadata.json` 并随返回进日报；**未刷新时回退上次值**，轻量更新不丢字段。
 - [x] 日报 `_render_md` 与飞书卡片 `_build_card` 渲染「💡 值得看」行 + `标签`；老数据缺字段时优雅省略。
 - [x] 真实 LLM 调用验证产出质量；新增 6 个渲染/规整单测（共 48 用例全绿）。
+
+**I-11b 周热度趋势报告　✅ 已完成（2026-06-19）**
+- [x] 新增 `src/trend.py`：消费各项目 `metadata.appearances[]` 时间序列，窗口内聚合「🔥本周最热（star 增量）/ 📌持续上榜（出现天数）/ 🆕本周新晋」三榜。**纯函数 `aggregate` 可测**；数据全来自已落盘 metadata，不再调 GitHub/LLM。
+- [x] 输出 `trends/<date>-weekly.(md|json)`；`store.iter_project_metas` + `trends_root`；config 加 `report.trends_dir` 与 `trend.{window_days,top_n}`。
+- [x] CLI `python -m src.trend [--days N] [--push]`；`deploy/run.sh weekly` 阶段 + `com.daily-news.weekly.plist`（周一 08:30 推送）。
+- [x] `star 增量`取窗口内首尾 `stars_total` 之差，单点时退化为 `stars_gained`，兼顾两种来源。
+- [x] 新增 6 个聚合/渲染单测（共 54 用例全绿）；真实项目库端到端生成验证。
+- ⚠️ 已知：blocklist 之前学过的存量项目（如 iptv）仍会出现在趋势里——blocklist 只挡未来采集、不回溯清理。需要时手动删 `projects/<repo>/` + `index.json` 条目。
 
 ---
 
@@ -194,3 +202,4 @@
 - 2026-06-19：完成 I-9 卫生项 + I-7 测试套件（42 用例，pytest），并修复测试暴露的 `_find_json_block` 解析缺陷。
 - 2026-06-19：完成 I-8（依赖 == 锁定 + GitHub Actions CI）。P0~P2 全部完成，仅余 P3。
 - 2026-06-19：完成 I-11a（推送/日报加「为什么值得看」+ 标签），LLM 实测 + 6 单测，共 48 用例。
+- 2026-06-19：完成 I-11b（周热度趋势报告 src/trend.py + 周定时 + 推送），6 单测，共 54 用例。

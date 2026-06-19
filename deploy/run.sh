@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # launchd 调用入口：用 venv 绝对路径运行指定阶段（避免依赖交互 shell）
-# 用法：run.sh pipeline [--top-n 5]   |   run.sh push
+# 用法：run.sh pipeline [--top-n 5]   |   run.sh push   |   run.sh weekly [--push]
 set -euo pipefail
 
 PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -17,5 +17,6 @@ case "$STAGE" in
     bash "$PROJECT_DIR/dashboard/refresh.sh" || true
     ;;
   push)     exec "$PYTHON" -m src.push      "$@" ;;
-  *) echo "未知阶段：$STAGE（应为 pipeline 或 push）" >&2; exit 1 ;;
+  weekly)   exec "$PYTHON" -m src.trend     "$@" ;;
+  *) echo "未知阶段：$STAGE（应为 pipeline / push / weekly）" >&2; exit 1 ;;
 esac

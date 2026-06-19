@@ -42,7 +42,13 @@ llm:
 report:
   projects_dir: projects                 # 项目库（与日期无关，持续迭代）
   daily_dir: daily                       # 日报（按天）
+  trends_dir: trends                     # 周趋势报告（二次报告）
   timezone: Asia/Shanghai
+
+# 周趋势报告（python -m src.trend）
+trend:
+  window_days: 7                         # 统计窗口
+  top_n: 8                               # 各榜单展示条数
 
 # 飞书（接收者/密钥在 .env）
 feishu:

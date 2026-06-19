@@ -41,6 +41,22 @@ def daily_root() -> Path:
     return d
 
 
+def trends_root() -> Path:
+    d = ROOT / get_config().get("report", {}).get("trends_dir", "trends")
+    d.mkdir(parents=True, exist_ok=True)
+    return d
+
+
+def iter_project_metas() -> list[dict]:
+    """读取项目库下全部 metadata.json（趋势聚合用）。"""
+    metas: list[dict] = []
+    for child in sorted(projects_root().iterdir()):
+        m = read_json(child / "metadata.json") if child.is_dir() else None
+        if m:
+            metas.append(m)
+    return metas
+
+
 def project_dir(full_name: str) -> Path:
     d = projects_root() / repo_slug(full_name)
     d.mkdir(parents=True, exist_ok=True)

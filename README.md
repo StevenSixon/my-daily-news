@@ -38,6 +38,9 @@ python -m src.push
 
 # 单独调试某一步
 python -m src.collect          # 只看采集结果
+
+# 周趋势报告（聚合历史 metadata，本周最热/持续上榜/新晋；--push 推飞书）
+python -m src.trend --days 7 --push
 ```
 
 ## 配置要点（`config/config.yaml`）
@@ -62,13 +65,15 @@ python -m src.collect          # 只看采集结果
 PROJECT_DIR="$(pwd)"
 sed "s#PROJECT_DIR#${PROJECT_DIR}#g" deploy/com.daily-news.pipeline.plist > ~/Library/LaunchAgents/com.daily-news.pipeline.plist
 sed "s#PROJECT_DIR#${PROJECT_DIR}#g" deploy/com.daily-news.push.plist     > ~/Library/LaunchAgents/com.daily-news.push.plist
+sed "s#PROJECT_DIR#${PROJECT_DIR}#g" deploy/com.daily-news.weekly.plist   > ~/Library/LaunchAgents/com.daily-news.weekly.plist
 chmod +x deploy/run.sh
 
 # 2) 加载
 launchctl load ~/Library/LaunchAgents/com.daily-news.pipeline.plist
 launchctl load ~/Library/LaunchAgents/com.daily-news.push.plist
+launchctl load ~/Library/LaunchAgents/com.daily-news.weekly.plist
 ```
-- 06:30 跑流水线、08:00 推送（错峰，保证准时）
+- 06:30 跑流水线、08:00 推送（错峰，保证准时）；周一 08:30 推周趋势
 - Mac 睡眠会延迟触发；需保持唤醒/插电，或后续迁服务器用 cron
 
 ## 落地里程碑
