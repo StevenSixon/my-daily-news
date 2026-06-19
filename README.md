@@ -162,8 +162,8 @@ done
 ## 🗺️ Roadmap
 
 - [x] M1 闭环 → M2 双源 + 项目库 → M3 深度报告 + 日报 → M4 自动化 + 复访迭代
+- [x] GitHub Actions 定时自托管模板（[`daily-pipeline.yml`](.github/workflows/daily-pipeline.yml)）
 - [ ] 更多推送渠道（Telegram / Slack / Discord / 邮件）
-- [ ] GitHub Actions 一键定时模板
 - [ ] 可扩展到非 AI 类目（架构已预留 config 切换）
 
 完整设计见 [`docs/DESIGN.md`](docs/DESIGN.md)。

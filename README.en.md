@@ -164,8 +164,8 @@ The repo ships [`.github/workflows/daily-pipeline.yml`](.github/workflows/daily-
 ## 🗺️ Roadmap
 
 - [x] M1 closed loop → M2 dual source + project library → M3 deep reports + daily digest → M4 automation + smart revisits
+- [x] GitHub Actions self-hosting / scheduling template ([`daily-pipeline.yml`](.github/workflows/daily-pipeline.yml))
 - [ ] More delivery channels (Telegram / Slack / Discord / email)
-- [ ] One-click GitHub Actions scheduling template
 - [ ] Extensible to non-AI categories (config switch already reserved in the architecture)
 
 Full design doc: [`docs/DESIGN.md`](docs/DESIGN.md).
