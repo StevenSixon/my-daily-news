@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;700&family=IBM+Plex+Mono:wght@500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Warm editorial "newsprint" palette — ink on paper, emerald + amber accents */
+    --background: 40 38% 96%;
+    --foreground: 30 12% 12%;
+    --card: 42 40% 98%;
+    --card-foreground: 30 12% 12%;
+    --popover: 42 40% 98%;
+    --popover-foreground: 30 12% 12%;
+    --primary: 168 64% 22%;
+    --primary-foreground: 40 38% 97%;
+    --secondary: 38 30% 90%;
+    --secondary-foreground: 30 12% 18%;
+    --muted: 38 28% 91%;
+    --muted-foreground: 30 8% 42%;
+    --accent: 28 88% 52%;
+    --accent-foreground: 30 30% 10%;
+    --destructive: 0 72% 46%;
+    --destructive-foreground: 40 38% 97%;
+    --border: 34 20% 82%;
+    --input: 34 20% 82%;
+    --ring: 168 64% 22%;
+    --radius: 0.25rem;
+  }
+
+  .dark {
+    --background: 30 10% 9%;
+    --foreground: 40 30% 92%;
+    --card: 30 10% 12%;
+    --card-foreground: 40 30% 92%;
+    --popover: 30 10% 12%;
+    --popover-foreground: 40 30% 92%;
+    --primary: 162 58% 52%;
+    --primary-foreground: 30 10% 9%;
+    --secondary: 30 8% 18%;
+    --secondary-foreground: 40 30% 92%;
+    --muted: 30 8% 18%;
+    --muted-foreground: 40 12% 62%;
+    --accent: 30 90% 58%;
+    --accent-foreground: 30 10% 9%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 40 30% 92%;
+    --border: 30 8% 22%;
+    --input: 30 8% 22%;
+    --ring: 162 58% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Noto Sans SC', -apple-system, 'PingFang SC', 'Segoe UI', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer utilities {
+  .font-serif-sc {
+    font-family: 'Noto Serif SC', Georgia, 'Songti SC', serif;
+  }
+  .font-mono-num {
+    font-family: 'IBM Plex Mono', ui-monospace, 'SF Mono', monospace;
+    font-feature-settings: 'tnum' 1;
+  }
+  .paper-grain {
+    background-image: radial-gradient(hsl(30 12% 12% / 0.025) 1px, transparent 1px);
+    background-size: 4px 4px;
+  }
+}
