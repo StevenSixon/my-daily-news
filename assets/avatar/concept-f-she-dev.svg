@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bgf" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2a1656"/><stop offset="0.55" stop-color="#3a1c72"/><stop offset="1" stop-color="#160c30"/>
+    </linearGradient>
+    <radialGradient id="gf" cx="0.5" cy="0.42" r="0.6">
+      <stop offset="0" stop-color="#ff4fd8" stop-opacity="0.28"/><stop offset="1" stop-color="#ff4fd8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4a2f7a"/><stop offset="1" stop-color="#2c1b4d"/>
+    </linearGradient>
+    <linearGradient id="hoodief" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ff6fd0"/><stop offset="1" stop-color="#c13fae"/>
+    </linearGradient>
+    <linearGradient id="lensf" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1b2b4a"/><stop offset="1" stop-color="#10406b"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bgf)"/>
+  <rect width="512" height="512" rx="112" fill="url(#gf)"/>
+  <g fill="#7ff0ff" opacity="0.16" font-family="monospace" font-size="38" font-weight="700">
+    <text x="44" y="92">&lt;/&gt;</text><text x="398" y="470">{ }</text>
+  </g>
+  <!-- back hair -->
+  <path d="M150 250 q-16 150 30 262 H332 q46 -112 30 -262 q-30 -150 -136 -150 q-106 0 -136 150 Z" fill="url(#hair)"/>
+  <!-- hoodie -->
+  <path d="M150 512 V462 a150 150 0 0 1 212 0 V512 Z" fill="url(#hoodief)"/>
+  <path d="M196 470 q60 -48 120 0 q-60 -22 -120 0 Z" fill="#a82f96" opacity="0.7"/>
+  <!-- neck -->
+  <rect x="228" y="338" width="56" height="72" rx="24" fill="#f0bd92"/>
+  <rect x="228" y="338" width="56" height="40" rx="20" fill="#d59f74" opacity="0.5"/>
+  <!-- ears -->
+  <circle cx="160" cy="252" r="20" fill="#f3c9a6"/><circle cx="352" cy="252" r="20" fill="#f3c9a6"/>
+  <!-- head -->
+  <ellipse cx="256" cy="234" rx="98" ry="108" fill="#f3c9a6"/>
+  <ellipse cx="256" cy="260" rx="98" ry="82" fill="#e8b48c" opacity="0.32"/>
+  <!-- front hair / bangs + cyan streak -->
+  <path d="M158 234 q-8 -134 98 -140 q106 6 98 140 q-26 -70 -84 -64 q4 40 -22 64 q-30 -2 -48 18 q-22 16 -42 -18 Z" fill="url(#hair)"/>
+  <path d="M196 142 q-24 50 -34 92 q-6 -60 34 -92 Z" fill="#47bfff" opacity="0.9"/>
+  <!-- glasses -->
+  <rect x="178" y="216" width="74" height="56" rx="20" fill="url(#lensf)" stroke="#15101f" stroke-width="7"/>
+  <rect x="260" y="216" width="74" height="56" rx="20" fill="url(#lensf)" stroke="#15101f" stroke-width="7"/>
+  <line x1="252" y1="234" x2="260" y2="234" stroke="#15101f" stroke-width="7"/>
+  <g stroke="#7ff0ff" stroke-width="4" opacity="0.85" stroke-linecap="round">
+    <line x1="192" y1="234" x2="212" y2="234"/><line x1="192" y1="248" x2="224" y2="248"/><line x1="192" y1="262" x2="206" y2="262"/>
+    <line x1="274" y1="234" x2="300" y2="234"/><line x1="274" y1="248" x2="288" y2="248"/><line x1="274" y1="262" x2="312" y2="262"/>
+  </g>
+  <!-- brows + smile + blush -->
+  <g stroke="#3a2a5a" stroke-width="7" stroke-linecap="round"><line x1="190" y1="204" x2="240" y2="202"/><line x1="272" y1="202" x2="322" y2="204"/></g>
+  <path d="M224 300 q32 28 64 0" fill="none" stroke="#c06a52" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="188" cy="290" r="12" fill="#ff8fb0" opacity="0.45"/><circle cx="324" cy="290" r="12" fill="#ff8fb0" opacity="0.45"/>
+</svg>

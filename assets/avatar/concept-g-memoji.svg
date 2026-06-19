@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bgg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1f2b5e"/><stop offset="0.5" stop-color="#2a2f74"/><stop offset="1" stop-color="#10122e"/>
+    </linearGradient>
+    <radialGradient id="gg" cx="0.5" cy="0.4" r="0.6">
+      <stop offset="0" stop-color="#47bfff" stop-opacity="0.4"/><stop offset="1" stop-color="#47bfff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hoodieg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2fd6c6"/><stop offset="1" stop-color="#159f9a"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bgg)"/>
+  <rect width="512" height="512" rx="112" fill="url(#gg)"/>
+  <!-- shoulders -->
+  <path d="M104 512 V456 a152 152 0 0 1 304 0 V512 Z" fill="url(#hoodieg)"/>
+  <path d="M180 470 q76 -54 152 0 q-76 -24 -152 0 Z" fill="#0f7d78" opacity="0.7"/>
+  <!-- neck -->
+  <rect x="228" y="340" width="56" height="70" rx="24" fill="#eab488"/>
+  <rect x="228" y="340" width="56" height="38" rx="19" fill="#cf9868" opacity="0.5"/>
+  <!-- ears + headphone cups -->
+  <circle cx="160" cy="252" r="22" fill="#f4cba8"/><circle cx="352" cy="252" r="22" fill="#f4cba8"/>
+  <!-- head -->
+  <ellipse cx="256" cy="236" rx="100" ry="108" fill="#f4cba8"/>
+  <ellipse cx="256" cy="262" rx="100" ry="82" fill="#e7b083" opacity="0.3"/>
+  <!-- short neat hair -->
+  <path d="M156 228 q-2 -120 100 -126 q102 6 100 126 q-26 -64 -100 -60 q-74 -4 -100 60 Z" fill="#26354f"/>
+  <path d="M256 102 q70 4 96 78 q-44 -40 -96 -34 Z" fill="#33476a"/>
+  <!-- eyes (friendly dots) -->
+  <circle cx="212" cy="240" r="15" fill="#1d2740"/><circle cx="300" cy="240" r="15" fill="#1d2740"/>
+  <circle cx="207" cy="234" r="5" fill="#fff"/><circle cx="295" cy="234" r="5" fill="#fff"/>
+  <!-- brows -->
+  <g stroke="#26354f" stroke-width="8" stroke-linecap="round"><line x1="190" y1="212" x2="234" y2="210"/><line x1="278" y1="210" x2="322" y2="212"/></g>
+  <!-- smile -->
+  <path d="M214 292 q42 36 84 0" fill="none" stroke="#b9745a" stroke-width="9" stroke-linecap="round"/>
+  <!-- blush -->
+  <circle cx="190" cy="280" r="13" fill="#ff9a7a" opacity="0.4"/><circle cx="322" cy="280" r="13" fill="#ff9a7a" opacity="0.4"/>
+  <!-- headphones -->
+  <path d="M150 246 q-2 -118 106 -118 q108 0 106 118" fill="none" stroke="#202b46" stroke-width="15" stroke-linecap="round"/>
+  <rect x="126" y="228" width="48" height="64" rx="22" fill="#243152"/>
+  <rect x="136" y="240" width="28" height="40" rx="14" fill="#47bfff"/>
+  <rect x="338" y="228" width="48" height="64" rx="22" fill="#243152"/>
+  <rect x="348" y="240" width="28" height="40" rx="14" fill="#47bfff"/>
+</svg>

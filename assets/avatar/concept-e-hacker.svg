@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#10183a"/>
+      <stop offset="0.5" stop-color="#1b2350"/>
+      <stop offset="1" stop-color="#0a0c20"/>
+    </linearGradient>
+    <radialGradient id="ge" cx="0.5" cy="0.4" r="0.6">
+      <stop offset="0" stop-color="#47bfff" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#47bfff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="beanie" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7e14ff"/>
+      <stop offset="1" stop-color="#47bfff"/>
+    </linearGradient>
+    <linearGradient id="hoodie2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b3658"/>
+      <stop offset="1" stop-color="#1a2238"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="512" height="512" rx="112" fill="url(#bge)"/>
+  <rect width="512" height="512" rx="112" fill="url(#ge)"/>
+
+  <!-- terminal prompt motif -->
+  <g fill="#47bfff" opacity="0.18" font-family="monospace" font-size="46" font-weight="700">
+    <text x="40" y="96">&gt;_</text>
+    <text x="398" y="476">~$</text>
+  </g>
+
+  <!-- shoulders / hoodie -->
+  <path d="M100 512 V456 a156 156 0 0 1 312 0 V512 Z" fill="url(#hoodie2)"/>
+  <path d="M256 400 l34 112 h-68 Z" fill="#0f1626" opacity="0.6"/>
+  <!-- drawstrings -->
+  <line x1="238" y1="404" x2="232" y2="470" stroke="#cfd8ee" stroke-width="6" stroke-linecap="round"/>
+  <line x1="274" y1="404" x2="280" y2="470" stroke="#cfd8ee" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- neck -->
+  <rect x="228" y="338" width="56" height="74" rx="24" fill="#e7b083"/>
+  <rect x="228" y="338" width="56" height="40" rx="20" fill="#cd9468" opacity="0.5"/>
+
+  <!-- ears -->
+  <circle cx="162" cy="250" r="21" fill="#e7b083"/>
+  <circle cx="350" cy="250" r="21" fill="#e7b083"/>
+
+  <!-- head -->
+  <ellipse cx="256" cy="232" rx="98" ry="108" fill="#f2c6a2"/>
+  <ellipse cx="256" cy="258" rx="98" ry="84" fill="#e7b083" opacity="0.32"/>
+
+  <!-- beard -->
+  <path d="M168 232 q4 96 88 110 q84 -14 88 -110 q-30 70 -88 66 q-58 4 -88 -66 Z" fill="#3a2f24"/>
+  <path d="M196 300 q60 44 120 0 q-60 18 -120 0 Z" fill="#f2c6a2"/>
+
+  <!-- beanie -->
+  <path d="M150 196 a106 96 0 0 1 212 0 Z" fill="url(#beanie)"/>
+  <rect x="146" y="186" width="220" height="30" rx="15" fill="#5e34c8"/>
+  <g stroke="#ffffff" stroke-width="3" opacity="0.18">
+    <line x1="186" y1="120" x2="186" y2="186"/>
+    <line x1="226" y1="104" x2="226" y2="186"/>
+    <line x1="256" y1="100" x2="256" y2="186"/>
+    <line x1="286" y1="104" x2="286" y2="186"/>
+    <line x1="326" y1="120" x2="326" y2="186"/>
+  </g>
+
+  <!-- glasses -->
+  <g>
+    <circle cx="216" cy="244" r="36" fill="#16263f" stroke="#0c1422" stroke-width="7"/>
+    <circle cx="296" cy="244" r="36" fill="#16263f" stroke="#0c1422" stroke-width="7"/>
+    <line x1="252" y1="244" x2="260" y2="244" stroke="#0c1422" stroke-width="7"/>
+    <g stroke="#7ff0ff" stroke-width="4" opacity="0.9" stroke-linecap="round">
+      <line x1="200" y1="238" x2="226" y2="238"/>
+      <line x1="200" y1="250" x2="216" y2="250"/>
+      <line x1="282" y1="238" x2="308" y2="238"/>
+      <line x1="282" y1="250" x2="298" y2="250"/>
+    </g>
+  </g>
+
+  <!-- eyebrows -->
+  <g stroke="#3a2f24" stroke-width="8" stroke-linecap="round">
+    <line x1="186" y1="200" x2="234" y2="202"/>
+    <line x1="278" y1="202" x2="326" y2="200"/>
+  </g>
+</svg>
