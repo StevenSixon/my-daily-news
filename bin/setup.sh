@@ -106,9 +106,9 @@ install_plist() {
   <string>com.daily-news.${name}</string>
   <key>ProgramArguments</key>
   <array>
-    <string>$PROJECT_DIR/.venv/bin/python</string>
-    <string>-m</string>
-    <string>src.${name/pipeline/pipeline}</string>
+    <string>/bin/bash</string>
+    <string>$PROJECT_DIR/deploy/run.sh</string>
+    <string>${name}</string>
 PLIST_EOF
 
   if [ "$name" = "pipeline" ]; then
