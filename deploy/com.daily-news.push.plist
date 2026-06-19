@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 08:00 读取当天日报并推送飞书。把 PROJECT_DIR 占位符替换为绝对路径。 -->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.daily-news.push</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>PROJECT_DIR/deploy/run.sh</string>
+    <string>push</string>
+  </array>
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Hour</key><integer>8</integer>
+    <key>Minute</key><integer>0</integer>
+  </dict>
+  <key>StandardOutPath</key>
+  <string>PROJECT_DIR/logs/launchd.push.out.log</string>
+  <key>StandardErrorPath</key>
+  <string>PROJECT_DIR/logs/launchd.push.err.log</string>
+  <key>RunAtLoad</key>
+  <false/>
+</dict>
+</plist>

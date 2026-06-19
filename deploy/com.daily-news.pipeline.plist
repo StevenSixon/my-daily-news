@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 06:30 采集+学习+生成日报。安装：见 README「部署（launchd）」。
+     注意把 PROJECT_DIR 占位符替换为绝对路径。 -->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.daily-news.pipeline</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>PROJECT_DIR/deploy/run.sh</string>
+    <string>pipeline</string>
+  </array>
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Hour</key><integer>6</integer>
+    <key>Minute</key><integer>30</integer>
+  </dict>
+  <key>StandardOutPath</key>
+  <string>PROJECT_DIR/logs/launchd.pipeline.out.log</string>
+  <key>StandardErrorPath</key>
+  <string>PROJECT_DIR/logs/launchd.pipeline.err.log</string>
+  <key>RunAtLoad</key>
+  <false/>
+</dict>
+</plist>

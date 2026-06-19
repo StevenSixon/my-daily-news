@@ -1,0 +1,18 @@
+# 密钥与本地配置（绝不入库）
+.env
+.env.*
+!.env.example
+
+# 运行产物
+logs/
+__pycache__/
+*.pyc
+.venv/
+venv/
+data/.feishu_token.json
+
+# 抓取/学习产物（按需保留；如想纳入版本管理可删掉下面这行）
+# reports/
+
+# OS
+.DS_Store

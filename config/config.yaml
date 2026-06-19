@@ -1,0 +1,48 @@
+# ===== AI 项目日报助理 配置 =====
+# 密钥/base_url 不放这里，统一在 .env
+
+# 关注范围（未来扩展只改这里）
+focus:
+  categories: ["AI 应用"]                 # 后续可加 "Agent框架" "RAG" "多模态"
+  search_topics: [ai, llm, agent, rag, llm-agent, ai-agent, generative-ai, chatbot]
+  min_stars: 200
+  created_within_days: 30
+  pushed_within_days: 14
+
+# 采集
+collect:
+  sources: [trending, search]           # 双源
+  trending_since: [daily, weekly]
+  per_topic_limit: 20                    # 每个 topic 搜索取前 N
+  top_n: 5                               # 每天最多深度学习的项目数
+
+# 学习
+analyze:
+  depth: medium                          # README + docs + release
+  max_readme_chars: 12000
+
+# 复访迭代：老项目何时重新调 LLM 重学
+analyze_revisit:
+  on_new_release: true                   # 出新 release 则重学
+  on_star_jump_pct: 30                   # star 较上次增长 >= 30% 则重学
+  else_lightweight: true                 # 否则只更新 metadata + history，不调 LLM
+
+# 多模型可插拔：换模型只改这里（密钥/base_url 在 .env）
+llm:
+  provider: deepseek                    # anthropic | openai | gemini | deepseek | openai_compatible | ollama
+  model: deepseek-v4-pro
+  temperature: 0.3
+  max_tokens: 4000
+  fallback:                              # 主模型失败时按序降级（可留空 [])
+    - { provider: deepseek, model: deepseek-chat }
+
+# 报告与目录
+report:
+  projects_dir: projects                 # 项目库（与日期无关，持续迭代）
+  daily_dir: daily                       # 日报（按天）
+  timezone: Asia/Shanghai
+
+# 飞书（接收者/密钥在 .env）
+feishu:
+  card_top_n: 5
+  header_template: blue
