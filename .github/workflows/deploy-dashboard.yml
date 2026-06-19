@@ -1,14 +1,30 @@
-name: Deploy dashboard to Pages
+name: Build & deploy dashboard to Pages
 
-# Publishes dashboard/bundle.html as the GitHub Pages site (served as index.html).
-# The bundle is committed by the pipeline's refresh step, so no build runs here.
+# Builds the dashboard from source on every push that touches its inputs, then
+# publishes the single-file artifact to GitHub Pages. The bundle is NOT
+# committed — CI regenerates data (gen-data.mjs) and builds a self-contained
+# index.html (vite-plugin-singlefile) fresh each run.
 # One-time setup: repo Settings → Pages → Source = "GitHub Actions".
 
 on:
   push:
     branches: [main]
     paths:
-      - dashboard/bundle.html
+      # Dashboard source
+      - dashboard/src/**
+      - dashboard/index.html
+      - dashboard/scripts/**
+      - dashboard/package.json
+      - dashboard/pnpm-lock.yaml
+      - dashboard/vite.config.ts
+      - dashboard/tsconfig*.json
+      - dashboard/tailwind.config.js
+      - dashboard/postcss.config.js
+      - dashboard/.npmrc
+      # Pipeline data the dashboard is generated from
+      - daily/**
+      - projects/**
+      # This workflow itself
       - .github/workflows/deploy-dashboard.yml
   workflow_dispatch:
 
@@ -27,14 +43,39 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
+    defaults:
+      run:
+        working-directory: dashboard
     steps:
       - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: dashboard/pnpm-lock.yaml
+
+      - name: Install deps
+        run: pnpm install --frozen-lockfile
+
+      - name: Generate data from pipeline output
+        run: pnpm gen
+
+      - name: Build single-file bundle
+        run: pnpm exec vite build
+
       - name: Stage site
         run: |
-          mkdir -p _site
-          cp dashboard/bundle.html _site/index.html
+          mkdir -p ../_site
+          cp dist/index.html ../_site/index.html
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
+
       - id: deploy
         uses: actions/deploy-pages@v4

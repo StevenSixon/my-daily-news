@@ -35,3 +35,8 @@ venv/
 
 # OS
 .DS_Store
+
+# dashboard build artifacts (CI builds & deploys; not committed)
+dashboard/bundle.html
+dashboard/dist/
+dashboard/.parcel-cache/
