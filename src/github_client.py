@@ -3,6 +3,8 @@ from __future__ import annotations
 
 import requests
 from bs4 import BeautifulSoup
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
 from .utils import parse_int
 
@@ -21,12 +23,24 @@ class GitHubClient:
         if token:
             self.session.headers["Authorization"] = f"Bearer {token}"
 
+        # 限流/5xx 自动退避重试（0s, 2s, 4s…），尊重 Retry-After
+        retry = Retry(
+            total=3,
+            backoff_factor=1.0,
+            status_forcelist=(429, 500, 502, 503, 504),
+            allowed_methods=frozenset({"GET"}),
+            respect_retry_after_header=True,
+            raise_on_status=False,
+        )
+        adapter = HTTPAdapter(max_retries=retry)
+        self.session.mount("https://", adapter)
+        self.session.mount("http://", adapter)
+
     # ---------- Trending（HTML 抓取，无官方 API）----------
     def trending(self, since: str = "daily", language: str = "") -> list[dict]:
         url = f"{TRENDING}/{language}".rstrip("/")
-        resp = requests.get(
-            url, params={"since": since}, headers={"User-Agent": UA}, timeout=self.timeout
-        )
+        # 走 self.session：复用连接池 + 共享退避重试策略
+        resp = self.session.get(url, params={"since": since}, timeout=self.timeout)
         resp.raise_for_status()
         soup = BeautifulSoup(resp.text, "html.parser")
 

@@ -2,10 +2,28 @@
 from __future__ import annotations
 
 import json
+import os
+import tempfile
 from pathlib import Path
 
 from .config_loader import ROOT, get_config
 from .utils import repo_slug
+
+
+def _atomic_write_text(path: Path, text: str) -> None:
+    """写临时文件 + os.replace 原子替换，避免写入中断损坏目标文件。"""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    fd, tmp = tempfile.mkstemp(dir=str(path.parent), suffix=".tmp")
+    try:
+        with os.fdopen(fd, "w", encoding="utf-8") as f:
+            f.write(text)
+        os.replace(tmp, path)  # 同一文件系统内原子替换
+    except Exception:
+        try:
+            os.unlink(tmp)
+        except OSError:
+            pass
+        raise
 
 INDEX_PATH = ROOT / "data" / "index.json"
 CLASSIFY_LOG = ROOT / "data" / "classify-log.jsonl"
@@ -43,9 +61,7 @@ def load_index() -> dict:
 
 
 def save_index(index: dict) -> None:
-    INDEX_PATH.parent.mkdir(parents=True, exist_ok=True)
-    with open(INDEX_PATH, "w", encoding="utf-8") as f:
-        json.dump(index, f, ensure_ascii=False, indent=2)
+    _atomic_write_text(INDEX_PATH, json.dumps(index, ensure_ascii=False, indent=2))
 
 
 def read_json(path: Path) -> dict | None:
@@ -56,9 +72,7 @@ def read_json(path: Path) -> dict | None:
 
 
 def write_json(path: Path, data) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+    _atomic_write_text(path, json.dumps(data, ensure_ascii=False, indent=2))
 
 
 def write_text(path: Path, text: str) -> None:

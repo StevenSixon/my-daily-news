@@ -24,9 +24,9 @@
 | ✅ **P0** | I-1 | 分类误判修复（iptv 案例）+ 关键词词边界 + reason 落盘 | 产品对错 | 小 |
 | ✅ **P0** | I-2 | 修 Search 源 `stars_gained=0` 排序偏差 | 产品对错 | 小 |
 | ✅ **P0** | I-3 | 失败告警（pipeline 崩了也要推一条，别静默） | 产品对错 | 小 |
-| **P1** | I-4 | GitHub 请求加退避重试 + 复用 session | 可靠性 | 小 |
-| **P1** | I-5 | 修复访逻辑割裂（`on_new_release` 当前失效） | 可靠性 | 中 |
-| **P1** | I-6 | `index.json` 原子写入 | 可靠性 | 小 |
+| ✅ **P1** | I-4 | GitHub 请求加退避重试 + 复用 session | 可靠性 | 小 |
+| ✅ **P1** | I-5 | 修复访逻辑割裂（`on_new_release` 当前失效） | 可靠性 | 中 |
+| ✅ **P1** | I-6 | `index.json` 原子写入 | 可靠性 | 小 |
 | **P2** | I-7 | 解析/分类/JSON 工具函数补单测 + Trending HTML fixture | 工程化 | 中 |
 | **P2** | I-8 | 锁依赖版本 + 最简 CI | 工程化 | 小 |
 | **P2** | I-9 | 杂项：`.gitignore` 去重、token 文件权限、repo 膨胀 | 卫生 | 小 |
@@ -84,39 +84,40 @@
 
 ## P1 — 可靠性
 
-### I-4　GitHub 请求无重试/退避（与 DESIGN §8 承诺不符）
+### I-4　GitHub 请求无重试/退避（与 DESIGN §8 承诺不符）　✅ 已完成（2026-06-19）
 **问题**
 - DESIGN §8 写了「GitHub 限流 → 指数退避重试」，但 `github_client.py` 全是裸 `requests.get` + `raise_for_status()`，无任何重试。
 - Trending 抓取还绕过了 `self.session`（没带 token、没复用连接池）。
 
 **改进**
-- [ ] 给 `session` 挂 `urllib3.Retry`（对 429/5xx 退避重试），或引入 `tenacity`。
-- [ ] Trending 走 `self.session`，统一连接复用。
-- [ ] 读取并尊重 `X-RateLimit-Remaining` / `Retry-After` 响应头。
+- [x] `session` 挂 `urllib3.Retry`（total=3、backoff_factor=1.0 → 0/2/4s、429+5xx、`respect_retry_after_header=True`），mount 到 http(s)。
+- [x] Trending 改走 `self.session.get`，统一连接复用 + 共享退避。
+- [x] `respect_retry_after_header=True` 已尊重 `Retry-After`。（剩余额度的主动观测可后续按需加。）
 
 **涉及**：`src/github_client.py`
 
 ---
 
-### I-5　复访判定逻辑被割裂（`on_new_release` 当前失效）
+### I-5　复访判定逻辑被割裂（`on_new_release` 当前失效）　✅ 已完成（2026-06-19）
 **问题**
 - `collect._decide()` 自己注释「复访需要 release 信息 → 在 analyze 阶段处理，这里用 star 增长粗判」。
 - 但 `pipeline.run()` **只把 `decision in ("new","revisit")` 的喂给 analyze**。于是「出了新 release 但 star 没涨 30%」的老项目，在 collect 阶段被判 `skip_lightweight`，**到不了 analyze**，`analyze_revisit.on_new_release: true` 形同虚设。
 
-**改进（二选一）**
-- [ ] 方案 A：collect 阶段就取 `latest_release`（多一次 API，PAT 额度足够），让 `_decide` 能看到 release 变化。
-- [ ] 方案 B：让 `skip_lightweight` 项目也进 analyze，由其已有的 `_should_revisit`（含 release 判定）最终裁决。
+**改进（采用方案 B，无重复抓 release）**
+- [x] `pipeline._run` 把**所有老项目**（revisit + skip_lightweight）都送进 `analyze.learn`，由其权威的 `_should_revisit`（含 release 判定）最终裁决；新项目仍受 `top_n` 限制控成本。
+- [x] `analyze.learn` 返回新增 `refreshed` 标志；日报**只收 new + 实际刷新**的老项目，未变动项目仅静默更新 streak/metadata，不刷屏。
+- [x] 用 stub 单测验证：被 collect 判 `skip_lightweight` 但有新 release 的项目，仍能进 analyze 刷新并进日报。
 
-**涉及**：`src/collect.py`、`src/pipeline.py`、`src/analyze.py`
+**涉及**：`src/pipeline.py`、`src/analyze.py`
 
 ---
 
-### I-6　`index.json` 非原子写入
+### I-6　`index.json` 非原子写入　✅ 已完成（2026-06-19）
 **问题**
 - `store.write_json` 直接覆写。写 `index.json` 时进程被杀会损坏索引，影响去重。
 
 **改进**
-- [ ] 写临时文件 + `os.replace` 原子替换。
+- [x] 新增 `_atomic_write_text`（`tempfile.mkstemp` + `os.replace`），`save_index` 与 `write_json` 均改为原子写入，异常时清理临时文件。
 - [ ] （可选）写前备份上一版 `index.json.bak`。
 
 **涉及**：`src/store.py`
@@ -175,3 +176,4 @@
 ## 变更记录
 - 2026-06-19：初版，基于 v1 全量代码评审整理。
 - 2026-06-19：完成 P0 三项（I-1 分类误判 / I-2 排序偏差 / I-3 失败告警），端到端验证通过。
+- 2026-06-19：完成 P1 三项（I-4 退避重试+session / I-5 复访逻辑割裂 / I-6 index 原子写入），单测+契约验证通过。

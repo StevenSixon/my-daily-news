@@ -171,5 +171,7 @@ def learn(item: dict, index: dict) -> dict:
         "stars_gained": item.get("stars_gained", 0),
         "streak_days": streak,
         "is_new": is_new,
+        "refreshed": bool(revisit),  # 本轮是否实际重生成了报告（供日报筛选）
+        "revisit_reason": reason,
         "report_path": f"{project_dir_relative(full_name)}/analysis.md",
     }

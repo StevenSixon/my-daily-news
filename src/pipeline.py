@@ -30,17 +30,30 @@ def _run(top_n: int | None = None) -> dict:
     candidates = collect.collect()
 
     top_n = top_n or get_config()["collect"]["top_n"]
-    # 取需要处理的：new / revisit 优先，跳过的轻量项目也保留少量用于"持续上榜"展示
-    to_learn = [c for c in candidates if c["decision"] in ("new", "revisit")][:top_n]
-    log.info("本轮深度处理 %d 个项目（top_n=%d）", len(to_learn), top_n)
+    # 新项目：深度学习，受 top_n 限制（控制 LLM 成本）。
+    new_items = [c for c in candidates if c["decision"] == "new"][:top_n]
+    # 老项目（revisit / skip_lightweight）：全部交给 analyze 权威裁决。
+    # analyze._should_revisit 会看 release/star 决定重学还是轻量更新，
+    # 这样 on_new_release 才真正生效（修复 collect 粗判导致的逻辑割裂）。
+    seen_items = [c for c in candidates if c["decision"] != "new"]
+    log.info("本轮：新项目 %d（top_n=%d）+ 老项目复核 %d", len(new_items), top_n, len(seen_items))
 
     index = load_index()
     items = []
-    for c in to_learn:
+    for c in new_items:
         try:
             items.append(analyze.learn(c, index))
         except Exception as e:
             log.warning("处理 %s 失败：%s", c["full_name"], e)
+    for c in seen_items:
+        try:
+            res = analyze.learn(c, index)
+            # 老项目仅在实际重学（出新 release / star 大涨）时才进日报，
+            # 否则只静默更新 streak/metadata，避免日报被未变动项目刷屏。
+            if res.get("refreshed"):
+                items.append(res)
+        except Exception as e:
+            log.warning("复核 %s 失败：%s", c["full_name"], e)
     save_index(index)
 
     payload = build_summary.build(items)
