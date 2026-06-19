@@ -9,12 +9,21 @@ import argparse
 from . import analyze, build_summary, collect, llm_client
 from .config_loader import get_config
 from .store import load_index, save_index
-from .utils import get_logger
+from .utils import get_logger, today_str
 
 log = get_logger()
 
 
 def run(top_n: int | None = None) -> dict:
+    try:
+        return _run(top_n)
+    except Exception as e:
+        log.exception("Pipeline 失败：%s", e)
+        _alert_failure(e)
+        raise
+
+
+def _run(top_n: int | None = None) -> dict:
     if not llm_client.available():
         log.warning("当前无可用 LLM key：将跳过深度学习，仅采集+更新元数据。")
 
@@ -37,6 +46,20 @@ def run(top_n: int | None = None) -> dict:
     payload = build_summary.build(items)
     log.info("Pipeline 完成。")
     return payload
+
+
+def _alert_failure(e: Exception) -> None:
+    """pipeline 整体失败时推一条飞书告警，避免 08:00 静默无日报。"""
+    try:
+        from . import feishu_client
+        feishu_client.send_alert(
+            f"⚠️ AI 日报 · 采集失败 {today_str()}",
+            ["凌晨流水线运行异常，08:00 可能无日报。",
+             f"错误：`{type(e).__name__}: {e}`",
+             "排查见 logs/。"],
+        )
+    except Exception as ee:
+        log.warning("失败告警也发送失败：%s", ee)
 
 
 def main():

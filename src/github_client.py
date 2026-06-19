@@ -84,7 +84,8 @@ class GitHubClient:
                     "description": r.get("description") or "",
                     "language": r.get("language"),
                     "stars_total": r.get("stargazers_count", 0),
-                    "stars_gained": 0,  # Search API 无周增长，后续可与 trending 合并补全
+                    "stars_gained": 0,  # Search API 无周增长，靠 rank_score 兜底排序
+                    "created_at": (r.get("created_at") or "")[:10],
                     "period": "search",
                     "topics": r.get("topics", []),
                     "source": "search",

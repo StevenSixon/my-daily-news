@@ -1,23 +1,31 @@
 """采集：Trending + Search 双源 → 合并 → AI 应用过滤 → 去重/复访判定。"""
 from __future__ import annotations
 
-from datetime import timedelta
+import re
+from datetime import date, timedelta
 
 from . import llm_client
 from .config_loader import env, get_config
 from .github_client import GitHubClient
-from .store import load_index
-from .utils import get_logger, now
+from .store import CLASSIFY_LOG, append_jsonl, load_index
+from .utils import get_logger, now, today_str
 
 log = get_logger()
 
-# 无 LLM 时的兜底关键词过滤
+# 无 LLM 时的兜底关键词过滤（整词匹配，避免 "ai" 命中 hawaii/air 之类）
 _AI_KEYWORDS = [
     "ai", "llm", "gpt", "agent", "rag", "chatbot", "prompt", "diffusion",
     "generative", "openai", "anthropic", "claude", "embedding", "transformer",
-    "multimodal", "copilot", "vector", "fine-tun", "inference", "model context",
+    "multimodal", "copilot", "vector", "inference", "model context",
 ]
+# 前缀型关键词：只卡左边界，匹配 fine-tune / fine-tuning 等变体
+_AI_PREFIXES = ["fine-tun"]
 _EXCLUDE_HINTS = ["awesome", "papers", "paper list", "course", "tutorial", "book", "cheatsheet"]
+
+_KW_RE = re.compile(
+    "|".join([rf"\b{re.escape(k)}\b" for k in _AI_KEYWORDS]
+             + [rf"\b{re.escape(p)}" for p in _AI_PREFIXES])
+)
 
 
 def _client() -> GitHubClient:
@@ -37,6 +45,8 @@ def _gather(gh: GitHubClient) -> dict[str, dict]:
             cur = merged[key]
             cur["stars_gained"] = max(cur["stars_gained"], item["stars_gained"])
             cur["topics"] = list({*cur.get("topics", []), *item.get("topics", [])})
+            if not cur.get("created_at") and item.get("created_at"):
+                cur["created_at"] = item["created_at"]
             if item["source"] not in cur["source"]:
                 cur["source"] += f"+{item['source']}"
         else:
@@ -123,9 +133,28 @@ def _classify_ai_keyword(c: dict) -> dict:
     text = f"{c['full_name']} {c.get('description','')} {' '.join(c.get('topics',[]))}".lower()
     if any(h in text for h in _EXCLUDE_HINTS):
         return {"keep": False, "category": "", "reason": "疑似列表/教程类"}
-    keep = any(k in text for k in _AI_KEYWORDS)
+    keep = bool(_KW_RE.search(text))
     return {"keep": keep, "category": "AI 应用" if keep else "",
             "reason": "关键词命中" if keep else "无 AI 关键词"}
+
+
+def _rank_score(item: dict, index: dict) -> int:
+    """排序用的「热度增量」。Trending 给真实窗口增量；Search 源用历史增量或
+    创建以来日均增速兜底，避免纯 Search 项目恒为 0、永远排不上。"""
+    if item.get("stars_gained", 0) > 0:
+        return item["stars_gained"]
+    rec = index.get(item["full_name"])
+    if rec and rec.get("last_stars_total"):
+        return max(0, item["stars_total"] - rec["last_stars_total"])
+    created = item.get("created_at")
+    if created:
+        try:
+            y, m, d = (int(x) for x in created.split("-"))
+            age_days = max(1, (now().date() - date(y, m, d)).days)
+            return int(item["stars_total"] / age_days)  # 日均增速代理
+        except (ValueError, TypeError):
+            pass
+    return 0
 
 
 def _decide(item: dict, index: dict) -> tuple[str, str]:
@@ -148,9 +177,15 @@ def collect() -> list[dict]:
     index = load_index()
 
     merged = _gather(gh)
-    candidates = list(merged.values())
+
+    # 手动 blocklist：误判过 / 明确不想要的项目永不收录（config.focus.blocklist）
+    blocklist = {b.lower() for b in get_config()["focus"].get("blocklist", [])}
+    candidates = [c for c in merged.values() if c["full_name"].lower() not in blocklist]
+    if len(candidates) != len(merged):
+        log.info("blocklist 过滤掉 %d 个项目", len(merged) - len(candidates))
 
     verdicts = _classify_ai(candidates)
+    _log_classification(candidates, verdicts)
     kept = [c for c in candidates if verdicts.get(c["full_name"], {}).get("keep")]
     log.info("AI 应用过滤后：%d / %d", len(kept), len(candidates))
 
@@ -158,15 +193,36 @@ def collect() -> list[dict]:
         v = verdicts[c["full_name"]]
         c["category"] = v.get("category", "AI 应用")
         c["classify_reason"] = v.get("reason", "")
+        c["rank_score"] = _rank_score(c, index)
         decision, reason = _decide(c, index)
         c["decision"], c["decision_reason"] = decision, reason
 
-    # 排序：新增 star 优先，其次总 star
-    kept.sort(key=lambda x: (x["stars_gained"], x["stars_total"]), reverse=True)
+    # 排序：热度增量优先（含 Search 源兜底），其次总 star
+    kept.sort(key=lambda x: (x["rank_score"], x["stars_total"]), reverse=True)
     return kept
+
+
+def _log_classification(candidates: list[dict], verdicts: dict[str, dict]) -> None:
+    """把当轮全部分类结果（含被丢弃的）落盘，便于回看误判、迭代 prompt。"""
+    today = today_str()
+    try:
+        for c in candidates:
+            v = verdicts.get(c["full_name"], {})
+            append_jsonl(CLASSIFY_LOG, {
+                "date": today,
+                "full_name": c["full_name"],
+                "source": c.get("source"),
+                "keep": v.get("keep"),
+                "category": v.get("category", ""),
+                "reason": v.get("reason", ""),
+                "description": (c.get("description") or "")[:160],
+            })
+    except Exception as e:
+        log.warning("写分类日志失败：%s", e)
 
 
 if __name__ == "__main__":
     for c in collect():
-        print(f'[{c["decision"]:16}] {c["full_name"]:45} +{c["stars_gained"]}⭐ '
+        print(f'[{c["decision"]:16}] {c["full_name"]:45} '
+              f'score={c["rank_score"]:>6} +{c["stars_gained"]}⭐ '
               f'({c["source"]}) {c.get("classify_reason","")}')

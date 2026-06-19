@@ -54,6 +54,14 @@ def push(date: str | None = None, retries: int = 2) -> None:
     payload = read_json(daily_root() / f"{date}.json")
     if payload is None:
         log.error("找不到 daily/%s.json，请先运行 pipeline。", date)
+        try:
+            feishu_client.send_alert(
+                f"⚠️ AI 日报 · 今日无数据 {date}",
+                [f"未找到 daily/{date}.json，凌晨 pipeline 可能失败或尚未运行。",
+                 "排查见 logs/。"],
+            )
+        except Exception as e:
+            log.warning("无数据告警发送失败：%s", e)
         sys.exit(1)
 
     card = _build_card(payload)

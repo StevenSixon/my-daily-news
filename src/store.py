@@ -8,6 +8,7 @@ from .config_loader import ROOT, get_config
 from .utils import repo_slug
 
 INDEX_PATH = ROOT / "data" / "index.json"
+CLASSIFY_LOG = ROOT / "data" / "classify-log.jsonl"
 
 
 def projects_root() -> Path:
@@ -70,3 +71,10 @@ def append_text(path: Path, text: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with open(path, "a", encoding="utf-8") as f:
         f.write(text)
+
+
+def append_jsonl(path: Path, obj) -> None:
+    """追加一行 JSON（审计日志用）。"""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with open(path, "a", encoding="utf-8") as f:
+        f.write(json.dumps(obj, ensure_ascii=False) + "\n")

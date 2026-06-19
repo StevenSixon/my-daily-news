@@ -130,6 +130,7 @@ def learn(item: dict, index: dict) -> dict:
         "topics": detail.get("topics", []),
         "license": detail.get("license"),
         "category": item.get("category", "AI 应用"),
+        "classify_reason": item.get("classify_reason", (meta or {}).get("classify_reason", "")),
         "one_liner": one_liner,
         "stars_total": detail.get("stars_total"),
         "created_at": detail.get("created_at"),

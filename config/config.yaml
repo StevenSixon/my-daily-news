@@ -8,6 +8,8 @@ focus:
   min_stars: 200
   created_within_days: 30
   pushed_within_days: 14
+  blocklist:                              # 误判过/明确不要的项目，永不收录（owner/repo）
+    - iptv-org/iptv
 
 # 采集
 collect:

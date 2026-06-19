@@ -39,6 +39,17 @@ def _tenant_access_token() -> str:
     return token
 
 
+def send_alert(title: str, lines: list[str], color: str = "red") -> None:
+    """发送一条简短告警卡片（采集失败/无数据等异常路径用）。"""
+    card = {
+        "config": {"wide_screen_mode": True},
+        "header": {"template": color,
+                   "title": {"tag": "plain_text", "content": title}},
+        "elements": [{"tag": "div", "text": {"tag": "lark_md", "content": "\n".join(lines)}}],
+    }
+    send_card(card)
+
+
 def send_card(card: dict) -> None:
     """把交互卡片私聊推送给 .env 配置的接收者。"""
     receive_id = require_env("FEISHU_RECEIVE_ID")
