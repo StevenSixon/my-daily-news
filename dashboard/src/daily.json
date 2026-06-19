@@ -1,6 +1,508 @@
 {
   "editions": [
     {
+      "date": "2026-06-20",
+      "count": 5,
+      "projects": [
+        {
+          "id": "Lightricks__LTX-2",
+          "fullName": "Lightricks/LTX-2",
+          "owner": "Lightricks",
+          "name": "LTX-2",
+          "url": "https://github.com/Lightricks/LTX-2",
+          "oneLiner": "首个DiT音视频生成基础模型，支持同步音频视频、LoRA微调与多管道推理",
+          "description": "Official Python inference and LoRA trainer package for the LTX-2 audio–video generative model.",
+          "language": "Python",
+          "category": "AI 应用",
+          "license": "NOASSERTION",
+          "starsTotal": 7616,
+          "starsGained": 196,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-01-03",
+          "pushedAt": "2026-06-17",
+          "latestRelease": "",
+          "firstSeen": "2026-06-20",
+          "topics": [
+            "generative-ai",
+            "ltx",
+            "ltx-2"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-20",
+              "reason": "new",
+              "starsTotal": 7616,
+              "starsGained": 196,
+              "release": ""
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "LTX‑2 是首个基于 Diffusion Transformer (DiT) 的音频‑视频基础模型，在同一个模型内实现同步音频与视频生成、高保真度、多性能模式（蒸馏/高质）以及制作级输出。它提供了从文本/图像生成视频、音频驱动视频、关键帧插值、区域重生成、唇同步等一系列管道，并支持 LoRA 微调。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "在 Sora 等闭源模型占据头条的背景下，LTX‑2 以开放权重和完整推理+训练代码的姿态出现，立刻吸引大量关注（7.6k star）。它将“视频生成”扩展到“音视频联合生成”，并且提供了 LoRA 训练器，使社区可以低成本定制动作、机位、风格。同时，它已集成 ComfyUI，降低了上手门槛。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "模型架构：DiT backbone，文本编码器使用 Gemma 3‑12B。",
+                "推理框架：Python + PyTorch，支持 FP8 量化、FlashAttention 4 (Blackwell) / xFormers。",
+                "管道组织：将不同生成任务拆分为独立的 pipeline 类（TI2VidTwoStages、Distilled、ICLora、KeyframeInterpolation 等）。",
+                "依赖管理：uv。"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "文本/图像到视频，带 2× 空间/时间上采样。",
+                "音频到视频（A2Vid）。",
+                "蒸馏模型，仅需 8 个去噪步数，推理速度极快。",
+                "IC‑LoRA 系列，提供联合控制、动作跟踪、细节增强、姿态控制、HDR 输出、唇同步等专用控件。",
+                "机位控制 LoRA（推拉摇移等静态/动态）。",
+                "关键帧插值与视频片段重生成（Retake）。",
+                "提示增强与自动优化。"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "视频创作者需要快速生成带同步音效的短片。",
+                "研究人员探索多模态生成、自定义 LoRA 训练。",
+                "需要将音频转化为视觉内容（如音乐可视化）。",
+                "对现有视频进行局部修复、插帧或风格迁移。"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "body": "对比 Stable Video Diffusion 或 Sora，LTX‑2 的突出优势是：1) 原生同步音频生成，而非只输出视频；2) 开放全套权重和训练管线；3) 提供丰富的控制 LoRA，无需重训练即可适配多种任务；4) 已为生产环境准备蒸馏版和量化方案。劣势是目前硬件门槛仍高，且音频部分的评测数据未在 README 中披露。"
+            },
+            {
+              "heading": "版本动态",
+              "body": "2026‑01 发布 LTX‑2，当前最新为 LTX‑2.3，包含蒸馏模型、多种上采样器和大批控制 LoRA。2026‑06 仍在活跃推送，未来将加入时序上采样管线等。 ---"
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：README 未提供生成速度、音视频同步精度等 benchmark 数据；未明确最低/推荐 GPU 显存要求，仅给出优化建议；训练 LoRA 的详细教程和硬件需求未在截断部分体现；音频生成质量的主观或客观评测缺失"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nexu-io__html-video",
+          "fullName": "nexu-io/html-video",
+          "owner": "nexu-io",
+          "name": "html-video",
+          "url": "https://github.com/nexu-io/html-video",
+          "oneLiner": "本地让AI代理把HTML/CSS直接渲染成MP4，无云费用，自带21套模板",
+          "description": "Programmatic video for coding agents — HTML to video on your laptop. Turn HTML, CSS & data into real MP4s with pluggable render engines, 21 templates, AI soundtrack. Apache-2.0, no per-render fees. An official project by the Open Design team.",
+          "language": "HTML",
+          "category": "AI 应用",
+          "license": "Apache-2.0",
+          "starsTotal": 3330,
+          "starsGained": 0,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-05-27",
+          "pushedAt": "2026-06-17",
+          "latestRelease": "",
+          "firstSeen": "2026-06-20",
+          "topics": [
+            "ai-agent",
+            "apache-2",
+            "coding-agent",
+            "css",
+            "ffmpeg",
+            "html",
+            "html-to-video",
+            "hyperframes",
+            "mp4",
+            "open-design",
+            "open-source",
+            "programmatic-video",
+            "video",
+            "video-as-code",
+            "video-generation"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-20",
+              "reason": "new",
+              "starsTotal": 3330,
+              "starsGained": 0,
+              "release": ""
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "html-video 是一个程序化视频的元框架，由 Open Design 团队开发。它让用户的本地编码代理（Claude Code、Cursor、Windsurf CLI 等）通过自然语言描述或粘贴文章/仓库链接，自动生成包含多帧动画的 HTML 故事板，并调用可插拔渲染引擎在本地输出 MP4 视频。核心思想是在现有的多种视频渲染引擎之上提供一个代理友好的抽象层，避免用户去学习 Remotion、Motion Canvas 等各自不同的作者范式。"
+            },
+            {
+              "heading": "为什么火",
+              "bullets": [
+                "零费用、无锁定：Apache-2.0 协议，本地渲染，不按次数收费，没有云依赖，对个人开发者和希望完全控制工具的团队极具吸引力。",
+                "代理驱动：无缝接入当前最流行的 14 种 AI 编码助手，将“对话即视频”变为现实，大幅降低制作程序化视频的门槛。",
+                "多引擎抽象：不再受单一渲染引擎的限制，未来可随时切换后端，保护生成的内容资产。",
+                "链接直达视频：一键将微信公众号文章、GitHub 仓库内容转化为解说视频，直击内容营销和开发者教育场景的痛点。"
+              ]
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "语言：TypeScript（Monorepo，使用 pnpm）",
+                "运行时：Node.js ≥20，浏览器相关组件使用 Playwright + Chromium",
+                "视频编码：ffmpeg（libx264）",
+                "默认引擎：Hyperframes（通过无头 Chromium 录制 HTML 动画帧 → WebM → MP4）",
+                "AI 音轨：MiniMax（可选背景音乐和旁白）",
+                "工程化：提供浏览器端 Studio 和 CLI 两种使用方式"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "body": "1. 代理驱动生成：支持 14 种本地 CLI 代理，能自动检测路径并切换。 2. 多源输入：从提示词、网页文章（包括需要服务端渲染的 WeChat 文章）、GitHub 仓库提取内容，生成结构化故事板。 3. 21 个预置模板：覆盖标题卡、数据图表、电影感画面、终端效果、产品宣传、品牌尾板等多种风格，且均为真实渲染，非模型图。 4. 多帧故事板编辑：生成内容图（实体/数据/文本节点及其关系），转化为多场景顺序；支持内联文本修改和拖拽排序。 5. AI 音轨混入：导出时可混合背景音乐和旁白。 6. 极简部署：完全本地运行，只需 Node、ffmpeg 和 Chromium，一条命令启动 Studio。"
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "内容创作者：将博客文章、社交媒体帖子快速转为短视频。",
+                "开源项目维护者：为 GitHub 仓库生成介绍视频。",
+                "产品团队：制作产品发布、功能演示视频。",
+                "数据分析师：将数据报告转化为动画图表视频。",
+                "AI 应用开发者：作为视频生成的模块集成到自己的 Agent 工作流中。"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "body": "| 工具 | 方式 | 限制 | html-video 的优势 | |------|------|------|------------------| | Remotion | React 组件式 | 商业使用需付费，学习曲线陡 | 免费，通过代理屏蔽引擎细节，未来也能适配 Remotion | | Motion Canvas / Revideo | TypeScript 生成器 | 适合特定类型，需手动编码 | 提供上层抽象和模板，并计划适配这些引擎 | | Hyperframes | HTML+CSS+GSAP | 单一引擎 | 已作为默认引擎集成，但还提供多引擎切换可能 | | 其他 AI 视频工具（如云端服务） | 黑箱生成 | 按量付费，可控性差 | 完全本地，代码可控，不按次付费 |"
+            },
+            {
+              "heading": "版本动态",
+              "body": "---",
+              "bullets": [
+                "创建于 2026-05-27，最近推送 2026-06-17，尚处于早期活跃开发阶段。",
+                "Star 数 3330，表明社区关注度较高。",
+                "目前只有 Hyperframes 引擎完全可用，Remotion、Motion Canvas 等适配器还在计划中，实际是否落地有待观察。",
+                "所有 21 个模板已可直接使用，但文档中未提供贡献模板的指引。"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：medium",
+                "信息盲区：没有提供任何性能数据（单帧渲染时间、多帧视频生成耗时、资源占用等）；未说明 Hyperframes 引擎在处理复杂 CSS/JS 动画时的兼容性边界；多引擎适配器（Remotion/Motion Canvas/Manim）的具体开发计划和可用时间未知；未提及 Studio UI 的浏览器兼容性要求；未说明如何自定义模板或贡献模板的指南"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "koala73__worldmonitor",
+          "fullName": "koala73/worldmonitor",
+          "owner": "koala73",
+          "name": "worldmonitor",
+          "url": "https://github.com/koala73/worldmonitor",
+          "oneLiner": "57000星！AI融合500+信源的全球态势感知OSINT仪表板",
+          "description": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface",
+          "language": "TypeScript",
+          "category": "AI 应用",
+          "license": "NOASSERTION",
+          "starsTotal": 57011,
+          "starsGained": 133,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-01-08",
+          "pushedAt": "2026-06-19",
+          "latestRelease": "v2.5.23",
+          "firstSeen": "2026-06-20",
+          "topics": [
+            "ai",
+            "dashboard",
+            "geopolitics",
+            "monitoring",
+            "news",
+            "opensource",
+            "osint",
+            "palantir",
+            "situation"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-20",
+              "reason": "new",
+              "starsTotal": 57011,
+              "starsGained": 133,
+              "release": "v2.5.23"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "开源实时全球情报监控仪表板，聚合500+精选新闻源，AI合成简报，提供3D地球与2D WebGL双地图引擎，跨流关联军事、经济、灾害、升级信号，内置国家不稳定指数(CII v8)、金融雷达、多站点变体，支持桌面应用(Tauri 2)与24种语言，以单一代码库驱动6个主题变体(世界、科技、金融、商品、快乐、能源)。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "57k stars，兼具开源情报(OSINT)工具的市场需求与社区热度。它试图以自托管、可扩展的方式复现Palantir Gotham的态势感知能力，同时提供本地AI（Ollama无API密钥）和丰富的免费数据接口，降低使用门槛。多站点变体和活跃的版本迭代吸引了地缘政治分析师、金融交易者与开源爱好者。"
+            },
+            {
+              "heading": "技术栈",
+              "body": "前端：Vanilla TypeScript + Vite，globe.gl(Three.js) + deck.gl(MapLibre GL)；桌面：Tauri 2(Rust) + Node.js sidecar；AI/ML：Ollama/Groq/OpenRouter，浏览器端Transformers.js；API契约：Protocol Buffers(276个proto,34个服务)；部署：Vercel Edge Functions(60+), Railway relay, PWA；缓存：Redis(Upstash), 3层缓存, CDN, Service Worker。"
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "智能简报：AI合成500+新闻源为摘要",
+                "双地图引擎：3D地球与2D WebGL，56种图层",
+                "信号关联：军事、经济、灾难、升级态势交叉分析",
+                "国家不稳定指数：CII v8权威评分31个一级国家",
+                "金融雷达：29交易所、商品、加密货币、7信号市场复合指标",
+                "本地AI：支持Ollama离线运行",
+                "多站点变体：一键切换世界/科技/金融/商品/快乐/能源视角",
+                "桌面原生：Tauri 2跨平台，macOS/Windows/Linux"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "OSINT分析师/地缘情报团队实时态势监控",
+                "金融交易者跨市场事件关联与预警",
+                "开源情报教育与研究",
+                "需要自托管、定制化情报中心的机构",
+                "跨国基础设施与供应链风险追踪"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "body": "类似商业产品Palantir Gotham(闭源、昂贵)，OpenCTI(聚焦网络威胁)，NewsNow/Google News(无分析层)。本工具在开源领域整合了多源数据、AI分析、地图可视化与本地运行能力，生态位独特。相比纯新闻聚合器，增加了信号关联与风险指数；相比专业威胁情报平台，覆盖领域更广（地缘、金融、能源）。"
+            },
+            {
+              "heading": "版本动态",
+              "body": "2026年6月仍高频迭代，最近v2.5.23修复多项UI、翻译及CSP问题，新增世界时钟拖拽排序、福克斯新闻流、CNN/CNBC HLS流经由sidecar代理、本地化补全、移动端响应式优化等。社区贡献活跃，功能持续丰富。 ---"
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：生产环境详细部署依赖（Redis等）仅在外部文档说明，README未直接列出；未提供性能基准数据（如大量并发源处理延迟）"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "alchaincyf__fanbox",
+          "fullName": "alchaincyf/fanbox",
+          "owner": "alchaincyf",
+          "name": "fanbox",
+          "url": "https://github.com/alchaincyf/fanbox",
+          "oneLiner": "本地AI编码驾驶舱：文件、终端、预览三合一，实时追踪Agent每次文件改动。",
+          "description": "vibe coding 的驾驶舱：左边文件，右边/下边终端，中间看清每一次改动。 / The cockpit for vibe coding: browse files on the left, command agents on the right, watch every change in between.",
+          "language": "JavaScript",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 730,
+          "starsGained": 0,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-06-10",
+          "pushedAt": "2026-06-18",
+          "latestRelease": "v2.3.1",
+          "firstSeen": "2026-06-20",
+          "topics": [
+            "agent",
+            "ai",
+            "claude",
+            "codex",
+            "electron",
+            "file-manager",
+            "local-first",
+            "macos",
+            "terminal",
+            "vibe-coding"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-20",
+              "reason": "new",
+              "starsTotal": 730,
+              "starsGained": 0,
+              "release": "v2.3.1"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "FanBox 是一个专为 vibe coding（AI 辅助编码）设计的本地桌面应用，充当 Coding Agent（如 Claude Code、Codex）的“驾驶舱”。它将文件浏览、终端、预览整合在一个窗口，并实时追踪 Agent 对文件系统的每次改动，让开发者不再迷失于散落的项目文件和不可见的修改中。"
+            },
+            {
+              "heading": "为什么值得关注",
+              "body": "vibe coding 流程中，开发者常面临“一个下午起十个项目，然后就再找不到了”的痛点。FanBox 通过全局模糊搜索、项目类型徽章（node/web/py等）和会话记忆，快速找回项目；它不像 Finder 那样只有文件操作，也不像 VS Code 侧重编辑，而是聚焦于“找回→预览→轻改→指挥 Agent”的链式体验。与同类工具相比，它提供了实时文件改动涟漪动画、跟随模式、会话回放等可视化反馈，让 Agent 的工作从未如此透明。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "Electron：桌面框架，实现本地文件系统访问、内嵌终端和编辑器。",
+                "node-pty + xterm.js (WebGL)：真实终端仿真，支持 Claude Code、vim 等复杂应用。",
+                "Monaco Editor：嵌入与 VS Code 同源的代码编辑器，提供 Diff 对比。",
+                "Milkdown Crepe：WYSIWYG Markdown 编辑器。",
+                "本地优先：零云服务、零账号，一切都在本地，适合数据主权意识强的开发者。",
+                "设计系统：采用 huashu-design，提供三套完整皮肤（Volt/Archive/Index）。",
+                "构建：无需 build，clone 即可通过 node server.js 运行网页版（仅浏览部分），桌面版通过 Electron 打包。"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "文件找回与预览：⌘K 全局模糊搜索，可按内容搜索；支持 Markdown 渲染、HTML 实时预览、图片/视频/PDF 内嵌预览，缩略图加速。",
+                "Agent 改动可视化：Agent 每写一个文件，卡片会发光涟漪；跟随模式自动跟踪 Agent 编辑的文件，并实时刷新预览；会话回放可回溯修改历史；变更收件箱汇总所有被修改文件。",
+                "Agent 驾驶舱：项目记忆（会话历史、改动的文件、一键 resume）、截图直通车、AI 整理提案（元数据驱动、可撤销）、发版向导、Skills 透视、用量监控、磁盘占用透视。",
+                "真实内嵌终端：支持拖入文件路径、点击终端内路径在 FanBox 打开、选中文本发送到终端，态势感知标签显示 Agent 状态。",
+                "所见即所得编辑：Markdown、代码/JSON、图片标注，三者均支持未保存守卫。",
+                "隐私与本地：不上传任何数据，签名 DMG 分发，内置更新提醒。"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "vibe coding 开发者：频繁使用 Claude Code、Codex 等命令行 Agent，需要集中管理多个生成的项目。",
+                "全栈快速原型：一个下午尝试多种技术栈（Node/Python/Go 等），需要快速找回并对比。",
+                "代码审查 Agent 输出：需要看清 Agent 具体改了哪些文件的哪些行，支持 HEAD vs 工作区的 diff。",
+                "多项目并行 Agent：同时运行多个 Agent 作业，集中监控改动。"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "body": "同类工具有 VS Code + 终端、Warp 终端、Hyper 等，但 FanBox 的独特之处在于： FanBox 不拼编辑体验，而是专注“指挥 Agent 和工作流整合”。",
+              "bullets": [
+                "VS Code：重编辑器，文件浏览和终端是附属；FanBox 以文件浏览和 Agent 交互为中心，编辑是辅助。",
+                "Warp 终端：强现代终端，但无文件浏览与改动追踪。",
+                "Hyper 终端：可扩展但无文件管理。",
+                "Finder/Terminal 组合：割裂，缺乏实时改动反馈和会话记忆。"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "最新版本 v2.3.1（2026-06-18）聚焦微信 ClawBot 的链路稳定性，修复了连接卡死自动重试、用量进度条乱跳等问题，无破坏性变更。项目活跃，Star 数 730+，保持高频迭代。未来可能支持跨平台（Windows/Intel Mac），已有评估文档。桌面版持续提供 DMG 下载，更新提醒内建，可靠且易用。 ---"
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：medium",
+                "信息盲区：当前仅发布 macOS Apple Silicon 版本，Windows 和 Intel Mac 版本仍在规划中，未提供具体发布时间。；未提供大规模文件负载下的性能基准测试数据（仅提及缩略图滚动 <0.1秒）。",
+                "质量提示：缺小标题：为什么火"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "dzcmemory-web__bazi-ziwei-skill",
+          "fullName": "dzcmemory-web/bazi-ziwei-skill",
+          "owner": "dzcmemory-web",
+          "name": "bazi-ziwei-skill",
+          "url": "https://github.com/dzcmemory-web/bazi-ziwei-skill",
+          "oneLiner": "算法精准排盘 + LLM分析 + 水墨海报，八字紫微综合印证 Skill",
+          "description": "AI 八字 + 紫微斗数排盘与综合印证 Skill：算法精准排盘（不靠 LLM 猜），三种分析模式，一键生成水墨风 HTML 命盘海报。兼容 Claude / Codex / Cursor / Workbuddy 等 SKILL.md Agent。",
+          "language": "TypeScript",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 422,
+          "starsGained": 0,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-06-13",
+          "pushedAt": "2026-06-14",
+          "latestRelease": "",
+          "firstSeen": "2026-06-20",
+          "topics": [
+            "ai-agent",
+            "bazi",
+            "bazi-suanming",
+            "chinese-astrology",
+            "claude-skill",
+            "fortune-telling",
+            "metaphysics",
+            "skill-md",
+            "ziwei",
+            "ziwei-doushu"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-20",
+              "reason": "new",
+              "starsTotal": 422,
+              "starsGained": 0,
+              "release": ""
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "一个遵循 SKILL.md 开放标准的命理分析 Agent 技能。内置八字四柱、紫微十二宫、大运流年排盘算法，结合 LLM 进行三种模式（八字独立/紫微独立/八字+紫微综合印证）的分析，并可一键生成水墨风 HTML 命盘海报。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "传统用 LLM 直接排盘经常算错日柱、格局，导致分析失真。该项目将排盘交给确定性算法，LLM 只负责分析，从根本上保证了基础数据的准确。同时，它引入八字与紫微两套独立体系的交叉印证，提升了分析的深度与可信度，对玄学爱好者和 AI Agent 开发者都有吸引力。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "语言：TypeScript",
+                "核心算法：基于 Yiqi 八字紫微排盘系统（MIT），农历转换依赖 lunar-typescript",
+                "Agent 兼容：Claude Code、Codex、Cursor、Hermes、OpenClaw 等",
+                "输出形式：Markdown 长文 + 单文件 HTML 海报（模板注入）"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "精准排盘：不依赖 LLM 推算，由内置算法完成四柱、紫微宫位、大运流年",
+                "格局补层：在排盘基础上补充格局、旺衰、调候、刑冲合害等算法层信息",
+                "综合印证：对八字与紫微的结论进行交叉对账，识别人生窗口、判断冲突",
+                "双形态输出：深度分析长文（Markdown）或水墨风 HTML 命盘海报",
+                "隐私优先：全部本地计算，无需联网"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "AI 命理分析助手：集成到各类 Agent 中，为用户提供八字/紫微排盘与分析",
+                "民俗文化研究：作为可编程的排盘工具，批量验证命理理论",
+                "内容生成：自动生成带命盘的可视化海报，用于分享或展示"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "bullets": [
+                "纯 LLM 排盘：经常出错，缺乏确定性；本项目优先保证排盘准确",
+                "传统排盘网站/软件：单机使用，无法与 AI 分析流程结合；本项目以 Agent Skill 形式存在，可嵌入对话流",
+                "其他排盘开源库：多止步于排盘，不做综合印证与海报生成；本项目提供端到端体验"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "---",
+              "bullets": [
+                "最新提交：2026-06-14",
+                "Star 数：422",
+                "许可：MIT",
+                "持续活跃，社区关注度高，但尚未发布稳定版号。"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：算法回归验证的7组案例无详细数据或 benchmark 报告；未提供性能指标（如排盘耗时）；海报的视觉自定义范围未详细说明；无真实用户案例或社区反馈引用；未明确 SKILL.md 规范之外的 Agent 适配细节"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "date": "2026-06-19",
       "count": 5,
       "projects": [
@@ -40,6 +542,13 @@
               "date": "2026-06-19",
               "reason": "new",
               "starsTotal": 39253,
+              "starsGained": 0,
+              "release": "v4.7.0"
+            },
+            {
+              "date": "2026-06-20",
+              "reason": "lightweight",
+              "starsTotal": 39406,
               "starsGained": 0,
               "release": "v4.7.0"
             }
@@ -144,6 +653,13 @@
               "date": "2026-06-19",
               "reason": "new",
               "starsTotal": 1561,
+              "starsGained": 0,
+              "release": "eve@0.11.7"
+            },
+            {
+              "date": "2026-06-20",
+              "reason": "lightweight",
+              "starsTotal": 1572,
               "starsGained": 0,
               "release": "eve@0.11.7"
             }
@@ -253,6 +769,13 @@
               "starsTotal": 3965,
               "starsGained": 0,
               "release": "v0.2.0"
+            },
+            {
+              "date": "2026-06-20",
+              "reason": "lightweight",
+              "starsTotal": 3981,
+              "starsGained": 0,
+              "release": "v0.2.0"
             }
           ],
           "analysis": [
@@ -337,6 +860,13 @@
               "date": "2026-06-19",
               "reason": "new",
               "starsTotal": 5714,
+              "starsGained": 305,
+              "release": ""
+            },
+            {
+              "date": "2026-06-20",
+              "reason": "lightweight",
+              "starsTotal": 5733,
               "starsGained": 305,
               "release": ""
             }
@@ -429,6 +959,13 @@
               "date": "2026-06-19",
               "reason": "new",
               "starsTotal": 890,
+              "starsGained": 172,
+              "release": "@agent-native/core@0.63.4"
+            },
+            {
+              "date": "2026-06-20",
+              "reason": "lightweight",
+              "starsTotal": 916,
               "starsGained": 172,
               "release": "@agent-native/core@0.63.4"
             }

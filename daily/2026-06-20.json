@@ -1,0 +1,368 @@
+{
+  "date": "2026-06-20",
+  "count": 5,
+  "items": [
+    {
+      "full_name": "Lightricks/LTX-2",
+      "url": "https://github.com/Lightricks/LTX-2",
+      "one_liner": "首个DiT音视频生成基础模型，支持同步音频视频、LoRA微调与多管道推理",
+      "why_worth_it": "在单一模型内统一音视频生成、控制与后处理，开放权重且提供训练代码，适合自托管研究与定制",
+      "tags": [
+        "生成式AI",
+        "视频生成",
+        "LoRA训练",
+        "开源模型"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "README 未提供生成速度、音视频同步精度等 benchmark 数据",
+        "未明确最低/推荐 GPU 显存要求，仅给出优化建议",
+        "训练 LoRA 的详细教程和硬件需求未在截断部分体现",
+        "音频生成质量的主观或客观评测缺失"
+      ],
+      "language": "Python",
+      "stars_total": 7616,
+      "stars_gained": 196,
+      "streak_days": 1,
+      "is_new": true,
+      "refreshed": true,
+      "revisit_reason": "new",
+      "report_path": "../projects/Lightricks__LTX-2/analysis.md"
+    },
+    {
+      "full_name": "nexu-io/html-video",
+      "url": "https://github.com/nexu-io/html-video",
+      "one_liner": "本地让AI代理把HTML/CSS直接渲染成MP4，无云费用，自带21套模板",
+      "why_worth_it": "统一了碎片化的网页→视频引擎，用你现有的编码代理零成本生成视频，彻底摆脱工具锁定。",
+      "tags": [
+        "程序化视频",
+        "Agent框架",
+        "本地优先",
+        "开源"
+      ],
+      "confidence": "medium",
+      "info_gaps": [
+        "没有提供任何性能数据（单帧渲染时间、多帧视频生成耗时、资源占用等）",
+        "未说明 Hyperframes 引擎在处理复杂 CSS/JS 动画时的兼容性边界",
+        "多引擎适配器（Remotion/Motion Canvas/Manim）的具体开发计划和可用时间未知",
+        "未提及 Studio UI 的浏览器兼容性要求",
+        "未说明如何自定义模板或贡献模板的指南"
+      ],
+      "language": "HTML",
+      "stars_total": 3330,
+      "stars_gained": 0,
+      "streak_days": 1,
+      "is_new": true,
+      "refreshed": true,
+      "revisit_reason": "new",
+      "report_path": "../projects/nexu-io__html-video/analysis.md"
+    },
+    {
+      "full_name": "koala73/worldmonitor",
+      "url": "https://github.com/koala73/worldmonitor",
+      "one_liner": "57000星！AI融合500+信源的全球态势感知OSINT仪表板",
+      "why_worth_it": "自托管开源Palantir替代，本地AI免密钥，双地图+多信号关联，适合地缘/金融极客",
+      "tags": [
+        "OSINT",
+        "态势感知",
+        "本地AI",
+        "TypeScript"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "生产环境详细部署依赖（Redis等）仅在外部文档说明，README未直接列出",
+        "未提供性能基准数据（如大量并发源处理延迟）"
+      ],
+      "language": "TypeScript",
+      "stars_total": 57011,
+      "stars_gained": 133,
+      "streak_days": 1,
+      "is_new": true,
+      "refreshed": true,
+      "revisit_reason": "new",
+      "report_path": "../projects/koala73__worldmonitor/analysis.md"
+    },
+    {
+      "full_name": "alchaincyf/fanbox",
+      "url": "https://github.com/alchaincyf/fanbox",
+      "one_liner": "本地AI编码驾驶舱：文件、终端、预览三合一，实时追踪Agent每次文件改动。",
+      "why_worth_it": "解决AI起项目后找不回、看不清改动问题，适合用Claude Code/Codex的开发者，一体化窗口免于多应用切换。",
+      "tags": [
+        "本地优先",
+        "Agent驾驶舱",
+        "Electron",
+        "vibe-coding"
+      ],
+      "confidence": "medium",
+      "info_gaps": [
+        "当前仅发布 macOS Apple Silicon 版本，Windows 和 Intel Mac 版本仍在规划中，未提供具体发布时间。",
+        "未提供大规模文件负载下的性能基准测试数据（仅提及缩略图滚动 <0.1秒）。"
+      ],
+      "language": "JavaScript",
+      "stars_total": 730,
+      "stars_gained": 0,
+      "streak_days": 1,
+      "is_new": true,
+      "refreshed": true,
+      "revisit_reason": "new",
+      "report_path": "../projects/alchaincyf__fanbox/analysis.md"
+    },
+    {
+      "full_name": "dzcmemory-web/bazi-ziwei-skill",
+      "url": "https://github.com/dzcmemory-web/bazi-ziwei-skill",
+      "one_liner": "算法精准排盘 + LLM分析 + 水墨海报，八字紫微综合印证 Skill",
+      "why_worth_it": "解决纯LLM排盘常出错的问题，提供八字与紫微交叉印证，适合需要可靠命理分析底座的 Agent 开发者和民俗研究者。",
+      "tags": [
+        "Agent技能",
+        "八字紫微",
+        "算法排盘",
+        "TypeScript"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "算法回归验证的7组案例无详细数据或 benchmark 报告",
+        "未提供性能指标（如排盘耗时）",
+        "海报的视觉自定义范围未详细说明",
+        "无真实用户案例或社区反馈引用",
+        "未明确 SKILL.md 规范之外的 Agent 适配细节"
+      ],
+      "language": "TypeScript",
+      "stars_total": 422,
+      "stars_gained": 0,
+      "streak_days": 1,
+      "is_new": true,
+      "refreshed": true,
+      "revisit_reason": "new",
+      "report_path": "../projects/dzcmemory-web__bazi-ziwei-skill/analysis.md"
+    }
+  ],
+  "streaks": [
+    {
+      "full_name": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "one_liner": "为编码智能体提供系统的 TDD 开发方法论（红绿重构）与子代理驱动流水线。",
+      "why_worth_it": "",
+      "tags": [],
+      "confidence": "medium",
+      "info_gaps": [],
+      "language": "Shell",
+      "stars_total": 233104,
+      "stars_gained": 1113,
+      "streak_days": 4,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/obra__superpowers/analysis.md"
+    },
+    {
+      "full_name": "chopratejas/headroom",
+      "url": "https://github.com/chopratejas/headroom",
+      "one_liner": "压缩AI代理上下文，节省60-95% token且答案不变。",
+      "why_worth_it": "",
+      "tags": [],
+      "confidence": "medium",
+      "info_gaps": [],
+      "language": "Python",
+      "stars_total": 37527,
+      "stars_gained": 10159,
+      "streak_days": 4,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/chopratejas__headroom/analysis.md"
+    },
+    {
+      "full_name": "Panniantong/Agent-Reach",
+      "url": "https://github.com/Panniantong/Agent-Reach",
+      "one_liner": "一句 CLI 给 AI 装上全互联网眼睛，零 API 费读遍微博客、视频、论坛",
+      "why_worth_it": "",
+      "tags": [],
+      "confidence": "medium",
+      "info_gaps": [],
+      "language": "Python",
+      "stars_total": 34930,
+      "stars_gained": 7856,
+      "streak_days": 4,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/Panniantong__Agent-Reach/analysis.md"
+    },
+    {
+      "full_name": "lfnovo/open-notebook",
+      "url": "https://github.com/lfnovo/open-notebook",
+      "one_liner": "开源、隐私优先的Notebook LM替代，支持多模型、本地部署与播客生成",
+      "why_worth_it": "",
+      "tags": [],
+      "confidence": "medium",
+      "info_gaps": [],
+      "language": "TypeScript",
+      "stars_total": 31763,
+      "stars_gained": 2373,
+      "streak_days": 4,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/lfnovo__open-notebook/analysis.md"
+    },
+    {
+      "full_name": "NVIDIA/SkillSpector",
+      "url": "https://github.com/NVIDIA/SkillSpector",
+      "one_liner": "AI agent技能安全扫描，静态+LLM双阶段检测64种漏洞",
+      "why_worth_it": "",
+      "tags": [],
+      "confidence": "medium",
+      "info_gaps": [],
+      "language": "Python",
+      "stars_total": 8165,
+      "stars_gained": 5505,
+      "streak_days": 4,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/NVIDIA__SkillSpector/analysis.md"
+    },
+    {
+      "full_name": "kenn-io/agentsview",
+      "url": "https://github.com/kenn-io/agentsview",
+      "one_liner": "本地化AI编码助手会话总控，跨20+代理，统一搜索、成本追踪。",
+      "why_worth_it": "",
+      "tags": [],
+      "confidence": "medium",
+      "info_gaps": [],
+      "language": "Go",
+      "stars_total": 2922,
+      "stars_gained": 1382,
+      "streak_days": 4,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/kenn-io__agentsview/analysis.md"
+    },
+    {
+      "full_name": "addyosmani/agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "one_liner": "为AI编码代理提供覆盖全生命周期的24个生产级工程技能，让代理遵循资深工程师的规范与质量实践。",
+      "why_worth_it": "",
+      "tags": [],
+      "confidence": "medium",
+      "info_gaps": [],
+      "language": "Shell",
+      "stars_total": 63274,
+      "stars_gained": 9285,
+      "streak_days": 3,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/addyosmani__agent-skills/analysis.md"
+    },
+    {
+      "full_name": "XiaomiMiMo/MiMo-Code",
+      "url": "https://github.com/XiaomiMiMo/MiMo-Code",
+      "one_liner": "终端原生AI编码助手，多Agent与持久记忆协同进化，零配置免费通道开箱即用。",
+      "why_worth_it": "专治跨会话“失忆”问题，通过自动检查点和项目记忆让Agent真正理解长期项目的上下文，适合持续维护大型代码库的开发者。",
+      "tags": [
+        "Agent框架",
+        "持久内存",
+        "TypeScript",
+        "终端AI"
+      ],
+      "confidence": "medium",
+      "info_gaps": [
+        "无性能基准或对比测试数据",
+        "未说明 Node.js 最低版本和系统要求",
+        "Dream/Distill 的实际效果缺乏量化或案例说明",
+        "未列出完整支持的主模型列表和上下文长度限制",
+        "与 Aider/Claude Code 等工具的具体差异仅凭架构推测，未实证"
+      ],
+      "language": "TypeScript",
+      "stars_total": 9899,
+      "stars_gained": 0,
+      "streak_days": 3,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/XiaomiMiMo__MiMo-Code/analysis.md"
+    },
+    {
+      "full_name": "DeusData/codebase-memory-mcp",
+      "url": "https://github.com/DeusData/codebase-memory-mcp",
+      "one_liner": "毫秒级构建158语言代码知识图谱，零依赖单二进制MCP服务，token用量削减99%。",
+      "why_worth_it": "为AI编码代理提供极速、结构化的代码库理解，替代低效的文件搜索，专治上下文窗口浪费。",
+      "tags": [
+        "MCP服务",
+        "代码图谱",
+        "本地优先",
+        "零依赖"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "平均仓库的索引毫秒级时间未给出具体测试集和数值（仅提供Linux内核特例）",
+        "Hybrid LSP 对 9 种语言的类型推断准确率和限制未量化",
+        "自动变更检测的效率（资源占用、增量索引延迟）缺少基准数据"
+      ],
+      "language": "C",
+      "stars_total": 7854,
+      "stars_gained": 3244,
+      "streak_days": 3,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/DeusData__codebase-memory-mcp/analysis.md"
+    },
+    {
+      "full_name": "calesthio/OpenMontage",
+      "url": "https://github.com/calesthio/OpenMontage",
+      "one_liner": "首个开源代理式视频生产系统：用自然语言驱动，全自动搞定脚本、素材、编辑",
+      "why_worth_it": "无需剪辑技能，把AI代码助手变成视频工作室，从免费素材到成品全自动，零API密钥也能跑，成本低至$0.15",
+      "tags": [
+        "Agentic Video",
+        "Open Source",
+        "Python"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "README未详细说明代理与工具之间的具体通信协议或交互方式（仅描述“告诉AI编码助手需求”）",
+        "未提供系统性能基准或视频输出规格（分辨率、帧率等）的详细参数",
+        "未列出所有500+代理技能的清单或分类，仅通过文档链接可获取更多细节",
+        "本地GPU视频生成的模型支持列表和性能对比未在README中展开"
+      ],
+      "language": "Python",
+      "stars_total": 6057,
+      "stars_gained": 236,
+      "streak_days": 3,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/calesthio__OpenMontage/analysis.md"
+    },
+    {
+      "full_name": "palmier-io/palmier-pro",
+      "url": "https://github.com/palmier-io/palmier-pro",
+      "one_liner": "AI 原生 macOS 视频编辑器，通过 MCP 让 Claude/Codex 直接操控时间线",
+      "why_worth_it": "首创开源视频编辑器内建 MCP 服务器，使任何 AI agent 都能协同剪辑，比传统工具更可脚本化、可组合",
+      "tags": [
+        "AI视频编辑",
+        "MCP服务器",
+        "Swift",
+        "macOS"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "未提供支持的视频格式详细列表",
+        "生成式 AI 模型的定价和具体能力未公开",
+        "缺少与其他成熟 NLE 的性能/功能对比基准",
+        "未说明插件体系或扩展机制是否规划中",
+        "离线模式下的功能受限情况未详细说明"
+      ],
+      "language": "Swift",
+      "stars_total": 1594,
+      "stars_gained": 749,
+      "streak_days": 3,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/palmier-io__palmier-pro/analysis.md"
+    }
+  ]
+}

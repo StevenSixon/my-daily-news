@@ -1,0 +1,60 @@
+{
+  "full_name": "nexu-io/html-video",
+  "url": "https://github.com/nexu-io/html-video",
+  "description": "Programmatic video for coding agents — HTML to video on your laptop. Turn HTML, CSS & data into real MP4s with pluggable render engines, 21 templates, AI soundtrack. Apache-2.0, no per-render fees. An official project by the Open Design team.",
+  "language": "HTML",
+  "topics": [
+    "ai-agent",
+    "apache-2",
+    "coding-agent",
+    "css",
+    "ffmpeg",
+    "html",
+    "html-to-video",
+    "hyperframes",
+    "mp4",
+    "open-design",
+    "open-source",
+    "programmatic-video",
+    "video",
+    "video-as-code",
+    "video-generation"
+  ],
+  "license": "Apache-2.0",
+  "category": "AI 应用",
+  "classify_reason": "为编码代理设计的 HTML 转视频工具，支持程序化视频生成，属于 AI 视频工具",
+  "one_liner": "本地让AI代理把HTML/CSS直接渲染成MP4，无云费用，自带21套模板",
+  "why_worth_it": "统一了碎片化的网页→视频引擎，用你现有的编码代理零成本生成视频，彻底摆脱工具锁定。",
+  "tags": [
+    "程序化视频",
+    "Agent框架",
+    "本地优先",
+    "开源"
+  ],
+  "confidence": "medium",
+  "info_gaps": [
+    "没有提供任何性能数据（单帧渲染时间、多帧视频生成耗时、资源占用等）",
+    "未说明 Hyperframes 引擎在处理复杂 CSS/JS 动画时的兼容性边界",
+    "多引擎适配器（Remotion/Motion Canvas/Manim）的具体开发计划和可用时间未知",
+    "未提及 Studio UI 的浏览器兼容性要求",
+    "未说明如何自定义模板或贡献模板的指南"
+  ],
+  "quality_flags": [],
+  "stars_total": 3330,
+  "created_at": "2026-05-27",
+  "pushed_at": "2026-06-17",
+  "latest_release": null,
+  "first_seen": "2026-06-20",
+  "last_seen": "2026-06-20",
+  "streak_days": 1,
+  "analysis_updated_at": "2026-06-20T00:34:23+0800",
+  "appearances": [
+    {
+      "date": "2026-06-20",
+      "reason": "new",
+      "stars_total": 3330,
+      "stars_gained": 0,
+      "release": null
+    }
+  ]
+}

@@ -17,7 +17,7 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "Makes AI agents think like a lazy senior dev, a prompting tool for AI coding.",
+  "classify_reason": "调整 AI 代理编码行为方式的工具/技能，使代理采纳懒人开发风格，影响实际工作",
   "one_liner": "让AI代理像最懒的资深开发者一样写代码，平均少写54%代码且不损安全。",
   "why_worth_it": "实测在FastAPI+React项目中减少54%代码、节省20%成本，同时保持100%安全防护，远超同类YAGNI提示。适合所有用AI写代码的开发者。",
   "tags": [
@@ -29,19 +29,26 @@
   "confidence": "high",
   "info_gaps": [],
   "quality_flags": [],
-  "stars_total": 39253,
+  "stars_total": 39406,
   "created_at": "2026-06-12",
   "pushed_at": "2026-06-19",
   "latest_release": "v4.7.0",
   "first_seen": "2026-06-19",
-  "last_seen": "2026-06-19",
-  "streak_days": 1,
+  "last_seen": "2026-06-20",
+  "streak_days": 2,
   "analysis_updated_at": "2026-06-19T23:35:10+0800",
   "appearances": [
     {
       "date": "2026-06-19",
       "reason": "new",
       "stars_total": 39253,
+      "stars_gained": 0,
+      "release": "v4.7.0"
+    },
+    {
+      "date": "2026-06-20",
+      "reason": "lightweight",
+      "stars_total": 39406,
       "stars_gained": 0,
       "release": "v4.7.0"
     }
