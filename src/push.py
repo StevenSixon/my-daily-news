@@ -17,9 +17,21 @@ def _build_card(payload: dict) -> dict:
     top_n = cfg.get("card_top_n", 5)
     date = payload["date"]
     items = payload.get("items", [])[:top_n]
+    streaks = payload.get("streaks", [])[:top_n]
     total = payload.get("count", 0)
 
     elements: list[dict] = []
+    if streaks:
+        rows = ["**🔥 连续霸榜**"]
+        for it in streaks:
+            crown = " 🏆" if (it.get("streak_days") or 0) >= 7 else ""
+            rows.append(
+                f"连续 {it.get('streak_days')} 天{crown} ｜ "
+                f"[{it['full_name']}]({it['url']}) ｜ ⭐ {it.get('stars_total')}"
+            )
+        elements.append({"tag": "div", "text": {"tag": "lark_md", "content": "\n".join(rows)}})
+        elements.append({"tag": "hr"})
+
     if not items:
         elements.append({"tag": "div", "text": {"tag": "lark_md", "content": "今日无新增/更新项目。"}})
     else:
@@ -32,7 +44,7 @@ def _build_card(payload: dict) -> dict:
             if it.get("why_worth_it"):
                 parts.append(f"💡 {it['why_worth_it']}")
             if it.get("tags"):
-                parts.append(" ".join(f"`{t}`" for t in it["tags"]))
+                parts.append("🏷️ " + " · ".join(it["tags"]))
             if it.get("confidence") == "low":
                 parts.append("⚠️ 低置信，建议核对原文")
             parts.append(

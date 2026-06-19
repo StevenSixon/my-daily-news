@@ -40,7 +40,9 @@ def test_card_renders_why_and_tags():
     card = _build_card(payload)
     blob = str(card)
     assert "💡 对独立开发者省时" in blob
-    assert "`CLI`" in blob and "`本地优先`" in blob
+    # 卡片标签用中点分隔、无反引号（飞书 code chip 间距太窄会糊在一起）
+    assert "🏷️ CLI · 本地优先" in blob
+    assert "`CLI`" not in blob
 
 
 def test_card_omits_when_absent():

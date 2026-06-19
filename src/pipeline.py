@@ -40,14 +40,18 @@ def _run(top_n: int | None = None) -> dict:
 
     index = load_index()
     items = []
+    processed = []  # 本轮成功 learn 的全部结果（含未进主日报的静默更新），供霸榜榜单用
     for c in new_items:
         try:
-            items.append(analyze.learn(c, index))
+            res = analyze.learn(c, index)
+            items.append(res)
+            processed.append(res)
         except Exception as e:
             log.warning("处理 %s 失败：%s", c["full_name"], e)
     for c in seen_items:
         try:
             res = analyze.learn(c, index)
+            processed.append(res)
             # 老项目仅在实际重学（出新 release / star 大涨）时才进日报，
             # 否则只静默更新 streak/metadata，避免日报被未变动项目刷屏。
             if res.get("refreshed"):
@@ -56,9 +60,20 @@ def _run(top_n: int | None = None) -> dict:
             log.warning("复核 %s 失败：%s", c["full_name"], e)
     save_index(index)
 
-    payload = build_summary.build(items)
+    streaks = _streak_leaderboard(processed)
+    payload = build_summary.build(items, streaks)
     log.info("Pipeline 完成。")
     return payload
+
+
+def _streak_leaderboard(processed: list[dict]) -> list[dict]:
+    """从本轮处理结果里挑出「连续上榜 ≥ streak_min_days 天」的项目，
+    按连续天数（再按总 star）降序，构成纯展示用的霸榜榜单。零额外 LLM 成本。"""
+    min_days = get_config()["report"].get("streak_min_days", 3)
+    hot = [r for r in processed if (r.get("streak_days") or 0) >= min_days]
+    hot.sort(key=lambda r: (r.get("streak_days") or 0, r.get("stars_total") or 0),
+             reverse=True)
+    return hot
 
 
 def _alert_failure(e: Exception) -> None:

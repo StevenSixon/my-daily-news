@@ -44,6 +44,7 @@ report:
   daily_dir: daily                       # 日报（按天）
   trends_dir: trends                     # 周趋势报告（二次报告）
   timezone: Asia/Shanghai
+  streak_min_days: 3                      # 「连续霸榜」榜单的最小连续上榜天数（含当天）
 
 # 周趋势报告（python -m src.trend）
 trend:
