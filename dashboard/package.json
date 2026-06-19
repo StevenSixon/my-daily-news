@@ -1,9 +1,10 @@
 {
-  "name": "nd-build",
+  "name": "news-dashboard",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "gen": "node scripts/gen-data.mjs",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",

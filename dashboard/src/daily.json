@@ -1,0 +1,238 @@
+{
+  "date": "2026-06-19",
+  "count": 3,
+  "projects": [
+    {
+      "id": "lfnovo__open-notebook",
+      "fullName": "lfnovo/open-notebook",
+      "owner": "lfnovo",
+      "name": "open-notebook",
+      "url": "https://github.com/lfnovo/open-notebook",
+      "oneLiner": "开源、隐私优先的Notebook LM替代，支持多模型、本地部署与播客生成",
+      "description": "An Open Source implementation of Notebook LM with more flexibility and features",
+      "language": "TypeScript",
+      "category": "AI 应用",
+      "license": "MIT",
+      "starsTotal": 31747,
+      "starsGained": 2373,
+      "streakDays": 1,
+      "isNew": true,
+      "createdAt": "2024-10-21",
+      "pushedAt": "2026-06-18",
+      "latestRelease": "v1.10.0",
+      "firstSeen": "2026-06-19",
+      "topics": [
+        "assistant",
+        "learning",
+        "note-taking",
+        "notebook",
+        "notes-app",
+        "self-learning"
+      ],
+      "analysis": [
+        {
+          "heading": "它是什么",
+          "body": "Open Notebook 是 Google Notebook LM 的开源替代品，完全自托管，注重隐私与数据主权。它支持管理多模态研究素材（PDF、音视频、网页、Office 文档等），提供 AI 聊天、笔记生成、播客制作和全文/向量搜索，可选择 18+ 家 AI 供应商或纯本地模型。"
+        },
+        {
+          "heading": "为什么火",
+          "bullets": [
+            "隐私焦虑：所有数据留存在自己的基础设施中，不上传 Google 云端。",
+            "供应商灵活：不锁定单一模型，支持 OpenAI、Anthropic、Ollama、Groq、Google、DeepSeek 等 18+ 供应商，可显著降低 API 成本或完全免费本地运行。",
+            "播客生成更强：最多 4 位定制角色、完整脚本控制，远超 Google 的固定双人模式。",
+            "社区活跃：31.7k Star，快速迭代，丰富的部署示例和文档。"
+          ]
+        },
+        {
+          "heading": "技术栈",
+          "bullets": [
+            "后端：Python + FastAPI，LangChain 编排 AI 调用，SurrealDB 作为向量与文档数据库。",
+            "前端：Next.js + React，TypeScript，支持 14 种界面语言。",
+            "部署：Docker Compose 一键启动，提供 Ollama 完全本地化示例和源码开发方案。",
+            "安全：Starlette/FastAPI 已升级修复 CVE-2026-48710，支持密码保护和数据加密。"
+          ]
+        },
+        {
+          "heading": "核心能力",
+          "bullets": [
+            "多笔记本管理：为不同项目创建独立空间。",
+            "通用内容摄入：PDF、视频、音频、网页、Office 文档，自动提取、分块与向量化。",
+            "智能搜索：全文与向量混合搜索，支持高亮。",
+            "上下文聊天：基于笔记本源材料与笔记进行对话，可精细控制每个来源/笔记是否参与上下文。",
+            "播客生成：使用笔记本真实内容生成多发言者播客。",
+            "内容转换：可自定义总结、提取要点等动作。",
+            "REST API：完整的程序化访问，便于集成。",
+            "多模型分配：可为聊天、嵌入、语音转文字、文字转语音指定不同供应商。"
+          ]
+        },
+        {
+          "heading": "适用场景",
+          "bullets": [
+            "研究者需要深度加工大量文献并生成播客摘要。",
+            "注重隐私的企业或个人，不能将敏感资料上传第三方。",
+            "想自由组合性价比最高的 AI 模型（如用 DeepSeek 聊天、OpenAI 做嵌入）。",
+            "本地实验：搭配 Ollama 免费运行，无网络也可使用。",
+            "自建学习助手，管理课程视频、笔记、网页，并随时提问。"
+          ]
+        },
+        {
+          "heading": "同类对比",
+          "body": "与 Google Notebook LM 相比，Open Notebook 在隐私、模型选择、播客灵活性、API 支持和可定制性上全面领先；但在引用溯源深度、无缝集成生态和零运维方面，Google 产品仍有优势。其他替代品如私有大模型聊天 UI 通常缺乏笔记本结构和多源管理，而 Open Notebook 更接近研究工具。"
+        },
+        {
+          "heading": "版本动态",
+          "body": "v1.10.0（2026-06-18）主要更新：聊天支持 LaTeX 数学公式渲染；来源与笔记列标题新增批量上下文控制（仅洞察/完整内容/排除所有）；新增土耳其语界面；修复 Starlette/FastAPI 安全漏洞；摄入失败源显示重试按钮；播客生成改用笔记本真实内容；部分更新修复了搜索、Ollama 上下文持久化等问题。数据库迁移自动执行。"
+        }
+      ]
+    },
+    {
+      "id": "kenn-io__agentsview",
+      "fullName": "kenn-io/agentsview",
+      "owner": "kenn-io",
+      "name": "agentsview",
+      "url": "https://github.com/kenn-io/agentsview",
+      "oneLiner": "本地化AI编码助手会话总控，跨20+代理，统一搜索、成本追踪。",
+      "description": "Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. ",
+      "language": "Go",
+      "category": "AI 应用",
+      "license": "MIT",
+      "starsTotal": 2918,
+      "starsGained": 1382,
+      "streakDays": 1,
+      "isNew": true,
+      "createdAt": "2026-02-19",
+      "pushedAt": "2026-06-19",
+      "latestRelease": "v0.33.1",
+      "firstSeen": "2026-06-19",
+      "topics": [],
+      "analysis": [
+        {
+          "heading": "它是什么",
+          "body": "agentsview是一个本地运行的AI编码助手会话管理工具，自动发现并索引你机器上所有支持的AI代理（Claude Code、Codex等20多种）的会话历史，存入本地SQLite数据库，提供Web界面和CLI命令来搜索、浏览、分析会话内容，并追踪token使用量和成本。"
+        },
+        {
+          "heading": "为什么火",
+          "body": "随着AI辅助编程的普及，开发者往往同时使用多个代理，产生大量会话记录。agentsview解决了跨代理的统一管理难题，它完全本地运行，无需云端账号，保护隐私数据，且查询速度远超每次重新解析原始会话文件的工具（如ccusage）。GitHub星标快速增长，因为它填补了多代理洞察和成本控制的空白。"
+        },
+        {
+          "heading": "技术栈",
+          "bullets": [
+            "语言：Go，编译为单一二进制，跨平台。",
+            "存储：本地SQLite（默认），支持DuckDB镜像和PostgreSQL后端；FTS5实现全文本搜索。",
+            "前端：内置Web UI，包含仪表盘、会话查看器、搜索和热力图，支持SSE实时更新和键盘快捷键。",
+            "部署：提供二进制、桌面应用（macOS/Windows）、Homebrew、Docker镜像，支持远程转发认证。"
+          ]
+        },
+        {
+          "heading": "核心能力",
+          "bullets": [
+            "多代理统一会话发现：自动扫描20+代理的会话目录，增量同步。",
+            "全文本搜索：基于FTS5，可跨所有消息内容搜索。",
+            "Token使用与成本追踪：agentsview usage CLI提供日/模型/代理粒度的成本汇总，利用LiteLLM定价，支持缓存感知计算，查询速度提升100倍以上。",
+            "分析仪表盘：活动热力图、工具使用统计、开发速度指标、项目分解。",
+            "会话详情与导出：单会话token统计、成本估算；导出为HTML或发布到GitHub Gist。",
+            "远程访问与安全：支持通过--public-url进行SSH转发或反向代理访问，绑定回环，验证Host头，可选--require-auth。"
+          ]
+        },
+        {
+          "heading": "适用场景",
+          "bullets": [
+            "个人开发者：管理自己多个AI编码助手的会话历史，追踪成本，回顾过去对话。",
+            "团队或组织：对AI编码使用进行审计和费用归因（可通过Docker部署并挂载共享会话目录）。",
+            "自动化分析：通过JSON输出与CI/CD或shell脚本集成，生成用量报告。",
+            "隐私敏感环境：完全离线运行，无需上传数据，适合受管制行业。"
+          ]
+        },
+        {
+          "heading": "同类对比",
+          "bullets": [
+            "ccusage：仅针对Claude Code的token使用统计，agentsview覆盖代理更多、查询更快且带Web UI。",
+            "各代理自带历史记录：每个代理有自己的历史视图，但分散且没有统一搜索和跨代理分析。",
+            "云端仪表盘工具：如Copilot指标仪表盘等，但需要云账户，agentsview本地化优势明显。"
+          ]
+        },
+        {
+          "heading": "版本动态",
+          "body": "截至2026-06-19，最新Release v0.33.1发布（2026-06-12），主要改进：显示Pi会话的用户命名、修复forked会话中Codex历史重播重复计数问题、改进消息标识重复时的工具调用组渲染。文档中包含桌面发布设置、DuckDB后端计划、Huma API路由和Visual Studio Copilot跟踪等计划，显示项目仍在积极演进。"
+        }
+      ]
+    },
+    {
+      "id": "obra__superpowers",
+      "fullName": "obra/superpowers",
+      "owner": "obra",
+      "name": "superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "oneLiner": "为编码智能体提供系统的 TDD 开发方法论（红绿重构）与子代理驱动流水线。",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "language": "Shell",
+      "category": "AI 应用",
+      "license": "MIT",
+      "starsTotal": 233004,
+      "starsGained": 1113,
+      "streakDays": 1,
+      "isNew": true,
+      "createdAt": "2025-10-09",
+      "pushedAt": "2026-06-18",
+      "latestRelease": "v6.0.3",
+      "firstSeen": "2026-06-19",
+      "topics": [],
+      "analysis": [
+        {
+          "heading": "它是什么",
+          "body": "Superpowers 是一套面向编码代理（如 Claude Code、Codex、Cursor 等）的技能框架与软件开发方法论。它并非一个独立工具，而是通过安装在各种编码代理中的“技能包”，在对话中自动触发TDD（测试驱动开发）红绿重构、子代理驱动开发（SDD）、系统化调试、代码审查等严格流程，强制代理遵循设计、计划、实施、审查的闭环。重点在于将模糊的需求转化为可执行的任务列表，并由新起的子代理执行每个小任务，每完成一个任务即审查，避免跑偏或直接堆砌代码。"
+        },
+        {
+          "heading": "为什么火",
+          "bullets": [
+            "明星作者和团队：由 Prime Radiant 的 Jesse Vincent（原 DuckDuckGo 搜索负责人）创建，社区活跃，Discord 群和定期邮箱公告。",
+            "解决 AI 编码的痛点：完全针对实际痛点——“跳过设计直接写代码”“不写测试”“计划执行半途而废”，通过强制性工作流（不是建议）规范代理行为。",
+            "子代理驱动开发 (SDD)：突破单代理上下文限制，每个任务用全新上下文执行，类似人类开发者的“清空大脑、专注小任务”，效果显著。",
+            "广泛平台支持：覆盖几乎全部主流编程代理（Claude Code、Codex、Cursor、Copilot CLI、Gemini CLI 等），形成生态，降低使用门槛。",
+            "社区反馈：Star 数高达 23.3 万（截止 2026 年），远超一般开发工具。"
+          ]
+        },
+        {
+          "heading": "技术栈",
+          "bullets": [
+            "主体：纯文本技能文件（SKILL.md）及元数据，在各代理中通过自带的 Skill/Plugin 机制加载。",
+            "集成方式：为每个目标代理提供各自的 marketplace/插件包或安装脚本（Bash、Shell）。",
+            "SDD 基础设施：在 workspace 中维护 .superpowers/sdd/ 目录（存放任务简报、执行报告、审查差异和进度台账），通过共享的 sdd-workspace 辅助脚本为各个子代理提供隔离上下文。",
+            "测试框架无关：依赖项目本身的测试运行器；技能定义的是测试驱动的行为逻辑，不绑定具体框架。",
+            "部署前提：仅需目标编码代理的安装。"
+          ]
+        },
+        {
+          "heading": "核心能力",
+          "body": "1. 脑暴与设计审批：在编写代码前，先通过 Socratic 对话提取需求，输出分块设计文档供人类确认。 2. 工作树隔离：利用 git worktree 创建独立分支和干净环境，确保测试基线。 3. 计划生成：将设计拆分为 2–5 分钟的小任务，包含精确文件路径、完整代码和验证步骤。 4. 子代理驱动执行：每个任务用新子代理执行，过程中进行两阶段审查（规范合规、代码质量），关键问题阻塞进度。 5. 强制 TDD：红-绿-重构循环，先写失败测试，再写最少代码使测试通过，提交前删除未经测试的代码。 6. 自动代码审查：审查结果按严重性分级，严重问题阻塞前进。 7. 结项流程：完成后验证全部测试通过，提供合并/创建 PR/保留/丢弃分支的选项，清理工作树。 8. 可组合的技能库：涵盖测试、调试、协作、元技能，可扩展（writing-skills 指导创建新技能）。"
+        },
+        {
+          "heading": "适用场景",
+          "bullets": [
+            "个人或团队使用 AI 编码代理进行严肃软件开发，特别是不满足于“一次性代码生成”，希望确保代码可测试、可审查、可维护的项目。",
+            "原型到产品的全流程：从需求探索、架构设计到功能交付，尤其适合中小型功能迭代。",
+            "多代理协作探索：通过并行代理技能（dispatching-parallel-agents）调查多个方案。",
+            "企业级定制：提供了商业支持和托管消费选项。"
+          ]
+        },
+        {
+          "heading": "同类对比",
+          "bullets": [
+            "传统代码生成提示词/教程：多为静态建议，无强制执行和状态管理。Superpowers 本质是一个运行时方法论引擎。",
+            "Cline/Open Interpreter/Claude Code 原生功能：这些工具允许自由编写提示，但缺乏内置的结构化开发流程（脑暴→计划→TDD→子代理审查→结项）。Superpowers 像“给代理的操作系统”。",
+            "LangChain/其他代理框架：侧重于搭建代理流水线，而 Superpowers 无需编程，直接作为现有代理的“驾驶指引”。",
+            "SWE-bench 风味的自动修复工具：专注于修复或短任务，Superpowers 偏重长链路功能开发方法论。"
+          ]
+        },
+        {
+          "heading": "版本动态",
+          "bullets": [
+            "当前发布 v6.0.3 (2026-06-18)。",
+            "重要变化：SDD 临时文件从 .git/ 移出到 .superpowers/sdd/，解决 Claude Code 禁止 agent 写入 .git/ 导致子代理执行中断的问题。警告：git clean -fdx 会清理进度台账，但可从 git log 恢复。",
+            "未来工作：项目正在招聘全职社区工程师，说明社区和商业支持仍在扩展。"
+          ]
+        }
+      ]
+    }
+  ]
+}
