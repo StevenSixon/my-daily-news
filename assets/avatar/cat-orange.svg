@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3a2410"/><stop offset="0.55" stop-color="#5a3414"/><stop offset="1" stop-color="#1d1108"/>
+    </linearGradient>
+    <radialGradient id="g" cx="0.5" cy="0.42" r="0.6">
+      <stop offset="0" stop-color="#ff9a3c" stop-opacity="0.45"/><stop offset="1" stop-color="#ff9a3c" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="fur" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffb14e"/><stop offset="1" stop-color="#ef7d18"/>
+    </linearGradient>
+    <linearGradient id="lens" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#16263f"/><stop offset="1" stop-color="#0f3a60"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <rect width="512" height="512" rx="112" fill="url(#g)"/>
+  <g fill="#ffd08a" opacity="0.18" font-family="monospace" font-size="40" font-weight="700">
+    <text x="42" y="92">&lt;/&gt;</text><text x="396" y="472">~$</text>
+  </g>
+  <!-- body -->
+  <path d="M120 512 V470 a136 136 0 0 1 272 0 V512 Z" fill="url(#fur)"/>
+  <!-- ears -->
+  <path d="M150 196 L150 96 L244 168 Z" fill="url(#fur)"/>
+  <path d="M362 196 L362 96 L268 168 Z" fill="url(#fur)"/>
+  <path d="M166 178 L166 128 L214 166 Z" fill="#ffd0a0"/>
+  <path d="M346 178 L346 128 L298 166 Z" fill="#ffd0a0"/>
+  <!-- head -->
+  <ellipse cx="256" cy="262" rx="146" ry="130" fill="url(#fur)"/>
+  <ellipse cx="256" cy="286" rx="112" ry="96" fill="#ffce8a" opacity="0.32"/>
+  <!-- glasses -->
+  <circle cx="206" cy="252" r="44" fill="url(#lens)" stroke="#120a26" stroke-width="8"/>
+  <circle cx="306" cy="252" r="44" fill="url(#lens)" stroke="#120a26" stroke-width="8"/>
+  <line x1="250" y1="252" x2="262" y2="252" stroke="#120a26" stroke-width="8"/>
+  <g stroke="#7ff0ff" stroke-width="4.5" opacity="0.9" stroke-linecap="round">
+    <line x1="186" y1="244" x2="216" y2="244"/><line x1="186" y1="258" x2="206" y2="258"/>
+    <line x1="286" y1="244" x2="316" y2="244"/><line x1="286" y1="258" x2="306" y2="258"/>
+  </g>
+  <!-- nose + mouth -->
+  <path d="M242 306 h28 l-14 16 Z" fill="#e85d3c"/>
+  <path d="M256 322 q-20 22 -40 8 M256 322 q20 22 40 8" fill="none" stroke="#5a2a0f" stroke-width="6" stroke-linecap="round"/>
+  <!-- whiskers -->
+  <g stroke="#fff3e0" stroke-width="5" opacity="0.7" stroke-linecap="round">
+    <line x1="150" y1="300" x2="80" y2="288"/><line x1="150" y1="316" x2="84" y2="320"/>
+    <line x1="362" y1="300" x2="432" y2="288"/><line x1="362" y1="316" x2="428" y2="320"/>
+  </g>
+</svg>
