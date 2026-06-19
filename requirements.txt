@@ -1,5 +1,7 @@
-requests>=2.31
-beautifulsoup4>=4.12
-PyYAML>=6.0
-python-dotenv>=1.0
-litellm>=1.40
+# 运行时依赖（已锁定到已验证可用的版本，避免 litellm 等快速迭代库破坏管道）
+# 升级时：改版本号 → 本地 pytest 通过 → 提交。Python 3.11+。
+requests==2.34.1
+beautifulsoup4==4.15.0
+PyYAML==6.0.3
+python-dotenv==1.2.2
+litellm==1.89.2

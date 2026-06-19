@@ -28,7 +28,7 @@
 | ✅ **P1** | I-5 | 修复访逻辑割裂（`on_new_release` 当前失效） | 可靠性 | 中 |
 | ✅ **P1** | I-6 | `index.json` 原子写入 | 可靠性 | 小 |
 | ✅ **P2** | I-7 | 解析/分类/JSON 工具函数补单测 + Trending HTML fixture | 工程化 | 中 |
-| **P2** | I-8 | 锁依赖版本 + 最简 CI | 工程化 | 小 |
+| ✅ **P2** | I-8 | 锁依赖版本 + 最简 CI | 工程化 | 小 |
 | ✅ **P2** | I-9 | 杂项：`.gitignore` 去重、token 文件权限、repo 膨胀 | 卫生 | 小 |
 | **P3** | I-10 | 并发 analyze + 合并 GitHub API 调用 | 性能 | 中 |
 | **P3** | I-11 | 产品体验：推送理由、个性化、趋势报告、多渠道、质量自检 | 体验 | 大 |
@@ -144,14 +144,15 @@
 
 ---
 
-### I-8　依赖未锁定 + 无 CI
+### I-8　依赖未锁定 + 无 CI　✅ 已完成（2026-06-19）
 **问题**：`requirements.txt` 只用 `>=`（`litellm` 迭代极快，易破坏）。
 
 **改进**
-- [ ] 用 `pip-tools` / `uv` 锁定版本（`requirements.lock`）。
-- [ ] 最简 GitHub Actions：lint（ruff）+ 跑 `tests/`。
+- [x] `requirements.txt` 直接依赖全部 `==` 锁到已验证版本（requests 2.34.1 / bs4 4.15.0 / PyYAML 6.0.3 / python-dotenv 1.2.2 / litellm 1.89.2）；`requirements-dev.txt` 锁 `pytest==9.1.1`。
+- [x] `.github/workflows/ci.yml`：push(main) + PR 触发，Python 3.12 + pip 缓存，装 `requirements-dev.txt` 后跑 `pytest`。
+- [ ] （可选）后续加 ruff lint、多版本矩阵、transitive 全量 lock（pip-tools/uv）。
 
-**涉及**：`requirements.txt`、`.github/workflows/`
+**涉及**：`requirements.txt`、`requirements-dev.txt`、`.github/workflows/ci.yml`
 
 ---
 
@@ -185,3 +186,4 @@
 - 2026-06-19：完成 P0 三项（I-1 分类误判 / I-2 排序偏差 / I-3 失败告警），端到端验证通过。
 - 2026-06-19：完成 P1 三项（I-4 退避重试+session / I-5 复访逻辑割裂 / I-6 index 原子写入），单测+契约验证通过。
 - 2026-06-19：完成 I-9 卫生项 + I-7 测试套件（42 用例，pytest），并修复测试暴露的 `_find_json_block` 解析缺陷。
+- 2026-06-19：完成 I-8（依赖 == 锁定 + GitHub Actions CI）。P0~P2 全部完成，仅余 P3。
