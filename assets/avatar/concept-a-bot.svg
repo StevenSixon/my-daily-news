@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1d1238"/>
+      <stop offset="0.55" stop-color="#2c1559"/>
+      <stop offset="1" stop-color="#120a26"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.46" r="0.62">
+      <stop offset="0" stop-color="#8a2bff" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#8a2bff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="head" x1="0.1" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#b07dff"/>
+      <stop offset="1" stop-color="#7a17ff"/>
+    </linearGradient>
+    <radialGradient id="eye" cx="0.38" cy="0.32" r="0.8">
+      <stop offset="0" stop-color="#d6fbff"/>
+      <stop offset="0.5" stop-color="#7ff0ff"/>
+      <stop offset="1" stop-color="#36b4ff"/>
+    </radialGradient>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+  </defs>
+
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <rect width="512" height="512" rx="112" fill="url(#glow)"/>
+
+  <!-- circuit accents -->
+  <g stroke="#47bfff" stroke-width="3" opacity="0.32" fill="none">
+    <path d="M44 158 H100 V214"/>
+    <path d="M468 322 H412 V252"/>
+    <circle cx="44" cy="158" r="6" fill="#47bfff" stroke="none"/>
+    <circle cx="468" cy="322" r="6" fill="#47bfff" stroke="none"/>
+  </g>
+
+  <!-- antenna -->
+  <line x1="256" y1="120" x2="256" y2="152" stroke="#47bfff" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="256" cy="104" r="17" fill="#7ff0ff" filter="url(#soft)"/>
+  <circle cx="256" cy="104" r="12" fill="#cffaff"/>
+
+  <!-- head -->
+  <rect x="130" y="152" width="252" height="210" rx="60" fill="url(#head)"/>
+  <rect x="130" y="152" width="252" height="210" rx="60" fill="none" stroke="#d9c2ff" stroke-width="4" opacity="0.55"/>
+  <!-- top sheen -->
+  <path d="M170 172 h172 a40 40 0 0 1 40 40 v6 H130 v-6 a40 40 0 0 1 40 -40 Z" fill="#ffffff" opacity="0.08"/>
+
+  <!-- eyes -->
+  <g filter="url(#soft)" opacity="0.85">
+    <circle cx="206" cy="246" r="34" fill="#47bfff"/>
+    <circle cx="306" cy="246" r="34" fill="#47bfff"/>
+  </g>
+  <circle cx="206" cy="246" r="32" fill="url(#eye)"/>
+  <circle cx="306" cy="246" r="32" fill="url(#eye)"/>
+  <circle cx="197" cy="236" r="9" fill="#ffffff" opacity="0.9"/>
+  <circle cx="297" cy="236" r="9" fill="#ffffff" opacity="0.9"/>
+
+  <!-- friendly equalizer smile (upward arc) -->
+  <g fill="#7ff0ff">
+    <rect x="196" y="312" width="15" height="20" rx="7"/>
+    <rect x="222" y="318" width="15" height="28" rx="7"/>
+    <rect x="248" y="322" width="15" height="34" rx="7"/>
+    <rect x="274" y="318" width="15" height="28" rx="7"/>
+    <rect x="300" y="312" width="15" height="20" rx="7"/>
+  </g>
+
+  <!-- sparkle -->
+  <g transform="translate(396,176)" fill="#9be9ff">
+    <path d="M0 -27 C3 -8 8 -3 27 0 C8 3 3 8 0 27 C-3 8 -8 3 -27 0 C-8 -3 -3 -8 0 -27 Z"/>
+  </g>
+</svg>
