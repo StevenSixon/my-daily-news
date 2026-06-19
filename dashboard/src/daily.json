@@ -2,263 +2,495 @@
   "editions": [
     {
       "date": "2026-06-19",
-      "count": 3,
+      "count": 5,
       "projects": [
         {
-          "id": "lfnovo__open-notebook",
-          "fullName": "lfnovo/open-notebook",
-          "owner": "lfnovo",
-          "name": "open-notebook",
-          "url": "https://github.com/lfnovo/open-notebook",
-          "oneLiner": "开源、隐私优先的Notebook LM替代，支持多模型、本地部署与播客生成",
-          "description": "An Open Source implementation of Notebook LM with more flexibility and features",
-          "language": "TypeScript",
+          "id": "DietrichGebert__ponytail",
+          "fullName": "DietrichGebert/ponytail",
+          "owner": "DietrichGebert",
+          "name": "ponytail",
+          "url": "https://github.com/DietrichGebert/ponytail",
+          "oneLiner": "让AI代理像最懒的资深开发者一样写代码，平均少写54%代码且不损安全。",
+          "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+          "language": "JavaScript",
           "category": "AI 应用",
           "license": "MIT",
-          "starsTotal": 31747,
-          "starsGained": 2373,
+          "starsTotal": 39253,
+          "starsGained": 0,
           "streakDays": 1,
           "isNew": true,
-          "createdAt": "2024-10-21",
-          "pushedAt": "2026-06-18",
-          "latestRelease": "v1.10.0",
+          "createdAt": "2026-06-12",
+          "pushedAt": "2026-06-19",
+          "latestRelease": "v4.7.0",
           "firstSeen": "2026-06-19",
           "topics": [
-            "assistant",
-            "learning",
-            "note-taking",
-            "notebook",
-            "notes-app",
-            "self-learning"
+            "agent-skills",
+            "ai-agents",
+            "claude",
+            "claude-code",
+            "claude-code-plugin",
+            "cursor-rules",
+            "developer-tools",
+            "llm",
+            "prompt-engineering",
+            "yagni"
           ],
           "appearances": [
             {
               "date": "2026-06-19",
               "reason": "new",
-              "starsTotal": 31747,
-              "starsGained": 2373,
-              "release": "v1.10.0"
+              "starsTotal": 39253,
+              "starsGained": 0,
+              "release": "v4.7.0"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "Open Notebook 是 Google Notebook LM 的开源替代品，完全自托管，注重隐私与数据主权。它支持管理多模态研究素材（PDF、音视频、网页、Office 文档等），提供 AI 聊天、笔记生成、播客制作和全文/向量搜索，可选择 18+ 家 AI 供应商或纯本地模型。"
+              "body": "Ponytail是一个跨平台AI代理技能，将“最懒的资深开发者”思维注入AI代码代理（如Claude Code、Codex、Copilot CLI等）。它遵循一个阶梯原则：先判断是否需要（YAGNI），再找标准库、原生平台特性、已有依赖，最后才写代码，确保只产出必要代码。"
             },
             {
               "heading": "为什么火",
-              "bullets": [
-                "隐私焦虑：所有数据留存在自己的基础设施中，不上传 Google 云端。",
-                "供应商灵活：不锁定单一模型，支持 OpenAI、Anthropic、Ollama、Groq、Google、DeepSeek 等 18+ 供应商，可显著降低 API 成本或完全免费本地运行。",
-                "播客生成更强：最多 4 位定制角色、完整脚本控制，远超 Google 的固定双人模式。",
-                "社区活跃：31.7k Star，快速迭代，丰富的部署示例和文档。"
-              ]
+              "body": "度量支撑：在真实开源仓库（FastAPI+React）的12个特性任务中，使用Ponytail的AI代理相比无技能基线，平均减少54%代码行数、22% token消耗、20%成本、27%时间，且零安全事故。而简单的“写单行”提示虽减少代码但牺牲了安全（95%安全）。 社区认可：Star超过39k，发布不到一周已适配14个代理，包含Claude Code、Codex、GitHub Copilot CLI、CodeWhale、Gemini CLI等主流AI编程工具，并迅速支持OpenCode和Kiro。 易于集成：多数代理只需一条安装命令，无需复杂配置。"
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "后端：Python + FastAPI，LangChain 编排 AI 调用，SurrealDB 作为向量与文档数据库。",
-                "前端：Next.js + React，TypeScript，支持 14 种界面语言。",
-                "部署：Docker Compose 一键启动，提供 Ollama 完全本地化示例和源码开发方案。",
-                "安全：Starlette/FastAPI 已升级修复 CVE-2026-48710，支持密码保护和数据加密。"
+                "核心是文本规则文件（AGENTS.md, skills/），定义AI行为，不依赖后端服务。",
+                "针对不同平台提供适配：hooks/ 用于Claude Code/Codex生命周期，skills/ 提供可调用的技能，rules/ 用于Cursor/Windsurf/Cline等文本规则加载。",
+                "基准测试使用Claude Code与Haiku 4.5模型实施。",
+                "支持环境变量/配置文件设置默认强度（lite/full/ultra/off）。"
               ]
             },
             {
               "heading": "核心能力",
               "bullets": [
-                "多笔记本管理：为不同项目创建独立空间。",
-                "通用内容摄入：PDF、视频、音频、网页、Office 文档，自动提取、分块与向量化。",
-                "智能搜索：全文与向量混合搜索，支持高亮。",
-                "上下文聊天：基于笔记本源材料与笔记进行对话，可精细控制每个来源/笔记是否参与上下文。",
-                "播客生成：使用笔记本真实内容生成多发言者播客。",
-                "内容转换：可自定义总结、提取要点等动作。",
-                "REST API：完整的程序化访问，便于集成。",
-                "多模型分配：可为聊天、嵌入、语音转文字、文字转语音指定不同供应商。"
+                "代码简化阶梯：在写代码前先检查：1. 是否需要？2. 标准库有没有？3. 原生平台特性？4. 已安装依赖？5. 一行能搞定？6. 最少可行代码。",
+                "安全不妥协：绝不牺牲输入验证、错误处理、安全、无障碍性。",
+                "多级强度：支持lite、full、ultra、off模式，ultra模式适合极度精简。",
+                "审查与审计命令：提供/ponytail-review审查当前diff、/ponytail-audit审计全仓库、/ponytail-debt管理延期快捷键等。",
+                "跨代理兼容：一份规则集，多处落地，无需在各代理间手动同步。"
               ]
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "研究者需要深度加工大量文献并生成播客摘要。",
-                "注重隐私的企业或个人，不能将敏感资料上传第三方。",
-                "想自由组合性价比最高的 AI 模型（如用 DeepSeek 聊天、OpenAI 做嵌入）。",
-                "本地实验：搭配 Ollama 免费运行，无网络也可使用。",
-                "自建学习助手，管理课程视频、笔记、网页，并随时提问。"
+                "用AI代理编写业务代码的开发者，希望减少过度工程和冗余代码。",
+                "团队追求代码简洁性，同时不想牺牲安全性。",
+                "需要审查AI生成代码、发现过度设计的代码审查环节。",
+                "任何需要降低LLM使用成本和响应时间的场景（通过减少生成token实现）。"
               ]
             },
             {
               "heading": "同类对比",
-              "body": "与 Google Notebook LM 相比，Open Notebook 在隐私、模型选择、播客灵活性、API 支持和可定制性上全面领先；但在引用溯源深度、无缝集成生态和零运维方面，Google 产品仍有优势。其他替代品如私有大模型聊天 UI 通常缺乏笔记本结构和多源管理，而 Open Notebook 更接近研究工具。"
+              "bullets": [
+                "无技能基线：正常AI代理易过度设计，生成大量样式、额外组件。",
+                "Caveman（简洁散文控制）：减少20%代码，但token、成本、时间反而上升，因为模型会额外生成解释性文字。",
+                "“YAGNI+单行”提示：减少33%代码，但安全度降至95%（丢失防护），且部分指标不如Ponytail。",
+                "Ponytail：唯一在所有指标（LOC、token、成本、时间）均减少且保持100%安全的方案，对额外思考的模型（GPT-5.5）可能略微增加token，但核心优势明显。"
+              ]
             },
             {
               "heading": "版本动态",
-              "body": "v1.10.0（2026-06-18）主要更新：聊天支持 LaTeX 数学公式渲染；来源与笔记列标题新增批量上下文控制（仅洞察/完整内容/排除所有）；新增土耳其语界面；修复 Starlette/FastAPI 安全漏洞；摄入失败源显示重试按钮；播客生成改用笔记本真实内容；部分更新修复了搜索、Ollama 上下文持久化等问题。数据库迁移自动执行。"
+              "body": "---",
+              "bullets": [
+                "最新v4.7.0（2026-06-16），包含OpenClaw集成。",
+                "仓库创建于2026-06-12，一周内Star从0到39k，发展迅猛。",
+                "支持代理扩展至14个，包含Antigravity CLI、CodeWhale、Zed等，持续增长。",
+                "基准测试经历了从单次生成到真实代理任务的演进，更具说服力。",
+                "未来可能优化对GPT-5.5等模型的token增量问题。"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high"
+              ]
             }
           ]
         },
         {
-          "id": "kenn-io__agentsview",
-          "fullName": "kenn-io/agentsview",
-          "owner": "kenn-io",
-          "name": "agentsview",
-          "url": "https://github.com/kenn-io/agentsview",
-          "oneLiner": "本地化AI编码助手会话总控，跨20+代理，统一搜索、成本追踪。",
-          "description": "Local-first session search, analytics, insights, and token use statistics for coding agents, supporting Claude Code, Codex, and more than 20 other agents. ",
-          "language": "Go",
+          "id": "vercel__eve",
+          "fullName": "vercel/eve",
+          "owner": "vercel",
+          "name": "eve",
+          "url": "https://github.com/vercel/eve",
+          "oneLiner": "文件系统优先的 TypeScript Agent 框架，约定优于配置。",
+          "description": "The Framework for Building Agents",
+          "language": "TypeScript",
           "category": "AI 应用",
-          "license": "MIT",
-          "starsTotal": 2918,
-          "starsGained": 1382,
+          "license": "Apache-2.0",
+          "starsTotal": 1561,
+          "starsGained": 0,
           "streakDays": 1,
           "isNew": true,
-          "createdAt": "2026-02-19",
+          "createdAt": "2026-06-16",
           "pushedAt": "2026-06-19",
-          "latestRelease": "v0.33.1",
+          "latestRelease": "eve@0.11.7",
           "firstSeen": "2026-06-19",
-          "topics": [],
+          "topics": [
+            "agent",
+            "framework",
+            "harness",
+            "javascript",
+            "markdown",
+            "sandbox",
+            "typescript",
+            "vercel",
+            "workflows"
+          ],
           "appearances": [
             {
               "date": "2026-06-19",
               "reason": "new",
-              "starsTotal": 2918,
-              "starsGained": 1382,
-              "release": "v0.33.1"
+              "starsTotal": 1561,
+              "starsGained": 0,
+              "release": "eve@0.11.7"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "agentsview是一个本地运行的AI编码助手会话管理工具，自动发现并索引你机器上所有支持的AI代理（Claude Code、Codex等20多种）的会话历史，存入本地SQLite数据库，提供Web界面和CLI命令来搜索、浏览、分析会话内容，并追踪token使用量和成本。"
+              "body": "eve 是 Vercel 发布的一份文件系统优先的 AI Agent 框架。它把 Agent 的核心能力（指令、工具、技能、通道、定时任务）映射到约定目录，开发者通过编辑 Markdown 和 TypeScript 文件来定义 Agent 的行为，项目天然可读、可版本化。运行时基于 Node.js，支持模型配置、多通道（Slack/Discord/HTTP）和沙箱执行。"
             },
             {
               "heading": "为什么火",
-              "body": "随着AI辅助编程的普及，开发者往往同时使用多个代理，产生大量会话记录。agentsview解决了跨代理的统一管理难题，它完全本地运行，无需云端账号，保护隐私数据，且查询速度远超每次重新解析原始会话文件的工具（如ccusage）。GitHub星标快速增长，因为它填补了多代理洞察和成本控制的空白。"
+              "body": "虽然刚刚发布，但 Vercel 的品牌吸引力、文件约定的简洁理念，以及内置的多通道支持和沙箱，让它迅速获得关注。相比过度抽象的框架，它更贴近“代码即配置”的极客口味，降低了 Agent 项目的入门和维护门槛。"
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "语言：Go，编译为单一二进制，跨平台。",
-                "存储：本地SQLite（默认），支持DuckDB镜像和PostgreSQL后端；FTS5实现全文本搜索。",
-                "前端：内置Web UI，包含仪表盘、会话查看器、搜索和热力图，支持SSE实时更新和键盘快捷键。",
-                "部署：提供二进制、桌面应用（macOS/Windows）、Homebrew、Docker镜像，支持远程转发认证。"
+                "语言：TypeScript",
+                "运行时：Node.js",
+                "模型接入：通过 model 选项指定（如 anthropic/claude-sonnet-4.6），依赖 Vercel 的模型网关或直接调用",
+                "工具定义：使用 Zod 进行参数校验",
+                "沙箱：微沙箱（microsandbox）用于隔离执行",
+                "通道：内置 Slack、Discord、HTTP 等通道支持",
+                "文档内建：node_modules/eve/docs 包含完整文档"
               ]
             },
             {
               "heading": "核心能力",
               "bullets": [
-                "多代理统一会话发现：自动扫描20+代理的会话目录，增量同步。",
-                "全文本搜索：基于FTS5，可跨所有消息内容搜索。",
-                "Token使用与成本追踪：agentsview usage CLI提供日/模型/代理粒度的成本汇总，利用LiteLLM定价，支持缓存感知计算，查询速度提升100倍以上。",
-                "分析仪表盘：活动热力图、工具使用统计、开发速度指标、项目分解。",
-                "会话详情与导出：单会话token统计、成本估算；导出为HTML或发布到GitHub Gist。",
-                "远程访问与安全：支持通过--public-url进行SSH转发或反向代理访问，绑定回环，验证Host头，可选--require-auth。"
+                "指令优先：instructions.md 作为永久系统提示",
+                "工具函数：tools/ 下定义可调用函数，类型安全",
+                "技能：skills/ 中按需加载的 Markdown 过程",
+                "通道：channels/ 支持多平台消息接入",
+                "定时任务：schedules/ 中用 cron 表达式触发",
+                "人工介入：支持 human-in-the-loop 提示",
+                "子代理：subagents/ 实现代理协作",
+                "评估：内置 evals 目录用于测试与评估",
+                "沙箱执行：隔离运行工具和技能，避免副作用"
               ]
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "个人开发者：管理自己多个AI编码助手的会话历史，追踪成本，回顾过去对话。",
-                "团队或组织：对AI编码使用进行审计和费用归因（可通过Docker部署并挂载共享会话目录）。",
-                "自动化分析：通过JSON输出与CI/CD或shell脚本集成，生成用量报告。",
-                "隐私敏感环境：完全离线运行，无需上传数据，适合受管制行业。"
+                "需要长期运行的持久化 Agent，如团队助手、定时报告机器人",
+                "多渠道交互的智能助手（Slack + Discord + HTTP）",
+                "需要复杂工具链和子代理编排的自动化流程",
+                "偏好文件约定和 Git 工作流的团队"
               ]
             },
             {
               "heading": "同类对比",
-              "bullets": [
-                "ccusage：仅针对Claude Code的token使用统计，agentsview覆盖代理更多、查询更快且带Web UI。",
-                "各代理自带历史记录：每个代理有自己的历史视图，但分散且没有统一搜索和跨代理分析。",
-                "云端仪表盘工具：如Copilot指标仪表盘等，但需要云账户，agentsview本地化优势明显。"
-              ]
+              "body": "对比 LangChain / CrewAI 等框架，eve 的核心差异是“文件系统即接口”而非复杂的编程抽象。它更像 Next.js 之于 React 的定位——通过约定减少决策成本。与 Vercel AI SDK 可能互补：SDK 面向 API 调用，eve 面向完整 Agent 工程。因尚处 beta，生态和社区扩展性不如老牌框架。"
             },
             {
               "heading": "版本动态",
-              "body": "截至2026-06-19，最新Release v0.33.1发布（2026-06-12），主要改进：显示Pi会话的用户命名、修复forked会话中Codex历史重播重复计数问题、改进消息标识重复时的工具调用组渲染。文档中包含桌面发布设置、DuckDB后端计划、Huma API路由和Visual Studio Copilot跟踪等计划，显示项目仍在积极演进。"
+              "body": "最新 0.11.7（2026-06-19）包含多项改进：沙箱创建进度上报、引擎安装序列化避免 race condition、Slack 打字指示器分段更新等。项目迭代活跃，Commit 记录密集，说明核心团队在快速打磨体验。 ---"
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：未提供性能 benchmark 数据；生产部署是否需要 Vercel 账户或可完全自托管未明确；微沙箱的安全边界与实现细节未深入说明；与 Vercel AI SDK 的具体整合路径未展开"
+              ]
             }
           ]
         },
         {
-          "id": "obra__superpowers",
-          "fullName": "obra/superpowers",
-          "owner": "obra",
-          "name": "superpowers",
-          "url": "https://github.com/obra/superpowers",
-          "oneLiner": "为编码智能体提供系统的 TDD 开发方法论（红绿重构）与子代理驱动流水线。",
-          "description": "An agentic skills framework & software development methodology that works.",
-          "language": "Shell",
+          "id": "omnigent-ai__omnigent",
+          "fullName": "omnigent-ai/omnigent",
+          "owner": "omnigent-ai",
+          "name": "omnigent",
+          "url": "https://github.com/omnigent-ai/omnigent",
+          "oneLiner": "统一编排 Claude Code/Codex/Cursor 等 AI 编码 agent 的框架，内置沙箱与策略",
+          "description": "Omnigent is an open-source AI agent framework and meta-harness: orchestrate Claude Code, Codex, Cursor, Pi, and custom agents — swap harnesses without rewriting, enforce policies and sandboxing, and collaborate in real time from any device.",
+          "language": "Python",
           "category": "AI 应用",
-          "license": "MIT",
-          "starsTotal": 233004,
-          "starsGained": 1113,
+          "license": "Apache-2.0",
+          "starsTotal": 3965,
+          "starsGained": 0,
           "streakDays": 1,
           "isNew": true,
-          "createdAt": "2025-10-09",
-          "pushedAt": "2026-06-18",
-          "latestRelease": "v6.0.3",
+          "createdAt": "2026-06-11",
+          "pushedAt": "2026-06-19",
+          "latestRelease": "v0.2.0",
+          "firstSeen": "2026-06-19",
+          "topics": [
+            "agent-framework",
+            "agent-governance",
+            "agent-orchestration",
+            "agents",
+            "ai",
+            "ai-agent",
+            "ai-agents",
+            "claude-code",
+            "codex",
+            "coding-agents",
+            "developer-tools",
+            "llm",
+            "ml",
+            "multi-agent",
+            "python",
+            "sandbox"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-19",
+              "reason": "new",
+              "starsTotal": 3965,
+              "starsGained": 0,
+              "release": "v0.2.0"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "Omnigent 是一个开源的 AI agent 框架与“meta-harness”，为 Claude Code、Codex、Cursor、Pi 等主流编码 agent 提供统一编排层。你可以用 YAML 定义自定义 agent，并在同一个会话中调度、监督、切换他们，无需重写任何 harness。同时提供策略引擎、沙箱隔离、多设备实时协作和云端部署能力。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "发布不到 10 天即获近 4000 star，因为它切中了开发者实际痛点：不同 AI 编码助手各有所长，但单独使用容易割裂。Omnigent 允许同一个会话中混合多个 agent，让 Claude 写代码、Codex 审查，或将任务分发给不同特化的子 agent，同时为所有操作施加统一的安全策略和沙箱。对团队而言，它带来了前所未有的控制力与灵活性。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "语言：Python 3.12+，CLI 工具 omnigent（缩写 omni）",
+                "依赖：Node.js 22+（用于 Claude/Codex/Pi 的 harness），tmux，Linux 需 bubblewrap 做 OS 级沙箱，macOS 使用内置 seatbelt",
+                "部署支持：本地 docker compose up，一键部署到 Render、Fly.io、Railway、Hugging Face Spaces、Modal 等云平台",
+                "模型接入：第一方 API 密钥、OpenAI/Anthropic 订阅、兼容网关（OpenRouter/Ollama/vLLM）、Databricks",
+                "沙箱后端：Modal、Daytona、Islo、NVIDIA OpenShell、E2B、CoreWeave、Podman 等"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "多 agent 编排：同一会话启动 Claude Code、Codex、Cursor、Pi 及自定义 agent，支持 agent 间相互 review，子代理在独立 git worktree 中并行工作",
+                "统一策略治理：服务器/agent/会话三级策略，可暂停等待审批、限制支出、工具白名单，发送通知",
+                "沙箱隔离：所有 agent 运行在沙箱中，通过 credential_proxy 注入认证信息，密钥不进入沙箱",
+                "多设备实时协作：终端、浏览器、手机同步会话；可分享会话给队友实时观看或共同操作，支持 fork 会话",
+                "灵活模型切换：在会话中用 /model 切换模型，支持多种凭证类型，默认值可按 agent 独立设置",
+                "一键自升级：omni upgrade 自动检测安装方式并升级，支持索引 URL 配置",
+                "扩展性：用 YAML 定义 agent，SDK 插件化接入新 harness（v0.2.0 新增）"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "研发团队同时使用多种 AI 编码助手，需要统一入口、相互审查和策略管控",
+                "需要强安全约束的企业环境（禁止某 agent 联网、限制命令执行等）",
+                "远程/分布式团队，需要实时共享和协作 AI 编码会话",
+                "个人开发者希望在手机端继续电脑上的 agent 会话"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "body": "相较单一 Agent（如 GitHub Copilot、Claude Code 单独使用），Omnigent 提供了编排与审查能力。对比 LangChain、AutoGPT 等通用 agent 框架，它更聚焦于编码场景，且对现有 CLI agent 做到“无痛集成”，无需重写逻辑。与其它多 agent 编排项目相比，其核心差异在于原生集成多个头部编码 agent、内置策略和沙箱、直接从移动端操控的生产力设计。"
+            },
+            {
+              "heading": "版本动态",
+              "body": "当前版本 v0.2.0（2026-06-19），刚刚在一周前发布。新增多厂商 agent SDK、更多沙箱与部署目标、secretless egress、MLflow 追踪、omni upgrade 命令等大量功能，并修复了数个关键 bug。项目尚处 alpha 阶段，但迭代速度极快，社区贡献活跃。 ---"
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：无性能基准测试数据（如编排延迟、多 agent 并发开销）；策略系统的完整表达能力未提供详尽说明，仅靠文档推断；对 Cursor 集成是否支持全部 Cursor 功能或存在限制未明确；无大规模部署案例或生产环境稳定性报告；沙箱各后端的成熟度和隔离强度无量化比较"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "withastro__flue",
+          "fullName": "withastro/flue",
+          "owner": "withastro",
+          "name": "flue",
+          "url": "https://github.com/withastro/flue",
+          "oneLiner": "为自主 Agent 提供完备的 TypeScript 沙箱运行时，非 SDK，而是下一代 Agent 架构。",
+          "description": "The sandbox agent framework.",
+          "language": "TypeScript",
+          "category": "AI 应用",
+          "license": "Apache-2.0",
+          "starsTotal": 5714,
+          "starsGained": 305,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-02-07",
+          "pushedAt": "2026-06-19",
+          "latestRelease": "",
           "firstSeen": "2026-06-19",
           "topics": [],
           "appearances": [
             {
               "date": "2026-06-19",
               "reason": "new",
-              "starsTotal": 233004,
-              "starsGained": 1113,
-              "release": "v6.0.3"
+              "starsTotal": 5714,
+              "starsGained": 305,
+              "release": ""
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "Superpowers 是一套面向编码代理（如 Claude Code、Codex、Cursor 等）的技能框架与软件开发方法论。它并非一个独立工具，而是通过安装在各种编码代理中的“技能包”，在对话中自动触发TDD（测试驱动开发）红绿重构、子代理驱动开发（SDD）、系统化调试、代码审查等严格流程，强制代理遵循设计、计划、实施、审查的闭环。重点在于将模糊的需求转化为可执行的任务列表，并由新起的子代理执行每个小任务，每完成一个任务即审查，避免跑偏或直接堆砌代码。"
+              "body": "Flue 是一个 Agent Harness 框架，不是传统的 LLM SDK。它为 TypeScript 提供了一整套可编程的“挽具”：沙箱环境、工具、技能、会话管理、工作流编排和持久执行。目标是让开发者能够构建像 Claude Code 或 Codex 那样的自主代理——给定一个任务，代理可以自主地使用工具、修改文件、跨会话保持上下文，并在安全的沙箱中完成真实工作。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "近年来，Claude Code 等产品展示了真正自主代理的威力，但实现这样的架构需要一套复杂的运行时。Flue 提炼了这种模式，提供开箱即用的 harness，使普通团队也能复现这种代理能力。它填补了从 LLM SDK 到完整自主代理之间的鸿沟，尤其适合需要安全沙箱、多工具协调和持久状态的企业场景。5714 颗星表明社区对此方向的高度关注。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "语言：TypeScript",
+                "核心包：@flue/runtime（运行时）、@flue/cli（构建工具）、@flue/sdk（客户端）、@flue/opentelemetry（遥测）、@flue/postgres（持久化）",
+                "沙箱支持：本地（local()）、虚拟容器、远程容器（如 Daytona）",
+                "模型：示例中使用 Anthropic Claude Sonnet，但支持多种模型（未完整列出）",
+                "部署目标：Node.js、Cloudflare Workers、GitHub Actions、GitLab CI/CD、Render 等",
+                "集成：MCP 服务器、Slack/Discord/Teams 等多渠道"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "代理与工作流：构建保持上下文的自主代理，同时也支持结构化工作流。",
+                "沙箱执行：为代理提供隔离的文件系统和代码执行环境，确保安全。",
+                "持久执行：通过 Durable Execution 自动处理故障和重试，代理进度不会丢失。",
+                "工具与技能：类型安全的工具调用和可复用的技能包（如 bug 分诊、验证），代理可按需加载。",
+                "子代理委派：可定义专家角色，主代理能将子任务委派给子代理。",
+                "MCP 兼容：连接 Model Context Protocol 生态的工具和服务。",
+                "可观测性：内置 OpenTelemetry 跟踪、Braintrust/Sentry 集成，也支持自定义观察器。",
+                "多渠道接入：从 Slack、Teams、Discord、GitHub 等渠道接收事件，统一处理。"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "自动化客服与工单处理（通过 Slack/Discord/邮件等渠道）",
+                "软件工程助手：bug 复现、诊断、修复等端到端任务",
+                "多步骤业务工作流自动化，需要代理根据环境做决策",
+                "在安全沙箱中执行不可信代码或未验证的工具调用"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "body": "与 LangGraph、CrewAI、AutoGen 相比，Flue 更强调“Harness”理念，它不是单纯的任务链或对话编排，而是为代理提供一个完整的、可编程的执行环境（沙箱、持久性、工具/Skill 系统），更贴近 Claude Code 的内部架构。其 TypeScript 原生支持和多渠道适配在侧重 JavaScript/TypeScript 技术栈的团队中优势明显。"
+            },
+            {
+              "heading": "版本动态",
+              "body": "仓库创建于 2026-02-07，最新推送 2026-06-19，处于快速迭代期。Star 数已达 5714，生态活跃。 ---"
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：medium",
+                "信息盲区：未提供完整的安装步骤和系统依赖（如是否依赖 Docker 作为沙箱）；未列出支持的 AI 模型完整列表，示例仅提及 Claude Sonnet；未给出持久执行和子代理的具体代码示例；未说明部署到 Cloudflare Workers 等平台的详细限制；无性能基准或规模数据"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "BuilderIO__agent-native",
+          "fullName": "BuilderIO/agent-native",
+          "owner": "BuilderIO",
+          "name": "agent-native",
+          "url": "https://github.com/BuilderIO/agent-native",
+          "oneLiner": "Agent与UI共享状态、协同工作的全栈框架",
+          "description": "A framework for building agent-native applications.",
+          "language": "TypeScript",
+          "category": "AI 应用",
+          "license": "",
+          "starsTotal": 890,
+          "starsGained": 172,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-03-12",
+          "pushedAt": "2026-06-19",
+          "latestRelease": "@agent-native/core@0.63.4",
+          "firstSeen": "2026-06-19",
+          "topics": [
+            "agents",
+            "ai",
+            "react"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-19",
+              "reason": "new",
+              "starsTotal": 890,
+              "starsGained": 172,
+              "release": "@agent-native/core@0.63.4"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "BuilderIO/agent-native 是一个开源的 TypeScript 框架，用于构建“agent-native”应用程序。它让 AI 代理和用户界面成为同一系统中的平等公民，共享同一个数据库和状态，实现实时双向同步。开发者只需定义一次动作（Action），即可在 UI、Agent 聊天、HTTP API、MCP、A2A 等多种场景复用，无需重复实现。"
             },
             {
               "heading": "为什么火",
               "bullets": [
-                "明星作者和团队：由 Prime Radiant 的 Jesse Vincent（原 DuckDuckGo 搜索负责人）创建，社区活跃，Discord 群和定期邮箱公告。",
-                "解决 AI 编码的痛点：完全针对实际痛点——“跳过设计直接写代码”“不写测试”“计划执行半途而废”，通过强制性工作流（不是建议）规范代理行为。",
-                "子代理驱动开发 (SDD)：突破单代理上下文限制，每个任务用全新上下文执行，类似人类开发者的“清空大脑、专注小任务”，效果显著。",
-                "广泛平台支持：覆盖几乎全部主流编程代理（Claude Code、Codex、Cursor、Copilot CLI、Gemini CLI 等），形成生态，降低使用门槛。",
-                "社区反馈：Star 数高达 23.3 万（截止 2026 年），远超一般开发工具。"
+                "打破 AI 与 UI 的隔阂：传统 AI 聊天无法深度操控应用状态，而 Agent-native 让代理直接读写数据库，UI 实时响应。",
+                "全栈一体：从无头 API 到富聊天到完整应用，三种形态使用同一套动作定义，大幅降低构建复杂度。",
+                "实时协作：人类与代理通过 CRDT 在同一个文档上实时协作，支持多人、多代理同时编辑。",
+                "开放无锁定：任何 Drizzle 支持的 SQL 数据库、任何 Nitro 支持的托管平台，避免厂商绑定。"
               ]
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "主体：纯文本技能文件（SKILL.md）及元数据，在各代理中通过自带的 Skill/Plugin 机制加载。",
-                "集成方式：为每个目标代理提供各自的 marketplace/插件包或安装脚本（Bash、Shell）。",
-                "SDD 基础设施：在 workspace 中维护 .superpowers/sdd/ 目录（存放任务简报、执行报告、审查差异和进度台账），通过共享的 sdd-workspace 辅助脚本为各个子代理提供隔离上下文。",
-                "测试框架无关：依赖项目本身的测试运行器；技能定义的是测试驱动的行为逻辑，不绑定具体框架。",
-                "部署前提：仅需目标编码代理的安装。"
+                "语言：TypeScript",
+                "核心库：@agent-native/core",
+                "数据库：Drizzle ORM（支持多数关系型数据库）",
+                "主机适配：Nitro（多种部署目标）",
+                "前端：React（模板使用），但框架本身可对接任意前端",
+                "协议：A2A、MCP、MCP Apps、OAuth、OpenAI AG-UI、Claude Agent SDK 等"
               ]
             },
             {
               "heading": "核心能力",
-              "body": "1. 脑暴与设计审批：在编写代码前，先通过 Socratic 对话提取需求，输出分块设计文档供人类确认。 2. 工作树隔离：利用 git worktree 创建独立分支和干净环境，确保测试基线。 3. 计划生成：将设计拆分为 2–5 分钟的小任务，包含精确文件路径、完整代码和验证步骤。 4. 子代理驱动执行：每个任务用新子代理执行，过程中进行两阶段审查（规范合规、代码质量），关键问题阻塞进度。 5. 强制 TDD：红-绿-重构循环，先写失败测试，再写最少代码使测试通过，提交前删除未经测试的代码。 6. 自动代码审查：审查结果按严重性分级，严重问题阻塞前进。 7. 结项流程：完成后验证全部测试通过，提供合并/创建 PR/保留/丢弃分支的选项，清理工作树。 8. 可组合的技能库：涵盖测试、调试、协作、元技能，可扩展（writing-skills 指导创建新技能）。"
+              "bullets": [
+                "actions：定义一次，用于 UI、agent、HTTP、MCP、CLI 等所有通道。",
+                "Agent 运行时：内置对话、工具、技能、记忆、任务、可观测性、代理间切换。",
+                "多形态部署：headless、rich chat、完整应用。",
+                "Workspace 工作区：monorepo 支持多个应用共享认证和跨应用 A2A 通信。",
+                "技能系统：可安装技能扩展代理能力（如 visual-plan）。",
+                "模板市场：Calendar、Content、Slides 等多个完整可克隆 SaaS 模板。"
+              ]
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "个人或团队使用 AI 编码代理进行严肃软件开发，特别是不满足于“一次性代码生成”，希望确保代码可测试、可审查、可维护的项目。",
-                "原型到产品的全流程：从需求探索、架构设计到功能交付，尤其适合中小型功能迭代。",
-                "多代理协作探索：通过并行代理技能（dispatching-parallel-agents）调查多个方案。",
-                "企业级定制：提供了商业支持和托管消费选项。"
+                "需要将 AI 深度集成到业务逻辑的全栈应用（如邮件、日历、数据分析）",
+                "构建既有人工交互又有自主代理操作的协作工具",
+                "希望快速启动、拥有完整 UI 和 AI 能力的 SaaS 起步项目",
+                "企业内部工具，要求代理能操作数据并实时反馈到界面"
               ]
             },
             {
               "heading": "同类对比",
-              "bullets": [
-                "传统代码生成提示词/教程：多为静态建议，无强制执行和状态管理。Superpowers 本质是一个运行时方法论引擎。",
-                "Cline/Open Interpreter/Claude Code 原生功能：这些工具允许自由编写提示，但缺乏内置的结构化开发流程（脑暴→计划→TDD→子代理审查→结项）。Superpowers 像“给代理的操作系统”。",
-                "LangChain/其他代理框架：侧重于搭建代理流水线，而 Superpowers 无需编程，直接作为现有代理的“驾驶指引”。",
-                "SWE-bench 风味的自动修复工具：专注于修复或短任务，Superpowers 偏重长链路功能开发方法论。"
-              ]
+              "body": "| 框架 | 定位 | Agent-UI 同步 | 行动定义复用 | 多代理通信 | 厂商锁定 | |------|------|--------------|--------------|------------|----------| | LangChain/LangGraph | 通用 Agent 框架 | 需自行实现 | 需封装 | 有限 | 部分锁定 | | AutoGen | 多 Agent 对话 | 通常无内置 UI | 无 | 强 | 开源 | | Agent-Native | 全栈 Agent-Native | 原生双向同步 | 一处定义，多处使用 | 内置 A2A | 无锁定（任意 DB/主机） |"
             },
             {
               "heading": "版本动态",
+              "body": "最新 Release 为 @agent-native/core@0.63.4（2026-06-19），属于修补版本，主要修复了 UI 细节（注解高亮、工具提示、深度链接保持）。框架仍在快速迭代，尚未发布 1.0。 ---"
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
-                "当前发布 v6.0.3 (2026-06-18)。",
-                "重要变化：SDD 临时文件从 .git/ 移出到 .superpowers/sdd/，解决 Claude Code 禁止 agent 写入 .git/ 导致子代理执行中断的问题。警告：git clean -fdx 会清理进度台账，但可从 git log 恢复。",
-                "未来工作：项目正在招聘全职社区工程师，说明社区和商业支持仍在扩展。"
+                "置信度：high",
+                "信息盲区：许可类型未在仓库中明确说明（标注为 None）；未提供性能基准数据；未明确最低 Node.js 版本要求（推测为 18+）；Nitro 部署目标细节未列出，仅说明支持任何 Nitro 托管"
               ]
             }
           ]
