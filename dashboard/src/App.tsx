@@ -12,6 +12,9 @@ import {
   CalendarDays,
   Sparkles,
   TrendingUp,
+  Trophy,
+  Newspaper,
+  Inbox,
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
@@ -42,21 +45,50 @@ function mmdd(d: string): string {
 }
 
 type SortKey = "gained" | "total" | "newest";
+type ViewKey = "current" | "board";
+
+/** Aggregate of one project across all editions, for the leaderboard. */
+type BoardEntry = Project & {
+  editionsCount: number;
+  totalGained: number;
+  maxStreak: number;
+};
+
+function matchesFilters(p: Project, q: string, lang: string, cat: string): boolean {
+  const matchLang = lang === "全部" || p.language === lang;
+  const matchCat = cat === "全部" || p.category === cat;
+  const matchQ =
+    !q ||
+    p.fullName.toLowerCase().includes(q) ||
+    p.oneLiner.toLowerCase().includes(q) ||
+    p.topics.some((t) => t.includes(q));
+  return matchLang && matchCat && matchQ;
+}
 
 export default function App() {
   const [dark, setDark] = useState(false);
   const [editionIdx, setEditionIdx] = useState(0);
+  const [view, setView] = useState<ViewKey>("current");
   const [query, setQuery] = useState("");
   const [lang, setLang] = useState<string>("全部");
+  const [cat, setCat] = useState<string>("全部");
   const [sort, setSort] = useState<SortKey>("gained");
   const [active, setActive] = useState<Project | null>(null);
 
   const edition = editions[editionIdx];
 
+  // Language chips reflect the active edition; category list spans all editions
+  // so the dropdown is stable when switching views/dates.
   const languages = useMemo(() => {
     const set = new Set(edition.projects.map((p) => p.language).filter(Boolean));
     return ["全部", ...Array.from(set)];
   }, [edition]);
+
+  const categories = useMemo(() => {
+    const set = new Set<string>();
+    editions.forEach((e) => e.projects.forEach((p) => p.category && set.add(p.category)));
+    return ["全部", ...Array.from(set)];
+  }, []);
 
   const totals = useMemo(() => {
     const stars = edition.projects.reduce((s, p) => s + p.starsTotal, 0);
@@ -64,25 +96,48 @@ export default function App() {
     return { stars, gained };
   }, [edition]);
 
+  // Cross-edition aggregation (newest edition wins for display fields).
+  const board = useMemo<BoardEntry[]>(() => {
+    const map = new Map<string, BoardEntry>();
+    editions.forEach((e) =>
+      e.projects.forEach((p) => {
+        const cur = map.get(p.id);
+        if (!cur) {
+          map.set(p.id, {
+            ...p,
+            editionsCount: 1,
+            totalGained: p.starsGained,
+            maxStreak: p.streakDays,
+          });
+        } else {
+          cur.editionsCount += 1;
+          cur.totalGained += p.starsGained;
+          cur.maxStreak = Math.max(cur.maxStreak, p.streakDays);
+          cur.starsTotal = Math.max(cur.starsTotal, p.starsTotal);
+        }
+      })
+    );
+    return [...map.values()].sort(
+      (a, b) => b.totalGained - a.totalGained || b.starsTotal - a.starsTotal
+    );
+  }, []);
+
+  const q = query.trim().toLowerCase();
+
   const filtered = useMemo(() => {
-    let list = edition.projects.filter((p) => {
-      const matchLang = lang === "全部" || p.language === lang;
-      const q = query.trim().toLowerCase();
-      const matchQ =
-        !q ||
-        p.fullName.toLowerCase().includes(q) ||
-        p.oneLiner.toLowerCase().includes(q) ||
-        p.topics.some((t) => t.includes(q));
-      return matchLang && matchQ;
-    });
-    list = [...list].sort((a, b) => {
+    const list = edition.projects.filter((p) => matchesFilters(p, q, lang, cat));
+    return [...list].sort((a, b) => {
       if (sort === "total") return b.starsTotal - a.starsTotal;
       if (sort === "newest")
         return b.firstSeen.localeCompare(a.firstSeen) || b.starsGained - a.starsGained;
       return b.starsGained - a.starsGained;
     });
-    return list;
-  }, [edition, query, lang, sort]);
+  }, [edition, q, lang, cat, sort]);
+
+  const filteredBoard = useMemo(
+    () => board.filter((p) => matchesFilters(p, q, lang, cat)),
+    [board, q, lang, cat]
+  );
 
   return (
     <div className={cn(dark && "dark")}>
@@ -145,6 +200,22 @@ export default function App() {
             <Stat label="累计 Star" value={fmt(totals.stars)} icon={<Star className="h-3.5 w-3.5" />} />
           </section>
 
+          {/* ── View tabs ──────────────────────────────────────── */}
+          <div className="flex items-center gap-0 border-b border-border">
+            <ViewTab
+              active={view === "current"}
+              onClick={() => setView("current")}
+              icon={<Newspaper className="h-3.5 w-3.5" />}
+              label="本期榜单"
+            />
+            <ViewTab
+              active={view === "board"}
+              onClick={() => setView("board")}
+              icon={<Trophy className="h-3.5 w-3.5" />}
+              label={`累计排行${editions.length > 1 ? ` · ${editions.length} 期` : ""}`}
+            />
+          </div>
+
           {/* ── Controls ───────────────────────────────────────── */}
           <section className="flex flex-col gap-3 py-6 md:flex-row md:items-center md:justify-between">
             <div className="relative w-full md:max-w-xs">
@@ -174,27 +245,71 @@ export default function App() {
                 ))}
               </div>
               <Separator orientation="vertical" className="hidden h-6 md:block" />
-              <select
-                value={sort}
-                onChange={(e) => setSort(e.target.value as SortKey)}
-                className="h-8 border border-border bg-card px-2 text-xs outline-none focus:border-primary"
-              >
-                <option value="gained">按今日新增</option>
-                <option value="total">按累计 Star</option>
-                <option value="newest">按最新发现</option>
-              </select>
+              {categories.length > 1 && (
+                <select
+                  value={cat}
+                  onChange={(e) => setCat(e.target.value)}
+                  className="h-8 border border-border bg-card px-2 text-xs outline-none focus:border-primary"
+                  aria-label="按分类筛选"
+                >
+                  {categories.map((c) => (
+                    <option key={c} value={c}>
+                      {c === "全部" ? "全部分类" : c}
+                    </option>
+                  ))}
+                </select>
+              )}
+              {view === "current" && (
+                <select
+                  value={sort}
+                  onChange={(e) => setSort(e.target.value as SortKey)}
+                  className="h-8 border border-border bg-card px-2 text-xs outline-none focus:border-primary"
+                  aria-label="排序"
+                >
+                  <option value="gained">按今日新增</option>
+                  <option value="total">按累计 Star</option>
+                  <option value="newest">按最新发现</option>
+                </select>
+              )}
             </div>
           </section>
 
-          {/* ── Project list ───────────────────────────────────── */}
-          <main className="divide-y divide-border border-y border-border">
-            {filtered.map((p, i) => (
-              <ProjectRow key={p.id} project={p} rank={i + 1} onOpen={() => setActive(p)} />
-            ))}
-            {filtered.length === 0 && (
-              <div className="py-16 text-center text-sm text-muted-foreground">没有匹配的项目。</div>
-            )}
-          </main>
+          {/* ── Body: current edition list OR cross-edition leaderboard ── */}
+          {view === "current" ? (
+            <main className="divide-y divide-border border-y border-border">
+              {edition.projects.length === 0 ? (
+                <EmptyState
+                  title="本期 0 命中"
+                  hint="今天没有符合标准的新 AI 项目上榜。流水线明天会继续追踪。"
+                />
+              ) : filtered.length === 0 ? (
+                <EmptyState title="没有匹配的项目" hint="试试清除搜索或筛选条件。" />
+              ) : (
+                filtered.map((p, i) => (
+                  <ProjectRow key={p.id} project={p} rank={i + 1} onOpen={() => setActive(p)} />
+                ))
+              )}
+            </main>
+          ) : (
+            <main>
+              {filteredBoard.length === 0 ? (
+                <div className="border-y border-border">
+                  <EmptyState title="暂无排行数据" hint="清除筛选，或等待更多每日数据累计。" />
+                </div>
+              ) : (
+                <>
+                  <p className="pb-3 text-xs text-muted-foreground">
+                    跨 {editions.length} 期累计 · 按累计 Star 增量排序
+                  </p>
+                  <div className="divide-y divide-border border-y border-border">
+                    {filteredBoard.map((p, i) => (
+                      <BoardRow key={p.id} entry={p} rank={i + 1} onOpen={() => setActive(p)} />
+                    ))}
+                  </div>
+                </>
+              )}
+            </main>
+          )}
 
           <footer className="mt-10 flex items-center justify-between text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
             <span>my-daily-news pipeline</span>
@@ -212,6 +327,43 @@ export default function App() {
           </SheetContent>
         </Sheet>
       </div>
+    </div>
+  );
+}
+
+function ViewTab({
+  active,
+  onClick,
+  icon,
+  label,
+}: {
+  active: boolean;
+  onClick: () => void;
+  icon: React.ReactNode;
+  label: string;
+}) {
+  return (
+    <button
+      onClick={onClick}
+      className={cn(
+        "-mb-px flex items-center gap-1.5 border-b-2 px-1 py-3 text-sm transition-colors",
+        active
+          ? "border-foreground font-semibold text-foreground"
+          : "border-transparent text-muted-foreground hover:text-foreground"
+      )}
+    >
+      {icon}
+      {label}
+    </button>
+  );
+}
+
+function EmptyState({ title, hint }: { title: string; hint: string }) {
+  return (
+    <div className="flex flex-col items-center gap-2 py-16 text-center">
+      <Inbox className="h-8 w-8 text-muted-foreground/40" />
+      <p className="font-serif-sc text-lg font-semibold">{title}</p>
+      <p className="max-w-xs text-sm text-muted-foreground">{hint}</p>
     </div>
   );
 }
@@ -331,6 +483,67 @@ function ProjectRow({
   );
 }
 
+/** Leaderboard row — compact, emphasises cumulative gain + streak. */
+function BoardRow({
+  entry: p,
+  rank,
+  onOpen,
+}: {
+  entry: BoardEntry;
+  rank: number;
+  onOpen: () => void;
+}) {
+  const medal = rank <= 3;
+  return (
+    <article
+      onClick={onOpen}
+      className="group grid cursor-pointer grid-cols-[auto_1fr_auto] items-center gap-x-4 py-4 transition-colors hover:bg-card sm:gap-x-6"
+    >
+      <div
+        className={cn(
+          "font-serif-sc w-8 text-center text-2xl font-bold leading-none",
+          medal ? "text-accent" : "text-muted-foreground/40"
+        )}
+      >
+        {rank}
+      </div>
+
+      <div className="min-w-0">
+        <div className="flex flex-wrap items-center gap-2">
+          <h2 className="font-serif-sc truncate text-base font-semibold leading-tight group-hover:text-primary">
+            {p.owner}/<span className="text-foreground">{p.name}</span>
+          </h2>
+          {p.maxStreak > 1 && (
+            <Badge
+              variant="outline"
+              className="h-5 rounded-sm border-border px-1.5 text-[10px] font-normal text-muted-foreground"
+            >
+              连榜 {p.maxStreak} 天
+            </Badge>
+          )}
+          <span className="text-[11px] text-muted-foreground/70">上榜 {p.editionsCount} 期</span>
+        </div>
+        <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1">
+          <LangDot language={p.language} />
+          {p.category && (
+            <span className="text-[11px] text-muted-foreground/70">{p.category}</span>
+          )}
+        </div>
+      </div>
+
+      <div className="text-right">
+        <div className="font-mono-num inline-flex items-center gap-1 text-sm font-semibold text-accent">
+          <Flame className="h-3.5 w-3.5" />+{fmt(p.totalGained)}
+        </div>
+        <div className="font-mono-num mt-0.5 flex items-center justify-end gap-1 text-[11px] text-muted-foreground">
+          <Star className="h-3 w-3" />
+          {fmt(p.starsTotal)}
+        </div>
+      </div>
+    </article>
+  );
+}
+
 /** Compact star-gain trend across the project's appearances. */
 function Trend({ appearances }: { appearances: Appearance[] }) {
   if (!appearances.length) return null;
@@ -363,14 +576,7 @@ function Trend({ appearances }: { appearances: Appearance[] }) {
             const y = padTop + (chartH - h);
             return (
               <g key={a.date + i}>
-                <rect
-                  x={x}
-                  y={y}
-                  width={barW}
-                  height={h}
-                  rx={2}
-                  className="fill-accent"
-                />
+                <rect x={x} y={y} width={barW} height={h} rx={2} className="fill-accent" />
                 <text
                   x={x + barW / 2}
                   y={y - 4}
