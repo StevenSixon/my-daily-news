@@ -170,7 +170,7 @@ done
 
 ## 🤝 贡献
 
-欢迎 PR / Issue！新增推送渠道、数据源、LLM provider 都是很好的切入点。提交前请阅读 [SECURITY.md](SECURITY.md)——**本仓库公开，切勿提交任何密钥 / token**。
+欢迎 PR / Issue！新增推送渠道、数据源、LLM provider 都是很好的切入点。开始前请阅读 [CONTRIBUTING.md](CONTRIBUTING.md)（含本地搭建与开发约定）与 [SECURITY.md](SECURITY.md)——**本仓库公开，切勿提交任何密钥 / token**。
 
 ## 📄 License
 

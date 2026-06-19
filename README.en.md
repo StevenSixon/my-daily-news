@@ -172,7 +172,7 @@ Full design doc: [`docs/DESIGN.md`](docs/DESIGN.md).
 
 ## 🤝 Contributing
 
-PRs and issues welcome! New delivery channels, data sources, and LLM providers are great entry points. Please read [SECURITY.md](SECURITY.md) first — **this is a public repo; never commit any key or token.**
+PRs and issues welcome! New delivery channels, data sources, and LLM providers are great entry points. Start with [CONTRIBUTING.md](CONTRIBUTING.md) (local setup + conventions) and [SECURITY.md](SECURITY.md) — **this is a public repo; never commit any key or token.**
 
 ## 📄 License
 
