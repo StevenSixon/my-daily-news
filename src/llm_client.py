@@ -83,23 +83,22 @@ def available() -> bool:
 
 def chat(messages: list[dict], *, system: str | None = None,
          max_tokens: int | None = None, json: bool = False,
-         _reasoning_tokens: int = 4000) -> str:
-    """统一对话入口。messages=[{"role":"user","content":...}]，返回文本。
+         _reasoning_tokens: int = 8000) -> str:
+    """统一对话入口。
 
-    json=True 时不依赖 response_format（DeepSeek 推理模型不支持），
-    而是往 messages 末尾追加一行要求，用 _strip_fences 去围栏后返回。
-    _reasoning_tokens：分配给推理链的 token 预算（仅推理模型使用）。
+    json=True 时不依赖 response_format，通过 prompt 要求 + 去围栏 + 修复。
+    _reasoning_tokens：额外分配给推理链的 token 预算。
     """
-    import litellm  # 延迟导入，未装时给清晰报错
+    import litellm
 
     cfg = get_config().get("llm", {})
     if system:
         messages = [{"role": "system", "content": system}, *messages]
 
-    # json 通过 prompt 要求而非 response_format（兼容所有模型）
     if json:
         messages = [*messages, {"role": "user",
-                     "content": "\n只输出 JSON，不要解释，不要 markdown 围栏。"}]
+                     "content": "\n严格只输出合法 JSON。不要 markdown 围栏、不要注释、"
+                                "不要在 JSON 前后加任何说明文字。"}]
 
     last_err: Exception | None = None
     for cand in _candidates():
@@ -109,12 +108,10 @@ def chat(messages: list[dict], *, system: str | None = None,
             last_err = e
             continue
 
-        # 推理模型需要给 reasoning_effort / extra_body
         model_name = params.get("model", "")
         is_deepseek = "deepseek" in model_name.lower()
         is_reasoning = is_deepseek or "-r1" in model_name.lower()
 
-        # 推理模型多分配 token 给推理链（不设 reasoning_effort，避免 API 报错）
         kwargs = params | {
             "messages": messages,
             "temperature": cfg.get("temperature", 0.3),
@@ -127,10 +124,16 @@ def chat(messages: list[dict], *, system: str | None = None,
             resp = litellm.completion(**kwargs)
             msg = resp["choices"][0]["message"]
             content = msg.get("content") or ""
+
+            # 推理模型有时 content 为空，用 reasoning_content 兜底
             if not content and is_reasoning:
-                # 推理模型有时 content 为空，尝试 reasoning_content 或降级重试
                 content = msg.get("reasoning_content") or ""
-            return _strip_fences(content) if json else content
+
+            if json:
+                content = _strip_fences(content)
+                # 丢弃推理模型可能在 JSON 前输出的无关文字（如 brief intro）
+                content = _find_json_block(content)
+            return content
         except Exception as e:
             log.warning("LLM 调用失败（%s/%s）：%s，尝试降级",
                         cand["provider"], cand["model"], e)
@@ -141,18 +144,71 @@ def chat(messages: list[dict], *, system: str | None = None,
 
 
 def chat_json(messages: list[dict], *, system: str | None = None,
-              max_tokens: int | None = None):
-    """要求 JSON 输出并解析为 Python 对象。"""
+              max_tokens: int | None = None, retries: int = 0):
+    """要求 JSON 输出并解析。JSON 损坏时自动调一次修复调用。"""
     raw = chat(messages, system=system, max_tokens=max_tokens, json=True,
-               _reasoning_tokens=4000)
-    # 推理模型可能把 JSON 放在最后一段 reasoning_content 之后
-    return _json.loads(raw)
+               _reasoning_tokens=8000)
+    parsed = _try_parse_json(raw)
+    if isinstance(parsed, dict):
+        return parsed
+
+    # JSON 损坏：追加修复提示重试一次
+    if retries > 0:
+        log.info("JSON 解析失败，请求模型修复…")
+        fix_messages = [*messages,
+                        {"role": "assistant", "content": raw},
+                        {"role": "user", "content": "你的 JSON 无法解析。请严格只输出修正后的合法 JSON。"}]
+        raw2 = chat(fix_messages, system=system, max_tokens=max_tokens,
+                    json=True, _reasoning_tokens=4000)
+        parsed2 = _try_parse_json(raw2)
+        if isinstance(parsed2, dict):
+            return parsed2
+
+    raise ValueError(f"LLM 未输出合法 JSON：{raw[:300]}")
+
+
+def _try_parse_json(text: str):
+    """尝试解析 JSON，失败返回 None。"""
+    try:
+        return _json.loads(_strip_fences(text))
+    except (_json.JSONDecodeError, ValueError):
+        pass
+    # 尝试提取最外层 {} 并修复常见问题
+    try:
+        block = _find_json_block(text)
+        # 去掉尾逗号
+        import re
+        block = re.sub(r",\s*}", "}", block)
+        block = re.sub(r",\s*]", "]", block)
+        return _json.loads(block)
+    except (_json.JSONDecodeError, ValueError):
+        pass
+    return None
+
+
+def _find_json_block(text: str) -> str:
+    """从文本中抽出 JSON 块：优先 {}，其次 ```json``` 围栏内。"""
+    t = text.strip()
+    if t.startswith("```"):
+        t = _strip_fences(t)
+    if not t or t[0] not in "{[":
+        # 从首个 { 或 [ 截断
+        for ch in "{[":
+            idx = t.find(ch)
+            if idx >= 0:
+                t = t[idx:]
+                break
+    return t
 
 
 def _strip_fences(text: str) -> str:
     t = text.strip()
+    # 去掉 markdown 围栏
     if t.startswith("```"):
-        t = t.split("\n", 1)[-1]
+        lines = t.split("\n")
+        t = "\n".join(lines[1:])
         if t.rstrip().endswith("```"):
             t = t.rstrip()[:-3]
-    return t.strip()
+    # 去掉末尾反引号（可能的残留）
+    t = t.rstrip().rstrip("`").strip()
+    return t

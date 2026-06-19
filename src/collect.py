@@ -101,7 +101,8 @@ def _classify_ai_llm(candidates: list[dict]) -> dict[str, dict]:
     )
     data = llm_client.chat_json(
         [{"role": "user", "content": prompt}],
-        system="你是严谨的技术分类助手，只输出 JSON。",
+        system="你是严谨的技术分类助手，严格只输出 JSON。",
+        retries=1,
     )
     out: dict[str, dict] = {}
     for r in data.get("results", []):
