@@ -1,0 +1,54 @@
+{
+  "full_name": "LMCache/LMCache",
+  "url": "https://github.com/LMCache/LMCache",
+  "description": "LMCache: Supercharge Your LLM with the Fastest KV Cache Layer",
+  "language": "Python",
+  "topics": [
+    "amd",
+    "cuda",
+    "fast",
+    "inference",
+    "kv-cache",
+    "llm",
+    "pytorch",
+    "rocm",
+    "speed",
+    "vllm"
+  ],
+  "license": "Apache-2.0",
+  "category": "AI 应用",
+  "classify_reason": "LLM KV 缓存加速层，面向 AI 推理优化的工具",
+  "one_liner": "LLM推理的引擎无关KV缓存层，实现持久化、跨进程重用与非前缀复用。",
+  "why_worth_it": "解决KV缓存随请求销毁、无法跨引擎共享的痛点，降低长上下文多轮/RAG场景的TTFT，且供应商中立。",
+  "tags": [
+    "KV缓存管理",
+    "LLM推理加速",
+    "分层存储",
+    "多引擎集成"
+  ],
+  "confidence": "medium",
+  "info_gaps": [
+    "README 未提供 benchmark 或性能对比数据",
+    "快速开始部分缺少可直接复制运行的最小示例与配置",
+    "未列出官方已验证支持的模型列表",
+    "部署多进程模式的具体资源规格与依赖未说明"
+  ],
+  "quality_flags": [],
+  "stars_total": 9382,
+  "created_at": "2024-05-28",
+  "pushed_at": "2026-06-19",
+  "latest_release": "v0.4.7",
+  "first_seen": "2026-06-19",
+  "last_seen": "2026-06-19",
+  "streak_days": 1,
+  "analysis_updated_at": "2026-06-19T23:32:03+0800",
+  "appearances": [
+    {
+      "date": "2026-06-19",
+      "reason": "new",
+      "stars_total": 9382,
+      "stars_gained": 825,
+      "release": "v0.4.7"
+    }
+  ]
+}
