@@ -80,10 +80,22 @@ jobs:
           git add daily/ projects/ data/ dashboard/src/daily.json
           if git diff --cached --quiet; then
             echo "No new output to commit."
-          else
-            git commit -m "data: daily pipeline output ($(date -u +%Y-%m-%d))"
-            git push
+            exit 0
           fi
+          git commit -m "data: daily pipeline output ($(date -u +%Y-%m-%d))"
+          # Retry with rebase: the long pipeline run leaves a wide window for
+          # another push (local machine / a second run) to advance main, which
+          # would make a bare push fail with a non-fast-forward rejection.
+          for attempt in 1 2 3; do
+            if git push; then
+              echo "Pushed on attempt $attempt."
+              exit 0
+            fi
+            echo "Push rejected (attempt $attempt); rebasing onto latest main…"
+            git pull --rebase --autostash origin main
+          done
+          echo "::error::Failed to push pipeline output after 3 attempts."
+          exit 1
 
       - name: Push digest to Feishu (optional)
         # Only runs if the Feishu secrets are configured (mapped to env above).
