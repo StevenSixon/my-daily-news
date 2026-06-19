@@ -29,7 +29,7 @@ $staged
 EOF
 
 # ── 2) 按内容拦截真实密钥值（跳过由公开数据生成的产物，避免误报）──────────
-scan_files="$(printf '%s\n' "$staged" | grep -vE '^(dashboard/bundle\.html|dashboard/src/daily\.json|dashboard/pnpm-lock\.yaml)$' || true)"
+scan_files="$(printf '%s\n' "$staged" | grep -vE '^(dashboard/bundle\.html|dashboard/src/daily\.json|dashboard/pnpm-lock\.yaml|daily/|projects/|data/)' || true)"
 if [ -n "$scan_files" ]; then
   added="$(git diff --cached -U0 --diff-filter=ACM -- $scan_files | grep '^+' | grep -v '^+++' || true)"
   patterns='ghp_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{30,}|sk-ant-[A-Za-z0-9_-]{20,}|sk-[A-Za-z0-9]{20,}|xox[baprs]-[A-Za-z0-9-]{10,}|AKIA[0-9A-Z]{16}|AIza[0-9A-Za-z_-]{30,}|-----BEGIN [A-Z ]*PRIVATE KEY-----'

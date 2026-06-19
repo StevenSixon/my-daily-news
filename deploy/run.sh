@@ -18,5 +18,6 @@ case "$STAGE" in
     ;;
   push)     exec "$PYTHON" -m src.push      "$@" ;;
   weekly)   exec "$PYTHON" -m src.trend     "$@" ;;
-  *) echo "未知阶段：$STAGE（应为 pipeline / push / weekly）" >&2; exit 1 ;;
+  healthcheck) exec /bin/bash "$PROJECT_DIR/deploy/healthcheck.sh" "$@" ;;
+  *) echo "未知阶段：$STAGE（应为 pipeline / push / weekly / healthcheck）" >&2; exit 1 ;;
 esac
