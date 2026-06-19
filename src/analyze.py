@@ -62,6 +62,18 @@ def _build_context(gh: GitHubClient, full_name: str, detail: dict,
     return "\n".join(parts), readme
 
 
+def _clean_tags(tags) -> list[str]:
+    """规整 LLM 返回的 tags：转字符串、去空白、去重、最多 4 个。"""
+    if not isinstance(tags, list):
+        return []
+    out: list[str] = []
+    for t in tags:
+        s = str(t).strip().lstrip("#").strip()
+        if s and s not in out:
+            out.append(s)
+    return out[:4]
+
+
 def _gen_report(context: str) -> dict:
     """调用 LLM 生成结构化报告。"""
     prompt = (
@@ -69,6 +81,9 @@ def _gen_report(context: str) -> dict:
         + "\n\n请基于以上信息输出 JSON：\n"
         "{\n"
         '  "one_liner": "一句话亮点（30字内）",\n'
+        '  "why_worth_it": "为什么值得你花时间看（40字内）：它解决什么问题、对谁有用、'
+        '比同类强在哪，给极客一个判断是否深入的依据；别复述亮点、别营销腔",\n'
+        '  "tags": ["2~4个短标签，如 Agent框架 / 本地优先 / RAG / TypeScript / 自托管"],\n'
         '  "analysis_md": "Markdown 深度报告，含小标题：## 它是什么 / ## 为什么火 / '
         '## 技术栈 / ## 核心能力 / ## 适用场景 / ## 同类对比 / ## 版本动态",\n'
         '  "quickstart_md": "Markdown 上手指南：安装、最小可用示例、依赖前提"\n'
@@ -92,6 +107,12 @@ def learn(item: dict, index: dict) -> dict:
     is_new = meta is None
     today = today_str()
 
+    # 未刷新时沿用上次的展示字段（避免轻量更新丢失 why/tags）
+    prev = meta or {}
+    one_liner = prev.get("one_liner") or detail.get("description", "")
+    why_worth_it = prev.get("why_worth_it", "")
+    tags = prev.get("tags", []) or []
+
     if revisit and llm_client.available():
         context, readme = _build_context(gh, full_name, detail, release)
         try:
@@ -99,16 +120,16 @@ def learn(item: dict, index: dict) -> dict:
             write_text(pdir / "analysis.md", report.get("analysis_md", ""))
             write_text(pdir / "quickstart.md", report.get("quickstart_md", ""))
             write_text(pdir / "README.snapshot.md", readme)
-            one_liner = report.get("one_liner", detail.get("description", ""))
+            one_liner = report.get("one_liner") or one_liner
+            why_worth_it = report.get("why_worth_it") or why_worth_it
+            tags = _clean_tags(report.get("tags")) or tags
             log.info("已学习 %s（%s）", full_name, reason)
         except Exception as e:
             log.warning("学习 %s 失败：%s", full_name, e)
-            one_liner = (meta or {}).get("one_liner") or detail.get("description", "")
             revisit = False
     else:
         if revisit and not llm_client.available():
             log.info("跳过 LLM（无可用 key），仅更新 %s 元数据", full_name)
-        one_liner = (meta or {}).get("one_liner") or detail.get("description", "")
         reason = "lightweight"
         revisit = False  # 未实际生成报告，勿更新 analysis_updated_at
 
@@ -132,6 +153,8 @@ def learn(item: dict, index: dict) -> dict:
         "category": item.get("category", "AI 应用"),
         "classify_reason": item.get("classify_reason", (meta or {}).get("classify_reason", "")),
         "one_liner": one_liner,
+        "why_worth_it": why_worth_it,
+        "tags": tags,
         "stars_total": detail.get("stars_total"),
         "created_at": detail.get("created_at"),
         "pushed_at": detail.get("pushed_at"),
@@ -166,6 +189,8 @@ def learn(item: dict, index: dict) -> dict:
         "full_name": full_name,
         "url": detail.get("url"),
         "one_liner": one_liner,
+        "why_worth_it": why_worth_it,
+        "tags": tags,
         "language": detail.get("language"),
         "stars_total": detail.get("stars_total"),
         "stars_gained": item.get("stars_gained", 0),

@@ -33,6 +33,12 @@ def _render_md(date: str, items: list[dict]) -> str:
             f"## {i}. [{it['full_name']}]({it['url']}) {badge}",
             f"> {it.get('one_liner','')}",
             "",
+        ]
+        if it.get("why_worth_it"):
+            lines.append(f"- 💡 值得看：{it['why_worth_it']}")
+        if it.get("tags"):
+            lines.append("- 🏷️ " + " ".join(f"`{t}`" for t in it["tags"]))
+        lines += [
             f"- 语言：{it.get('language')} ｜ ⭐ {it.get('stars_total')} (+{it.get('stars_gained',0)})",
             f"- 深度报告：[`{it['report_path']}`]({it['report_path']})",
             "",

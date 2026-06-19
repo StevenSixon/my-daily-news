@@ -25,12 +25,19 @@ def _build_card(payload: dict) -> dict:
     else:
         for i, it in enumerate(items, 1):
             badge = "🆕" if it.get("is_new") else f"🔥连续{it.get('streak_days')}天"
-            content = (
-                f"**{i}. [{it['full_name']}]({it['url']})** {badge}\n"
-                f"{it.get('one_liner','')}\n"
+            parts = [
+                f"**{i}. [{it['full_name']}]({it['url']})** {badge}",
+                it.get("one_liner", ""),
+            ]
+            if it.get("why_worth_it"):
+                parts.append(f"💡 {it['why_worth_it']}")
+            if it.get("tags"):
+                parts.append(" ".join(f"`{t}`" for t in it["tags"]))
+            parts.append(
                 f"语言 {it.get('language')} ｜ ⭐ {it.get('stars_total')} (+{it.get('stars_gained',0)})"
             )
-            elements.append({"tag": "div", "text": {"tag": "lark_md", "content": content}})
+            elements.append({"tag": "div",
+                             "text": {"tag": "lark_md", "content": "\n".join(parts)}})
             elements.append({"tag": "hr"})
 
     elements.append({
