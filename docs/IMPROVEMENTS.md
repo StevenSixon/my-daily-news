@@ -177,7 +177,7 @@
 | 去噪 | 只过滤是否 AI | 个性化兴趣权重、已读/已忽略状态 | |
 | 趋势 | `metadata.appearances[]` 时间序列已存但没人用 | 「周/月热度榜」「谁在持续涨」二次报告（见 DESIGN §10） | ✅ I-11b |
 | 多渠道 | 仅飞书 | summary 已结构化，加邮件/Telegram 近乎零成本 | |
-| 质量评估 | LLM 报告无校验 | 轻量「自检 prompt」或抽样人工评分，防幻觉/空洞 | |
+| 质量评估 | LLM 报告无校验 | 轻量「自检 prompt」或抽样人工评分，防幻觉/空洞 | ✅ I-11c |
 
 **I-11a 推送/日报内容增强　✅ 已完成（2026-06-19）**
 - [x] `_gen_report` 让 LLM 多产出 `why_worth_it`（为什么值得看，40 字内、给判断依据、去营销腔）+ `tags`（2~4 个短标签）。
@@ -191,7 +191,14 @@
 - [x] CLI `python -m src.trend [--days N] [--push]`；`deploy/run.sh weekly` 阶段 + `com.daily-news.weekly.plist`（周一 08:30 推送）。
 - [x] `star 增量`取窗口内首尾 `stars_total` 之差，单点时退化为 `stars_gained`，兼顾两种来源。
 - [x] 新增 6 个聚合/渲染单测（共 54 用例全绿）；真实项目库端到端生成验证。
-- ⚠️ 已知：blocklist 之前学过的存量项目（如 iptv）仍会出现在趋势里——blocklist 只挡未来采集、不回溯清理。需要时手动删 `projects/<repo>/` + `index.json` 条目。
+- ⚠️ 已知：blocklist 之前学过的存量项目（如 iptv）仍会出现在趋势里——blocklist 只挡未来采集、不回溯清理。需要时手动删 `projects/<repo>/` + `index.json` 条目。（iptv 已于 2026-06-19 手动清理）
+
+**I-11c 报告质量自检　✅ 已完成（2026-06-19）**
+- [x] **两道防线**：① LLM 自报 `confidence`(high/medium/low) + `info_gaps`(无法核实/未覆盖的点)，prompt 强调诚实标注、不编造；② 确定性闸门 `_quality_flags`（无 LLM）抓"空洞/残缺"——报告过短、缺必备小标题、缺亮点/上手指南。
+- [x] `_effective_confidence`：自报置信度遇质量 flag 降一档（不低于 low），非法值兜底 medium。
+- [x] `analysis.md` 末尾追加「ℹ️ 置信度与信息盲区」脚注，报告自带可信度说明；`confidence`/`info_gaps`/`quality_flags` 写入 metadata。
+- [x] 日报与飞书卡片对 `confidence == low` 项加「⚠️ 低置信，建议核对原文（盲区：…）」；未刷新时回退上次值。
+- [x] 8 个单测（共 62 全绿）+ 真实稀疏 README 端到端验证（LLM 正确降级并列盲区）。
 
 ---
 
@@ -203,3 +210,4 @@
 - 2026-06-19：完成 I-8（依赖 == 锁定 + GitHub Actions CI）。P0~P2 全部完成，仅余 P3。
 - 2026-06-19：完成 I-11a（推送/日报加「为什么值得看」+ 标签），LLM 实测 + 6 单测，共 48 用例。
 - 2026-06-19：完成 I-11b（周热度趋势报告 src/trend.py + 周定时 + 推送），6 单测，共 54 用例。
+- 2026-06-19：清理 iptv 误判残留；完成 I-11c（报告质量自检：LLM 自报置信度/盲区 + 确定性空洞闸门），8 单测，共 62 用例。

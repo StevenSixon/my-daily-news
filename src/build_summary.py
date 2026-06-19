@@ -38,6 +38,9 @@ def _render_md(date: str, items: list[dict]) -> str:
             lines.append(f"- 💡 值得看：{it['why_worth_it']}")
         if it.get("tags"):
             lines.append("- 🏷️ " + " ".join(f"`{t}`" for t in it["tags"]))
+        if it.get("confidence") == "low":
+            gaps = "；".join(it.get("info_gaps", [])[:2])
+            lines.append("- ⚠️ 低置信，建议核对原文" + (f"（盲区：{gaps}）" if gaps else ""))
         lines += [
             f"- 语言：{it.get('language')} ｜ ⭐ {it.get('stars_total')} (+{it.get('stars_gained',0)})",
             f"- 深度报告：[`{it['report_path']}`]({it['report_path']})",

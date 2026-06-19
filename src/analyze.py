@@ -62,16 +62,63 @@ def _build_context(gh: GitHubClient, full_name: str, detail: dict,
     return "\n".join(parts), readme
 
 
-def _clean_tags(tags) -> list[str]:
-    """规整 LLM 返回的 tags：转字符串、去空白、去重、最多 4 个。"""
-    if not isinstance(tags, list):
+# 报告必备小标题（用于确定性"空洞"检查）
+_REQUIRED_SECTIONS = ["它是什么", "为什么火", "技术栈", "核心能力", "适用场景"]
+_MIN_ANALYSIS_CHARS = 200
+_CONF_ORDER = ["low", "medium", "high"]
+
+
+def _clean_str_list(values, cap: int, *, strip_hash: bool = False) -> list[str]:
+    """规整 LLM 返回的字符串列表：转字符串、去空白、去重、截断。"""
+    if not isinstance(values, list):
         return []
     out: list[str] = []
-    for t in tags:
-        s = str(t).strip().lstrip("#").strip()
+    for v in values:
+        s = str(v).strip()
+        if strip_hash:
+            s = s.lstrip("#").strip()
         if s and s not in out:
             out.append(s)
-    return out[:4]
+    return out[:cap]
+
+
+def _clean_tags(tags) -> list[str]:
+    return _clean_str_list(tags, 4, strip_hash=True)
+
+
+def _quality_flags(report: dict) -> list[str]:
+    """确定性质量闸门（无 LLM）：抓"空洞/残缺"报告。"""
+    flags: list[str] = []
+    analysis = report.get("analysis_md") or ""
+    if len(analysis) < _MIN_ANALYSIS_CHARS:
+        flags.append("报告过短")
+    missing = [s for s in _REQUIRED_SECTIONS if f"## {s}" not in analysis]
+    if missing:
+        flags.append("缺小标题：" + "、".join(missing))
+    if not (report.get("one_liner") or "").strip():
+        flags.append("缺一句话亮点")
+    if not (report.get("quickstart_md") or "").strip():
+        flags.append("缺上手指南")
+    return flags
+
+
+def _effective_confidence(report_conf, flags: list[str]) -> str:
+    """LLM 自报置信度 + 质量闸门：有 flag 则降一档。"""
+    conf = str(report_conf or "medium").lower()
+    i = _CONF_ORDER.index(conf) if conf in _CONF_ORDER else 1
+    if flags:
+        i = max(0, i - 1)
+    return _CONF_ORDER[i]
+
+
+def _quality_footer(confidence: str, info_gaps: list[str], flags: list[str]) -> str:
+    """追加到 analysis.md 末尾，让报告自带置信度与盲区说明。"""
+    lines = ["", "---", "", "## ℹ️ 置信度与信息盲区", "", f"- 置信度：**{confidence}**"]
+    if info_gaps:
+        lines.append("- 信息盲区：" + "；".join(info_gaps))
+    if flags:
+        lines.append("- 质量提示：" + "；".join(flags))
+    return "\n".join(lines)
 
 
 def _gen_report(context: str) -> dict:
@@ -86,8 +133,12 @@ def _gen_report(context: str) -> dict:
         '  "tags": ["2~4个短标签，如 Agent框架 / 本地优先 / RAG / TypeScript / 自托管"],\n'
         '  "analysis_md": "Markdown 深度报告，含小标题：## 它是什么 / ## 为什么火 / '
         '## 技术栈 / ## 核心能力 / ## 适用场景 / ## 同类对比 / ## 版本动态",\n'
-        '  "quickstart_md": "Markdown 上手指南：安装、最小可用示例、依赖前提"\n'
-        "}\n只输出 JSON。"
+        '  "quickstart_md": "Markdown 上手指南：安装、最小可用示例、依赖前提",\n'
+        '  "confidence": "high|medium|low：你对本报告的把握程度。README/docs 信息越充分越高，'
+        '靠推测补全的越低",\n'
+        '  "info_gaps": ["README/docs 未覆盖、你不确定或无法核实的点，如 无 benchmark 数据、'
+        '未说明部署依赖；没有就给空数组"]\n'
+        "}\n只输出 JSON。诚实标注盲区，不要编造 README 里没有的事实。"
     )
     return llm_client.chat_json([{"role": "user", "content": prompt}], system=_ANALYSIS_SYS)
 
@@ -107,23 +158,34 @@ def learn(item: dict, index: dict) -> dict:
     is_new = meta is None
     today = today_str()
 
-    # 未刷新时沿用上次的展示字段（避免轻量更新丢失 why/tags）
+    # 未刷新时沿用上次的展示字段（避免轻量更新丢失 why/tags/置信度）
     prev = meta or {}
     one_liner = prev.get("one_liner") or detail.get("description", "")
     why_worth_it = prev.get("why_worth_it", "")
     tags = prev.get("tags", []) or []
+    confidence = prev.get("confidence", "medium")
+    info_gaps = prev.get("info_gaps", []) or []
+    quality_flags = prev.get("quality_flags", []) or []
 
     if revisit and llm_client.available():
         context, readme = _build_context(gh, full_name, detail, release)
         try:
             report = _gen_report(context)
-            write_text(pdir / "analysis.md", report.get("analysis_md", ""))
+            quality_flags = _quality_flags(report)
+            confidence = _effective_confidence(report.get("confidence"), quality_flags)
+            info_gaps = _clean_str_list(report.get("info_gaps"), 5)
+            footer = _quality_footer(confidence, info_gaps, quality_flags)
+            write_text(pdir / "analysis.md", (report.get("analysis_md", "") + footer))
             write_text(pdir / "quickstart.md", report.get("quickstart_md", ""))
             write_text(pdir / "README.snapshot.md", readme)
             one_liner = report.get("one_liner") or one_liner
             why_worth_it = report.get("why_worth_it") or why_worth_it
             tags = _clean_tags(report.get("tags")) or tags
-            log.info("已学习 %s（%s）", full_name, reason)
+            if quality_flags:
+                log.warning("质量提示 %s（置信度=%s）：%s", full_name, confidence,
+                            "；".join(quality_flags))
+            else:
+                log.info("已学习 %s（%s，置信度=%s）", full_name, reason, confidence)
         except Exception as e:
             log.warning("学习 %s 失败：%s", full_name, e)
             revisit = False
@@ -155,6 +217,9 @@ def learn(item: dict, index: dict) -> dict:
         "one_liner": one_liner,
         "why_worth_it": why_worth_it,
         "tags": tags,
+        "confidence": confidence,
+        "info_gaps": info_gaps,
+        "quality_flags": quality_flags,
         "stars_total": detail.get("stars_total"),
         "created_at": detail.get("created_at"),
         "pushed_at": detail.get("pushed_at"),
@@ -191,6 +256,8 @@ def learn(item: dict, index: dict) -> dict:
         "one_liner": one_liner,
         "why_worth_it": why_worth_it,
         "tags": tags,
+        "confidence": confidence,
+        "info_gaps": info_gaps,
         "language": detail.get("language"),
         "stars_total": detail.get("stars_total"),
         "stars_gained": item.get("stars_gained", 0),

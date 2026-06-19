@@ -33,6 +33,8 @@ def _build_card(payload: dict) -> dict:
                 parts.append(f"💡 {it['why_worth_it']}")
             if it.get("tags"):
                 parts.append(" ".join(f"`{t}`" for t in it["tags"]))
+            if it.get("confidence") == "low":
+                parts.append("⚠️ 低置信，建议核对原文")
             parts.append(
                 f"语言 {it.get('language')} ｜ ⭐ {it.get('stars_total')} (+{it.get('stars_gained',0)})"
             )
