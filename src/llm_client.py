@@ -187,18 +187,43 @@ def _try_parse_json(text: str):
 
 
 def _find_json_block(text: str) -> str:
-    """从文本中抽出 JSON 块：优先 {}，其次 ```json``` 围栏内。"""
+    """从文本中抽出**第一个完整且括号配对**的 JSON 块。
+
+    能丢弃前置说明文字（"Here is the JSON:"）和尾部围栏/多余内容；
+    括号匹配时会跳过字符串内的引号，避免被字符串里的 {}/[] 干扰。
+    """
     t = text.strip()
     if t.startswith("```"):
         t = _strip_fences(t)
-    if not t or t[0] not in "{[":
-        # 从首个 { 或 [ 截断
-        for ch in "{[":
-            idx = t.find(ch)
-            if idx >= 0:
-                t = t[idx:]
-                break
-    return t
+
+    start = next((i for i, ch in enumerate(t) if ch in "{["), -1)
+    if start < 0:
+        return t  # 没有 JSON 起始符，原样返回交给上层报错
+
+    open_ch = t[start]
+    close_ch = "}" if open_ch == "{" else "]"
+    depth = 0
+    in_str = False
+    esc = False
+    for i in range(start, len(t)):
+        ch = t[i]
+        if in_str:
+            if esc:
+                esc = False
+            elif ch == "\\":
+                esc = True
+            elif ch == '"':
+                in_str = False
+            continue
+        if ch == '"':
+            in_str = True
+        elif ch == open_ch:
+            depth += 1
+        elif ch == close_ch:
+            depth -= 1
+            if depth == 0:
+                return t[start:i + 1]
+    return t[start:]  # 未闭合：返回到末尾，交给修复/报错
 
 
 def _strip_fences(text: str) -> str:

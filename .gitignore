@@ -3,11 +3,6 @@
 .env.*
 !.env.example
 
-# 密钥与本地配置（绝不入库）
-.env
-.env.*
-!.env.example
-
 # 本地缓存/临时文件
 data/.feishu_token.json
 
@@ -19,6 +14,10 @@ __pycache__/
 *.pyc
 .venv/
 venv/
+.pytest_cache/
+
+# 工具缓存
+.playwright-cli/
 
 # OS
 .DS_Store

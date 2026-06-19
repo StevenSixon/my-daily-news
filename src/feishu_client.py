@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import os
 import time
 
 import requests
@@ -36,6 +37,10 @@ def _tenant_access_token() -> str:
 
     token = data["tenant_access_token"]
     write_json(TOKEN_CACHE, {"token": token, "expire_at": time.time() + data.get("expire", 7200)})
+    try:
+        os.chmod(TOKEN_CACHE, 0o600)  # 凭证文件收紧为仅本人可读写
+    except OSError as e:
+        log.warning("收紧 token 缓存权限失败：%s", e)
     return token
 
 

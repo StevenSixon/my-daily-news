@@ -27,9 +27,9 @@
 | ✅ **P1** | I-4 | GitHub 请求加退避重试 + 复用 session | 可靠性 | 小 |
 | ✅ **P1** | I-5 | 修复访逻辑割裂（`on_new_release` 当前失效） | 可靠性 | 中 |
 | ✅ **P1** | I-6 | `index.json` 原子写入 | 可靠性 | 小 |
-| **P2** | I-7 | 解析/分类/JSON 工具函数补单测 + Trending HTML fixture | 工程化 | 中 |
+| ✅ **P2** | I-7 | 解析/分类/JSON 工具函数补单测 + Trending HTML fixture | 工程化 | 中 |
 | **P2** | I-8 | 锁依赖版本 + 最简 CI | 工程化 | 小 |
-| **P2** | I-9 | 杂项：`.gitignore` 去重、token 文件权限、repo 膨胀 | 卫生 | 小 |
+| ✅ **P2** | I-9 | 杂项：`.gitignore` 去重、token 文件权限、repo 膨胀 | 卫生 | 小 |
 | **P3** | I-10 | 并发 analyze + 合并 GitHub API 调用 | 性能 | 中 |
 | **P3** | I-11 | 产品体验：推送理由、个性化、趋势报告、多渠道、质量自检 | 体验 | 大 |
 
@@ -126,14 +126,21 @@
 
 ## P2 — 工程化
 
-### I-7　零测试
+### I-7　零测试　✅ 已完成（2026-06-19）
 **问题**：无任何测试。Trending HTML 解析是 DESIGN 自列的头号风险（GitHub 改版必挂），却无任何防护。
 
 **改进**
-- [ ] 对纯函数/解析逻辑补单测：`parse_int`、`_classify_ai_keyword`、`_strip_fences`/`_find_json_block`、Trending 解析。
-- [ ] Trending 存一份 HTML fixture 做回归，结构变动能被测试捕捉。
+- [x] 新增 `tests/`（pytest，`pytest.ini` + `requirements-dev.txt`），共 **42 个用例**：
+  - `test_utils.py`：`parse_int` / `repo_slug`
+  - `test_classify.py`：关键词整词匹配回归（hawaii/air/storage/iptv 不误命中）
+  - `test_rank_score.py`：`_rank_score`（trending/历史增量/速度兜底/异常日期）
+  - `test_json_repair.py`：`_strip_fences` / `_find_json_block` / `_try_parse_json`
+  - `test_store_atomic.py`：原子写入 + jsonl 追加
+  - `test_trending_parse.py`：真实裁剪 fixture（`tests/fixtures/trending_daily.html`）回归
+- [x] **顺带修复**：测试暴露 `_find_json_block` 对「前置说明 + 围栏 JSON」解析不全，改为
+  **括号配对扫描**（跳过字符串内引号），可丢弃前后多余内容；`chat()` 的 JSON 路径同样受益。
 
-**涉及**：新增 `tests/`
+**涉及**：新增 `tests/`、`pytest.ini`、`requirements-dev.txt`；改进 `src/llm_client.py`
 
 ---
 
@@ -148,10 +155,10 @@
 
 ---
 
-### I-9　卫生类小瑕疵
-- [ ] `.gitignore` 里 `.env` 那段**重复粘贴了两次**，去重。
-- [ ] 飞书 token 缓存文件收紧权限（`chmod 600 data/.feishu_token.json`）。
-- [ ] 评估 `daily/*`、`projects/*` 入库策略：作为个人知识资产可入库，但需意识到 repo 会随时间膨胀，必要时分库或加归档。
+### I-9　卫生类小瑕疵　✅ 已完成（2026-06-19）
+- [x] `.gitignore` 里 `.env` 那段**重复粘贴了两次**，已去重；并补 `.playwright-cli/`、`.pytest_cache/`。
+- [x] 飞书 token 缓存写入后 `os.chmod(..., 0o600)`，收紧为仅本人可读写。
+- [ ] 评估 `daily/*`、`projects/*` 入库策略：作为个人知识资产可入库，但需意识到 repo 会随时间膨胀，必要时分库或加归档。（暂保留现状）
 
 ---
 
@@ -177,3 +184,4 @@
 - 2026-06-19：初版，基于 v1 全量代码评审整理。
 - 2026-06-19：完成 P0 三项（I-1 分类误判 / I-2 排序偏差 / I-3 失败告警），端到端验证通过。
 - 2026-06-19：完成 P1 三项（I-4 退避重试+session / I-5 复访逻辑割裂 / I-6 index 原子写入），单测+契约验证通过。
+- 2026-06-19：完成 I-9 卫生项 + I-7 测试套件（42 用例，pytest），并修复测试暴露的 `_find_json_block` 解析缺陷。
