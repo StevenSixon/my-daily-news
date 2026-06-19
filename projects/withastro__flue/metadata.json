@@ -1,0 +1,44 @@
+{
+  "full_name": "withastro/flue",
+  "url": "https://github.com/withastro/flue",
+  "description": "The sandbox agent framework.",
+  "language": "TypeScript",
+  "topics": [],
+  "license": "Apache-2.0",
+  "category": "AI 应用",
+  "classify_reason": "Sandbox agent framework for building AI agents.",
+  "one_liner": "为自主 Agent 提供完备的 TypeScript 沙箱运行时，非 SDK，而是下一代 Agent 架构。",
+  "why_worth_it": "解决裸调 LLM 无法胜任的自主任务问题，为 Agent 提供沙箱、工具、技能、持久执行一体的 harness，适合想构建类似 Claude Code 级别自主 Agent 的开发者。",
+  "tags": [
+    "Agent框架",
+    "沙箱运行时",
+    "TypeScript",
+    "工作流自动化"
+  ],
+  "confidence": "medium",
+  "info_gaps": [
+    "未提供完整的安装步骤和系统依赖（如是否依赖 Docker 作为沙箱）",
+    "未列出支持的 AI 模型完整列表，示例仅提及 Claude Sonnet",
+    "未给出持久执行和子代理的具体代码示例",
+    "未说明部署到 Cloudflare Workers 等平台的详细限制",
+    "无性能基准或规模数据"
+  ],
+  "quality_flags": [],
+  "stars_total": 5714,
+  "created_at": "2026-02-07",
+  "pushed_at": "2026-06-19",
+  "latest_release": null,
+  "first_seen": "2026-06-19",
+  "last_seen": "2026-06-19",
+  "streak_days": 1,
+  "analysis_updated_at": "2026-06-19T23:37:02+0800",
+  "appearances": [
+    {
+      "date": "2026-06-19",
+      "reason": "new",
+      "stars_total": 5714,
+      "stars_gained": 305,
+      "release": null
+    }
+  ]
+}

@@ -3,139 +3,136 @@
   "count": 5,
   "items": [
     {
-      "full_name": "DeusData/codebase-memory-mcp",
-      "url": "https://github.com/DeusData/codebase-memory-mcp",
-      "one_liner": "毫秒级构建158语言代码知识图谱，零依赖单二进制MCP服务，token用量削减99%。",
-      "why_worth_it": "为AI编码代理提供极速、结构化的代码库理解，替代低效的文件搜索，专治上下文窗口浪费。",
+      "full_name": "DietrichGebert/ponytail",
+      "url": "https://github.com/DietrichGebert/ponytail",
+      "one_liner": "让AI代理像最懒的资深开发者一样写代码，平均少写54%代码且不损安全。",
+      "why_worth_it": "实测在FastAPI+React项目中减少54%代码、节省20%成本，同时保持100%安全防护，远超同类YAGNI提示。适合所有用AI写代码的开发者。",
       "tags": [
-        "MCP服务",
-        "代码图谱",
-        "本地优先",
-        "零依赖"
+        "prompt-engineering",
+        "agent-skills",
+        "yagni",
+        "developer-tools"
       ],
       "confidence": "high",
-      "info_gaps": [
-        "平均仓库的索引毫秒级时间未给出具体测试集和数值（仅提供Linux内核特例）",
-        "Hybrid LSP 对 9 种语言的类型推断准确率和限制未量化",
-        "自动变更检测的效率（资源占用、增量索引延迟）缺少基准数据"
-      ],
-      "language": "C",
-      "stars_total": 7759,
-      "stars_gained": 3244,
-      "streak_days": 1,
-      "is_new": true,
-      "refreshed": true,
-      "revisit_reason": "new",
-      "report_path": "../projects/DeusData__codebase-memory-mcp/analysis.md"
-    },
-    {
-      "full_name": "XiaomiMiMo/MiMo-Code",
-      "url": "https://github.com/XiaomiMiMo/MiMo-Code",
-      "one_liner": "终端原生AI编码助手，多Agent与持久记忆协同进化，零配置免费通道开箱即用。",
-      "why_worth_it": "专治跨会话“失忆”问题，通过自动检查点和项目记忆让Agent真正理解长期项目的上下文，适合持续维护大型代码库的开发者。",
-      "tags": [
-        "Agent框架",
-        "持久内存",
-        "TypeScript",
-        "终端AI"
-      ],
-      "confidence": "medium",
-      "info_gaps": [
-        "无性能基准或对比测试数据",
-        "未说明 Node.js 最低版本和系统要求",
-        "Dream/Distill 的实际效果缺乏量化或案例说明",
-        "未列出完整支持的主模型列表和上下文长度限制",
-        "与 Aider/Claude Code 等工具的具体差异仅凭架构推测，未实证"
-      ],
-      "language": "TypeScript",
-      "stars_total": 9894,
+      "info_gaps": [],
+      "language": "JavaScript",
+      "stars_total": 39253,
       "stars_gained": 0,
       "streak_days": 1,
       "is_new": true,
       "refreshed": true,
       "revisit_reason": "new",
-      "report_path": "../projects/XiaomiMiMo__MiMo-Code/analysis.md"
+      "report_path": "../projects/DietrichGebert__ponytail/analysis.md"
     },
     {
-      "full_name": "LMCache/LMCache",
-      "url": "https://github.com/LMCache/LMCache",
-      "one_liner": "LLM推理的引擎无关KV缓存层，实现持久化、跨进程重用与非前缀复用。",
-      "why_worth_it": "解决KV缓存随请求销毁、无法跨引擎共享的痛点，降低长上下文多轮/RAG场景的TTFT，且供应商中立。",
+      "full_name": "vercel/eve",
+      "url": "https://github.com/vercel/eve",
+      "one_liner": "文件系统优先的 TypeScript Agent 框架，约定优于配置。",
+      "why_worth_it": "为 Agent 项目提供直观的文件结构，降低多人协作与持久化维护成本，对想快速构建可控 Agent 的开发者更友好。",
       "tags": [
-        "KV缓存管理",
-        "LLM推理加速",
-        "分层存储",
-        "多引擎集成"
+        "Agent框架",
+        "文件约定",
+        "TypeScript",
+        "Vercel"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "未提供性能 benchmark 数据",
+        "生产部署是否需要 Vercel 账户或可完全自托管未明确",
+        "微沙箱的安全边界与实现细节未深入说明",
+        "与 Vercel AI SDK 的具体整合路径未展开"
+      ],
+      "language": "TypeScript",
+      "stars_total": 1561,
+      "stars_gained": 0,
+      "streak_days": 1,
+      "is_new": true,
+      "refreshed": true,
+      "revisit_reason": "new",
+      "report_path": "../projects/vercel__eve/analysis.md"
+    },
+    {
+      "full_name": "omnigent-ai/omnigent",
+      "url": "https://github.com/omnigent-ai/omnigent",
+      "one_liner": "统一编排 Claude Code/Codex/Cursor 等 AI 编码 agent 的框架，内置沙箱与策略",
+      "why_worth_it": "解决多 AI 编码工具碎片化问题，在一个会话中混合编排并互相审查，带策略与沙箱，适合重视安全的团队协作",
+      "tags": [
+        "Agent 框架",
+        "多 Agent 编排",
+        "安全沙箱",
+        "实时协作"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "无性能基准测试数据（如编排延迟、多 agent 并发开销）",
+        "策略系统的完整表达能力未提供详尽说明，仅靠文档推断",
+        "对 Cursor 集成是否支持全部 Cursor 功能或存在限制未明确",
+        "无大规模部署案例或生产环境稳定性报告",
+        "沙箱各后端的成熟度和隔离强度无量化比较"
+      ],
+      "language": "Python",
+      "stars_total": 3965,
+      "stars_gained": 0,
+      "streak_days": 1,
+      "is_new": true,
+      "refreshed": true,
+      "revisit_reason": "new",
+      "report_path": "../projects/omnigent-ai__omnigent/analysis.md"
+    },
+    {
+      "full_name": "withastro/flue",
+      "url": "https://github.com/withastro/flue",
+      "one_liner": "为自主 Agent 提供完备的 TypeScript 沙箱运行时，非 SDK，而是下一代 Agent 架构。",
+      "why_worth_it": "解决裸调 LLM 无法胜任的自主任务问题，为 Agent 提供沙箱、工具、技能、持久执行一体的 harness，适合想构建类似 Claude Code 级别自主 Agent 的开发者。",
+      "tags": [
+        "Agent框架",
+        "沙箱运行时",
+        "TypeScript",
+        "工作流自动化"
       ],
       "confidence": "medium",
       "info_gaps": [
-        "README 未提供 benchmark 或性能对比数据",
-        "快速开始部分缺少可直接复制运行的最小示例与配置",
-        "未列出官方已验证支持的模型列表",
-        "部署多进程模式的具体资源规格与依赖未说明"
+        "未提供完整的安装步骤和系统依赖（如是否依赖 Docker 作为沙箱）",
+        "未列出支持的 AI 模型完整列表，示例仅提及 Claude Sonnet",
+        "未给出持久执行和子代理的具体代码示例",
+        "未说明部署到 Cloudflare Workers 等平台的详细限制",
+        "无性能基准或规模数据"
       ],
-      "language": "Python",
-      "stars_total": 9382,
-      "stars_gained": 825,
+      "language": "TypeScript",
+      "stars_total": 5714,
+      "stars_gained": 305,
       "streak_days": 1,
       "is_new": true,
       "refreshed": true,
       "revisit_reason": "new",
-      "report_path": "../projects/LMCache__LMCache/analysis.md"
+      "report_path": "../projects/withastro__flue/analysis.md"
     },
     {
-      "full_name": "palmier-io/palmier-pro",
-      "url": "https://github.com/palmier-io/palmier-pro",
-      "one_liner": "AI 原生 macOS 视频编辑器，通过 MCP 让 Claude/Codex 直接操控时间线",
-      "why_worth_it": "首创开源视频编辑器内建 MCP 服务器，使任何 AI agent 都能协同剪辑，比传统工具更可脚本化、可组合",
+      "full_name": "BuilderIO/agent-native",
+      "url": "https://github.com/BuilderIO/agent-native",
+      "one_liner": "Agent与UI共享状态、协同工作的全栈框架",
+      "why_worth_it": "解决Agent与UI割裂问题，一次定义动作复用所有通道，无厂商锁定。",
       "tags": [
-        "AI视频编辑",
-        "MCP服务器",
-        "Swift",
-        "macOS"
+        "Agent框架",
+        "TypeScript",
+        "共享状态",
+        "自托管"
       ],
       "confidence": "high",
       "info_gaps": [
-        "未提供支持的视频格式详细列表",
-        "生成式 AI 模型的定价和具体能力未公开",
-        "缺少与其他成熟 NLE 的性能/功能对比基准",
-        "未说明插件体系或扩展机制是否规划中",
-        "离线模式下的功能受限情况未详细说明"
+        "许可类型未在仓库中明确说明（标注为 None）",
+        "未提供性能基准数据",
+        "未明确最低 Node.js 版本要求（推测为 18+）",
+        "Nitro 部署目标细节未列出，仅说明支持任何 Nitro 托管"
       ],
-      "language": "Swift",
-      "stars_total": 1546,
-      "stars_gained": 749,
+      "language": "TypeScript",
+      "stars_total": 890,
+      "stars_gained": 172,
       "streak_days": 1,
       "is_new": true,
       "refreshed": true,
       "revisit_reason": "new",
-      "report_path": "../projects/palmier-io__palmier-pro/analysis.md"
-    },
-    {
-      "full_name": "calesthio/OpenMontage",
-      "url": "https://github.com/calesthio/OpenMontage",
-      "one_liner": "首个开源代理式视频生产系统：用自然语言驱动，全自动搞定脚本、素材、编辑",
-      "why_worth_it": "无需剪辑技能，把AI代码助手变成视频工作室，从免费素材到成品全自动，零API密钥也能跑，成本低至$0.15",
-      "tags": [
-        "Agentic Video",
-        "Open Source",
-        "Python"
-      ],
-      "confidence": "high",
-      "info_gaps": [
-        "README未详细说明代理与工具之间的具体通信协议或交互方式（仅描述“告诉AI编码助手需求”）",
-        "未提供系统性能基准或视频输出规格（分辨率、帧率等）的详细参数",
-        "未列出所有500+代理技能的清单或分类，仅通过文档链接可获取更多细节",
-        "本地GPU视频生成的模型支持列表和性能对比未在README中展开"
-      ],
-      "language": "Python",
-      "stars_total": 6011,
-      "stars_gained": 738,
-      "streak_days": 1,
-      "is_new": true,
-      "refreshed": true,
-      "revisit_reason": "new",
-      "report_path": "../projects/calesthio__OpenMontage/analysis.md"
+      "report_path": "../projects/BuilderIO__agent-native/analysis.md"
     }
   ]
 }

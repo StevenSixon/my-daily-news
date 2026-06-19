@@ -27,20 +27,20 @@
   ],
   "license": "Apache-2.0",
   "category": "AI 应用",
-  "classify_reason": "压缩 LLM 输入 tokens 的工具，为 AI 应用优化上下文成本",
+  "classify_reason": "Tool to compress tokens for LLMs, directly supporting AI applications.",
   "one_liner": "压缩AI代理上下文，节省60-95% token且答案不变。",
   "why_worth_it": "",
   "tags": [],
   "confidence": "medium",
   "info_gaps": [],
   "quality_flags": [],
-  "stars_total": 37300,
+  "stars_total": 37330,
   "created_at": "2026-01-07",
   "pushed_at": "2026-06-19",
   "latest_release": "v0.26.0",
   "first_seen": "2026-06-19",
   "last_seen": "2026-06-19",
-  "streak_days": 2,
+  "streak_days": 3,
   "analysis_updated_at": "2026-06-19T21:50:15+0800",
   "appearances": [
     {
@@ -54,6 +54,13 @@
       "date": "2026-06-19",
       "reason": "lightweight",
       "stars_total": 37300,
+      "stars_gained": 10159,
+      "release": "v0.26.0"
+    },
+    {
+      "date": "2026-06-19",
+      "reason": "lightweight",
+      "stars_total": 37330,
       "stars_gained": 10159,
       "release": "v0.26.0"
     }

@@ -1,0 +1,47 @@
+{
+  "full_name": "BuilderIO/agent-native",
+  "url": "https://github.com/BuilderIO/agent-native",
+  "description": "A framework for building agent-native applications.",
+  "language": "TypeScript",
+  "topics": [
+    "agents",
+    "ai",
+    "react"
+  ],
+  "license": null,
+  "category": "AI 应用",
+  "classify_reason": "Framework for building agent-native applications.",
+  "one_liner": "Agent与UI共享状态、协同工作的全栈框架",
+  "why_worth_it": "解决Agent与UI割裂问题，一次定义动作复用所有通道，无厂商锁定。",
+  "tags": [
+    "Agent框架",
+    "TypeScript",
+    "共享状态",
+    "自托管"
+  ],
+  "confidence": "high",
+  "info_gaps": [
+    "许可类型未在仓库中明确说明（标注为 None）",
+    "未提供性能基准数据",
+    "未明确最低 Node.js 版本要求（推测为 18+）",
+    "Nitro 部署目标细节未列出，仅说明支持任何 Nitro 托管"
+  ],
+  "quality_flags": [],
+  "stars_total": 890,
+  "created_at": "2026-03-12",
+  "pushed_at": "2026-06-19",
+  "latest_release": "@agent-native/core@0.63.4",
+  "first_seen": "2026-06-19",
+  "last_seen": "2026-06-19",
+  "streak_days": 1,
+  "analysis_updated_at": "2026-06-19T23:37:41+0800",
+  "appearances": [
+    {
+      "date": "2026-06-19",
+      "reason": "new",
+      "stars_total": 890,
+      "stars_gained": 172,
+      "release": "@agent-native/core@0.63.4"
+    }
+  ]
+}

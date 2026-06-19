@@ -27,7 +27,7 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "高性能代码智能 MCP 服务器，为 AI 编码代理提供代码知识图谱",
+  "classify_reason": "MCP server for code intelligence, enabling AI agents to query codebases.",
   "one_liner": "毫秒级构建158语言代码知识图谱，零依赖单二进制MCP服务，token用量削减99%。",
   "why_worth_it": "为AI编码代理提供极速、结构化的代码库理解，替代低效的文件搜索，专治上下文窗口浪费。",
   "tags": [
@@ -43,19 +43,26 @@
     "自动变更检测的效率（资源占用、增量索引延迟）缺少基准数据"
   ],
   "quality_flags": [],
-  "stars_total": 7759,
+  "stars_total": 7777,
   "created_at": "2026-02-24",
   "pushed_at": "2026-06-19",
   "latest_release": "v0.8.1",
   "first_seen": "2026-06-19",
   "last_seen": "2026-06-19",
-  "streak_days": 1,
+  "streak_days": 2,
   "analysis_updated_at": "2026-06-19T23:30:19+0800",
   "appearances": [
     {
       "date": "2026-06-19",
       "reason": "new",
       "stars_total": 7759,
+      "stars_gained": 3244,
+      "release": "v0.8.1"
+    },
+    {
+      "date": "2026-06-19",
+      "reason": "lightweight",
+      "stars_total": 7777,
       "stars_gained": 3244,
       "release": "v0.8.1"
     }
