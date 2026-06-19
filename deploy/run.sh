@@ -1,20 +1,17 @@
 #!/usr/bin/env bash
-# launchd 调用入口：激活虚拟环境并运行指定阶段
-# 用法：run.sh pipeline | push
+# launchd 调用入口：用 venv 绝对路径运行指定阶段（避免依赖交互 shell）
+# 用法：run.sh pipeline [--top-n 5]   |   run.sh push
 set -euo pipefail
 
 PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$PROJECT_DIR"
 
-# 若存在 venv 则激活（按需修改）
-if [ -d ".venv" ]; then
-  # shellcheck disable=SC1091
-  source .venv/bin/activate
-fi
-
+PYTHON="$PROJECT_DIR/.venv/bin/python"
 STAGE="${1:-pipeline}"
+shift || true  # 后面的参数透传给 python -m src.<stage>
+
 case "$STAGE" in
-  pipeline) exec python -m src.pipeline ;;
-  push)     exec python -m src.push ;;
+  pipeline) exec "$PYTHON" -m src.pipeline "$@" ;;
+  push)     exec "$PYTHON" -m src.push      "$@" ;;
   *) echo "未知阶段：$STAGE（应为 pipeline 或 push）" >&2; exit 1 ;;
 esac
