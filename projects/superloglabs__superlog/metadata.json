@@ -1,0 +1,54 @@
+{
+  "full_name": "superloglabs/superlog",
+  "url": "https://github.com/superloglabs/superlog",
+  "description": "Open-source observability tool that uses AI agents to self-heal your software",
+  "language": "TypeScript",
+  "topics": [
+    "ai",
+    "llm",
+    "memory",
+    "observability",
+    "opentelemetry",
+    "react",
+    "self-hosted",
+    "skills",
+    "typescript"
+  ],
+  "license": "Apache-2.0",
+  "category": "AI 应用",
+  "classify_reason": "利用AI代理自修复的可观测性工具",
+  "one_liner": "AI 代理驱动的 OpenTelemetry 观测系统，自动分组事件并自愈",
+  "why_worth_it": "减少告警噪声，用 AI 代理自动排查与恢复，自托管免费，适合快速迭代的小团队",
+  "tags": [
+    "AI代理",
+    "OpenTelemetry",
+    "自托管",
+    "可观测性"
+  ],
+  "confidence": "medium",
+  "info_gaps": [
+    "AI 代理的具体修复能力未说明（社区版仅生成本地摘要）",
+    "无性能基准数据",
+    "事件分组算法未披露",
+    "ClickHouse 部署细节未提及",
+    "与同类工具详细功能对比缺失"
+  ],
+  "quality_flags": [],
+  "stars_total": 902,
+  "created_at": "2026-06-02",
+  "pushed_at": "2026-06-20",
+  "latest_release": null,
+  "first_seen": "2026-06-20",
+  "last_seen": "2026-06-20",
+  "streak_days": 1,
+  "analysis_updated_at": "2026-06-20T22:45:45+0800",
+  "appearances": [
+    {
+      "date": "2026-06-20",
+      "reason": "new",
+      "stars_total": 902,
+      "stars_gained": 0,
+      "release": null
+    }
+  ]
+}

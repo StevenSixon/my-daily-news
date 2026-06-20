@@ -1,223 +1,148 @@
 {
   "date": "2026-06-20",
-  "count": 6,
+  "count": 5,
   "items": [
     {
-      "full_name": "eli-labz/Third-Eye",
-      "url": "https://github.com/eli-labz/Third-Eye",
-      "one_liner": "零配置GPU加速OSINT平台，聚合16种实时情报层",
-      "why_worth_it": "集成13+公开情报源，自托管无需密钥，内置侦察套件，为OSINT分析师提供一站式态势感知。",
+      "full_name": "Kilo-Org/kilocode",
+      "url": "https://github.com/Kilo-Org/kilocode",
+      "one_liner": "开源AI编码代理，跨VS Code/JetBrains/CLI，500+模型零加价，支持CI/CD自主模式。",
+      "why_worth_it": "开源且零加价直连模型提供商，自主模式适合CI/CD，比闭源工具更透明灵活，成本可控。",
       "tags": [
-        "OSINT",
-        "自托管",
-        "WebGL",
-        "TypeScript"
+        "AI编码代理",
+        "开源",
+        "多IDE支持",
+        "CI/CD自主模式"
       ],
       "confidence": "high",
       "info_gaps": [
-        "Smart System 模块的完整后端依赖（如 Vercel KV 或 Upstash）未在 README 中具体说明，仅给出环境变量示例",
-        "未提供性能对比的基准数据（如边缘请求减少的绝对数值、在不同实体数量下的帧率测试）",
-        "Telegram OSINT 默认频道列表未公开，实际抓取的频道不透明",
-        "各数据层的更新延迟和覆盖范围未量化（如 OpenSky 的飞机位置刷新率）",
-        "RECON 工具的扫描器后端部署说明缺失，仅给出 SCANNER_URL 变量"
+        "未提供与其他编码代理的性能对比基准",
+        "未说明自托管 Kilo Gateway 的部署依赖与硬件要求",
+        "未明确 CLI 所需的最低 Node.js 版本",
+        "未展示本地模型（如 Ollama）的集成细节",
+        "自定义代理的开发 API 文档未在 README 中体现"
       ],
       "language": "TypeScript",
-      "stars_total": 508,
-      "stars_gained": 0,
+      "stars_total": 23152,
+      "stars_gained": 1035,
       "streak_days": 1,
       "is_new": true,
       "refreshed": true,
       "revisit_reason": "new",
-      "report_path": "../projects/eli-labz__Third-Eye/analysis.md"
+      "report_path": "../projects/Kilo-Org__kilocode/analysis.md"
     },
     {
-      "full_name": "TestSprite/testsprite-cli",
-      "url": "https://github.com/TestSprite/testsprite-cli",
-      "one_liner": "让AI编程智能体通过真实环境自验证测试循环，一键定位失败根因",
-      "why_worth_it": "解决AI编码后缺乏即时真实验证的问题，面向Coding Agent使用者，提供确定性失败定位包，杜绝合成上下文",
+      "full_name": "twentyhq/twenty",
+      "url": "https://github.com/twentyhq/twenty",
+      "one_liner": "面向AI、代码驱动的开源CRM，可自托管、版本化定制。",
+      "why_worth_it": "为技术团队提供可像代码一样构建、版本化、部署的CRM，集成AI代理，告别僵化SaaS。",
       "tags": [
-        "AI测试",
-        "CLI工具",
-        "E2E自动化",
-        "Playwright"
+        "开源CRM",
+        "代码驱动",
+        "TypeScript",
+        "自托管"
       ],
       "confidence": "high",
       "info_gaps": [
-        "未提供测试计划文件的格式规范（plan.json schema）",
-        "未说明云环境下浏览器/API的配置选项（如屏幕分辨率、地理位置等）",
-        "未公开定价信息，仅提及需要API key",
-        "未明确支持的后端API/协议类型（REST/gRPC等）",
-        "没有性能基准数据（如测试执行耗时）"
+        "AI 代理的具体实现架构和算法未在 README 透露",
+        "无性能基准测试数据（如查询吞吐、响应时间）",
+        "多租户和安全模型的详细实现未在 README 说明",
+        "传统 CRM 功能覆盖度（如营销自动化、客服）未明示",
+        "应用构建器的生态和第三方集成数量未提及"
       ],
       "language": "TypeScript",
-      "stars_total": 572,
-      "stars_gained": 0,
+      "stars_total": 50715,
+      "stars_gained": 140,
       "streak_days": 1,
       "is_new": true,
       "refreshed": true,
       "revisit_reason": "new",
-      "report_path": "../projects/TestSprite__testsprite-cli/analysis.md"
+      "report_path": "../projects/twentyhq__twenty/analysis.md"
     },
     {
-      "full_name": "code-yeongyu/lazycodex",
-      "url": "https://github.com/code-yeongyu/lazycodex",
-      "one_liner": "Codex 一键安装的 AI 代理工具集，含项目记忆、计划与验证完成",
-      "why_worth_it": "零配置将 OmO 高质量代理工作流带入 Codex，省去手动集成多代理和多模型路由的麻烦",
+      "full_name": "jamiepine/voicebox",
+      "url": "https://github.com/jamiepine/voicebox",
+      "one_liner": "本地优先的AI语音工作室，同时替代ElevenLabs和WisprFlow，覆盖TTS/STT/听写/代理语音全链路",
+      "why_worth_it": "一站式解决隐私敏感的本地语音I/O闭环：七引擎多语言TTS与Whisper转录，加上全局热键听写和MCP代理语音输出，比单一云服务更省钱、更可控",
       "tags": [
-        "Agent框架",
-        "Codex",
-        "CLI",
-        "TypeScript"
-      ],
-      "confidence": "high",
-      "info_gaps": [
-        "未提供与类似工具（如 oh-my-codex）的详细性能对比",
-        "未说明 Codex 的最低版本要求",
-        "无具体 benchmark 数据"
-      ],
-      "language": "TypeScript",
-      "stars_total": 1565,
-      "stars_gained": 0,
-      "streak_days": 1,
-      "is_new": true,
-      "refreshed": true,
-      "revisit_reason": "new",
-      "report_path": "../projects/code-yeongyu__lazycodex/analysis.md"
-    },
-    {
-      "full_name": "amElnagdy/guard-skills",
-      "url": "https://github.com/amElnagdy/guard-skills",
-      "one_liner": "专查 AI 生成代码/测试/文档常见缺陷的质量门禁套件",
-      "why_worth_it": "针对 LLM 输出特有的幻觉、过度抽象、安全绕过等问题做第二道审查，比通用 linter 更贴 AI 故障模式，适合用 AI 写代码的开发者",
-      "tags": [
-        "AI代码审查",
-        "代理技能",
-        "质量门禁",
-        "WordPress"
-      ],
-      "confidence": "high",
-      "info_gaps": [
-        "未提供各守卫的检测准确率、误报率或性能基准数据",
-        "依赖的 Skills CLI 具体版本未明确",
-        "未列出所有兼容代理及其确切版本支持范围",
-        "未说明除 WordPress/WooCommerce 外其他平台的特化守卫计划",
-        "缺少对守卫运行耗时或资源消耗的描述"
-      ],
-      "language": null,
-      "stars_total": 840,
-      "stars_gained": 0,
-      "streak_days": 1,
-      "is_new": true,
-      "refreshed": true,
-      "revisit_reason": "new",
-      "report_path": "../projects/amElnagdy__guard-skills/analysis.md"
-    },
-    {
-      "full_name": "ClaudioDrews/memory-os",
-      "url": "https://github.com/ClaudioDrews/memory-os",
-      "one_liner": "7层记忆操作系统，终结AI遗忘，本地运行无锁定",
-      "why_worth_it": "专为重度Hermes用户打造，解决跨会话遗忘痛点，本地私有、无供应商绑定，独创Ground Truth层确保注入记忆真实生效，对比云方案根本性区别",
-      "tags": [
-        "AI记忆",
+        "TTS/STT 套件",
         "本地优先",
-        "自托管",
-        "RAG"
+        "MCP集成",
+        "TypeScript"
       ],
       "confidence": "high",
       "info_gaps": [
-        "未提供性能基准或大规模并发测试数据",
-        "未明确说明 Hermes Agent 的具体获取方式与版本兼容性",
-        "未给出最小硬件配置建议（仅提到在 modest machines 上测试）",
-        "日期为未来 2026 年，真实性无法核实"
+        "未提供各模型的VRAM占用、延迟和MOS得分等性能基准数据",
+        "未说明内置LLM的具体模型名称和量化版本",
+        "多GPU/多实例推理支持未提及",
+        "Linux预构建二进制发布时间未定",
+        "跨平台自动粘贴在非macOS上的实现成熟度未详述"
       ],
-      "language": "Python",
-      "stars_total": 1171,
+      "language": "TypeScript",
+      "stars_total": 30816,
+      "stars_gained": 140,
+      "streak_days": 1,
+      "is_new": true,
+      "refreshed": true,
+      "revisit_reason": "new",
+      "report_path": "../projects/jamiepine__voicebox/analysis.md"
+    },
+    {
+      "full_name": "1jehuang/jcode",
+      "url": "https://github.com/1jehuang/jcode",
+      "one_liner": "Rust 编写的终端 AI 编程代理，内存占用 27MB，启动 14ms，内建人类式语义记忆系统。",
+      "why_worth_it": "想要极低资源消耗和即时启动的多会话 AI 编码环境，jcode 的内存与速度碾压一切竞品，记忆系统无需手动管理。",
+      "tags": [
+        "Coding Agent",
+        "TUI",
+        "Memory-Augmented",
+        "Rust"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "未明确说明如何配置各 LLM provider 的具体步骤（依赖 AUTH_CREDENTIAL_SOURCES.md 但未展示内容）",
+        "桌面应用和 iOS 客户端当前开发状态及可用性未知",
+        "没有提供社区贡献者数量或 commit 频率等长期维护指标",
+        "Mermaid 渲染的 1800x 加速具体实现细节未在 README 中展开"
+      ],
+      "language": "Rust",
+      "stars_total": 7310,
+      "stars_gained": 70,
+      "streak_days": 1,
+      "is_new": true,
+      "refreshed": true,
+      "revisit_reason": "new",
+      "report_path": "../projects/1jehuang__jcode/analysis.md"
+    },
+    {
+      "full_name": "superloglabs/superlog",
+      "url": "https://github.com/superloglabs/superlog",
+      "one_liner": "AI 代理驱动的 OpenTelemetry 观测系统，自动分组事件并自愈",
+      "why_worth_it": "减少告警噪声，用 AI 代理自动排查与恢复，自托管免费，适合快速迭代的小团队",
+      "tags": [
+        "AI代理",
+        "OpenTelemetry",
+        "自托管",
+        "可观测性"
+      ],
+      "confidence": "medium",
+      "info_gaps": [
+        "AI 代理的具体修复能力未说明（社区版仅生成本地摘要）",
+        "无性能基准数据",
+        "事件分组算法未披露",
+        "ClickHouse 部署细节未提及",
+        "与同类工具详细功能对比缺失"
+      ],
+      "language": "TypeScript",
+      "stars_total": 902,
       "stars_gained": 0,
       "streak_days": 1,
       "is_new": true,
       "refreshed": true,
       "revisit_reason": "new",
-      "report_path": "../projects/ClaudioDrews__memory-os/analysis.md"
-    },
-    {
-      "full_name": "palmier-io/palmier-pro",
-      "url": "https://github.com/palmier-io/palmier-pro",
-      "one_liner": "macOS原生AI视频编辑器，通过MCP让Claude/Cursor等Agent直接操控时间线",
-      "why_worth_it": "让AI第一次能像人一样操作视频时间线，适合想用Agent加速剪辑的创作者或开发者",
-      "tags": [
-        "MCP集成",
-        "AI视频编辑",
-        "macOS原生",
-        "开源核心"
-      ],
-      "confidence": "high",
-      "info_gaps": [
-        "依赖macOS 26 (Tahoe)，该版本可能为预发布版，兼容性需验证",
-        "生成式AI功能需付费订阅，价格未在README公开",
-        "未提供详细MCP工具列表或API文档链接"
-      ],
-      "language": "Swift",
-      "stars_total": 2206,
-      "stars_gained": 756,
-      "streak_days": 4,
-      "is_new": false,
-      "refreshed": true,
-      "revisit_reason": "release_update",
-      "report_path": "../projects/palmier-io__palmier-pro/analysis.md"
+      "report_path": "../projects/superloglabs__superlog/analysis.md"
     }
   ],
   "streaks": [
-    {
-      "full_name": "obra/superpowers",
-      "url": "https://github.com/obra/superpowers",
-      "one_liner": "为编码智能体提供系统的 TDD 开发方法论（红绿重构）与子代理驱动流水线。",
-      "why_worth_it": "",
-      "tags": [],
-      "confidence": "medium",
-      "info_gaps": [],
-      "language": "Shell",
-      "stars_total": 233723,
-      "stars_gained": 1110,
-      "streak_days": 5,
-      "is_new": false,
-      "refreshed": false,
-      "revisit_reason": "lightweight",
-      "report_path": "../projects/obra__superpowers/analysis.md"
-    },
-    {
-      "full_name": "chopratejas/headroom",
-      "url": "https://github.com/chopratejas/headroom",
-      "one_liner": "压缩AI代理上下文，节省60-95% token且答案不变。",
-      "why_worth_it": "",
-      "tags": [],
-      "confidence": "medium",
-      "info_gaps": [],
-      "language": "Python",
-      "stars_total": 39988,
-      "stars_gained": 12793,
-      "streak_days": 5,
-      "is_new": false,
-      "refreshed": false,
-      "revisit_reason": "lightweight",
-      "report_path": "../projects/chopratejas__headroom/analysis.md"
-    },
-    {
-      "full_name": "Panniantong/Agent-Reach",
-      "url": "https://github.com/Panniantong/Agent-Reach",
-      "one_liner": "一句 CLI 给 AI 装上全互联网眼睛，零 API 费读遍微博客、视频、论坛",
-      "why_worth_it": "",
-      "tags": [],
-      "confidence": "medium",
-      "info_gaps": [],
-      "language": "Python",
-      "stars_total": 35394,
-      "stars_gained": 8324,
-      "streak_days": 5,
-      "is_new": false,
-      "refreshed": false,
-      "revisit_reason": "lightweight",
-      "report_path": "../projects/Panniantong__Agent-Reach/analysis.md"
-    },
     {
       "full_name": "lfnovo/open-notebook",
       "url": "https://github.com/lfnovo/open-notebook",
@@ -227,64 +152,13 @@
       "confidence": "medium",
       "info_gaps": [],
       "language": "TypeScript",
-      "stars_total": 31911,
+      "stars_total": 31957,
       "stars_gained": 2381,
-      "streak_days": 5,
+      "streak_days": 6,
       "is_new": false,
       "refreshed": false,
       "revisit_reason": "lightweight",
       "report_path": "../projects/lfnovo__open-notebook/analysis.md"
-    },
-    {
-      "full_name": "NVIDIA/SkillSpector",
-      "url": "https://github.com/NVIDIA/SkillSpector",
-      "one_liner": "AI agent技能安全扫描，静态+LLM双阶段检测64种漏洞",
-      "why_worth_it": "",
-      "tags": [],
-      "confidence": "medium",
-      "info_gaps": [],
-      "language": "Python",
-      "stars_total": 8466,
-      "stars_gained": 5026,
-      "streak_days": 5,
-      "is_new": false,
-      "refreshed": false,
-      "revisit_reason": "lightweight",
-      "report_path": "../projects/NVIDIA__SkillSpector/analysis.md"
-    },
-    {
-      "full_name": "kenn-io/agentsview",
-      "url": "https://github.com/kenn-io/agentsview",
-      "one_liner": "本地化AI编码助手会话总控，跨20+代理，统一搜索、成本追踪。",
-      "why_worth_it": "",
-      "tags": [],
-      "confidence": "medium",
-      "info_gaps": [],
-      "language": "Go",
-      "stars_total": 3005,
-      "stars_gained": 955,
-      "streak_days": 5,
-      "is_new": false,
-      "refreshed": false,
-      "revisit_reason": "lightweight",
-      "report_path": "../projects/kenn-io__agentsview/analysis.md"
-    },
-    {
-      "full_name": "addyosmani/agent-skills",
-      "url": "https://github.com/addyosmani/agent-skills",
-      "one_liner": "为AI编码代理提供覆盖全生命周期的24个生产级工程技能，让代理遵循资深工程师的规范与质量实践。",
-      "why_worth_it": "",
-      "tags": [],
-      "confidence": "medium",
-      "info_gaps": [],
-      "language": "Shell",
-      "stars_total": 63740,
-      "stars_gained": 7170,
-      "streak_days": 4,
-      "is_new": false,
-      "refreshed": false,
-      "revisit_reason": "lightweight",
-      "report_path": "../projects/addyosmani__agent-skills/analysis.md"
     },
     {
       "full_name": "XiaomiMiMo/MiMo-Code",
@@ -306,39 +180,13 @@
         "与 Aider/Claude Code 等工具的具体差异仅凭架构推测，未实证"
       ],
       "language": "TypeScript",
-      "stars_total": 10005,
+      "stars_total": 10033,
       "stars_gained": 0,
-      "streak_days": 4,
+      "streak_days": 5,
       "is_new": false,
       "refreshed": false,
       "revisit_reason": "lightweight",
       "report_path": "../projects/XiaomiMiMo__MiMo-Code/analysis.md"
-    },
-    {
-      "full_name": "DeusData/codebase-memory-mcp",
-      "url": "https://github.com/DeusData/codebase-memory-mcp",
-      "one_liner": "毫秒级构建158语言代码知识图谱，零依赖单二进制MCP服务，token用量削减99%。",
-      "why_worth_it": "为AI编码代理提供极速、结构化的代码库理解，替代低效的文件搜索，专治上下文窗口浪费。",
-      "tags": [
-        "MCP服务",
-        "代码图谱",
-        "本地优先",
-        "零依赖"
-      ],
-      "confidence": "high",
-      "info_gaps": [
-        "平均仓库的索引毫秒级时间未给出具体测试集和数值（仅提供Linux内核特例）",
-        "Hybrid LSP 对 9 种语言的类型推断准确率和限制未量化",
-        "自动变更检测的效率（资源占用、增量索引延迟）缺少基准数据"
-      ],
-      "language": "C",
-      "stars_total": 8715,
-      "stars_gained": 4212,
-      "streak_days": 4,
-      "is_new": false,
-      "refreshed": false,
-      "revisit_reason": "lightweight",
-      "report_path": "../projects/DeusData__codebase-memory-mcp/analysis.md"
     },
     {
       "full_name": "calesthio/OpenMontage",
@@ -358,9 +206,9 @@
         "本地GPU视频生成的模型支持列表和性能对比未在README中展开"
       ],
       "language": "Python",
-      "stars_total": 6522,
-      "stars_gained": 156,
-      "streak_days": 4,
+      "stars_total": 6706,
+      "stars_gained": 677,
+      "streak_days": 5,
       "is_new": false,
       "refreshed": false,
       "revisit_reason": "lightweight",
@@ -384,62 +232,13 @@
         "未提供详细MCP工具列表或API文档链接"
       ],
       "language": "Swift",
-      "stars_total": 2206,
-      "stars_gained": 756,
-      "streak_days": 4,
+      "stars_total": 2603,
+      "stars_gained": 904,
+      "streak_days": 5,
       "is_new": false,
-      "refreshed": true,
-      "revisit_reason": "release_update",
+      "refreshed": false,
+      "revisit_reason": "lightweight",
       "report_path": "../projects/palmier-io__palmier-pro/analysis.md"
-    },
-    {
-      "full_name": "DietrichGebert/ponytail",
-      "url": "https://github.com/DietrichGebert/ponytail",
-      "one_liner": "让AI代理像最懒的资深开发者一样写代码，平均少写54%代码且不损安全。",
-      "why_worth_it": "实测在FastAPI+React项目中减少54%代码、节省20%成本，同时保持100%安全防护，远超同类YAGNI提示。适合所有用AI写代码的开发者。",
-      "tags": [
-        "prompt-engineering",
-        "agent-skills",
-        "yagni",
-        "developer-tools"
-      ],
-      "confidence": "high",
-      "info_gaps": [],
-      "language": "JavaScript",
-      "stars_total": 40908,
-      "stars_gained": 0,
-      "streak_days": 3,
-      "is_new": false,
-      "refreshed": false,
-      "revisit_reason": "lightweight",
-      "report_path": "../projects/DietrichGebert__ponytail/analysis.md"
-    },
-    {
-      "full_name": "LMCache/LMCache",
-      "url": "https://github.com/LMCache/LMCache",
-      "one_liner": "LLM推理的引擎无关KV缓存层，实现持久化、跨进程重用与非前缀复用。",
-      "why_worth_it": "解决KV缓存随请求销毁、无法跨引擎共享的痛点，降低长上下文多轮/RAG场景的TTFT，且供应商中立。",
-      "tags": [
-        "KV缓存管理",
-        "LLM推理加速",
-        "分层存储",
-        "多引擎集成"
-      ],
-      "confidence": "medium",
-      "info_gaps": [
-        "README 未提供 benchmark 或性能对比数据",
-        "快速开始部分缺少可直接复制运行的最小示例与配置",
-        "未列出官方已验证支持的模型列表",
-        "部署多进程模式的具体资源规格与依赖未说明"
-      ],
-      "language": "Python",
-      "stars_total": 9443,
-      "stars_gained": 876,
-      "streak_days": 3,
-      "is_new": false,
-      "refreshed": false,
-      "revisit_reason": "lightweight",
-      "report_path": "../projects/LMCache__LMCache/analysis.md"
     },
     {
       "full_name": "withastro/flue",
@@ -461,9 +260,9 @@
         "无性能基准或规模数据"
       ],
       "language": "TypeScript",
-      "stars_total": 5932,
-      "stars_gained": 309,
-      "streak_days": 3,
+      "stars_total": 5988,
+      "stars_gained": 850,
+      "streak_days": 4,
       "is_new": false,
       "refreshed": false,
       "revisit_reason": "lightweight",
@@ -489,9 +288,9 @@
         "沙箱各后端的成熟度和隔离强度无量化比较"
       ],
       "language": "Python",
-      "stars_total": 4115,
+      "stars_total": 4148,
       "stars_gained": 0,
-      "streak_days": 3,
+      "streak_days": 4,
       "is_new": false,
       "refreshed": false,
       "revisit_reason": "lightweight",
@@ -516,149 +315,147 @@
         "与 Vercel AI SDK 的具体整合路径未展开"
       ],
       "language": "TypeScript",
-      "stars_total": 1734,
+      "stars_total": 1782,
+      "stars_gained": 0,
+      "streak_days": 4,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "release_update",
+      "report_path": "../projects/vercel__eve/analysis.md"
+    },
+    {
+      "full_name": "alchaincyf/fanbox",
+      "url": "https://github.com/alchaincyf/fanbox",
+      "one_liner": "本地AI编码驾驶舱：文件、终端、预览三合一，实时追踪Agent每次文件改动。",
+      "why_worth_it": "解决AI起项目后找不回、看不清改动问题，适合用Claude Code/Codex的开发者，一体化窗口免于多应用切换。",
+      "tags": [
+        "本地优先",
+        "Agent驾驶舱",
+        "Electron",
+        "vibe-coding"
+      ],
+      "confidence": "medium",
+      "info_gaps": [
+        "当前仅发布 macOS Apple Silicon 版本，Windows 和 Intel Mac 版本仍在规划中，未提供具体发布时间。",
+        "未提供大规模文件负载下的性能基准测试数据（仅提及缩略图滚动 <0.1秒）。"
+      ],
+      "language": "JavaScript",
+      "stars_total": 744,
       "stars_gained": 0,
       "streak_days": 3,
       "is_new": false,
       "refreshed": false,
       "revisit_reason": "lightweight",
-      "report_path": "../projects/vercel__eve/analysis.md"
-    },
-    {
-      "full_name": "BuilderIO/agent-native",
-      "url": "https://github.com/BuilderIO/agent-native",
-      "one_liner": "Agent与UI共享状态、协同工作的全栈框架",
-      "why_worth_it": "解决Agent与UI割裂问题，一次定义动作复用所有通道，无厂商锁定。",
-      "tags": [
-        "Agent框架",
-        "TypeScript",
-        "共享状态",
-        "自托管"
-      ],
-      "confidence": "high",
-      "info_gaps": [
-        "许可类型未在仓库中明确说明（标注为 None）",
-        "未提供性能基准数据",
-        "未明确最低 Node.js 版本要求（推测为 18+）",
-        "Nitro 部署目标细节未列出，仅说明支持任何 Nitro 托管"
-      ],
-      "language": "TypeScript",
-      "stars_total": 1168,
-      "stars_gained": 147,
-      "streak_days": 3,
-      "is_new": false,
-      "refreshed": false,
-      "revisit_reason": "lightweight",
-      "report_path": "../projects/BuilderIO__agent-native/analysis.md"
+      "report_path": "../projects/alchaincyf__fanbox/analysis.md"
     }
   ],
   "news": [
     {
-      "title": "Share session output as artifacts",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1hNF9oZ0RvN1ViWjJVeDMzakcwVGVlTG11REZxaWhrQk1GM1hHZFlMNHBUaElvcERiaTNXamNaaUpYMGZzYjBJYVU1TjctOHZYbkEw?oc=5",
-      "source": "Claude",
-      "source_type": "official",
-      "published": "2026-06-20",
-      "summary_zh": "Claude新增分享会话输出为artifacts的功能",
-      "category": "产品"
-    },
-    {
-      "title": "Turn ideas into designs with Claude | Claude by Anthropic",
-      "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBFQnVTNFEtRzdIZnJzNjRhNzAwYXhkcHBIeUpEY0VydlBqSHVSTmc2NWo0Z1pBOEF0bmV4d3JROEtqR3pfb2l5Ng?oc=5",
+      "title": "What are artifacts and how do I use them? | Claude Help Center",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNTU9GeWZJdTloLTRxTDNfVkc3eFdRVWdqTkZJYktuR3V3S2F4T3IwckJsZE9tSnBaN0dmTXlmS2loZTJpLTR5clF4SVNucGw5NnVuR083TlFnQ09Jdm9kQ3B5cHE3ZEFQelNmNzFJamJwem5OTDJ1ZnVlT2VCWkw3WEpBV0Qtc2xTZ0EyVGdRbFg?oc=5",
       "source": "Claude",
       "source_type": "official",
       "published": "2026-06-18",
-      "summary_zh": "Anthropic推出Claude将想法转化为设计的功能",
+      "summary_zh": "Claude 帮助中心发布 artifacts 功能使用指南",
       "category": "产品"
     },
     {
-      "title": "Project Fetch: Phase two",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5TLWJxbE9YblE2Wk13TmJ2N0ZxekNHM2R1M01JUnQ0emxWWTBHczk0MzdCajhRSWd2N3l5NEFtQ2pyd1RPM29ncFdfWEdWbWFaOFk4cW13dTVkQWMzY2xYOXl6d3dJaUdlV0E?oc=5",
-      "source": "Anthropic",
+      "title": "Claude Code now supports artifacts",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBrdVFncC1QdkFWRlFEVGtCUTJBclQyTmRQZkdXS3UwTTdvblR4Zm9fbmU3QzBVRGlIdGRPblU3ZmdXQS11ZGttdXVNNkVFYlBqVjdMbjFaNkdOb3FX?oc=5",
+      "source": "Claude",
       "source_type": "official",
       "published": "2026-06-18",
-      "summary_zh": "Anthropic公布Project Fetch第二阶段",
-      "category": "研究"
+      "summary_zh": "Claude Code 新增对 artifacts 功能的支持",
+      "category": "产品"
     },
     {
-      "title": "Frontier Red Team",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9PMmowTXFhSlB0d2hWUWd2aG83V25QWkptZHMtWEZXMGxSSk1qQTFaa2tlSDg4Q0RwaHNNcXQ5Tnp6eUtYRkh5MUd6NUNBaWhDbHg4THpxeWRHTTg0NmFfQk1oU0VVVVY2?oc=5",
+      "title": "Claude Corps: How to Become a Host Organization",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOdnpPVE1uWkc5VzE2V0Z3MlVQTV9aeXRtN3lDT2V1RTJvUGhvcnB5dnZsTzc4M1lmamMxek9yQ1ZUakU3dkJwaHhOc0VPR1RGZnR6S1BEbVhCV2dHT3BodWxORHlzbTdtYWlqTElqUU9wMFg0c1FFdWI0T3BVTXRkY052dnNKMTV5?oc=5",
       "source": "Anthropic",
       "source_type": "official",
-      "published": "2026-06-18",
-      "summary_zh": "Anthropic成立Frontier Red Team以应对前沿风险",
-      "category": "研究"
+      "published": "2026-06-17",
+      "summary_zh": "Anthropic 推出 Claude Corps 主机组织申请指南",
+      "category": "产品"
     },
     {
-      "title": "GPT-5.5 hallucinates 3x more than MIT-licensed GLM-5.2",
-      "url": "https://arrowtsx.dev/bigger-models/",
-      "source": "Hacker News",
-      "source_type": "community",
-      "published": "2026-06-19",
-      "summary_zh": "GPT-5.5幻觉率比GLM-5.2高三倍",
-      "category": "观点"
+      "title": "Anthropic opens Seoul office and announces new partnerships across the Korean AI ecosystem",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQcHh0bjBqVXNvaGk0ZVVsQkJZd2RhMUpQYU00SkxDUS1VQXdORkg5cjdaOHZQNlExR2R3Y1I0Mnpwbm1vR2lLU1doa1BmQ0NYbEY2YXJ4SC1BTGdWVWhnZGJ5dUhKSWFIRlNaVWpFa011RHFkUWdBNzgzRVUzU3Nnc1lB?oc=5",
+      "source": "Anthropic",
+      "source_type": "official",
+      "published": "2026-06-17",
+      "summary_zh": "Anthropic 在首尔设立办事处并宣布韩国 AI 生态合作",
+      "category": "融资/商业"
     },
     {
-      "title": "Is AI ruining our skills? Early results are in – and they're not good",
-      "url": "https://www.nature.com/articles/d41586-026-01947-1",
-      "source": "Hacker News",
-      "source_type": "community",
-      "published": "2026-06-19",
-      "summary_zh": "早期研究显示AI可能损害人类技能",
-      "category": "观点"
-    },
-    {
-      "title": "REVEAL++: Differentiable Phenotypic Grouping for Vision-Language Retinal Modeling of Alzheimer's Disease Risk",
-      "url": "https://arxiv.org/abs/2606.19522",
+      "title": "ITNet: A Learnable Integral Transform That Subsumes Convolution, Attention, and Recurrence",
+      "url": "https://arxiv.org/abs/2606.19538",
       "source": "arXiv cs.AI",
       "source_type": "paper",
       "published": "2026-06-20",
-      "summary_zh": "REVEAL++提出可微表型分组用于阿尔茨海默病视网膜建模",
+      "summary_zh": "论文提出可学习积分变换 ITNet，统一卷积、注意力与循环",
       "category": "研究"
     },
     {
-      "title": "Emergent Alignment",
-      "url": "https://arxiv.org/abs/2606.19527",
+      "title": "Uncertainty Decomposition for Clarification Seeking in LLM Agents",
+      "url": "https://arxiv.org/abs/2606.19559",
       "source": "arXiv cs.AI",
       "source_type": "paper",
       "published": "2026-06-20",
-      "summary_zh": "研究大型语言模型识别自身输出与人类伦理失调的能力",
+      "summary_zh": "论文提出 LLM 智能体中用于澄清追问的不确定性分解方法",
       "category": "研究"
     },
     {
-      "title": "MosaicLeaks: Can your research agent keep a secret?",
-      "url": "https://huggingface.co/blog/ServiceNow/mosaicleaks",
+      "title": "Amazon drops Sam Altman movie after announcing OpenAI partnership",
+      "url": "https://www.the-independent.com/arts-entertainment/films/news/sam-altman-biopic-amazon-openai-deal-b2999321.html",
+      "source": "Hacker News",
+      "source_type": "community",
+      "published": "2026-06-19",
+      "summary_zh": "亚马逊在宣布与 OpenAI 合作后取消 Sam Altman 电影项目",
+      "category": "融资/商业"
+    },
+    {
+      "title": "John Jumper to join Anthropic",
+      "url": "https://twitter.com/JohnJumperSci/status/2068001285173834106",
+      "source": "Hacker News",
+      "source_type": "community",
+      "published": "2026-06-19",
+      "summary_zh": "AlphaFold 开发者 John Jumper 将加入 Anthropic",
+      "category": "融资/商业"
+    },
+    {
+      "title": "Is it agentic enough? Benchmarking open models on your own tooling",
+      "url": "https://huggingface.co/blog/is-it-agentic-enough",
       "source": "HF Blog",
       "source_type": "hf",
       "published": "2026-06-18",
-      "summary_zh": "MosaicLeaks测试研究代理能否保守秘密",
+      "summary_zh": "Hugging Face 博客发布开源模型 agentic 基准测试方法",
       "category": "研究"
     },
     {
-      "title": "Beyond LoRA: Can you beat the most popular fine-tuning technique?",
-      "url": "https://huggingface.co/blog/peft-beyond-lora",
+      "title": "MolmoMotion: Language-guided 3D motion forecasting",
+      "url": "https://huggingface.co/blog/allenai/molmomotion",
       "source": "HF Blog",
       "source_type": "hf",
-      "published": "2026-06-18",
-      "summary_zh": "HF博客探讨超越LoRA的微调技术",
+      "published": "2026-06-17",
+      "summary_zh": "Hugging Face 博客推出语言引导 3D 运动预测模型 MolmoMotion",
       "category": "研究"
     },
     {
-      "title": "Research Project: Injecting Natural-Language Tactical Intent into Multi-Agent Football Policies",
-      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uawkdg/research_project_injecting_naturallanguage/",
+      "title": "z.AI as the number 2 gives praise to the number 1 open source model",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uaxktf/zai_as_the_number_2_gives_praise_to_the_number_1/",
       "source": "r/LocalLLaMA",
       "source_type": "community",
       "published": "2026-06-20",
-      "summary_zh": "研究将自然语言战术意图注入多智能体足球策略",
-      "category": "研究"
+      "summary_zh": "z.AI 作为第二名赞扬第一的开源模型，引发热议",
+      "category": "观点"
     },
     {
-      "title": "An open handbook on LLM inference at scale (GPU internals, KV cache, batching, vLLM/SGLang/TensorRT-LLM) [P]",
-      "url": "https://www.reddit.com/r/MachineLearning/comments/1uavduv/an_open_handbook_on_llm_inference_at_scale_gpu/",
-      "source": "r/MachineLearning",
+      "title": "Best Settings for 48GB VRAM + Qwen 3.6 27B",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uarvk4/best_settings_for_48gb_vram_qwen_36_27b/",
+      "source": "r/LocalLLaMA",
       "source_type": "community",
       "published": "2026-06-20",
-      "summary_zh": "开源手册详述LLM大规模推理的内部原理",
+      "summary_zh": "用户分享 48GB VRAM 双卡运行 Qwen 3.6 27B 的最佳设置",
       "category": "工程"
     }
   ]

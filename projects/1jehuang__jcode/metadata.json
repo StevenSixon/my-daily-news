@@ -1,0 +1,54 @@
+{
+  "full_name": "1jehuang/jcode",
+  "url": "https://github.com/1jehuang/jcode",
+  "description": "Coding Agent Harness",
+  "language": "Rust",
+  "topics": [
+    "ai",
+    "claude",
+    "cli",
+    "coding-agent",
+    "llm",
+    "mcp",
+    "openai",
+    "rust",
+    "terminal",
+    "tui"
+  ],
+  "license": "MIT",
+  "category": "AI 应用",
+  "classify_reason": "编码代理Harness",
+  "one_liner": "Rust 编写的终端 AI 编程代理，内存占用 27MB，启动 14ms，内建人类式语义记忆系统。",
+  "why_worth_it": "想要极低资源消耗和即时启动的多会话 AI 编码环境，jcode 的内存与速度碾压一切竞品，记忆系统无需手动管理。",
+  "tags": [
+    "Coding Agent",
+    "TUI",
+    "Memory-Augmented",
+    "Rust"
+  ],
+  "confidence": "high",
+  "info_gaps": [
+    "未明确说明如何配置各 LLM provider 的具体步骤（依赖 AUTH_CREDENTIAL_SOURCES.md 但未展示内容）",
+    "桌面应用和 iOS 客户端当前开发状态及可用性未知",
+    "没有提供社区贡献者数量或 commit 频率等长期维护指标",
+    "Mermaid 渲染的 1800x 加速具体实现细节未在 README 中展开"
+  ],
+  "quality_flags": [],
+  "stars_total": 7310,
+  "created_at": "2026-01-05",
+  "pushed_at": "2026-06-20",
+  "latest_release": "v0.30.2",
+  "first_seen": "2026-06-20",
+  "last_seen": "2026-06-20",
+  "streak_days": 1,
+  "analysis_updated_at": "2026-06-20T22:45:16+0800",
+  "appearances": [
+    {
+      "date": "2026-06-20",
+      "reason": "new",
+      "stars_total": 7310,
+      "stars_gained": 70,
+      "release": "v0.30.2"
+    }
+  ]
+}

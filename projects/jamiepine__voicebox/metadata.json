@@ -1,0 +1,53 @@
+{
+  "full_name": "jamiepine/voicebox",
+  "url": "https://github.com/jamiepine/voicebox",
+  "description": "The open-source AI voice studio. Clone, dictate, create.",
+  "language": "TypeScript",
+  "topics": [
+    "ai",
+    "cuda",
+    "mlx",
+    "qwen3-tts",
+    "qwen3-tts-ui",
+    "voice-ai",
+    "voice-clone",
+    "whisper"
+  ],
+  "license": "MIT",
+  "category": "AI 应用",
+  "classify_reason": "开源AI语音工作室",
+  "one_liner": "本地优先的AI语音工作室，同时替代ElevenLabs和WisprFlow，覆盖TTS/STT/听写/代理语音全链路",
+  "why_worth_it": "一站式解决隐私敏感的本地语音I/O闭环：七引擎多语言TTS与Whisper转录，加上全局热键听写和MCP代理语音输出，比单一云服务更省钱、更可控",
+  "tags": [
+    "TTS/STT 套件",
+    "本地优先",
+    "MCP集成",
+    "TypeScript"
+  ],
+  "confidence": "high",
+  "info_gaps": [
+    "未提供各模型的VRAM占用、延迟和MOS得分等性能基准数据",
+    "未说明内置LLM的具体模型名称和量化版本",
+    "多GPU/多实例推理支持未提及",
+    "Linux预构建二进制发布时间未定",
+    "跨平台自动粘贴在非macOS上的实现成熟度未详述"
+  ],
+  "quality_flags": [],
+  "stars_total": 30816,
+  "created_at": "2026-01-25",
+  "pushed_at": "2026-04-26",
+  "latest_release": "v0.5.0",
+  "first_seen": "2026-06-20",
+  "last_seen": "2026-06-20",
+  "streak_days": 1,
+  "analysis_updated_at": "2026-06-20T22:44:43+0800",
+  "appearances": [
+    {
+      "date": "2026-06-20",
+      "reason": "new",
+      "stars_total": 30816,
+      "stars_gained": 140,
+      "release": "v0.5.0"
+    }
+  ]
+}

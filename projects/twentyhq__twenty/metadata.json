@@ -1,0 +1,62 @@
+{
+  "full_name": "twentyhq/twenty",
+  "url": "https://github.com/twentyhq/twenty",
+  "description": "The open alternative to Salesforce, designed for AI.",
+  "language": "TypeScript",
+  "topics": [
+    "crm",
+    "crm-system",
+    "customer",
+    "good-first-issue",
+    "graphql",
+    "hacktoberfest",
+    "javascript",
+    "marketing",
+    "monorepo",
+    "nestjs",
+    "open-source",
+    "postgresql",
+    "react",
+    "reactjs",
+    "sales",
+    "typescript",
+    "web"
+  ],
+  "license": "NOASSERTION",
+  "category": "AI 应用",
+  "classify_reason": "AI驱动的开源CRM",
+  "one_liner": "面向AI、代码驱动的开源CRM，可自托管、版本化定制。",
+  "why_worth_it": "为技术团队提供可像代码一样构建、版本化、部署的CRM，集成AI代理，告别僵化SaaS。",
+  "tags": [
+    "开源CRM",
+    "代码驱动",
+    "TypeScript",
+    "自托管"
+  ],
+  "confidence": "high",
+  "info_gaps": [
+    "AI 代理的具体实现架构和算法未在 README 透露",
+    "无性能基准测试数据（如查询吞吐、响应时间）",
+    "多租户和安全模型的详细实现未在 README 说明",
+    "传统 CRM 功能覆盖度（如营销自动化、客服）未明示",
+    "应用构建器的生态和第三方集成数量未提及"
+  ],
+  "quality_flags": [],
+  "stars_total": 50715,
+  "created_at": "2022-12-01",
+  "pushed_at": "2026-06-20",
+  "latest_release": "twenty/v2.14.0",
+  "first_seen": "2026-06-20",
+  "last_seen": "2026-06-20",
+  "streak_days": 1,
+  "analysis_updated_at": "2026-06-20T22:44:05+0800",
+  "appearances": [
+    {
+      "date": "2026-06-20",
+      "reason": "new",
+      "stars_total": 50715,
+      "stars_gained": 140,
+      "release": "twenty/v2.14.0"
+    }
+  ]
+}
