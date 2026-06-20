@@ -73,13 +73,29 @@ def _strip_gnews_suffix(title: str) -> str:
     return re.sub(r"\s+-\s+[^-]+$", "", title).strip() or title
 
 
+def _get_with_retry(url: str, *, retries: int = 2):
+    """GET，遇 429（限流，如 Reddit）按 Retry-After / 退避重试。"""
+    last = None
+    for attempt in range(retries + 1):
+        r = requests.get(url, headers=_UA, timeout=15)
+        if r.status_code != 429:
+            r.raise_for_status()
+            return r
+        last = r
+        if attempt < retries:
+            wait = float(r.headers.get("Retry-After") or (3 * (attempt + 1)))
+            log.info("源被限流(429)，%.0fs 后重试…", wait)
+            time.sleep(min(wait, 10))
+    last.raise_for_status()  # 重试用尽仍 429 → 抛出由调用方记 warning
+    return last
+
+
 def _fetch_rss(name: str, url: str, source_type: str, cutoff: float,
                ai_filter: bool = False) -> list[dict]:
     """抓取并解析一个 RSS/Atom 源。ai_filter=True 时（社区论坛源）按关键词过滤标题。"""
     out: list[dict] = []
     try:
-        r = requests.get(url, headers=_UA, timeout=15)
-        r.raise_for_status()
+        r = _get_with_retry(url)
         feed = feedparser.parse(r.content)
     except Exception as e:
         log.warning("资讯源 %s 抓取失败：%s", name, e)
@@ -204,7 +220,7 @@ def collect_news() -> list[dict]:
         if not url:
             continue
         if i > 0:
-            time.sleep(2)
+            time.sleep(4)
         raw += _fetch_rss(s.get("name", url), url, "community", cutoff, ai_filter=True)
 
     if cfg.get("hacker_news", True):

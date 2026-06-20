@@ -140,7 +140,11 @@ def _gen_report(context: str) -> dict:
         '未说明部署依赖；没有就给空数组"]\n'
         "}\n只输出 JSON。诚实标注盲区，不要编造 README 里没有的事实。"
     )
-    return llm_client.chat_json([{"role": "user", "content": prompt}], system=_ANALYSIS_SYS)
+    # 深度报告 JSON 偏长，放宽输出上限避免被全局 max_tokens 截断成坏 JSON；
+    # retries=1 让偶发坏 JSON 再修复一次。
+    max_out = get_config().get("analyze", {}).get("max_output_tokens")
+    return llm_client.chat_json([{"role": "user", "content": prompt}],
+                                system=_ANALYSIS_SYS, max_tokens=max_out, retries=1)
 
 
 def learn(item: dict, index: dict) -> dict:

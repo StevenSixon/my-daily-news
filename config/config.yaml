@@ -22,6 +22,8 @@ collect:
 analyze:
   depth: medium                          # README + docs + release
   max_readme_chars: 12000
+  max_output_tokens: 8000                # 深度报告 JSON 较长（analysis_md+quickstart_md），
+                                         # 单独放宽输出上限，避免被全局 llm.max_tokens 截断成坏 JSON
 
 # 复访迭代：老项目何时重新调 LLM 重学
 analyze_revisit:

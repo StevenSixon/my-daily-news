@@ -112,6 +112,41 @@ def test_per_source_max_caps_each_source(monkeypatch):
     assert sum(1 for x in out if x["source"] == "Anthropic") == 2
 
 
+def test_get_with_retry_recovers_from_429(monkeypatch):
+    import src.news_collect as nc
+
+    class _Resp:
+        def __init__(self, code):
+            self.status_code = code
+            self.headers = {"Retry-After": "0"}
+            self.content = b"<rss></rss>"
+        def raise_for_status(self):
+            if self.status_code >= 400:
+                raise RuntimeError(f"HTTP {self.status_code}")
+
+    seq = [_Resp(429), _Resp(200)]
+    monkeypatch.setattr(nc.time, "sleep", lambda *_: None)
+    monkeypatch.setattr(nc.requests, "get", lambda *a, **k: seq.pop(0))
+    r = nc._get_with_retry("http://x", retries=2)
+    assert r.status_code == 200  # 首次 429 后重试拿到 200
+
+
+def test_get_with_retry_raises_after_exhausted(monkeypatch):
+    import src.news_collect as nc
+
+    class _Resp:
+        status_code = 429
+        headers = {"Retry-After": "0"}
+        def raise_for_status(self):
+            raise RuntimeError("HTTP 429")
+
+    monkeypatch.setattr(nc.time, "sleep", lambda *_: None)
+    monkeypatch.setattr(nc.requests, "get", lambda *a, **k: _Resp())
+    import pytest
+    with pytest.raises(RuntimeError):
+        nc._get_with_retry("http://x", retries=1)
+
+
 def test_strip_gnews_suffix():
     from src.news_collect import _strip_gnews_suffix
     assert _strip_gnews_suffix("Claude Code now supports artifacts - Claude") == \
