@@ -55,6 +55,14 @@ const NEWS_SOURCE_META: Record<string, { label: string; cls: string }> = {
   community: { label: "社区", cls: "border-border text-muted-foreground" },
 };
 
+const NEWS_TYPE_FILTERS = [
+  { key: "全部", label: "全部" },
+  { key: "official", label: "官方" },
+  { key: "paper", label: "论文" },
+  { key: "hf", label: "HF" },
+  { key: "community", label: "社区" },
+];
+
 function matchesNews(n: NewsItem, q: string): boolean {
   if (!q) return true;
   return (
@@ -91,6 +99,8 @@ export default function App() {
   const [lang, setLang] = useState<string>("全部");
   const [cat, setCat] = useState<string>("全部");
   const [sort, setSort] = useState<SortKey>("gained");
+  const [newsScope, setNewsScope] = useState<"current" | "all">("current");
+  const [newsType, setNewsType] = useState<string>("全部");
   const [active, setActive] = useState<Project | null>(null);
 
   const edition = editions[editionIdx];
@@ -158,9 +168,30 @@ export default function App() {
   );
 
   const news = edition.news ?? [];
+
+  // Cumulative news across all editions, newest first, deduped by URL.
+  const allNews = useMemo<NewsItem[]>(() => {
+    const seen = new Set<string>();
+    const out: NewsItem[] = [];
+    for (const e of editions) {
+      for (const n of e.news ?? []) {
+        if (n.url && !seen.has(n.url)) {
+          seen.add(n.url);
+          out.push(n);
+        }
+      }
+    }
+    return out.sort((a, b) => (b.published || "").localeCompare(a.published || ""));
+  }, []);
+
+  const newsSource = newsScope === "all" ? allNews : news;
   const filteredNews = useMemo(
-    () => news.filter((n) => matchesNews(n, q)),
-    [news, q]
+    () =>
+      newsSource.filter(
+        (n) =>
+          matchesNews(n, q) && (newsType === "全部" || n.sourceType === newsType)
+      ),
+    [newsSource, q, newsType]
   );
 
   return (
@@ -305,6 +336,36 @@ export default function App() {
                   <option value="newest">按最新发现</option>
                 </select>
               )}
+              {view === "news" && (
+                <>
+                  <div className="flex gap-1.5">
+                    {NEWS_TYPE_FILTERS.map((t) => (
+                      <button
+                        key={t.key}
+                        onClick={() => setNewsType(t.key)}
+                        className={cn(
+                          "border px-2.5 py-1 text-xs transition-colors",
+                          newsType === t.key
+                            ? "border-foreground bg-foreground text-background"
+                            : "border-border text-muted-foreground hover:text-foreground"
+                        )}
+                      >
+                        {t.label}
+                      </button>
+                    ))}
+                  </div>
+                  <Separator orientation="vertical" className="hidden h-6 md:block" />
+                  <select
+                    value={newsScope}
+                    onChange={(e) => setNewsScope(e.target.value as "current" | "all")}
+                    className="h-8 border border-border bg-card px-2 text-xs outline-none focus:border-primary"
+                    aria-label="资讯范围"
+                  >
+                    <option value="current">本期</option>
+                    <option value="all">近期累计</option>
+                  </select>
+                </>
+              )}
             </div>
           </section>
 
@@ -345,21 +406,23 @@ export default function App() {
             </main>
           ) : (
             <main>
-              {news.length === 0 ? (
+              {newsSource.length === 0 ? (
                 <div className="border-y border-border">
                   <EmptyState
-                    title="本期暂无资讯"
-                    hint="资讯轨抓取 AI 公司官方博客、arXiv、HF 与 Hacker News；这一天没有命中条目。"
+                    title={newsScope === "all" ? "暂无资讯" : "本期暂无资讯"}
+                    hint="资讯轨抓取 AI 公司官方博客、arXiv、HF、Reddit 与 Hacker News；这里暂无命中条目。"
                   />
                 </div>
               ) : filteredNews.length === 0 ? (
                 <div className="border-y border-border">
-                  <EmptyState title="没有匹配的资讯" hint="试试清除搜索条件。" />
+                  <EmptyState title="没有匹配的资讯" hint="试试清除搜索或来源筛选。" />
                 </div>
               ) : (
                 <>
                   <p className="pb-3 text-xs text-muted-foreground">
-                    {edition.date} · 一手动态来自官方博客 / arXiv / HF / Hacker News
+                    {newsScope === "all"
+                      ? `近期累计 ${allNews.length} 条 · 一手动态来自官方博客 / arXiv / HF / Reddit / Hacker News`
+                      : `${edition.date} · 一手动态来自官方博客 / arXiv / HF / Reddit / Hacker News`}
                   </p>
                   <div className="divide-y divide-border border-y border-border">
                     {filteredNews.map((n, i) => (
