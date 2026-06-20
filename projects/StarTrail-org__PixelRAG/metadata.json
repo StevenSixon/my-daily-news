@@ -1,0 +1,54 @@
+{
+  "full_name": "StarTrail-org/PixelRAG",
+  "url": "https://github.com/StarTrail-org/PixelRAG",
+  "description": "The end of web parsing. The beginning of scalable pixel-native search.",
+  "language": "Python",
+  "topics": [
+    "agent",
+    "ai",
+    "memory",
+    "multimodal",
+    "rag",
+    "search",
+    "searchengine",
+    "vision",
+    "vlm"
+  ],
+  "license": "Apache-2.0",
+  "category": "AI 应用",
+  "classify_reason": "像素原生多模态搜索产品",
+  "one_liner": "用网页截图替代文本，保留表格/图表的视觉RAG",
+  "why_worth_it": "解决文本RAG丢失布局与图表的问题，对需要从复杂页面提取结构化信息的极客直接可用，预建800万+页面索引开箱即搜",
+  "tags": [
+    "多模态RAG",
+    "视觉搜索",
+    "本地优先",
+    "网页截图"
+  ],
+  "confidence": "high",
+  "info_gaps": [
+    "README未提供检索精度benchmark（如Recall@K），论文可能包含但未截取",
+    "自建索引需多大内存/磁盘（Wikipedia索引约217GB，但自建无参考）",
+    "托管API的速率限制和稳定性无说明",
+    "PDF/图片渲染的具体能力边界未详述（README只提支持）",
+    "训练复现步骤部分标为TBD，实际可复现度未知"
+  ],
+  "quality_flags": [],
+  "stars_total": 1155,
+  "created_at": "2026-05-29",
+  "pushed_at": "2026-06-20",
+  "latest_release": "chrome-150.0.7844.0",
+  "first_seen": "2026-06-21",
+  "last_seen": "2026-06-21",
+  "streak_days": 1,
+  "analysis_updated_at": "2026-06-21T06:31:27+0800",
+  "appearances": [
+    {
+      "date": "2026-06-21",
+      "reason": "new",
+      "stars_total": 1155,
+      "stars_gained": 0,
+      "release": "chrome-150.0.7844.0"
+    }
+  ]
+}

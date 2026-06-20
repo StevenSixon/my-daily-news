@@ -16,7 +16,7 @@
   ],
   "license": "Apache-2.0",
   "category": "AI 应用",
-  "classify_reason": "利用AI代理自修复的可观测性工具",
+  "classify_reason": "使用AI代理自愈的可观测性工具",
   "one_liner": "AI 代理驱动的 OpenTelemetry 观测系统，自动分组事件并自愈",
   "why_worth_it": "减少告警噪声，用 AI 代理自动排查与恢复，自托管免费，适合快速迭代的小团队",
   "tags": [
@@ -34,19 +34,26 @@
     "与同类工具详细功能对比缺失"
   ],
   "quality_flags": [],
-  "stars_total": 902,
+  "stars_total": 909,
   "created_at": "2026-06-02",
   "pushed_at": "2026-06-20",
   "latest_release": null,
   "first_seen": "2026-06-20",
-  "last_seen": "2026-06-20",
-  "streak_days": 1,
+  "last_seen": "2026-06-21",
+  "streak_days": 2,
   "analysis_updated_at": "2026-06-20T22:45:45+0800",
   "appearances": [
     {
       "date": "2026-06-20",
       "reason": "new",
       "stars_total": 902,
+      "stars_gained": 0,
+      "release": null
+    },
+    {
+      "date": "2026-06-21",
+      "reason": "lightweight",
+      "stars_total": 909,
       "stars_gained": 0,
       "release": null
     }

@@ -1,6 +1,742 @@
 {
   "editions": [
     {
+      "date": "2026-06-21",
+      "count": 6,
+      "projects": [
+        {
+          "id": "StarTrail-org__PixelRAG",
+          "fullName": "StarTrail-org/PixelRAG",
+          "owner": "StarTrail-org",
+          "name": "PixelRAG",
+          "url": "https://github.com/StarTrail-org/PixelRAG",
+          "oneLiner": "用网页截图替代文本，保留表格/图表的视觉RAG",
+          "description": "The end of web parsing. The beginning of scalable pixel-native search.",
+          "language": "Python",
+          "category": "AI 应用",
+          "license": "Apache-2.0",
+          "starsTotal": 1155,
+          "starsGained": 0,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-05-29",
+          "pushedAt": "2026-06-20",
+          "latestRelease": "chrome-150.0.7844.0",
+          "firstSeen": "2026-06-21",
+          "topics": [
+            "agent",
+            "ai",
+            "memory",
+            "multimodal",
+            "rag",
+            "search",
+            "searchengine",
+            "vision",
+            "vlm"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-21",
+              "reason": "new",
+              "starsTotal": 1155,
+              "starsGained": 0,
+              "release": "chrome-150.0.7844.0"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "PixelRAG 不解析HTML，而是直接用无头浏览器把网页、PDF、图片渲染为截图瓦片，再用视觉嵌入模型（Qwen3-VL-Embedding 微调）检索图像，最终由多模态大模型从图像中读答案。项目提供开箱即用的 Wikipedia 8.28M 页面索引和 API，也支持自建索引。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "文本RAG丢掉表格、图表、布局等视觉线索，导致阅读理解失败。PixelRAG 保留完整视觉信号，让模型“像人一样看图”，在需要对比表格、看走势、读混排内容的场景优势明显。学术背景强（Berkeley SkyLab/BAIR/伯克利NLP），发布即带论文和基准索引，直接可复现。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "渲染：Playwright/CDP 截图瓦片（pixelshot 命令）",
+                "嵌入：Qwen3-VL-Embedding-2B，对网页截图数据做 LoRA 微调",
+                "索引：FAISS 向量检索",
+                "服务：FastAPI",
+                "训练：独立 uv 项目，Torch 2.9.1+cu129",
+                "插件：Claude Code 集成（pixelbrowse 技能）"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "截图渲染：pixelshot 将任意URL或本地文档转为图像瓦片",
+                "视觉检索：用微调视觉嵌入直接搜图块",
+                "预建索引：828万Wikipedia页面索引已托管，无密钥API可用",
+                "自建索引：pixelrag index 一键从文档目录构建FAISS索引",
+                "多模态查询：支持文本和图像两种查询",
+                "Claude 插件：claude plugin install 后通过 /screenshot 让Claude看图"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "需要从复杂网页（表格、图表、多栏布局）提取答案的搜索/问答",
+                "文档视觉搜索（扫描件、报表、仪表盘截图）",
+                "给AI Agent提供“可视浏览”能力，避免纯文本丢失信息"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "body": "PixelRAG 从截图→嵌入→检索→LLM读取完整串联，且提供了生产可用的渲染、嵌入和索引工具链。",
+              "bullets": [
+                "传统RAG框架（如LangChain文本块+嵌入）：丢失视觉结构",
+                "多模态RAG依赖OCR+文本：处理非结构化布局易出错",
+                "纯截图方案（如ScreenAI）：缺少端到端检索与大规模索引"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "---",
+              "bullets": [
+                "最新Chrome 150 CDP后端（2026-06-01），支持 rawFilePath 优化截图吞吐",
+                "文档中有吞吐优化指南，训练数据与模型已发布（LoRA权重、训练集）",
+                "数据整理与复现指南仍标为TBD，社区交流通道（Slack）活跃"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：README未提供检索精度benchmark（如Recall@K），论文可能包含但未截取；自建索引需多大内存/磁盘（Wikipedia索引约217GB，但自建无参考）；托管API的速率限制和稳定性无说明；PDF/图片渲染的具体能力边界未详述（README只提支持）；训练复现步骤部分标为TBD，实际可复现度未知"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "gykim80__perfectpixel-studio",
+          "fullName": "gykim80/perfectpixel-studio",
+          "owner": "gykim80",
+          "name": "perfectpixel-studio",
+          "url": "https://github.com/gykim80/perfectpixel-studio",
+          "oneLiner": "从文本生成8方向100+动作的精灵动画，用信号处理后管道确保帧对齐与透明背景。",
+          "description": "AI-powered animation sprite studio — generate character sprite sheets with 8 directions and 100+ actions from a single text prompt (Wails + Go + React)",
+          "language": "Go",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 300,
+          "starsGained": 0,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-06-14",
+          "pushedAt": "2026-06-16",
+          "latestRelease": "",
+          "firstSeen": "2026-06-21",
+          "topics": [
+            "ai",
+            "game-development",
+            "golang",
+            "pixel-art",
+            "sprite",
+            "spritesheet",
+            "wails"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-21",
+              "reason": "new",
+              "starsTotal": 300,
+              "starsGained": 0,
+              "release": ""
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "PerfectPixel 是一款基于 Wails + Go + React 的桌面应用，将一行文本描述转化为一个基础角色，并自动生成 100+ 动作动画（行走、奔跑、攻击、魔法等）及完整的 8 方向精灵集，导出兼容游戏引擎的格式。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "目前 AI 图像生成工具很少能解决游戏精灵制作中的硬约束：帧数必须精确、角色外观帧间一致、背景全透明且锚点不抖动。PerfectPixel 通过确定性后处理管道（YCbCr 抠图、投影剖面 + DP 最优帧切割、质心对齐、共享调色板量化）大幅提升 AI 输出的可用性，为独立游戏开发者和快速原型提供了低成本、高质量方案。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "后端：Go 1.25+，负责 pipeline（prompt 构建、图像处理、质量评分与重试控制）",
+                "前端：React 18，负责交互与画廊展示",
+                "外壳：Wails v2，打包为本地桌面应用",
+                "AI 提供方：Gemini、OpenRouter、fal.ai、BytePlus（可配置）",
+                "图像处理：YCbCr 色度抠图、Hermite smoothstep 柔边、连通域填充、DP 优化切分、alpha 加权质心对齐、中位切分调色板量化"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "文本到角色：一次描述生成基础角色，自动去背景",
+                "100+ 动作预设：覆盖行走、待机、攻击、魔法、表情等",
+                "8 方向生成：AI 生成 5 方向，3 个方向由镜像派生，节省 37.5% 成本",
+                "自纠正质量循环：生成 → 抠图 → 分割 → 检查 → 纠正型再生，最多 3 轮，基于最佳候选评分，失败时注入精确修复提示",
+                "像素化处理：共享调色板量化 + 像素网格吸附，将 AI 伪像素转为真正点阵",
+                "多引擎导出：精灵表、manifest.json、Aseprite 兼容 JSON、逐帧 GIF/APNG/PNG",
+                "会话与画廊：工作状态持久化，结果自动归档",
+                "多 AI 提供方：支持 Gemini/OpenRouter/fal.ai/BytePlus，配置灵活"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "独立游戏开发者快速生成角色精灵原型",
+                "游戏设计 jam 中快速产出动作丰富的角色",
+                "低预算或单人项目减少美术外包成本",
+                "需要 8 方向精灵的 2D 游戏（RPG、动作游戏）"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "body": "相比大多数 AI 精灵生成工具（如仅生成单张图片或简单序列），PerfectPixel 的核心优势在于确定性后处理：通过信号处理手段保证帧对齐、背景透明和身份一致，并提供引擎可直接导入的格式。与商业工具如 Aseprite + 手动绘制相比，大幅度降低时间成本；与纯 AI 生成 API 相比，解决了生成结果不可控的问题。"
+            },
+            {
+              "heading": "版本动态",
+              "body": "---",
+              "bullets": [
+                "仓库创建于 2026-06-14，最近推送 2026-06-16，处于极早期活跃开发阶段",
+                "当前 Star 300，社区关注度高",
+                "许可证 MIT，友好开源",
+                "支持多种语言 README（英文、韩文）"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：README 被截断，未完整展示导出格式、会话管理的详细说明；未提供 AI 生成速度或资源消耗的基准测试数据；未明确支持的桌面平台（macOS/Windows/Linux）完整列表；生成角色和动画的 token/成本估算未提及"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "2aronS__Duel-Agents",
+          "fullName": "2aronS/Duel-Agents",
+          "owner": "2aronS",
+          "name": "Duel-Agents",
+          "url": "https://github.com/2aronS/Duel-Agents",
+          "oneLiner": "IDE 多模型对决路由层，自动挑最便宜赢家，省成本不降质量。",
+          "description": "CLI, SDK, and IDE plugins for Duel Agents",
+          "language": "TypeScript",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 996,
+          "starsGained": 0,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-05-28",
+          "pushedAt": "2026-06-15",
+          "latestRelease": "v0.1.0",
+          "firstSeen": "2026-06-21",
+          "topics": [
+            "ai-agents",
+            "anthropic",
+            "claude-code",
+            "cli",
+            "cursor",
+            "duel-agents",
+            "llm",
+            "npm",
+            "openai-compatible",
+            "openclaw",
+            "sdk",
+            "typescript"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-21",
+              "reason": "new",
+              "starsTotal": 996,
+              "starsGained": 0,
+              "release": "v0.1.0"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "Duel Agents 是一个面向开发者的模块化工具包，核心是一个多模型路由代理层：它接收提示词，并行发送给多个大语言模型，并自动选择成本最低但仍然“获胜”的答案。项目以 CLI 安装器、TypeScript SDK 和 IDE 插件的形式提供，让开发者无需离开熟悉的工作环境即可使用该路由功能。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "项目在短时间内获得近 1000 星，可能源于 AI 编码工具爆炸式增长带来的成本优化刚需。它从 IDE 切入，直接解决开发者用 AI 助手时无法自动选择性价比最高模型的问题，门槛极低。附带推出的 $DUEL 代币也增加了加密社区的关注度。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "语言：TypeScript（全栈）",
+                "运行环境：Node.js 20/22",
+                "包管理：npm（monorepo 结构，但截至 README 撰写时包未公开发布）",
+                "核心依赖：所有请求通过 https://duelagents.com/v1 代理转发，不直接使用各模型原厂 API。",
+                "集成对象：Claude Code（插件）、Cursor（Skill）、Codex CLI、OpenClaw",
+                "Python 辅助：官方提供 langchain-duel 和 llama-index-llms-duel 包"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "多模型路由：同时调用多个模型，按“最便宜且质量可靠”准则返回结果，模型列表由后端控制。",
+                "IDE 原生集成：为 Claude Code、Cursor、Codex、OpenClaw 提供一条命令安装，自动写入环境变量和配置文件。",
+                "统一 SDK：@duel-agents/sdk 同时提供 OpenAI 和 Anthropic 兼容的 API 客户端，一个密钥通吃两种接口。",
+                "环境模板与诊断工具：内置 doctor 命令验证连接和 API 密钥有效性。"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "使用 Claude Code 或 Cursor 等 AI IDE 插件、希望降低 Token 费用同时保持输出质量的开发者。",
+                "无需自建复杂模型选择逻辑，只需一个密钥即享“多模型打擂台，选性价比最高”的团队。",
+                "对加密代币经济（$DUEL）有参与兴趣，愿意早期尝试新 AI 基础设施的用户。"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "bullets": [
+                "自建路由/代理：灵活但开发维护成本高，且难实现复杂的质量评判；Duel 开箱即用，专注 IDE 场景。",
+                "OpenRouter 等第三方多模型网关：OpenRouter 提供广而全的模型列表，但未深度嵌入 IDE，且路由策略不同。Duel 强调“最便宜赢家”且与 IDE 工作流深度绑定。",
+                "原生多模型键：一些平台支持同时调用多个模型，但缺乏智能优选，通常需用户手动切换。"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "---",
+              "bullets": [
+                "最新 Release v0.1.0 发布于 2026-05-28，项目处于极早期。",
+                "仓库活跃（2026-06-15 仍有推送），但文档声明 npm 包尚未发布，需手动提供 NPM_TOKEN 触发发布流程。",
+                "路线图和后续版本功能未知，目前主要搭建了核心 CLI 和 SDK 框架，实际路由效果待验证。"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：medium",
+                "信息盲区：npm 包未发布，安装命令的可用性存疑；无多模型路由的 benchmark 或成本对比数据；中心化服务依赖 duagents.com/v1，无法自托管，可用性和延迟未说明；未给出“最便宜赢家”的具体判定逻辑和模型列表；$DUEL 代币的用途和与 API 服务的关系不明"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "kadevin__ilab-gpt-conjure",
+          "fullName": "kadevin/ilab-gpt-conjure",
+          "owner": "kadevin",
+          "name": "ilab-gpt-conjure",
+          "url": "https://github.com/kadevin/ilab-gpt-conjure",
+          "oneLiner": "为GPT-image-2打造的免安装本地AI图像生成WebUI工作台",
+          "description": "面向 GPT-image-2 的 AI 图片生成 WebUI 工作台，支持 Codex Responses 与 OpenAI 兼容 API 接入，内置公用图库、多类型 Chip 快捷引用、提示词模板、多任务并发和本地队列管理。An AI image generation WebUI workbench for GPT-image-2 with Codex Responses and OpenAI-compatible API support, shared gallery references, multi-type quick chips, prompt templates, concurrent tasks, and local queue management.",
+          "language": "Python",
+          "category": "AI 应用",
+          "license": "AGPL-3.0",
+          "starsTotal": 539,
+          "starsGained": 0,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-06-08",
+          "pushedAt": "2026-06-20",
+          "latestRelease": "v0.5.1",
+          "firstSeen": "2026-06-21",
+          "topics": [
+            "ai-art",
+            "ai-image-generation",
+            "cli",
+            "codex",
+            "fastapi",
+            "generative-ai",
+            "gpt-image-2",
+            "image-editing",
+            "image-generation",
+            "img2img",
+            "macos",
+            "openai",
+            "openai-compatible",
+            "prompt-engineering",
+            "prompt-templates",
+            "python",
+            "reference-images",
+            "responses-api",
+            "webui",
+            "windows"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-21",
+              "reason": "new",
+              "starsTotal": 539,
+              "starsGained": 0,
+              "release": "v0.5.1"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "一个面向 GPT-image-2 的 AI 图像生成与编辑的本地 WebUI 工作台，同时提供 CLI 支持自动化。内置图库管理、提示词模板、多种 chip 快捷引用、多任务并发队列、分页历史库，并支持 Codex Image 通道、Codex Responses 兼容通道以及 OpenAI 兼容 API 三种后端接入。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "GitHub 近期才发布 v0.5.1 却已有 539 star，主要因为 GPT-image-2 的用户需要一个易用的本地 GUI，而现有方案要么是在线 Colab，要么是通用图像生成界面，缺少对 Codex 通道、批量并发、提示词模板、图库 chip 等深度整合。该项目采用免安装一键包分发，降低了使用门槛。"
+            },
+            {
+              "heading": "技术栈",
+              "body": "后端：Python 3.11+、FastAPI、Uvicorn，数据用 SQLite 存储任务历史和元数据。前端：TypeScript 静态资源，运行时资源版本化（runtime-346）。跨平台打包：Windows x64、macOS Apple Silicon 和 Intel 三种便携包，内嵌 CPython。"
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "多后端接入：默认 Codex Image 通道、Codex Responses 兼容通道、OpenAI 兼容 API 三种模式，供应商卡片式管理、显式编辑和二次确认删除。",
+                "参考图与图库：支持上传、拖拽、粘贴、公用图库复用；公用图库可分类、命名、引用备注，并可通过 @ 在提示词中快速插入。",
+                "三种快捷 chip：@ 图库 chip、# 颜色 chip、~ 提示词片段 chip，支持搜索、展开、编辑，方便组合复杂提示。",
+                "提示词模板：完整的保存、分类、插入/替换、历史缩略图关联，比简单片段更结构化。",
+                "任务与历史：多任务并发，本地队列状态，分页历史库，网格/列表视图，搜索、筛选、懒加载详情，支持失败重试。",
+                "系统设置整合：统一窗口管理 API 设置、Codex 通道、存储与通知，存储目录变更需重启确认。",
+                "免安装一键包与手动更新：启动脚本纯本地化，更新器校验 SHA256、保留 data/ 并备份替换文件，降低安全误报风险。"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "个人创作者需要稳定、解压即用的本地 AI 图像生成工具，且经常用参考图和颜色约束。",
+                "需要管理大量提示词片段和模板的生成工作流，如角色设定图、产品图批量生成。",
+                "希望避免在线服务的网络延迟和不稳定性，又不想折腾 Python 环境配置的用户。"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "body": "与 ComfyUI 或 Stable Diffusion WebUI 相比，本工具专门面向 GPT-2 图像模型，更聚焦于 API 调用式的生成与编辑，而非本地模型推理；与普通 OpenAI 聊天/图像客户端相比，它提供了完善的图库 chip、模板管理和多供应商并发队列，更工程化。不足之处在于强依赖 GPT-image-2 的 API，不支持加载本地 Stable Diffusion 模型。"
+            },
+            {
+              "heading": "版本动态",
+              "body": "最新 v0.5.1 聚焦系统设置整合、API 供应商管理、免安装包启动与更新安全性提升。供应商管理新增卡片式选择、只读限制、删除确认、排序；Codex 通道独立；存储与通知统一 Tab；一键包启动脚本去除联网检查，更新器透明化 SHA256 校验；文档同步更新。 ---"
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cobusgreyling__loop-engineering",
+          "fullName": "cobusgreyling/loop-engineering",
+          "owner": "cobusgreyling",
+          "name": "loop-engineering",
+          "url": "https://github.com/cobusgreyling/loop-engineering",
+          "oneLiner": "为AI代理构建自动化提示循环的实战模式、模板与CLI工具集。",
+          "description": "Practical patterns, starters & CLI tools for loop engineering with AI coding agents. Design systems that prompt and orchestrate agents (inspired by Addy Osmani and Boris Cherny). Includes loop-audit, loop-init, loop-cost.",
+          "language": "JavaScript",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 496,
+          "starsGained": 0,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-06-09",
+          "pushedAt": "2026-06-19",
+          "latestRelease": "",
+          "firstSeen": "2026-06-21",
+          "topics": [
+            "agentic-ai",
+            "ai-agents",
+            "ai-coding",
+            "anthropic",
+            "automation",
+            "claude",
+            "claude-code",
+            "codex",
+            "coding-agents",
+            "devops-automation",
+            "devtools",
+            "github-actions",
+            "grok",
+            "llm",
+            "loop-engineering",
+            "mcp",
+            "prompt-engineering"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-21",
+              "reason": "new",
+              "starsTotal": 496,
+              "starsGained": 0,
+              "release": ""
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "Loop Engineering（循环工程）是一套实用框架，帮助开发者不再手动提示AI编码代理，而是设计一个持续运行的系统（循环）来自动触发、验证和交付代码变更。它源于Addy Osmani和Boris Cherny的理念，提供了可复用的模式、启动模板和三个CLI工具（loop-audit、loop-init、loop-cost）。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "随着AI编码代理（Grok、Claude Code、Cursor等）的普及，开发者面临重复的手工提示和上下文管理负担。循环工程将工作重心从“单次提示”转移到“设计自动循环”，通过调度、子代理隔离、安全检查等原语，实现持续、安全的代码演进。它吸引了头部科技领袖的背书，并提供可直接克隆和运行的示例。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "语言：JavaScript（CLI工具基于Node.js，通过npm发布）",
+                "生态：支持Grok、Claude Code、OpenAI Codex、GitHub Actions",
+                "关键依赖：npm包 @cobusgreyling/loop-audit、@cobusgreyling/loop-init、@cobusgreyling/loop-cost",
+                "文档：基于Markdown和GitHub Pages，包含交互式模式选择器"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "模式库：7种生产级模式（日常分诊、PR保姆、CI清理、依赖更新等），含机器可读索引",
+                "启动模板：每种模式提供可直接克隆的最小化实现",
+                "CLI工具：",
+                "loop-audit：评估项目准备级别（L1-L3），提供改进建议",
+                "loop-init：按模式和工具脚手架生成初始文件",
+                "loop-cost：估算令牌消耗",
+                "五大构建块+记忆：自动化调度、隔离工作树、技能持久化、MCP插件连接器、子代理分离",
+                "安全与运营：含失败模式目录、反模式、多循环协调、安全检查清单"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "日常状态报告与分诊（如每日PR摘要）",
+                "持续的代码审查与简单的修复（PR保姆）",
+                "CI失败自动分析（CI清扫器）",
+                "依赖更新自动化（依赖清扫器）",
+                "变更日志自动生成（变更日志起草）",
+                "合并后的清理任务（合并后清理）",
+                "问题分诊与建议（问题分诊）"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "bullets": [
+                "对比裸用Claude Code/Grok：循环工程提供了封装好的闭环控制，而非离散提示",
+                "对比传统CI/CD：强调AI代理的自主迭代与安全闸门，结合了子代理验证和人工升级路径",
+                "对比其他代理框架：它更偏工具化和模式化，提供现成的模式选择器和审计CLI，而不是抽象框架"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "---",
+              "bullets": [
+                "最近更新：2026-06-19（活跃开发中）",
+                "核心CLI工具持续升级（loop-audit v1.4已加入活动检测）",
+                "社区贡献：模式扩充、失败故事收集、多工具映射完善",
+                "仓库自己使用自身循环进行模式验证和审计（dogfooding）"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：未提供CLI工具的详细命令行参数文档；各模式的令牌消耗仅为定性描述（低/中/高），无精确数字；多代理并发时的冲突处理细节未在README中展开；MCP连接器的具体配置示例需跳转至外部文档"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "vercel__eve",
+          "fullName": "vercel/eve",
+          "owner": "vercel",
+          "name": "eve",
+          "url": "https://github.com/vercel/eve",
+          "oneLiner": "基于文件系统约定的 TypeScript Agent 框架，代码即配置。",
+          "description": "The Framework for Building Agents",
+          "language": "TypeScript",
+          "category": "AI 应用",
+          "license": "Apache-2.0",
+          "starsTotal": 1853,
+          "starsGained": 0,
+          "streakDays": 5,
+          "isNew": false,
+          "createdAt": "2026-06-16",
+          "pushedAt": "2026-06-20",
+          "latestRelease": "eve@0.11.10",
+          "firstSeen": "2026-06-19",
+          "topics": [
+            "agent",
+            "framework",
+            "harness",
+            "javascript",
+            "markdown",
+            "sandbox",
+            "typescript",
+            "vercel",
+            "workflows"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-19",
+              "reason": "new",
+              "starsTotal": 1561,
+              "starsGained": 0,
+              "release": "eve@0.11.7"
+            },
+            {
+              "date": "2026-06-20",
+              "reason": "lightweight",
+              "starsTotal": 1572,
+              "starsGained": 0,
+              "release": "eve@0.11.7"
+            },
+            {
+              "date": "2026-06-20",
+              "reason": "lightweight",
+              "starsTotal": 1734,
+              "starsGained": 0,
+              "release": "eve@0.11.7"
+            },
+            {
+              "date": "2026-06-20",
+              "reason": "release_update",
+              "starsTotal": 1782,
+              "starsGained": 0,
+              "release": "eve@0.11.8"
+            },
+            {
+              "date": "2026-06-21",
+              "reason": "release_update",
+              "starsTotal": 1853,
+              "starsGained": 0,
+              "release": "eve@0.11.10"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "eve 是 Vercel 发布的文件系统优先 AI Agent 框架。项目结构为中心：指令、工具、技能、消息频道、定时任务都对应到 agent/ 目录下的具体文件，构造即文档。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "发布初期 Star 增长快，Vercel 官方背书。用 Markdown 写系统提示、TypeScript 定义工具，贴合前端/全栈开发者习惯。本地开发 TUI 完善，降低原型验证门槛。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "语言：TypeScript，运行在 Node.js",
+                "模式系统：通过 Zod 定义工具输入 schema，类型安全",
+                "模型接口：通过 Vercel AI SDK 对接多模型（示例使用 anthropic/claude-sonnet-4.6）",
+                "架构：基于文件系统的约定，无额外抽象层"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "文件系统约定：instructions.md 作为系统提示，tools/ 下每个 .ts 文件导出一个工具，skills/ 按需加载，channels/ 定义消息接入（HTTP、Slack），schedules/ 定义 cron 任务",
+                "本地开发体验：eve dev 启动交互式 TUI，支持多行输入、Ctrl+C 取消、提示动画",
+                "动态技能加载：技能可返回映射，按命名约定注册，支持 load_skill 及可用技能列表回显",
+                "人机交互：支持 ask_question 等自由形式的中途人工介入",
+                "子代理与频道：通过目录结构支持子代理定义，频道层可对接主流通讯工具"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "需要完全控制代码、方便团队协作的内部 AI 助手",
+                "嵌入现有 TypeScript 项目的聊天机器人、自动化工作流",
+                "追求可审计、可版本管理的 Agent 部署"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "body": "与 LangChain 相比，eve 更轻量且强约定，适合不想花时间设计链式逻辑的团队。对比 CrewAI（多 Agent Python 框架），eve 目前更聚焦单 Agent 和 TypeScript 生态，Vercel 集成优势明显。但生态和社区资源尚不如前两者。"
+            },
+            {
+              "heading": "版本动态",
+              "body": "eve@0.11.10 主要优化了 CLI 输出（进度动画改为单行），修复了动态技能在单条目/多条目时的命名一致性问题，并为 TUI 增加了多行输入和取消操作改进。 ---"
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：模型 API key 管理方式未在 README 中明确说明（推测依赖环境变量）；生产部署架构未详细描述（是否依赖 Vercel 平台或可自托管）；无性能基准数据或资源消耗参考；动态 skill 的内部加载机制未公开；subagents 和 channels 的具体实现细节需要参考完整文档"
+              ]
+            }
+          ]
+        }
+      ],
+      "news": [
+        {
+          "title": "Steering Claude Code: skills, hooks, subagents and more",
+          "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPZ1Y1eUJSSEZQQU1XNzMtTEZZbUlIQURsd3hNSlV1YzEyZ29GYUtHSnBTSjVLRXNQeFQzUGNpTjZ4QW9ROWZyTlZETVJwT3czdS16U3JXalpSWWctTWRRbnp0aVZMVG9Vb3lXaGlxVzlPQ2laNUdFSFBjajE4MExFUkVQeDBVelNtWXc?oc=5",
+          "source": "Claude",
+          "sourceType": "official",
+          "published": "2026-06-18",
+          "summary": "Anthropic 发布 Claude Code 引导功能，涵盖技能、钩子、子代理等机制。",
+          "category": "产品"
+        },
+        {
+          "title": "Centrally manage authorization for MCP connectors",
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1EaFEzR1NydHJtaHA0U1BiMC1tcHV0RDQwUTFicUxYQXlBX0NkYzhKY3RZY2NOdklOdjNQaUQ1YmNOMEMzYWh3MU4zeW50ZE0yOTVLMzNLZ0NZZEk?oc=5",
+          "source": "Claude",
+          "sourceType": "official",
+          "published": "2026-06-18",
+          "summary": "Claude 推出 MCP 连接器集中授权管理功能。",
+          "category": "产品"
+        },
+        {
+          "title": "Analyzing the Narration Gap in LLM-Solver Loops",
+          "url": "https://arxiv.org/abs/2606.19588",
+          "source": "arXiv cs.AI",
+          "sourceType": "paper",
+          "published": "2026-06-20",
+          "summary": "论文分析 LLM 与求解器循环中的叙述缺口问题。",
+          "category": "研究"
+        },
+        {
+          "title": "Configurable Clinical Information Extraction with Agentic RAG: What Works, What Breaks, and Why",
+          "url": "https://arxiv.org/abs/2606.19602",
+          "source": "arXiv cs.AI",
+          "sourceType": "paper",
+          "published": "2026-06-20",
+          "summary": "论文研究基于代理 RAG 的可配置临床信息抽取，分析有效与失败情况。",
+          "category": "研究"
+        },
+        {
+          "title": "Ubisoft co-founder Claude Guillemot has died in a plane crash",
+          "url": "https://www.reuters.com/world/ubisofts-co-founder-claude-guillemot-dies-plane-crash-2026-06-20/",
+          "source": "Hacker News",
+          "sourceType": "community",
+          "published": "2026-06-20",
+          "summary": "育碧联合创始人 Claude Guillemot 在坠机事故中去世。",
+          "category": "其他"
+        },
+        {
+          "title": "Temporary Cloudflare accounts for AI agents",
+          "url": "https://blog.cloudflare.com/temporary-accounts/",
+          "source": "Hacker News",
+          "sourceType": "community",
+          "published": "2026-06-20",
+          "summary": "Cloudflare 为 AI 代理推出临时账户功能。",
+          "category": "产品"
+        },
+        {
+          "title": "Gemma 4 26b a4b is genuinely the best model I have tried for language learning and scientific queries!",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1ub4ods/gemma_4_26b_a4b_is_genuinely_the_best_model_i/",
+          "source": "r/LocalLLaMA",
+          "sourceType": "community",
+          "published": "2026-06-20",
+          "summary": "用户认为 Gemma 4 26b a4b 在语言学习和科学查询方面表现最佳。",
+          "category": "观点"
+        },
+        {
+          "title": "Board where every tile is an agent",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1ub3e2x/board_where_every_tile_is_an_agent/",
+          "source": "r/LocalLLaMA",
+          "sourceType": "community",
+          "published": "2026-06-20",
+          "summary": "开源项目展示：每个格子都是一个 AI 代理的动态看板。",
+          "category": "工程"
+        },
+        {
+          "title": "Hi Reddit, I posted my Build Your Own LLM workshop to Youtube teaching ML, LLM and math intuition [P]",
+          "url": "https://www.reddit.com/r/MachineLearning/comments/1uazlnd/hi_reddit_i_posted_my_build_your_own_llm_workshop/",
+          "source": "r/MachineLearning",
+          "sourceType": "community",
+          "published": "2026-06-20",
+          "summary": "Build Your Own LLM 工作坊视频发布，面向无数学基础者讲解 ML 与 LLM 直觉。",
+          "category": "其他"
+        }
+      ]
+    },
+    {
       "date": "2026-06-20",
       "count": 5,
       "projects": [
@@ -43,6 +779,13 @@
               "reason": "new",
               "starsTotal": 23152,
               "starsGained": 1035,
+              "release": "v7.3.50"
+            },
+            {
+              "date": "2026-06-21",
+              "reason": "lightweight",
+              "starsTotal": 23318,
+              "starsGained": 470,
               "release": "v7.3.50"
             }
           ],
@@ -251,6 +994,13 @@
               "starsTotal": 30816,
               "starsGained": 140,
               "release": "v0.5.0"
+            },
+            {
+              "date": "2026-06-21",
+              "reason": "lightweight",
+              "starsTotal": 30982,
+              "starsGained": 140,
+              "release": "v0.5.0"
             }
           ],
           "analysis": [
@@ -365,6 +1115,13 @@
               "starsTotal": 7310,
               "starsGained": 70,
               "release": "v0.30.2"
+            },
+            {
+              "date": "2026-06-21",
+              "reason": "lightweight",
+              "starsTotal": 7385,
+              "starsGained": 108,
+              "release": "v0.30.2"
             }
           ],
           "analysis": [
@@ -466,6 +1223,13 @@
               "date": "2026-06-20",
               "reason": "new",
               "starsTotal": 902,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-06-21",
+              "reason": "lightweight",
+              "starsTotal": 909,
               "starsGained": 0,
               "release": ""
             }
@@ -781,7 +1545,7 @@
           "isNew": true,
           "createdAt": "2026-06-16",
           "pushedAt": "2026-06-20",
-          "latestRelease": "eve@0.11.8",
+          "latestRelease": "eve@0.11.10",
           "firstSeen": "2026-06-19",
           "topics": [
             "agent",
@@ -822,65 +1586,64 @@
               "starsTotal": 1782,
               "starsGained": 0,
               "release": "eve@0.11.8"
+            },
+            {
+              "date": "2026-06-21",
+              "reason": "release_update",
+              "starsTotal": 1853,
+              "starsGained": 0,
+              "release": "eve@0.11.10"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "eve 是 Vercel 发布的一份文件系统优先的 AI Agent 框架。它把 Agent 的核心能力（指令、工具、技能、通道、定时任务）映射到约定目录，开发者通过编辑 Markdown 和 TypeScript 文件来定义 Agent 的行为，项目天然可读、可版本化。运行时基于 Node.js，支持模型配置、多通道（Slack/Discord/HTTP）和沙箱执行。"
+              "body": "eve 是 Vercel 发布的文件系统优先 AI Agent 框架。项目结构为中心：指令、工具、技能、消息频道、定时任务都对应到 agent/ 目录下的具体文件，构造即文档。"
             },
             {
               "heading": "为什么火",
-              "body": "虽然刚刚发布，但 Vercel 的品牌吸引力、文件约定的简洁理念，以及内置的多通道支持和沙箱，让它迅速获得关注。相比过度抽象的框架，它更贴近“代码即配置”的极客口味，降低了 Agent 项目的入门和维护门槛。"
+              "body": "发布初期 Star 增长快，Vercel 官方背书。用 Markdown 写系统提示、TypeScript 定义工具，贴合前端/全栈开发者习惯。本地开发 TUI 完善，降低原型验证门槛。"
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "语言：TypeScript",
-                "运行时：Node.js",
-                "模型接入：通过 model 选项指定（如 anthropic/claude-sonnet-4.6），依赖 Vercel 的模型网关或直接调用",
-                "工具定义：使用 Zod 进行参数校验",
-                "沙箱：微沙箱（microsandbox）用于隔离执行",
-                "通道：内置 Slack、Discord、HTTP 等通道支持",
-                "文档内建：node_modules/eve/docs 包含完整文档"
+                "语言：TypeScript，运行在 Node.js",
+                "模式系统：通过 Zod 定义工具输入 schema，类型安全",
+                "模型接口：通过 Vercel AI SDK 对接多模型（示例使用 anthropic/claude-sonnet-4.6）",
+                "架构：基于文件系统的约定，无额外抽象层"
               ]
             },
             {
               "heading": "核心能力",
               "bullets": [
-                "指令优先：instructions.md 作为永久系统提示",
-                "工具函数：tools/ 下定义可调用函数，类型安全",
-                "技能：skills/ 中按需加载的 Markdown 过程",
-                "通道：channels/ 支持多平台消息接入",
-                "定时任务：schedules/ 中用 cron 表达式触发",
-                "人工介入：支持 human-in-the-loop 提示",
-                "子代理：subagents/ 实现代理协作",
-                "评估：内置 evals 目录用于测试与评估",
-                "沙箱执行：隔离运行工具和技能，避免副作用"
+                "文件系统约定：instructions.md 作为系统提示，tools/ 下每个 .ts 文件导出一个工具，skills/ 按需加载，channels/ 定义消息接入（HTTP、Slack），schedules/ 定义 cron 任务",
+                "本地开发体验：eve dev 启动交互式 TUI，支持多行输入、Ctrl+C 取消、提示动画",
+                "动态技能加载：技能可返回映射，按命名约定注册，支持 load_skill 及可用技能列表回显",
+                "人机交互：支持 ask_question 等自由形式的中途人工介入",
+                "子代理与频道：通过目录结构支持子代理定义，频道层可对接主流通讯工具"
               ]
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "需要长期运行的持久化 Agent，如团队助手、定时报告机器人",
-                "多渠道交互的智能助手（Slack + Discord + HTTP）",
-                "需要复杂工具链和子代理编排的自动化流程",
-                "偏好文件约定和 Git 工作流的团队"
+                "需要完全控制代码、方便团队协作的内部 AI 助手",
+                "嵌入现有 TypeScript 项目的聊天机器人、自动化工作流",
+                "追求可审计、可版本管理的 Agent 部署"
               ]
             },
             {
               "heading": "同类对比",
-              "body": "对比 LangChain / CrewAI 等框架，eve 的核心差异是“文件系统即接口”而非复杂的编程抽象。它更像 Next.js 之于 React 的定位——通过约定减少决策成本。与 Vercel AI SDK 可能互补：SDK 面向 API 调用，eve 面向完整 Agent 工程。因尚处 beta，生态和社区扩展性不如老牌框架。"
+              "body": "与 LangChain 相比，eve 更轻量且强约定，适合不想花时间设计链式逻辑的团队。对比 CrewAI（多 Agent Python 框架），eve 目前更聚焦单 Agent 和 TypeScript 生态，Vercel 集成优势明显。但生态和社区资源尚不如前两者。"
             },
             {
               "heading": "版本动态",
-              "body": "最新 0.11.7（2026-06-19）包含多项改进：沙箱创建进度上报、引擎安装序列化避免 race condition、Slack 打字指示器分段更新等。项目迭代活跃，Commit 记录密集，说明核心团队在快速打磨体验。 ---"
+              "body": "eve@0.11.10 主要优化了 CLI 输出（进度动画改为单行），修复了动态技能在单条目/多条目时的命名一致性问题，并为 TUI 增加了多行输入和取消操作改进。 ---"
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
                 "置信度：high",
-                "信息盲区：未提供性能 benchmark 数据；生产部署是否需要 Vercel 账户或可完全自托管未明确；微沙箱的安全边界与实现细节未深入说明；与 Vercel AI SDK 的具体整合路径未展开"
+                "信息盲区：模型 API key 管理方式未在 README 中明确说明（推测依赖环境变量）；生产部署架构未详细描述（是否依赖 Vercel 平台或可自托管）；无性能基准数据或资源消耗参考；动态 skill 的内部加载机制未公开；subagents 和 channels 的具体实现细节需要参考完整文档"
               ]
             }
           ]
@@ -948,6 +1711,13 @@
               "date": "2026-06-20",
               "reason": "lightweight",
               "starsTotal": 4148,
+              "starsGained": 0,
+              "release": "v0.2.0"
+            },
+            {
+              "date": "2026-06-21",
+              "reason": "lightweight",
+              "starsTotal": 4188,
               "starsGained": 0,
               "release": "v0.2.0"
             }
@@ -1025,7 +1795,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-02-07",
-          "pushedAt": "2026-06-19",
+          "pushedAt": "2026-06-20",
           "latestRelease": "",
           "firstSeen": "2026-06-19",
           "topics": [],
@@ -1055,6 +1825,13 @@
               "date": "2026-06-20",
               "reason": "lightweight",
               "starsTotal": 5988,
+              "starsGained": 850,
+              "release": ""
+            },
+            {
+              "date": "2026-06-21",
+              "reason": "lightweight",
+              "starsTotal": 6073,
               "starsGained": 850,
               "release": ""
             }

@@ -1,0 +1,57 @@
+{
+  "full_name": "2aronS/Duel-Agents",
+  "url": "https://github.com/2aronS/Duel-Agents",
+  "description": "CLI, SDK, and IDE plugins for Duel Agents",
+  "language": "TypeScript",
+  "topics": [
+    "ai-agents",
+    "anthropic",
+    "claude-code",
+    "cli",
+    "cursor",
+    "duel-agents",
+    "llm",
+    "npm",
+    "openai-compatible",
+    "openclaw",
+    "sdk",
+    "typescript"
+  ],
+  "license": "MIT",
+  "category": "AI 应用",
+  "classify_reason": "双代理对决CLI/SDK/插件",
+  "one_liner": "IDE 多模型对决路由层，自动挑最便宜赢家，省成本不降质量。",
+  "why_worth_it": "将多模型成本优化无缝嵌入 Claude Code/Cursor 等 IDE，一键安装，省去自建路由的麻烦，适合 AI 编码重度用户。",
+  "tags": [
+    "AI编码工具",
+    "多模型路由",
+    "IDE插件",
+    "TypeScript"
+  ],
+  "confidence": "medium",
+  "info_gaps": [
+    "npm 包未发布，安装命令的可用性存疑",
+    "无多模型路由的 benchmark 或成本对比数据",
+    "中心化服务依赖 duagents.com/v1，无法自托管，可用性和延迟未说明",
+    "未给出“最便宜赢家”的具体判定逻辑和模型列表",
+    "$DUEL 代币的用途和与 API 服务的关系不明"
+  ],
+  "quality_flags": [],
+  "stars_total": 996,
+  "created_at": "2026-05-28",
+  "pushed_at": "2026-06-15",
+  "latest_release": "v0.1.0",
+  "first_seen": "2026-06-21",
+  "last_seen": "2026-06-21",
+  "streak_days": 1,
+  "analysis_updated_at": "2026-06-21T06:32:18+0800",
+  "appearances": [
+    {
+      "date": "2026-06-21",
+      "reason": "new",
+      "stars_total": 996,
+      "stars_gained": 0,
+      "release": "v0.1.0"
+    }
+  ]
+}

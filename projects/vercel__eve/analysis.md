@@ -1,50 +1,35 @@
 ## 它是什么
-
-eve 是 Vercel 发布的一份文件系统优先的 AI Agent 框架。它把 Agent 的核心能力（指令、工具、技能、通道、定时任务）映射到约定目录，开发者通过编辑 Markdown 和 TypeScript 文件来定义 Agent 的行为，项目天然可读、可版本化。运行时基于 Node.js，支持模型配置、多通道（Slack/Discord/HTTP）和沙箱执行。
+eve 是 Vercel 发布的文件系统优先 AI Agent 框架。项目结构为中心：指令、工具、技能、消息频道、定时任务都对应到 `agent/` 目录下的具体文件，构造即文档。
 
 ## 为什么火
-
-虽然刚刚发布，但 Vercel 的品牌吸引力、文件约定的简洁理念，以及内置的多通道支持和沙箱，让它迅速获得关注。相比过度抽象的框架，它更贴近“代码即配置”的极客口味，降低了 Agent 项目的入门和维护门槛。
+发布初期 Star 增长快，Vercel 官方背书。用 Markdown 写系统提示、TypeScript 定义工具，贴合前端/全栈开发者习惯。本地开发 TUI 完善，降低原型验证门槛。
 
 ## 技术栈
-
-- 语言：TypeScript
-- 运行时：Node.js
-- 模型接入：通过 `model` 选项指定（如 anthropic/claude-sonnet-4.6），依赖 Vercel 的模型网关或直接调用
-- 工具定义：使用 Zod 进行参数校验
-- 沙箱：微沙箱（microsandbox）用于隔离执行
-- 通道：内置 Slack、Discord、HTTP 等通道支持
-- 文档内建：`node_modules/eve/docs` 包含完整文档
+- 语言：TypeScript，运行在 Node.js
+- 模式系统：通过 Zod 定义工具输入 schema，类型安全
+- 模型接口：通过 Vercel AI SDK 对接多模型（示例使用 `anthropic/claude-sonnet-4.6`）
+- 架构：基于文件系统的约定，无额外抽象层
 
 ## 核心能力
-
-- **指令优先**：`instructions.md` 作为永久系统提示
-- **工具函数**：`tools/` 下定义可调用函数，类型安全
-- **技能**：`skills/` 中按需加载的 Markdown 过程
-- **通道**：`channels/` 支持多平台消息接入
-- **定时任务**：`schedules/` 中用 cron 表达式触发
-- **人工介入**：支持 human-in-the-loop 提示
-- **子代理**：`subagents/` 实现代理协作
-- **评估**：内置 evals 目录用于测试与评估
-- **沙箱执行**：隔离运行工具和技能，避免副作用
+- **文件系统约定**：`instructions.md` 作为系统提示，`tools/` 下每个 .ts 文件导出一个工具，`skills/` 按需加载，`channels/` 定义消息接入（HTTP、Slack），`schedules/` 定义 cron 任务
+- **本地开发体验**：`eve dev` 启动交互式 TUI，支持多行输入、Ctrl+C 取消、提示动画
+- **动态技能加载**：技能可返回映射，按命名约定注册，支持 `load_skill` 及可用技能列表回显
+- **人机交互**：支持 `ask_question` 等自由形式的中途人工介入
+- **子代理与频道**：通过目录结构支持子代理定义，频道层可对接主流通讯工具
 
 ## 适用场景
-
-- 需要长期运行的持久化 Agent，如团队助手、定时报告机器人
-- 多渠道交互的智能助手（Slack + Discord + HTTP）
-- 需要复杂工具链和子代理编排的自动化流程
-- 偏好文件约定和 Git 工作流的团队
+- 需要完全控制代码、方便团队协作的内部 AI 助手
+- 嵌入现有 TypeScript 项目的聊天机器人、自动化工作流
+- 追求可审计、可版本管理的 Agent 部署
 
 ## 同类对比
-
-对比 LangChain / CrewAI 等框架，eve 的核心差异是“文件系统即接口”而非复杂的编程抽象。它更像 Next.js 之于 React 的定位——通过约定减少决策成本。与 Vercel AI SDK 可能互补：SDK 面向 API 调用，eve 面向完整 Agent 工程。因尚处 beta，生态和社区扩展性不如老牌框架。
+与 LangChain 相比，eve 更轻量且强约定，适合不想花时间设计链式逻辑的团队。对比 CrewAI（多 Agent Python 框架），eve 目前更聚焦单 Agent 和 TypeScript 生态，Vercel 集成优势明显。但生态和社区资源尚不如前两者。
 
 ## 版本动态
-
-最新 0.11.7（2026-06-19）包含多项改进：沙箱创建进度上报、引擎安装序列化避免 race condition、Slack 打字指示器分段更新等。项目迭代活跃，Commit 记录密集，说明核心团队在快速打磨体验。
+eve@0.11.10 主要优化了 CLI 输出（进度动画改为单行），修复了动态技能在单条目/多条目时的命名一致性问题，并为 TUI 增加了多行输入和取消操作改进。
 ---
 
 ## ℹ️ 置信度与信息盲区
 
 - 置信度：**high**
-- 信息盲区：未提供性能 benchmark 数据；生产部署是否需要 Vercel 账户或可完全自托管未明确；微沙箱的安全边界与实现细节未深入说明；与 Vercel AI SDK 的具体整合路径未展开
+- 信息盲区：模型 API key 管理方式未在 README 中明确说明（推测依赖环境变量）；生产部署架构未详细描述（是否依赖 Vercel 平台或可自托管）；无性能基准数据或资源消耗参考；动态 skill 的内部加载机制未公开；subagents 和 channels 的具体实现细节需要参考完整文档
