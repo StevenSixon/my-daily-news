@@ -72,9 +72,11 @@ news:
       - { name: OpenAI,           url: "https://openai.com/news/rss.xml" }
       - { name: Google DeepMind,  url: "https://deepmind.google/blog/rss.xml" }
       - { name: Google AI,        url: "https://blog.google/technology/ai/rss/" }
-      # 以下暂无公开 RSS（站点为 JS 渲染），待官方提供后再启用：
-      # - { name: Anthropic, url: "" }
-      # - { name: Meta AI,   url: "" }
+      # Anthropic / Claude / Meta 无官方 RSS（站点 JS 渲染），用 Google News RSS
+      # 限定 site: 作代理——仅返回该站一手页面、带发布日期，链接为 Google 跳转。
+      - { name: Anthropic, url: "https://news.google.com/rss/search?q=site:anthropic.com&hl=en-US&gl=US&ceid=US:en" }
+      - { name: Claude,    url: "https://news.google.com/rss/search?q=site:claude.com&hl=en-US&gl=US&ceid=US:en" }
+      - { name: Meta AI,   url: "https://news.google.com/rss/search?q=site:ai.meta.com&hl=en-US&gl=US&ceid=US:en" }
     paper:               # 论文前沿
       - { name: "arXiv cs.AI", url: "http://export.arxiv.org/rss/cs.AI" }
       - { name: "arXiv cs.CL", url: "http://export.arxiv.org/rss/cs.CL" }
