@@ -28,6 +28,7 @@
 ## ✨ 特性
 
 - 🔍 **双数据源**：GitHub Trending + Search API，合并去重，LLM 过滤出「AI 应用」类项目
+- 📰 **AI 资讯并行轨**：每天汇聚各大 AI 公司一手动态（OpenAI / Anthropic / Claude / Google DeepMind / Meta…）+ arXiv 论文 + HF Blog + Hacker News + Reddit，LLM 出中文一句话摘要、分类、跨源去重，并防单家刷屏。详见 [`docs/NEWS_FEATURE.md`](docs/NEWS_FEATURE.md)
 - 🧠 **LLM 深度分析**：对每个新项目读 README + 关键文档 + release，产出结构化分析报告
 - 🗂️ **项目库 / 日报分离**：`projects/`（按项目持续迭代，与日期无关）+ `daily/`（按天的精华）
 - 🔌 **多模型可插拔**：Anthropic / OpenAI / Gemini / DeepSeek / OpenAI 兼容 / Ollama，改一行配置即切换，支持失败降级
@@ -76,11 +77,13 @@ flowchart LR
 
 ```
 projects/<owner__repo>/   # 项目库：metadata.json / analysis.md / quickstart.md / history.md / README.snapshot.md
-daily/<date>.md|.json     # 日报（json 供推送用）
+daily/<date>.md|.json     # 日报（json 含 items + streaks + news，供推送/看板用）
 data/index.json           # 全局索引 + 去重 + 复访判定
-dashboard/                # React + Tailwind 看板，打包成单文件 bundle.html
-src/                      # Python 流水线
-config/config.yaml        # 配置（关注范围、top_n、llm、推送）
+data/news-seen.json       # 资讯轨按 URL 去重的状态
+trends/<date>-weekly.json # 周趋势（项目）；<date>-news-weekly.json（资讯周回顾）
+dashboard/                # React + Tailwind 看板（本期/累计/AI 资讯/周报 四视图），打包成单文件
+src/                      # Python 流水线（含 news_collect / news_summary / news_trend）
+config/config.yaml        # 配置（关注范围、top_n、llm、news、推送）
 deploy/                   # launchd plist + run.sh
 ```
 
@@ -101,10 +104,12 @@ python -m src.pipeline
 python -m src.push
 
 # 单独调试某一步
-python -m src.collect          # 只看采集结果
+python -m src.collect          # 只看采集结果（项目）
+python -m src.news_collect     # 只看资讯采集结果
 
-# 周趋势报告（聚合历史 metadata，本周最热/持续上榜/新晋；--push 推送）
-python -m src.trend --days 7 --push
+# 周报告（--push 推送飞书）
+python -m src.trend --days 7 --push        # 项目周趋势：本周最热/持续上榜/新晋
+python -m src.news_trend --days 7 --push   # 资讯周回顾：按分类聚合近 7 天资讯
 ```
 
 > 不配飞书也能用：流水线照常产出 `daily/` 日报和看板，推送只是可选的最后一步。
@@ -115,6 +120,7 @@ python -m src.trend --days 7 --push
 - `collect.top_n`：每天最多深度学习的项目数（默认 5）
 - `llm.provider` / `llm.model`：换模型只改这两行；密钥放 `.env`
 - `analyze_revisit`：老项目何时重学
+- `news`：AI 资讯轨——`sources`（官方/论文/HF/Reddit 源清单）、`max_items`、`per_source_max`（防单家刷屏）、`type_quota`、`llm_summarize`；详见 [`docs/NEWS_FEATURE.md`](docs/NEWS_FEATURE.md)。**全部公开 RSS / 公共 API，无需任何密钥**
 
 ### 必填 / 可选密钥（`.env`）
 
@@ -163,10 +169,11 @@ done
 
 - [x] M1 闭环 → M2 双源 + 项目库 → M3 深度报告 + 日报 → M4 自动化 + 复访迭代
 - [x] GitHub Actions 定时自托管模板（[`daily-pipeline.yml`](.github/workflows/daily-pipeline.yml)）
+- [x] AI 资讯并行轨（官方博客 / arXiv / HF / HN / Reddit → 日报 + 看板 + 飞书 + 周回顾）
 - [ ] 更多推送渠道（Telegram / Slack / Discord / 邮件）
 - [ ] 可扩展到非 AI 类目（架构已预留 config 切换）
 
-完整设计见 [`docs/DESIGN.md`](docs/DESIGN.md)。
+完整设计见 [`docs/DESIGN.md`](docs/DESIGN.md)；AI 资讯轨见 [`docs/NEWS_FEATURE.md`](docs/NEWS_FEATURE.md)。
 
 ## 🤝 贡献
 
