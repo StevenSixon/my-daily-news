@@ -20,6 +20,7 @@ const DASHBOARD_DIR = resolve(SCRIPT_DIR, "..");
 const REPO_ROOT = resolve(DASHBOARD_DIR, "..");
 const DAILY_DIR = resolve(REPO_ROOT, "daily");
 const PROJECTS_DIR = resolve(REPO_ROOT, "projects");
+const TRENDS_DIR = resolve(REPO_ROOT, "trends");
 const OUT = resolve(DASHBOARD_DIR, "src", "daily.json");
 
 const DATE_RE = /^(\d{4}-\d{2}-\d{2})\.json$/;
@@ -158,14 +159,92 @@ function buildEdition(date) {
   };
 }
 
+// ── Weekly reports (trends/) ──────────────────────────────────────────────
+// Surface the newest project weekly trend + news weekly digest on the board.
+const WEEKLY_RE = /^(\d{4}-\d{2}-\d{2})-weekly\.json$/;
+const NEWS_WEEKLY_RE = /^(\d{4}-\d{2}-\d{2})-news-weekly\.json$/;
+
+function latestTrend(re) {
+  if (!existsSync(TRENDS_DIR)) return null;
+  const hit = readdirSync(TRENDS_DIR)
+    .map((n) => n.match(re))
+    .filter(Boolean)
+    .map((m) => ({ date: m[1], file: m[0] }))
+    .sort((a, b) => b.date.localeCompare(a.date))[0];
+  if (!hit) return null;
+  return { date: hit.date, data: readJson(resolve(TRENDS_DIR, hit.file)) };
+}
+
+function mapTrendRow(r) {
+  return {
+    fullName: r.full_name ?? "",
+    url: r.url ?? "",
+    oneLiner: r.one_liner ?? "",
+    language: r.language ?? "",
+    starsTotal: r.stars_total ?? 0,
+    weeklyGain: r.weekly_gain ?? 0,
+    appearDays: r.appear_days ?? 0,
+    streakDays: r.streak_days ?? 0,
+    firstSeen: r.first_seen ?? "",
+    isNewcomer: Boolean(r.is_newcomer),
+  };
+}
+
+function mapNewsRow(n) {
+  return {
+    title: n.title ?? "",
+    url: n.url ?? "",
+    source: n.source ?? "",
+    sourceType: n.source_type ?? "",
+    published: n.published ?? "",
+    summary: n.summary_zh ?? "",
+    category: n.category ?? "",
+  };
+}
+
+function buildWeekly() {
+  const proj = latestTrend(WEEKLY_RE);
+  const news = latestTrend(NEWS_WEEKLY_RE);
+  if (!proj && !news) return null;
+  const out = {};
+  if (proj) {
+    out.project = {
+      date: proj.date,
+      windowDays: proj.data.window_days ?? 7,
+      total: proj.data.total ?? 0,
+      hottest: (proj.data.hottest ?? []).map(mapTrendRow),
+      rising: (proj.data.rising ?? []).map(mapTrendRow),
+      newcomers: (proj.data.newcomers ?? []).map(mapTrendRow),
+    };
+  }
+  if (news) {
+    const byCategory = {};
+    for (const [cat, rows] of Object.entries(news.data.by_category ?? {})) {
+      byCategory[cat] = rows.map(mapNewsRow);
+    }
+    out.news = {
+      date: news.date,
+      windowDays: news.data.window_days ?? 7,
+      total: news.data.total ?? 0,
+      byCategory,
+      sourceCounts: news.data.source_counts ?? {},
+    };
+  }
+  return out;
+}
+
 function main() {
   const dates = listDates(process.argv[2]);
   const editions = dates.map(buildEdition);
-  const out = { editions };
+  const weekly = buildWeekly();
+  const out = { editions, weekly };
   writeFileSync(OUT, JSON.stringify(out, null, 2) + "\n");
+  const w = weekly
+    ? ` ｜ weekly: project=${weekly.project?.date ?? "—"}, news=${weekly.news?.date ?? "—"}`
+    : " ｜ weekly: none";
   console.log(
     `✓ wrote ${OUT}\n  ${editions.length} edition(s): ` +
-      editions.map((e) => `${e.date}(${e.count})`).join(", ")
+      editions.map((e) => `${e.date}(${e.count})`).join(", ") + w
   );
 }
 

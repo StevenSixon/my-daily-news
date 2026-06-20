@@ -61,10 +61,48 @@ export interface Edition {
   news?: NewsItem[];
 }
 
-const data = rawDaily as { editions: Edition[] };
+export interface TrendRow {
+  fullName: string;
+  url: string;
+  oneLiner: string;
+  language: string;
+  starsTotal: number;
+  weeklyGain: number;
+  appearDays: number;
+  streakDays: number;
+  firstSeen: string;
+  isNewcomer: boolean;
+}
+
+export interface ProjectWeekly {
+  date: string;
+  windowDays: number;
+  total: number;
+  hottest: TrendRow[];
+  rising: TrendRow[];
+  newcomers: TrendRow[];
+}
+
+export interface NewsWeekly {
+  date: string;
+  windowDays: number;
+  total: number;
+  byCategory: Record<string, NewsItem[]>;
+  sourceCounts: Record<string, number>;
+}
+
+export interface Weekly {
+  project?: ProjectWeekly;
+  news?: NewsWeekly;
+}
+
+const data = rawDaily as { editions: Edition[]; weekly?: Weekly | null };
 
 /** All daily editions, newest first. */
 export const editions: Edition[] = data.editions;
 
 /** The most recent edition (convenience). */
 export const daily: Edition = editions[0];
+
+/** Latest weekly reports (project trend + news digest), or null if none yet. */
+export const weekly: Weekly | null = data.weekly ?? null;

@@ -22,7 +22,14 @@ import { Separator } from "@/components/ui/separator";
 import { Sheet, SheetContent, SheetClose } from "@/components/ui/sheet";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { cn } from "@/lib/utils";
-import { editions, type Project, type Appearance, type NewsItem } from "@/data";
+import {
+  editions,
+  weekly,
+  type Project,
+  type Appearance,
+  type NewsItem,
+  type TrendRow,
+} from "@/data";
 
 const LANG_COLOR: Record<string, string> = {
   Python: "#3572A5",
@@ -46,7 +53,7 @@ function mmdd(d: string): string {
 }
 
 type SortKey = "gained" | "total" | "newest";
-type ViewKey = "current" | "board" | "news";
+type ViewKey = "current" | "board" | "news" | "weekly";
 
 const NEWS_SOURCE_META: Record<string, { label: string; cls: string }> = {
   official: { label: "官方", cls: "border-accent/50 text-accent" },
@@ -275,9 +282,18 @@ export default function App() {
               icon={<Rss className="h-3.5 w-3.5" />}
               label={`AI 资讯${news.length ? ` · ${news.length}` : ""}`}
             />
+            {weekly && (
+              <ViewTab
+                active={view === "weekly"}
+                onClick={() => setView("weekly")}
+                icon={<TrendingUp className="h-3.5 w-3.5" />}
+                label="周报"
+              />
+            )}
           </div>
 
-          {/* ── Controls ───────────────────────────────────────── */}
+          {/* ── Controls (hidden in weekly view) ───────────────── */}
+          {view !== "weekly" && (
           <section className="flex flex-col gap-3 py-6 md:flex-row md:items-center md:justify-between">
             <div className="relative w-full md:max-w-xs">
               <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
@@ -368,6 +384,7 @@ export default function App() {
               )}
             </div>
           </section>
+          )}
 
           {/* ── Body: current edition list OR cross-edition leaderboard ── */}
           {view === "current" ? (
@@ -404,7 +421,7 @@ export default function App() {
                 </>
               )}
             </main>
-          ) : (
+          ) : view === "news" ? (
             <main>
               {newsSource.length === 0 ? (
                 <div className="border-y border-border">
@@ -432,6 +449,8 @@ export default function App() {
                 </>
               )}
             </main>
+          ) : (
+            <WeeklyView />
           )}
 
           <footer className="mt-10 flex items-center justify-between text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
@@ -651,6 +670,107 @@ function NewsRow({ item: n }: { item: NewsItem }) {
         <ArrowUpRight className="h-5 w-5" />
       </div>
     </a>
+  );
+}
+
+/** Weekly view — project trend (hottest/rising/newcomers) + news digest. */
+function WeeklyView() {
+  if (!weekly) {
+    return (
+      <main className="border-y border-border">
+        <EmptyState title="暂无周报" hint="周报告由每周定时任务生成，累积一周数据后呈现。" />
+      </main>
+    );
+  }
+  const p = weekly.project;
+  const n = weekly.news;
+  return (
+    <main className="space-y-10 pt-2">
+      {p && (
+        <section>
+          <h2 className="font-serif-sc mb-1 text-2xl font-bold">📈 项目周趋势</h2>
+          <p className="mb-4 text-xs text-muted-foreground">
+            截至 {p.date} · 近 {p.windowDays} 天上榜 {p.total} 个项目
+          </p>
+          <WeeklyTrendBlock title="🔥 本周最热" rows={p.hottest} kind="hottest" />
+          <WeeklyTrendBlock title="📌 持续上榜" rows={p.rising} kind="rising" />
+          <WeeklyTrendBlock title="🆕 本周新晋" rows={p.newcomers} kind="newcomer" />
+        </section>
+      )}
+      {n && (
+        <section>
+          <h2 className="font-serif-sc mb-1 text-2xl font-bold">📰 资讯周回顾</h2>
+          <p className="mb-4 text-xs text-muted-foreground">
+            截至 {n.date} · 近 {n.windowDays} 天收录 {n.total} 条资讯
+          </p>
+          {Object.entries(n.byCategory).map(([cat, items]) => (
+            <div key={cat} className="mb-5">
+              <h3 className="mb-1 text-sm font-semibold text-muted-foreground">
+                {cat}（{items.length}）
+              </h3>
+              <div className="divide-y divide-border border-y border-border">
+                {items.map((it, i) => (
+                  <NewsRow key={`${it.url}-${i}`} item={it} />
+                ))}
+              </div>
+            </div>
+          ))}
+        </section>
+      )}
+    </main>
+  );
+}
+
+function WeeklyTrendBlock({
+  title,
+  rows,
+  kind,
+}: {
+  title: string;
+  rows: TrendRow[];
+  kind: "hottest" | "rising" | "newcomer";
+}) {
+  return (
+    <div className="mb-5">
+      <h3 className="mb-1 text-sm font-semibold text-muted-foreground">{title}</h3>
+      {rows.length === 0 ? (
+        <p className="py-3 text-sm text-muted-foreground/70">本期无</p>
+      ) : (
+        <div className="divide-y divide-border border-y border-border">
+          {rows.map((r, i) => (
+            <a
+              key={r.fullName}
+              href={r.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-3 py-3 transition-colors hover:bg-card"
+            >
+              <span className="font-serif-sc w-6 text-center text-lg font-bold text-muted-foreground/40">
+                {i + 1}
+              </span>
+              <div className="min-w-0 flex-1">
+                <div className="truncate text-sm font-medium group-hover:text-primary">
+                  {r.fullName}
+                </div>
+                {r.oneLiner && (
+                  <div className="truncate text-xs text-muted-foreground/80">{r.oneLiner}</div>
+                )}
+              </div>
+              <div className="font-mono-num shrink-0 text-right text-xs">
+                <span className="font-semibold text-accent">+{fmt(r.weeklyGain)}⭐</span>
+                <span className="ml-2 text-muted-foreground">
+                  {kind === "rising"
+                    ? `${r.appearDays} 天`
+                    : kind === "newcomer"
+                    ? r.firstSeen
+                    : fmt(r.starsTotal)}
+                </span>
+              </div>
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
   );
 }
 

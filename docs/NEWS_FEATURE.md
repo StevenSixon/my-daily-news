@@ -85,7 +85,9 @@
 ### 3.5 输出面 ③：看板 `dashboard/`
 - `gen-data.mjs`：从 `daily/<date>.json` 的 `news` 映射为每期 `news` 数组。
 - `data.ts`：`NewsItem` 类型；`Edition.news?`（可选，兼容旧期）。
-- `App.tsx`：第三个 view tab「AI 资讯 · N」，按选定日期展示当期资讯；`NewsRow` 点击新标签打开原文；资讯视图隐藏项目专属筛选（语言/分类/排序）。
+- `App.tsx`：
+  - 「AI 资讯 · N」tab：按选定日期展示当期资讯；来源类型筛选（全部/官方/论文/HF/社区）+「本期 / 近期累计」范围切换（累计跨期按 URL 去重）；`NewsRow` 点击新标签打开原文。
+  - 「周报」tab（`WeeklyView`）：当 `daily.json` 含 `weekly` 字段时出现，展示项目周趋势（本周最热/持续上榜/本周新晋）+ 资讯周回顾（按分类）。`gen-data.mjs` 读取 `trends/` 下最新的 `*-weekly.json` 与 `*-news-weekly.json` 注入 `weekly`。
 
 ### 3.6 `src/news_trend.py` — 周资讯回顾（二次报告）
 - 镜像 `trend.py`：聚合统计窗口内各日 `daily/<date>.json` 的 `news`（跨日按 URL 去重）→ 按分类分组（`_CAT_ORDER` 排序，组内按日期倒序）+ 来源分布统计。
