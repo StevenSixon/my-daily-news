@@ -8,6 +8,7 @@ RSS（官方博客 / 论文 / HF）+ Hacker News API → 时间窗过滤 → 按
 from __future__ import annotations
 
 import re
+import time
 from calendar import timegm
 
 import feedparser
@@ -67,7 +68,9 @@ def _clean(text: str) -> str:
     return re.sub(r"\s+", " ", text).strip()
 
 
-def _fetch_rss(name: str, url: str, source_type: str, cutoff: float) -> list[dict]:
+def _fetch_rss(name: str, url: str, source_type: str, cutoff: float,
+               ai_filter: bool = False) -> list[dict]:
+    """抓取并解析一个 RSS/Atom 源。ai_filter=True 时（社区论坛源）按关键词过滤标题。"""
     out: list[dict] = []
     try:
         r = requests.get(url, headers=_UA, timeout=15)
@@ -83,6 +86,8 @@ def _fetch_rss(name: str, url: str, source_type: str, cutoff: float) -> list[dic
         link = (e.get("link") or "").strip()
         title = _clean(e.get("title", ""))
         if not link or not title:
+            continue
+        if ai_filter and not _AI_RE.search(title):
             continue
         ts = _entry_ts(e)
         if ts is None or ts < cutoff:
@@ -181,11 +186,20 @@ def collect_news() -> list[dict]:
             url = s.get("url")
             if not url:
                 continue
-            # hf 归一为 official 级展示权重之外的独立类型，便于打分区分
-            st = "paper" if source_type == "paper" else ("hf" if source_type == "hf" else "official")
-            raw += _fetch_rss(s.get("name", url), url, st, cutoff)
+            raw += _fetch_rss(s.get("name", url), url, source_type, cutoff)
 
-    if sources.get("community_hn", cfg.get("hacker_news", True)):
+    # Reddit：JSON API 已被反爬封禁，改用 RSS 端点；按 AI 关键词过滤标题。
+    # Reddit 对密集请求会 429，源间留短延时（首个不延时）。
+    reddit_srcs = sources.get("reddit", []) or []
+    for i, s in enumerate(reddit_srcs):
+        url = s.get("url")
+        if not url:
+            continue
+        if i > 0:
+            time.sleep(2)
+        raw += _fetch_rss(s.get("name", url), url, "community", cutoff, ai_filter=True)
+
+    if cfg.get("hacker_news", True):
         raw += _fetch_hn(cutoff)
 
     # 批内按 URL 去重（多源可能撞同一链接）

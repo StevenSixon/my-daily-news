@@ -17,7 +17,11 @@ case "$STAGE" in
     bash "$PROJECT_DIR/dashboard/refresh.sh" || true
     ;;
   push)     exec "$PYTHON" -m src.push      "$@" ;;
-  weekly)   exec "$PYTHON" -m src.trend     "$@" ;;
+  weekly)
+    # 周报告：项目周趋势 + AI 资讯周回顾（参数如 --push 透传给两者）
+    "$PYTHON" -m src.trend "$@"
+    "$PYTHON" -m src.news_trend "$@"
+    ;;
   healthcheck) exec /bin/bash "$PROJECT_DIR/deploy/healthcheck.sh" "$@" ;;
   *) echo "未知阶段：$STAGE（应为 pipeline / push / weekly / healthcheck）" >&2; exit 1 ;;
 esac

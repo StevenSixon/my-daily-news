@@ -51,14 +51,22 @@ trend:
   window_days: 7                         # 统计窗口
   top_n: 8                               # 各榜单展示条数
 
+# 周资讯回顾报告（python -m src.news_trend）
+news_trend:
+  window_days: 7                         # 统计窗口
+  top_n: 8                               # 每个分类展示条数
+
 # AI 资讯（与项目榜并行的独立轨：RSS 官方博客/论文/HF + Hacker News API）
 # 全部为公开 RSS / 公共 API，无需任何密钥。失效源会被安全跳过。
 news:
   enabled: true
   window_days: 3          # 只收近 N 天发布的资讯，避免首跑回灌历史
   max_items: 12           # 每天进日报的资讯条数（控 LLM 成本）
-  llm_summarize: true     # true=调 LLM 出中文一句话摘要+分类；false=仅标题聚合（零成本）
+  llm_summarize: true     # true=调 LLM 出中文一句话摘要+分类+跨源去重；false=仅标题聚合（零成本，无去重）
   hn_min_points: 80       # Hacker News 点赞门槛（过滤低热度）
+  type_quota:             # 各来源类型进日报的条数上限（防某类刷屏；未列出=不限量）
+    paper: 4              # arXiv 论文量大，限 4 条，给官方/社区新闻让位
+    community: 5          # Hacker News + Reddit 合计上限
   sources:
     official:             # 一手公司博客（权重最高）
       - { name: OpenAI,           url: "https://openai.com/news/rss.xml" }
@@ -73,6 +81,9 @@ news:
       - { name: "arXiv cs.LG", url: "http://export.arxiv.org/rss/cs.LG" }
     hf:                  # Hugging Face 官方博客
       - { name: "HF Blog", url: "https://huggingface.co/blog/feed.xml" }
+    reddit:              # Reddit 社区（JSON API 被反爬封禁，改用 RSS；按 AI 关键词过滤）
+      - { name: "r/LocalLLaMA",      url: "https://www.reddit.com/r/LocalLLaMA/top/.rss?t=day" }
+      - { name: "r/MachineLearning", url: "https://www.reddit.com/r/MachineLearning/top/.rss?t=day" }
   # Hacker News（社区热度，AI 关键词过滤）默认开启；置 false 关闭：
   hacker_news: true
 

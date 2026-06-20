@@ -86,3 +86,28 @@ def test_feishu_card_no_news_section_when_empty():
     from src import push
     payload = {"date": "2026-06-20", "count": 0, "items": [], "streaks": [], "news": []}
     assert _news_section(push._build_card(payload)) is None
+
+
+def test_apply_quota_caps_per_type(monkeypatch):
+    monkeypatch.setattr(news_summary, "_cfg",
+                        lambda: {"type_quota": {"paper": 2}})
+    items = (
+        [{"source_type": "paper", "url": f"p{i}"} for i in range(5)]
+        + [{"source_type": "official", "url": f"o{i}"} for i in range(3)]
+    )
+    out = news_summary._apply_quota(items)
+    assert sum(1 for x in out if x["source_type"] == "paper") == 2     # 论文被限到 2
+    assert sum(1 for x in out if x["source_type"] == "official") == 3  # 官方不限量
+
+
+def test_dedupe_by_event_keeps_first():
+    items = [
+        {"url": "a", "_event_key": "gpt5_release"},
+        {"url": "b", "_event_key": "gpt5_release"},  # 同一事件 → 丢弃
+        {"url": "c", "_event_key": ""},               # 空 key → 保留
+        {"url": "d", "_event_key": ""},
+        {"url": "e", "_event_key": "other"},
+    ]
+    out = news_summary._dedupe_by_event(items)
+    urls = [x["url"] for x in out]
+    assert urls == ["a", "c", "d", "e"]

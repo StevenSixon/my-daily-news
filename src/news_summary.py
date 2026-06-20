@@ -1,7 +1,8 @@
-"""资讯加工：打分排序 → 截断到 max_items → LLM 中文一句话摘要 + 分类。
+"""资讯加工：打分排序 → 跨源 LLM 聚类去重 → 来源配额 → 截断到 max_items
+→ LLM 中文一句话摘要 + 分类。
 
 复用 llm_client（与项目分析同一套多模型可插拔配置）。LLM 不可用或
-news.llm_summarize=false 时优雅降级为仅标题聚合（零 LLM 成本）。
+news.llm_summarize=false 时优雅降级为仅标题聚合（零 LLM 成本、无去重）。
 """
 from __future__ import annotations
 
@@ -35,7 +36,8 @@ def _score(it: dict) -> float:
 
 
 def _llm_enrich(items: list[dict]) -> list[dict]:
-    """批量生成中文一句话摘要 + 分类。失败则保留空字段（由渲染层兜底）。"""
+    """批量生成中文一句话摘要 + 分类 + 事件标识（跨源去重用）。
+    失败则保留空字段（由渲染/去重层兜底）。"""
     lines = [
         f'{i}. [{it["source"]}] {it["title"]}'
         + (f' — {it["summary_raw"][:160]}' if it.get("summary_raw") else "")
@@ -45,8 +47,12 @@ def _llm_enrich(items: list[dict]) -> list[dict]:
         "下面是一批 AI 领域的资讯标题（含来源，部分附原文摘要）。"
         "请为每条生成：\n"
         "1) summary_zh：一句话中文摘要（≤40 字，客观、点出关键信息，不要营销腔）；\n"
-        f"2) category：从 {_CATEGORIES} 中选最贴切的一个。\n"
-        '只输出 JSON：{"results":[{"index":0,"summary_zh":"...","category":"模型发布"}]}。\n\n'
+        f"2) category：从 {_CATEGORIES} 中选最贴切的一个；\n"
+        "3) event_key：该资讯所述事件的简短英文标识（小写、下划线连接，如 "
+        "openai_gpt55_release）。报道【同一事件】的多条必须给【相同】 event_key，"
+        "用于跨源去重；不同事件给不同 key。\n"
+        '只输出 JSON：{"results":[{"index":0,"summary_zh":"...","category":"模型发布",'
+        '"event_key":"..."}]}。\n\n'
         + "\n".join(lines)
     )
     data = llm_client.chat_json(
@@ -60,28 +66,70 @@ def _llm_enrich(items: list[dict]) -> list[dict]:
             cat = r.get("category", "")
             items[idx]["summary_zh"] = (r.get("summary_zh") or "").strip()
             items[idx]["category"] = cat if cat in _CATEGORIES else "其他"
+            items[idx]["_event_key"] = (r.get("event_key") or "").strip().lower()
     return items
 
 
+def _dedupe_by_event(items: list[dict]) -> list[dict]:
+    """按 LLM 给出的 event_key 跨源去重，保留先出现者（即得分更高的代表）。
+    无 event_key 的条目一律保留。"""
+    seen: set[str] = set()
+    out: list[dict] = []
+    for it in items:
+        key = it.get("_event_key")
+        if key:
+            if key in seen:
+                continue
+            seen.add(key)
+        out.append(it)
+    return out
+
+
+def _apply_quota(items: list[dict]) -> list[dict]:
+    """按得分序丢弃超出每类来源配额的条目（防某一类如 arXiv 论文刷屏），
+    保留原序。news.type_quota 未列出的来源类型不限量。不限制总数。"""
+    quota = _cfg().get("type_quota", {}) or {}
+    counts: dict[str, int] = {}
+    out: list[dict] = []
+    for it in items:
+        st = it.get("source_type", "")
+        cap = quota.get(st)
+        if cap is not None and counts.get(st, 0) >= cap:
+            continue
+        out.append(it)
+        counts[st] = counts.get(st, 0) + 1
+    return out
+
+
 def summarize(candidates: list[dict]) -> list[dict]:
-    """打分排序 → 截断 → （可选）LLM 摘要。返回最终进日报的资讯列表。"""
+    """打分排序 → 来源配额 → 跨源 LLM 聚类去重 → 截断 → LLM 摘要。
+
+    先按配额裁出多样化的候选（论文不刷屏），再送 LLM 加工/去重，
+    最后截断到 max_items。配额前置可避免 LLM 池被单一来源占满。"""
     cfg = _cfg()
     if not candidates:
         return []
 
     max_items = int(cfg.get("max_items", 12))
-    ranked = sorted(candidates, key=_score, reverse=True)[:max_items]
+    ranked = sorted(candidates, key=_score, reverse=True)
+    # 先施加来源配额，得到多样化的有序候选；再取 LLM 池（含去重余量，控成本）
+    pool = _apply_quota(ranked)[: max(max_items * 2, max_items)]
 
     use_llm = cfg.get("llm_summarize", True) and llm_client.available()
     if use_llm:
         try:
-            ranked = _llm_enrich(ranked)
+            pool = _llm_enrich(pool)
+            before = len(pool)
+            pool = _dedupe_by_event(pool)
+            if before != len(pool):
+                log.info("资讯：跨源去重合并 %d 条", before - len(pool))
         except Exception as e:
-            log.warning("资讯 LLM 摘要失败，降级为仅标题：%s", e)
+            log.warning("资讯 LLM 摘要/去重失败，降级为仅标题：%s", e)
 
-    # 兜底字段 + 清理内部排序键
+    selected = pool[:max_items]
+
     out = []
-    for it in ranked:
+    for it in selected:
         out.append({
             "title": it["title"],
             "url": it["url"],
@@ -91,5 +139,5 @@ def summarize(candidates: list[dict]) -> list[dict]:
             "summary_zh": it.get("summary_zh", ""),
             "category": it.get("category", ""),
         })
-    log.info("资讯：采纳 %d 条（LLM 摘要=%s）", len(out), use_llm)
+    log.info("资讯：采纳 %d 条（LLM 摘要/去重=%s）", len(out), use_llm)
     return out
