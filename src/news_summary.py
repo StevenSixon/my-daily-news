@@ -86,18 +86,27 @@ def _dedupe_by_event(items: list[dict]) -> list[dict]:
 
 
 def _apply_quota(items: list[dict]) -> list[dict]:
-    """按得分序丢弃超出每类来源配额的条目（防某一类如 arXiv 论文刷屏），
-    保留原序。news.type_quota 未列出的来源类型不限量。不限制总数。"""
-    quota = _cfg().get("type_quota", {}) or {}
-    counts: dict[str, int] = {}
+    """按得分序丢弃超额条目，保留原序、不限总数。两道闸：
+    - news.per_source_max：每个具体来源（如 Claude）最多 N 条，防单家刷屏；
+    - news.type_quota：每类来源（official/paper/community…）的上限，防某类刷屏。
+    未配置者不限量。"""
+    cfg = _cfg()
+    type_quota = cfg.get("type_quota", {}) or {}
+    per_source = cfg.get("per_source_max")  # None = 每来源不限
+    type_counts: dict[str, int] = {}
+    src_counts: dict[str, int] = {}
     out: list[dict] = []
     for it in items:
         st = it.get("source_type", "")
-        cap = quota.get(st)
-        if cap is not None and counts.get(st, 0) >= cap:
+        src = it.get("source", "")
+        tcap = type_quota.get(st)
+        if tcap is not None and type_counts.get(st, 0) >= tcap:
+            continue
+        if per_source is not None and src_counts.get(src, 0) >= per_source:
             continue
         out.append(it)
-        counts[st] = counts.get(st, 0) + 1
+        type_counts[st] = type_counts.get(st, 0) + 1
+        src_counts[src] = src_counts.get(src, 0) + 1
     return out
 
 

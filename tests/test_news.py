@@ -100,6 +100,28 @@ def test_apply_quota_caps_per_type(monkeypatch):
     assert sum(1 for x in out if x["source_type"] == "official") == 3  # 官方不限量
 
 
+def test_per_source_max_caps_each_source(monkeypatch):
+    monkeypatch.setattr(news_summary, "_cfg",
+                        lambda: {"per_source_max": 2})
+    items = (
+        [{"source_type": "official", "source": "Claude", "url": f"c{i}"} for i in range(5)]
+        + [{"source_type": "official", "source": "Anthropic", "url": f"a{i}"} for i in range(3)]
+    )
+    out = news_summary._apply_quota(items)
+    assert sum(1 for x in out if x["source"] == "Claude") == 2
+    assert sum(1 for x in out if x["source"] == "Anthropic") == 2
+
+
+def test_strip_gnews_suffix():
+    from src.news_collect import _strip_gnews_suffix
+    assert _strip_gnews_suffix("Claude Code now supports artifacts - Claude") == \
+        "Claude Code now supports artifacts"
+    assert _strip_gnews_suffix("Project Fetch: Phase two - Anthropic") == \
+        "Project Fetch: Phase two"
+    # 无尾巴时原样返回
+    assert _strip_gnews_suffix("Plain title") == "Plain title"
+
+
 def test_dedupe_by_event_keeps_first():
     items = [
         {"url": "a", "_event_key": "gpt5_release"},

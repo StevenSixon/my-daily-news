@@ -68,6 +68,11 @@ def _clean(text: str) -> str:
     return re.sub(r"\s+", " ", text).strip()
 
 
+def _strip_gnews_suffix(title: str) -> str:
+    """Google News 标题尾部会附「 - 来源名」（如 "… - Anthropic"），去掉它。"""
+    return re.sub(r"\s+-\s+[^-]+$", "", title).strip() or title
+
+
 def _fetch_rss(name: str, url: str, source_type: str, cutoff: float,
                ai_filter: bool = False) -> list[dict]:
     """抓取并解析一个 RSS/Atom 源。ai_filter=True 时（社区论坛源）按关键词过滤标题。"""
@@ -82,9 +87,12 @@ def _fetch_rss(name: str, url: str, source_type: str, cutoff: float,
     if feed.bozo and not feed.entries:
         log.warning("资讯源 %s 解析为空（可能非标准 feed）", name)
         return out
+    is_gnews = "news.google.com" in url
     for e in feed.entries:
         link = (e.get("link") or "").strip()
         title = _clean(e.get("title", ""))
+        if is_gnews:
+            title = _strip_gnews_suffix(title)
         if not link or not title:
             continue
         if ai_filter and not _AI_RE.search(title):
