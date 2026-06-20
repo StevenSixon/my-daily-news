@@ -10,7 +10,7 @@
   ],
   "license": "NOASSERTION",
   "category": "AI 应用",
-  "classify_reason": "LTX-2 音频视频生成模型的推理与训练工具，可直接用于生成内容，属于 AI 工具",
+  "classify_reason": "Audio-video generative model inference and LoRA trainer",
   "one_liner": "首个DiT音视频生成基础模型，支持同步音频视频、LoRA微调与多管道推理",
   "why_worth_it": "在单一模型内统一音视频生成、控制与后处理，开放权重且提供训练代码，适合自托管研究与定制",
   "tags": [
@@ -27,19 +27,26 @@
     "音频生成质量的主观或客观评测缺失"
   ],
   "quality_flags": [],
-  "stars_total": 7616,
+  "stars_total": 7735,
   "created_at": "2026-01-03",
   "pushed_at": "2026-06-17",
   "latest_release": null,
   "first_seen": "2026-06-20",
   "last_seen": "2026-06-20",
-  "streak_days": 1,
+  "streak_days": 2,
   "analysis_updated_at": "2026-06-20T00:33:52+0800",
   "appearances": [
     {
       "date": "2026-06-20",
       "reason": "new",
       "stars_total": 7616,
+      "stars_gained": 196,
+      "release": null
+    },
+    {
+      "date": "2026-06-20",
+      "reason": "lightweight",
+      "stars_total": 7735,
       "stars_gained": 196,
       "release": null
     }

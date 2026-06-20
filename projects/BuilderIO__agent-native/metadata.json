@@ -10,7 +10,7 @@
   ],
   "license": null,
   "category": "AI 应用",
-  "classify_reason": "构建 agent-native 应用的框架，属于 AI 代理开发工具",
+  "classify_reason": "Framework for building agent-native applications",
   "one_liner": "Agent与UI共享状态、协同工作的全栈框架",
   "why_worth_it": "解决Agent与UI割裂问题，一次定义动作复用所有通道，无厂商锁定。",
   "tags": [
@@ -27,13 +27,13 @@
     "Nitro 部署目标细节未列出，仅说明支持任何 Nitro 托管"
   ],
   "quality_flags": [],
-  "stars_total": 916,
+  "stars_total": 1168,
   "created_at": "2026-03-12",
   "pushed_at": "2026-06-19",
   "latest_release": "@agent-native/core@0.63.4",
   "first_seen": "2026-06-19",
   "last_seen": "2026-06-20",
-  "streak_days": 2,
+  "streak_days": 3,
   "analysis_updated_at": "2026-06-19T23:37:41+0800",
   "appearances": [
     {
@@ -48,6 +48,13 @@
       "reason": "lightweight",
       "stars_total": 916,
       "stars_gained": 172,
+      "release": "@agent-native/core@0.63.4"
+    },
+    {
+      "date": "2026-06-20",
+      "reason": "lightweight",
+      "stars_total": 1168,
+      "stars_gained": 147,
       "release": "@agent-native/core@0.63.4"
     }
   ]

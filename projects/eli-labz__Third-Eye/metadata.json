@@ -1,0 +1,50 @@
+{
+  "full_name": "eli-labz/Third-Eye",
+  "url": "https://github.com/eli-labz/Third-Eye",
+  "description": "A production-grade OSINT platform that provides situational awareness across multiple intelligence domains.",
+  "language": "TypeScript",
+  "topics": [
+    "ai",
+    "ai-agent",
+    "geospatial",
+    "maven-smart-system",
+    "palantir"
+  ],
+  "license": "MIT",
+  "category": "AI 应用",
+  "classify_reason": "Production-grade OSINT platform with AI agent",
+  "one_liner": "零配置GPU加速OSINT平台，聚合16种实时情报层",
+  "why_worth_it": "集成13+公开情报源，自托管无需密钥，内置侦察套件，为OSINT分析师提供一站式态势感知。",
+  "tags": [
+    "OSINT",
+    "自托管",
+    "WebGL",
+    "TypeScript"
+  ],
+  "confidence": "high",
+  "info_gaps": [
+    "Smart System 模块的完整后端依赖（如 Vercel KV 或 Upstash）未在 README 中具体说明，仅给出环境变量示例",
+    "未提供性能对比的基准数据（如边缘请求减少的绝对数值、在不同实体数量下的帧率测试）",
+    "Telegram OSINT 默认频道列表未公开，实际抓取的频道不透明",
+    "各数据层的更新延迟和覆盖范围未量化（如 OpenSky 的飞机位置刷新率）",
+    "RECON 工具的扫描器后端部署说明缺失，仅给出 SCANNER_URL 变量"
+  ],
+  "quality_flags": [],
+  "stars_total": 508,
+  "created_at": "2026-06-13",
+  "pushed_at": "2026-06-13",
+  "latest_release": "Third-Eye",
+  "first_seen": "2026-06-20",
+  "last_seen": "2026-06-20",
+  "streak_days": 1,
+  "analysis_updated_at": "2026-06-20T18:14:46+0800",
+  "appearances": [
+    {
+      "date": "2026-06-20",
+      "reason": "new",
+      "stars_total": 508,
+      "stars_gained": 0,
+      "release": "Third-Eye"
+    }
+  ]
+}

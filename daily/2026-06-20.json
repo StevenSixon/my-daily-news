@@ -1,139 +1,169 @@
 {
   "date": "2026-06-20",
-  "count": 5,
+  "count": 6,
   "items": [
     {
-      "full_name": "Lightricks/LTX-2",
-      "url": "https://github.com/Lightricks/LTX-2",
-      "one_liner": "首个DiT音视频生成基础模型，支持同步音频视频、LoRA微调与多管道推理",
-      "why_worth_it": "在单一模型内统一音视频生成、控制与后处理，开放权重且提供训练代码，适合自托管研究与定制",
-      "tags": [
-        "生成式AI",
-        "视频生成",
-        "LoRA训练",
-        "开源模型"
-      ],
-      "confidence": "high",
-      "info_gaps": [
-        "README 未提供生成速度、音视频同步精度等 benchmark 数据",
-        "未明确最低/推荐 GPU 显存要求，仅给出优化建议",
-        "训练 LoRA 的详细教程和硬件需求未在截断部分体现",
-        "音频生成质量的主观或客观评测缺失"
-      ],
-      "language": "Python",
-      "stars_total": 7616,
-      "stars_gained": 196,
-      "streak_days": 1,
-      "is_new": true,
-      "refreshed": true,
-      "revisit_reason": "new",
-      "report_path": "../projects/Lightricks__LTX-2/analysis.md"
-    },
-    {
-      "full_name": "nexu-io/html-video",
-      "url": "https://github.com/nexu-io/html-video",
-      "one_liner": "本地让AI代理把HTML/CSS直接渲染成MP4，无云费用，自带21套模板",
-      "why_worth_it": "统一了碎片化的网页→视频引擎，用你现有的编码代理零成本生成视频，彻底摆脱工具锁定。",
-      "tags": [
-        "程序化视频",
-        "Agent框架",
-        "本地优先",
-        "开源"
-      ],
-      "confidence": "medium",
-      "info_gaps": [
-        "没有提供任何性能数据（单帧渲染时间、多帧视频生成耗时、资源占用等）",
-        "未说明 Hyperframes 引擎在处理复杂 CSS/JS 动画时的兼容性边界",
-        "多引擎适配器（Remotion/Motion Canvas/Manim）的具体开发计划和可用时间未知",
-        "未提及 Studio UI 的浏览器兼容性要求",
-        "未说明如何自定义模板或贡献模板的指南"
-      ],
-      "language": "HTML",
-      "stars_total": 3330,
-      "stars_gained": 0,
-      "streak_days": 1,
-      "is_new": true,
-      "refreshed": true,
-      "revisit_reason": "new",
-      "report_path": "../projects/nexu-io__html-video/analysis.md"
-    },
-    {
-      "full_name": "koala73/worldmonitor",
-      "url": "https://github.com/koala73/worldmonitor",
-      "one_liner": "57000星！AI融合500+信源的全球态势感知OSINT仪表板",
-      "why_worth_it": "自托管开源Palantir替代，本地AI免密钥，双地图+多信号关联，适合地缘/金融极客",
+      "full_name": "eli-labz/Third-Eye",
+      "url": "https://github.com/eli-labz/Third-Eye",
+      "one_liner": "零配置GPU加速OSINT平台，聚合16种实时情报层",
+      "why_worth_it": "集成13+公开情报源，自托管无需密钥，内置侦察套件，为OSINT分析师提供一站式态势感知。",
       "tags": [
         "OSINT",
-        "态势感知",
-        "本地AI",
+        "自托管",
+        "WebGL",
         "TypeScript"
       ],
       "confidence": "high",
       "info_gaps": [
-        "生产环境详细部署依赖（Redis等）仅在外部文档说明，README未直接列出",
-        "未提供性能基准数据（如大量并发源处理延迟）"
+        "Smart System 模块的完整后端依赖（如 Vercel KV 或 Upstash）未在 README 中具体说明，仅给出环境变量示例",
+        "未提供性能对比的基准数据（如边缘请求减少的绝对数值、在不同实体数量下的帧率测试）",
+        "Telegram OSINT 默认频道列表未公开，实际抓取的频道不透明",
+        "各数据层的更新延迟和覆盖范围未量化（如 OpenSky 的飞机位置刷新率）",
+        "RECON 工具的扫描器后端部署说明缺失，仅给出 SCANNER_URL 变量"
       ],
       "language": "TypeScript",
-      "stars_total": 57011,
-      "stars_gained": 133,
+      "stars_total": 508,
+      "stars_gained": 0,
       "streak_days": 1,
       "is_new": true,
       "refreshed": true,
       "revisit_reason": "new",
-      "report_path": "../projects/koala73__worldmonitor/analysis.md"
+      "report_path": "../projects/eli-labz__Third-Eye/analysis.md"
     },
     {
-      "full_name": "alchaincyf/fanbox",
-      "url": "https://github.com/alchaincyf/fanbox",
-      "one_liner": "本地AI编码驾驶舱：文件、终端、预览三合一，实时追踪Agent每次文件改动。",
-      "why_worth_it": "解决AI起项目后找不回、看不清改动问题，适合用Claude Code/Codex的开发者，一体化窗口免于多应用切换。",
+      "full_name": "TestSprite/testsprite-cli",
+      "url": "https://github.com/TestSprite/testsprite-cli",
+      "one_liner": "让AI编程智能体通过真实环境自验证测试循环，一键定位失败根因",
+      "why_worth_it": "解决AI编码后缺乏即时真实验证的问题，面向Coding Agent使用者，提供确定性失败定位包，杜绝合成上下文",
       "tags": [
+        "AI测试",
+        "CLI工具",
+        "E2E自动化",
+        "Playwright"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "未提供测试计划文件的格式规范（plan.json schema）",
+        "未说明云环境下浏览器/API的配置选项（如屏幕分辨率、地理位置等）",
+        "未公开定价信息，仅提及需要API key",
+        "未明确支持的后端API/协议类型（REST/gRPC等）",
+        "没有性能基准数据（如测试执行耗时）"
+      ],
+      "language": "TypeScript",
+      "stars_total": 572,
+      "stars_gained": 0,
+      "streak_days": 1,
+      "is_new": true,
+      "refreshed": true,
+      "revisit_reason": "new",
+      "report_path": "../projects/TestSprite__testsprite-cli/analysis.md"
+    },
+    {
+      "full_name": "code-yeongyu/lazycodex",
+      "url": "https://github.com/code-yeongyu/lazycodex",
+      "one_liner": "Codex 一键安装的 AI 代理工具集，含项目记忆、计划与验证完成",
+      "why_worth_it": "零配置将 OmO 高质量代理工作流带入 Codex，省去手动集成多代理和多模型路由的麻烦",
+      "tags": [
+        "Agent框架",
+        "Codex",
+        "CLI",
+        "TypeScript"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "未提供与类似工具（如 oh-my-codex）的详细性能对比",
+        "未说明 Codex 的最低版本要求",
+        "无具体 benchmark 数据"
+      ],
+      "language": "TypeScript",
+      "stars_total": 1565,
+      "stars_gained": 0,
+      "streak_days": 1,
+      "is_new": true,
+      "refreshed": true,
+      "revisit_reason": "new",
+      "report_path": "../projects/code-yeongyu__lazycodex/analysis.md"
+    },
+    {
+      "full_name": "amElnagdy/guard-skills",
+      "url": "https://github.com/amElnagdy/guard-skills",
+      "one_liner": "专查 AI 生成代码/测试/文档常见缺陷的质量门禁套件",
+      "why_worth_it": "针对 LLM 输出特有的幻觉、过度抽象、安全绕过等问题做第二道审查，比通用 linter 更贴 AI 故障模式，适合用 AI 写代码的开发者",
+      "tags": [
+        "AI代码审查",
+        "代理技能",
+        "质量门禁",
+        "WordPress"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "未提供各守卫的检测准确率、误报率或性能基准数据",
+        "依赖的 Skills CLI 具体版本未明确",
+        "未列出所有兼容代理及其确切版本支持范围",
+        "未说明除 WordPress/WooCommerce 外其他平台的特化守卫计划",
+        "缺少对守卫运行耗时或资源消耗的描述"
+      ],
+      "language": null,
+      "stars_total": 840,
+      "stars_gained": 0,
+      "streak_days": 1,
+      "is_new": true,
+      "refreshed": true,
+      "revisit_reason": "new",
+      "report_path": "../projects/amElnagdy__guard-skills/analysis.md"
+    },
+    {
+      "full_name": "ClaudioDrews/memory-os",
+      "url": "https://github.com/ClaudioDrews/memory-os",
+      "one_liner": "7层记忆操作系统，终结AI遗忘，本地运行无锁定",
+      "why_worth_it": "专为重度Hermes用户打造，解决跨会话遗忘痛点，本地私有、无供应商绑定，独创Ground Truth层确保注入记忆真实生效，对比云方案根本性区别",
+      "tags": [
+        "AI记忆",
         "本地优先",
-        "Agent驾驶舱",
-        "Electron",
-        "vibe-coding"
-      ],
-      "confidence": "medium",
-      "info_gaps": [
-        "当前仅发布 macOS Apple Silicon 版本，Windows 和 Intel Mac 版本仍在规划中，未提供具体发布时间。",
-        "未提供大规模文件负载下的性能基准测试数据（仅提及缩略图滚动 <0.1秒）。"
-      ],
-      "language": "JavaScript",
-      "stars_total": 730,
-      "stars_gained": 0,
-      "streak_days": 1,
-      "is_new": true,
-      "refreshed": true,
-      "revisit_reason": "new",
-      "report_path": "../projects/alchaincyf__fanbox/analysis.md"
-    },
-    {
-      "full_name": "dzcmemory-web/bazi-ziwei-skill",
-      "url": "https://github.com/dzcmemory-web/bazi-ziwei-skill",
-      "one_liner": "算法精准排盘 + LLM分析 + 水墨海报，八字紫微综合印证 Skill",
-      "why_worth_it": "解决纯LLM排盘常出错的问题，提供八字与紫微交叉印证，适合需要可靠命理分析底座的 Agent 开发者和民俗研究者。",
-      "tags": [
-        "Agent技能",
-        "八字紫微",
-        "算法排盘",
-        "TypeScript"
+        "自托管",
+        "RAG"
       ],
       "confidence": "high",
       "info_gaps": [
-        "算法回归验证的7组案例无详细数据或 benchmark 报告",
-        "未提供性能指标（如排盘耗时）",
-        "海报的视觉自定义范围未详细说明",
-        "无真实用户案例或社区反馈引用",
-        "未明确 SKILL.md 规范之外的 Agent 适配细节"
+        "未提供性能基准或大规模并发测试数据",
+        "未明确说明 Hermes Agent 的具体获取方式与版本兼容性",
+        "未给出最小硬件配置建议（仅提到在 modest machines 上测试）",
+        "日期为未来 2026 年，真实性无法核实"
       ],
-      "language": "TypeScript",
-      "stars_total": 422,
+      "language": "Python",
+      "stars_total": 1171,
       "stars_gained": 0,
       "streak_days": 1,
       "is_new": true,
       "refreshed": true,
       "revisit_reason": "new",
-      "report_path": "../projects/dzcmemory-web__bazi-ziwei-skill/analysis.md"
+      "report_path": "../projects/ClaudioDrews__memory-os/analysis.md"
+    },
+    {
+      "full_name": "palmier-io/palmier-pro",
+      "url": "https://github.com/palmier-io/palmier-pro",
+      "one_liner": "macOS原生AI视频编辑器，通过MCP让Claude/Cursor等Agent直接操控时间线",
+      "why_worth_it": "让AI第一次能像人一样操作视频时间线，适合想用Agent加速剪辑的创作者或开发者",
+      "tags": [
+        "MCP集成",
+        "AI视频编辑",
+        "macOS原生",
+        "开源核心"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "依赖macOS 26 (Tahoe)，该版本可能为预发布版，兼容性需验证",
+        "生成式AI功能需付费订阅，价格未在README公开",
+        "未提供详细MCP工具列表或API文档链接"
+      ],
+      "language": "Swift",
+      "stars_total": 2206,
+      "stars_gained": 756,
+      "streak_days": 4,
+      "is_new": false,
+      "refreshed": true,
+      "revisit_reason": "release_update",
+      "report_path": "../projects/palmier-io__palmier-pro/analysis.md"
     }
   ],
   "streaks": [
@@ -146,9 +176,9 @@
       "confidence": "medium",
       "info_gaps": [],
       "language": "Shell",
-      "stars_total": 233104,
-      "stars_gained": 1113,
-      "streak_days": 4,
+      "stars_total": 233723,
+      "stars_gained": 1110,
+      "streak_days": 5,
       "is_new": false,
       "refreshed": false,
       "revisit_reason": "lightweight",
@@ -163,9 +193,9 @@
       "confidence": "medium",
       "info_gaps": [],
       "language": "Python",
-      "stars_total": 37527,
-      "stars_gained": 10159,
-      "streak_days": 4,
+      "stars_total": 39988,
+      "stars_gained": 12793,
+      "streak_days": 5,
       "is_new": false,
       "refreshed": false,
       "revisit_reason": "lightweight",
@@ -180,9 +210,9 @@
       "confidence": "medium",
       "info_gaps": [],
       "language": "Python",
-      "stars_total": 34930,
-      "stars_gained": 7856,
-      "streak_days": 4,
+      "stars_total": 35394,
+      "stars_gained": 8324,
+      "streak_days": 5,
       "is_new": false,
       "refreshed": false,
       "revisit_reason": "lightweight",
@@ -197,9 +227,9 @@
       "confidence": "medium",
       "info_gaps": [],
       "language": "TypeScript",
-      "stars_total": 31763,
-      "stars_gained": 2373,
-      "streak_days": 4,
+      "stars_total": 31911,
+      "stars_gained": 2381,
+      "streak_days": 5,
       "is_new": false,
       "refreshed": false,
       "revisit_reason": "lightweight",
@@ -214,9 +244,9 @@
       "confidence": "medium",
       "info_gaps": [],
       "language": "Python",
-      "stars_total": 8165,
-      "stars_gained": 5505,
-      "streak_days": 4,
+      "stars_total": 8466,
+      "stars_gained": 5026,
+      "streak_days": 5,
       "is_new": false,
       "refreshed": false,
       "revisit_reason": "lightweight",
@@ -231,9 +261,9 @@
       "confidence": "medium",
       "info_gaps": [],
       "language": "Go",
-      "stars_total": 2922,
-      "stars_gained": 1382,
-      "streak_days": 4,
+      "stars_total": 3005,
+      "stars_gained": 955,
+      "streak_days": 5,
       "is_new": false,
       "refreshed": false,
       "revisit_reason": "lightweight",
@@ -248,9 +278,9 @@
       "confidence": "medium",
       "info_gaps": [],
       "language": "Shell",
-      "stars_total": 63274,
-      "stars_gained": 9285,
-      "streak_days": 3,
+      "stars_total": 63740,
+      "stars_gained": 7170,
+      "streak_days": 4,
       "is_new": false,
       "refreshed": false,
       "revisit_reason": "lightweight",
@@ -276,9 +306,9 @@
         "与 Aider/Claude Code 等工具的具体差异仅凭架构推测，未实证"
       ],
       "language": "TypeScript",
-      "stars_total": 9899,
+      "stars_total": 10005,
       "stars_gained": 0,
-      "streak_days": 3,
+      "streak_days": 4,
       "is_new": false,
       "refreshed": false,
       "revisit_reason": "lightweight",
@@ -302,9 +332,9 @@
         "自动变更检测的效率（资源占用、增量索引延迟）缺少基准数据"
       ],
       "language": "C",
-      "stars_total": 7854,
-      "stars_gained": 3244,
-      "streak_days": 3,
+      "stars_total": 8715,
+      "stars_gained": 4212,
+      "streak_days": 4,
       "is_new": false,
       "refreshed": false,
       "revisit_reason": "lightweight",
@@ -328,9 +358,9 @@
         "本地GPU视频生成的模型支持列表和性能对比未在README中展开"
       ],
       "language": "Python",
-      "stars_total": 6057,
-      "stars_gained": 236,
-      "streak_days": 3,
+      "stars_total": 6522,
+      "stars_gained": 156,
+      "streak_days": 4,
       "is_new": false,
       "refreshed": false,
       "revisit_reason": "lightweight",
@@ -339,30 +369,187 @@
     {
       "full_name": "palmier-io/palmier-pro",
       "url": "https://github.com/palmier-io/palmier-pro",
-      "one_liner": "AI 原生 macOS 视频编辑器，通过 MCP 让 Claude/Codex 直接操控时间线",
-      "why_worth_it": "首创开源视频编辑器内建 MCP 服务器，使任何 AI agent 都能协同剪辑，比传统工具更可脚本化、可组合",
+      "one_liner": "macOS原生AI视频编辑器，通过MCP让Claude/Cursor等Agent直接操控时间线",
+      "why_worth_it": "让AI第一次能像人一样操作视频时间线，适合想用Agent加速剪辑的创作者或开发者",
       "tags": [
+        "MCP集成",
         "AI视频编辑",
-        "MCP服务器",
-        "Swift",
-        "macOS"
+        "macOS原生",
+        "开源核心"
       ],
       "confidence": "high",
       "info_gaps": [
-        "未提供支持的视频格式详细列表",
-        "生成式 AI 模型的定价和具体能力未公开",
-        "缺少与其他成熟 NLE 的性能/功能对比基准",
-        "未说明插件体系或扩展机制是否规划中",
-        "离线模式下的功能受限情况未详细说明"
+        "依赖macOS 26 (Tahoe)，该版本可能为预发布版，兼容性需验证",
+        "生成式AI功能需付费订阅，价格未在README公开",
+        "未提供详细MCP工具列表或API文档链接"
       ],
       "language": "Swift",
-      "stars_total": 1594,
-      "stars_gained": 749,
+      "stars_total": 2206,
+      "stars_gained": 756,
+      "streak_days": 4,
+      "is_new": false,
+      "refreshed": true,
+      "revisit_reason": "release_update",
+      "report_path": "../projects/palmier-io__palmier-pro/analysis.md"
+    },
+    {
+      "full_name": "DietrichGebert/ponytail",
+      "url": "https://github.com/DietrichGebert/ponytail",
+      "one_liner": "让AI代理像最懒的资深开发者一样写代码，平均少写54%代码且不损安全。",
+      "why_worth_it": "实测在FastAPI+React项目中减少54%代码、节省20%成本，同时保持100%安全防护，远超同类YAGNI提示。适合所有用AI写代码的开发者。",
+      "tags": [
+        "prompt-engineering",
+        "agent-skills",
+        "yagni",
+        "developer-tools"
+      ],
+      "confidence": "high",
+      "info_gaps": [],
+      "language": "JavaScript",
+      "stars_total": 40908,
+      "stars_gained": 0,
       "streak_days": 3,
       "is_new": false,
       "refreshed": false,
       "revisit_reason": "lightweight",
-      "report_path": "../projects/palmier-io__palmier-pro/analysis.md"
+      "report_path": "../projects/DietrichGebert__ponytail/analysis.md"
+    },
+    {
+      "full_name": "LMCache/LMCache",
+      "url": "https://github.com/LMCache/LMCache",
+      "one_liner": "LLM推理的引擎无关KV缓存层，实现持久化、跨进程重用与非前缀复用。",
+      "why_worth_it": "解决KV缓存随请求销毁、无法跨引擎共享的痛点，降低长上下文多轮/RAG场景的TTFT，且供应商中立。",
+      "tags": [
+        "KV缓存管理",
+        "LLM推理加速",
+        "分层存储",
+        "多引擎集成"
+      ],
+      "confidence": "medium",
+      "info_gaps": [
+        "README 未提供 benchmark 或性能对比数据",
+        "快速开始部分缺少可直接复制运行的最小示例与配置",
+        "未列出官方已验证支持的模型列表",
+        "部署多进程模式的具体资源规格与依赖未说明"
+      ],
+      "language": "Python",
+      "stars_total": 9443,
+      "stars_gained": 876,
+      "streak_days": 3,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/LMCache__LMCache/analysis.md"
+    },
+    {
+      "full_name": "withastro/flue",
+      "url": "https://github.com/withastro/flue",
+      "one_liner": "为自主 Agent 提供完备的 TypeScript 沙箱运行时，非 SDK，而是下一代 Agent 架构。",
+      "why_worth_it": "解决裸调 LLM 无法胜任的自主任务问题，为 Agent 提供沙箱、工具、技能、持久执行一体的 harness，适合想构建类似 Claude Code 级别自主 Agent 的开发者。",
+      "tags": [
+        "Agent框架",
+        "沙箱运行时",
+        "TypeScript",
+        "工作流自动化"
+      ],
+      "confidence": "medium",
+      "info_gaps": [
+        "未提供完整的安装步骤和系统依赖（如是否依赖 Docker 作为沙箱）",
+        "未列出支持的 AI 模型完整列表，示例仅提及 Claude Sonnet",
+        "未给出持久执行和子代理的具体代码示例",
+        "未说明部署到 Cloudflare Workers 等平台的详细限制",
+        "无性能基准或规模数据"
+      ],
+      "language": "TypeScript",
+      "stars_total": 5932,
+      "stars_gained": 309,
+      "streak_days": 3,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/withastro__flue/analysis.md"
+    },
+    {
+      "full_name": "omnigent-ai/omnigent",
+      "url": "https://github.com/omnigent-ai/omnigent",
+      "one_liner": "统一编排 Claude Code/Codex/Cursor 等 AI 编码 agent 的框架，内置沙箱与策略",
+      "why_worth_it": "解决多 AI 编码工具碎片化问题，在一个会话中混合编排并互相审查，带策略与沙箱，适合重视安全的团队协作",
+      "tags": [
+        "Agent 框架",
+        "多 Agent 编排",
+        "安全沙箱",
+        "实时协作"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "无性能基准测试数据（如编排延迟、多 agent 并发开销）",
+        "策略系统的完整表达能力未提供详尽说明，仅靠文档推断",
+        "对 Cursor 集成是否支持全部 Cursor 功能或存在限制未明确",
+        "无大规模部署案例或生产环境稳定性报告",
+        "沙箱各后端的成熟度和隔离强度无量化比较"
+      ],
+      "language": "Python",
+      "stars_total": 4115,
+      "stars_gained": 0,
+      "streak_days": 3,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/omnigent-ai__omnigent/analysis.md"
+    },
+    {
+      "full_name": "vercel/eve",
+      "url": "https://github.com/vercel/eve",
+      "one_liner": "文件系统优先的 TypeScript Agent 框架，约定优于配置。",
+      "why_worth_it": "为 Agent 项目提供直观的文件结构，降低多人协作与持久化维护成本，对想快速构建可控 Agent 的开发者更友好。",
+      "tags": [
+        "Agent框架",
+        "文件约定",
+        "TypeScript",
+        "Vercel"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "未提供性能 benchmark 数据",
+        "生产部署是否需要 Vercel 账户或可完全自托管未明确",
+        "微沙箱的安全边界与实现细节未深入说明",
+        "与 Vercel AI SDK 的具体整合路径未展开"
+      ],
+      "language": "TypeScript",
+      "stars_total": 1734,
+      "stars_gained": 0,
+      "streak_days": 3,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/vercel__eve/analysis.md"
+    },
+    {
+      "full_name": "BuilderIO/agent-native",
+      "url": "https://github.com/BuilderIO/agent-native",
+      "one_liner": "Agent与UI共享状态、协同工作的全栈框架",
+      "why_worth_it": "解决Agent与UI割裂问题，一次定义动作复用所有通道，无厂商锁定。",
+      "tags": [
+        "Agent框架",
+        "TypeScript",
+        "共享状态",
+        "自托管"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "许可类型未在仓库中明确说明（标注为 None）",
+        "未提供性能基准数据",
+        "未明确最低 Node.js 版本要求（推测为 18+）",
+        "Nitro 部署目标细节未列出，仅说明支持任何 Nitro 托管"
+      ],
+      "language": "TypeScript",
+      "stars_total": 1168,
+      "stars_gained": 147,
+      "streak_days": 3,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/BuilderIO__agent-native/analysis.md"
     }
   ]
 }
