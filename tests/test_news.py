@@ -1,0 +1,59 @@
+"""AI 资讯轨：打分排序 / 截断 / Markdown 渲染（均不联网、不调 LLM）。"""
+from src import build_summary, news_summary
+
+
+def test_official_outranks_community_baseline():
+    official = {"source_type": "official", "_ts": 0}
+    community = {"source_type": "community", "_ts": 0, "points": 0}
+    assert news_summary._score(official) > news_summary._score(community)
+
+
+def test_recency_boosts_score(monkeypatch):
+    import src.news_summary as ns
+
+    class _Now:
+        @staticmethod
+        def timestamp():
+            return 1_000_000.0
+
+    monkeypatch.setattr(ns, "now", lambda: _Now())
+    fresh = {"source_type": "paper", "_ts": 1_000_000.0}        # 当天
+    stale = {"source_type": "paper", "_ts": 1_000_000.0 - 5 * 86400}  # 5 天前
+    assert ns._score(fresh) > ns._score(stale)
+
+
+def test_hn_points_bonus_is_capped():
+    low = {"source_type": "community", "_ts": 0, "points": 80}
+    high = {"source_type": "community", "_ts": 0, "points": 100_000}
+    # 高赞有加成但被封顶，不会无限碾压
+    assert news_summary._score(high) > news_summary._score(low)
+    assert news_summary._score(high) - news_summary._score(low) <= 30
+
+
+def test_summarize_caps_to_max_items(monkeypatch):
+    monkeypatch.setattr(news_summary, "_cfg",
+                        lambda: {"max_items": 3, "llm_summarize": False})
+    cands = [
+        {"title": f"t{i}", "url": f"https://x/{i}", "source": "S",
+         "source_type": "paper", "_ts": float(i), "published": "2026-06-20"}
+        for i in range(10)
+    ]
+    out = news_summary.summarize(cands)
+    assert len(out) == 3
+    # 内部排序键不应泄漏到产物
+    assert all("_ts" not in it for it in out)
+
+
+def test_render_news_includes_summary_and_link():
+    news = [{
+        "title": "Some title", "url": "https://e/x", "source": "OpenAI",
+        "source_type": "official", "published": "2026-06-20",
+        "summary_zh": "中文摘要", "category": "模型发布",
+    }]
+    md = "\n".join(build_summary._render_news(news))
+    assert "## 📰 AI 资讯" in md
+    assert "中文摘要" in md and "https://e/x" in md and "模型发布" in md
+
+
+def test_render_news_empty_is_noop():
+    assert build_summary._render_news([]) == []

@@ -61,9 +61,25 @@ def _run(top_n: int | None = None) -> dict:
     save_index(index)
 
     streaks = _streak_leaderboard(processed)
-    payload = build_summary.build(items, streaks)
+    news = _collect_news()
+    payload = build_summary.build(items, streaks, news=news)
     log.info("Pipeline 完成。")
     return payload
+
+
+def _collect_news() -> list[dict]:
+    """AI 资讯并行轨：完全隔离，任何失败都不影响项目日报。"""
+    try:
+        from . import news_collect, news_summary
+        candidates = news_collect.collect_news()
+        if not candidates:
+            return []
+        news = news_summary.summarize(candidates)
+        news_collect.mark_seen(news)
+        return news
+    except Exception as e:
+        log.warning("资讯采集失败（不影响项目日报）：%s", e)
+        return []
 
 
 def _streak_leaderboard(processed: list[dict]) -> list[dict]:

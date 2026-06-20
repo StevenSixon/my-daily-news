@@ -7,20 +7,25 @@ from .utils import get_logger, today_str
 log = get_logger()
 
 
-def build(items: list[dict], streaks: list[dict] | None = None) -> dict:
+def build(items: list[dict], streaks: list[dict] | None = None,
+          news: list[dict] | None = None) -> dict:
     """items 为 analyze.learn() 返回的摘要条目列表；
-    streaks 为「连续霸榜」榜单（同样来自 learn 返回值，纯展示）。"""
+    streaks 为「连续霸榜」榜单（同样来自 learn 返回值，纯展示）；
+    news 为「AI 资讯」并行轨条目（来自 news_summary，可选）。"""
     date = today_str()
     streaks = streaks or []
-    payload = {"date": date, "count": len(items), "items": items, "streaks": streaks}
+    news = news or []
+    # news 为附加字段：现有消费方（push.py / gen-data.mjs）只读 items，向后兼容。
+    payload = {"date": date, "count": len(items), "items": items,
+               "streaks": streaks, "news": news}
 
     # JSON 侧车（push 读取，避免重复解析 md）
     write_json(daily_root() / f"{date}.json", payload)
 
     # 人读 Markdown
-    write_text(daily_root() / f"{date}.md", _render_md(date, items, streaks))
-    log.info("已生成日报 daily/%s.(md|json)，共 %d 个项目（霸榜 %d）",
-             date, len(items), len(streaks))
+    write_text(daily_root() / f"{date}.md", _render_md(date, items, streaks, news))
+    log.info("已生成日报 daily/%s.(md|json)，共 %d 个项目（霸榜 %d，资讯 %d）",
+             date, len(items), len(streaks), len(news))
     return payload
 
 
@@ -42,10 +47,31 @@ def _render_streaks(streaks: list[dict]) -> list[str]:
     return lines
 
 
-def _render_md(date: str, items: list[dict], streaks: list[dict] | None = None) -> str:
+_SOURCE_EMOJI = {"official": "🏢", "paper": "📄", "hf": "🤗", "community": "💬"}
+
+
+def _render_news(news: list[dict]) -> list[str]:
+    """AI 资讯段（并行轨，纯展示，按来源类型加 emoji）。"""
+    if not news:
+        return []
+    lines = ["## 📰 AI 资讯", ""]
+    for it in news:
+        emoji = _SOURCE_EMOJI.get(it.get("source_type"), "🔗")
+        cat = f"`{it['category']}` " if it.get("category") else ""
+        desc = it.get("summary_zh") or it.get("title")
+        meta = " ｜ ".join(x for x in (it.get("source"), it.get("published")) if x)
+        lines.append(f"- {emoji} {cat}[{desc}]({it['url']})" + (f" ｜ {meta}" if meta else ""))
+    lines.append("")
+    return lines
+
+
+def _render_md(date: str, items: list[dict], streaks: list[dict] | None = None,
+               news: list[dict] | None = None) -> str:
     streaks = streaks or []
+    news = news or []
     lines = [f"# 🤖 AI 项目日报 · {date}", "", f"今日命中 **{len(items)}** 个 AI 应用项目。", ""]
     lines += _render_streaks(streaks)
+    lines += _render_news(news)
     if not items:
         lines.append("_今日无新增/更新项目。_")
         return "\n".join(lines)

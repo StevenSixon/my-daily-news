@@ -51,6 +51,31 @@ trend:
   window_days: 7                         # 统计窗口
   top_n: 8                               # 各榜单展示条数
 
+# AI 资讯（与项目榜并行的独立轨：RSS 官方博客/论文/HF + Hacker News API）
+# 全部为公开 RSS / 公共 API，无需任何密钥。失效源会被安全跳过。
+news:
+  enabled: true
+  window_days: 3          # 只收近 N 天发布的资讯，避免首跑回灌历史
+  max_items: 12           # 每天进日报的资讯条数（控 LLM 成本）
+  llm_summarize: true     # true=调 LLM 出中文一句话摘要+分类；false=仅标题聚合（零成本）
+  hn_min_points: 80       # Hacker News 点赞门槛（过滤低热度）
+  sources:
+    official:             # 一手公司博客（权重最高）
+      - { name: OpenAI,           url: "https://openai.com/news/rss.xml" }
+      - { name: Google DeepMind,  url: "https://deepmind.google/blog/rss.xml" }
+      - { name: Google AI,        url: "https://blog.google/technology/ai/rss/" }
+      # 以下暂无公开 RSS（站点为 JS 渲染），待官方提供后再启用：
+      # - { name: Anthropic, url: "" }
+      # - { name: Meta AI,   url: "" }
+    paper:               # 论文前沿
+      - { name: "arXiv cs.AI", url: "http://export.arxiv.org/rss/cs.AI" }
+      - { name: "arXiv cs.CL", url: "http://export.arxiv.org/rss/cs.CL" }
+      - { name: "arXiv cs.LG", url: "http://export.arxiv.org/rss/cs.LG" }
+    hf:                  # Hugging Face 官方博客
+      - { name: "HF Blog", url: "https://huggingface.co/blog/feed.xml" }
+  # Hacker News（社区热度，AI 关键词过滤）默认开启；置 false 关闭：
+  hacker_news: true
+
 # 飞书（接收者/密钥在 .env）
 feishu:
   card_top_n: 5
