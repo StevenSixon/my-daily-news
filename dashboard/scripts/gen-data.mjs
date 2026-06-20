@@ -131,11 +131,31 @@ function buildProject(item, date) {
   };
 }
 
+// Map the AI-news parallel track (daily/<date>.json `news` field) into the
+// dashboard shape. Absent on editions generated before the news feature.
+function mapNews(dailyRaw) {
+  const arr = Array.isArray(dailyRaw.news) ? dailyRaw.news : [];
+  return arr.map((n) => ({
+    title: n.title ?? "",
+    url: n.url ?? "",
+    source: n.source ?? "",
+    sourceType: n.source_type ?? "",
+    published: n.published ?? "",
+    summary: n.summary_zh ?? "",
+    category: n.category ?? "",
+  }));
+}
+
 function buildEdition(date) {
   const dailyRaw = readJson(resolve(DAILY_DIR, `${date}.json`));
   const items = Array.isArray(dailyRaw.items) ? dailyRaw.items : [];
   const projects = items.map((it) => buildProject(it, date));
-  return { date: dailyRaw.date ?? date, count: projects.length, projects };
+  return {
+    date: dailyRaw.date ?? date,
+    count: projects.length,
+    projects,
+    news: mapNews(dailyRaw),
+  };
 }
 
 function main() {

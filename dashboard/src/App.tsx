@@ -14,6 +14,7 @@ import {
   TrendingUp,
   Trophy,
   Newspaper,
+  Rss,
   Inbox,
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
@@ -21,7 +22,7 @@ import { Separator } from "@/components/ui/separator";
 import { Sheet, SheetContent, SheetClose } from "@/components/ui/sheet";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { cn } from "@/lib/utils";
-import { editions, type Project, type Appearance } from "@/data";
+import { editions, type Project, type Appearance, type NewsItem } from "@/data";
 
 const LANG_COLOR: Record<string, string> = {
   Python: "#3572A5",
@@ -45,7 +46,24 @@ function mmdd(d: string): string {
 }
 
 type SortKey = "gained" | "total" | "newest";
-type ViewKey = "current" | "board";
+type ViewKey = "current" | "board" | "news";
+
+const NEWS_SOURCE_META: Record<string, { label: string; cls: string }> = {
+  official: { label: "官方", cls: "border-accent/50 text-accent" },
+  paper: { label: "论文", cls: "border-border text-muted-foreground" },
+  hf: { label: "HF", cls: "border-border text-muted-foreground" },
+  community: { label: "社区", cls: "border-border text-muted-foreground" },
+};
+
+function matchesNews(n: NewsItem, q: string): boolean {
+  if (!q) return true;
+  return (
+    n.title.toLowerCase().includes(q) ||
+    n.summary.toLowerCase().includes(q) ||
+    n.source.toLowerCase().includes(q) ||
+    n.category.toLowerCase().includes(q)
+  );
+}
 
 /** Aggregate of one project across all editions, for the leaderboard. */
 type BoardEntry = Project & {
@@ -139,6 +157,12 @@ export default function App() {
     [board, q, lang, cat]
   );
 
+  const news = edition.news ?? [];
+  const filteredNews = useMemo(
+    () => news.filter((n) => matchesNews(n, q)),
+    [news, q]
+  );
+
   return (
     <div className={cn(dark && "dark")}>
       <div className="min-h-screen bg-background text-foreground paper-grain">
@@ -214,6 +238,12 @@ export default function App() {
               icon={<Trophy className="h-3.5 w-3.5" />}
               label={`累计排行${editions.length > 1 ? ` · ${editions.length} 期` : ""}`}
             />
+            <ViewTab
+              active={view === "news"}
+              onClick={() => setView("news")}
+              icon={<Rss className="h-3.5 w-3.5" />}
+              label={`AI 资讯${news.length ? ` · ${news.length}` : ""}`}
+            />
           </div>
 
           {/* ── Controls ───────────────────────────────────────── */}
@@ -223,29 +253,33 @@ export default function App() {
               <input
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                placeholder="搜索项目、描述或标签…"
+                placeholder={view === "news" ? "搜索资讯标题、摘要或来源…" : "搜索项目、描述或标签…"}
                 className="h-9 w-full border border-border bg-card pl-9 pr-3 text-sm outline-none focus:border-primary focus:ring-1 focus:ring-primary"
               />
             </div>
             <div className="flex flex-wrap items-center gap-2">
-              <div className="flex flex-wrap gap-1.5">
-                {languages.map((l) => (
-                  <button
-                    key={l}
-                    onClick={() => setLang(l)}
-                    className={cn(
-                      "border px-2.5 py-1 text-xs transition-colors",
-                      lang === l
-                        ? "border-foreground bg-foreground text-background"
-                        : "border-border text-muted-foreground hover:text-foreground"
-                    )}
-                  >
-                    {l}
-                  </button>
-                ))}
-              </div>
-              <Separator orientation="vertical" className="hidden h-6 md:block" />
-              {categories.length > 1 && (
+              {view !== "news" && (
+                <>
+                  <div className="flex flex-wrap gap-1.5">
+                    {languages.map((l) => (
+                      <button
+                        key={l}
+                        onClick={() => setLang(l)}
+                        className={cn(
+                          "border px-2.5 py-1 text-xs transition-colors",
+                          lang === l
+                            ? "border-foreground bg-foreground text-background"
+                            : "border-border text-muted-foreground hover:text-foreground"
+                        )}
+                      >
+                        {l}
+                      </button>
+                    ))}
+                  </div>
+                  <Separator orientation="vertical" className="hidden h-6 md:block" />
+                </>
+              )}
+              {view !== "news" && categories.length > 1 && (
                 <select
                   value={cat}
                   onChange={(e) => setCat(e.target.value)}
@@ -290,7 +324,7 @@ export default function App() {
                 ))
               )}
             </main>
-          ) : (
+          ) : view === "board" ? (
             <main>
               {filteredBoard.length === 0 ? (
                 <div className="border-y border-border">
@@ -304,6 +338,32 @@ export default function App() {
                   <div className="divide-y divide-border border-y border-border">
                     {filteredBoard.map((p, i) => (
                       <BoardRow key={p.id} entry={p} rank={i + 1} onOpen={() => setActive(p)} />
+                    ))}
+                  </div>
+                </>
+              )}
+            </main>
+          ) : (
+            <main>
+              {news.length === 0 ? (
+                <div className="border-y border-border">
+                  <EmptyState
+                    title="本期暂无资讯"
+                    hint="资讯轨抓取 AI 公司官方博客、arXiv、HF 与 Hacker News；这一天没有命中条目。"
+                  />
+                </div>
+              ) : filteredNews.length === 0 ? (
+                <div className="border-y border-border">
+                  <EmptyState title="没有匹配的资讯" hint="试试清除搜索条件。" />
+                </div>
+              ) : (
+                <>
+                  <p className="pb-3 text-xs text-muted-foreground">
+                    {edition.date} · 一手动态来自官方博客 / arXiv / HF / Hacker News
+                  </p>
+                  <div className="divide-y divide-border border-y border-border">
+                    {filteredNews.map((n, i) => (
+                      <NewsRow key={`${n.url}-${i}`} item={n} />
                     ))}
                   </div>
                 </>
@@ -480,6 +540,54 @@ function ProjectRow({
         <ArrowUpRight className="h-5 w-5" />
       </div>
     </article>
+  );
+}
+
+/** AI-news row — links out to the source article (opens in a new tab). */
+function NewsRow({ item: n }: { item: NewsItem }) {
+  const meta = NEWS_SOURCE_META[n.sourceType] ?? {
+    label: n.sourceType || "其他",
+    cls: "border-border text-muted-foreground",
+  };
+  return (
+    <a
+      href={n.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group grid cursor-pointer grid-cols-[1fr_auto] items-start gap-x-4 py-4 transition-colors hover:bg-card"
+    >
+      <div className="min-w-0">
+        <div className="mb-1 flex flex-wrap items-center gap-2">
+          <Badge
+            variant="outline"
+            className={cn("h-5 rounded-sm px-1.5 text-[10px] font-medium", meta.cls)}
+          >
+            {meta.label}
+          </Badge>
+          {n.category && (
+            <Badge
+              variant="outline"
+              className="h-5 rounded-sm border-border px-1.5 text-[10px] font-normal text-muted-foreground"
+            >
+              {n.category}
+            </Badge>
+          )}
+        </div>
+        <h2 className="text-sm font-medium leading-snug text-foreground/90 group-hover:text-primary">
+          {n.summary || n.title}
+        </h2>
+        {n.summary && (
+          <p className="mt-1 truncate text-xs text-muted-foreground/80">{n.title}</p>
+        )}
+        <div className="mt-1.5 flex flex-wrap items-center gap-x-3 text-[11px] text-muted-foreground">
+          {n.source && <span>{n.source}</span>}
+          {n.published && <span className="font-mono-num">{n.published}</span>}
+        </div>
+      </div>
+      <div className="hidden items-center self-center text-muted-foreground transition-colors group-hover:text-primary sm:flex">
+        <ArrowUpRight className="h-5 w-5" />
+      </div>
+    </a>
   );
 }
 

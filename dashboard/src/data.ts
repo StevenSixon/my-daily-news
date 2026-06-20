@@ -41,10 +41,24 @@ export interface Project {
   analysis: AnalysisSection[];
 }
 
+export interface NewsItem {
+  title: string;
+  url: string;
+  source: string;
+  /** official | paper | hf | community */
+  sourceType: string;
+  published: string;
+  /** LLM-generated one-line Chinese summary (may be empty). */
+  summary: string;
+  category: string;
+}
+
 export interface Edition {
   date: string;
   count: number;
   projects: Project[];
+  /** AI-news parallel track; absent on pre-feature editions. */
+  news?: NewsItem[];
 }
 
 const data = rawDaily as { editions: Edition[] };
