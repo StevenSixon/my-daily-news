@@ -79,4 +79,5 @@ news:
 # 飞书（接收者/密钥在 .env）
 feishu:
   card_top_n: 5
+  news_top_n: 6           # 卡片内「AI 资讯」段展示条数
   header_template: blue

@@ -12,12 +12,16 @@ from .utils import get_logger, today_str
 log = get_logger()
 
 
+_NEWS_EMOJI = {"official": "🏢", "paper": "📄", "hf": "🤗", "community": "💬"}
+
+
 def _build_card(payload: dict) -> dict:
     cfg = get_config()["feishu"]
     top_n = cfg.get("card_top_n", 5)
     date = payload["date"]
     items = payload.get("items", [])[:top_n]
     streaks = payload.get("streaks", [])[:top_n]
+    news = payload.get("news", [])[: cfg.get("news_top_n", 6)]
     total = payload.get("count", 0)
 
     elements: list[dict] = []
@@ -53,6 +57,17 @@ def _build_card(payload: dict) -> dict:
             elements.append({"tag": "div",
                              "text": {"tag": "lark_md", "content": "\n".join(parts)}})
             elements.append({"tag": "hr"})
+
+    if news:
+        rows = ["**📰 AI 资讯**"]
+        for n in news:
+            emoji = _NEWS_EMOJI.get(n.get("source_type"), "🔗")
+            cat = f"[{n['category']}] " if n.get("category") else ""
+            desc = n.get("summary_zh") or n.get("title", "")
+            meta = " ｜ ".join(x for x in (n.get("source"), n.get("published")) if x)
+            rows.append(f"{emoji} {cat}[{desc}]({n['url']})" + (f"\n{meta}" if meta else ""))
+        elements.append({"tag": "div", "text": {"tag": "lark_md", "content": "\n\n".join(rows)}})
+        elements.append({"tag": "hr"})
 
     elements.append({
         "tag": "note",

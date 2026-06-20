@@ -57,3 +57,32 @@ def test_render_news_includes_summary_and_link():
 
 def test_render_news_empty_is_noop():
     assert build_summary._render_news([]) == []
+
+
+def _news_section(card):
+    for e in card.get("elements", []):
+        c = e.get("text", {}).get("content", "") if e.get("tag") == "div" else ""
+        if "📰 AI 资讯" in c:
+            return c
+    return None
+
+
+def test_feishu_card_includes_news_section():
+    from src import push
+    payload = {
+        "date": "2026-06-20", "count": 0, "items": [], "streaks": [],
+        "news": [{
+            "title": "T", "url": "https://e/x", "source": "OpenAI",
+            "source_type": "official", "published": "2026-06-20",
+            "summary_zh": "中文摘要", "category": "模型发布",
+        }],
+    }
+    section = _news_section(push._build_card(payload))
+    assert section is not None
+    assert "中文摘要" in section and "https://e/x" in section and "模型发布" in section
+
+
+def test_feishu_card_no_news_section_when_empty():
+    from src import push
+    payload = {"date": "2026-06-20", "count": 0, "items": [], "streaks": [], "news": []}
+    assert _news_section(push._build_card(payload)) is None
