@@ -2,7 +2,7 @@
   "full_name": "kadevin/ilab-gpt-conjure",
   "url": "https://github.com/kadevin/ilab-gpt-conjure",
   "description": "面向 GPT-image-2 的 AI 图片生成 WebUI 工作台，支持 Codex Responses 与 OpenAI 兼容 API 接入，内置公用图库、多类型 Chip 快捷引用、提示词模板、多任务并发和本地队列管理。An AI image generation WebUI workbench for GPT-image-2 with Codex Responses and OpenAI-compatible API support, shared gallery references, multi-type quick chips, prompt templates, concurrent tasks, and local queue management.",
-  "language": "Python",
+  "language": "JavaScript",
   "topics": [
     "ai-art",
     "ai-image-generation",
@@ -27,26 +27,30 @@
   ],
   "license": "AGPL-3.0",
   "category": "AI 应用",
-  "classify_reason": "GPT-image-2 AI图片生成WebUI",
-  "one_liner": "为GPT-image-2打造的免安装本地AI图像生成WebUI工作台",
-  "why_worth_it": "免安装一键包直接启动，集成图库、chip快捷引用、模板与并发队列，比Colab式在线工具更自主、更符合本地工作流",
+  "classify_reason": "GPT-image-2 的 AI 图片生成工作台",
+  "one_liner": "解压即用的GPT-image-2本地WebUI工作台，集成图库、模板与多任务并发。",
+  "why_worth_it": "为本地AI生图提供一键启动的完整工作流，省去API调试与界面缺失，适合个人与团队快速复用素材。",
   "tags": [
-    "AI图像生成",
-    "WebUI",
+    "AI绘图",
     "自托管",
-    "Python"
+    "WebUI",
+    "一键包"
   ],
   "confidence": "high",
-  "info_gaps": [],
+  "info_gaps": [
+    "未说明是否依赖 GPU 或本地模型（实际通过远程 API 生成，但未明确本地无需 GPU）",
+    "未提供 API 响应性能基准数据",
+    "未列出 macOS 包是否经过公证和签名（已知为未签名 portable zip）"
+  ],
   "quality_flags": [],
-  "stars_total": 539,
+  "stars_total": 544,
   "created_at": "2026-06-08",
-  "pushed_at": "2026-06-20",
-  "latest_release": "v0.5.1",
+  "pushed_at": "2026-06-21",
+  "latest_release": "v0.5.2",
   "first_seen": "2026-06-21",
   "last_seen": "2026-06-21",
-  "streak_days": 1,
-  "analysis_updated_at": "2026-06-21T06:32:35+0800",
+  "streak_days": 2,
+  "analysis_updated_at": "2026-06-21T19:01:57+0800",
   "appearances": [
     {
       "date": "2026-06-21",
@@ -54,6 +58,13 @@
       "stars_total": 539,
       "stars_gained": 0,
       "release": "v0.5.1"
+    },
+    {
+      "date": "2026-06-21",
+      "reason": "release_update",
+      "stars_total": 544,
+      "stars_gained": 0,
+      "release": "v0.5.2"
     }
   ]
 }

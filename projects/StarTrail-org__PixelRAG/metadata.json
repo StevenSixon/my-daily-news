@@ -16,37 +16,44 @@
   ],
   "license": "Apache-2.0",
   "category": "AI 应用",
-  "classify_reason": "像素原生多模态搜索产品",
-  "one_liner": "用网页截图替代文本，保留表格/图表的视觉RAG",
-  "why_worth_it": "解决文本RAG丢失布局与图表的问题，对需要从复杂页面提取结构化信息的极客直接可用，预建800万+页面索引开箱即搜",
+  "classify_reason": "像素原生 RAG 搜索工具",
+  "one_liner": "用截图代替文本解析，视觉原生 RAG 管道与 828 万维基百科索引。",
+  "why_worth_it": "解决文本 RAG 丢失表格、图表信息的问题，直接检索页面截图，适合需要视觉理解的 Agent 或多模态搜索产品。",
   "tags": [
     "多模态RAG",
     "视觉搜索",
-    "本地优先",
-    "网页截图"
+    "Python",
+    "自托管"
   ],
   "confidence": "high",
   "info_gaps": [
-    "README未提供检索精度benchmark（如Recall@K），论文可能包含但未截取",
-    "自建索引需多大内存/磁盘（Wikipedia索引约217GB，但自建无参考）",
-    "托管API的速率限制和稳定性无说明",
-    "PDF/图片渲染的具体能力边界未详述（README只提支持）",
-    "训练复现步骤部分标为TBD，实际可复现度未知"
+    "未提供与文本 RAG 或其他视觉检索方案的定量基准数据（如召回率、延迟）",
+    "自建索引的存储与计算开销只有公开索引的 217G 信息，未给出通用估算",
+    "PDF 渲染的支持细节和格式限制未在 README 中展开",
+    "训练数据集的详细描述和 LoRA 适配器性能指标散落在外部 HuggingFace 页面",
+    "Data Curation 的重现步骤标注为 TBD，存在未完成部分"
   ],
   "quality_flags": [],
-  "stars_total": 1155,
+  "stars_total": 1737,
   "created_at": "2026-05-29",
   "pushed_at": "2026-06-20",
   "latest_release": "chrome-150.0.7844.0",
   "first_seen": "2026-06-21",
   "last_seen": "2026-06-21",
-  "streak_days": 1,
-  "analysis_updated_at": "2026-06-21T06:31:27+0800",
+  "streak_days": 2,
+  "analysis_updated_at": "2026-06-21T19:01:24+0800",
   "appearances": [
     {
       "date": "2026-06-21",
       "reason": "new",
       "stars_total": 1155,
+      "stars_gained": 0,
+      "release": "chrome-150.0.7844.0"
+    },
+    {
+      "date": "2026-06-21",
+      "reason": "star_jump",
+      "stars_total": 1737,
       "stars_gained": 0,
       "release": "chrome-150.0.7844.0"
     }

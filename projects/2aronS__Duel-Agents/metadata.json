@@ -19,7 +19,7 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "双代理对决CLI/SDK/插件",
+  "classify_reason": "面向 Duel 代理的 CLI/SDK/插件",
   "one_liner": "IDE 多模型对决路由层，自动挑最便宜赢家，省成本不降质量。",
   "why_worth_it": "将多模型成本优化无缝嵌入 Claude Code/Cursor 等 IDE，一键安装，省去自建路由的麻烦，适合 AI 编码重度用户。",
   "tags": [
@@ -37,19 +37,26 @@
     "$DUEL 代币的用途和与 API 服务的关系不明"
   ],
   "quality_flags": [],
-  "stars_total": 996,
+  "stars_total": 998,
   "created_at": "2026-05-28",
   "pushed_at": "2026-06-15",
   "latest_release": "v0.1.0",
   "first_seen": "2026-06-21",
   "last_seen": "2026-06-21",
-  "streak_days": 1,
+  "streak_days": 2,
   "analysis_updated_at": "2026-06-21T06:32:18+0800",
   "appearances": [
     {
       "date": "2026-06-21",
       "reason": "new",
       "stars_total": 996,
+      "stars_gained": 0,
+      "release": "v0.1.0"
+    },
+    {
+      "date": "2026-06-21",
+      "reason": "lightweight",
+      "stars_total": 998,
       "stars_gained": 0,
       "release": "v0.1.0"
     }

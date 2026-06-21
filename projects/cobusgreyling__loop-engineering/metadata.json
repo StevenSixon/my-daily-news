@@ -24,7 +24,7 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "循环工程模式与CLI工具，编排AI代理",
+  "classify_reason": "面向 AI 编码代理的循环工程模式与工具",
   "one_liner": "为AI代理构建自动化提示循环的实战模式、模板与CLI工具集。",
   "why_worth_it": "解决代理自主循环设计难题，提供可复用的模式与审计CLI，让开发者从手动提示转向系统设计。",
   "tags": [
@@ -41,19 +41,26 @@
     "MCP连接器的具体配置示例需跳转至外部文档"
   ],
   "quality_flags": [],
-  "stars_total": 496,
+  "stars_total": 537,
   "created_at": "2026-06-09",
   "pushed_at": "2026-06-19",
   "latest_release": null,
   "first_seen": "2026-06-21",
   "last_seen": "2026-06-21",
-  "streak_days": 1,
+  "streak_days": 2,
   "analysis_updated_at": "2026-06-21T06:33:04+0800",
   "appearances": [
     {
       "date": "2026-06-21",
       "reason": "new",
       "stars_total": 496,
+      "stars_gained": 0,
+      "release": null
+    },
+    {
+      "date": "2026-06-21",
+      "reason": "lightweight",
+      "stars_total": 537,
       "stars_gained": 0,
       "release": null
     }

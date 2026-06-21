@@ -51,8 +51,10 @@ Images API 或 Responses API 形态。
 - Codex Responses 和 API Responses 生图可选启用联网搜索；生成页和历史库搜索支持提示词与任务 ID，并可命中历史任务。
 - 单任务多图输出、部分失败处理和失败重试。
 - 公用图库、最近参考图、颜色 chip、提示词片段 chip 和提示词模板。
-- WebUI 支持中文 / English 语言切换，顶栏可直接切换语言，偏好保存在当前浏览器。
-- 系统设置整合 API 设置、Codex 通道、存储与通知三个 Tab；API 设置默认第一位。
+- 图像编辑器支持插入输入框里的其他图片、多图层组合、默认锁定比例变换、
+  Shift 自由变换、局部擦除和真实图层缩略图。
+- 系统设置提供语言下拉菜单，支持简体中文、正體中文、繁体中文、日语、韩语、English、西班牙语、葡萄牙语、法语、德语、俄语、意大利语和印地语；首次启动自动跟随浏览器语言，手动选择后偏好保存在当前浏览器。
+- 系统设置整合 API 设置、Codex 通道、语言 / Language、存储与通知四个 Tab；API 设置默认第一位。
 - API 供应商以卡片快速选择，默认只读详情，支持显式编辑、复制、删除确认和多供应商排序。
 - 免安装一键包启动脚本只负责本地启动；更新脚本需手动运行，会校验 SHA256、保留 `data/`，并把被替换文件备份到 `.backup/`。
 - 高级本机 OAuth 工作流支持个人本地 Codex 使用，并明确提示接口风险。
@@ -123,7 +125,7 @@ http://127.0.0.1:8787/
 ## 免安装一键包
 
 当前可用的一键包见 [下载 / Releases](RELEASES.md)，也可以直接打开
-[GitHub Release v0.5.1](https://github.com/kadevin/ilab-gpt-conjure/releases/tag/v0.5.1)。
+[GitHub Release v0.5.2](https://github.com/kadevin/ilab-gpt-conjure/releases/tag/v0.5.2)。
 
 这些包面向希望像 ComfyUI 一样“解压即用”的用户：
 
@@ -133,9 +135,13 @@ http://127.0.0.1:8787/
    `Start WebUI Portable.command`。
 4. 如果浏览器没有自动打开，手动访问 `http://127.0.0.1:8787/`。
 
-一键包内包含打包好的 CPython、已安装的 WebUI 依赖、应用源码、许可证文件，以及
-本地 `data/` 目录。设置、公用图库、输入图、输出图、任务数据库和日志都会写入
-`data/`。
+一键包内包含打包好的 CPython、已安装的 WebUI 依赖、预构建的 WebUI 静态资源、
+用于源码复构的前端 package 元数据和构建配置、应用源码、许可证文件，以及本地
+`data/` 目录。设置、公用图库、输入图、输出图、任务数据库和日志都会写入 `data/`。
+
+一键包启动脚本不会运行 `npm install`，也不会重建前端资源。只有你主动修改
+TypeScript 或 CSS 并从源码重新生成 `codex_image/webui/static/app.js` 时，才需要
+本机安装 Node.js。
 
 更新已经解压的一键包时，先关闭 WebUI 服务窗口，然后运行 Windows 的
 `Update WebUI Portable.bat` 或 macOS 的 `Update WebUI Portable.command`。
@@ -169,7 +175,7 @@ CI 的 tag，也可以手动运行同一个 workflow，并填写 `ref` 与 `rele
 
 1. 在顶部选择认证来源。`Codex` 在本机 OAuth 可用时默认使用 Image 通道；
    稳定或共享使用建议选择 `API`，也就是 OpenAI-compatible API 模式。
-2. 打开系统设置维护 API 供应商卡片、Codex Image/Responses 通道、存储目录和通知偏好。
+2. 打开系统设置维护 API 供应商卡片、Codex Image/Responses 通道、界面语言、存储目录和通知偏好。
 3. 添加参考图：支持上传、拖拽、粘贴、最近上传和公用图库。
 4. 编写提示词：可直接输入文本，也可插入图库、颜色和片段 chip，并选择原始、
    保真或创意提示词模式。
@@ -228,7 +234,8 @@ chip 支持查看完整内容、展开为正文、编辑和复用。
 npm run check:webui
 ```
 
-修改前端 TypeScript 或 CSS 时，需要提交生成后的浏览器资源：
+修改前端 TypeScript 或 CSS 时，先运行 `npm install` 安装 `package-lock.json`
+锁定的前端构建依赖，包括图层编辑器使用的 Konva；再提交生成后的浏览器资源：
 `codex_image/webui/static/`。
 
 GitHub CI 会在 pull request 和推送到 `main` 时运行 Python 测试和 WebUI 前端检查。

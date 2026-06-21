@@ -17,7 +17,7 @@
   ],
   "license": "Apache-2.0",
   "category": "AI 应用",
-  "classify_reason": "LLM KV cache acceleration layer",
+  "classify_reason": "LLM 缓存加速层，服务于 AI 推理",
   "one_liner": "LLM推理的引擎无关KV缓存层，实现持久化、跨进程重用与非前缀复用。",
   "why_worth_it": "解决KV缓存随请求销毁、无法跨引擎共享的痛点，降低长上下文多轮/RAG场景的TTFT，且供应商中立。",
   "tags": [
@@ -34,13 +34,13 @@
     "部署多进程模式的具体资源规格与依赖未说明"
   ],
   "quality_flags": [],
-  "stars_total": 9443,
+  "stars_total": 9505,
   "created_at": "2024-05-28",
-  "pushed_at": "2026-06-20",
+  "pushed_at": "2026-06-21",
   "latest_release": "v0.4.7",
   "first_seen": "2026-06-19",
-  "last_seen": "2026-06-20",
-  "streak_days": 3,
+  "last_seen": "2026-06-21",
+  "streak_days": 4,
   "analysis_updated_at": "2026-06-19T23:32:03+0800",
   "appearances": [
     {
@@ -62,6 +62,13 @@
       "reason": "lightweight",
       "stars_total": 9443,
       "stars_gained": 876,
+      "release": "v0.4.7"
+    },
+    {
+      "date": "2026-06-21",
+      "reason": "lightweight",
+      "stars_total": 9505,
+      "stars_gained": 713,
       "release": "v0.4.7"
     }
   ]

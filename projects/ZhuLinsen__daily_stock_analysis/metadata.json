@@ -1,0 +1,52 @@
+{
+  "full_name": "ZhuLinsen/daily_stock_analysis",
+  "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+  "description": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。  LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
+  "language": "Python",
+  "topics": [
+    "a-stock",
+    "ai-agent",
+    "aigc",
+    "llm",
+    "quant",
+    "quantitative-finance",
+    "quantitative-trading"
+  ],
+  "license": "MIT",
+  "category": "AI 应用",
+  "classify_reason": "LLM 驱动的股票分析系统",
+  "one_liner": "LLM驱动多市场股票智能分析，零成本GitHub Actions定时推送决策仪表盘",
+  "why_worth_it": "解决散户每日盯盘与信息过载痛点，聚合A/港/美/日/韩多市场行情、新闻与AI研判，自动生成信号闭环报告并推送至企微/飞书/Telegram等，零成本自托管",
+  "tags": [
+    "LLM驱动",
+    "多市场",
+    "量化分析",
+    "自动化推送"
+  ],
+  "confidence": "high",
+  "info_gaps": [
+    "日韩股票分析目前标注为 MVP，资金流、龙虎榜、板块等高阶数据因市场边界降级为 `not_supported`，实际可用深度尚未公布基准对比",
+    "LLM 生成决策的准确率、回测表现或用户反馈统计未提供",
+    "Agent 策略有效性及自定义策略的实际表现无量化说明",
+    "推送到多个渠道时是否存在限流或延迟情况不明",
+    "大数据量（例如数百只自选股）下的分析耗时和成本没有给出参考值"
+  ],
+  "quality_flags": [],
+  "stars_total": 43816,
+  "created_at": "2026-01-10",
+  "pushed_at": "2026-06-21",
+  "latest_release": "v3.23.0",
+  "first_seen": "2026-06-21",
+  "last_seen": "2026-06-21",
+  "streak_days": 1,
+  "analysis_updated_at": "2026-06-21T18:57:19+0800",
+  "appearances": [
+    {
+      "date": "2026-06-21",
+      "reason": "new",
+      "stars_total": 43816,
+      "stars_gained": 519,
+      "release": "v3.23.0"
+    }
+  ]
+}

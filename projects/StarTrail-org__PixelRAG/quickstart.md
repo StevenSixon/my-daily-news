@@ -1,35 +1,17 @@
 ```bash
-# 安装
 pip install pixelrag
 
-# 渲染网页为截图瓦片
+# 渲染页面为截图瓦片
 pixelshot https://en.wikipedia.org/wiki/Python --output ./tiles
 
-# 搜索托管Wikipedia索引（零配置）
+# 直接调用公共搜索 API（无需 API Key）
 curl -X POST https://api.pixelrag.ai/search \
   -H "Content-Type: application/json" \
   -d '{"queries": [{"text": "What is the capital of France?"}], "n_docs": 5}'
 
-# 自建索引
-cat > pixelrag.yaml << 'EOF'
-source:
-  type: local
-  path: ./my_docs
-embed:
-  model: Qwen/Qwen3-VL-Embedding-2B
-  device: cuda
-  gpu_ids: [0]
-output: ./my_index
-EOF
-pixelrag index build
-
-# 服务启动
-pixelrag serve --index-dir ./my_index --port 30001
-
-# Claude Code插件
-pip install pixelrag
-claude plugin marketplace add StarTrail-org/PixelRAG
-claude plugin install pixelbrowse@pixelrag-plugins
-claude -p "screenshot https://news.ycombinator.com and summarize the top stories"
+# 本地部署预建索引（需～217G 磁盘）
+huggingface-cli download StarTrail-org/pixelrag-faiss-indexes \
+  --repo-type dataset --include "search_index_normed_v2/*" --local-dir ./index
+pip install 'pixelrag[serve]'
+pixelrag serve --index-dir ./index/search_index_normed_v2 --port 30001
 ```
-依赖：Python 3.10+, Chromium/Playwright自动安装。索引构建需CUDA GPU。

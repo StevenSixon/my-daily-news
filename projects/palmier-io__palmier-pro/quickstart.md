@@ -1,18 +1,29 @@
-### 前提条件
-- macOS 26 (Tahoe) 及以上
-- Apple Silicon (M系列芯片)
-- 可选：Claude Code / Cursor / Codex 用于AI协作
+## 安装
+- 系统要求：macOS 26 (Tahoe) ，Apple Silicon (M 系列芯片)
+- 下载：从 [GitHub Releases](https://github.com/palmier-io/palmier-pro/releases) 获取 `PalmierPro.dmg` 安装
+- 无需登录即可使用免费编辑器功能
 
-### 安装
-从 [Release 页面](https://github.com/palmier-io/palmier-pro/releases) 下载 `PalmierPro.dmg`，拖入应用文件夹打开。
+## 连接 AI 代理（MCP）
+启动应用后，MCP 服务自动运行于 `http://127.0.0.1:19789/mcp`。
 
-### 快速接入Agent
-1. 打开 Palmier Pro
-2. 在终端执行：
+**Claude Code**：
 ```bash
 claude mcp add --transport http palmier-pro http://127.0.0.1:19789/mcp
 ```
-3. 在Claude Code中尝试：“在当前时间线第0秒插入一个纯色背景，延长到8秒，并添加标题字幕”
-4. 观察编辑器中时间线实时变化
 
-Cursor 用户可在应用内 `Help` → `MCP Instructions` → `Install in Cursor` 完成配置。
+**Codex**：
+```bash
+codex mcp add palmier-pro --url http://127.0.0.1:19789/mcp
+```
+
+**Cursor**：应用内 `Help` → `MCP Instructions` → `Install in Cursor`，或手动配置 `~/.cursor/mcp.json`。
+
+## 最小可用示例
+1. 打开 Palmier Pro，新建或打开项目
+2. 在 Claude Code 中执行自然语言指令，例如：“在时间线 0 秒位置添加视频 example.mp4，裁剪开头 1 秒”
+3. AI 会通过 MCP 调用工具操作编辑器，结果即时反映在界面上
+
+## 依赖前提
+- 仅 macOS，无 Windows/Linux 支持
+- 需 Apple Silicon
+- AI 生成功能需订阅（其余功能免费）

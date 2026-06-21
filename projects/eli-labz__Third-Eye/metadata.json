@@ -12,7 +12,7 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "AI驱动的OSINT平台",
+  "classify_reason": "带 AI 代理的 OSINT 情报平台",
   "one_liner": "零配置GPU加速OSINT平台，聚合16种实时情报层",
   "why_worth_it": "集成13+公开情报源，自托管无需密钥，内置侦察套件，为OSINT分析师提供一站式态势感知。",
   "tags": [
@@ -30,13 +30,13 @@
     "RECON 工具的扫描器后端部署说明缺失，仅给出 SCANNER_URL 变量"
   ],
   "quality_flags": [],
-  "stars_total": 648,
+  "stars_total": 688,
   "created_at": "2026-06-13",
   "pushed_at": "2026-06-13",
   "latest_release": "Third-Eye",
   "first_seen": "2026-06-20",
   "last_seen": "2026-06-21",
-  "streak_days": 3,
+  "streak_days": 4,
   "analysis_updated_at": "2026-06-20T18:14:46+0800",
   "appearances": [
     {
@@ -57,6 +57,13 @@
       "date": "2026-06-21",
       "reason": "lightweight",
       "stars_total": 648,
+      "stars_gained": 0,
+      "release": "Third-Eye"
+    },
+    {
+      "date": "2026-06-21",
+      "reason": "lightweight",
+      "stars_total": 688,
       "stars_gained": 0,
       "release": "Third-Eye"
     }
