@@ -37,6 +37,7 @@ llm:
   model: deepseek-v4-pro
   temperature: 0.3
   max_tokens: 4000
+  timeout_seconds: 1800                 # 单次 LLM 调用超时（秒），防止进程无限挂起，默认 30 分钟
   fallback:                              # 主模型失败时按序降级（可留空 [])
     - { provider: deepseek, model: deepseek-chat }
 

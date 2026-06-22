@@ -116,6 +116,8 @@ def chat(messages: list[dict], *, system: str | None = None,
             "messages": messages,
             "temperature": cfg.get("temperature", 0.3),
             "max_tokens": (max_tokens or cfg.get("max_tokens", 4000)),
+            # 单次调用超时（秒）：防止进程在网络/休眠等异常下无限挂起。默认 30 分钟。
+            "timeout": cfg.get("timeout_seconds", 1800),
         }
         if is_reasoning:
             kwargs["max_tokens"] = kwargs["max_tokens"] + _reasoning_tokens

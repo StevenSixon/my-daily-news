@@ -18,10 +18,11 @@ name: Daily pipeline
 
 on:
   schedule:
-    # 22:30 UTC = 06:30 Asia/Shanghai (next day). GitHub cron is always UTC —
-    # adjust the offset for your timezone. Scheduled runs can be delayed by a
-    # few minutes under GitHub load; that is expected.
-    - cron: "30 22 * * *"
+    # 目标：飞书日报每天早上 8 点（北京时间）到货。
+    # 本 job 一次跑完 pipeline 再推送，约需几分钟；GitHub 定时还会有 5~15 分钟
+    # 排队延迟。故提前到 23:30 UTC（= 北京 07:30）触发，让推送落在 ~08:00 前后。
+    # GitHub cron 一律按 UTC；北京时间 = UTC + 8。
+    - cron: "30 23 * * *"
   workflow_dispatch: # lets you trigger a run manually from the Actions tab
 
 # Don't let two scheduled runs overlap and fight over the commit.
