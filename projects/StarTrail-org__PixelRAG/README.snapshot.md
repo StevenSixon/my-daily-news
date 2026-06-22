@@ -144,6 +144,8 @@ curl -X POST http://localhost:30001/search \
 
 ### Build an index from your own documents
 
+Works on **Linux (CUDA)** and **macOS (Apple Silicon / MPS)** — `device: auto` picks the best backend.
+
 ```bash
 pip install 'pixelrag[index]'
 
@@ -155,8 +157,7 @@ source:
 
 embed:
   model: Qwen/Qwen3-VL-Embedding-2B
-  device: cuda
-  gpu_ids: [0]
+  device: auto          # cuda on Linux, mps on macOS, cpu as fallback
 
 output: ./my_index
 EOF
@@ -166,6 +167,44 @@ pixelrag index build
 pixelrag serve --index-dir ./my_index --port 30001
 ```
 
+<details>
+<summary><strong>Try it: index a PDF and search it locally</strong></summary>
+
+No GPU required — runs on macOS (Apple Silicon) or any machine with Python 3.10+.
+
+```bash
+pip install 'pixelrag[index]'
+
+# 1. Grab a sample PDF (or use your own)
+curl -L -o paper.pdf https://raw.githubusercontent.com/StarTrail-org/PixelRAG/main/assets/pixelrag-paper.pdf
+
+# 2. Create config (device: auto picks MPS on Mac, CUDA on Linux)
+cat > pixelrag.yaml << 'EOF'
+source:
+  type: local
+  path: ./paper.pdf
+
+embed:
+  model: Qwen/Qwen3-VL-Embedding-2B
+  device: auto
+
+output: ./paper_index
+EOF
+
+# 3. Build the index (~3 min on Apple M-series, ~1 min on GPU)
+pixelrag index build
+
+# 4. Serve it
+pixelrag serve --index-dir ./paper_index --port 30001
+
+# 5. Search — should return page 2 (the overview diagram)
+curl -X POST http://localhost:30001/search \
+  -H "Content-Type: application/json" \
+  -d '{"queries": [{"text": "Overview of PixelRAG and the diagram"}], "n_docs": 1}'
+```
+
+</details>
+
 ### Render a page programmatically
 
 ```python
@@ -173,6 +212,20 @@ from pixelrag_render import render_url
 
 # render a single page to tiles — e.g. for an agent to read
 tiles = render_url("https://en.wikipedia.org/wiki/Python", "./tiles")
+```
+
+The same rendering is available as a CLI — `pixelshot` ships with `pip install pixelrag`:
+
+```bash
+# Web page → tiles (headless Chromium via CDP)
+pixelshot https://en.wikipedia.org/wiki/Python -o ./tiles
+
+# PDF → tiles (requires poppler; install the pdf extra: pip install 'pixelrag[pdf]')
+curl -sL -o paper.pdf https://arxiv.org/pdf/2503.09516
+pixelshot paper.pdf -o ./tiles --dpi 200
+
+# URLs and local files can be mixed freely
+pixelshot https://github.com/StarTrail-org/PixelRAG paper.pdf -o ./tiles
 ```
 
 ### Embed tools (standalone)
@@ -199,13 +252,8 @@ You don't need to retrain to use the model — the trained adapters are publishe
 We also release the full training set
 ([`Chrisyichuan/screenshot-training-natural-filtered-v2`](https://huggingface.co/datasets/Chrisyichuan/screenshot-training-natural-filtered-v2)),
 so you can adapt other backbones yourself — a larger Qwen, or any other embedding model.
-
-### Data Curation
-
-Visualization of some very early version of the training data:
-[early training data viewer](https://yichuan-w.github.io/share/blog-review-first100-light/)
-
-Reproduce: TBD
+The data curation pipeline (LLM-augmented query generation, filtering, hard-negative mining)
+is documented in [`train/docs/synthetic_data_pipeline.md`](train/docs/synthetic_data_pipeline.md).
 
 ## Acknowledgments
 

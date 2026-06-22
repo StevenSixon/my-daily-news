@@ -17,7 +17,7 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "为编码代理设计的开发沙盒",
+  "classify_reason": "自托管开发沙箱，为编码代理设计",
   "one_liner": "一句话命令自托管隔离沙箱、AI编码代理和实时预览URL",
   "why_worth_it": "省去数月平台搭建：多租户隔离/按需休眠/代理编排/预览URL一体化，单机高密度低成本，胜过手写脚本",
   "tags": [
@@ -35,19 +35,26 @@
     "沙箱默认的资源限制（内存/PID 上限）未明确"
   ],
   "quality_flags": [],
-  "stars_total": 678,
+  "stars_total": 680,
   "created_at": "2026-06-03",
   "pushed_at": "2026-06-16",
   "latest_release": "0.1.1",
   "first_seen": "2026-06-21",
-  "last_seen": "2026-06-21",
-  "streak_days": 1,
+  "last_seen": "2026-06-22",
+  "streak_days": 2,
   "analysis_updated_at": "2026-06-21T19:00:22+0800",
   "appearances": [
     {
       "date": "2026-06-21",
       "reason": "new",
       "stars_total": 678,
+      "stars_gained": 0,
+      "release": "0.1.1"
+    },
+    {
+      "date": "2026-06-22",
+      "reason": "lightweight",
+      "stars_total": 680,
       "stars_gained": 0,
       "release": "0.1.1"
     }

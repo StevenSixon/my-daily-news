@@ -16,7 +16,7 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "Guard skills for coding agents (code review quality gates)",
+  "classify_reason": "编码代理的守卫技能，捕捉 AI 生成代码的失败模式",
   "one_liner": "专查 AI 生成代码/测试/文档常见缺陷的质量门禁套件",
   "why_worth_it": "针对 LLM 输出特有的幻觉、过度抽象、安全绕过等问题做第二道审查，比通用 linter 更贴 AI 故障模式，适合用 AI 写代码的开发者",
   "tags": [
@@ -34,19 +34,26 @@
     "缺少对守卫运行耗时或资源消耗的描述"
   ],
   "quality_flags": [],
-  "stars_total": 840,
+  "stars_total": 868,
   "created_at": "2026-06-06",
-  "pushed_at": "2026-06-07",
+  "pushed_at": "2026-06-20",
   "latest_release": null,
   "first_seen": "2026-06-20",
-  "last_seen": "2026-06-20",
-  "streak_days": 1,
+  "last_seen": "2026-06-22",
+  "streak_days": 2,
   "analysis_updated_at": "2026-06-20T18:16:25+0800",
   "appearances": [
     {
       "date": "2026-06-20",
       "reason": "new",
       "stars_total": 840,
+      "stars_gained": 0,
+      "release": null
+    },
+    {
+      "date": "2026-06-22",
+      "reason": "lightweight",
+      "stars_total": 868,
       "stars_gained": 0,
       "release": null
     }

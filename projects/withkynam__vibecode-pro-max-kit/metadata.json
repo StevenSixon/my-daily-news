@@ -27,7 +27,7 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "Vibe Coding 套件，面向实际构建",
+  "classify_reason": "规范驱动的编码 harness，含自我改进上下文记忆与多代理",
   "one_liner": "给 AI 编程代理装上“记忆”和计划驱动工作流，防止上下文丢失和胡乱编码。",
   "why_worth_it": "解决 AI 代理容易遗忘目标、丢失上下文、直接跳进代码造成混乱的问题；面向 vibe coder 和团队，比同类更强调自修复和自主决策。",
   "tags": [
@@ -44,19 +44,26 @@
     "安装脚本对网络依赖的具体要求（如源地址可达性）未说明"
   ],
   "quality_flags": [],
-  "stars_total": 956,
+  "stars_total": 958,
   "created_at": "2026-05-27",
   "pushed_at": "2026-06-21",
   "latest_release": "v3.2.5",
   "first_seen": "2026-06-21",
-  "last_seen": "2026-06-21",
-  "streak_days": 1,
+  "last_seen": "2026-06-22",
+  "streak_days": 2,
   "analysis_updated_at": "2026-06-21T18:59:48+0800",
   "appearances": [
     {
       "date": "2026-06-21",
       "reason": "new",
       "stars_total": 956,
+      "stars_gained": 0,
+      "release": "v3.2.5"
+    },
+    {
+      "date": "2026-06-22",
+      "reason": "lightweight",
+      "stars_total": 958,
       "stars_gained": 0,
       "release": "v3.2.5"
     }

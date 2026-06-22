@@ -1,6 +1,933 @@
 {
   "editions": [
     {
+      "date": "2026-06-22",
+      "count": 8,
+      "projects": [
+        {
+          "id": "mattpocock__skills",
+          "fullName": "mattpocock/skills",
+          "owner": "mattpocock",
+          "name": "skills",
+          "url": "https://github.com/mattpocock/skills",
+          "oneLiner": "一套可组合的工程技能，专治AI编码代理的对齐、啰嗦、质量与架构退化四大顽疾",
+          "description": "Skills for Real Engineers. Straight from my .claude directory.",
+          "language": "Shell",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 139791,
+          "starsGained": 1443,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-02-03",
+          "pushedAt": "2026-06-18",
+          "latestRelease": "v1.0.1",
+          "firstSeen": "2026-06-22",
+          "topics": [],
+          "appearances": [
+            {
+              "date": "2026-06-22",
+              "reason": "new",
+              "starsTotal": 139791,
+              "starsGained": 1443,
+              "release": "v1.0.1"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "Matt Pocock 从自己日常使用的 .claude 目录中提炼出的一组小型、可组合的代理技能（Skills）。这些技能不是“氛围编码”的快捷方式，而是基于数十年工程经验设计的重复性工作流，帮助开发者在与编码代理（如 Claude Code、Codex）协作时保持对齐、质量和设计纪律。项目包含十几个技能，分为工程、生产力、杂项三类，且分为用户主动调用（如 /grill-me）和模型自动触发两种模式。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "Star 数高达 139k，因为精准击中了 AI 辅助编码的四大常见失败模式： 1. 代理不理解用户真正想要什么 → 通过深入的“烧烤会话（grilling）”对齐意图； 2. 代理输出过于啰嗦 → 建立共享语言（领域术语表、CONTEXT.md），让沟通与代码命名高度一致； 3. 生成的代码不工作 → 引入红-绿-重构的 TDD 循环和系统化调试流程； 4. 代码库迅速变成泥球 → 主动投资于设计，用“改进代码架构”技能定期重构，强调深模块和清晰接缝。 这些理念源自《程序员修炼之道》《领域驱动设计》等经典，以极低成本给予开发者控制权，因此迅速获得大量关注。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "技能实质为 Markdown 文本文件，通过 npx skills@latest CLI 工具分发和安装",
+                "依赖 Node.js 运行时（使用 npx，需预先安装）",
+                "官方支持与 Claude Code 深度集成，但设计上宣称“与任何模型兼容”，推测通过将技能文件加载到代理的上下文中工作",
+                "仓库本身采用 Shell 脚本辅助安装，语言标签为 Shell"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "意愿对齐：/grill-me 和 /grill-with-docs 系统化追问需求，同时构建领域模型和共享语言",
+                "共享语言构建：/domain-modeling 主动挑战术语，更新 CONTEXT.md 和架构决策记录，减少多义词和冗长表述",
+                "TDD 循环：/tdd 强制执行红-绿-重构，指导如何写出有效的测试",
+                "结构化调试：/diagnosing-bugs 提供复现→最小化→假设→插装→修复→回归测试的闭环",
+                "架构演进：/improve-codebase-architecture 扫描代码库，生成可视化报告并深度讨论改进点",
+                "任务拆分：/to-issues 将计划按垂直切片分解为独立可领取的议题",
+                "教学与知识传递：/teach 支持多会话教学，强调组件复用"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "body": "适用于使用 AI 编码代理进行严肃软件开发的工程师，尤其关注长期可维护性和团队协作的中大型项目。无论是新项目启动前的需求讨论，还是老代码库的架构救火，都能找到对应技能。也适合希望提升代理输出质量、减少沟通成本的个人开发者。"
+            },
+            {
+              "heading": "同类对比",
+              "bullets": [
+                "vs. GSD/BMAD/Spec-Kit：后者是企图掌控整个开发流程的重量级方法论，常剥夺开发者控制权且难以定位 bug；本技能集则保持“小而美”，可任意组合、修改，与现有流程无缝嫁接。",
+                "vs. 零散提示词：提供经过验证的结构化循环，而非一次性提示，强调“每日投资设计”，效果更持久。",
+                "独特优势：将经典软件工程原则（领域驱动设计、持续重构、TDD）适配到人机协作新范式，可视为“AI 时代的工程纪律工具箱”。"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "---",
+              "bullets": [
+                "最新版本 v1.0.1（2026-06-17）引入教学技能的重用优先设计，强制代理先读取 ./assets/ 中的可复用组件再编写课程。",
+                "项目维护活跃，作者坐拥约 6 万 newsletter 订阅者，定期推送更新。",
+                "当前 GitHub Star 数 139k，社区关注度极高。"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：未说明技能文件具体以何种技术机制注入不同编码代理（除 Claude Code 外的集成细节缺乏）；skills.sh 安装器的内部实现与跨平台兼容性未提及；无与其他方法（如 GSD）的效果对比数据或性能基准；是否支持非 Node.js 环境或纯 Web 代理未说明"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mukul975__Anthropic-Cybersecurity-Skills",
+          "fullName": "mukul975/Anthropic-Cybersecurity-Skills",
+          "owner": "mukul975",
+          "name": "Anthropic-Cybersecurity-Skills",
+          "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
+          "oneLiner": "754结构化安全技能，五框架映射，跨26+AI平台",
+          "description": "754 structured cybersecurity skills for AI agents · Mapped to 5 frameworks: MITRE ATT&CK, NIST CSF 2.0, MITRE ATLAS, D3FEND & NIST AI RMF · agentskills.io standard · Works with Claude Code, GitHub Copilot, Codex CLI, Cursor, Gemini CLI & 20+ platforms · 26 security domains · Apache 2.0",
+          "language": "Python",
+          "category": "AI 应用",
+          "license": "Apache-2.0",
+          "starsTotal": 17714,
+          "starsGained": 361,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-02-25",
+          "pushedAt": "2026-06-20",
+          "latestRelease": "v1.2.0",
+          "firstSeen": "2026-06-22",
+          "topics": [
+            "ai-agents",
+            "claude-code",
+            "cloud-security",
+            "cybersecurity",
+            "devsecops",
+            "ethical-hacking",
+            "incident-response",
+            "infosec",
+            "llm",
+            "malware-analysis",
+            "mcp",
+            "mitre-attack",
+            "nist-csf",
+            "osint",
+            "penetration-testing",
+            "red-team",
+            "security",
+            "security-automation",
+            "threat-hunting",
+            "threat-intelligence"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-22",
+              "reason": "new",
+              "starsTotal": 17714,
+              "starsGained": 361,
+              "release": "v1.2.0"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "Anthropic Cybersecurity Skills 是一个面向AI代理的开源网络安全技能库，包含 754个结构化安全技能，覆盖26个安全领域。每个技能遵循 [agentskills.io](https://agentskills.io) 开放标准，使用 YAML 前置元数据 + 结构化 Markdown 描述实际安全专家的操作流程。核心区别在于：它不是脚本或检查清单，而是专为AI代理设计的可执行知识。 该库将每一个技能同时映射到6个安全框架：MITRE ATT&CK、NIST CSF 2.0、MITRE ATLAS、MITRE D3FEND、NIST AI RMF 以及 MITRE F3（欺诈框架），实现跨框架统一覆盖，这是目前唯一一个做到这点的开源项目。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "全球网络安全岗位缺口达480万（ISC2 2024），AI代理被认为能弥补能力缺口，但通用LLM缺乏领域专用操作流程。该仓库直接提供一线分析师的决策工作流：何时、如何执行特定技术，前置条件、步骤与验证方法，而不仅仅是工具或漏洞利用代码。自发布以来迅速获得 17.7k Star，被广泛用于 Claude Code、GitHub Copilot 等主流AI编码助手及安全代理平台，因其开箱即用和多框架合规映射能力受到安全团队青睐。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "技能格式：agentskills.io 标准，每个技能为独立的 Markdown 文件，包含 YAML frontmatter 声明元数据（如 mitre_attack, nist_csf, atlas_techniques 等）。",
+                "仓库结构：主要为文档型仓库；标注语言为 Python（可能包含少量验证脚本），但核心价值在于结构化内容，不依赖特定运行时。",
+                "集成方式：通过 npx skills add 或 git clone 即可为支持的 AI 代理平台提供知识注入。",
+                "验证：利用 mitreattack-python 等库确保框架ID的正确性（如 ATT&CK v19.1），所有映射均经过官方数据源校验。"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "26个安全领域全覆盖：云安全（60）、威胁狩猎（55）、恶意软件分析（39）、数字取证（37）、渗透测试（23）等，每个领域提供数十个实战技能。",
+                "六框架深度映射：单个技能可同时关联攻击行为（ATT&CK）、防御对策（D3FEND）、AI对抗威胁（ATLAS）、风险管理（NIST AI RMF）等，满足合规与防御双重需求。",
+                "AI原生工作流：技能结构包含前置条件、执行步骤、验证方法，可直接被AI代理解析并执行，而非简单的工具描述。",
+                "跨平台兼容：支持 26+ 个AI代理平台，包括 Claude Code、GitHub Copilot、Cursor、Windsurf、OpenAI Codex CLI、Gemini CLI 等。"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "安全运营中心（SOC）：借助AI代理快速进行告警研判、日志分析、事件响应，提升效率。",
+                "红队/渗透测试：构建自动化攻击模拟工作流，并参照 ATT&CK 进行战术映射。",
+                "云安全治理：针对 AWS/Azure/GCP 的加固与合规检查，自动生成修复建议。",
+                "AI安全开发：为自研安全Agent或Copilot提供专业知识库，减少从零构建的成本。",
+                "学术研究：用于研究AI代理在网络安全任务中的表现，或作为教育训练材料的来源。"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "body": "| 项目 | 定位 | 与本报库区别 | |------|------|------------| | Atomic Red Team | ATT&CK 测试用例 | 提供可执行测试脚本，但非AI代理可读的工作流级技能，且无多框架映射。 | | Sigma 规则库 | SIEM检测规则 | 专注于检测逻辑，缺少操作流程、框架映射，不面向AI代理。 | | Awesome Security Lists | 资源索引 | 链接集合，无结构化技能定义，无法直接注入AI代理。 | | 本库 | AI代理知识库 | 唯一将安全技能结构化并跨六大框架映射的AI原生知识库。 |"
+            },
+            {
+              "heading": "版本动态",
+              "body": "---",
+              "bullets": [
+                "v1.2.0（2026-04-06）：新增 MITRE ATLAS v5.5、MITRE D3FEND v1.3、NIST AI RMF 1.0 的映射，实现五项框架覆盖。每个 SKILL.md 添加了专门的框架字段。",
+                "MITRE F3 集成：随后引入 MITRE 反欺诈框架 (F3) v1.1，增加 94 个欺诈相关技能映射，覆盖“定位”和“获利”两大新战术。",
+                "持续更新：项目保持与 ATT&CK v19.1 等框架版本同步，skill 数量维持在 754 个，但映射随框架演进不断修订。"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：未提供技能在AI代理中的具体执行示例或配置流程，仅说明通过 npx skills add 添加后即可适配。；技能内容的具体深度未展示（如单个技能 Markdown 的完整结构示例），无法评估实际工作流的粒度。；未说明是否包含自动化测试或验证工具，来保证技能的质量与时效性。"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "yb2460__harness-anything",
+          "fullName": "yb2460/harness-anything",
+          "owner": "yb2460",
+          "name": "harness-anything",
+          "url": "https://github.com/yb2460/harness-anything",
+          "oneLiner": "让AI Agent直接操控WPS/Office/Adobe/Zotero的Windows COM工具集",
+          "description": "Harness Anything - AI agent control hub: WPS, MS Office, Zotero, Photoshop, 47 CLI commands, 27 academic skills, SVG-to-PPTX",
+          "language": "Python",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 858,
+          "starsGained": 0,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-05-27",
+          "pushedAt": "2026-06-12",
+          "latestRelease": "",
+          "firstSeen": "2026-06-22",
+          "topics": [
+            "ai-agent",
+            "automation",
+            "cli",
+            "cli-anything",
+            "com",
+            "office",
+            "python",
+            "windows",
+            "wps"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-22",
+              "reason": "new",
+              "starsTotal": 858,
+              "starsGained": 0,
+              "release": ""
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "一个针对Windows平台的AI Agent控制中枢（harness），通过COM自动化接口将WPS/Microsoft Office、Zotero、Adobe Illustrator、Adobe Photoshop等桌面软件封装为统一的CLI命令，供AI Agent或脚本直接调用。包含47个办公命令、27个学术研究Skill，以及矢量/位图设计操控能力。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "满足“让LLM操作真实软件”的硬需求：多数AI集成仅靠API或模拟输入，本项目通过成熟的COM接口直接驱动本地应用，可靠性和功能完整性更高。集办公、学术、设计于一体，一次性解决多个场景的Agent工具需求，且以MIT协议开源，Star增长迅速。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "语言：Python 3.10+",
+                "核心依赖：pywin32（COM桥接）、Click（CLI框架）",
+                "操控目标：WPS Office 2019+ 或 MS Office 2016+、Zotero 7+、Adobe Illustrator 2023+、Adobe Photoshop 2023+",
+                "运行环境：Windows 10/11"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "WPS/Office操控：Writer/Calc/Impress全功能操作，包括段落、表格、图表、公式、导出为DOCX/PDF/PPTX等，内置4套PPT设计预设和14种布局，支持质量审查。",
+                "Zotero学术智能体：27个Skill覆盖文献检索、写作、审稿、可视化、分析及完整学术流水线。",
+                "Illustrator操控：新建文档、图层管理、矢量图形绘制（矩形/椭圆/线条/多边形）、文字添加与样式、导出为SVG/PNG/PDF等。",
+                "Photoshop操控：PSD项目操作、图层/选区/图像调整、文字图层、滤镜、导出为PNG/JPEG/WebP/PSD。",
+                "数据驱动PPT生成：JSON数据输入，13种元素类型自动路由，生成多页高质量演示文稿（附5校招生数据案例）。"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "AI Agent需要直接操作Office文档生成报告、演示文稿",
+                "学术研究人员快速完成文献综述、系统评价、期刊图表制作",
+                "自动化设计流水线：LOGO生成、海报批量制作、图像处理",
+                "教育或招生场景下的数据报告自动PPT输出"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "body": "与纯API方案（如通过OpenAI生成Office文档）相比，本项目直接操控本地软件，效果更可控、排版更精确；与UiPath等RPA工具相比，定位更垂直、更轻量，专为Agent设计。与单一软件操控库（如python-pptx）相比，统一CLI且覆盖软件更多，但受COM依赖限制，仅Windows可用。"
+            },
+            {
+              "heading": "版本动态",
+              "body": "---",
+              "bullets": [
+                "项目创建于2026-05-27，最新推送2026-06-12，处于活跃开发初期。",
+                "当前版本已整合WPS/Office/Zotero/Illustrator/Photoshop五大模块，CLI命令基本完备。",
+                "未来可能补充更多Adobe软件操控或跨平台能力（README未说明）。"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：SVG-to-PPTX功能在README中未见具体实现方式或命令；项目根目录结构与各子模块的实际路径未完全展示，安装指引中的相对路径需用户自行匹配；未说明WPS/MS Office COM自动化在多线程或远程环境下的稳定性与限制；未提及是否支持Microsoft 365云版本或Office Online；Adobe软件操控仅支持Windows且需对应版本，未给出错误处理或降级方案"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "OtterMind__Nubase",
+          "fullName": "OtterMind/Nubase",
+          "owner": "OtterMind",
+          "name": "Nubase",
+          "url": "https://github.com/OtterMind/Nubase",
+          "oneLiner": "AI 原生后端平台，让 AI 生成的代码分钟级上线",
+          "description": "🔥🔥🔥 Turn AI-written code into real apps. Nubase is an open-source, AI-native backend platform for AI Coding, agentic applications, and modern product teams: Memory, Database, Storage, and Auth in one self-hostable service.",
+          "language": "Java",
+          "category": "AI 应用",
+          "license": "Apache-2.0",
+          "starsTotal": 393,
+          "starsGained": 0,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-06-08",
+          "pushedAt": "2026-06-21",
+          "latestRelease": "v0.1.4",
+          "firstSeen": "2026-06-22",
+          "topics": [
+            "agent",
+            "ai",
+            "ai-agents",
+            "claude-code",
+            "cli",
+            "deno",
+            "memory",
+            "openclaw",
+            "opencode",
+            "pgvector",
+            "postgresql",
+            "postgrest",
+            "rag",
+            "skill",
+            "supabase",
+            "supabase-auth"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-22",
+              "reason": "new",
+              "starsTotal": 393,
+              "starsGained": 0,
+              "release": "v0.1.4"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "Nubase 是一个开源、AI 原生的后端平台，专为 AI 编码代理和现代产品团队设计。它把数据库、认证、存储、静态资产、边缘函数、AI 网关、记忆和定时任务八个模块打包成一个可自托管的服务。与 Supabase 类似，但强调多项目隔离、内置记忆（Mem0 风格）和面向 AI 代理的 MCP 工具链。"
+            },
+            {
+              "heading": "为什么火",
+              "bullets": [
+                "AI 编码的“最后一公里”：传统 AI 生成代码后仍需手动部署、配置后端，Nubase 让代理通过 MCP 工具直接创建表、部署函数、发布前端、设置定时任务，实现“生成即上线”。",
+                "记忆系统开箱即用：不像大多数后端把向量存储当作外挂，Nubase 将用户记忆、实体提取、混合检索作为核心原语，非常适合构建个性化 Agent 应用。",
+                "真正的多项目自托管：Supabase 自托管版通常模拟单项目，Nubase 的一个控制平面可管理多个孤立项目数据库，对 AI 公司或自由职业者自建基础设施更友好。"
+              ]
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "后端：Java 17 + Spring Boot + Maven",
+                "数据库：PostgreSQL 15 + pgvector（每个项目独立数据库）",
+                "REST API：PostgREST 兼容层（Java 实现）",
+                "存储：兼容 S3（支持 Cloudflare R2、MinIO、AWS S3）",
+                "边缘函数：本地执行器或 Cloudflare Workers for Platforms",
+                "Studio：Next.js + pnpm",
+                "CLI：npm 包 nubase_cli，通过 MCP 连接 Claude Code、Codex 等代理",
+                "部署：Docker 一体化镜像（内置 PostgreSQL + Redis + 后端 + Studio）"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "数据库与认证：每个项目独立 PostgreSQL，Supabase 风格的用户管理、JWT、RLS、角色和 OAuth/SAML 支持。",
+                "记忆（Memory）：支持 LLM 事实提取（新增/更新/删除）、混合检索（pgvector + 全文搜索 + 实体加权）、追加历史记录。",
+                "静态资源与函数：能直接通过 MCP 部署前端到公共 CDN（/assets/v1），部署边缘函数（/functions/v1）并设置定时 cron 作业。",
+                "AI 网关：兼容 OpenAI/Anthropic 的端点，提供项目级 API 密钥和用量追踪。",
+                "代理集成：一行命令 npx nubase_cli install-skills 为 Claude Code 或 Codex 安装技能和 MCP 配置，授权后代理即可全面操控平台。"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "AI 生成应用的快速交付：从自然语言描述直接生成全栈应用并上线，适合 PoC 或内部工具。",
+                "个性化 AI Agent 开发：需要长期记忆、用户画像的聊天机器人、教练、助手等应用。",
+                "多租户 SaaS 或项目工作室：需要在单一基础设施上为多个客户或项目提供完全隔离的后端服务。",
+                "自建 Supabase 替代品：希望保留开源、自托管，但需要多项目管理和 AI 特色功能（记忆、MCP）的团队。"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "body": "| 特性 | Supabase 自托管 | Nubase | |------|----------------|--------| | 多项目仪表板 | 无（仅模拟单项目） | 有 | | 项目数据库隔离 | 仅一个本地项目 | 每个项目独立 PG 库 | | 内置记忆 | 无（需自己搭建） | 内置混合检索记忆原语 | | 面向 AI 代理的 MCP | 无 | 完整 MCP 工具（建表、部署函数、发布资产等） | | 部署生成应用 | 需要额外配置托管、函数、定时任务 | 内置资产 CDN + 函数 + cron | | 边缘函数 | 支持 | 支持（本地或 Cloudflare WfP） | | 实时订阅 | 可用 | 暂未提供 |"
+            },
+            {
+              "heading": "版本动态",
+              "body": "当前最新版本 v0.1.4（2026-06-16），功能已较完整，包含 CLI、Docker 一体化部署、MCP 集成等。文档较丰富，涵盖快速上手、代理连接、部署指南、架构说明、Supabase 对比等。社区尚在早期，Star 数 393，但更新活跃（最新推送 2026-06-21）。 ---"
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：未提供实际 benchmark 或性能数据；没有明确的多项目资源隔离的安全细节；未说明企业级部署的高可用/扩展方案；未提供与其他后端（如 Appwrite、Convex）的详细对比"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Dong90__oh-my-taiyiforge",
+          "fullName": "Dong90/oh-my-taiyiforge",
+          "owner": "Dong90",
+          "name": "oh-my-taiyiforge",
+          "url": "https://github.com/Dong90/oh-my-taiyiforge",
+          "oneLiner": "把六套AI工程标准编排成一条可执行、可审计的九阶段研发流水线",
+          "description": "AI workflow automation plugin for intelligent code generation with Claude/Codex",
+          "language": "TypeScript",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 413,
+          "starsGained": 0,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-06-05",
+          "pushedAt": "2026-06-22",
+          "latestRelease": "v0.28.1",
+          "firstSeen": "2026-06-22",
+          "topics": [
+            "ai",
+            "automation",
+            "code-generation",
+            "developer-tools",
+            "llm",
+            "plugin",
+            "typescript",
+            "workflow"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-22",
+              "reason": "new",
+              "starsTotal": 413,
+              "starsGained": 0,
+              "release": "v0.28.1"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "TaiyiForge（太一炉）是一个 AI 工作流自动化插件，面向严肃使用 AI 做项目的团队。它把 Harness、OpenSpec、GStack、Superpowers、OMO、Spec-Kit 六套工程标准编排成一个状态机，提供九阶段研发主流程（从需求、设计、开发到测试、审查、集成），并通过人类门控和引擎自动校验来保证质量。核心交互方式是一组跨 Claude、Codex、Cursor、OpenCode 四端一致的 slash 命令（v28 共 28 条），让开发者无需记忆阶段顺序或工具差异。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "1. 统一多端体验：同一套 Skill 和命令在四款主流 AI 编码工具中行为一致，降低团队学习成本。 2. 解决真实痛点：长会话上下文爆炸、Agent 跳阶段写代码、小修复被迫走全流程等问题都有针对性设计（如令牌精简、复杂度推荐、条件跳过）。 3. 工程化门控：关键阶段要求 --approver 人类确认，自动生成审计日志 activity.jsonl，满足严肃交付的可追溯性需求。 4. 轻量零安装：支持 npx taiyi-forge-install --all 一键部署，无需克隆仓库。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "主要语言：TypeScript",
+                "运行环境：Node ≥20",
+                "架构模式：聊天轨（slash 命令）+ 引擎轨（CLI 校验/门控）+ MCP（只读排障）",
+                "集成目标：Claude Code、Codex、Cursor、OpenCode",
+                "测试：Vitest、Playwright（端到端冒烟）",
+                "工件格式：Markdown 文档驱动，.taiyi/changes/<slug>/ 作为真源"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "九阶段流水线：change → requirement → design → ui-design → task → dev → test → review → integration，每个阶段生成标准工件。",
+                "28 条跨平台斜杠命令：覆盖主链（new/status/write/continue）、会话管理、排障、交付、路由、捷径及 6 个伞形命令组（token、test、review、diagram、mode、workflow）。",
+                "智能状态与引导：/taiyi:status 返回当前阶段、推荐 Skill、下一步动作，/taiyi:new 自动创建 slug 并引导填写 CHANGE.md。",
+                "复杂度自适应：根据变更复杂度推荐 profile，低复杂度可放宽 quality gate，小修复可走 lite 路径。",
+                "跨会话续接：支持 pause/resume，累积上下文 phase-context.ts，避免上下文丢失。",
+                "门控与审计：人类门控（change/design/review）强制审批，全流程生成 activity.jsonl 审计日志，交付前 audit 校验。",
+                "Token 优化：new/continue 指令从 50 行精简到 1 行，长会话支持 token compress 生成 CONTEXT-COMPACT.md。"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "使用 AI 编码（Claude/Codex/Cursor）的研发团队，希望规范化需求→交付流程。",
+                "需要多端统一工作流，避免按工具重新培训。",
+                "追求严肃交付质量，需要可追溯的决策记录和人工审批节点。",
+                "已有部分标准化资产（如 Superpowers、OpenSpec），希望编排成一条龙。"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "body": "区别于单一的 AI 编码助手或 prompt 框架，TaiyiForge 定位为“编排器”而非新标准创造者。它不替代 Harness、OpenSpec 等已有规范，而是将其组合成可执行的状态机。与直接使用 spec-kit 或 open-spec 相比，它提供：统一的跨工具命令界面、自动阶段推进与门控、会话续接、以及人类审批集成。比零散的 Skills 组合更系统，比全流程平台更轻量。"
+            },
+            {
+              "heading": "版本动态",
+              "body": "最新 v0.28.1（2026-06-22）主要修复 CI 问题（Playwright 安装、vitest 超时、覆盖率容错）。v0.28.0 带来多项核心优化：复杂度推荐、auto-approver 配置、条件跳过 UI 设计、智能状态显示（具体命令+耗时）、低复杂度质量门放宽、审计日志、累积上下文、仪表板增强、令牌大幅精简等。项目活跃度高，Star 数 413，持续演进中。 ---"
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：未提供性能基准数据（如大型项目下的阶段执行耗时）；未能说明铁三角（Harness/OpenSpec/GStack 等）的具体集成深度和版本兼容性；未提及多语言支持现状（README 双语但工具本身是否支持国际化）；同类工具横向对比细节有限，仅在方案理念中提及编排对象"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "StarTrail-org__PixelRAG",
+          "fullName": "StarTrail-org/PixelRAG",
+          "owner": "StarTrail-org",
+          "name": "PixelRAG",
+          "url": "https://github.com/StarTrail-org/PixelRAG",
+          "oneLiner": "把网页/文档变截图直接搜，彻底扔掉文本解析。",
+          "description": "The end of web parsing. The beginning of scalable pixel-native search.",
+          "language": "Python",
+          "category": "AI 应用",
+          "license": "Apache-2.0",
+          "starsTotal": 2526,
+          "starsGained": 0,
+          "streakDays": 3,
+          "isNew": false,
+          "createdAt": "2026-05-29",
+          "pushedAt": "2026-06-22",
+          "latestRelease": "chrome-150.0.7844.0",
+          "firstSeen": "2026-06-21",
+          "topics": [
+            "agent",
+            "ai",
+            "memory",
+            "multimodal",
+            "rag",
+            "search",
+            "searchengine",
+            "vision",
+            "vlm"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-21",
+              "reason": "new",
+              "starsTotal": 1155,
+              "starsGained": 0,
+              "release": "chrome-150.0.7844.0"
+            },
+            {
+              "date": "2026-06-21",
+              "reason": "star_jump",
+              "starsTotal": 1737,
+              "starsGained": 0,
+              "release": "chrome-150.0.7844.0"
+            },
+            {
+              "date": "2026-06-22",
+              "reason": "star_jump",
+              "starsTotal": 2526,
+              "starsGained": 0,
+              "release": "chrome-150.0.7844.0"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "PixelRAG 将文档（网页、PDF、图片）渲染为截图，直接在图像嵌入上做检索增强生成，不打散成文字。表格、图表、排版等视觉结构被完整保留。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "传统 RAG 把网页解析为文本，会丢失表格与复杂布局，导致无法回答依赖图表的问题。PixelRAG 用截图绕过解析，直接对视觉内容建立索引并检索。开源即提供 828 万 Wikipedia 页面的在线搜索 API 和可下载的 FAISS 索引，零门槛体验。"
+            },
+            {
+              "heading": "技术栈",
+              "body": "Python 生态：Playwright/CDP 截图，Qwen3-VL-Embedding-2B 模型（LoRA 微调）生成视觉向量，FAISS 构建索引，FastAPI 提供搜索服务。渲染和索引分别作为独立命令 pixelshot 与 pixelrag。"
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "通用文档渲染：网页、PDF、本地图片→标准截图瓦片",
+                "视觉索引管道：截图分组、嵌入、构建 FAISS 索引",
+                "多模态检索：支持文本或图像查询，返回相关截图瓦片",
+                "Claude Code 插件：让 Claude 直接「看」网页截图，无需解析 HTML",
+                "预建大规模索引：Wikipedia 8.28M 页面索引可下载或直接 API 调用",
+                "本地自建索引：支持 Linux (CUDA) 与 macOS (Apple Silicon)，自动选设备"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "需要理解表格、图表、信息图的知识型问答",
+                "对 HTML 解析不友好的网站内容归档与检索",
+                "多模态 Agent 的视觉“眼睛”（如 Claude 插件场景）",
+                "企业内部文档（PDF、网页抓取）的视觉搜索"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "body": "相对于 LlamaIndex、Unstructured 等纯文本 RAG 管道，保留布局信息，能直接回答“图中第几行”之类的问题。相比用通用 VLM 做全图检索，PixelRAG 使用专门微调的视觉嵌入模型，效率更高且可做大规模索引。"
+            },
+            {
+              "heading": "版本动态",
+              "body": "最新 Release 为 chrome-150.0.7844.0 (2026-06-01)，修复了 headless_shell 的 CDP 原始文件路径。项目整体处于活跃开发阶段，提供在线 Demo 和 API。 ---"
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：README 未披露与文本 RAG 的定量对比数据（准确率、召回率等）；嵌入模型训练集规模、评估细节未在 README 中展开；大规模索引服务的资源消耗、延迟未说明"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "topoteretes__cognee",
+          "fullName": "topoteretes/cognee",
+          "owner": "topoteretes",
+          "name": "cognee",
+          "url": "https://github.com/topoteretes/cognee",
+          "oneLiner": "自托管知识图谱驱动的AI代理持久记忆平台",
+          "description": "Cognee is the open-source AI memory platform for agents. Give your AI agents persistent long-term memory across sessions with a self-hosted knowledge graph engine.",
+          "language": "Python",
+          "category": "AI 应用",
+          "license": "Apache-2.0",
+          "starsTotal": 18648,
+          "starsGained": 347,
+          "streakDays": 2,
+          "isNew": false,
+          "createdAt": "2023-08-16",
+          "pushedAt": "2026-06-21",
+          "latestRelease": "v1.2.1",
+          "firstSeen": "2026-06-21",
+          "topics": [
+            "agent-memory",
+            "agent-skills",
+            "ai",
+            "ai-agents",
+            "ai-memory",
+            "cognitive-architecture",
+            "cognitive-memory",
+            "context-engineering",
+            "contributions-welcome",
+            "good-first-issue",
+            "good-first-pr",
+            "graph-database",
+            "graph-rag",
+            "help-wanted",
+            "knowledge",
+            "knowledge-graph",
+            "memory-management",
+            "open-source",
+            "vector-database"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-21",
+              "reason": "new",
+              "starsTotal": 18381,
+              "starsGained": 361,
+              "release": "v1.2.0"
+            },
+            {
+              "date": "2026-06-22",
+              "reason": "release_update",
+              "starsTotal": 18648,
+              "starsGained": 347,
+              "release": "v1.2.1"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "Cognee 是一个开源的 AI 记忆平台，专为 AI 代理设计。它通过自托管的知识图谱引擎，将任意格式的数据转化为可持久化的长期记忆，让代理在不同会话间保持上下文、建立关联并进行推理。核心思路是把“记忆”变成可查询、可演化的知识结构，而不仅仅是向量搜索。"
+            },
+            {
+              "heading": "为什么火",
+              "bullets": [
+                "解决 AI 代理“失忆”痛点：多数 LLM 应用只在会话内保持上下文，Cognee 提供了跨会话的持久记忆层。",
+                "知识图谱 vs 纯向量：向量检索仅基于语义相似度，而图谱能捕获实体关系、推演事实，记忆更结构化、可解释。",
+                "自托管、数据私有：企业可在本地部署，确保数据不外泄，适合合规场景。",
+                "开发体验友好：提供 Python SDK、CLI、Docker 一键启动，以及 Claude Code 等代理的原生插件。"
+              ]
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "核心语言：Python（3.10-3.14）",
+                "记忆存储：知识图谱（支持 Neo4j、PGVector 等） + 向量数据库（可插拔）",
+                "LLM 集成：需用户配置 LLM 提供商，通过环境变量 LLM_API_KEY 接入，支持 OpenAI 等（可扩展）",
+                "部署方式：本地 pip 安装、Docker 容器、Docker Compose 多服务编排",
+                "辅助工具：MCP 服务器、Web UI（索引状态、搜索预览）、Claude Code 插件"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "记忆操作基本原语：remember（存储）、recall（检索，自动选择最佳搜索策略）、forget（删除）、improve（反馈学习）",
+                "会话级高速记忆：支持 session_id，先查会话缓存再回退到持久图谱，延迟更低",
+                "自动图谱构建：摄取文本后，自动抽取实体、关系，生成本体，并与向量嵌入结合",
+                "多模态支持：宣称支持多模态数据（文档未详述具体格式）",
+                "生产级可靠性：后台同步、错误恢复、租户/用户隔离、审计追踪（OTEL）",
+                "代理集成：即插即用的 Claude Code 插件，自动捕获工具调用、注入记忆上下文"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "客服代理：统一客户历史交互、工单、产品信息，让代理理解全貌并推荐解决方案",
+                "专家知识蒸馏：如 SQL Copilot，存储专家查询模式、表结构，帮助初级分析师复用经验",
+                "个人 AI 助理：记录用户偏好、任务历史，实现个性化长期交互",
+                "企业知识中台：连接不同数据源，构建可查询、可推理的统一知识库"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "bullets": [
+                "LangChain 内存模块：侧重于会话缓冲和摘要，缺乏结构化图谱和跨会话持久化推理。",
+                "MemGPT / Letta：引入“虚拟上下文管理”，但更偏操作系统式内存分页，Cognee 强调图谱构建和本体演化。",
+                "纯向量数据库（如 Chroma、Pinecone 辅以 RAG）：只能返回语义相近内容，无法显式建模实体间关系。Cognee 同时提供图+向量双重索引，更适合需要关系推理的场景。"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "最新 v1.2.1（2026-06-21）专注可靠性和搜索改进： 这表明项目正在快速迭代，逐步从可用走向生产就绪。 ---",
+              "bullets": [
+                "优化了通用查询的搜索结果排序",
+                "新增索引状态指示器，避免用户对缺失结果的困惑",
+                "后台同步更健壮，减少更新延迟和丢失",
+                "SDK 可更优雅地从网络瞬断中恢复",
+                "UI 错误提示更清晰"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：具体的多模态支持格式未说明；未提供与其他记忆方案的性能基准对比；图数据库选型细节（如 Neo4j 连接配置）在核心文档里简略；LLM 提供商的具体适配名单未在 README 中展开；推理能力（如多步推理）的实际评估数据缺失"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "vercel__eve",
+          "fullName": "vercel/eve",
+          "owner": "vercel",
+          "name": "eve",
+          "url": "https://github.com/vercel/eve",
+          "oneLiner": "基于文件系统约定的 TypeScript AI 代理框架，Vercel 出品",
+          "description": "The Framework for Building Agents",
+          "language": "TypeScript",
+          "category": "AI 应用",
+          "license": "Apache-2.0",
+          "starsTotal": 2075,
+          "starsGained": 0,
+          "streakDays": 7,
+          "isNew": false,
+          "createdAt": "2026-06-16",
+          "pushedAt": "2026-06-22",
+          "latestRelease": "eve@0.12.0",
+          "firstSeen": "2026-06-19",
+          "topics": [
+            "agent",
+            "framework",
+            "harness",
+            "javascript",
+            "markdown",
+            "sandbox",
+            "typescript",
+            "vercel",
+            "workflows"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-19",
+              "reason": "new",
+              "starsTotal": 1561,
+              "starsGained": 0,
+              "release": "eve@0.11.7"
+            },
+            {
+              "date": "2026-06-20",
+              "reason": "lightweight",
+              "starsTotal": 1572,
+              "starsGained": 0,
+              "release": "eve@0.11.7"
+            },
+            {
+              "date": "2026-06-20",
+              "reason": "lightweight",
+              "starsTotal": 1734,
+              "starsGained": 0,
+              "release": "eve@0.11.7"
+            },
+            {
+              "date": "2026-06-20",
+              "reason": "release_update",
+              "starsTotal": 1782,
+              "starsGained": 0,
+              "release": "eve@0.11.8"
+            },
+            {
+              "date": "2026-06-21",
+              "reason": "release_update",
+              "starsTotal": 1853,
+              "starsGained": 0,
+              "release": "eve@0.11.10"
+            },
+            {
+              "date": "2026-06-21",
+              "reason": "lightweight",
+              "starsTotal": 1930,
+              "starsGained": 0,
+              "release": "eve@0.11.10"
+            },
+            {
+              "date": "2026-06-22",
+              "reason": "release_update",
+              "starsTotal": 2075,
+              "starsGained": 0,
+              "release": "eve@0.12.0"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "eve 是 Vercel 推出的文件系统优先的 TypeScript 框架，用于构建持久化的 AI 代理（agent）。它强制将代理的核心能力——指令、工具、技能、通道、定时任务——落入约定的目录结构，使项目可直接通过文件树理解行为，降低认知负担。"
+            },
+            {
+              "heading": "为什么火",
+              "bullets": [
+                "Vercel 背书：依托 Vercel 的开发者生态和设计哲学，与 Next.js 一脉相承的“约定优于配置”体验。",
+                "零胶水起步：一个 instructions.md 加可选工具函数即可运行，初始化命令自动搭建项目。",
+                "开发友好：本地 eve dev 提供交互式终端，支持动态模块热重载，模型与工具变更即时生效。",
+                "可扩展性：内置通道（HTTP、Slack、Discord）、定时任务、子代理等机制，覆盖常见 AI 应用场景。"
+              ]
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "语言：TypeScript（Node.js 运行环境）",
+                "核心依赖：Zod（输入校验）、Vercel AI SDK（模型集成，推测）",
+                "执行模型：本地进程执行工具/skill，可选沙箱隔离（文档提及 sandbox）",
+                "分发方式：npm 包，脚手架通过 npx eve@latest init 使用"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "body": "1. 指令系统：instructions.md 作为持久化系统提示词，支持 Markdown 语法，模型始终可见。 2. 工具定义：TypeScript 函数通过 defineTool 暴露给模型，使用 Zod 声明输入格式，同步或异步执行。 3. 技能：按需加载的 Markdown 过程描述或程序模块，适合多步工作流。 4. 通道：声明式接入 Slack、Discord 等外部消息接口，统一消息路由。 5. 定时任务：类似 Cron 的周期性动作，用 TypeScript 定义。 6. 模型灵活：通过 agent.ts 切换提供商（如 Anthropic Claude），支持代码级模型解析与动态导入。 7. 子代理与动态映射：可嵌套代理，动态工具映射支持命名空间隔离，避免冲突。"
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "个人助理或聊天机器人（支持多通道）",
+                "自动化工作流（定时任务 + 工具调用）",
+                "需要快速原型的多步骤 AI 应用",
+                "希望代码与配置分离、利于团队协作的项目"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "bullets": [
+                "vs. LangChain/LlamaIndex：eve 不提供庞大的工具链和 RAG 抽象，而是聚焦文件和约定，更轻量、侵入性更低。",
+                "vs. AutoGen/ CrewAI：后者侧重多代理对话编排，eve 以单代理内嵌工具、技能和子代理方式实现，更贴近传统应用开发。",
+                "独特性：全文件驱动，开发体验极简，天然适合作为 AI 能力嵌入现有 Node.js 项目。"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "---",
+              "bullets": [
+                "最新版本：0.12.0（2026-06-21）",
+                "关键变更：动态工具映射的 key 不再自动添加文件标识前缀，改为使用原始名称，若冲突需手动命名空间；连接器工具按 <connection>__<tool> 格式重命名。修复了 eve dev 下代码定义模型的解析问题，子代理可复用父级模块映射以避免重复构建。",
+                "发展阶段：仍处 Beta，API 和行为可能变动，遵循 Vercel Beta 条款。"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：medium",
+                "信息盲区：未提供性能 benchmark 或与其他框架的量化对比；支持的模型提供商列表未在 README 中完全列出（仅示例为 Anthropic）；沙箱执行的具体隔离技术栈（如 Docker、Node.js vm 等）未说明；生产部署方式（是否仅限 Vercel 或可自托管）未明确；子代理间通信与状态共享的具体实现细节缺失"
+              ]
+            }
+          ]
+        }
+      ],
+      "news": [
+        {
+          "title": "Samsung Electronics brings ChatGPT and Codex to employees",
+          "url": "https://openai.com/index/samsung-electronics-chatgpt-codex-deployment",
+          "source": "OpenAI",
+          "sourceType": "official",
+          "published": "2026-06-21",
+          "summary": "三星向全球员工部署 ChatGPT Enterprise 和 Codex，为 OpenAI 最大规模企业推广之一。",
+          "category": "产品"
+        },
+        {
+          "title": "Identity verification on Claude",
+          "url": "https://support.claude.com/en/articles/14328960-identity-verification-on-claude",
+          "source": "Hacker News",
+          "sourceType": "community",
+          "published": "2026-06-21",
+          "summary": "Claude 平台上线身份验证功能。",
+          "category": "产品"
+        },
+        {
+          "title": "Apertus – Open Foundation Model for Sovereign AI",
+          "url": "https://apertvs.ai/",
+          "source": "Hacker News",
+          "sourceType": "community",
+          "published": "2026-06-21",
+          "summary": "Apertus 开源基础模型发布，面向主权 AI。",
+          "category": "模型发布"
+        },
+        {
+          "title": "Local LLM Inference Optimization: The Complete Guide",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uc3wg9/local_llm_inference_optimization_the_complete/",
+          "source": "r/LocalLLaMA",
+          "sourceType": "community",
+          "published": "2026-06-21",
+          "summary": "发布本地 LLM 推理优化完整指南，涵盖 llama.cpp 调优等多方面。",
+          "category": "工程"
+        },
+        {
+          "title": "Not a new model, just a Happy Father's Day and a thank you.",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1ubzzib/not_a_new_model_just_a_happy_fathers_day_and_a/",
+          "source": "r/LocalLLaMA",
+          "sourceType": "community",
+          "published": "2026-06-21",
+          "summary": "社区成员在 Father's Day 向本地 LLM 社区表达感谢。",
+          "category": "其他"
+        }
+      ]
+    },
+    {
       "date": "2026-06-21",
       "count": 8,
       "projects": [
@@ -20,7 +947,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-01-10",
-          "pushedAt": "2026-06-21",
+          "pushedAt": "2026-06-22",
           "latestRelease": "v3.23.0",
           "firstSeen": "2026-06-21",
           "topics": [
@@ -38,6 +965,13 @@
               "reason": "new",
               "starsTotal": 43816,
               "starsGained": 519,
+              "release": "v3.23.0"
+            },
+            {
+              "date": "2026-06-22",
+              "reason": "lightweight",
+              "starsTotal": 44486,
+              "starsGained": 568,
               "release": "v3.23.0"
             }
           ],
@@ -118,7 +1052,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2025-05-07",
-          "pushedAt": "2026-06-21",
+          "pushedAt": "2026-06-22",
           "latestRelease": "",
           "firstSeen": "2026-06-21",
           "topics": [
@@ -147,6 +1081,13 @@
               "reason": "new",
               "starsTotal": 72200,
               "starsGained": 415,
+              "release": ""
+            },
+            {
+              "date": "2026-06-22",
+              "reason": "lightweight",
+              "starsTotal": 72594,
+              "starsGained": 442,
               "release": ""
             }
           ],
@@ -231,7 +1172,7 @@
           "isNew": true,
           "createdAt": "2023-08-16",
           "pushedAt": "2026-06-21",
-          "latestRelease": "v1.2.0",
+          "latestRelease": "v1.2.1",
           "firstSeen": "2026-06-21",
           "topics": [
             "agent-memory",
@@ -261,70 +1202,83 @@
               "starsTotal": 18381,
               "starsGained": 361,
               "release": "v1.2.0"
+            },
+            {
+              "date": "2026-06-22",
+              "reason": "release_update",
+              "starsTotal": 18648,
+              "starsGained": 347,
+              "release": "v1.2.1"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "Cognee 是一个开源的 AI 记忆平台，为 AI Agent 提供跨会话的持久长期记忆。它通过自托管的知识图谱引擎，混合向量嵌入与图推理，将各种格式的数据转化为可搜索、可关联的记忆，帮助 Agent 随时回忆、推理并基于完整上下文行动。"
+              "body": "Cognee 是一个开源的 AI 记忆平台，专为 AI 代理设计。它通过自托管的知识图谱引擎，将任意格式的数据转化为可持久化的长期记忆，让代理在不同会话间保持上下文、建立关联并进行推理。核心思路是把“记忆”变成可查询、可演化的知识结构，而不仅仅是向量搜索。"
             },
             {
               "heading": "为什么火",
-              "body": "Star 数近 1.8 万，反映了开发者对 Agent 记忆基础设施的强烈需求。传统 LLM 应用缺乏持久记忆，每次会话都丢失上下文，Cognee 填补了这一空白，且采用自托管方式，数据隐私可控，适合构建企业级“公司大脑”。"
+              "bullets": [
+                "解决 AI 代理“失忆”痛点：多数 LLM 应用只在会话内保持上下文，Cognee 提供了跨会话的持久记忆层。",
+                "知识图谱 vs 纯向量：向量检索仅基于语义相似度，而图谱能捕获实体关系、推演事实，记忆更结构化、可解释。",
+                "自托管、数据私有：企业可在本地部署，确保数据不外泄，适合合规场景。",
+                "开发体验友好：提供 Python SDK、CLI、Docker 一键启动，以及 Claude Code 等代理的原生插件。"
+              ]
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "语言：Python（支持 3.10～3.14）",
-                "存储：同时使用图数据库（如 Neo4j、LanceDB 图模式）和向量数据库（如 LanceDB、Qdrant 等），构建知识图谱与向量索引",
-                "LLM：可插拔多种 LLM 提供商（OpenAI 等），用于内容理解、本体生成和问答",
-                "部署：支持本地运行、Docker、Modal、Railway、Fly.io、Render 等多种一键部署方式",
-                "认知科学：引入本体生成，从认知科学角度组织知识，使记忆更具推理能力"
+                "核心语言：Python（3.10-3.14）",
+                "记忆存储：知识图谱（支持 Neo4j、PGVector 等） + 向量数据库（可插拔）",
+                "LLM 集成：需用户配置 LLM 提供商，通过环境变量 LLM_API_KEY 接入，支持 OpenAI 等（可扩展）",
+                "部署方式：本地 pip 安装、Docker 容器、Docker Compose 多服务编排",
+                "辅助工具：MCP 服务器、Web UI（索引状态、搜索预览）、Claude Code 插件"
               ]
             },
             {
               "heading": "核心能力",
               "bullets": [
-                "记忆操作：remember（存储）、recall（查询）、forget（删除）、improve（智能蒸馏优化）",
-                "双存储模式：持久知识图谱 + 会话级快速缓存，后台异步同步",
-                "智能蒸馏：自动合并重复信息、提炼关键知识点，并可视化标记蒸馏节点",
-                "多源摄取：支持任意格式文档、对话等数据，自动构建图谱关系",
-                "Agent 集成：提供 Claude Code 插件、OpenClaw 插件、MCP 服务器，可直接接入现有 Agent 工作流",
-                "安全与隔离：用户/租户级数据隔离、API 认证、审计跟踪（OTEL 采集）"
+                "记忆操作基本原语：remember（存储）、recall（检索，自动选择最佳搜索策略）、forget（删除）、improve（反馈学习）",
+                "会话级高速记忆：支持 session_id，先查会话缓存再回退到持久图谱，延迟更低",
+                "自动图谱构建：摄取文本后，自动抽取实体、关系，生成本体，并与向量嵌入结合",
+                "多模态支持：宣称支持多模态数据（文档未详述具体格式）",
+                "生产级可靠性：后台同步、错误恢复、租户/用户隔离、审计追踪（OTEL）",
+                "代理集成：即插即用的 Claude Code 插件，自动捕获工具调用、注入记忆上下文"
               ]
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "客户支持 Agent：联合财务、产品、客服等多渠道数据，随时回忆历史案例和解决策略",
-                "专家知识蒸馏：将资深员工的查询模式、工作流自动化存储，帮助初级员工达到接近专家的水平",
-                "企业知识库：构建公司级别的记忆底座，供各类内部 Agent 共享上下文",
-                "任何需要长期记忆的 AI 应用：如个人助理、研究助手、代码助手等"
+                "客服代理：统一客户历史交互、工单、产品信息，让代理理解全貌并推荐解决方案",
+                "专家知识蒸馏：如 SQL Copilot，存储专家查询模式、表结构，帮助初级分析师复用经验",
+                "个人 AI 助理：记录用户偏好、任务历史，实现个性化长期交互",
+                "企业知识中台：连接不同数据源，构建可查询、可推理的统一知识库"
               ]
             },
             {
               "heading": "同类对比",
-              "body": "对比纯粹的向量记忆（如 mem0、LangChain 的 ConversationBufferMemory），Cognee 的核心差异在于：",
               "bullets": [
-                "知识图谱 + 向量双引擎：不仅能语义搜索，还能推理实体关系，生成结构化知识",
-                "认知驱动本体：基于认知科学自动生成领域本体，而不仅仅是存储原始文本片段",
-                "自托管优先：数据完全留在本地或私有云，适合企业合规要求",
-                "完整的记忆生命周期：从摄取、存储到蒸馏优化和遗忘，形成闭环"
+                "LangChain 内存模块：侧重于会话缓冲和摘要，缺乏结构化图谱和跨会话持久化推理。",
+                "MemGPT / Letta：引入“虚拟上下文管理”，但更偏操作系统式内存分页，Cognee 强调图谱构建和本体演化。",
+                "纯向量数据库（如 Chroma、Pinecone 辅以 RAG）：只能返回语义相近内容，无法显式建模实体间关系。Cognee 同时提供图+向量双重索引，更适合需要关系推理的场景。"
               ]
             },
             {
               "heading": "版本动态",
-              "body": "---",
+              "body": "最新 v1.2.1（2026-06-21）专注可靠性和搜索改进： 这表明项目正在快速迭代，逐步从可用走向生产就绪。 ---",
               "bullets": [
-                "v1.2.0（2026-06-21）：主要增加了智能会话蒸馏（自动优化知识）、可视化改进、更严格的安全默认配置（公共注册默认关闭）、LLM/Embedding 的鲁棒性修复、Session 管理组件拆分；内部重构使流程更清晰；重要环境变量重命名（如 LLM_MAX_TOKENS → LLM_MAX_COMPLETION_TOKENS），需注意兼容性。",
-                "后续路线图：README 未披露，但项目活跃，社区驱动。"
+                "优化了通用查询的搜索结果排序",
+                "新增索引状态指示器，避免用户对缺失结果的困惑",
+                "后台同步更健壮，减少更新延迟和丢失",
+                "SDK 可更优雅地从网络瞬断中恢复",
+                "UI 错误提示更清晰"
               ]
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
                 "置信度：high",
-                "信息盲区：无基准测试数据（如检索延迟、图谱构建速度）；未明确具体支持的图数据库和向量数据库默认实现及切换方式；缺少安全审计或合规认证说明；未提及与同类工具（如Mem0、Zep）的详细对比"
+                "信息盲区：具体的多模态支持格式未说明；未提供与其他记忆方案的性能基准对比；图数据库选型细节（如 Neo4j 连接配置）在核心文档里简略；LLM 提供商的具体适配名单未在 README 中展开；推理能力（如多步推理）的实际评估数据缺失"
               ]
             }
           ]
@@ -375,6 +1329,13 @@
               "date": "2026-06-21",
               "reason": "new",
               "starsTotal": 956,
+              "starsGained": 0,
+              "release": "v3.2.5"
+            },
+            {
+              "date": "2026-06-22",
+              "reason": "lightweight",
+              "starsTotal": 958,
               "starsGained": 0,
               "release": "v3.2.5"
             }
@@ -480,6 +1441,13 @@
               "starsTotal": 678,
               "starsGained": 0,
               "release": "0.1.1"
+            },
+            {
+              "date": "2026-06-22",
+              "reason": "lightweight",
+              "starsTotal": 680,
+              "starsGained": 0,
+              "release": "0.1.1"
             }
           ],
           "analysis": [
@@ -563,7 +1531,7 @@
           "streakDays": 6,
           "isNew": false,
           "createdAt": "2026-04-07",
-          "pushedAt": "2026-06-20",
+          "pushedAt": "2026-06-22",
           "latestRelease": "v0.3.5",
           "firstSeen": "2026-06-19",
           "topics": [
@@ -616,6 +1584,13 @@
               "reason": "star_jump",
               "starsTotal": 4041,
               "starsGained": 902,
+              "release": "v0.3.5"
+            },
+            {
+              "date": "2026-06-22",
+              "reason": "lightweight",
+              "starsTotal": 5186,
+              "starsGained": 1834,
               "release": "v0.3.5"
             }
           ],
@@ -701,7 +1676,7 @@
           "streakDays": 2,
           "isNew": false,
           "createdAt": "2026-05-29",
-          "pushedAt": "2026-06-20",
+          "pushedAt": "2026-06-22",
           "latestRelease": "chrome-150.0.7844.0",
           "firstSeen": "2026-06-21",
           "topics": [
@@ -729,67 +1704,61 @@
               "starsTotal": 1737,
               "starsGained": 0,
               "release": "chrome-150.0.7844.0"
+            },
+            {
+              "date": "2026-06-22",
+              "reason": "star_jump",
+              "starsTotal": 2526,
+              "starsGained": 0,
+              "release": "chrome-150.0.7844.0"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "PixelRAG 是一个将网页、PDF、图片等文档渲染为截图，并直接在图像上进行向量检索与生成回答的系统。它保留了传统文本解析会丢弃的表格、图表、布局等视觉结构。"
+              "body": "PixelRAG 将文档（网页、PDF、图片）渲染为截图，直接在图像嵌入上做检索增强生成，不打散成文字。表格、图表、排版等视觉结构被完整保留。"
             },
             {
               "heading": "为什么火",
-              "body": "2026 年 5 月发布后迅速获得 1.7k+ 星，原因在于它用截图替代了文本分块这一 RAG 的核心范式，提供了 828 万维基百科页面的预建索引和开箱即用的公共搜索 API，并内置 Claude Code 插件让 AI 直接“看图”。"
+              "body": "传统 RAG 把网页解析为文本，会丢失表格与复杂布局，导致无法回答依赖图表的问题。PixelRAG 用截图绕过解析，直接对视觉内容建立索引并检索。开源即提供 828 万 Wikipedia 页面的在线搜索 API 和可下载的 FAISS 索引，零门槛体验。"
             },
             {
               "heading": "技术栈",
-              "bullets": [
-                "渲染：Playwright CDP + 定制 headless shell",
-                "嵌入：基于 Qwen3‑VL‑Embedding‑2B 的 LoRA 微调模型，专用于网页截图检索",
-                "索引与搜索：FAISS（支持 CPU/GPU）+ FastAPI",
-                "管道：Python CLI（pixelrag） + 独立训练环境（uv + PyTorch）",
-                "分布：PyPI 包 pixelrag，预训练权重与数据集托管在 HuggingFace"
-              ]
+              "body": "Python 生态：Playwright/CDP 截图，Qwen3-VL-Embedding-2B 模型（LoRA 微调）生成视觉向量，FAISS 构建索引，FastAPI 提供搜索服务。渲染和索引分别作为独立命令 pixelshot 与 pixelrag。"
             },
             {
               "heading": "核心能力",
               "bullets": [
-                "pixelshot：将任意 URL 或文档渲染为截图瓦片",
-                "视觉搜索：通过文本或图片查询 FAISS 索引，返回最相关的页面截图",
-                "Claude Code 插件：pixelbrowse 让 Claude 直接截图并阅读页面，无需解析 HTML",
-                "全流程自建：支持从本地文档源 → 切片 → 嵌入 → 索引 → 服务的完整构建",
-                "训练可复现：开放 LoRA 训练适配器和训练集，可基于其他视觉骨干模型微调"
+                "通用文档渲染：网页、PDF、本地图片→标准截图瓦片",
+                "视觉索引管道：截图分组、嵌入、构建 FAISS 索引",
+                "多模态检索：支持文本或图像查询，返回相关截图瓦片",
+                "Claude Code 插件：让 Claude 直接「看」网页截图，无需解析 HTML",
+                "预建大规模索引：Wikipedia 8.28M 页面索引可下载或直接 API 调用",
+                "本地自建索引：支持 Linux (CUDA) 与 macOS (Apple Silicon)，自动选设备"
               ]
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "需要理解图表、表格、布局的多模态 RAG 应用",
-                "面向网页视觉信息的 AI Agent 或问答系统",
-                "以“页面长相”为线索的语义搜索系统"
+                "需要理解表格、图表、信息图的知识型问答",
+                "对 HTML 解析不友好的网站内容归档与检索",
+                "多模态 Agent 的视觉“眼睛”（如 Claude 插件场景）",
+                "企业内部文档（PDF、网页抓取）的视觉搜索"
               ]
             },
             {
               "heading": "同类对比",
-              "bullets": [
-                "相比 文本块 RAG（如 LangChain + 分块）：文本 RAG 丢失表格等可视化结构；PixelRAG 直接保留完整视觉信息",
-                "相比 多模态检索方案（如 ColPali）：PixelRAG 更强调开箱即用的网页渲染管道和庞大的预建索引，并提供 Claude Code 集成",
-                "独特优势：免费的 828 万维基百科搜索 API，极低上手门槛"
-              ]
+              "body": "相对于 LlamaIndex、Unstructured 等纯文本 RAG 管道，保留布局信息，能直接回答“图中第几行”之类的问题。相比用通用 VLM 做全图检索，PixelRAG 使用专门微调的视觉嵌入模型，效率更高且可做大规模索引。"
             },
             {
               "heading": "版本动态",
-              "body": "---",
-              "bullets": [
-                "最新 Release：chrome‑150.0.7844.0（2026‑06‑01），修复 CDP 后端",
-                "仓库创建于 2026‑05‑29，截至 2026‑06‑20 仍在活跃提交",
-                "文档中 Data Curation 部分标注“Reproduce: TBD”，可能尚未提供完整的数据重现流程"
-              ]
+              "body": "最新 Release 为 chrome-150.0.7844.0 (2026-06-01)，修复了 headless_shell 的 CDP 原始文件路径。项目整体处于活跃开发阶段，提供在线 Demo 和 API。 ---"
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
                 "置信度：high",
-                "信息盲区：未提供与文本 RAG 或其他视觉检索方案的定量基准数据（如召回率、延迟）；自建索引的存储与计算开销只有公开索引的 217G 信息，未给出通用估算；PDF 渲染的支持细节和格式限制未在 README 中展开；训练数据集的详细描述和 LoRA 适配器性能指标散落在外部 HuggingFace 页面；Data Curation 的重现步骤标注为 TBD，存在未完成部分"
+                "信息盲区：README 未披露与文本 RAG 的定量对比数据（准确率、召回率等）；嵌入模型训练集规模、评估细节未在 README 中展开；大规模索引服务的资源消耗、延迟未说明"
               ]
             }
           ]
@@ -847,6 +1816,13 @@
               "date": "2026-06-21",
               "reason": "release_update",
               "starsTotal": 544,
+              "starsGained": 0,
+              "release": "v0.5.2"
+            },
+            {
+              "date": "2026-06-22",
+              "reason": "lightweight",
+              "starsTotal": 551,
               "starsGained": 0,
               "release": "v0.5.2"
             }
@@ -1467,6 +2443,13 @@
               "starsTotal": 915,
               "starsGained": 0,
               "release": ""
+            },
+            {
+              "date": "2026-06-22",
+              "reason": "lightweight",
+              "starsTotal": 919,
+              "starsGained": 0,
+              "release": ""
             }
           ],
           "analysis": [
@@ -1660,7 +2643,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-06-12",
-          "pushedAt": "2026-06-19",
+          "pushedAt": "2026-06-21",
           "latestRelease": "v4.7.0",
           "firstSeen": "2026-06-19",
           "topics": [
@@ -1694,6 +2677,13 @@
               "date": "2026-06-20",
               "reason": "lightweight",
               "starsTotal": 40908,
+              "starsGained": 0,
+              "release": "v4.7.0"
+            },
+            {
+              "date": "2026-06-22",
+              "reason": "lightweight",
+              "starsTotal": 46152,
               "starsGained": 0,
               "release": "v4.7.0"
             }
@@ -1779,8 +2769,8 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-06-16",
-          "pushedAt": "2026-06-21",
-          "latestRelease": "eve@0.11.10",
+          "pushedAt": "2026-06-22",
+          "latestRelease": "eve@0.12.0",
           "firstSeen": "2026-06-19",
           "topics": [
             "agent",
@@ -1835,57 +2825,73 @@
               "starsTotal": 1930,
               "starsGained": 0,
               "release": "eve@0.11.10"
+            },
+            {
+              "date": "2026-06-22",
+              "reason": "release_update",
+              "starsTotal": 2075,
+              "starsGained": 0,
+              "release": "eve@0.12.0"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "eve 是 Vercel 发布的文件系统优先 AI Agent 框架。项目结构为中心：指令、工具、技能、消息频道、定时任务都对应到 agent/ 目录下的具体文件，构造即文档。"
+              "body": "eve 是 Vercel 推出的文件系统优先的 TypeScript 框架，用于构建持久化的 AI 代理（agent）。它强制将代理的核心能力——指令、工具、技能、通道、定时任务——落入约定的目录结构，使项目可直接通过文件树理解行为，降低认知负担。"
             },
             {
               "heading": "为什么火",
-              "body": "发布初期 Star 增长快，Vercel 官方背书。用 Markdown 写系统提示、TypeScript 定义工具，贴合前端/全栈开发者习惯。本地开发 TUI 完善，降低原型验证门槛。"
+              "bullets": [
+                "Vercel 背书：依托 Vercel 的开发者生态和设计哲学，与 Next.js 一脉相承的“约定优于配置”体验。",
+                "零胶水起步：一个 instructions.md 加可选工具函数即可运行，初始化命令自动搭建项目。",
+                "开发友好：本地 eve dev 提供交互式终端，支持动态模块热重载，模型与工具变更即时生效。",
+                "可扩展性：内置通道（HTTP、Slack、Discord）、定时任务、子代理等机制，覆盖常见 AI 应用场景。"
+              ]
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "语言：TypeScript，运行在 Node.js",
-                "模式系统：通过 Zod 定义工具输入 schema，类型安全",
-                "模型接口：通过 Vercel AI SDK 对接多模型（示例使用 anthropic/claude-sonnet-4.6）",
-                "架构：基于文件系统的约定，无额外抽象层"
+                "语言：TypeScript（Node.js 运行环境）",
+                "核心依赖：Zod（输入校验）、Vercel AI SDK（模型集成，推测）",
+                "执行模型：本地进程执行工具/skill，可选沙箱隔离（文档提及 sandbox）",
+                "分发方式：npm 包，脚手架通过 npx eve@latest init 使用"
               ]
             },
             {
               "heading": "核心能力",
-              "bullets": [
-                "文件系统约定：instructions.md 作为系统提示，tools/ 下每个 .ts 文件导出一个工具，skills/ 按需加载，channels/ 定义消息接入（HTTP、Slack），schedules/ 定义 cron 任务",
-                "本地开发体验：eve dev 启动交互式 TUI，支持多行输入、Ctrl+C 取消、提示动画",
-                "动态技能加载：技能可返回映射，按命名约定注册，支持 load_skill 及可用技能列表回显",
-                "人机交互：支持 ask_question 等自由形式的中途人工介入",
-                "子代理与频道：通过目录结构支持子代理定义，频道层可对接主流通讯工具"
-              ]
+              "body": "1. 指令系统：instructions.md 作为持久化系统提示词，支持 Markdown 语法，模型始终可见。 2. 工具定义：TypeScript 函数通过 defineTool 暴露给模型，使用 Zod 声明输入格式，同步或异步执行。 3. 技能：按需加载的 Markdown 过程描述或程序模块，适合多步工作流。 4. 通道：声明式接入 Slack、Discord 等外部消息接口，统一消息路由。 5. 定时任务：类似 Cron 的周期性动作，用 TypeScript 定义。 6. 模型灵活：通过 agent.ts 切换提供商（如 Anthropic Claude），支持代码级模型解析与动态导入。 7. 子代理与动态映射：可嵌套代理，动态工具映射支持命名空间隔离，避免冲突。"
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "需要完全控制代码、方便团队协作的内部 AI 助手",
-                "嵌入现有 TypeScript 项目的聊天机器人、自动化工作流",
-                "追求可审计、可版本管理的 Agent 部署"
+                "个人助理或聊天机器人（支持多通道）",
+                "自动化工作流（定时任务 + 工具调用）",
+                "需要快速原型的多步骤 AI 应用",
+                "希望代码与配置分离、利于团队协作的项目"
               ]
             },
             {
               "heading": "同类对比",
-              "body": "与 LangChain 相比，eve 更轻量且强约定，适合不想花时间设计链式逻辑的团队。对比 CrewAI（多 Agent Python 框架），eve 目前更聚焦单 Agent 和 TypeScript 生态，Vercel 集成优势明显。但生态和社区资源尚不如前两者。"
+              "bullets": [
+                "vs. LangChain/LlamaIndex：eve 不提供庞大的工具链和 RAG 抽象，而是聚焦文件和约定，更轻量、侵入性更低。",
+                "vs. AutoGen/ CrewAI：后者侧重多代理对话编排，eve 以单代理内嵌工具、技能和子代理方式实现，更贴近传统应用开发。",
+                "独特性：全文件驱动，开发体验极简，天然适合作为 AI 能力嵌入现有 Node.js 项目。"
+              ]
             },
             {
               "heading": "版本动态",
-              "body": "eve@0.11.10 主要优化了 CLI 输出（进度动画改为单行），修复了动态技能在单条目/多条目时的命名一致性问题，并为 TUI 增加了多行输入和取消操作改进。 ---"
+              "body": "---",
+              "bullets": [
+                "最新版本：0.12.0（2026-06-21）",
+                "关键变更：动态工具映射的 key 不再自动添加文件标识前缀，改为使用原始名称，若冲突需手动命名空间；连接器工具按 <connection>__<tool> 格式重命名。修复了 eve dev 下代码定义模型的解析问题，子代理可复用父级模块映射以避免重复构建。",
+                "发展阶段：仍处 Beta，API 和行为可能变动，遵循 Vercel Beta 条款。"
+              ]
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
-                "置信度：high",
-                "信息盲区：模型 API key 管理方式未在 README 中明确说明（推测依赖环境变量）；生产部署架构未详细描述（是否依赖 Vercel 平台或可自托管）；无性能基准数据或资源消耗参考；动态 skill 的内部加载机制未公开；subagents 和 channels 的具体实现细节需要参考完整文档"
+                "置信度：medium",
+                "信息盲区：未提供性能 benchmark 或与其他框架的量化对比；支持的模型提供商列表未在 README 中完全列出（仅示例为 Anthropic）；沙箱执行的具体隔离技术栈（如 Docker、Node.js vm 等）未说明；生产部署方式（是否仅限 Vercel 或可自托管）未明确；子代理间通信与状态共享的具体实现细节缺失"
               ]
             }
           ]
@@ -1906,7 +2912,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-06-11",
-          "pushedAt": "2026-06-21",
+          "pushedAt": "2026-06-22",
           "latestRelease": "v0.2.0",
           "firstSeen": "2026-06-19",
           "topics": [
@@ -1967,6 +2973,13 @@
               "date": "2026-06-21",
               "reason": "lightweight",
               "starsTotal": 4245,
+              "starsGained": 0,
+              "release": "v0.2.0"
+            },
+            {
+              "date": "2026-06-22",
+              "reason": "lightweight",
+              "starsTotal": 4324,
               "starsGained": 0,
               "release": "v0.2.0"
             }
@@ -2089,6 +3102,13 @@
               "reason": "lightweight",
               "starsTotal": 6213,
               "starsGained": 1012,
+              "release": ""
+            },
+            {
+              "date": "2026-06-22",
+              "reason": "lightweight",
+              "starsTotal": 6300,
+              "starsGained": 1272,
               "release": ""
             }
           ],

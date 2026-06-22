@@ -16,32 +16,32 @@
   ],
   "license": "Apache-2.0",
   "category": "AI 应用",
-  "classify_reason": "构建代理的框架",
-  "one_liner": "基于文件系统约定的 TypeScript Agent 框架，代码即配置。",
-  "why_worth_it": "为 TypeScript 项目提供可版本管理、清晰约定的 Agent 架构，降低自定义 Agent 的工程成本。",
+  "classify_reason": "构建代理的框架（Vercel）",
+  "one_liner": "基于文件系统约定的 TypeScript AI 代理框架，Vercel 出品",
+  "why_worth_it": "用约定目录替代胶水代码，让代理项目结构清晰、易于维护，适合想快速搭建可观察、可扩展 AI 应用的团队",
   "tags": [
     "Agent框架",
     "TypeScript",
-    "文件系统优先",
+    "本地优先",
     "Vercel"
   ],
-  "confidence": "high",
+  "confidence": "medium",
   "info_gaps": [
-    "模型 API key 管理方式未在 README 中明确说明（推测依赖环境变量）",
-    "生产部署架构未详细描述（是否依赖 Vercel 平台或可自托管）",
-    "无性能基准数据或资源消耗参考",
-    "动态 skill 的内部加载机制未公开",
-    "subagents 和 channels 的具体实现细节需要参考完整文档"
+    "未提供性能 benchmark 或与其他框架的量化对比",
+    "支持的模型提供商列表未在 README 中完全列出（仅示例为 Anthropic）",
+    "沙箱执行的具体隔离技术栈（如 Docker、Node.js vm 等）未说明",
+    "生产部署方式（是否仅限 Vercel 或可自托管）未明确",
+    "子代理间通信与状态共享的具体实现细节缺失"
   ],
   "quality_flags": [],
-  "stars_total": 1930,
+  "stars_total": 2075,
   "created_at": "2026-06-16",
-  "pushed_at": "2026-06-21",
-  "latest_release": "eve@0.11.10",
+  "pushed_at": "2026-06-22",
+  "latest_release": "eve@0.12.0",
   "first_seen": "2026-06-19",
-  "last_seen": "2026-06-21",
-  "streak_days": 6,
-  "analysis_updated_at": "2026-06-21T06:33:42+0800",
+  "last_seen": "2026-06-22",
+  "streak_days": 7,
+  "analysis_updated_at": "2026-06-22T09:23:58+0800",
   "appearances": [
     {
       "date": "2026-06-19",
@@ -84,6 +84,13 @@
       "stars_total": 1930,
       "stars_gained": 0,
       "release": "eve@0.11.10"
+    },
+    {
+      "date": "2026-06-22",
+      "reason": "release_update",
+      "stars_total": 2075,
+      "stars_gained": 0,
+      "release": "eve@0.12.0"
     }
   ]
 }

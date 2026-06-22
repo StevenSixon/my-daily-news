@@ -26,31 +26,32 @@
   ],
   "license": "Apache-2.0",
   "category": "AI 应用",
-  "classify_reason": "AI 代理记忆平台",
-  "one_liner": "开源AI记忆平台，为Agent提供自托管知识图谱持久记忆",
-  "why_worth_it": "解决Agent跨会话上下文断裂问题，本地部署知识图谱+向量双引擎，适合需要长期记忆的AI应用",
+  "classify_reason": "开源 AI 记忆平台，为代理提供持久长期记忆",
+  "one_liner": "自托管知识图谱驱动的AI代理持久记忆平台",
+  "why_worth_it": "为Agent提供跨会话长期记忆，基于本地图谱实现语义关联与推理，比纯向量方案更懂上下文",
   "tags": [
-    "Agent记忆",
+    "代理记忆",
     "知识图谱",
     "自托管",
     "Python"
   ],
   "confidence": "high",
   "info_gaps": [
-    "无基准测试数据（如检索延迟、图谱构建速度）",
-    "未明确具体支持的图数据库和向量数据库默认实现及切换方式",
-    "缺少安全审计或合规认证说明",
-    "未提及与同类工具（如Mem0、Zep）的详细对比"
+    "具体的多模态支持格式未说明",
+    "未提供与其他记忆方案的性能基准对比",
+    "图数据库选型细节（如 Neo4j 连接配置）在核心文档里简略",
+    "LLM 提供商的具体适配名单未在 README 中展开",
+    "推理能力（如多步推理）的实际评估数据缺失"
   ],
   "quality_flags": [],
-  "stars_total": 18381,
+  "stars_total": 18648,
   "created_at": "2023-08-16",
   "pushed_at": "2026-06-21",
-  "latest_release": "v1.2.0",
+  "latest_release": "v1.2.1",
   "first_seen": "2026-06-21",
-  "last_seen": "2026-06-21",
-  "streak_days": 1,
-  "analysis_updated_at": "2026-06-21T18:58:22+0800",
+  "last_seen": "2026-06-22",
+  "streak_days": 2,
+  "analysis_updated_at": "2026-06-22T09:23:32+0800",
   "appearances": [
     {
       "date": "2026-06-21",
@@ -58,6 +59,13 @@
       "stars_total": 18381,
       "stars_gained": 361,
       "release": "v1.2.0"
+    },
+    {
+      "date": "2026-06-22",
+      "reason": "release_update",
+      "stars_total": 18648,
+      "stars_gained": 347,
+      "release": "v1.2.1"
     }
   ]
 }
