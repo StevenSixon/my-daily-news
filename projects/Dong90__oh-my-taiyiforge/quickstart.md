@@ -1,52 +1,53 @@
-## 安装方式
-
-### 前提
-- Node.js ≥ 20
-- 任一目标 AI 终端：Claude Code、Codex、Cursor 或 OpenCode
-
-### 一行安装（推荐）
+## 安装
+**推荐（零构建，v0.24+）**：
 ```bash
-npx taiyi-forge-install --all   # 自动安装到所有已检测到的 AI 终端
-npx taiyi-forge-install --cursor # 仅安装到 Cursor
+npx taiyi-forge-install --all          # 一键装到 Claude/Codex/Cursor/OpenCode
+npx taiyi-forge-install --cursor       # 仅装到 Cursor
 ```
-
-### 源码安装（可选）
+**未发布到 npm 时可从 GitHub 直装**：
+```bash
+npm install 'git+https://github.com/Dong90/oh-my-taiyiforge.git#v0.38.0'
+npx -p 'git+https://github.com/Dong90/oh-my-taiyiforge.git#v0.38.0' taiyi-forge-install --all
+```
+**源码安装**：
 ```bash
 git clone https://github.com/Dong90/oh-my-taiyiforge.git
-cd oh-my-taiyiforge
-npm install && npm run build && npm test
+cd oh-my-taiyiforge && npm install && npm run build && npm test
 node scripts/taiyi-forge.sh install --all
 ```
 
-### 从 GitHub 直接安装（npm 未发布时）
-```bash
-npm install 'git+https://github.com/Dong90/oh-my-taiyiforge.git#v0.28.1'
-```
-
 ## 最小可用示例
+1. 启动一个新变更：
+   ```bash
+   npx taiyi walkthrough
+   ```
+   或在 AI 终端中直接说：
+   ```
+   /taiyi:new "优化登录流程"
+   ```
+2. 查看当前阶段及下一步：
+   ```
+   /taiyi:status
+   ```
+3. 编辑生成的 `CHANGE.md` 后，推进阶段（人类门控）：
+   ```
+   /taiyi:continue --approver "你的名字"
+   ```
+4. 继续编写当前阶段工件：
+   ```
+   /taiyi:write
+   ```
+5. 执行开发与测试：
+   ```
+   /taiyi:apply
+   ```
+6. 完成后提交并归档：
+   ```
+   /taiyi:commit
+   /taiyi:archive
+   ```
 
-### 第一个变更
-```bash
-npx taiyi new "优化登录流程"    # 自动创建 .taiyi/changes/<slug>/CHANGE.md
-npx taiyi status                 # 查看当前阶段及下一步建议
-# 编辑 CHANGE.md，然后人类确认
-npx taiyi complete <slug> change --approver "你的名字"
-# 后续阶段由引擎自动推进或通过聊天斜杠继续
-```
-
-### 聊天斜杠命令（在 AI 终端中输入）
-```
-/taiyi:new "功能描述"           # 初始化变更
-/taiyi:status                    # 查看阶段状态和推荐动作
-/taiyi:write                     # 编写当前阶段工件
-/taiyi:continue --approver "名字" # 通过人工审批后继续
-/taiyi:apply                     # 执行 dev/test 检查清单
-/taiyi:archive                   # 九阶段全部完成后归档
-```
-
-### 常用巡检
-```
-/taiyi:doctor                    # 安装与工作区自检
-/taiyi:test smoke                # Playwright 内置冒烟测试
-/taiyi:token compress <slug>     # 精简上下文，防止会话超长
-```
+## 依赖前提
+- Node.js >= 20
+- 目标 AI 终端之一已安装（Claude Code、Codex、Cursor 或 OpenCode）
+- 可选：Playwright（用于内置冒烟测试，运行 `/taiyi:test smoke` 时需要）

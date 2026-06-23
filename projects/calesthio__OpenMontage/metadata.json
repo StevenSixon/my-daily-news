@@ -26,30 +26,31 @@
   ],
   "license": "AGPL-3.0",
   "category": "AI 应用",
-  "classify_reason": "智能视频制作系统，12 条流水线、52 个工具、500+ 代理技能",
-  "one_liner": "首个开源代理式视频生产系统：用自然语言驱动，全自动搞定脚本、素材、编辑",
-  "why_worth_it": "无需剪辑技能，把AI代码助手变成视频工作室，从免费素材到成品全自动，零API密钥也能跑，成本低至$0.15",
+  "classify_reason": "开源AI代理视频制作系统，面向终端用户",
+  "one_liner": "首个开源代理式视频生产系统，12管线52工具500+技能",
+  "why_worth_it": "用AI编程助手一键制作真实视频，支持免费工具，成本极低，非幻灯片动画",
   "tags": [
-    "Agentic Video",
-    "Open Source",
-    "Python"
+    "agentic-video",
+    "open-source",
+    "Python",
+    "video-production"
   ],
-  "confidence": "high",
+  "confidence": "medium",
   "info_gaps": [
-    "README未详细说明代理与工具之间的具体通信协议或交互方式（仅描述“告诉AI编码助手需求”）",
-    "未提供系统性能基准或视频输出规格（分辨率、帧率等）的详细参数",
-    "未列出所有500+代理技能的清单或分类，仅通过文档链接可获取更多细节",
-    "本地GPU视频生成的模型支持列表和性能对比未在README中展开"
+    "未提供 benchmark 或定量质量评估数据",
+    "示例视频的实际生成过程是否经过人工调优未知",
+    "本地 GPU 视频生成模型的实际性能和质量未经验证",
+    "docs/ARCHITECTURE.md 等详细架构文档内容未在 README 中展示"
   ],
   "quality_flags": [],
-  "stars_total": 8777,
+  "stars_total": 12130,
   "created_at": "2026-03-29",
-  "pushed_at": "2026-05-07",
+  "pushed_at": "2026-06-22",
   "latest_release": null,
   "first_seen": "2026-06-19",
-  "last_seen": "2026-06-22",
-  "streak_days": 8,
-  "analysis_updated_at": "2026-06-19T23:33:34+0800",
+  "last_seen": "2026-06-23",
+  "streak_days": 9,
+  "analysis_updated_at": "2026-06-23T09:20:26+0800",
   "appearances": [
     {
       "date": "2026-06-19",
@@ -105,6 +106,13 @@
       "reason": "lightweight",
       "stars_total": 8777,
       "stars_gained": 2867,
+      "release": null
+    },
+    {
+      "date": "2026-06-23",
+      "reason": "star_jump",
+      "stars_total": 12130,
+      "stars_gained": 6089,
       "release": null
     }
   ]

@@ -5,3 +5,4 @@
 - 2026-06-20 | lightweight | ⭐2603(+904) | release=v0.3.5
 - 2026-06-21 | star_jump | ⭐4041(+902) | release=v0.3.5
 - 2026-06-22 | lightweight | ⭐5186(+1834) | release=v0.3.5
+- 2026-06-23 | release_update | ⭐7386(+2463) | release=v0.3.6

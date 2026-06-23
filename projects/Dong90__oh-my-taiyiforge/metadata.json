@@ -15,31 +15,31 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "AI 工作流自动化插件，智能代码生成",
-  "one_liner": "把六套AI工程标准编排成一条可执行、可审计的九阶段研发流水线",
-  "why_worth_it": "解决AI编码中Agent遗忘阶段、上下文爆炸的痛点，统一Claude/Codex/Cursor等多平台流程，用门控代替玄学",
+  "classify_reason": "AI工作流自动化与智能代码生成插件",
+  "one_liner": "统一多 AI 终端的九阶段代码研发流水线引擎",
+  "why_worth_it": "解决 AI 辅助开发中流程遗忘、上下文断裂和跨工具不一致的痛点，适合使用多种 AI 助手的严肃团队，用状态机代替人工记忆流程。",
   "tags": [
-    "AI工作流",
-    "代码生成",
+    "工作流引擎",
+    "AI编码助手",
     "TypeScript",
-    "多平台编排"
+    "多AI终端统一"
   ],
   "confidence": "high",
   "info_gaps": [
-    "未提供性能基准数据（如大型项目下的阶段执行耗时）",
-    "未能说明铁三角（Harness/OpenSpec/GStack 等）的具体集成深度和版本兼容性",
-    "未提及多语言支持现状（README 双语但工具本身是否支持国际化）",
-    "同类工具横向对比细节有限，仅在方案理念中提及编排对象"
+    "六套集成标准各自的深度和兼容边界未详细说明",
+    "无性能基准或大规模团队的使用数据",
+    "与 IDE 插件的具体交互细节（如 Cursor 规则文件的格式）仅部分覆盖",
+    "README 截断，可能遗漏后续的架构细节和 API 文档"
   ],
   "quality_flags": [],
-  "stars_total": 413,
+  "stars_total": 453,
   "created_at": "2026-06-05",
-  "pushed_at": "2026-06-22",
-  "latest_release": "v0.28.1",
+  "pushed_at": "2026-06-23",
+  "latest_release": "v0.38.0",
   "first_seen": "2026-06-22",
-  "last_seen": "2026-06-22",
-  "streak_days": 1,
-  "analysis_updated_at": "2026-06-22T09:22:29+0800",
+  "last_seen": "2026-06-23",
+  "streak_days": 2,
+  "analysis_updated_at": "2026-06-23T09:22:34+0800",
   "appearances": [
     {
       "date": "2026-06-22",
@@ -47,6 +47,13 @@
       "stars_total": 413,
       "stars_gained": 0,
       "release": "v0.28.1"
+    },
+    {
+      "date": "2026-06-23",
+      "reason": "release_update",
+      "stars_total": 453,
+      "stars_gained": 0,
+      "release": "v0.38.0"
     }
   ]
 }

@@ -1,6 +1,1277 @@
 {
   "editions": [
     {
+      "date": "2026-06-23",
+      "count": 10,
+      "projects": [
+        {
+          "id": "garrytan__gstack",
+          "fullName": "garrytan/gstack",
+          "owner": "garrytan",
+          "name": "gstack",
+          "url": "https://github.com/garrytan/gstack",
+          "oneLiner": "23个AI角色驱动的个人软件工厂，用Claude Code打造CEO到QA全栈团队",
+          "description": "Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve as CEO, Designer, Eng Manager, Release Manager, Doc Engineer, and QA",
+          "language": "TypeScript",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 113164,
+          "starsGained": 573,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-03-11",
+          "pushedAt": "2026-06-21",
+          "latestRelease": "",
+          "firstSeen": "2026-06-23",
+          "topics": [],
+          "appearances": [
+            {
+              "date": "2026-06-23",
+              "reason": "new",
+              "starsTotal": 113164,
+              "starsGained": 573,
+              "release": ""
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "gstack 是 Y Combinator CEO Garry Tan 开源的 Claude Code 工具集，内含 23 个专业“角色”（如 CEO、设计师、工程经理、QA、安全官）的斜杠指令。它把 AI 辅助开发从零散提示词升级为结构化的软件交付流程（思考→规划→构建→审查→测试→交付→回顾），旨在让单人开发者获得一个虚拟工程团队的协作能力。"
+            },
+            {
+              "heading": "为什么火",
+              "bullets": [
+                "作者身份与背书：Garry Tan 是 YC 总裁，项目源于其个人的超高产出实践（声称 2026 年生产效率是 2013 年的 810 倍，并提供了可复现的计量方法）。",
+                "痛点共鸣：许多技术创始人、独立开发者渴望用 AI 加速，但缺少将 AI 从代码补全升级为项目级协作的方法。",
+                "开源与易接入：MIT 许可，30 秒安装，无需购买任何服务，支持 Claude Code 及 OpenClaw、Codex CLI 等 10 种 AI 代理。"
+              ]
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "语言：TypeScript",
+                "运行环境：需 Node.js（Windows）、Bun v1.0+、Git",
+                "核心平台：Claude Code（主要）、OpenClaw、OpenAI Codex CLI、Cursor 等多种代理支持",
+                "脚本和技能均以 Markdown 和 TypeScript 配置驱动，无额外后端服务"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "body": "1. 角色化技能集：/office-hours（产品诊疗）、/plan-ceo-review（CEO 视角审查）、/plan-eng-review（架构锁定）、/plan-design-review（设计评分与交互式改进）、/review（代码审查与自动修复）、/qa（真实浏览器测试）、/ship（集成测试与 PR 生成）、/cso（安全审计）等。 2. 流程编排：技能间能传递产物（设计文档→CEO审阅→工程计划→QA 脚本），形成完整的 sprint 工作流。 3. 多代理适配：通过 setup 脚本可安装到 Claude Code、OpenClaw、Codex、Cursor、Factory 等不同代理。 4. 团队模式：可将 gstack 强制或可选地嵌入仓库，使团队成员自动获得相同工具链和自动更新。"
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "单人技术创始人或独立开发者，想用 AI 辅助从产品构思到发布的全流程。",
+                "小型团队希望统一 AI 辅助编码的规范，提高代码质量和交付节奏。",
+                "初次使用 Claude Code 的用户，想要一套“开箱即用”的角色化指令代替空白对话。"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "bullets": [
+                "Claude Code 默认用法：自主规划能力虽有，但缺乏结构化的角色和步骤。gstack 为其注入工程最佳实践（强制审查、安全审计、测试流程）。",
+                "其他 AI 编码工具（如 GitHub Copilot、Cursor）：多为代码补全或单轮对话，缺少贯穿全周期的流程。gstack 可与其互补，甚至在这些工具上安装部分技能。",
+                "DevOps 平台（如 GitLab CI）：侧重自动化构建/部署，而 gstack 侧重 AI 驱动的设计与质量决策环节。"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "---",
+              "bullets": [
+                "创建于 2026-03-11，最近推送 2026-06-21，更新活跃。",
+                "近期新增了与 OpenClaw 的深度集成、多宿主代理支持（10 种）、团队模式与自动更新。",
+                "文档中有专门的 LOC 争议说明，提供了严格的计量方法和脚本，显示作者重视透明度和质疑回应。"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：未提供各技能的详细性能与时间消耗数据；缺乏与同类工具的直接对比测试结果；未说明使用时Claude API的成本或速率限制影响；对不同编程语言/架构的适配程度未量化；安全审计（/cso）的具体检查项范围未详细展开"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "heygen-com__hyperframes",
+          "fullName": "heygen-com/hyperframes",
+          "owner": "heygen-com",
+          "name": "hyperframes",
+          "url": "https://github.com/heygen-com/hyperframes",
+          "oneLiner": "用HTML编写视频，AI代理原生驱动的渲染引擎。",
+          "description": "Write HTML. Render video. Built for agents.",
+          "language": "TypeScript",
+          "category": "AI 应用",
+          "license": "Apache-2.0",
+          "starsTotal": 30017,
+          "starsGained": 395,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-03-10",
+          "pushedAt": "2026-06-23",
+          "latestRelease": "v0.7.2",
+          "firstSeen": "2026-06-23",
+          "topics": [
+            "ai",
+            "animation",
+            "ffmpeg",
+            "framework",
+            "gsap",
+            "html",
+            "mcp",
+            "puppeteer",
+            "rendering",
+            "typescript",
+            "video"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-23",
+              "reason": "new",
+              "starsTotal": 30017,
+              "starsGained": 395,
+              "release": "v0.7.2"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "HyperFrames 是一个开源视频渲染框架，核心思路是把 HTML/CSS/动画“剧本”直接转成确定性 MP4 视频。它提供 CLI、预览和渲染流水线，并专门为 AI 编程代理设计了技能（Skills），让代理也能像写网页一样制作视频。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "30k+ Star 的背后是“一切皆可视频”的工程化需求。开发者厌倦了 React 驱动的视频引擎，而 HyperFrames 的 纯 HTML + 数据属性 模式大幅降低了门槛——对人或对代理都友好，且渲染结果完全可重现，适合 CI 流水线、自动化内容生产。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "语言/运行时：TypeScript，Node.js ≥ 22",
+                "渲染核心：Puppeteer（headless Chrome）+ FFmpeg 编码",
+                "动画支持：GSAP、CSS/WAAPI、Lottie、Three.js 等，通过全局时间线注册",
+                "构建与分发：npm 包，支持本地 CLI、Docker、云函数（AWS Lambda/GCP/K8s）"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "HTML 即 composition：用 index.html 定义片段时间、轨道、媒体，零构建步骤",
+                "确定帧渲染：同一输入、同一输出，保障回归测试和自动化 pipeline",
+                "代理技能：针对 Claude Code/Cursor 等编码代理的专用技能，教代理理解视频制作循环",
+                "Catalog 组件库：即装即用的转场、字幕、图表等模块（npx hyperframes add ...）",
+                "frame.md 设计系统：将品牌设计 token 转化为视频可用的规范，方便代理或设计师复用"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "产品发布视频、PR 动画说明（代码 diff、旁白、字幕）",
+                "数据可视化视频（动态图表、地图动画）",
+                "社交媒体短视频生成（大字标题、音效、音乐）",
+                "Agent 驱动的文档/PDF/网站转视频，自动内容管道"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "body": "与 Remotion 相比，最大的差异在作者模型：Remotion 用 React，HyperFrames 用纯 HTML。后者对非前端开发者及 AI 代理更友好，且无需 React 环境，降低集成成本。但仍依赖 headless Chrome 和 FFmpeg，渲染原理相似。"
+            },
+            {
+              "heading": "版本动态",
+              "body": "最新 v0.7.2（2026-06-22）修复了 shader 转场抓取、音频时长保持、CSS 变量字体解析等生产环境边缘问题，并增强了回归测试覆盖。项目活跃，正逐步完善云端渲染部署示例（AWS Lambda、GCP Cloud Run、K8s Jobs）。 ---"
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：未提供渲染性能基准和并发上限数据；未说明 headless Chrome/FFmpeg 具体版本兼容性；缺乏大规模分布式渲染的最佳实践文档；未展示极端动画场景下的确定性验证结果"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "JCodesMore__ai-website-cloner-template",
+          "fullName": "JCodesMore/ai-website-cloner-template",
+          "owner": "JCodesMore",
+          "name": "ai-website-cloner-template",
+          "url": "https://github.com/JCodesMore/ai-website-cloner-template",
+          "oneLiner": "一键用AI代理将任意网站克隆为Next.js项目",
+          "description": "Clone any website with one command using AI coding agents",
+          "language": "TypeScript",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 17758,
+          "starsGained": 100,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-03-13",
+          "pushedAt": "2026-06-01",
+          "latestRelease": "v0.3.1",
+          "firstSeen": "2026-06-23",
+          "topics": [
+            "ai",
+            "ai-agents",
+            "ai-tools",
+            "automation",
+            "boilerplate",
+            "claude",
+            "claude-code",
+            "clone",
+            "developer-tools",
+            "nextjs",
+            "react",
+            "reverse-engineering",
+            "shadcn-ui",
+            "skills",
+            "tailwindcss",
+            "template",
+            "typescript",
+            "web-scraping",
+            "website-clone"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-23",
+              "reason": "new",
+              "starsTotal": 17758,
+              "starsGained": 100,
+              "release": "v0.3.1"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "一个可复用的Next.js项目模板，内置AI代理指令，只需一条命令即可反向工程任何网站，生成干净的TypeScript/React代码。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "它解决了网站重建中最耗时的手工环节——分析布局、提取样式、重写组件。通过多阶段管道和并行构建，将数周的工作压缩到几分钟，特别适合平台迁移、源代码丢失等场景。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "Next.js 16 (App Router) + React 19 + TypeScript strict",
+                "shadcn/ui (Radix + Tailwind CSS v4)",
+                "Lucide React 图标，克隆时替换为提取的SVG",
+                "支持 Claude Code、Copilot、Cursor 等 10+ 种 AI 代理"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "多阶段管道：截图/设计令牌提取 → 交互扫描 → 字体/颜色/资源下载 → 组件规范编写 → 并行构建 → 组装与QA",
+                "精确提取：通过 getComputedStyle() 获取实际 CSS 值，避免猜测",
+                "并行构建：在 git worktrees 中派发独立 Builder 智能体，每个负责一个部分",
+                "多平台支持：通过 sync 脚本将核心指令同步到各种 AI 代理的配置格式"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "从 WordPress/Webflow/Squarespace 等平台迁移到现代前端",
+                "恢复丢失源代码的网站",
+                "学习生产级网站的布局与动画实现"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "body": "与传统网页抓取工具（如 HTTrack）相比，此模板不仅抓取静态资源，更生成可维护的组件代码；与纯手工重写相比，自动化程度极高。本项目并非直接竞品，而是为 AI 代理提供指令与脚手架，属于新兴的 AI 辅助开发范式。"
+            },
+            {
+              "heading": "版本动态",
+              "body": "---",
+              "bullets": [
+                "v0.3.1（2026-03-30）：修复 Windows 下 @file 导入解析问题，确保平台指令文件正确包含检查指南。",
+                "v0.3.0：对 sync-skills.mjs 应用 CRLF 修复。项目仍在活跃迭代中。"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：未提供克隆过程的时间或性能基准数据；未说明生成的代码质量如何评估或是否需人工调整；未提及对动态渲染网站（SPA）的支持程度；部分 AI 代理的具体版本要求（除 Claude Code）未明确"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sums001__Windows-Copilot-API",
+          "fullName": "sums001/Windows-Copilot-API",
+          "owner": "sums001",
+          "name": "Windows-Copilot-API",
+          "url": "https://github.com/sums001/Windows-Copilot-API",
+          "oneLiner": "免费将微软Copilot转为OpenAI兼容API，零成本调用GPT-4级模型",
+          "description": "Reverse engineered Windows Copilot into an OpenAI-compatible API. Access GPT-4 and GPT-5 models through a simple REST interface without API keys or billing.",
+          "language": "Python",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 361,
+          "starsGained": 0,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-06-19",
+          "pushedAt": "2026-06-22",
+          "latestRelease": "",
+          "firstSeen": "2026-06-23",
+          "topics": [
+            "ai",
+            "ai-agents",
+            "api",
+            "copilot",
+            "llm",
+            "microsoft-copilot",
+            "openai"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-23",
+              "reason": "new",
+              "starsTotal": 361,
+              "starsGained": 0,
+              "release": ""
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "一个逆向工程项目，将微软 Copilot 网页版 (copilot.microsoft.com) 的用户会话包装成 OpenAI 兼容的 REST API 和 Python 库。只需一个免费的微软账号登录一次，后续所有请求都复用该会话，无需 API Key、无配额账单。提供 /v1/chat/completions 和 /v1/models 两个端点，支持流式输出和多轮对话（通过 conversation_id），可直接替换 OpenAI 官方 SDK 的 base_url。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "Star 数 361，创建仅 3 天（2026-06-19）就获得关注，因为：",
+              "bullets": [
+                "零摩擦免费：开发者不必申请付费 API，利用已有 Copilot 账号即可获得 GPT-4 级别模型。",
+                "OpenAI 生态即插即用：任何工具只要支持自定义 base_url 就能接入，兼容性极佳。",
+                "无需代理/网关：本地一个进程启动，安全自控。"
+              ]
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "Python 3.9+ 为主语言",
+                "Playwright 驱动 Chromium 实现网页自动化及登录",
+                "FastAPI 提供 OpenAI 兼容服务器",
+                "Token Bucket 算法实现自限流（server/ratelimit.py）",
+                "Docker 可选部署，需事先在宿主机完成人工登录"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "body": "1. Python 客户端：CopilotClient.chat() 返回完整回复和 conversation_id，stream() 逐 token 生成，可维持多轮对话。 2. OpenAI 兼容服务器：启动 app.py 后即可用官方 openai SDK 或任意 HTTP 调用，支持 stream、conversation_id。 3. 会话持久化：浏览器登录后 cookie/token 保存在本地 session/，自动刷新，无需重复登录。 4. 并发与限流控制：上游只支持单会话串行，服务器用锁序列化所有调用。内置 12 rpm 速率限制（可调），保护账号不被封。 5. 模型能力近似：经 GPQA Diamond 测试得到 40.9% 准确率，定性为 GPT-4 级别，无推理模型（o1/o3）能力。"
+            },
+            {
+              "heading": "适用场景",
+              "body": "不适用：高并发、生产级应用、需要多模型选择、商业用途（受微软服务条款限制）。",
+              "bullets": [
+                "个人开发者想用 GPT-4 级模型开发、测试但不想付费。",
+                "本地 AI 工具链需要一个免费后端。",
+                "轻量的一次性自动化任务，并发量极低。"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "bullets": [
+                "OpenAI 官方 API：无免费额度，需绑卡；本项目免费但依赖单个 Copilot 账号，响应速度与并发受限。",
+                "其他 Copilot 逆向（如 EdgeGPT）：方法类似，但该项目强调 OpenAI 兼容格式和流式，部署更标准化。",
+                "本地模型（Ollama 等）：硬件要求高，本项目不需要 GPU，利用云端 Copilot。"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "---",
+              "bullets": [
+                "2026-06-19 首版发布",
+                "2026-06-22 最近更新（示例、测试脚本）",
+                "目前尚无 release tag，早期快速迭代"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：未提供 GPQA Diamond 基准测试的详细设置（如温度、样本数、prompt 格式等）；未说明 Copilot 背后具体模型版本（GPT-4、4o 等）及其确参；未提及是否支持多模态（图片、文件上传等）；未披露会话 token 自动刷新的具体机制和有效期；未给出高并发下账号被封的风险边界或官方服务条款的可接受范围"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "raiyanyahya__recall",
+          "fullName": "raiyanyahya/recall",
+          "owner": "raiyanyahya",
+          "name": "recall",
+          "url": "https://github.com/raiyanyahya/recall",
+          "oneLiner": "Claude Code 的完全本地、零 token 消耗的持久记忆插件",
+          "description": "Stop wasting tokens and re-explaining your project every session. Recall gives Claude Code durable memory — entirely offline.",
+          "language": "Python",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 323,
+          "starsGained": 0,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-06-19",
+          "pushedAt": "2026-06-22",
+          "latestRelease": "v0.3.5",
+          "firstSeen": "2026-06-23",
+          "topics": [
+            "ai",
+            "ai-agents",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "claude-code-plugin",
+            "claude-plugin",
+            "context",
+            "developer-tools",
+            "llm",
+            "local-first",
+            "memory",
+            "offline",
+            "privacy",
+            "productivity",
+            "python",
+            "summarization",
+            "textrank"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-23",
+              "reason": "new",
+              "starsTotal": 323,
+              "starsGained": 0,
+              "release": "v0.3.5"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "Recall 是一个 Claude Code 插件，用来给 Claude Code 提供持久记忆。每次会话结束时，它会自动捕获对话、文件操作、命令等信息，并用一个纯本地算法（TF-IDF + TextRank）生成一份简洁的上下文摘要（context.md），下次启动时 Claude 可以直接从这里续上，不再需要重新解释项目。"
+            },
+            {
+              "heading": "为什么火",
+              "bullets": [
+                "零成本、零联网：摘要完全在本地 CPU 上跑，无需 API key、不调用外部模型、不消耗 token，对订阅用户免费，对 API 用户省钱。",
+                "隐私优先：所有会话记录和摘要均不离开本机，没有遥测、没有账户、没有第三方服务。",
+                "无缝集成：作为 Claude Code 官方插件格式，安装即用，无需 pip install，无额外依赖（numpy 仅作为可选加速）。"
+              ]
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "语言：Python（标准库为主，无第三方模型依赖）",
+                "摘要算法：TF-IDF 向量化 + 余弦相似图 + TextRank（PageRank 变体），可选 numpy 加速",
+                "集成方式：Claude Code 插件钩子（SessionStart、Stop、SessionEnd）",
+                "数据存储：纯文本 Markdown（.recall/history.md 和 context.md）",
+                "安全措施：内置简易密钥脱敏、Git 命令防注入、输出目录沙箱"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "自动会话日志：实时追加每次提问、回复、文件操作到 history.md。",
+                "本地上下文摘要：/recall:save 或配置自动触发，用 TextRank 提取最关键的句子，生成 context.md。",
+                "无缝续接：下个会话启动时自动加载摘要，Claude 会询问是否从上次上下文继续。",
+                "与原生记忆互补：不同于 CLAUDE.md（人工规则）或 --continue（重放全部对话），Recall 提供一种自动化、结构化的会话回顾，token 占用极低（~1-2K）。",
+                "可配置：摘要长度、Git 上下文包含、自动保存时机等均可定制。",
+                "隐私硬承诺：无网络调用，无密钥，无第三方模型，且会话记录仅限当前项目。"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "需要频繁在多个项目间切换的 Claude Code 用户。",
+                "不想每次会话重新解释项目背景的开发者。",
+                "重视隐私、不愿将工作内容上传到任何服务器的个人或团队。",
+                "用订阅计划且想省 token 的用户（摘要本地生成，续接上下文也很省 token）。",
+                "团队共享记忆：可提交 .recall/ 作为共享上下文（需注意注入风险）。"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "bullets": [
+                "CLAUDE.md / # 规则：需要手动维护，固定指令，不记录会话历史。",
+                "--continue / --resume：能重放会话但 token 消耗高，不够便携，也不提供结构化摘要。",
+                "其他“记忆”工具：通常通过 API 调用外部模型对上下文进行总结，有隐私泄露风险和额外费用，Recall 是少数完全本地运行的选项，且专为 Claude Code 插件生态设计。"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "---",
+              "bullets": [
+                "最新版本 v0.3.5（2026-06-22），仅文档更新：新增隐私政策，明确本地运行、无网络、脱敏仅尽力而为等细节。",
+                "上一个功能版本 v0.3.4，代码无变化。",
+                "项目保持活跃维护，CI 覆盖多 Python 版本、lint、安全扫描、基准测试质量门禁。"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "calesthio__OpenMontage",
+          "fullName": "calesthio/OpenMontage",
+          "owner": "calesthio",
+          "name": "OpenMontage",
+          "url": "https://github.com/calesthio/OpenMontage",
+          "oneLiner": "首个开源代理式视频生产系统，12管线52工具500+技能",
+          "description": "World's first open-source, agentic video production system. 12 pipelines, 52 tools, 500+ agent skills. Turn your AI coding assistant into a full video production studio.",
+          "language": "Python",
+          "category": "AI 应用",
+          "license": "AGPL-3.0",
+          "starsTotal": 12130,
+          "starsGained": 6089,
+          "streakDays": 9,
+          "isNew": false,
+          "createdAt": "2026-03-29",
+          "pushedAt": "2026-06-22",
+          "latestRelease": "",
+          "firstSeen": "2026-06-19",
+          "topics": [
+            "agent",
+            "agentic-ai",
+            "ai",
+            "claude",
+            "copilot",
+            "cursor",
+            "elevenlabs",
+            "ffmpeg",
+            "flux",
+            "image-generation",
+            "open-source",
+            "openai",
+            "python",
+            "remotion",
+            "stable-diffusion",
+            "text-to-speech",
+            "text-to-video",
+            "video-generation",
+            "video-production"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-19",
+              "reason": "new",
+              "starsTotal": 6011,
+              "starsGained": 738,
+              "release": ""
+            },
+            {
+              "date": "2026-06-19",
+              "reason": "lightweight",
+              "starsTotal": 6016,
+              "starsGained": 738,
+              "release": ""
+            },
+            {
+              "date": "2026-06-20",
+              "reason": "lightweight",
+              "starsTotal": 6057,
+              "starsGained": 236,
+              "release": ""
+            },
+            {
+              "date": "2026-06-20",
+              "reason": "lightweight",
+              "starsTotal": 6522,
+              "starsGained": 156,
+              "release": ""
+            },
+            {
+              "date": "2026-06-20",
+              "reason": "lightweight",
+              "starsTotal": 6706,
+              "starsGained": 677,
+              "release": ""
+            },
+            {
+              "date": "2026-06-21",
+              "reason": "lightweight",
+              "starsTotal": 6989,
+              "starsGained": 677,
+              "release": ""
+            },
+            {
+              "date": "2026-06-21",
+              "reason": "lightweight",
+              "starsTotal": 7451,
+              "starsGained": 2253,
+              "release": ""
+            },
+            {
+              "date": "2026-06-22",
+              "reason": "lightweight",
+              "starsTotal": 8777,
+              "starsGained": 2867,
+              "release": ""
+            },
+            {
+              "date": "2026-06-23",
+              "reason": "star_jump",
+              "starsTotal": 12130,
+              "starsGained": 6089,
+              "release": ""
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "OpenMontage 是一个开源的代理式视频生产系统，能将 AI 编程助手（Claude Code、Cursor 等）转变为完整的视频制作工作室。它通过 12 条预设管线、52 个工具和 500 多个代理技能，将自然语言描述转化为可渲染的视频项目，支持从真实素材剪辑到 AI 生成动画等多种风格。"
+            },
+            {
+              "heading": "为什么火",
+              "bullets": [
+                "代理式工作流：完全由代理驱动，自动处理研究、脚本、资产生成、编辑和合成，大幅降低手动操作。",
+                "免费友好：无需 API 密钥即可用 Piper TTS、Archive.org 等免费工具制作视频。",
+                "真实视频能力：不仅仅是图片幻灯片，能使用真实素材和运动剪辑。",
+                "成本披露：示例视频成本低至 $0.15，透明度高。"
+              ]
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "语言：Python",
+                "依赖：FFmpeg、Node.js、Remotion 或 HyperFrames 前端渲染",
+                "核心组件：管线定义 (pipeline_defs/)、技能系统 (skills/)、工具注册表 (tools/tool_registry)",
+                "集成提供商：OpenAI、ElevenLabs、FAL、Google 等多种 API，也支持本地 GPU 视频生成（Wan2.1 等）"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "多管线支持：图像动画、真实素材纪录片、产品广告、角色动画等",
+                "智能分析：从参考视频提取风格、节奏并生成差异化方案",
+                "渲染引擎：Remotion（React）用于数据驱动动画；HyperFrames（HTML/GSAP）用于动效图形",
+                "自审系统：ffprobe 验证、帧抽样、音频分析等",
+                "无密钥模式：本地 TTS、开放档案素材、免费股票 API"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "快速生成社交媒体短视频（TikTok、Reels）",
+                "制作低成本广告、产品演示",
+                "内容创作者需要快速将创意变为视频",
+                "开发者在 IDE 中集成视频生成能力"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "bullets": [
+                "相比 RunwayML 等商业平台：开源、可自托管、成本更低，但需要一定的技术栈",
+                "相比普通的 AI 视频脚本工具：代理式端到端生产，而非仅生成提示词或静态图片",
+                "相比 ComfyUI + AnimateDiff：提供了更高层的抽象和管线管理"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "---",
+              "bullets": [
+                "创建于 2026-03-29，最近推送 2026-06-22",
+                "当前 Star 数 12130，趋势火热",
+                "持续加入新提供商和本地模型支持"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：medium",
+                "信息盲区：未提供 benchmark 或定量质量评估数据；示例视频的实际生成过程是否经过人工调优未知；本地 GPU 视频生成模型的实际性能和质量未经验证；docs/ARCHITECTURE.md 等详细架构文档内容未在 README 中展示"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "palmier-io__palmier-pro",
+          "fullName": "palmier-io/palmier-pro",
+          "owner": "palmier-io",
+          "name": "palmier-pro",
+          "url": "https://github.com/palmier-io/palmier-pro",
+          "oneLiner": "Swift原生AI视频编辑器，MCP让AI代理操控时间线",
+          "description": "macOS video editor built for AI",
+          "language": "Swift",
+          "category": "AI 应用",
+          "license": "GPL-3.0",
+          "starsTotal": 7386,
+          "starsGained": 2463,
+          "streakDays": 8,
+          "isNew": false,
+          "createdAt": "2026-04-07",
+          "pushedAt": "2026-06-22",
+          "latestRelease": "v0.3.6",
+          "firstSeen": "2026-06-19",
+          "topics": [
+            "ai-video",
+            "claude",
+            "macos",
+            "mcp",
+            "seedance2",
+            "swift",
+            "video-editor"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-19",
+              "reason": "new",
+              "starsTotal": 1546,
+              "starsGained": 749,
+              "release": "v0.3.4"
+            },
+            {
+              "date": "2026-06-19",
+              "reason": "lightweight",
+              "starsTotal": 1554,
+              "starsGained": 749,
+              "release": "v0.3.4"
+            },
+            {
+              "date": "2026-06-20",
+              "reason": "lightweight",
+              "starsTotal": 1594,
+              "starsGained": 749,
+              "release": "v0.3.4"
+            },
+            {
+              "date": "2026-06-20",
+              "reason": "release_update",
+              "starsTotal": 2206,
+              "starsGained": 756,
+              "release": "v0.3.5"
+            },
+            {
+              "date": "2026-06-20",
+              "reason": "lightweight",
+              "starsTotal": 2603,
+              "starsGained": 904,
+              "release": "v0.3.5"
+            },
+            {
+              "date": "2026-06-21",
+              "reason": "star_jump",
+              "starsTotal": 4041,
+              "starsGained": 902,
+              "release": "v0.3.5"
+            },
+            {
+              "date": "2026-06-22",
+              "reason": "lightweight",
+              "starsTotal": 5186,
+              "starsGained": 1834,
+              "release": "v0.3.5"
+            },
+            {
+              "date": "2026-06-23",
+              "reason": "release_update",
+              "starsTotal": 7386,
+              "starsGained": 2463,
+              "release": "v0.3.6"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "Palmier Pro 是一个从零开始用 Swift 构建的 macOS 视频编辑器，专为 AI 协作设计。它提供完整的时间线编辑能力，同时内置生成式 AI 和 MCP 服务器，允许 Claude、Codex、Cursor 等外部 AI 代理直接操作视频项目。"
+            },
+            {
+              "heading": "为什么火",
+              "bullets": [
+                "将 AI 工作流深度整合到传统非线性编辑器中，而不是简单添加插件。",
+                "通过 MCP 协议让你的代码助手和桌面 AI 应用变成视频编辑搭档。",
+                "Y Combinator S24 背景，社区反馈积极（7.3k+ Star）。",
+                "编辑器本身免费开源，降低了体验门槛。"
+              ]
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "语言：Swift",
+                "平台：macOS 26 (Tahoe) 仅限 Apple Silicon（M系列芯片）",
+                "架构：原生 SwiftUI 应用，内嵌 HTTP MCP 服务器（端口 19789），生成式 AI 后端闭源。",
+                "构建工具：Xcode，CI 在 push/PR 上运行。"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "body": "1. 全功能视频编辑：时间线、剪辑、导出（支持 HEVC 等编解码），文本层、颜色解析等细节打磨。 2. 生成式 AI 集成：在时间线内直接使用 Seedance、Kling、Nano Banana Pro 等模型生成视频/图像（需订阅）。 3. MCP 服务器：应用运行后自动暴露 http://127.0.0.1:19789/mcp，支持 Claude Code/Desktop、Codex、Cursor 通过配置连接。 4. 多语言：README 覆盖 14 种语言，国际化程度高。 5. 社区与支持：Discord、Twitter、邮件渠道。"
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "独立视频创作者想用 AI 加速剪辑流程，并让桌面 AI 助手管理项目文件操作。",
+                "开发者探索用 Claude/Cursor 编程式批量处理视频任务，如自动剪辑、加字幕、插入生成片段。",
+                "AI 研究者测试生成模型在现实编辑工作流中的表现。"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "body": "Palmier Pro 的差异化在于将时间线操作暴露为标准化 MCP 工具，让通用 AI 代理直接操控。",
+              "bullets": [
+                "CapCut：免费但闭源，AI 能力有限且无法外部代理控制。",
+                "Adobe Premiere Pro：行业标准但重量级，无原生 MCP 集成，AI 功能依赖插件。",
+                "DaVinci Resolve：调色强，但脚本化需通过 Python/Lua API，非 AI 原语。",
+                "Descript：基于文本的编辑，侧重播客，非传统 NLE。"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "最新 v0.3.6（2026-06-22）修复了预览导出挂起、导入文件夹卡主线程、项目存储目录启动挂起、Clerk 钥匙串主线程卡顿等问题。CI 刚刚建立，表明项目进入快速迭代期。之前还有多语言 README 修复、字体注册修复等，说明团队关注细节和跨语言体验。 ---"
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：未提供性能基准或与同类编辑器对比的实测数据；生成式 AI 功能闭源，缺乏模型运行细节（本地/云端）和延迟信息；未说明是否支持其他 macOS 版本或 Intel Mac 计划；MCP 工具列表和具体能力未在 README 中列出；无构建/开发环境具体步骤（仅引用 CONTRIBUTING.md）"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "StarTrail-org__PixelRAG",
+          "fullName": "StarTrail-org/PixelRAG",
+          "owner": "StarTrail-org",
+          "name": "PixelRAG",
+          "url": "https://github.com/StarTrail-org/PixelRAG",
+          "oneLiner": "将网页/文档直接渲染为截图，用视觉嵌入实现保留布局与图表的RAG搜索。",
+          "description": "The end of web parsing. The beginning of scalable pixel-native search.",
+          "language": "Python",
+          "category": "AI 应用",
+          "license": "Apache-2.0",
+          "starsTotal": 3474,
+          "starsGained": 0,
+          "streakDays": 4,
+          "isNew": false,
+          "createdAt": "2026-05-29",
+          "pushedAt": "2026-06-23",
+          "latestRelease": "chrome-150.0.7844.0",
+          "firstSeen": "2026-06-21",
+          "topics": [
+            "agent",
+            "ai",
+            "memory",
+            "multimodal",
+            "rag",
+            "search",
+            "searchengine",
+            "vision",
+            "vlm"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-21",
+              "reason": "new",
+              "starsTotal": 1155,
+              "starsGained": 0,
+              "release": "chrome-150.0.7844.0"
+            },
+            {
+              "date": "2026-06-21",
+              "reason": "star_jump",
+              "starsTotal": 1737,
+              "starsGained": 0,
+              "release": "chrome-150.0.7844.0"
+            },
+            {
+              "date": "2026-06-22",
+              "reason": "star_jump",
+              "starsTotal": 2526,
+              "starsGained": 0,
+              "release": "chrome-150.0.7844.0"
+            },
+            {
+              "date": "2026-06-23",
+              "reason": "star_jump",
+              "starsTotal": 3474,
+              "starsGained": 0,
+              "release": "chrome-150.0.7844.0"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "PixelRAG 是一个以截图而非文本进行文档检索与生成增强（RAG）的框架。它把网页、PDF、图片等渲染成图像瓦片，用微调后的 Qwen3-VL-Embedding 模型生成视觉嵌入，再通过 FAISS 索引实现“所见即所得”的搜索。项目提供了预建的 828 万维基百科页面索引和即时可用 API，同时支持用户自建索引。"
+            },
+            {
+              "heading": "为什么火",
+              "bullets": [
+                "保留视觉信息：传统 RAG 将 HTML 解析为纯文本，会丢失表格、图表、排版等结构；PixelRAG 直接使用页面截图，让检索与答案生成能利用完整视觉上下文。",
+                "零门槛体验：官方提供托管 API（无需 API 密钥）和预建索引，一行 curl 即可搜索维基百科；本地使用亦只需 pip install。",
+                "生态延伸：附带 Claude Code 插件（pixelbrowse），让 LLM 通过截图“阅读”网页，无须额外服务；训练代码与数据集公开，便于复现和拓展。"
+              ]
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "渲染引擎：基于 Playwright/CDP 的 pixelshot，支持网页、PDF（需 poppler）以及本地图片。",
+                "嵌入模型：Qwen3-VL-Embedding-2B，LoRA 微调于网页截图数据（权重已发布）。",
+                "索引与搜索：FAISS（支持 CPU/GPU），内置分片构建与服务。",
+                "服务层：FastAPI 提供 REST API；配置通过 YAML 驱动。",
+                "训练工具链：独立 uv 项目，使用 PyTorch 2.9.1 + CUDA 12.9，LoRA 微调流程完整文档化。"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "截图级文档解析：pixelshot 一行命令即可将任意网页或 PDF 转为图像瓦片。",
+                "视觉语义搜索：直接以图像 tile 为检索单元，查询可以是文本或图像（视觉搜索）。",
+                "预建大规模索引：828 万维基百科页面索引，可从 Hugging Face 下载或直接使用官方 API。",
+                "端到端自建流水线：pixelrag index build 一条命令从原始文档到可查询索引。",
+                "生态集成：Claude Code 插件让 AI 助手获得“阅读”网页原貌的能力。"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "复杂网页信息抽取：需要理解表格、图表、排版布局的问答或分析任务。",
+                "RAG 系统升级：为现有 LLM 应用增加视觉感知，避免因解析丢失导致答案错误。",
+                "文档数字化与搜索：对 PDF 报告、扫描件等非纯粹文本内容建立视觉索引。",
+                "AI Agent 增强：为浏览器自动化、研究辅助等 Agent 提供更准确的页面理解。"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "body": "与传统文本 RAG（如 LangChain 文本拆分+向量检索）相比，PixelRAG 的独特优势在于保留视觉结构，回答“表格里某个数字是多少”“图表 X 轴代表什么”之类的问题时不再失效。相较于其他视觉嵌入方案（如 ColPali 使用 ViT 编码器），PixelRAG 采用了完整的多模态 VLM（Qwen3-VL）并针对网页截图微调，更贴合真实网页内容。项目还提供从渲染到索引的全套工程化工具，比纯学术框架更易落地。"
+            },
+            {
+              "heading": "版本动态",
+              "body": "---",
+              "bullets": [
+                "最新 Release: chrome-150.0.7844.0（2026-06-01），主要是 Chromium 头部 shell 补丁，用于 CDP 截图优化。",
+                "主仓库活跃（2026-06-23 推送），已发布 Apache-2.0 论文和完整代码。",
+                "论文题为《PIXELRAG: Web Screenshots Beat Text for Retrieval-Augmented Generation》，由伯克利 SkyLab/BAIR/NLP 出品。"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：README 未提供具体 benchmark 数据（如检索准确率、吞吐量），仅指向论文；预建索引的具体架构与资源需求未详述；训练代码与主流水线的适配细节需查阅 train/ 内部文档"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "code-yeongyu__lazycodex",
+          "fullName": "code-yeongyu/lazycodex",
+          "owner": "code-yeongyu",
+          "name": "lazycodex",
+          "url": "https://github.com/code-yeongyu/lazycodex",
+          "oneLiner": "将 OmO 智能体工作流封装为 Codex 的一键发行版，实现规划、执行、验证闭环。",
+          "description": "The one and only agent harness for complex codebases. Project memory, planning, execution, and verified completion inside Codex.",
+          "language": "TypeScript",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 1782,
+          "starsGained": 0,
+          "streakDays": 6,
+          "isNew": false,
+          "createdAt": "2026-05-25",
+          "pushedAt": "2026-06-22",
+          "latestRelease": "v4.13.0",
+          "firstSeen": "2026-06-20",
+          "topics": [
+            "ai",
+            "ai-agents",
+            "claude",
+            "claude-code",
+            "cli",
+            "codex",
+            "developer-tools",
+            "lazy",
+            "lazycodex",
+            "oh-my-openagent",
+            "omo",
+            "openai",
+            "orchestration",
+            "typescript"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-20",
+              "reason": "new",
+              "starsTotal": 1565,
+              "starsGained": 0,
+              "release": "v4.12.1"
+            },
+            {
+              "date": "2026-06-20",
+              "reason": "lightweight",
+              "starsTotal": 1587,
+              "starsGained": 0,
+              "release": "v4.12.1"
+            },
+            {
+              "date": "2026-06-21",
+              "reason": "lightweight",
+              "starsTotal": 1634,
+              "starsGained": 0,
+              "release": "v4.12.1"
+            },
+            {
+              "date": "2026-06-21",
+              "reason": "lightweight",
+              "starsTotal": 1672,
+              "starsGained": 0,
+              "release": "v4.12.1"
+            },
+            {
+              "date": "2026-06-22",
+              "reason": "lightweight",
+              "starsTotal": 1714,
+              "starsGained": 0,
+              "release": "v4.12.1"
+            },
+            {
+              "date": "2026-06-23",
+              "reason": "release_update",
+              "starsTotal": 1782,
+              "starsGained": 0,
+              "release": "v4.13.0"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "LazyCodex 是 [oh-my-openagent (OmO)](https://github.com/code-yeongyu/oh-my-openagent) 的 Codex 适配发行版，将 OmO 的智能体调度、规划、执行与验证能力封装为一键安装的 Codex 插件，同时提供 Web 前端（Next.js + Tailwind v4）部署在 Cloudflare Workers。它类比 LazyVim 对 Neovim 的简化，让开发者无需深度配置即可在 Codex 中使用多智能体协作。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "OmO 本身社区热度极高（6 万星标），其质量检验严格，但因配置复杂让很多开发者望而却步。LazyCodex 通过 npx lazycodex-ai install 一条命令完成全部设置，并附带诊断命令，极大降低上手成本。同时它由 AI 助手 Jobdori 实时构建，与 OmO 版本同步，保证前沿特性快速落地。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "核心引擎：oh-my-openagent（TypeScript 编写，作为 submodule 引入）",
+                "前端：Next.js 15 + Tailwind v4 + opennextjs-cloudflare，部署于 Cloudflare Workers",
+                "集成方式：Codex 插件市场安装或 npx 脚本，通过 hooks 注入技能与代理角色",
+                "命令层：暴露 $ulw-plan、$start-work、$ulw-loop 等 OmO 原生命令"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "项目记忆：$init-deep 自动生成分层 AGENTS.md，为后续智能体提供代码库上下文",
+                "战略规划：$ulw-plan 生成决策完备的计划文档，不触及产品代码",
+                "执行与验证：$start-work 按计划执行直到全部完成；$ulw-loop 循环执行并验证结果证据，非空口承诺",
+                "多模型路由：根据任务类别自动选择模型（如 gpt-5.4-mini 做小编辑，gpt-5.2 处理复杂逻辑，gpt-5.3-codex 做工程任务），节省配额",
+                "子代理角色：内置 explorer、librarian、plan、momus、metis 等角色，可通过 agent_type 参数调用",
+                "技能生态：review-work、remove-ai-slops、frontend-ui-ux、LSP、AST-grep 等开箱即用",
+                "诊断与修复：npx lazycodex-ai doctor 检查安装健康状态"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "使用 Codex 或 Claude Code 的开发者，希望引入规范化的规划-执行-验证开发流程",
+                "大型代码库需要多智能体协同分析、重构或新功能开发",
+                "对 OmO 感兴趣但被其配置复杂度劝退的用户",
+                "需要模型配额管理、降低 API 开销的团队"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "bullets": [
+                "vs 原生 OmO：LazyCodex 是做“发行版”工作，封装了 Codex 的插件接口与配置，免去手动设置 hooks、agent 角色、技能等步骤",
+                "vs oh-my-codex：灵感来源，但 LazyCodex 是完整的重新实现，并实时同步 OmO 最新版本",
+                "vs Cursor/Copilot：这些侧重于代码补全和聊天，而 LazyCodex 提供自主规划、执行、验证的智能体流水线，适合更为复杂的工程任务"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "当前版本 v4.13.0（2026-06-22），同步 OmO v4.13.0 市场载荷。更新亮点包括：Ultimate Browsing/Insane Search 共享技能、Ultraresearch 验证门更新、CodeGraph 改进、Team Mode、稳定性强化。项目活跃，由 Sisyphus Labs 的 Jobdori 持续维护。 ---"
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：未提供具体 benchmark 数据（如 SWE-bench 得分）证明智能体效率；模型路由的实际成本节省案例缺失；对 Claude 模型的具体支持情况和兼容性未深入说明（仅提及历史被封）；未说明 API 密钥等环境变量的配置方法"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Dong90__oh-my-taiyiforge",
+          "fullName": "Dong90/oh-my-taiyiforge",
+          "owner": "Dong90",
+          "name": "oh-my-taiyiforge",
+          "url": "https://github.com/Dong90/oh-my-taiyiforge",
+          "oneLiner": "统一多 AI 终端的九阶段代码研发流水线引擎",
+          "description": "AI workflow automation plugin for intelligent code generation with Claude/Codex",
+          "language": "TypeScript",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 453,
+          "starsGained": 0,
+          "streakDays": 2,
+          "isNew": false,
+          "createdAt": "2026-06-05",
+          "pushedAt": "2026-06-23",
+          "latestRelease": "v0.38.0",
+          "firstSeen": "2026-06-22",
+          "topics": [
+            "ai",
+            "automation",
+            "code-generation",
+            "developer-tools",
+            "llm",
+            "plugin",
+            "typescript",
+            "workflow"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-22",
+              "reason": "new",
+              "starsTotal": 413,
+              "starsGained": 0,
+              "release": "v0.28.1"
+            },
+            {
+              "date": "2026-06-23",
+              "reason": "release_update",
+              "starsTotal": 453,
+              "starsGained": 0,
+              "release": "v0.38.0"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "TaiyiForge（太一炉）是一个 AI 研发工作流自动化插件，将传统的软件工程标准编排成一条可执行、可审计的九阶段流水线。它不发明新标准，而是把 Harness、OpenSpec、GStack、Superpowers、OMO、Spec-Kit 等六个现有规范的流程变成一台状态机，通过统一的 slash 命令在 Claude、Codex、Cursor、OpenCode 四类 AI 终端中提供一致行为。开发者只需要说 /taiyi:new，引擎就会生成对应的工件、校验门控并自动推进阶段。"
+            },
+            {
+              "heading": "为什么火（关注点）",
+              "bullets": [
+                "流程断裂是 AI 编码的普遍痛点：长会话中 Agent 容易忘掉阶段顺序，导致需求丢失或设计半成品直接跳入编码，TaiyiForge 用状态机强制阶段顺序和工件产出，避免了“玄学”式开发。",
+                "多工具统一：不同 AI 终端（Claude Code、Codex、Cursor、OpenCode）各自一套流程，团队难以复用。TaiyiForge 提供一套 28 条 v28 顶栏命令，在任何终端行为一致，降低认知负荷。",
+                "人类门控与自动化的平衡：关键节点（变更审批、设计评审）要求 --approver 人类确认，避免了完全自动化的风险；小修复也有 flow bug 快捷路径，不死板。"
+              ]
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "语言：TypeScript",
+                "包管理：npm，零构建安装（npx 分发）",
+                "运行环境：Node.js >= 20",
+                "集成方式：通过 shell 脚本、MCP、命令文件注入 AI 终端的命令系统",
+                "工程化：GitHub Actions CI，829 测试用例，130 源文件"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "九阶段主流程：change → requirement → design → ui-design → task → dev → test → review → integration → archive，每阶段有固定产出工件（如 CHANGE.md、DESIGN.md）和自动门控校验。",
+                "v28 统一命令：28 条顶栏 slash 命令，分为主链、会话、排查、交付、路由、捷径、伞形命令（Umbrella）七组，覆盖日常开发全流程。",
+                "多终端适配：一键安装到 Claude Code、Codex、Cursor、OpenCode，缺端自动跳过；在 Codex 中自动转换为关键词路由。",
+                "聊天与引擎分轨：用户用 slash 命令，Agent/CI 用 CLI（npx taiyi）运行门控校验和流程推进，避免将大量工件塞入聊天引起上下文爆炸。",
+                "Skill 系统：内置 taiyi-* Skill，如 taiyi-dev 强制 TDD（先红后绿），taiyi-review 支持跨 AI 评审。",
+                "人类审查+自动审计：关键阶段强制人类批准，集成 taiyi_doctor、taiyi_audit 自检与交付门控。"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "使用 AI 编程助手进行严肃软件开发的团队（尤其多 AI 工具混合使用）",
+                "需要结构化、可审计、可复用的 AI 驱动研发流程",
+                "多人协作、跨会话、持续交付的项目",
+                "不想背诵复杂流程，希望“引擎告诉我下一步”的开发者"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "bullets": [
+                "相较于直接使用 OpenSpec、Harness 等原始规范：TaiyiForge 将其组合成可编排的状态机，减少了人工串联步骤。",
+                "相较于各 AI 终端原生的 agent 模式：提供了统一的工件锁定和阶段门控，避免了 Agent 忘掉流程。",
+                "相较于单一工具的内置流程（如 Cursor Rules）：跨工具一致性更好，且支持人类审查标记。"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "---",
+              "bullets": [
+                "最新 Release：v0.38.0 (2026-06-22)，合并 20 个 PR，文档同步，质量审计满分，829 个测试通过。",
+                "近期发展：v0.24 引入零构建安装，v0.25 支持 GitHub 直装，v28 命令体系稳定。",
+                "活跃迹象：快速迭代，命令收敛、安装流程简化。"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：六套集成标准各自的深度和兼容边界未详细说明；无性能基准或大规模团队的使用数据；与 IDE 插件的具体交互细节（如 Cursor 规则文件的格式）仅部分覆盖；README 截断，可能遗漏后续的架构细节和 API 文档"
+              ]
+            }
+          ]
+        }
+      ],
+      "news": [
+        {
+          "title": "Claude Desktop on AWS, Google Cloud, and Microsoft Foundry",
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQYlE4ZXhtMXZzLUxJWW1MUG1iclh4ZzdUejlUSEJ1TE4yZkl6MWotQ3hhNGlDR0xGNzRKOUlBdV9yQlkwT3Y4U3pMYm16eHQybGtwd1k1cGpqZ1JYTUhFQm5jYkItYlppMXJZZkI2TEdKWWlmazFibElxNjI1MFJRME9Cd0o3ampHcU1wZURINC1WYXk4Y1RPbHUtel9fbERxV3c?oc=5",
+          "source": "Claude",
+          "sourceType": "official",
+          "published": "2026-06-22",
+          "summary": "Claude Desktop 现已在 AWS、谷歌云和微软 Foundry 上推出",
+          "category": "产品"
+        },
+        {
+          "title": "Patch the Planet: a Daybreak initiative to support open source maintainers",
+          "url": "https://openai.com/index/patch-the-planet",
+          "source": "OpenAI",
+          "sourceType": "official",
+          "published": "2026-06-22",
+          "summary": "OpenAI 推出 Daybreak 计划之 Patch the Planet，借助 AI 和专家审核帮助开源维护者修复漏洞",
+          "category": "产品"
+        },
+        {
+          "title": "The text in Claude Code’s “Extended Thinking” output",
+          "url": "https://patrickmccanna.net/the-text-in-claude-codes-extended-thinking-output-is-not-authentic/",
+          "source": "Hacker News",
+          "sourceType": "community",
+          "published": "2026-06-22",
+          "summary": "Claude Code 的 Extended Thinking 输出文本引发社区关注和讨论",
+          "category": "观点"
+        },
+        {
+          "title": "Moebius: 0.2B image inpainting model with 10B-level performance",
+          "url": "https://hustvl.github.io/Moebius/",
+          "source": "Hacker News",
+          "sourceType": "community",
+          "published": "2026-06-22",
+          "summary": "Moebius 发布 0.2B 参数图像修复模型，宣称性能达到百亿参数级",
+          "category": "模型发布"
+        },
+        {
+          "title": "PP-OCRv6 on Hugging Face: 50-Language OCR from 1.5M to 34.5M Parameters",
+          "url": "https://huggingface.co/blog/PaddlePaddle/pp-ocrv6",
+          "source": "HF Blog",
+          "sourceType": "hf",
+          "published": "2026-06-22",
+          "summary": "PP-OCRv6 在 Hugging Face 发布，支持 50 种语言，参数规模 150 万到 3450 万",
+          "category": "模型发布"
+        },
+        {
+          "title": "Is Gemma 4 going to be the next Mistral (or Qwen3.6) one day? Concerning the lack of finetunes",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1ucy863/is_gemma_4_going_to_be_the_next_mistral_or_qwen36/",
+          "source": "r/LocalLLaMA",
+          "sourceType": "community",
+          "published": "2026-06-22",
+          "summary": "Reddit 讨论 Gemma 4 缺乏微调版本，质疑其能否成为下一代 Mistral 或 Qwen",
+          "category": "观点"
+        },
+        {
+          "title": "DeepSeek raises $7.4B USD at $60B valuation. Remarkably, Liang Wenfeng invests $3B in DeepSeek himself.",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1ucwyes/deepseek_raises_74b_usd_at_60b_valuation/",
+          "source": "r/LocalLLaMA",
+          "sourceType": "community",
+          "published": "2026-06-22",
+          "summary": "DeepSeek 以 600 亿美元估值融资 74 亿美元，梁文锋个人出资 30 亿美元",
+          "category": "融资/商业"
+        }
+      ]
+    },
+    {
       "date": "2026-06-22",
       "count": 8,
       "projects": [
@@ -239,6 +1510,13 @@
               "starsTotal": 858,
               "starsGained": 0,
               "release": ""
+            },
+            {
+              "date": "2026-06-23",
+              "reason": "lightweight",
+              "starsTotal": 863,
+              "starsGained": 0,
+              "release": ""
             }
           ],
           "analysis": [
@@ -344,6 +1622,13 @@
               "starsTotal": 393,
               "starsGained": 0,
               "release": "v0.1.4"
+            },
+            {
+              "date": "2026-06-23",
+              "reason": "lightweight",
+              "starsTotal": 431,
+              "starsGained": 0,
+              "release": "v0.1.4"
             }
           ],
           "analysis": [
@@ -424,8 +1709,8 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-06-05",
-          "pushedAt": "2026-06-22",
-          "latestRelease": "v0.28.1",
+          "pushedAt": "2026-06-23",
+          "latestRelease": "v0.38.0",
           "firstSeen": "2026-06-22",
           "topics": [
             "ai",
@@ -444,62 +1729,80 @@
               "starsTotal": 413,
               "starsGained": 0,
               "release": "v0.28.1"
+            },
+            {
+              "date": "2026-06-23",
+              "reason": "release_update",
+              "starsTotal": 453,
+              "starsGained": 0,
+              "release": "v0.38.0"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "TaiyiForge（太一炉）是一个 AI 工作流自动化插件，面向严肃使用 AI 做项目的团队。它把 Harness、OpenSpec、GStack、Superpowers、OMO、Spec-Kit 六套工程标准编排成一个状态机，提供九阶段研发主流程（从需求、设计、开发到测试、审查、集成），并通过人类门控和引擎自动校验来保证质量。核心交互方式是一组跨 Claude、Codex、Cursor、OpenCode 四端一致的 slash 命令（v28 共 28 条），让开发者无需记忆阶段顺序或工具差异。"
+              "body": "TaiyiForge（太一炉）是一个 AI 研发工作流自动化插件，将传统的软件工程标准编排成一条可执行、可审计的九阶段流水线。它不发明新标准，而是把 Harness、OpenSpec、GStack、Superpowers、OMO、Spec-Kit 等六个现有规范的流程变成一台状态机，通过统一的 slash 命令在 Claude、Codex、Cursor、OpenCode 四类 AI 终端中提供一致行为。开发者只需要说 /taiyi:new，引擎就会生成对应的工件、校验门控并自动推进阶段。"
             },
             {
-              "heading": "为什么火",
-              "body": "1. 统一多端体验：同一套 Skill 和命令在四款主流 AI 编码工具中行为一致，降低团队学习成本。 2. 解决真实痛点：长会话上下文爆炸、Agent 跳阶段写代码、小修复被迫走全流程等问题都有针对性设计（如令牌精简、复杂度推荐、条件跳过）。 3. 工程化门控：关键阶段要求 --approver 人类确认，自动生成审计日志 activity.jsonl，满足严肃交付的可追溯性需求。 4. 轻量零安装：支持 npx taiyi-forge-install --all 一键部署，无需克隆仓库。"
+              "heading": "为什么火（关注点）",
+              "bullets": [
+                "流程断裂是 AI 编码的普遍痛点：长会话中 Agent 容易忘掉阶段顺序，导致需求丢失或设计半成品直接跳入编码，TaiyiForge 用状态机强制阶段顺序和工件产出，避免了“玄学”式开发。",
+                "多工具统一：不同 AI 终端（Claude Code、Codex、Cursor、OpenCode）各自一套流程，团队难以复用。TaiyiForge 提供一套 28 条 v28 顶栏命令，在任何终端行为一致，降低认知负荷。",
+                "人类门控与自动化的平衡：关键节点（变更审批、设计评审）要求 --approver 人类确认，避免了完全自动化的风险；小修复也有 flow bug 快捷路径，不死板。"
+              ]
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "主要语言：TypeScript",
-                "运行环境：Node ≥20",
-                "架构模式：聊天轨（slash 命令）+ 引擎轨（CLI 校验/门控）+ MCP（只读排障）",
-                "集成目标：Claude Code、Codex、Cursor、OpenCode",
-                "测试：Vitest、Playwright（端到端冒烟）",
-                "工件格式：Markdown 文档驱动，.taiyi/changes/<slug>/ 作为真源"
+                "语言：TypeScript",
+                "包管理：npm，零构建安装（npx 分发）",
+                "运行环境：Node.js >= 20",
+                "集成方式：通过 shell 脚本、MCP、命令文件注入 AI 终端的命令系统",
+                "工程化：GitHub Actions CI，829 测试用例，130 源文件"
               ]
             },
             {
               "heading": "核心能力",
               "bullets": [
-                "九阶段流水线：change → requirement → design → ui-design → task → dev → test → review → integration，每个阶段生成标准工件。",
-                "28 条跨平台斜杠命令：覆盖主链（new/status/write/continue）、会话管理、排障、交付、路由、捷径及 6 个伞形命令组（token、test、review、diagram、mode、workflow）。",
-                "智能状态与引导：/taiyi:status 返回当前阶段、推荐 Skill、下一步动作，/taiyi:new 自动创建 slug 并引导填写 CHANGE.md。",
-                "复杂度自适应：根据变更复杂度推荐 profile，低复杂度可放宽 quality gate，小修复可走 lite 路径。",
-                "跨会话续接：支持 pause/resume，累积上下文 phase-context.ts，避免上下文丢失。",
-                "门控与审计：人类门控（change/design/review）强制审批，全流程生成 activity.jsonl 审计日志，交付前 audit 校验。",
-                "Token 优化：new/continue 指令从 50 行精简到 1 行，长会话支持 token compress 生成 CONTEXT-COMPACT.md。"
+                "九阶段主流程：change → requirement → design → ui-design → task → dev → test → review → integration → archive，每阶段有固定产出工件（如 CHANGE.md、DESIGN.md）和自动门控校验。",
+                "v28 统一命令：28 条顶栏 slash 命令，分为主链、会话、排查、交付、路由、捷径、伞形命令（Umbrella）七组，覆盖日常开发全流程。",
+                "多终端适配：一键安装到 Claude Code、Codex、Cursor、OpenCode，缺端自动跳过；在 Codex 中自动转换为关键词路由。",
+                "聊天与引擎分轨：用户用 slash 命令，Agent/CI 用 CLI（npx taiyi）运行门控校验和流程推进，避免将大量工件塞入聊天引起上下文爆炸。",
+                "Skill 系统：内置 taiyi-* Skill，如 taiyi-dev 强制 TDD（先红后绿），taiyi-review 支持跨 AI 评审。",
+                "人类审查+自动审计：关键阶段强制人类批准，集成 taiyi_doctor、taiyi_audit 自检与交付门控。"
               ]
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "使用 AI 编码（Claude/Codex/Cursor）的研发团队，希望规范化需求→交付流程。",
-                "需要多端统一工作流，避免按工具重新培训。",
-                "追求严肃交付质量，需要可追溯的决策记录和人工审批节点。",
-                "已有部分标准化资产（如 Superpowers、OpenSpec），希望编排成一条龙。"
+                "使用 AI 编程助手进行严肃软件开发的团队（尤其多 AI 工具混合使用）",
+                "需要结构化、可审计、可复用的 AI 驱动研发流程",
+                "多人协作、跨会话、持续交付的项目",
+                "不想背诵复杂流程，希望“引擎告诉我下一步”的开发者"
               ]
             },
             {
               "heading": "同类对比",
-              "body": "区别于单一的 AI 编码助手或 prompt 框架，TaiyiForge 定位为“编排器”而非新标准创造者。它不替代 Harness、OpenSpec 等已有规范，而是将其组合成可执行的状态机。与直接使用 spec-kit 或 open-spec 相比，它提供：统一的跨工具命令界面、自动阶段推进与门控、会话续接、以及人类审批集成。比零散的 Skills 组合更系统，比全流程平台更轻量。"
+              "bullets": [
+                "相较于直接使用 OpenSpec、Harness 等原始规范：TaiyiForge 将其组合成可编排的状态机，减少了人工串联步骤。",
+                "相较于各 AI 终端原生的 agent 模式：提供了统一的工件锁定和阶段门控，避免了 Agent 忘掉流程。",
+                "相较于单一工具的内置流程（如 Cursor Rules）：跨工具一致性更好，且支持人类审查标记。"
+              ]
             },
             {
               "heading": "版本动态",
-              "body": "最新 v0.28.1（2026-06-22）主要修复 CI 问题（Playwright 安装、vitest 超时、覆盖率容错）。v0.28.0 带来多项核心优化：复杂度推荐、auto-approver 配置、条件跳过 UI 设计、智能状态显示（具体命令+耗时）、低复杂度质量门放宽、审计日志、累积上下文、仪表板增强、令牌大幅精简等。项目活跃度高，Star 数 413，持续演进中。 ---"
+              "body": "---",
+              "bullets": [
+                "最新 Release：v0.38.0 (2026-06-22)，合并 20 个 PR，文档同步，质量审计满分，829 个测试通过。",
+                "近期发展：v0.24 引入零构建安装，v0.25 支持 GitHub 直装，v28 命令体系稳定。",
+                "活跃迹象：快速迭代，命令收敛、安装流程简化。"
+              ]
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
                 "置信度：high",
-                "信息盲区：未提供性能基准数据（如大型项目下的阶段执行耗时）；未能说明铁三角（Harness/OpenSpec/GStack 等）的具体集成深度和版本兼容性；未提及多语言支持现状（README 双语但工具本身是否支持国际化）；同类工具横向对比细节有限，仅在方案理念中提及编排对象"
+                "信息盲区：六套集成标准各自的深度和兼容边界未详细说明；无性能基准或大规模团队的使用数据；与 IDE 插件的具体交互细节（如 Cursor 规则文件的格式）仅部分覆盖；README 截断，可能遗漏后续的架构细节和 API 文档"
               ]
             }
           ]
@@ -520,7 +1823,7 @@
           "streakDays": 3,
           "isNew": false,
           "createdAt": "2026-05-29",
-          "pushedAt": "2026-06-22",
+          "pushedAt": "2026-06-23",
           "latestRelease": "chrome-150.0.7844.0",
           "firstSeen": "2026-06-21",
           "topics": [
@@ -555,54 +1858,75 @@
               "starsTotal": 2526,
               "starsGained": 0,
               "release": "chrome-150.0.7844.0"
+            },
+            {
+              "date": "2026-06-23",
+              "reason": "star_jump",
+              "starsTotal": 3474,
+              "starsGained": 0,
+              "release": "chrome-150.0.7844.0"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "PixelRAG 将文档（网页、PDF、图片）渲染为截图，直接在图像嵌入上做检索增强生成，不打散成文字。表格、图表、排版等视觉结构被完整保留。"
+              "body": "PixelRAG 是一个以截图而非文本进行文档检索与生成增强（RAG）的框架。它把网页、PDF、图片等渲染成图像瓦片，用微调后的 Qwen3-VL-Embedding 模型生成视觉嵌入，再通过 FAISS 索引实现“所见即所得”的搜索。项目提供了预建的 828 万维基百科页面索引和即时可用 API，同时支持用户自建索引。"
             },
             {
               "heading": "为什么火",
-              "body": "传统 RAG 把网页解析为文本，会丢失表格与复杂布局，导致无法回答依赖图表的问题。PixelRAG 用截图绕过解析，直接对视觉内容建立索引并检索。开源即提供 828 万 Wikipedia 页面的在线搜索 API 和可下载的 FAISS 索引，零门槛体验。"
+              "bullets": [
+                "保留视觉信息：传统 RAG 将 HTML 解析为纯文本，会丢失表格、图表、排版等结构；PixelRAG 直接使用页面截图，让检索与答案生成能利用完整视觉上下文。",
+                "零门槛体验：官方提供托管 API（无需 API 密钥）和预建索引，一行 curl 即可搜索维基百科；本地使用亦只需 pip install。",
+                "生态延伸：附带 Claude Code 插件（pixelbrowse），让 LLM 通过截图“阅读”网页，无须额外服务；训练代码与数据集公开，便于复现和拓展。"
+              ]
             },
             {
               "heading": "技术栈",
-              "body": "Python 生态：Playwright/CDP 截图，Qwen3-VL-Embedding-2B 模型（LoRA 微调）生成视觉向量，FAISS 构建索引，FastAPI 提供搜索服务。渲染和索引分别作为独立命令 pixelshot 与 pixelrag。"
+              "bullets": [
+                "渲染引擎：基于 Playwright/CDP 的 pixelshot，支持网页、PDF（需 poppler）以及本地图片。",
+                "嵌入模型：Qwen3-VL-Embedding-2B，LoRA 微调于网页截图数据（权重已发布）。",
+                "索引与搜索：FAISS（支持 CPU/GPU），内置分片构建与服务。",
+                "服务层：FastAPI 提供 REST API；配置通过 YAML 驱动。",
+                "训练工具链：独立 uv 项目，使用 PyTorch 2.9.1 + CUDA 12.9，LoRA 微调流程完整文档化。"
+              ]
             },
             {
               "heading": "核心能力",
               "bullets": [
-                "通用文档渲染：网页、PDF、本地图片→标准截图瓦片",
-                "视觉索引管道：截图分组、嵌入、构建 FAISS 索引",
-                "多模态检索：支持文本或图像查询，返回相关截图瓦片",
-                "Claude Code 插件：让 Claude 直接「看」网页截图，无需解析 HTML",
-                "预建大规模索引：Wikipedia 8.28M 页面索引可下载或直接 API 调用",
-                "本地自建索引：支持 Linux (CUDA) 与 macOS (Apple Silicon)，自动选设备"
+                "截图级文档解析：pixelshot 一行命令即可将任意网页或 PDF 转为图像瓦片。",
+                "视觉语义搜索：直接以图像 tile 为检索单元，查询可以是文本或图像（视觉搜索）。",
+                "预建大规模索引：828 万维基百科页面索引，可从 Hugging Face 下载或直接使用官方 API。",
+                "端到端自建流水线：pixelrag index build 一条命令从原始文档到可查询索引。",
+                "生态集成：Claude Code 插件让 AI 助手获得“阅读”网页原貌的能力。"
               ]
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "需要理解表格、图表、信息图的知识型问答",
-                "对 HTML 解析不友好的网站内容归档与检索",
-                "多模态 Agent 的视觉“眼睛”（如 Claude 插件场景）",
-                "企业内部文档（PDF、网页抓取）的视觉搜索"
+                "复杂网页信息抽取：需要理解表格、图表、排版布局的问答或分析任务。",
+                "RAG 系统升级：为现有 LLM 应用增加视觉感知，避免因解析丢失导致答案错误。",
+                "文档数字化与搜索：对 PDF 报告、扫描件等非纯粹文本内容建立视觉索引。",
+                "AI Agent 增强：为浏览器自动化、研究辅助等 Agent 提供更准确的页面理解。"
               ]
             },
             {
               "heading": "同类对比",
-              "body": "相对于 LlamaIndex、Unstructured 等纯文本 RAG 管道，保留布局信息，能直接回答“图中第几行”之类的问题。相比用通用 VLM 做全图检索，PixelRAG 使用专门微调的视觉嵌入模型，效率更高且可做大规模索引。"
+              "body": "与传统文本 RAG（如 LangChain 文本拆分+向量检索）相比，PixelRAG 的独特优势在于保留视觉结构，回答“表格里某个数字是多少”“图表 X 轴代表什么”之类的问题时不再失效。相较于其他视觉嵌入方案（如 ColPali 使用 ViT 编码器），PixelRAG 采用了完整的多模态 VLM（Qwen3-VL）并针对网页截图微调，更贴合真实网页内容。项目还提供从渲染到索引的全套工程化工具，比纯学术框架更易落地。"
             },
             {
               "heading": "版本动态",
-              "body": "最新 Release 为 chrome-150.0.7844.0 (2026-06-01)，修复了 headless_shell 的 CDP 原始文件路径。项目整体处于活跃开发阶段，提供在线 Demo 和 API。 ---"
+              "body": "---",
+              "bullets": [
+                "最新 Release: chrome-150.0.7844.0（2026-06-01），主要是 Chromium 头部 shell 补丁，用于 CDP 截图优化。",
+                "主仓库活跃（2026-06-23 推送），已发布 Apache-2.0 论文和完整代码。",
+                "论文题为《PIXELRAG: Web Screenshots Beat Text for Retrieval-Augmented Generation》，由伯克利 SkyLab/BAIR/NLP 出品。"
+              ]
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
                 "置信度：high",
-                "信息盲区：README 未披露与文本 RAG 的定量对比数据（准确率、召回率等）；嵌入模型训练集规模、评估细节未在 README 中展开；大规模索引服务的资源消耗、延迟未说明"
+                "信息盲区：README 未提供具体 benchmark 数据（如检索准确率、吞吐量），仅指向论文；预建索引的具体架构与资源需求未详述；训练代码与主流水线的适配细节需查阅 train/ 内部文档"
               ]
             }
           ]
@@ -973,6 +2297,13 @@
               "starsTotal": 44486,
               "starsGained": 568,
               "release": "v3.23.0"
+            },
+            {
+              "date": "2026-06-23",
+              "reason": "lightweight",
+              "starsTotal": 45846,
+              "starsGained": 1557,
+              "release": "v3.23.0"
             }
           ],
           "analysis": [
@@ -1052,7 +2383,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2025-05-07",
-          "pushedAt": "2026-06-22",
+          "pushedAt": "2026-06-23",
           "latestRelease": "",
           "firstSeen": "2026-06-21",
           "topics": [
@@ -1088,6 +2419,13 @@
               "reason": "lightweight",
               "starsTotal": 72594,
               "starsGained": 442,
+              "release": ""
+            },
+            {
+              "date": "2026-06-23",
+              "reason": "lightweight",
+              "starsTotal": 73272,
+              "starsGained": 738,
               "release": ""
             }
           ],
@@ -1338,6 +2676,13 @@
               "starsTotal": 958,
               "starsGained": 0,
               "release": "v3.2.5"
+            },
+            {
+              "date": "2026-06-23",
+              "reason": "lightweight",
+              "starsTotal": 966,
+              "starsGained": 0,
+              "release": "v3.2.5"
             }
           ],
           "analysis": [
@@ -1532,7 +2877,7 @@
           "isNew": false,
           "createdAt": "2026-04-07",
           "pushedAt": "2026-06-22",
-          "latestRelease": "v0.3.5",
+          "latestRelease": "v0.3.6",
           "firstSeen": "2026-06-19",
           "topics": [
             "ai-video",
@@ -1592,70 +2937,69 @@
               "starsTotal": 5186,
               "starsGained": 1834,
               "release": "v0.3.5"
+            },
+            {
+              "date": "2026-06-23",
+              "reason": "release_update",
+              "starsTotal": 7386,
+              "starsGained": 2463,
+              "release": "v0.3.6"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "Palmier Pro 是一个从零用 Swift 构建的 macOS 视频编辑器，最大特点是为 AI 代理（Claude、Codex、Cursor）提供一等公民支持：通过内置的 MCP 服务器，AI 可以直接读取/操作时间线、生成内容、执行剪辑。编辑器本身免费且开源（GPLv3），生成式 AI 功能闭源但可选购。"
+              "body": "Palmier Pro 是一个从零开始用 Swift 构建的 macOS 视频编辑器，专为 AI 协作设计。它提供完整的时间线编辑能力，同时内置生成式 AI 和 MCP 服务器，允许 Claude、Codex、Cursor 等外部 AI 代理直接操作视频项目。"
             },
             {
               "heading": "为什么火",
               "bullets": [
-                "YC S24 背景，社区热度高（4k+ stars，创建仅 2 个月）",
-                "抓住了 AI Agent 与专业工具集成的趋势，MCP 生态关键节点",
-                "将“AI 替你剪视频”从概念变成可落地的工作流，开发者社区对新范式好奇"
+                "将 AI 工作流深度整合到传统非线性编辑器中，而不是简单添加插件。",
+                "通过 MCP 协议让你的代码助手和桌面 AI 应用变成视频编辑搭档。",
+                "Y Combinator S24 背景，社区反馈积极（7.3k+ Star）。",
+                "编辑器本身免费开源，降低了体验门槛。"
               ]
             },
             {
               "heading": "技术栈",
               "bullets": [
                 "语言：Swift",
-                "平台：macOS 26 (Tahoe) + Apple Silicon 专属",
-                "集成协议：MCP over HTTP (127.0.0.1:19789/mcp)",
-                "AI 生成模型：Seedance, Kling, Nano Banana Pro (闭源部分)",
-                "分发：DMG，无 App Store 版本"
+                "平台：macOS 26 (Tahoe) 仅限 Apple Silicon（M系列芯片）",
+                "架构：原生 SwiftUI 应用，内嵌 HTTP MCP 服务器（端口 19789），生成式 AI 后端闭源。",
+                "构建工具：Xcode，CI 在 push/PR 上运行。"
               ]
             },
             {
               "heading": "核心能力",
-              "bullets": [
-                "原生视频编辑：多轨时间线、波纹插入、剪辑分割、关键帧调节、撤销等",
-                "MCP 服务器：应用运行时暴露 MCP 端点，AI 助手可获取时间线状态、执行剪切、添加素材、基于转录文本的剪辑",
-                "内置聊天代理：可在应用内与助手问答，复制代理消息",
-                "AI 生成视频/图像：在时间线内直接触发生成（需订阅）",
-                "文件夹导入，轻量遥测面包屑，崩溃修复等工程打磨"
-              ]
+              "body": "1. 全功能视频编辑：时间线、剪辑、导出（支持 HEVC 等编解码），文本层、颜色解析等细节打磨。 2. 生成式 AI 集成：在时间线内直接使用 Seedance、Kling、Nano Banana Pro 等模型生成视频/图像（需订阅）。 3. MCP 服务器：应用运行后自动暴露 http://127.0.0.1:19789/mcp，支持 Claude Code/Desktop、Codex、Cursor 通过配置连接。 4. 多语言：README 覆盖 14 种语言，国际化程度高。 5. 社区与支持：Discord、Twitter、邮件渠道。"
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "AI/智能代理开发者：将视频编辑作为 MCP 工具集成到自主工作流",
-                "内容创作者：用自然语言让 Claude/Cursor 帮助剪辑、描述时间轴、批量操作",
-                "产品 Demo：展示 AI + 专业工具的协同可能性"
+                "独立视频创作者想用 AI 加速剪辑流程，并让桌面 AI 助手管理项目文件操作。",
+                "开发者探索用 Claude/Cursor 编程式批量处理视频任务，如自动剪辑、加字幕、插入生成片段。",
+                "AI 研究者测试生成模型在现实编辑工作流中的表现。"
               ]
             },
             {
               "heading": "同类对比",
+              "body": "Palmier Pro 的差异化在于将时间线操作暴露为标准化 MCP 工具，让通用 AI 代理直接操控。",
               "bullets": [
-                "Adobe Premiere Pro：闭源重量级，无原生 AI 代理接口，Palmier 以 MCP 开放性和 Swift 轻量化为区分",
-                "CapCut/Final Cut Pro：无 MCP 集成，AI 能力封闭；Palmier 让 AI 直接操控时间线数据",
-                "其他 AI 视频工具（Runway 等）：主要提供生成能力，缺少可编程的时间线编辑器和本地 MCP 服务器"
+                "CapCut：免费但闭源，AI 能力有限且无法外部代理控制。",
+                "Adobe Premiere Pro：行业标准但重量级，无原生 MCP 集成，AI 功能依赖插件。",
+                "DaVinci Resolve：调色强，但脚本化需通过 Python/Lua API，非 AI 原语。",
+                "Descript：基于文本的编辑，侧重播客，非传统 NLE。"
               ]
             },
             {
               "heading": "版本动态",
-              "body": "---",
-              "bullets": [
-                "v0.3.5（2026-06-20）：修复打包问题，引入轻量遥测，添加素材裁剪（trimStart/trimEnd），基于转录文本的剪辑，修复三个致崩问题，导入文件夹功能，改进 AI 提示",
-                "整体处于早期快速迭代阶段，核心编辑稳定性在加强，AI 协同能力逐步完善"
-              ]
+              "body": "最新 v0.3.6（2026-06-22）修复了预览导出挂起、导入文件夹卡主线程、项目存储目录启动挂起、Clerk 钥匙串主线程卡顿等问题。CI 刚刚建立，表明项目进入快速迭代期。之前还有多语言 README 修复、字体注册修复等，说明团队关注细节和跨语言体验。 ---"
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
-                "置信度：medium",
-                "信息盲区：README 未列出 MCP 暴露的具体工具函数清单及参数；生成式 AI 模型的使用额度、定价和效果对比未说明；无性能基准数据（如渲染时间、资源占用）；只提及 macOS 26，未说明对开发版本或后续测试版兼容策略；无插件或 SDK 扩展机制说明"
+                "置信度：high",
+                "信息盲区：未提供性能基准或与同类编辑器对比的实测数据；生成式 AI 功能闭源，缺乏模型运行细节（本地/云端）和延迟信息；未说明是否支持其他 macOS 版本或 Intel Mac 计划；MCP 工具列表和具体能力未在 README 中列出；无构建/开发环境具体步骤（仅引用 CONTRIBUTING.md）"
               ]
             }
           ]
@@ -1676,7 +3020,7 @@
           "streakDays": 2,
           "isNew": false,
           "createdAt": "2026-05-29",
-          "pushedAt": "2026-06-22",
+          "pushedAt": "2026-06-23",
           "latestRelease": "chrome-150.0.7844.0",
           "firstSeen": "2026-06-21",
           "topics": [
@@ -1711,54 +3055,75 @@
               "starsTotal": 2526,
               "starsGained": 0,
               "release": "chrome-150.0.7844.0"
+            },
+            {
+              "date": "2026-06-23",
+              "reason": "star_jump",
+              "starsTotal": 3474,
+              "starsGained": 0,
+              "release": "chrome-150.0.7844.0"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "PixelRAG 将文档（网页、PDF、图片）渲染为截图，直接在图像嵌入上做检索增强生成，不打散成文字。表格、图表、排版等视觉结构被完整保留。"
+              "body": "PixelRAG 是一个以截图而非文本进行文档检索与生成增强（RAG）的框架。它把网页、PDF、图片等渲染成图像瓦片，用微调后的 Qwen3-VL-Embedding 模型生成视觉嵌入，再通过 FAISS 索引实现“所见即所得”的搜索。项目提供了预建的 828 万维基百科页面索引和即时可用 API，同时支持用户自建索引。"
             },
             {
               "heading": "为什么火",
-              "body": "传统 RAG 把网页解析为文本，会丢失表格与复杂布局，导致无法回答依赖图表的问题。PixelRAG 用截图绕过解析，直接对视觉内容建立索引并检索。开源即提供 828 万 Wikipedia 页面的在线搜索 API 和可下载的 FAISS 索引，零门槛体验。"
+              "bullets": [
+                "保留视觉信息：传统 RAG 将 HTML 解析为纯文本，会丢失表格、图表、排版等结构；PixelRAG 直接使用页面截图，让检索与答案生成能利用完整视觉上下文。",
+                "零门槛体验：官方提供托管 API（无需 API 密钥）和预建索引，一行 curl 即可搜索维基百科；本地使用亦只需 pip install。",
+                "生态延伸：附带 Claude Code 插件（pixelbrowse），让 LLM 通过截图“阅读”网页，无须额外服务；训练代码与数据集公开，便于复现和拓展。"
+              ]
             },
             {
               "heading": "技术栈",
-              "body": "Python 生态：Playwright/CDP 截图，Qwen3-VL-Embedding-2B 模型（LoRA 微调）生成视觉向量，FAISS 构建索引，FastAPI 提供搜索服务。渲染和索引分别作为独立命令 pixelshot 与 pixelrag。"
+              "bullets": [
+                "渲染引擎：基于 Playwright/CDP 的 pixelshot，支持网页、PDF（需 poppler）以及本地图片。",
+                "嵌入模型：Qwen3-VL-Embedding-2B，LoRA 微调于网页截图数据（权重已发布）。",
+                "索引与搜索：FAISS（支持 CPU/GPU），内置分片构建与服务。",
+                "服务层：FastAPI 提供 REST API；配置通过 YAML 驱动。",
+                "训练工具链：独立 uv 项目，使用 PyTorch 2.9.1 + CUDA 12.9，LoRA 微调流程完整文档化。"
+              ]
             },
             {
               "heading": "核心能力",
               "bullets": [
-                "通用文档渲染：网页、PDF、本地图片→标准截图瓦片",
-                "视觉索引管道：截图分组、嵌入、构建 FAISS 索引",
-                "多模态检索：支持文本或图像查询，返回相关截图瓦片",
-                "Claude Code 插件：让 Claude 直接「看」网页截图，无需解析 HTML",
-                "预建大规模索引：Wikipedia 8.28M 页面索引可下载或直接 API 调用",
-                "本地自建索引：支持 Linux (CUDA) 与 macOS (Apple Silicon)，自动选设备"
+                "截图级文档解析：pixelshot 一行命令即可将任意网页或 PDF 转为图像瓦片。",
+                "视觉语义搜索：直接以图像 tile 为检索单元，查询可以是文本或图像（视觉搜索）。",
+                "预建大规模索引：828 万维基百科页面索引，可从 Hugging Face 下载或直接使用官方 API。",
+                "端到端自建流水线：pixelrag index build 一条命令从原始文档到可查询索引。",
+                "生态集成：Claude Code 插件让 AI 助手获得“阅读”网页原貌的能力。"
               ]
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "需要理解表格、图表、信息图的知识型问答",
-                "对 HTML 解析不友好的网站内容归档与检索",
-                "多模态 Agent 的视觉“眼睛”（如 Claude 插件场景）",
-                "企业内部文档（PDF、网页抓取）的视觉搜索"
+                "复杂网页信息抽取：需要理解表格、图表、排版布局的问答或分析任务。",
+                "RAG 系统升级：为现有 LLM 应用增加视觉感知，避免因解析丢失导致答案错误。",
+                "文档数字化与搜索：对 PDF 报告、扫描件等非纯粹文本内容建立视觉索引。",
+                "AI Agent 增强：为浏览器自动化、研究辅助等 Agent 提供更准确的页面理解。"
               ]
             },
             {
               "heading": "同类对比",
-              "body": "相对于 LlamaIndex、Unstructured 等纯文本 RAG 管道，保留布局信息，能直接回答“图中第几行”之类的问题。相比用通用 VLM 做全图检索，PixelRAG 使用专门微调的视觉嵌入模型，效率更高且可做大规模索引。"
+              "body": "与传统文本 RAG（如 LangChain 文本拆分+向量检索）相比，PixelRAG 的独特优势在于保留视觉结构，回答“表格里某个数字是多少”“图表 X 轴代表什么”之类的问题时不再失效。相较于其他视觉嵌入方案（如 ColPali 使用 ViT 编码器），PixelRAG 采用了完整的多模态 VLM（Qwen3-VL）并针对网页截图微调，更贴合真实网页内容。项目还提供从渲染到索引的全套工程化工具，比纯学术框架更易落地。"
             },
             {
               "heading": "版本动态",
-              "body": "最新 Release 为 chrome-150.0.7844.0 (2026-06-01)，修复了 headless_shell 的 CDP 原始文件路径。项目整体处于活跃开发阶段，提供在线 Demo 和 API。 ---"
+              "body": "---",
+              "bullets": [
+                "最新 Release: chrome-150.0.7844.0（2026-06-01），主要是 Chromium 头部 shell 补丁，用于 CDP 截图优化。",
+                "主仓库活跃（2026-06-23 推送），已发布 Apache-2.0 论文和完整代码。",
+                "论文题为《PIXELRAG: Web Screenshots Beat Text for Retrieval-Augmented Generation》，由伯克利 SkyLab/BAIR/NLP 出品。"
+              ]
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
                 "置信度：high",
-                "信息盲区：README 未披露与文本 RAG 的定量对比数据（准确率、召回率等）；嵌入模型训练集规模、评估细节未在 README 中展开；大规模索引服务的资源消耗、延迟未说明"
+                "信息盲区：README 未提供具体 benchmark 数据（如检索准确率、吞吐量），仅指向论文；预建索引的具体架构与资源需求未详述；训练代码与主流水线的适配细节需查阅 train/ 内部文档"
               ]
             }
           ]
@@ -1823,6 +3188,13 @@
               "date": "2026-06-22",
               "reason": "lightweight",
               "starsTotal": 551,
+              "starsGained": 0,
+              "release": "v0.5.2"
+            },
+            {
+              "date": "2026-06-23",
+              "reason": "lightweight",
+              "starsTotal": 564,
               "starsGained": 0,
               "release": "v0.5.2"
             }
@@ -2205,6 +3577,13 @@
               "starsTotal": 30982,
               "starsGained": 140,
               "release": "v0.5.0"
+            },
+            {
+              "date": "2026-06-23",
+              "reason": "lightweight",
+              "starsTotal": 32273,
+              "starsGained": 529,
+              "release": "v0.5.0"
             }
           ],
           "analysis": [
@@ -2408,7 +3787,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-06-02",
-          "pushedAt": "2026-06-21",
+          "pushedAt": "2026-06-22",
           "latestRelease": "",
           "firstSeen": "2026-06-20",
           "topics": [
@@ -2448,6 +3827,13 @@
               "date": "2026-06-22",
               "reason": "lightweight",
               "starsTotal": 919,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-06-23",
+              "reason": "lightweight",
+              "starsTotal": 923,
               "starsGained": 0,
               "release": ""
             }
@@ -3286,19 +4672,19 @@
   ],
   "weekly": {
     "project": {
-      "date": "2026-06-19",
+      "date": "2026-06-22",
       "windowDays": 7,
-      "total": 9,
+      "total": 49,
       "hottest": [
         {
           "fullName": "chopratejas/headroom",
           "url": "https://github.com/chopratejas/headroom",
           "oneLiner": "压缩AI代理上下文，节省60-95% token且答案不变。",
           "language": "Python",
-          "starsTotal": 36949,
-          "weeklyGain": 10159,
-          "appearDays": 1,
-          "streakDays": 1,
+          "starsTotal": 44454,
+          "weeklyGain": 16102,
+          "appearDays": 4,
+          "streakDays": 7,
           "firstSeen": "2026-06-19",
           "isNewcomer": true
         },
@@ -3307,10 +4693,10 @@
           "url": "https://github.com/addyosmani/agent-skills",
           "oneLiner": "为AI编码代理提供覆盖全生命周期的24个生产级工程技能，让代理遵循资深工程师的规范与质量实践。",
           "language": "Shell",
-          "starsTotal": 63206,
+          "starsTotal": 64771,
           "weeklyGain": 9285,
-          "appearDays": 1,
-          "streakDays": 1,
+          "appearDays": 3,
+          "streakDays": 5,
           "firstSeen": "2026-06-19",
           "isNewcomer": true
         },
@@ -3319,10 +4705,10 @@
           "url": "https://github.com/Panniantong/Agent-Reach",
           "oneLiner": "一句 CLI 给 AI 装上全互联网眼睛，零 API 费读遍微博客、视频、论坛",
           "language": "Python",
-          "starsTotal": 34844,
-          "weeklyGain": 7856,
-          "appearDays": 1,
-          "streakDays": 1,
+          "starsTotal": 36876,
+          "weeklyGain": 8483,
+          "appearDays": 4,
+          "streakDays": 8,
           "firstSeen": "2026-06-19",
           "isNewcomer": true
         },
@@ -3339,14 +4725,38 @@
           "isNewcomer": true
         },
         {
+          "fullName": "DietrichGebert/ponytail",
+          "url": "https://github.com/DietrichGebert/ponytail",
+          "oneLiner": "让AI代理像最懒的资深开发者一样写代码，平均少写54%代码且不损安全。",
+          "language": "JavaScript",
+          "starsTotal": 46152,
+          "weeklyGain": 6899,
+          "appearDays": 3,
+          "streakDays": 4,
+          "firstSeen": "2026-06-19",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "DeusData/codebase-memory-mcp",
+          "url": "https://github.com/DeusData/codebase-memory-mcp",
+          "oneLiner": "毫秒级构建158语言代码知识图谱，零依赖单二进制MCP服务，token用量削减99%。",
+          "language": "C",
+          "starsTotal": 10300,
+          "weeklyGain": 6372,
+          "appearDays": 4,
+          "streakDays": 6,
+          "firstSeen": "2026-06-19",
+          "isNewcomer": true
+        },
+        {
           "fullName": "NVIDIA/SkillSpector",
           "url": "https://github.com/NVIDIA/SkillSpector",
           "oneLiner": "AI agent技能安全扫描，静态+LLM双阶段检测64种漏洞",
           "language": "Python",
-          "starsTotal": 8117,
+          "starsTotal": 9034,
           "weeklyGain": 5505,
-          "appearDays": 1,
-          "streakDays": 1,
+          "appearDays": 4,
+          "streakDays": 7,
           "firstSeen": "2026-06-19",
           "isNewcomer": true
         },
@@ -3355,10 +4765,34 @@
           "url": "https://github.com/phuryn/pm-skills",
           "oneLiner": "100+产品管理AI技能市场，将框架转化为可执行工作流，提升全流程决策质量。",
           "language": "",
-          "starsTotal": 19707,
+          "starsTotal": 19931,
           "weeklyGain": 3663,
-          "appearDays": 1,
-          "streakDays": 1,
+          "appearDays": 2,
+          "streakDays": 2,
+          "firstSeen": "2026-06-19",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "palmier-io/palmier-pro",
+          "url": "https://github.com/palmier-io/palmier-pro",
+          "oneLiner": "AI 原生 macOS 视频编辑器，MCP 协议让 Claude/Cursor 直接操控时间线",
+          "language": "Swift",
+          "starsTotal": 5186,
+          "weeklyGain": 3640,
+          "appearDays": 4,
+          "streakDays": 7,
+          "firstSeen": "2026-06-19",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "calesthio/OpenMontage",
+          "url": "https://github.com/calesthio/OpenMontage",
+          "oneLiner": "首个开源代理式视频生产系统：用自然语言驱动，全自动搞定脚本、素材、编辑",
+          "language": "Python",
+          "starsTotal": 8777,
+          "weeklyGain": 2867,
+          "appearDays": 4,
+          "streakDays": 8,
           "firstSeen": "2026-06-19",
           "isNewcomer": true
         },
@@ -3367,11 +4801,23 @@
           "url": "https://github.com/lfnovo/open-notebook",
           "oneLiner": "开源、隐私优先的Notebook LM替代，支持多模型、本地部署与播客生成",
           "language": "TypeScript",
-          "starsTotal": 31747,
-          "weeklyGain": 2373,
+          "starsTotal": 32025,
+          "weeklyGain": 2381,
+          "appearDays": 3,
+          "streakDays": 7,
+          "firstSeen": "2026-06-19",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "mattpocock/skills",
+          "url": "https://github.com/mattpocock/skills",
+          "oneLiner": "一套可组合的工程技能，专治AI编码代理的对齐、啰嗦、质量与架构退化四大顽疾",
+          "language": "Shell",
+          "starsTotal": 139791,
+          "weeklyGain": 1443,
           "appearDays": 1,
           "streakDays": 1,
-          "firstSeen": "2026-06-19",
+          "firstSeen": "2026-06-22",
           "isNewcomer": true
         },
         {
@@ -3379,10 +4825,34 @@
           "url": "https://github.com/kenn-io/agentsview",
           "oneLiner": "本地化AI编码助手会话总控，跨20+代理，统一搜索、成本追踪。",
           "language": "Go",
-          "starsTotal": 2918,
+          "starsTotal": 3005,
           "weeklyGain": 1382,
-          "appearDays": 1,
-          "streakDays": 1,
+          "appearDays": 2,
+          "streakDays": 5,
+          "firstSeen": "2026-06-19",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "StarTrail-org/PixelRAG",
+          "url": "https://github.com/StarTrail-org/PixelRAG",
+          "oneLiner": "把网页/文档变截图直接搜，彻底扔掉文本解析。",
+          "language": "Python",
+          "starsTotal": 2526,
+          "weeklyGain": 1371,
+          "appearDays": 2,
+          "streakDays": 3,
+          "firstSeen": "2026-06-21",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "withastro/flue",
+          "url": "https://github.com/withastro/flue",
+          "oneLiner": "为自主 Agent 提供完备的 TypeScript 沙箱运行时，非 SDK，而是下一代 Agent 架构。",
+          "language": "TypeScript",
+          "starsTotal": 6300,
+          "weeklyGain": 1272,
+          "appearDays": 4,
+          "streakDays": 7,
           "firstSeen": "2026-06-19",
           "isNewcomer": true
         },
@@ -3391,25 +4861,914 @@
           "url": "https://github.com/obra/superpowers",
           "oneLiner": "为编码智能体提供系统的 TDD 开发方法论（红绿重构）与子代理驱动流水线。",
           "language": "Shell",
-          "starsTotal": 233004,
+          "starsTotal": 233723,
           "weeklyGain": 1113,
+          "appearDays": 2,
+          "streakDays": 5,
+          "firstSeen": "2026-06-19",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "koala73/worldmonitor",
+          "url": "https://github.com/koala73/worldmonitor",
+          "oneLiner": "57000星！AI融合500+信源的全球态势感知OSINT仪表板",
+          "language": "TypeScript",
+          "starsTotal": 58097,
+          "weeklyGain": 1086,
+          "appearDays": 3,
+          "streakDays": 4,
+          "firstSeen": "2026-06-20",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "Kilo-Org/kilocode",
+          "url": "https://github.com/Kilo-Org/kilocode",
+          "oneLiner": "开源AI编码代理，跨VS Code/JetBrains/CLI，500+模型零加价，支持CI/CD自主模式。",
+          "language": "TypeScript",
+          "starsTotal": 23318,
+          "weeklyGain": 1035,
+          "appearDays": 2,
+          "streakDays": 2,
+          "firstSeen": "2026-06-20",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "LMCache/LMCache",
+          "url": "https://github.com/LMCache/LMCache",
+          "oneLiner": "LLM推理的引擎无关KV缓存层，实现持久化、跨进程重用与非前缀复用。",
+          "language": "Python",
+          "starsTotal": 9543,
+          "weeklyGain": 876,
+          "appearDays": 4,
+          "streakDays": 5,
+          "firstSeen": "2026-06-19",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "ZhuLinsen/daily_stock_analysis",
+          "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+          "oneLiner": "LLM驱动多市场股票智能分析，零成本GitHub Actions定时推送决策仪表盘",
+          "language": "Python",
+          "starsTotal": 44486,
+          "weeklyGain": 670,
+          "appearDays": 2,
+          "streakDays": 2,
+          "firstSeen": "2026-06-21",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "vercel/eve",
+          "url": "https://github.com/vercel/eve",
+          "oneLiner": "基于文件系统约定的 TypeScript AI 代理框架，Vercel 出品",
+          "language": "TypeScript",
+          "starsTotal": 2075,
+          "weeklyGain": 514,
+          "appearDays": 4,
+          "streakDays": 7,
+          "firstSeen": "2026-06-19",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "bytedance/deer-flow",
+          "url": "https://github.com/bytedance/deer-flow",
+          "oneLiner": "开源超级智能体框架：通过子代理、沙箱、记忆和技能完成从分钟到小时级的长程任务",
+          "language": "Python",
+          "starsTotal": 72594,
+          "weeklyGain": 442,
+          "appearDays": 2,
+          "streakDays": 2,
+          "firstSeen": "2026-06-21",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "topoteretes/cognee",
+          "url": "https://github.com/topoteretes/cognee",
+          "oneLiner": "自托管知识图谱驱动的AI代理持久记忆平台",
+          "language": "Python",
+          "starsTotal": 18648,
+          "weeklyGain": 361,
+          "appearDays": 2,
+          "streakDays": 2,
+          "firstSeen": "2026-06-21",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "mukul975/Anthropic-Cybersecurity-Skills",
+          "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
+          "oneLiner": "754结构化安全技能，五框架映射，跨26+AI平台",
+          "language": "Python",
+          "starsTotal": 17714,
+          "weeklyGain": 361,
           "appearDays": 1,
           "streakDays": 1,
+          "firstSeen": "2026-06-22",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "omnigent-ai/omnigent",
+          "url": "https://github.com/omnigent-ai/omnigent",
+          "oneLiner": "统一编排 Claude Code/Codex/Cursor 等 AI 编码 agent 的框架，内置沙箱与策略",
+          "language": "Python",
+          "starsTotal": 4324,
+          "weeklyGain": 359,
+          "appearDays": 4,
+          "streakDays": 7,
           "firstSeen": "2026-06-19",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "XiaomiMiMo/MiMo-Code",
+          "url": "https://github.com/XiaomiMiMo/MiMo-Code",
+          "oneLiner": "终端原生AI编码助手，多Agent与持久记忆协同进化，零配置免费通道开箱即用。",
+          "language": "TypeScript",
+          "starsTotal": 10187,
+          "weeklyGain": 293,
+          "appearDays": 4,
+          "streakDays": 8,
+          "firstSeen": "2026-06-19",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "BuilderIO/agent-native",
+          "url": "https://github.com/BuilderIO/agent-native",
+          "oneLiner": "Agent与UI共享状态、协同工作的全栈框架",
+          "language": "TypeScript",
+          "starsTotal": 1168,
+          "weeklyGain": 278,
+          "appearDays": 2,
+          "streakDays": 3,
+          "firstSeen": "2026-06-19",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "eli-labz/Third-Eye",
+          "url": "https://github.com/eli-labz/Third-Eye",
+          "oneLiner": "零配置GPU加速OSINT平台，聚合16种实时情报层",
+          "language": "TypeScript",
+          "starsTotal": 719,
+          "weeklyGain": 211,
+          "appearDays": 3,
+          "streakDays": 5,
+          "firstSeen": "2026-06-20",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "Lightricks/LTX-2",
+          "url": "https://github.com/Lightricks/LTX-2",
+          "oneLiner": "首个DiT音视频生成基础模型，支持同步音频视频、LoRA微调与多管道推理",
+          "language": "Python",
+          "starsTotal": 7735,
+          "weeklyGain": 196,
+          "appearDays": 1,
+          "streakDays": 2,
+          "firstSeen": "2026-06-20",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "jamiepine/voicebox",
+          "url": "https://github.com/jamiepine/voicebox",
+          "oneLiner": "本地优先的AI语音工作室，同时替代ElevenLabs和WisprFlow，覆盖TTS/STT/听写/代理语音全链路",
+          "language": "TypeScript",
+          "starsTotal": 30982,
+          "weeklyGain": 166,
+          "appearDays": 2,
+          "streakDays": 2,
+          "firstSeen": "2026-06-20",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "code-yeongyu/lazycodex",
+          "url": "https://github.com/code-yeongyu/lazycodex",
+          "oneLiner": "Codex 一键安装的 AI 代理工具集，含项目记忆、计划与验证完成",
+          "language": "TypeScript",
+          "starsTotal": 1714,
+          "weeklyGain": 149,
+          "appearDays": 3,
+          "streakDays": 5,
+          "firstSeen": "2026-06-20",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "TestSprite/testsprite-cli",
+          "url": "https://github.com/TestSprite/testsprite-cli",
+          "oneLiner": "让AI编程智能体通过真实环境自验证测试循环，一键定位失败根因",
+          "language": "TypeScript",
+          "starsTotal": 721,
+          "weeklyGain": 149,
+          "appearDays": 3,
+          "streakDays": 5,
+          "firstSeen": "2026-06-20",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "twentyhq/twenty",
+          "url": "https://github.com/twentyhq/twenty",
+          "oneLiner": "面向AI、代码驱动的开源CRM，可自托管、版本化定制。",
+          "language": "TypeScript",
+          "starsTotal": 50715,
+          "weeklyGain": 140,
+          "appearDays": 1,
+          "streakDays": 1,
+          "firstSeen": "2026-06-20",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "1jehuang/jcode",
+          "url": "https://github.com/1jehuang/jcode",
+          "oneLiner": "Rust 编写的终端 AI 编程代理，内存占用 27MB，启动 14ms，内建人类式语义记忆系统。",
+          "language": "Rust",
+          "starsTotal": 7385,
+          "weeklyGain": 108,
+          "appearDays": 2,
+          "streakDays": 2,
+          "firstSeen": "2026-06-20",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "cobusgreyling/loop-engineering",
+          "url": "https://github.com/cobusgreyling/loop-engineering",
+          "oneLiner": "为AI代理构建自动化提示循环的实战模式、模板与CLI工具集。",
+          "language": "JavaScript",
+          "starsTotal": 583,
+          "weeklyGain": 87,
+          "appearDays": 2,
+          "streakDays": 3,
+          "firstSeen": "2026-06-21",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "nexu-io/html-video",
+          "url": "https://github.com/nexu-io/html-video",
+          "oneLiner": "本地让AI代理把HTML/CSS直接渲染成MP4，无云费用，自带21套模板",
+          "language": "HTML",
+          "starsTotal": 3404,
+          "weeklyGain": 74,
+          "appearDays": 3,
+          "streakDays": 4,
+          "firstSeen": "2026-06-20",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "dzcmemory-web/bazi-ziwei-skill",
+          "url": "https://github.com/dzcmemory-web/bazi-ziwei-skill",
+          "oneLiner": "算法精准排盘 + LLM分析 + 水墨海报，八字紫微综合印证 Skill",
+          "language": "TypeScript",
+          "starsTotal": 461,
+          "weeklyGain": 39,
+          "appearDays": 3,
+          "streakDays": 4,
+          "firstSeen": "2026-06-20",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "gykim80/perfectpixel-studio",
+          "url": "https://github.com/gykim80/perfectpixel-studio",
+          "oneLiner": "从文本生成8方向100+动作的精灵动画，用信号处理后管道确保帧对齐与透明背景。",
+          "language": "Go",
+          "starsTotal": 331,
+          "weeklyGain": 31,
+          "appearDays": 2,
+          "streakDays": 3,
+          "firstSeen": "2026-06-21",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "amElnagdy/guard-skills",
+          "url": "https://github.com/amElnagdy/guard-skills",
+          "oneLiner": "专查 AI 生成代码/测试/文档常见缺陷的质量门禁套件",
+          "language": "",
+          "starsTotal": 868,
+          "weeklyGain": 28,
+          "appearDays": 2,
+          "streakDays": 2,
+          "firstSeen": "2026-06-20",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "alchaincyf/fanbox",
+          "url": "https://github.com/alchaincyf/fanbox",
+          "oneLiner": "本地AI编码驾驶舱：文件、终端、预览三合一，实时追踪Agent每次文件改动。",
+          "language": "JavaScript",
+          "starsTotal": 752,
+          "weeklyGain": 22,
+          "appearDays": 3,
+          "streakDays": 6,
+          "firstSeen": "2026-06-20",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "superloglabs/superlog",
+          "url": "https://github.com/superloglabs/superlog",
+          "oneLiner": "AI 代理驱动的 OpenTelemetry 观测系统，自动分组事件并自愈",
+          "language": "TypeScript",
+          "starsTotal": 919,
+          "weeklyGain": 17,
+          "appearDays": 3,
+          "streakDays": 4,
+          "firstSeen": "2026-06-20",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "kadevin/ilab-gpt-conjure",
+          "url": "https://github.com/kadevin/ilab-gpt-conjure",
+          "oneLiner": "解压即用的GPT-image-2本地WebUI工作台，集成图库、模板与多任务并发。",
+          "language": "JavaScript",
+          "starsTotal": 551,
+          "weeklyGain": 12,
+          "appearDays": 2,
+          "streakDays": 3,
+          "firstSeen": "2026-06-21",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "ClaudioDrews/memory-os",
+          "url": "https://github.com/ClaudioDrews/memory-os",
+          "oneLiner": "7层记忆操作系统，终结AI遗忘，本地运行无锁定",
+          "language": "Python",
+          "starsTotal": 1178,
+          "weeklyGain": 7,
+          "appearDays": 3,
+          "streakDays": 4,
+          "firstSeen": "2026-06-20",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "2aronS/Duel-Agents",
+          "url": "https://github.com/2aronS/Duel-Agents",
+          "oneLiner": "IDE 多模型对决路由层，自动挑最便宜赢家，省成本不降质量。",
+          "language": "TypeScript",
+          "starsTotal": 1001,
+          "weeklyGain": 5,
+          "appearDays": 2,
+          "streakDays": 3,
+          "firstSeen": "2026-06-21",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "withkynam/vibecode-pro-max-kit",
+          "url": "https://github.com/withkynam/vibecode-pro-max-kit",
+          "oneLiner": "给 AI 编程代理装上“记忆”和计划驱动工作流，防止上下文丢失和胡乱编码。",
+          "language": "JavaScript",
+          "starsTotal": 958,
+          "weeklyGain": 2,
+          "appearDays": 2,
+          "streakDays": 2,
+          "firstSeen": "2026-06-21",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "tastyeffectco/sandboxd",
+          "url": "https://github.com/tastyeffectco/sandboxd",
+          "oneLiner": "一句话命令自托管隔离沙箱、AI编码代理和实时预览URL",
+          "language": "Go",
+          "starsTotal": 680,
+          "weeklyGain": 2,
+          "appearDays": 2,
+          "streakDays": 2,
+          "firstSeen": "2026-06-21",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "yb2460/harness-anything",
+          "url": "https://github.com/yb2460/harness-anything",
+          "oneLiner": "让AI Agent直接操控WPS/Office/Adobe/Zotero的Windows COM工具集",
+          "language": "Python",
+          "starsTotal": 858,
+          "weeklyGain": 0,
+          "appearDays": 1,
+          "streakDays": 1,
+          "firstSeen": "2026-06-22",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "Dong90/oh-my-taiyiforge",
+          "url": "https://github.com/Dong90/oh-my-taiyiforge",
+          "oneLiner": "把六套AI工程标准编排成一条可执行、可审计的九阶段研发流水线",
+          "language": "TypeScript",
+          "starsTotal": 413,
+          "weeklyGain": 0,
+          "appearDays": 1,
+          "streakDays": 1,
+          "firstSeen": "2026-06-22",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "OtterMind/Nubase",
+          "url": "https://github.com/OtterMind/Nubase",
+          "oneLiner": "AI 原生后端平台，让 AI 生成的代码分钟级上线",
+          "language": "Java",
+          "starsTotal": 393,
+          "weeklyGain": 0,
+          "appearDays": 1,
+          "streakDays": 1,
+          "firstSeen": "2026-06-22",
           "isNewcomer": true
         }
       ],
-      "rising": [],
+      "rising": [
+        {
+          "fullName": "chopratejas/headroom",
+          "url": "https://github.com/chopratejas/headroom",
+          "oneLiner": "压缩AI代理上下文，节省60-95% token且答案不变。",
+          "language": "Python",
+          "starsTotal": 44454,
+          "weeklyGain": 16102,
+          "appearDays": 4,
+          "streakDays": 7,
+          "firstSeen": "2026-06-19",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "Panniantong/Agent-Reach",
+          "url": "https://github.com/Panniantong/Agent-Reach",
+          "oneLiner": "一句 CLI 给 AI 装上全互联网眼睛，零 API 费读遍微博客、视频、论坛",
+          "language": "Python",
+          "starsTotal": 36876,
+          "weeklyGain": 8483,
+          "appearDays": 4,
+          "streakDays": 8,
+          "firstSeen": "2026-06-19",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "DeusData/codebase-memory-mcp",
+          "url": "https://github.com/DeusData/codebase-memory-mcp",
+          "oneLiner": "毫秒级构建158语言代码知识图谱，零依赖单二进制MCP服务，token用量削减99%。",
+          "language": "C",
+          "starsTotal": 10300,
+          "weeklyGain": 6372,
+          "appearDays": 4,
+          "streakDays": 6,
+          "firstSeen": "2026-06-19",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "NVIDIA/SkillSpector",
+          "url": "https://github.com/NVIDIA/SkillSpector",
+          "oneLiner": "AI agent技能安全扫描，静态+LLM双阶段检测64种漏洞",
+          "language": "Python",
+          "starsTotal": 9034,
+          "weeklyGain": 5505,
+          "appearDays": 4,
+          "streakDays": 7,
+          "firstSeen": "2026-06-19",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "palmier-io/palmier-pro",
+          "url": "https://github.com/palmier-io/palmier-pro",
+          "oneLiner": "AI 原生 macOS 视频编辑器，MCP 协议让 Claude/Cursor 直接操控时间线",
+          "language": "Swift",
+          "starsTotal": 5186,
+          "weeklyGain": 3640,
+          "appearDays": 4,
+          "streakDays": 7,
+          "firstSeen": "2026-06-19",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "calesthio/OpenMontage",
+          "url": "https://github.com/calesthio/OpenMontage",
+          "oneLiner": "首个开源代理式视频生产系统：用自然语言驱动，全自动搞定脚本、素材、编辑",
+          "language": "Python",
+          "starsTotal": 8777,
+          "weeklyGain": 2867,
+          "appearDays": 4,
+          "streakDays": 8,
+          "firstSeen": "2026-06-19",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "withastro/flue",
+          "url": "https://github.com/withastro/flue",
+          "oneLiner": "为自主 Agent 提供完备的 TypeScript 沙箱运行时，非 SDK，而是下一代 Agent 架构。",
+          "language": "TypeScript",
+          "starsTotal": 6300,
+          "weeklyGain": 1272,
+          "appearDays": 4,
+          "streakDays": 7,
+          "firstSeen": "2026-06-19",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "LMCache/LMCache",
+          "url": "https://github.com/LMCache/LMCache",
+          "oneLiner": "LLM推理的引擎无关KV缓存层，实现持久化、跨进程重用与非前缀复用。",
+          "language": "Python",
+          "starsTotal": 9543,
+          "weeklyGain": 876,
+          "appearDays": 4,
+          "streakDays": 5,
+          "firstSeen": "2026-06-19",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "vercel/eve",
+          "url": "https://github.com/vercel/eve",
+          "oneLiner": "基于文件系统约定的 TypeScript AI 代理框架，Vercel 出品",
+          "language": "TypeScript",
+          "starsTotal": 2075,
+          "weeklyGain": 514,
+          "appearDays": 4,
+          "streakDays": 7,
+          "firstSeen": "2026-06-19",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "omnigent-ai/omnigent",
+          "url": "https://github.com/omnigent-ai/omnigent",
+          "oneLiner": "统一编排 Claude Code/Codex/Cursor 等 AI 编码 agent 的框架，内置沙箱与策略",
+          "language": "Python",
+          "starsTotal": 4324,
+          "weeklyGain": 359,
+          "appearDays": 4,
+          "streakDays": 7,
+          "firstSeen": "2026-06-19",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "XiaomiMiMo/MiMo-Code",
+          "url": "https://github.com/XiaomiMiMo/MiMo-Code",
+          "oneLiner": "终端原生AI编码助手，多Agent与持久记忆协同进化，零配置免费通道开箱即用。",
+          "language": "TypeScript",
+          "starsTotal": 10187,
+          "weeklyGain": 293,
+          "appearDays": 4,
+          "streakDays": 8,
+          "firstSeen": "2026-06-19",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "addyosmani/agent-skills",
+          "url": "https://github.com/addyosmani/agent-skills",
+          "oneLiner": "为AI编码代理提供覆盖全生命周期的24个生产级工程技能，让代理遵循资深工程师的规范与质量实践。",
+          "language": "Shell",
+          "starsTotal": 64771,
+          "weeklyGain": 9285,
+          "appearDays": 3,
+          "streakDays": 5,
+          "firstSeen": "2026-06-19",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "DietrichGebert/ponytail",
+          "url": "https://github.com/DietrichGebert/ponytail",
+          "oneLiner": "让AI代理像最懒的资深开发者一样写代码，平均少写54%代码且不损安全。",
+          "language": "JavaScript",
+          "starsTotal": 46152,
+          "weeklyGain": 6899,
+          "appearDays": 3,
+          "streakDays": 4,
+          "firstSeen": "2026-06-19",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "lfnovo/open-notebook",
+          "url": "https://github.com/lfnovo/open-notebook",
+          "oneLiner": "开源、隐私优先的Notebook LM替代，支持多模型、本地部署与播客生成",
+          "language": "TypeScript",
+          "starsTotal": 32025,
+          "weeklyGain": 2381,
+          "appearDays": 3,
+          "streakDays": 7,
+          "firstSeen": "2026-06-19",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "koala73/worldmonitor",
+          "url": "https://github.com/koala73/worldmonitor",
+          "oneLiner": "57000星！AI融合500+信源的全球态势感知OSINT仪表板",
+          "language": "TypeScript",
+          "starsTotal": 58097,
+          "weeklyGain": 1086,
+          "appearDays": 3,
+          "streakDays": 4,
+          "firstSeen": "2026-06-20",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "eli-labz/Third-Eye",
+          "url": "https://github.com/eli-labz/Third-Eye",
+          "oneLiner": "零配置GPU加速OSINT平台，聚合16种实时情报层",
+          "language": "TypeScript",
+          "starsTotal": 719,
+          "weeklyGain": 211,
+          "appearDays": 3,
+          "streakDays": 5,
+          "firstSeen": "2026-06-20",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "TestSprite/testsprite-cli",
+          "url": "https://github.com/TestSprite/testsprite-cli",
+          "oneLiner": "让AI编程智能体通过真实环境自验证测试循环，一键定位失败根因",
+          "language": "TypeScript",
+          "starsTotal": 721,
+          "weeklyGain": 149,
+          "appearDays": 3,
+          "streakDays": 5,
+          "firstSeen": "2026-06-20",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "code-yeongyu/lazycodex",
+          "url": "https://github.com/code-yeongyu/lazycodex",
+          "oneLiner": "Codex 一键安装的 AI 代理工具集，含项目记忆、计划与验证完成",
+          "language": "TypeScript",
+          "starsTotal": 1714,
+          "weeklyGain": 149,
+          "appearDays": 3,
+          "streakDays": 5,
+          "firstSeen": "2026-06-20",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "nexu-io/html-video",
+          "url": "https://github.com/nexu-io/html-video",
+          "oneLiner": "本地让AI代理把HTML/CSS直接渲染成MP4，无云费用，自带21套模板",
+          "language": "HTML",
+          "starsTotal": 3404,
+          "weeklyGain": 74,
+          "appearDays": 3,
+          "streakDays": 4,
+          "firstSeen": "2026-06-20",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "dzcmemory-web/bazi-ziwei-skill",
+          "url": "https://github.com/dzcmemory-web/bazi-ziwei-skill",
+          "oneLiner": "算法精准排盘 + LLM分析 + 水墨海报，八字紫微综合印证 Skill",
+          "language": "TypeScript",
+          "starsTotal": 461,
+          "weeklyGain": 39,
+          "appearDays": 3,
+          "streakDays": 4,
+          "firstSeen": "2026-06-20",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "alchaincyf/fanbox",
+          "url": "https://github.com/alchaincyf/fanbox",
+          "oneLiner": "本地AI编码驾驶舱：文件、终端、预览三合一，实时追踪Agent每次文件改动。",
+          "language": "JavaScript",
+          "starsTotal": 752,
+          "weeklyGain": 22,
+          "appearDays": 3,
+          "streakDays": 6,
+          "firstSeen": "2026-06-20",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "superloglabs/superlog",
+          "url": "https://github.com/superloglabs/superlog",
+          "oneLiner": "AI 代理驱动的 OpenTelemetry 观测系统，自动分组事件并自愈",
+          "language": "TypeScript",
+          "starsTotal": 919,
+          "weeklyGain": 17,
+          "appearDays": 3,
+          "streakDays": 4,
+          "firstSeen": "2026-06-20",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "ClaudioDrews/memory-os",
+          "url": "https://github.com/ClaudioDrews/memory-os",
+          "oneLiner": "7层记忆操作系统，终结AI遗忘，本地运行无锁定",
+          "language": "Python",
+          "starsTotal": 1178,
+          "weeklyGain": 7,
+          "appearDays": 3,
+          "streakDays": 4,
+          "firstSeen": "2026-06-20",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "phuryn/pm-skills",
+          "url": "https://github.com/phuryn/pm-skills",
+          "oneLiner": "100+产品管理AI技能市场，将框架转化为可执行工作流，提升全流程决策质量。",
+          "language": "",
+          "starsTotal": 19931,
+          "weeklyGain": 3663,
+          "appearDays": 2,
+          "streakDays": 2,
+          "firstSeen": "2026-06-19",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "kenn-io/agentsview",
+          "url": "https://github.com/kenn-io/agentsview",
+          "oneLiner": "本地化AI编码助手会话总控，跨20+代理，统一搜索、成本追踪。",
+          "language": "Go",
+          "starsTotal": 3005,
+          "weeklyGain": 1382,
+          "appearDays": 2,
+          "streakDays": 5,
+          "firstSeen": "2026-06-19",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "StarTrail-org/PixelRAG",
+          "url": "https://github.com/StarTrail-org/PixelRAG",
+          "oneLiner": "把网页/文档变截图直接搜，彻底扔掉文本解析。",
+          "language": "Python",
+          "starsTotal": 2526,
+          "weeklyGain": 1371,
+          "appearDays": 2,
+          "streakDays": 3,
+          "firstSeen": "2026-06-21",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "obra/superpowers",
+          "url": "https://github.com/obra/superpowers",
+          "oneLiner": "为编码智能体提供系统的 TDD 开发方法论（红绿重构）与子代理驱动流水线。",
+          "language": "Shell",
+          "starsTotal": 233723,
+          "weeklyGain": 1113,
+          "appearDays": 2,
+          "streakDays": 5,
+          "firstSeen": "2026-06-19",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "Kilo-Org/kilocode",
+          "url": "https://github.com/Kilo-Org/kilocode",
+          "oneLiner": "开源AI编码代理，跨VS Code/JetBrains/CLI，500+模型零加价，支持CI/CD自主模式。",
+          "language": "TypeScript",
+          "starsTotal": 23318,
+          "weeklyGain": 1035,
+          "appearDays": 2,
+          "streakDays": 2,
+          "firstSeen": "2026-06-20",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "ZhuLinsen/daily_stock_analysis",
+          "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+          "oneLiner": "LLM驱动多市场股票智能分析，零成本GitHub Actions定时推送决策仪表盘",
+          "language": "Python",
+          "starsTotal": 44486,
+          "weeklyGain": 670,
+          "appearDays": 2,
+          "streakDays": 2,
+          "firstSeen": "2026-06-21",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "bytedance/deer-flow",
+          "url": "https://github.com/bytedance/deer-flow",
+          "oneLiner": "开源超级智能体框架：通过子代理、沙箱、记忆和技能完成从分钟到小时级的长程任务",
+          "language": "Python",
+          "starsTotal": 72594,
+          "weeklyGain": 442,
+          "appearDays": 2,
+          "streakDays": 2,
+          "firstSeen": "2026-06-21",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "topoteretes/cognee",
+          "url": "https://github.com/topoteretes/cognee",
+          "oneLiner": "自托管知识图谱驱动的AI代理持久记忆平台",
+          "language": "Python",
+          "starsTotal": 18648,
+          "weeklyGain": 361,
+          "appearDays": 2,
+          "streakDays": 2,
+          "firstSeen": "2026-06-21",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "BuilderIO/agent-native",
+          "url": "https://github.com/BuilderIO/agent-native",
+          "oneLiner": "Agent与UI共享状态、协同工作的全栈框架",
+          "language": "TypeScript",
+          "starsTotal": 1168,
+          "weeklyGain": 278,
+          "appearDays": 2,
+          "streakDays": 3,
+          "firstSeen": "2026-06-19",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "jamiepine/voicebox",
+          "url": "https://github.com/jamiepine/voicebox",
+          "oneLiner": "本地优先的AI语音工作室，同时替代ElevenLabs和WisprFlow，覆盖TTS/STT/听写/代理语音全链路",
+          "language": "TypeScript",
+          "starsTotal": 30982,
+          "weeklyGain": 166,
+          "appearDays": 2,
+          "streakDays": 2,
+          "firstSeen": "2026-06-20",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "1jehuang/jcode",
+          "url": "https://github.com/1jehuang/jcode",
+          "oneLiner": "Rust 编写的终端 AI 编程代理，内存占用 27MB，启动 14ms，内建人类式语义记忆系统。",
+          "language": "Rust",
+          "starsTotal": 7385,
+          "weeklyGain": 108,
+          "appearDays": 2,
+          "streakDays": 2,
+          "firstSeen": "2026-06-20",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "cobusgreyling/loop-engineering",
+          "url": "https://github.com/cobusgreyling/loop-engineering",
+          "oneLiner": "为AI代理构建自动化提示循环的实战模式、模板与CLI工具集。",
+          "language": "JavaScript",
+          "starsTotal": 583,
+          "weeklyGain": 87,
+          "appearDays": 2,
+          "streakDays": 3,
+          "firstSeen": "2026-06-21",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "gykim80/perfectpixel-studio",
+          "url": "https://github.com/gykim80/perfectpixel-studio",
+          "oneLiner": "从文本生成8方向100+动作的精灵动画，用信号处理后管道确保帧对齐与透明背景。",
+          "language": "Go",
+          "starsTotal": 331,
+          "weeklyGain": 31,
+          "appearDays": 2,
+          "streakDays": 3,
+          "firstSeen": "2026-06-21",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "amElnagdy/guard-skills",
+          "url": "https://github.com/amElnagdy/guard-skills",
+          "oneLiner": "专查 AI 生成代码/测试/文档常见缺陷的质量门禁套件",
+          "language": "",
+          "starsTotal": 868,
+          "weeklyGain": 28,
+          "appearDays": 2,
+          "streakDays": 2,
+          "firstSeen": "2026-06-20",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "kadevin/ilab-gpt-conjure",
+          "url": "https://github.com/kadevin/ilab-gpt-conjure",
+          "oneLiner": "解压即用的GPT-image-2本地WebUI工作台，集成图库、模板与多任务并发。",
+          "language": "JavaScript",
+          "starsTotal": 551,
+          "weeklyGain": 12,
+          "appearDays": 2,
+          "streakDays": 3,
+          "firstSeen": "2026-06-21",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "2aronS/Duel-Agents",
+          "url": "https://github.com/2aronS/Duel-Agents",
+          "oneLiner": "IDE 多模型对决路由层，自动挑最便宜赢家，省成本不降质量。",
+          "language": "TypeScript",
+          "starsTotal": 1001,
+          "weeklyGain": 5,
+          "appearDays": 2,
+          "streakDays": 3,
+          "firstSeen": "2026-06-21",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "tastyeffectco/sandboxd",
+          "url": "https://github.com/tastyeffectco/sandboxd",
+          "oneLiner": "一句话命令自托管隔离沙箱、AI编码代理和实时预览URL",
+          "language": "Go",
+          "starsTotal": 680,
+          "weeklyGain": 2,
+          "appearDays": 2,
+          "streakDays": 2,
+          "firstSeen": "2026-06-21",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "withkynam/vibecode-pro-max-kit",
+          "url": "https://github.com/withkynam/vibecode-pro-max-kit",
+          "oneLiner": "给 AI 编程代理装上“记忆”和计划驱动工作流，防止上下文丢失和胡乱编码。",
+          "language": "JavaScript",
+          "starsTotal": 958,
+          "weeklyGain": 2,
+          "appearDays": 2,
+          "streakDays": 2,
+          "firstSeen": "2026-06-21",
+          "isNewcomer": true
+        }
+      ],
       "newcomers": [
         {
           "fullName": "chopratejas/headroom",
           "url": "https://github.com/chopratejas/headroom",
           "oneLiner": "压缩AI代理上下文，节省60-95% token且答案不变。",
           "language": "Python",
-          "starsTotal": 36949,
-          "weeklyGain": 10159,
-          "appearDays": 1,
-          "streakDays": 1,
+          "starsTotal": 44454,
+          "weeklyGain": 16102,
+          "appearDays": 4,
+          "streakDays": 7,
           "firstSeen": "2026-06-19",
           "isNewcomer": true
         },
@@ -3418,10 +5777,10 @@
           "url": "https://github.com/addyosmani/agent-skills",
           "oneLiner": "为AI编码代理提供覆盖全生命周期的24个生产级工程技能，让代理遵循资深工程师的规范与质量实践。",
           "language": "Shell",
-          "starsTotal": 63206,
+          "starsTotal": 64771,
           "weeklyGain": 9285,
-          "appearDays": 1,
-          "streakDays": 1,
+          "appearDays": 3,
+          "streakDays": 5,
           "firstSeen": "2026-06-19",
           "isNewcomer": true
         },
@@ -3430,10 +5789,10 @@
           "url": "https://github.com/Panniantong/Agent-Reach",
           "oneLiner": "一句 CLI 给 AI 装上全互联网眼睛，零 API 费读遍微博客、视频、论坛",
           "language": "Python",
-          "starsTotal": 34844,
-          "weeklyGain": 7856,
-          "appearDays": 1,
-          "streakDays": 1,
+          "starsTotal": 36876,
+          "weeklyGain": 8483,
+          "appearDays": 4,
+          "streakDays": 8,
           "firstSeen": "2026-06-19",
           "isNewcomer": true
         },
@@ -3450,14 +5809,38 @@
           "isNewcomer": true
         },
         {
+          "fullName": "DietrichGebert/ponytail",
+          "url": "https://github.com/DietrichGebert/ponytail",
+          "oneLiner": "让AI代理像最懒的资深开发者一样写代码，平均少写54%代码且不损安全。",
+          "language": "JavaScript",
+          "starsTotal": 46152,
+          "weeklyGain": 6899,
+          "appearDays": 3,
+          "streakDays": 4,
+          "firstSeen": "2026-06-19",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "DeusData/codebase-memory-mcp",
+          "url": "https://github.com/DeusData/codebase-memory-mcp",
+          "oneLiner": "毫秒级构建158语言代码知识图谱，零依赖单二进制MCP服务，token用量削减99%。",
+          "language": "C",
+          "starsTotal": 10300,
+          "weeklyGain": 6372,
+          "appearDays": 4,
+          "streakDays": 6,
+          "firstSeen": "2026-06-19",
+          "isNewcomer": true
+        },
+        {
           "fullName": "NVIDIA/SkillSpector",
           "url": "https://github.com/NVIDIA/SkillSpector",
           "oneLiner": "AI agent技能安全扫描，静态+LLM双阶段检测64种漏洞",
           "language": "Python",
-          "starsTotal": 8117,
+          "starsTotal": 9034,
           "weeklyGain": 5505,
-          "appearDays": 1,
-          "streakDays": 1,
+          "appearDays": 4,
+          "streakDays": 7,
           "firstSeen": "2026-06-19",
           "isNewcomer": true
         },
@@ -3466,10 +5849,34 @@
           "url": "https://github.com/phuryn/pm-skills",
           "oneLiner": "100+产品管理AI技能市场，将框架转化为可执行工作流，提升全流程决策质量。",
           "language": "",
-          "starsTotal": 19707,
+          "starsTotal": 19931,
           "weeklyGain": 3663,
-          "appearDays": 1,
-          "streakDays": 1,
+          "appearDays": 2,
+          "streakDays": 2,
+          "firstSeen": "2026-06-19",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "palmier-io/palmier-pro",
+          "url": "https://github.com/palmier-io/palmier-pro",
+          "oneLiner": "AI 原生 macOS 视频编辑器，MCP 协议让 Claude/Cursor 直接操控时间线",
+          "language": "Swift",
+          "starsTotal": 5186,
+          "weeklyGain": 3640,
+          "appearDays": 4,
+          "streakDays": 7,
+          "firstSeen": "2026-06-19",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "calesthio/OpenMontage",
+          "url": "https://github.com/calesthio/OpenMontage",
+          "oneLiner": "首个开源代理式视频生产系统：用自然语言驱动，全自动搞定脚本、素材、编辑",
+          "language": "Python",
+          "starsTotal": 8777,
+          "weeklyGain": 2867,
+          "appearDays": 4,
+          "streakDays": 8,
           "firstSeen": "2026-06-19",
           "isNewcomer": true
         },
@@ -3478,11 +5885,23 @@
           "url": "https://github.com/lfnovo/open-notebook",
           "oneLiner": "开源、隐私优先的Notebook LM替代，支持多模型、本地部署与播客生成",
           "language": "TypeScript",
-          "starsTotal": 31747,
-          "weeklyGain": 2373,
+          "starsTotal": 32025,
+          "weeklyGain": 2381,
+          "appearDays": 3,
+          "streakDays": 7,
+          "firstSeen": "2026-06-19",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "mattpocock/skills",
+          "url": "https://github.com/mattpocock/skills",
+          "oneLiner": "一套可组合的工程技能，专治AI编码代理的对齐、啰嗦、质量与架构退化四大顽疾",
+          "language": "Shell",
+          "starsTotal": 139791,
+          "weeklyGain": 1443,
           "appearDays": 1,
           "streakDays": 1,
-          "firstSeen": "2026-06-19",
+          "firstSeen": "2026-06-22",
           "isNewcomer": true
         },
         {
@@ -3490,10 +5909,34 @@
           "url": "https://github.com/kenn-io/agentsview",
           "oneLiner": "本地化AI编码助手会话总控，跨20+代理，统一搜索、成本追踪。",
           "language": "Go",
-          "starsTotal": 2918,
+          "starsTotal": 3005,
           "weeklyGain": 1382,
-          "appearDays": 1,
-          "streakDays": 1,
+          "appearDays": 2,
+          "streakDays": 5,
+          "firstSeen": "2026-06-19",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "StarTrail-org/PixelRAG",
+          "url": "https://github.com/StarTrail-org/PixelRAG",
+          "oneLiner": "把网页/文档变截图直接搜，彻底扔掉文本解析。",
+          "language": "Python",
+          "starsTotal": 2526,
+          "weeklyGain": 1371,
+          "appearDays": 2,
+          "streakDays": 3,
+          "firstSeen": "2026-06-21",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "withastro/flue",
+          "url": "https://github.com/withastro/flue",
+          "oneLiner": "为自主 Agent 提供完备的 TypeScript 沙箱运行时，非 SDK，而是下一代 Agent 架构。",
+          "language": "TypeScript",
+          "starsTotal": 6300,
+          "weeklyGain": 1272,
+          "appearDays": 4,
+          "streakDays": 7,
           "firstSeen": "2026-06-19",
           "isNewcomer": true
         },
@@ -3502,11 +5945,407 @@
           "url": "https://github.com/obra/superpowers",
           "oneLiner": "为编码智能体提供系统的 TDD 开发方法论（红绿重构）与子代理驱动流水线。",
           "language": "Shell",
-          "starsTotal": 233004,
+          "starsTotal": 233723,
           "weeklyGain": 1113,
+          "appearDays": 2,
+          "streakDays": 5,
+          "firstSeen": "2026-06-19",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "koala73/worldmonitor",
+          "url": "https://github.com/koala73/worldmonitor",
+          "oneLiner": "57000星！AI融合500+信源的全球态势感知OSINT仪表板",
+          "language": "TypeScript",
+          "starsTotal": 58097,
+          "weeklyGain": 1086,
+          "appearDays": 3,
+          "streakDays": 4,
+          "firstSeen": "2026-06-20",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "Kilo-Org/kilocode",
+          "url": "https://github.com/Kilo-Org/kilocode",
+          "oneLiner": "开源AI编码代理，跨VS Code/JetBrains/CLI，500+模型零加价，支持CI/CD自主模式。",
+          "language": "TypeScript",
+          "starsTotal": 23318,
+          "weeklyGain": 1035,
+          "appearDays": 2,
+          "streakDays": 2,
+          "firstSeen": "2026-06-20",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "LMCache/LMCache",
+          "url": "https://github.com/LMCache/LMCache",
+          "oneLiner": "LLM推理的引擎无关KV缓存层，实现持久化、跨进程重用与非前缀复用。",
+          "language": "Python",
+          "starsTotal": 9543,
+          "weeklyGain": 876,
+          "appearDays": 4,
+          "streakDays": 5,
+          "firstSeen": "2026-06-19",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "ZhuLinsen/daily_stock_analysis",
+          "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+          "oneLiner": "LLM驱动多市场股票智能分析，零成本GitHub Actions定时推送决策仪表盘",
+          "language": "Python",
+          "starsTotal": 44486,
+          "weeklyGain": 670,
+          "appearDays": 2,
+          "streakDays": 2,
+          "firstSeen": "2026-06-21",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "vercel/eve",
+          "url": "https://github.com/vercel/eve",
+          "oneLiner": "基于文件系统约定的 TypeScript AI 代理框架，Vercel 出品",
+          "language": "TypeScript",
+          "starsTotal": 2075,
+          "weeklyGain": 514,
+          "appearDays": 4,
+          "streakDays": 7,
+          "firstSeen": "2026-06-19",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "bytedance/deer-flow",
+          "url": "https://github.com/bytedance/deer-flow",
+          "oneLiner": "开源超级智能体框架：通过子代理、沙箱、记忆和技能完成从分钟到小时级的长程任务",
+          "language": "Python",
+          "starsTotal": 72594,
+          "weeklyGain": 442,
+          "appearDays": 2,
+          "streakDays": 2,
+          "firstSeen": "2026-06-21",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "topoteretes/cognee",
+          "url": "https://github.com/topoteretes/cognee",
+          "oneLiner": "自托管知识图谱驱动的AI代理持久记忆平台",
+          "language": "Python",
+          "starsTotal": 18648,
+          "weeklyGain": 361,
+          "appearDays": 2,
+          "streakDays": 2,
+          "firstSeen": "2026-06-21",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "mukul975/Anthropic-Cybersecurity-Skills",
+          "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
+          "oneLiner": "754结构化安全技能，五框架映射，跨26+AI平台",
+          "language": "Python",
+          "starsTotal": 17714,
+          "weeklyGain": 361,
           "appearDays": 1,
           "streakDays": 1,
+          "firstSeen": "2026-06-22",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "omnigent-ai/omnigent",
+          "url": "https://github.com/omnigent-ai/omnigent",
+          "oneLiner": "统一编排 Claude Code/Codex/Cursor 等 AI 编码 agent 的框架，内置沙箱与策略",
+          "language": "Python",
+          "starsTotal": 4324,
+          "weeklyGain": 359,
+          "appearDays": 4,
+          "streakDays": 7,
           "firstSeen": "2026-06-19",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "XiaomiMiMo/MiMo-Code",
+          "url": "https://github.com/XiaomiMiMo/MiMo-Code",
+          "oneLiner": "终端原生AI编码助手，多Agent与持久记忆协同进化，零配置免费通道开箱即用。",
+          "language": "TypeScript",
+          "starsTotal": 10187,
+          "weeklyGain": 293,
+          "appearDays": 4,
+          "streakDays": 8,
+          "firstSeen": "2026-06-19",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "BuilderIO/agent-native",
+          "url": "https://github.com/BuilderIO/agent-native",
+          "oneLiner": "Agent与UI共享状态、协同工作的全栈框架",
+          "language": "TypeScript",
+          "starsTotal": 1168,
+          "weeklyGain": 278,
+          "appearDays": 2,
+          "streakDays": 3,
+          "firstSeen": "2026-06-19",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "eli-labz/Third-Eye",
+          "url": "https://github.com/eli-labz/Third-Eye",
+          "oneLiner": "零配置GPU加速OSINT平台，聚合16种实时情报层",
+          "language": "TypeScript",
+          "starsTotal": 719,
+          "weeklyGain": 211,
+          "appearDays": 3,
+          "streakDays": 5,
+          "firstSeen": "2026-06-20",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "Lightricks/LTX-2",
+          "url": "https://github.com/Lightricks/LTX-2",
+          "oneLiner": "首个DiT音视频生成基础模型，支持同步音频视频、LoRA微调与多管道推理",
+          "language": "Python",
+          "starsTotal": 7735,
+          "weeklyGain": 196,
+          "appearDays": 1,
+          "streakDays": 2,
+          "firstSeen": "2026-06-20",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "jamiepine/voicebox",
+          "url": "https://github.com/jamiepine/voicebox",
+          "oneLiner": "本地优先的AI语音工作室，同时替代ElevenLabs和WisprFlow，覆盖TTS/STT/听写/代理语音全链路",
+          "language": "TypeScript",
+          "starsTotal": 30982,
+          "weeklyGain": 166,
+          "appearDays": 2,
+          "streakDays": 2,
+          "firstSeen": "2026-06-20",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "code-yeongyu/lazycodex",
+          "url": "https://github.com/code-yeongyu/lazycodex",
+          "oneLiner": "Codex 一键安装的 AI 代理工具集，含项目记忆、计划与验证完成",
+          "language": "TypeScript",
+          "starsTotal": 1714,
+          "weeklyGain": 149,
+          "appearDays": 3,
+          "streakDays": 5,
+          "firstSeen": "2026-06-20",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "TestSprite/testsprite-cli",
+          "url": "https://github.com/TestSprite/testsprite-cli",
+          "oneLiner": "让AI编程智能体通过真实环境自验证测试循环，一键定位失败根因",
+          "language": "TypeScript",
+          "starsTotal": 721,
+          "weeklyGain": 149,
+          "appearDays": 3,
+          "streakDays": 5,
+          "firstSeen": "2026-06-20",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "twentyhq/twenty",
+          "url": "https://github.com/twentyhq/twenty",
+          "oneLiner": "面向AI、代码驱动的开源CRM，可自托管、版本化定制。",
+          "language": "TypeScript",
+          "starsTotal": 50715,
+          "weeklyGain": 140,
+          "appearDays": 1,
+          "streakDays": 1,
+          "firstSeen": "2026-06-20",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "1jehuang/jcode",
+          "url": "https://github.com/1jehuang/jcode",
+          "oneLiner": "Rust 编写的终端 AI 编程代理，内存占用 27MB，启动 14ms，内建人类式语义记忆系统。",
+          "language": "Rust",
+          "starsTotal": 7385,
+          "weeklyGain": 108,
+          "appearDays": 2,
+          "streakDays": 2,
+          "firstSeen": "2026-06-20",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "cobusgreyling/loop-engineering",
+          "url": "https://github.com/cobusgreyling/loop-engineering",
+          "oneLiner": "为AI代理构建自动化提示循环的实战模式、模板与CLI工具集。",
+          "language": "JavaScript",
+          "starsTotal": 583,
+          "weeklyGain": 87,
+          "appearDays": 2,
+          "streakDays": 3,
+          "firstSeen": "2026-06-21",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "nexu-io/html-video",
+          "url": "https://github.com/nexu-io/html-video",
+          "oneLiner": "本地让AI代理把HTML/CSS直接渲染成MP4，无云费用，自带21套模板",
+          "language": "HTML",
+          "starsTotal": 3404,
+          "weeklyGain": 74,
+          "appearDays": 3,
+          "streakDays": 4,
+          "firstSeen": "2026-06-20",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "dzcmemory-web/bazi-ziwei-skill",
+          "url": "https://github.com/dzcmemory-web/bazi-ziwei-skill",
+          "oneLiner": "算法精准排盘 + LLM分析 + 水墨海报，八字紫微综合印证 Skill",
+          "language": "TypeScript",
+          "starsTotal": 461,
+          "weeklyGain": 39,
+          "appearDays": 3,
+          "streakDays": 4,
+          "firstSeen": "2026-06-20",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "gykim80/perfectpixel-studio",
+          "url": "https://github.com/gykim80/perfectpixel-studio",
+          "oneLiner": "从文本生成8方向100+动作的精灵动画，用信号处理后管道确保帧对齐与透明背景。",
+          "language": "Go",
+          "starsTotal": 331,
+          "weeklyGain": 31,
+          "appearDays": 2,
+          "streakDays": 3,
+          "firstSeen": "2026-06-21",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "amElnagdy/guard-skills",
+          "url": "https://github.com/amElnagdy/guard-skills",
+          "oneLiner": "专查 AI 生成代码/测试/文档常见缺陷的质量门禁套件",
+          "language": "",
+          "starsTotal": 868,
+          "weeklyGain": 28,
+          "appearDays": 2,
+          "streakDays": 2,
+          "firstSeen": "2026-06-20",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "alchaincyf/fanbox",
+          "url": "https://github.com/alchaincyf/fanbox",
+          "oneLiner": "本地AI编码驾驶舱：文件、终端、预览三合一，实时追踪Agent每次文件改动。",
+          "language": "JavaScript",
+          "starsTotal": 752,
+          "weeklyGain": 22,
+          "appearDays": 3,
+          "streakDays": 6,
+          "firstSeen": "2026-06-20",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "superloglabs/superlog",
+          "url": "https://github.com/superloglabs/superlog",
+          "oneLiner": "AI 代理驱动的 OpenTelemetry 观测系统，自动分组事件并自愈",
+          "language": "TypeScript",
+          "starsTotal": 919,
+          "weeklyGain": 17,
+          "appearDays": 3,
+          "streakDays": 4,
+          "firstSeen": "2026-06-20",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "kadevin/ilab-gpt-conjure",
+          "url": "https://github.com/kadevin/ilab-gpt-conjure",
+          "oneLiner": "解压即用的GPT-image-2本地WebUI工作台，集成图库、模板与多任务并发。",
+          "language": "JavaScript",
+          "starsTotal": 551,
+          "weeklyGain": 12,
+          "appearDays": 2,
+          "streakDays": 3,
+          "firstSeen": "2026-06-21",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "ClaudioDrews/memory-os",
+          "url": "https://github.com/ClaudioDrews/memory-os",
+          "oneLiner": "7层记忆操作系统，终结AI遗忘，本地运行无锁定",
+          "language": "Python",
+          "starsTotal": 1178,
+          "weeklyGain": 7,
+          "appearDays": 3,
+          "streakDays": 4,
+          "firstSeen": "2026-06-20",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "2aronS/Duel-Agents",
+          "url": "https://github.com/2aronS/Duel-Agents",
+          "oneLiner": "IDE 多模型对决路由层，自动挑最便宜赢家，省成本不降质量。",
+          "language": "TypeScript",
+          "starsTotal": 1001,
+          "weeklyGain": 5,
+          "appearDays": 2,
+          "streakDays": 3,
+          "firstSeen": "2026-06-21",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "withkynam/vibecode-pro-max-kit",
+          "url": "https://github.com/withkynam/vibecode-pro-max-kit",
+          "oneLiner": "给 AI 编程代理装上“记忆”和计划驱动工作流，防止上下文丢失和胡乱编码。",
+          "language": "JavaScript",
+          "starsTotal": 958,
+          "weeklyGain": 2,
+          "appearDays": 2,
+          "streakDays": 2,
+          "firstSeen": "2026-06-21",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "tastyeffectco/sandboxd",
+          "url": "https://github.com/tastyeffectco/sandboxd",
+          "oneLiner": "一句话命令自托管隔离沙箱、AI编码代理和实时预览URL",
+          "language": "Go",
+          "starsTotal": 680,
+          "weeklyGain": 2,
+          "appearDays": 2,
+          "streakDays": 2,
+          "firstSeen": "2026-06-21",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "yb2460/harness-anything",
+          "url": "https://github.com/yb2460/harness-anything",
+          "oneLiner": "让AI Agent直接操控WPS/Office/Adobe/Zotero的Windows COM工具集",
+          "language": "Python",
+          "starsTotal": 858,
+          "weeklyGain": 0,
+          "appearDays": 1,
+          "streakDays": 1,
+          "firstSeen": "2026-06-22",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "Dong90/oh-my-taiyiforge",
+          "url": "https://github.com/Dong90/oh-my-taiyiforge",
+          "oneLiner": "把六套AI工程标准编排成一条可执行、可审计的九阶段研发流水线",
+          "language": "TypeScript",
+          "starsTotal": 413,
+          "weeklyGain": 0,
+          "appearDays": 1,
+          "streakDays": 1,
+          "firstSeen": "2026-06-22",
+          "isNewcomer": true
+        },
+        {
+          "fullName": "OtterMind/Nubase",
+          "url": "https://github.com/OtterMind/Nubase",
+          "oneLiner": "AI 原生后端平台，让 AI 生成的代码分钟级上线",
+          "language": "Java",
+          "starsTotal": 393,
+          "weeklyGain": 0,
+          "appearDays": 1,
+          "streakDays": 1,
+          "firstSeen": "2026-06-22",
           "isNewcomer": true
         }
       ]

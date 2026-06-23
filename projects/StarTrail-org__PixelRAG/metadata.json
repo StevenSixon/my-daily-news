@@ -16,30 +16,28 @@
   ],
   "license": "Apache-2.0",
   "category": "AI 应用",
-  "classify_reason": "像素级可扩展搜索，RAG 工具",
-  "one_liner": "把网页/文档变截图直接搜，彻底扔掉文本解析。",
-  "why_worth_it": "解决传统 RAG 在表格、图表上信息丢失的痛点，保留视觉布局，提供 828 万 Wikipedia 预建索引，极客可快速自建本地视觉搜索。",
+  "classify_reason": "可扩展的像素原生AI搜索系统",
+  "one_liner": "将网页/文档直接渲染为截图，用视觉嵌入实现保留布局与图表的RAG搜索。",
+  "why_worth_it": "解决HTML解析丢失表格、图表等视觉结构的问题，让RAG能看懂网页原貌；适合需要精准提取复杂页面信息的极客或Agent。",
   "tags": [
+    "多模态RAG",
     "视觉搜索",
-    "RAG",
-    "多模态AI",
-    "本地优先"
+    "截图检索",
+    "自托管"
   ],
   "confidence": "high",
   "info_gaps": [
-    "README 未披露与文本 RAG 的定量对比数据（准确率、召回率等）",
-    "嵌入模型训练集规模、评估细节未在 README 中展开",
-    "大规模索引服务的资源消耗、延迟未说明"
+    "README 未提供具体 benchmark 数据（如检索准确率、吞吐量），仅指向论文；预建索引的具体架构与资源需求未详述；训练代码与主流水线的适配细节需查阅 train/ 内部文档"
   ],
   "quality_flags": [],
-  "stars_total": 2526,
+  "stars_total": 3474,
   "created_at": "2026-05-29",
-  "pushed_at": "2026-06-22",
+  "pushed_at": "2026-06-23",
   "latest_release": "chrome-150.0.7844.0",
   "first_seen": "2026-06-21",
-  "last_seen": "2026-06-22",
-  "streak_days": 3,
-  "analysis_updated_at": "2026-06-22T09:23:02+0800",
+  "last_seen": "2026-06-23",
+  "streak_days": 4,
+  "analysis_updated_at": "2026-06-23T09:21:30+0800",
   "appearances": [
     {
       "date": "2026-06-21",
@@ -59,6 +57,13 @@
       "date": "2026-06-22",
       "reason": "star_jump",
       "stars_total": 2526,
+      "stars_gained": 0,
+      "release": "chrome-150.0.7844.0"
+    },
+    {
+      "date": "2026-06-23",
+      "reason": "star_jump",
+      "stars_total": 3474,
       "stars_gained": 0,
       "release": "chrome-150.0.7844.0"
     }

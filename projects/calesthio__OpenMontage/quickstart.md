@@ -1,21 +1,31 @@
-## 快速开始
-### 前提
+### 前提条件
 - Python 3.10+
-- FFmpeg (`brew install ffmpeg` 或 `sudo apt install ffmpeg`)
+- FFmpeg
 - Node.js 18+
-- 一个 AI 编程助手（Claude Code、Cursor、Copilot、Windsurf 或 Codex）
+- 任一 AI 编程助手（Claude Code、Cursor 等）
 
-### 安装与运行
+### 安装
 ```bash
 git clone https://github.com/calesthio/OpenMontage.git
 cd OpenMontage
 make setup
 ```
-在 AI 编程助手中打开项目文件夹，直接下达指令，例如：
+若没有 `make`：
+```bash
+pip install -r requirements.txt
+cd remotion-composer && npm install && cd ..
+pip install piper-tts
+cp .env.example .env
+```
+
+### 最小示例
+在 AI 编程助手中打开项目，输入：
 ```text
 "Make a 60-second animated explainer about how neural networks learn"
 ```
-系统会自动执行调研、脚本、资产生成、编辑和渲染。如需更丰富的工具，可在 `.env` 中添加 API 密钥（可选），支持 OpenAI、Fal、ElevenLabs 等。
+代理将自动研究、生成图像、合成视频。无需 API 密钥。
 
-### 零 API 密钥方案
-不添加任何密钥，系统将自动使用 Piper TTS（免费离线语音合成）、Pexels/Unsplash 等免费素材库以及 Remotion 或 HyperFrames 动画引擎，完成从图像生成到字幕合成的全流程。
+### 使用参考视频
+```text
+"Here's a YouTube Short I love. Make me something like this, but about quantum computing."
+```
