@@ -1,144 +1,140 @@
 <div align="center">
 
-# 🤖 AI 项目日报助理
+# 🤖 AI Daily Digest
 
-**自托管的 GitHub AI 项目情报流水线** — 自动发现爆火的 AI 应用项目，用 LLM 深度分析、归档，每天早上推送一份精炼日报。
+**A self-hosted intelligence pipeline for trending GitHub AI projects** — automatically discovers hot AI apps, analyzes them in depth with an LLM, archives them, and pushes a concise daily digest every morning.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 [![CI](https://github.com/StevenSixon/my-daily-news/actions/workflows/ci.yml/badge.svg)](https://github.com/StevenSixon/my-daily-news/actions/workflows/ci.yml)
 [![Dashboard](https://img.shields.io/badge/Live-Dashboard-success)](https://stevensixon.github.io/my-daily-news/)
 [![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://www.python.org/)
 
-**简体中文** · [English](./README.en.md)
+[简体中文](./README.zh-CN.md) · **English**
 
-[📺 在线看板 Demo](https://stevensixon.github.io/my-daily-news/) · [🏗️ 架构](#️-工作原理) · [🚀 快速开始](#-快速开始) · [🗺️ Roadmap](#️-roadmap)
+[📺 Live Dashboard](https://stevensixon.github.io/my-daily-news/) · [🏗️ How it works](#️-how-it-works) · [🚀 Quick start](#-quick-start) · [🗺️ Roadmap](#️-roadmap)
 
 </div>
 
 ---
 
-## 痛点
+## The problem
 
-每天有几十个 AI / Agent 项目在 GitHub 爆火，但你没时间逐个翻 README、读 release、判断"值不值得看"。
+Dozens of AI / Agent projects blow up on GitHub every day, but you don't have time to read every README, scan every release, and decide what's actually worth a look.
 
-**这个工具替你做这件事**：每天定时扫描 GitHub Trending + Search，用 LLM 过滤出真正的「AI 应用」，对新项目做中档深度学习，产出结构化报告归档到本地，再把当天精华推送到你手机。纯文件存储、多模型可插拔、一键自托管。
+**This tool does it for you.** On a schedule it scans GitHub Trending + Search, uses an LLM to filter for genuine "AI apps", does a medium-depth study of each new project, archives a structured report locally, and pushes the day's highlights to your phone. File-based storage, pluggable models, one-command self-hosting.
 
-> 适合：想持续跟进 AI 生态又不想被信息淹没的开发者 / 技术团队 / 投资研究。
+> For: developers, technical teams, and research analysts who want to stay on top of the AI ecosystem without drowning in it.
 
-## ✨ 特性
+## ✨ Features
 
-- 🔍 **双数据源**：GitHub Trending + Search API，合并去重，LLM 过滤出「AI 应用」类项目
-- 📰 **AI 资讯并行轨**：每天汇聚各大 AI 公司一手动态（OpenAI / Anthropic / Claude / Google DeepMind / Meta…）+ arXiv 论文 + HF Blog + Hacker News + Reddit，LLM 出中文一句话摘要、分类、跨源去重，并防单家刷屏。详见 [`docs/NEWS_FEATURE.md`](docs/NEWS_FEATURE.md)
-- 🧠 **LLM 深度分析**：对每个新项目读 README + 关键文档 + release，产出结构化分析报告
-- 🗂️ **项目库 / 日报分离**：`projects/`（按项目持续迭代，与日期无关）+ `daily/`（按天的精华）
-- 🔌 **多模型可插拔**：Anthropic / OpenAI / Gemini / DeepSeek / OpenAI 兼容 / Ollama，改一行配置即切换，支持失败降级
-- ♻️ **复访迭代**：老项目再上榜时，只有新 release / star 大涨才重学，否则只更新元数据，省 token
-- 📊 **在线看板**：React + Tailwind 看板自动发布到 GitHub Pages（[Live Demo](https://stevensixon.github.io/my-daily-news/)）
-- 📤 **可插拔推送**：当前内置飞书机器人定时私聊；渠道是解耦的，欢迎 PR Telegram / Slack / Discord / 邮件
+- 🔍 **Dual sources** — GitHub Trending + Search API, merged and deduped, then LLM-filtered down to real "AI apps"
+- 🧠 **LLM deep-dive** — reads each new project's README + key docs + releases and produces a structured analysis report
+- 🗂️ **Project library vs. daily** — `projects/` (per-project, date-independent, iterated over time) + `daily/` (the day's highlights)
+- 🔌 **Pluggable models** — Anthropic / OpenAI / Gemini / DeepSeek / OpenAI-compatible / Ollama; switch with one config line, with failover support
+- ♻️ **Smart revisits** — when an old project trends again, it's only re-studied if there's a new release or a big star jump; otherwise just metadata is refreshed, saving tokens
+- 📊 **Live dashboard** — a React + Tailwind board auto-published to GitHub Pages ([Live Demo](https://stevensixon.github.io/my-daily-news/))
+- 📤 **Pluggable delivery** — ships with a scheduled Feishu (Lark) bot DM; the channel is decoupled, so PRs for Telegram / Slack / Discord / email are welcome
 
-## 🎬 输出样例
+## 🎬 Sample output
 
-每天生成一份 `daily/<date>.md`，排版精简、可直接阅读：
+Each day produces a `daily/<date>.md` that's tidy and readable as-is:
 
 ```markdown
-# 🤖 AI 项目日报 · 2026-06-19
+# 🤖 AI Daily Digest · 2026-06-19
 
-今日命中 5 个 AI 应用项目。
+5 AI app projects today.
 
 ## 1. withastro/flue 🆕
-> 为自主 Agent 提供完备的 TypeScript 沙箱运行时，非 SDK，而是下一代 Agent 架构。
+> A complete TypeScript sandbox runtime for autonomous agents — not an SDK,
+> but a next-gen agent architecture.
 
-- 💡 值得看：解决裸调 LLM 无法胜任的自主任务问题，为 Agent 提供沙箱、
-  工具、技能、持久执行一体的 harness，适合想构建 Claude Code 级自主 Agent 的开发者。
-- 🏷️ Agent框架 · 沙箱运行时 · TypeScript · 工作流自动化
-- 语言：TypeScript ｜ ⭐ 5714 (+305)
-- 深度报告：projects/withastro__flue/analysis.md
+- 💡 Why look: solves tasks bare LLM calls can't, giving agents a sandbox +
+  tools + skills + durable execution harness. For anyone building a
+  Claude-Code-grade autonomous agent.
+- 🏷️ agent-framework · sandbox-runtime · TypeScript · workflow-automation
+- Language: TypeScript ｜ ⭐ 5714 (+305)
+- Full report: projects/withastro__flue/analysis.md
 ```
 
-每个项目还会在 `projects/<owner>__<repo>/` 下沉淀一份完整的 `analysis.md` 深度报告，供按需深入。
+Every project also accumulates a full `analysis.md` deep report under `projects/<owner>__<repo>/` for when you want to go deeper.
 
-## 🏗️ 工作原理
+## 🏗️ How it works
 
-> **设计原则**：采集、推送 = 确定性脚本（可靠、便宜）；只有「学习」这一步调用大模型。不让 LLM 去干抓取、发消息这类脏活——既贵又不稳。
+> **Design principle:** collection and delivery are deterministic scripts (reliable, cheap); only the "study" step calls the LLM. Don't make the LLM do scraping or message-sending — it's expensive and flaky.
 
 ```mermaid
 flowchart LR
-    A[GitHub Trending<br/>+ Search API] --> B[合并去重<br/>data/index.json]
-    B --> C{LLM 过滤<br/>是 AI 应用?}
-    C -->|是 & 新项目/有大更新| D[LLM 深度分析]
-    C -->|老项目无更新| E[仅更新元数据]
+    A[GitHub Trending<br/>+ Search API] --> B[Merge & dedupe<br/>data/index.json]
+    B --> C{LLM filter:<br/>is it an AI app?}
+    C -->|yes & new / big update| D[LLM deep analysis]
+    C -->|old, no change| E[Update metadata only]
     D --> F[projects/&lt;repo&gt;/<br/>analysis.md]
     D --> G[daily/&lt;date&gt;.md]
-    F --> H[React 看板<br/>GitHub Pages]
-    G --> I[飞书 / 其他渠道<br/>定时推送]
+    F --> H[React dashboard<br/>GitHub Pages]
+    G --> I[Feishu / other<br/>scheduled delivery]
 ```
 
-## 📁 目录结构
+## 📁 Layout
 
 ```
-projects/<owner__repo>/   # 项目库：metadata.json / analysis.md / quickstart.md / history.md / README.snapshot.md
-daily/<date>.md|.json     # 日报（json 含 items + streaks + news，供推送/看板用）
-data/index.json           # 全局索引 + 去重 + 复访判定
-data/news-seen.json       # 资讯轨按 URL 去重的状态
-trends/<date>-weekly.json # 周趋势（项目）；<date>-news-weekly.json（资讯周回顾）
-dashboard/                # React + Tailwind 看板（本期/累计/AI 资讯/周报 四视图），打包成单文件
-src/                      # Python 流水线（含 news_collect / news_summary / news_trend）
-config/config.yaml        # 配置（关注范围、top_n、llm、news、推送）
+projects/<owner__repo>/   # project library: metadata.json / analysis.md / quickstart.md / history.md / README.snapshot.md
+daily/<date>.md|.json     # daily digest (json is consumed by the push step)
+data/index.json           # global index + dedupe + revisit decisions
+dashboard/                # React + Tailwind board, bundled into a single bundle.html
+src/                      # Python pipeline
+config/config.yaml        # config (focus scope, top_n, llm, delivery)
 deploy/                   # launchd plist + run.sh
 ```
 
-## 🚀 快速开始
+## 🚀 Quick start
 
 ```bash
-# 1) 依赖
+# 1) Dependencies
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 
-# 2) 配置密钥
-cp .env.example .env      # 填入 GITHUB_TOKEN / 选定 provider 的 LLM key /（可选）FEISHU_*
+# 2) Configure secrets
+cp .env.example .env      # fill in GITHUB_TOKEN / your provider's LLM key / (optional) FEISHU_*
 
-# 3) 跑一次完整流水线（采集 + 学习 + 生成日报）
+# 3) Run the full pipeline once (collect + study + daily report)
 python -m src.pipeline
 
-# 4)（可选）推送当天日报到飞书
+# 4) (optional) Push today's digest to Feishu
 python -m src.push
 
-# 单独调试某一步
-python -m src.collect          # 只看采集结果（项目）
-python -m src.news_collect     # 只看资讯采集结果
+# Debug a single stage
+python -m src.collect          # just inspect what was collected
 
-# 周报告（--push 推送飞书）
-python -m src.trend --days 7 --push        # 项目周趋势：本周最热/持续上榜/新晋
-python -m src.news_trend --days 7 --push   # 资讯周回顾：按分类聚合近 7 天资讯
+# Weekly trend report (aggregates historical metadata: hottest / longest-running / newcomers; --push to deliver)
+python -m src.trend --days 7 --push
 ```
 
-> 不配飞书也能用：流水线照常产出 `daily/` 日报和看板，推送只是可选的最后一步。
+> Works without Feishu: the pipeline still produces the `daily/` digest and the dashboard — delivery is just an optional last step.
 
-## ⚙️ 配置要点（`config/config.yaml`）
+## ⚙️ Configuration (`config/config.yaml`)
 
-- `focus.search_topics` / `min_stars`：关注范围，未来扩展类目改这里
-- `collect.top_n`：每天最多深度学习的项目数（默认 5）
-- `llm.provider` / `llm.model`：换模型只改这两行；密钥放 `.env`
-- `analyze_revisit`：老项目何时重学
-- `news`：AI 资讯轨——`sources`（官方/论文/HF/Reddit 源清单）、`max_items`、`per_source_max`（防单家刷屏）、`type_quota`、`llm_summarize`；详见 [`docs/NEWS_FEATURE.md`](docs/NEWS_FEATURE.md)。**全部公开 RSS / 公共 API，无需任何密钥**
+- `focus.search_topics` / `min_stars` — focus scope; change here to expand categories later
+- `collect.top_n` — max projects to deep-study per day (default 5)
+- `llm.provider` / `llm.model` — switch models by editing just these two lines; keys live in `.env`
+- `analyze_revisit` — when to re-study an old project
 
-### 必填 / 可选密钥（`.env`）
+### Required / optional secrets (`.env`)
 
-| 变量 | 必填 | 说明 |
+| Variable | Required | Notes |
 |---|---|---|
-| `GITHUB_TOKEN` | ✅ | GitHub PAT（只读 public 即可） |
-| 选定 provider 的 key | ✅ | 如 `ANTHROPIC_API_KEY` / `DEEPSEEK_API_KEY` … |
-| `FEISHU_APP_ID` / `FEISHU_APP_SECRET` | 推送时 | 飞书自建应用 |
-| `FEISHU_RECEIVE_ID` / `FEISHU_RECEIVE_ID_TYPE` | 推送时 | 推送目标：`open_id`(ou_...) 或 email/mobile |
+| `GITHUB_TOKEN` | ✅ | GitHub PAT (public read-only is enough) |
+| your provider's key | ✅ | e.g. `ANTHROPIC_API_KEY` / `DEEPSEEK_API_KEY` … |
+| `FEISHU_APP_ID` / `FEISHU_APP_SECRET` | for push | Feishu custom app |
+| `FEISHU_RECEIVE_ID` / `FEISHU_RECEIVE_ID_TYPE` | for push | target: `open_id` (ou_...) or email/mobile |
 
-> 飞书后台需开启权限 `im:message`、`im:message:send_as_bot`（用邮箱/手机定位再加 `contact:user.base:readonly`）并**发布应用版本**。
+> In the Feishu console enable `im:message` and `im:message:send_as_bot` (add `contact:user.base:readonly` if you locate the user by email/mobile), then **publish an app version**.
 
-## 🤖 自托管 / 定时
+## 🤖 Self-hosting / scheduling
 
-### 方案 A：launchd（macOS，常开机的本地 Mac）
+### Option A: launchd (macOS, an always-on local Mac)
 
 ```bash
-# 1) 把 plist 里的 PROJECT_DIR 占位符替换为本项目绝对路径
+# 1) Replace the PROJECT_DIR placeholder in the plists with this repo's absolute path
 PROJECT_DIR="$(pwd)"
 for f in pipeline push weekly; do
   sed "s#PROJECT_DIR#${PROJECT_DIR}#g" deploy/com.daily-news.$f.plist \
@@ -146,38 +142,37 @@ for f in pipeline push weekly; do
 done
 chmod +x deploy/run.sh
 
-# 2) 加载
+# 2) Load
 for f in pipeline push weekly; do
   launchctl load ~/Library/LaunchAgents/com.daily-news.$f.plist
 done
 ```
 
-- 06:30 跑流水线、08:00 推送（错峰，保证准时）；周一 08:30 推周趋势
-- ⚠️ Mac 睡眠会延迟触发；需保持唤醒/插电
+- 06:30 runs the pipeline, 08:00 pushes (staggered for punctuality); Monday 08:30 sends the weekly trend
+- ⚠️ Sleep delays triggers; keep the Mac awake / plugged in
 
-### 方案 B：GitHub Actions（无需常开机，推荐）
+### Option B: GitHub Actions (no always-on machine — recommended)
 
-仓库已内置 [`.github/workflows/daily-pipeline.yml`](.github/workflows/daily-pipeline.yml)：定时跑流水线 → 回写 `daily/`、`projects/` → 可选推送飞书。开启只需三步：
+The repo ships [`.github/workflows/daily-pipeline.yml`](.github/workflows/daily-pipeline.yml): it runs the pipeline on a schedule, commits `daily/` + `projects/` back, and optionally pushes to Feishu. Three steps to enable:
 
-1. Settings → Secrets → 添加 `GH_PAT` 和你 provider 的 LLM key（如 `ANTHROPIC_API_KEY`）；想推飞书再加 `FEISHU_*`
-2. Settings → Actions → Workflow permissions 设为 **Read and write**
-3. 默认每天 06:30（北京时间）触发，cron 用 UTC，按需改时区
+1. Settings → Secrets → add `GH_PAT` and your provider's LLM key (e.g. `ANTHROPIC_API_KEY`); add `FEISHU_*` too if you want delivery
+2. Settings → Actions → Workflow permissions → **Read and write**
+3. Defaults to 06:30 Asia/Shanghai; cron is in UTC, so adjust for your timezone
 
-> 也可换成服务器 cron，直接调 `python -m src.pipeline` / `python -m src.push`。
+> You can also use a plain server cron calling `python -m src.pipeline` / `python -m src.push`.
 
 ## 🗺️ Roadmap
 
-- [x] M1 闭环 → M2 双源 + 项目库 → M3 深度报告 + 日报 → M4 自动化 + 复访迭代
-- [x] GitHub Actions 定时自托管模板（[`daily-pipeline.yml`](.github/workflows/daily-pipeline.yml)）
-- [x] AI 资讯并行轨（官方博客 / arXiv / HF / HN / Reddit → 日报 + 看板 + 飞书 + 周回顾）
-- [ ] 更多推送渠道（Telegram / Slack / Discord / 邮件）
-- [ ] 可扩展到非 AI 类目（架构已预留 config 切换）
+- [x] M1 closed loop → M2 dual source + project library → M3 deep reports + daily digest → M4 automation + smart revisits
+- [x] GitHub Actions self-hosting / scheduling template ([`daily-pipeline.yml`](.github/workflows/daily-pipeline.yml))
+- [ ] More delivery channels (Telegram / Slack / Discord / email)
+- [ ] Extensible to non-AI categories (config switch already reserved in the architecture)
 
-完整设计见 [`docs/DESIGN.md`](docs/DESIGN.md)；AI 资讯轨见 [`docs/NEWS_FEATURE.md`](docs/NEWS_FEATURE.md)。
+Full design doc: [`docs/DESIGN.md`](docs/DESIGN.md).
 
-## 🤝 贡献
+## 🤝 Contributing
 
-欢迎 PR / Issue！新增推送渠道、数据源、LLM provider 都是很好的切入点。开始前请阅读 [CONTRIBUTING.md](CONTRIBUTING.md)（含本地搭建与开发约定）与 [SECURITY.md](SECURITY.md)——**本仓库公开，切勿提交任何密钥 / token**。
+PRs and issues welcome! New delivery channels, data sources, and LLM providers are great entry points. Start with [CONTRIBUTING.md](CONTRIBUTING.md) (local setup + conventions) and [SECURITY.md](SECURITY.md) — **this is a public repo; never commit any key or token.**
 
 ## 📄 License
 
