@@ -1,0 +1,57 @@
+{
+  "full_name": "larlarua/AutoCVE",
+  "url": "https://github.com/larlarua/AutoCVE",
+  "description": "Agent-driven automated CVE discovery platform for source code auditing, vulnerability verification, and report generation.",
+  "language": "Python",
+  "topics": [
+    "agent",
+    "ai-security",
+    "code-audit",
+    "cve",
+    "fastapi",
+    "llm-agent",
+    "multi-agent",
+    "penetration-testing",
+    "react",
+    "security-audit",
+    "security-tools",
+    "source-code-analysis",
+    "vulnerability-detection",
+    "vulnerability-research"
+  ],
+  "license": "AGPL-3.0",
+  "category": "AI 应用",
+  "classify_reason": "Agent-driven automated CVE discovery platform, an AI security application.",
+  "one_liner": "Multi-Agent源码审计平台，7天挖掘30个CVE，覆盖14个项目",
+  "why_worth_it": "专为CVE设计的Agent驱动审计，提供ReAct循环与工具编排，实际产出30个真实CVE，一键Docker部署，适合安全研究者快速出洞",
+  "tags": [
+    "Multi-Agent",
+    "源码审计",
+    "CVE自动化",
+    "Docker部署"
+  ],
+  "confidence": "high",
+  "info_gaps": [
+    "README 未说明支持的 LLM 模型列表及其配置方式，需进入 Web 界面或查阅 docs/ 才知晓",
+    "未提供各 Agent 审计单个项目的时间、资源消耗基准数据或推荐硬件配置",
+    "CVE 成果的具体复现步骤与审计过程在 README 中未展开，细节收录在外部仓库（larlarua/vulnerability-reports）"
+  ],
+  "quality_flags": [],
+  "stars_total": 309,
+  "created_at": "2026-06-15",
+  "pushed_at": "2026-06-19",
+  "latest_release": "v1.0.0",
+  "first_seen": "2026-06-25",
+  "last_seen": "2026-06-25",
+  "streak_days": 1,
+  "analysis_updated_at": "2026-06-25T02:26:50+0800",
+  "appearances": [
+    {
+      "date": "2026-06-25",
+      "reason": "new",
+      "stars_total": 309,
+      "stars_gained": 0,
+      "release": "v1.0.0"
+    }
+  ]
+}

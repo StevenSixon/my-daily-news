@@ -17,26 +17,32 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "让 AI 代理模仿懒散高级工程师思维的技能集",
-  "one_liner": "让AI代理像最懒的资深开发者一样写代码，平均少写54%代码且不损安全。",
-  "why_worth_it": "实测在FastAPI+React项目中减少54%代码、节省20%成本，同时保持100%安全防护，远超同类YAGNI提示。适合所有用AI写代码的开发者。",
+  "classify_reason": "Prompt engineering skill to make AI agents act like lazy senior devs, an AI tool.",
+  "one_liner": "让AI代理像最懒的资深开发者一样思考，用阶梯规则消灭过度工程，代码量砍半且安全不减",
+  "why_worth_it": "解决AI编码代理生成冗余代码、浪费Token和成本的问题，为所有主流代理提供统一的安全最小化规则，实测省54%代码且100%安全",
   "tags": [
-    "prompt-engineering",
-    "agent-skills",
-    "yagni",
-    "developer-tools"
+    "提示工程",
+    "AI代理",
+    "多平台规则集",
+    "JavaScript"
   ],
   "confidence": "high",
-  "info_gaps": [],
+  "info_gaps": [
+    "基准测试仅针对一个特定仓库（FastAPI 全栈模板）和 Haiku 4.5 模型，缺乏多项目、多模型的长周期多样性测试数据",
+    "对非 JavaScript/TypeScript 项目的效果未明确提及或测试",
+    "平台原生特性检测依赖各代理的内置能力，未量化其在不同代理中的实际命中率",
+    "对于 Aider、Cline、Zed 等代理仅提供规则文件复制方式，实际集成深度和兼容性没有详细说明",
+    "GitHub Star 数高达 54680 但创建和更新日期均为 2026 年（未来时间），可能为虚构数据或特殊事件，未在文档中解释"
+  ],
   "quality_flags": [],
-  "stars_total": 46152,
+  "stars_total": 54680,
   "created_at": "2026-06-12",
-  "pushed_at": "2026-06-21",
-  "latest_release": "v4.7.0",
+  "pushed_at": "2026-06-24",
+  "latest_release": "v4.8.3",
   "first_seen": "2026-06-19",
-  "last_seen": "2026-06-22",
-  "streak_days": 4,
-  "analysis_updated_at": "2026-06-19T23:35:10+0800",
+  "last_seen": "2026-06-25",
+  "streak_days": 5,
+  "analysis_updated_at": "2026-06-25T02:27:27+0800",
   "appearances": [
     {
       "date": "2026-06-19",
@@ -65,6 +71,13 @@
       "stars_total": 46152,
       "stars_gained": 0,
       "release": "v4.7.0"
+    },
+    {
+      "date": "2026-06-25",
+      "reason": "release_update",
+      "stars_total": 54680,
+      "stars_gained": 0,
+      "release": "v4.8.3"
     }
   ]
 }

@@ -1,0 +1,44 @@
+{
+  "full_name": "interviewstreet/hiring-agent",
+  "url": "https://github.com/interviewstreet/hiring-agent",
+  "description": "AI agent to evaluate and score resumes.",
+  "language": "Python",
+  "topics": [],
+  "license": "MIT",
+  "category": "AI 应用",
+  "classify_reason": "AI agent to evaluate and score resumes, an AI application.",
+  "one_liner": "本地/云端双模简历智能评分，结合GitHub活动量化评估",
+  "why_worth_it": "适合注重隐私的技术招聘，整合开源贡献生成可解释评分，比纯文本解析更真实。",
+  "tags": [
+    "简历解析",
+    "LLM Agent",
+    "本地优先",
+    "GitHub评估"
+  ],
+  "confidence": "medium",
+  "info_gaps": [
+    "无评分准确率或偏差基准测试数据",
+    "未说明大规模批处理简历时的性能表现",
+    "评分权重是否可配置需查阅源码，README 未提及",
+    "缺乏示例输出，难以直观判断评估质量",
+    "未描述 GitHub API 请求频率优化细节（除 token 外）"
+  ],
+  "quality_flags": [],
+  "stars_total": 2033,
+  "created_at": "2025-07-29",
+  "pushed_at": "2026-06-22",
+  "latest_release": null,
+  "first_seen": "2026-06-25",
+  "last_seen": "2026-06-25",
+  "streak_days": 1,
+  "analysis_updated_at": "2026-06-25T02:24:58+0800",
+  "appearances": [
+    {
+      "date": "2026-06-25",
+      "reason": "new",
+      "stars_total": 2033,
+      "stars_gained": 152,
+      "release": null
+    }
+  ]
+}

@@ -1,6 +1,1131 @@
 {
   "editions": [
     {
+      "date": "2026-06-25",
+      "count": 8,
+      "projects": [
+        {
+          "id": "microsoft__presidio",
+          "fullName": "microsoft/presidio",
+          "owner": "microsoft",
+          "name": "presidio",
+          "url": "https://github.com/microsoft/presidio",
+          "oneLiner": "微软开源的多模态PII检测与匿名化框架，支持文本、图像及结构化数据。",
+          "description": "An open-source framework for detecting, redacting, masking, and anonymizing sensitive data (PII) across text, images, and structured data. Supports NLP, pattern matching, and customizable pipelines.",
+          "language": "Python",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 9568,
+          "starsGained": 864,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2018-05-04",
+          "pushedAt": "2026-06-24",
+          "latestRelease": "2.2.362",
+          "firstSeen": "2026-06-25",
+          "topics": [
+            "anonymization",
+            "data-anonymization",
+            "data-masking",
+            "data-obfuscation",
+            "data-privacy",
+            "data-redaction",
+            "de-identification",
+            "guardrails",
+            "image-redactor",
+            "named-entity-recognition",
+            "nlp",
+            "personally-identifiable-information",
+            "phi",
+            "pii",
+            "pii-detection",
+            "privacy",
+            "python",
+            "sensitive-data",
+            "spacy",
+            "transformers"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-25",
+              "reason": "new",
+              "starsTotal": 9568,
+              "starsGained": 864,
+              "release": "2.2.362"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "Presidio 是微软开源的敏感数据自动识别与匿名化框架，覆盖文本、图像和结构化数据。核心思路是将 PII 检测抽象为“分析器+匿名化器”的管道，支持预置实体类型、正则、校验和及上下文增强，并提供图像编辑模块。"
+            },
+            {
+              "heading": "为什么火",
+              "bullets": [
+                "企业级背景：微软背书，MIT 许可，活跃社区（9.5k+ Star），频繁的安全修复和识别器扩增。",
+                "可组合性：识别器（Analyzer）与脱敏策略（Anonymizer）解耦，支持华夫饼式自定义。",
+                "多模态：不仅处理文本，还能对图片（包括 DICOM 医学影像）进行 PII 擦除。",
+                "部署灵活：单机 pip 即可，也提供 Docker 镜像和 Kubernetes 部署方案，甚至支持 Spark 批处理。"
+              ]
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "语言：Python",
+                "核心 NLP：spaCy（可选用 transformer 模型）",
+                "可选增强：Hugging Face Transformers（用于定制 NER）、校验和算法（信用卡、身份证号等）",
+                "打包：Docker、Kubernetes、PySpark",
+                "依赖库：pyyaml、pillow（图像编辑）等"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "body": "1. 文本识别：预置 30+ 种实体类型（姓名、电话、信用卡、货币、地址等），支持自定义正则/规则识别器。 2. 上下文增强：利用周围文本提升准确率，减少误报。 3. 匿名化策略：替换、屏蔽、加密、哈希、假名化等。 4. 图像编辑：使用 OCR 检测文字后模糊/黑色覆盖，支持 DICOM 医学格式。 5. 结构化数据：通过 presidio-structured 处理表格或数据库查询结果。 6. 多语言：已支持英语、西班牙语等多种语言（通过 spaCy 模型）。"
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "日志脱敏、客服对话记录隐私处理",
+                "医疗数据去标识化（PHI）和临床实体识别（新增 MedicalNER）",
+                "金融合规：信用卡号、社保号等自动匿名",
+                "数据科学工作流中的隐私预处理器",
+                "图像文档（如证件扫描件）的自动打码"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "bullets": [
+                "spaCy 直接使用：缺乏匿名化层和图像处理，需大量额外开发。",
+                "Google Cloud DLP：托管服务，灵活度低且无法离线。Presidio 适合自有基础设施、需要精细控制且不依赖云 API 的企业。",
+                "其他开源（如 redact-pii）：社区规模小，规则集简单，缺乏模块化流水线和微软的安全维护。"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "---",
+              "bullets": [
+                "v2.2.362（2026-03-18）引入 GPU 环境变量控制、HuggingFace NER 直接推理支持、医疗实体识别器、英国邮编/尼日利亚身份证等新识别器。",
+                "持续修复安全漏洞（CVE-2024-47874 等）和依赖项固定，表明维护活跃度极高。"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：无性能基准测试数据（如吞吐量、延迟指标）；未提供与同类工具（如 Google Cloud DLP）的横向对比结果；大规模分布式部署的具体资源消耗未说明"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "interviewstreet__hiring-agent",
+          "fullName": "interviewstreet/hiring-agent",
+          "owner": "interviewstreet",
+          "name": "hiring-agent",
+          "url": "https://github.com/interviewstreet/hiring-agent",
+          "oneLiner": "本地/云端双模简历智能评分，结合GitHub活动量化评估",
+          "description": "AI agent to evaluate and score resumes.",
+          "language": "Python",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 2033,
+          "starsGained": 152,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2025-07-29",
+          "pushedAt": "2026-06-22",
+          "latestRelease": "",
+          "firstSeen": "2026-06-25",
+          "topics": [],
+          "appearances": [
+            {
+              "date": "2026-06-25",
+              "reason": "new",
+              "starsTotal": 2033,
+              "starsGained": 152,
+              "release": ""
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "Hiring Agent 是由 HackerRank（通过 interviewstreet 仓库）开源的一条简历到评分流水线。它从 PDF 简历中提取结构化数据，可选地引入候选人的 GitHub 活动信号，最终输出附带解释的公平评估结果。流水线支持完全本地运行（通过 Ollama）或使用 Google Gemini 云端模型，核心是在保护隐私的前提下自动化技术简历筛选。"
+            },
+            {
+              "heading": "为什么火",
+              "bullets": [
+                "招聘市场一直需要自动化筛选工具，而结合实际代码贡献（GitHub）的评估方案更贴近技术岗位的真实需求。",
+                "本地优先设计避免了将敏感简历数据上传第三方服务，受到注重合规与隐私团队的青睐。",
+                "采用模板化提示词（Jinja），评分标准透明、可定制，适合研究或二次开发。",
+                "以 MIT 许可证开放，降低了企业试用的门槛。"
+              ]
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "Python 3.11+，使用 PyMuPDF 将 PDF 转为 Markdown",
+                "LLM 后端：Ollama（支持 gemma3:4b/12b/1b 等）或 Google Gemini（如 gemini-2.0-flash）",
+                "Pydantic 数据模型，Jinja2 模板管理提示词",
+                "GitHub API 抓取用户 profile 和仓库数据",
+                "本地缓存（JSON 文件）与 CSV 导出（开发模式）"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "body": "1. PDF 提取：通过 PyMuPDF 将简历转为 Markdown 文本，保留标题、链接、表格等结构。 2. 分节解析：将简历拆分为基本信息、工作经历、教育、技能、项目、奖项等节，分别调用 LLM 提取为 JSON Resume 结构化数据。 3. GitHub 增强：从简历中识别 GitHub 用户名，抓取个人资料与仓库，由 LLM 精选 7 个最具代表性的项目（倾向有真实贡献的仓库）。 4. 量化评分：基于开源贡献、个人项目、生产级项目、技术能力四个维度打分，并设有加分与扣分机制，输出证据和解释。 5. 开发模式辅助：可缓存中间结果、追加 CSV 记录，便于迭代和调试。"
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "技术招聘初筛：快速过滤无法体现实际工程能力的简历。",
+                "内部人才盘点：结合代码资产量化评估工程师。",
+                "LLM 招聘工具研究：作为模板化评分流水线的参考实现。",
+                "隐私敏感环境：全本地运行，无需上传简历至任何外部服务。"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "bullets": [
+                "传统简历解析 API（如 Affinda、Sovren）：仅提取文本结构化，不包含代码贡献评估，且多为云的付费服务。",
+                "AI 简历排名工具（如一些 ATS 内置评分）：通常是黑箱云端，无公开评分逻辑，且不强制整合 GitHub。",
+                "Hiring Agent 的优势：开源、本地可运行、评分逻辑透明可调、支持自托管、将代码贡献作为定量信号。"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "---",
+              "bullets": [
+                "仓库创建于 2025-07-29，最近一次推送在 2026-06-22，说明项目仍在积极维护。",
+                "目前 Star 数超过 2000，社区有一定关注度。",
+                "许可证为 MIT，允许自由使用和修改。"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：medium",
+                "信息盲区：无评分准确率或偏差基准测试数据；未说明大规模批处理简历时的性能表现；评分权重是否可配置需查阅源码，README 未提及；缺乏示例输出，难以直观判断评估质量；未描述 GitHub API 请求频率优化细节（除 token 外）"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "duckbugio__flock",
+          "fullName": "duckbugio/flock",
+          "owner": "duckbugio",
+          "name": "flock",
+          "url": "https://github.com/duckbugio/flock",
+          "oneLiner": "在 Docker 中运行多代理 Claude 开发团队，从聊天下需求到自动提 PR",
+          "description": "Autonomous AI dev-team bot",
+          "language": "Go",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 746,
+          "starsGained": 0,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-06-08",
+          "pushedAt": "2026-06-24",
+          "latestRelease": "",
+          "firstSeen": "2026-06-25",
+          "topics": [
+            "ai-agent",
+            "anthropic",
+            "autonomous-agents",
+            "chatbot",
+            "claude",
+            "claude-code",
+            "code-review",
+            "golang",
+            "llm",
+            "self-hosted",
+            "telegram-bot",
+            "vk-bot"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-25",
+              "reason": "new",
+              "starsTotal": 746,
+              "starsGained": 0,
+              "release": ""
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "Flock 是一个在自有服务器上运行的多代理 AI 开发团队机器人。通过 Telegram 或 VK 聊天接收自然语言需求，自动进行规划、编码、测试、审查并打开 PR。每个聊天拥有独立的沙盒工作区，支持跨多个微服务仓库的协同。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "它让开发者可以在聊天中调用一个完整的 AI 开发团队，而非单次代码补全。利用 Claude 订阅绕开 token 计费，同时提供从需求到 PR 的闭环流水线，对已订阅 Claude 并希望自托管 AI 编码助手的团队很有吸引力。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "核心与适配器使用 Go 语言编写",
+                "代理基于 Claude Code 子代理（planner / coder / tester / reviewer / arbiter）",
+                "通过预构建 Docker 镜像部署，非 root 用户运行",
+                "支持 Git 托管平台（Gitea/GitHub/GitLab），通过轮询获取 PR 评论",
+                "可选 dind sidecar 用于容器化测试，语音转录支持 Mistral/OpenAI"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "多代理流水线：规划→编码→测试→审查→仲裁，仲裁者打破循环防止无限挂起",
+                "聊天驱动物理隔离：每个聊天独立 /workspace/chat_<id>，支持并行且互不干扰",
+                "无入站 webhook 的 PR 审查反馈：通过轮询 Git 主机，将审查评论路由回原聊天",
+                "微服务跨仓库协同：一个功能可跨多个服务，自动命名分支 duck/<chatid>/<slug> 并创建跨仓库 PR",
+                "可扩展适配器：Telegram 和 VK 已可用，新平台仅需薄适配层",
+                "订阅模式集成：支持 Claude Pro/Max token 或 API key，不按 token 计费"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "个人或小团队想用聊天直接驱动代码变更和 PR 自动化",
+                "已订阅 Claude，希望将 AI 编码能力融入自托管 CI 流程",
+                "对隐私敏感、不能将代码送第三方 API 的项目（一切在自有服务器完成）",
+                "需要多服务协同的微服务项目，自动管理跨仓库分支和 PR"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "body": "相比于 Copilot Chat、Cursor 等单次问答或 IDE 嵌入方案，Flock 提供了自托管、多代理协作的完整开发流程。与 Devin、Sweep 等早期 AI 工程师工具相比，它的自托管和订阅计费模式在成本控制和数据隐私上更有优势，但需要使用者具备容器化部署和 Git 运维能力。"
+            },
+            {
+              "heading": "版本动态",
+              "body": "2026 年 6 月创建，Star 746，最新推送 2026-06-24。当前处于早期阶段，但已包含 CI 流程、预构建镜像和多平台适配器，文档中规划了 Go 重写、多后端和多传输协议等演进方向，开发活跃度较高。 ---"
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：medium",
+                "信息盲区：多仓库微服务的分支与 PR 协调具体实现未公开；子代理（planner/coder/tester/reviewer/arbiter）的提示词与互动细节缺失；与 Devin、Sweep 等同类工具的量化对比数据不存在；高并发或大型代码库下的资源消耗和性能基准未知；安全沙盒的具体隔离措施和限制边界未详细说明"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "shy3130__tickflow-stock-panel",
+          "fullName": "shy3130/tickflow-stock-panel",
+          "owner": "shy3130",
+          "name": "tickflow-stock-panel",
+          "url": "https://github.com/shy3130/tickflow-stock-panel",
+          "oneLiner": "自托管零运维A股量化台：选股监控回测，桌面客户端开箱即用",
+          "description": "自托管、零运维的 A 股「选股 + 监控 + 回测」量化工作台 | 基于 TickFlow 数据 | 能力驱动适配全档位订阅 | 自由接入第三方扩展数据(Tushare 等)",
+          "language": "TypeScript",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 220,
+          "starsGained": 0,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-06-18",
+          "pushedAt": "2026-06-24",
+          "latestRelease": "v0.1.43",
+          "firstSeen": "2026-06-25",
+          "topics": [
+            "a-stock",
+            "ai-agent",
+            "aigc",
+            "backtesting",
+            "duckdb",
+            "fastapi",
+            "llm",
+            "polars",
+            "quant",
+            "quantitative-finance",
+            "quantitative-trading",
+            "react",
+            "screener",
+            "self-hosted",
+            "stock-analysis",
+            "tickflow"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-25",
+              "reason": "new",
+              "starsTotal": 220,
+              "starsGained": 0,
+              "release": "v0.1.43"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "一个自托管的A股量化工作台，提供选股、监控、回测功能，基于TickFlow数据，支持桌面客户端和Docker部署，面向个人散户和量化爱好者。"
+            },
+            {
+              "heading": "为什么火",
+              "bullets": [
+                "开箱即用的桌面版，免去Python/Node环境配置。",
+                "内置20个策略，支持自定义信号和AI生成策略。",
+                "模块化设计，可接入Tushare等第三方数据，统一分析。",
+                "内置回测引擎（vectorbt或纯Polars）、监控中心与系统通知。",
+                "220星，持续迭代。"
+              ]
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "后端：FastAPI, Pydantic, APScheduler, sse-starlette",
+                "数据层：Polars (向量化计算), DuckDB (查询), Parquet (存储), PyArrow",
+                "回测：vectorbt (全栈版), 纯Polars引擎 (桌面版)",
+                "前端：React 18, TypeScript, Vite, Tailwind CSS, Lightweight Charts, ECharts, Tanstack Query, Framer Motion, dnd-kit",
+                "AI：可选OpenAI兼容接口",
+                "部署：Docker单容器，或Electron桌面客户端"
+              ]
+            },
+            {
+              "heading": "核心能力"
+            },
+            {
+              "heading": "🔍 选股引擎",
+              "bullets": [
+                "20个内置策略（趋势、形态、量价、涨停、反转、波动）",
+                "自定义信号系统：UI组合编译为Polars表达式，无需编码",
+                "AI策略生成（需LLM Key）",
+                "策略商店统一管理"
+              ]
+            },
+            {
+              "heading": "📊 指标流水线",
+              "bullets": [
+                "MA、EMA、MACD、RSI、KDJ、ATR、布林带、量比、原子信号等预计算，Polars向量化全A扫表，落盘enriched Parquet"
+              ]
+            },
+            {
+              "heading": "🧪 回测",
+              "bullets": [
+                "三种模式：个股、策略组合、自由信号组合",
+                "真实约束：T+1、手续费、滑点、止损、最大持仓天数",
+                "组合管理：最大持仓数、等权/自定义仓位",
+                "SSE流式进度"
+              ]
+            },
+            {
+              "heading": "📡 监控中心",
+              "bullets": [
+                "四类监控：策略、个股信号、价格/涨跌、全市场异动",
+                "AND/OR条件、冷却期、严重级别",
+                "实时SSE推送、系统通知、持久化触发记录"
+              ]
+            },
+            {
+              "heading": "🔌 数据扩展",
+              "bullets": [
+                "TickFlow Free模式可体验10只票；付费解锁全A",
+                "支持Tushare等第三方数据源HTTP定时拉取、CSV/Excel上传、JSON写入",
+                "页面可视化配置扩展表，并入DuckDB查询面"
+              ]
+            },
+            {
+              "heading": "🖥️ 桌面客户端",
+              "bullets": [
+                "Windows/macOS/Linux安装包，无需环境",
+                "数据存用户目录，卸载不丢失",
+                "纯Polars回测引擎可用，不含vectorbt"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "散户建立量化选股、回测、监控流水线",
+                "量化爱好者统一管理策略和告警",
+                "自有数据整合分析",
+                "希望轻量级桌面工具替代重型客户端"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "bullets": [
+                "vs 同花顺/通达信：专注量化分析，不内置交易，不自带数据",
+                "vs QuantConnect/Backtrader：更轻量，自托管，桌面端可选，策略配置可视化",
+                "vs zvt/VN.PY：部署更简单，聚焦快速扫描与监控"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "当前v0.1.43 (2026-06-24)，提供Windows安装包，修复GBK编码崩溃、数据缓存、UI优化。路线图v2：Webhook下单、板块异动、早晚报。 ---"
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：未提供大规模回测性能基准（如全市场5000+股票回测耗时）；未说明TickFlow数据延迟及盘中实时行情支持情况（目前只看到盘后定时管道）；桌面版纯Polars回测引擎与vectorbt回测的功能差异细节未列出；扩展第三方数据时字段映射的具体示例和指南缺失"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "larlarua__AutoCVE",
+          "fullName": "larlarua/AutoCVE",
+          "owner": "larlarua",
+          "name": "AutoCVE",
+          "url": "https://github.com/larlarua/AutoCVE",
+          "oneLiner": "Multi-Agent源码审计平台，7天挖掘30个CVE，覆盖14个项目",
+          "description": "Agent-driven automated CVE discovery platform for source code auditing, vulnerability verification, and report generation.",
+          "language": "Python",
+          "category": "AI 应用",
+          "license": "AGPL-3.0",
+          "starsTotal": 309,
+          "starsGained": 0,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-06-15",
+          "pushedAt": "2026-06-19",
+          "latestRelease": "v1.0.0",
+          "firstSeen": "2026-06-25",
+          "topics": [
+            "agent",
+            "ai-security",
+            "code-audit",
+            "cve",
+            "fastapi",
+            "llm-agent",
+            "multi-agent",
+            "penetration-testing",
+            "react",
+            "security-audit",
+            "security-tools",
+            "source-code-analysis",
+            "vulnerability-detection",
+            "vulnerability-research"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-25",
+              "reason": "new",
+              "starsTotal": 309,
+              "starsGained": 0,
+              "release": "v1.0.0"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "AutoCVE 是一个 Agent 驱动的自动化 CVE 发现平台，专注于源码审计、漏洞验证与报告生成。它通过编排 Recon、Scan、Triage、Finding、Verification 等多个 LLM Agent，实现从项目导入到 CVE 报告全流程自动化。"
+            },
+            {
+              "heading": "为什么火",
+              "bullets": [
+                "实打实的漏洞产出：在 7 天测试中挖掘出 30 个真实 CVE，涵盖 14 个开源项目，最高 CVSS 9.9。",
+                "面向 CVE 的低门槛工具：一行命令部署，提供 Web 界面，降低了自动化漏洞赏金的技术门槛。",
+                "LLM 驱动的深度审计：不同于传统 SAST，它利用 Agent 的 ReAct 循环与上下文理解，能发现逻辑漏洞、授权缺陷等深层问题。"
+              ]
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "后端：Python 3.11+、FastAPI、PostgreSQL",
+                "前端：React 18",
+                "Agent 框架：基于 ReAct 循环的 Multi-Agent 编排",
+                "部署：Docker Compose、预置前端/后端容器镜像",
+                "许可：AGPL-3.0"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "一键 CVE 挖掘流水线：筛选项目 → 导入仓库 → 创建审计任务 → Agent 审计 → 生成报告，人只需提交报告即可申请 CVE。",
+                "Multi-Agent 协同审计：Orchestrator 调度 Recon（信息收集）、Scan（工具扫描）、Triage（误报过滤）、Finding（深度挖掘）、Verification（动态验证）五个专用 Agent。",
+                "三种审计模式：增强扫描（快速扫+过滤）、智能审计（仅 Finding Agent 深挖）、综合审计（全流程覆盖）。",
+                "Finding Agent 核心设计：内建 ReAct loop、专项工具调用、nudge 纠偏与 FinalizeFinding 终止机制，确保产出可申报 CVE 的高价值漏洞。",
+                "交互式审计：用户可随时追问 Agent，补充证据、复现步骤或扩展分析，审计过程可视化追踪。",
+                "漏洞管理：Agent 自动去重、结构化入库，支持中文/英文/CVE 多种报告导出。"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "安全研究员与漏洞赏金猎人快速审计开源项目，批量发现 CVE 级漏洞。",
+                "企业安全团队对内部代码库或第三方依赖进行自动化审计。",
+                "渗透测试团队辅助信息收集与深度漏洞挖掘。",
+                "学习 Multi-Agent 安全审计架构的参考实现。"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "bullets": [
+                "vs. Semgrep/CodeQL：传统 SAST 依赖静态规则，难以覆盖逻辑漏洞；AutoCVE 通过 LLM 推理可发现越权、SSRF 等复杂场景。",
+                "vs. 一般 LLM 审计脚本：多数方案仅简单调用 API，缺乏 Agent 编排与中断纠正能力；AutoCVE 提供完整的 ReAct 状态机与工具链。",
+                "局限：需自行配置 LLM 后端，AGPL 许可可能影响商用二次开发。"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "---",
+              "bullets": [
+                "v1.0.0 于 2026-06-15 发布，为首次正式版本。",
+                "新增 Agent 直审功能、优化 ReAct 循环逻辑、修复用户对话不走 ReAct loop 的 bug。",
+                "引入漏洞管理系统、Skills 扩展，文档与部署镜像同步完善。"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：README 未说明支持的 LLM 模型列表及其配置方式，需进入 Web 界面或查阅 docs/ 才知晓；未提供各 Agent 审计单个项目的时间、资源消耗基准数据或推荐硬件配置；CVE 成果的具体复现步骤与审计过程在 README 中未展开，细节收录在外部仓库（larlarua/vulnerability-reports）"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "DietrichGebert__ponytail",
+          "fullName": "DietrichGebert/ponytail",
+          "owner": "DietrichGebert",
+          "name": "ponytail",
+          "url": "https://github.com/DietrichGebert/ponytail",
+          "oneLiner": "让AI代理像最懒的资深开发者一样思考，用阶梯规则消灭过度工程，代码量砍半且安全不减",
+          "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+          "language": "JavaScript",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 54680,
+          "starsGained": 0,
+          "streakDays": 5,
+          "isNew": false,
+          "createdAt": "2026-06-12",
+          "pushedAt": "2026-06-24",
+          "latestRelease": "v4.8.3",
+          "firstSeen": "2026-06-19",
+          "topics": [
+            "agent-skills",
+            "ai-agents",
+            "claude",
+            "claude-code",
+            "claude-code-plugin",
+            "cursor-rules",
+            "developer-tools",
+            "llm",
+            "prompt-engineering",
+            "yagni"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-19",
+              "reason": "new",
+              "starsTotal": 39253,
+              "starsGained": 0,
+              "release": "v4.7.0"
+            },
+            {
+              "date": "2026-06-20",
+              "reason": "lightweight",
+              "starsTotal": 39406,
+              "starsGained": 0,
+              "release": "v4.7.0"
+            },
+            {
+              "date": "2026-06-20",
+              "reason": "lightweight",
+              "starsTotal": 40908,
+              "starsGained": 0,
+              "release": "v4.7.0"
+            },
+            {
+              "date": "2026-06-22",
+              "reason": "lightweight",
+              "starsTotal": 46152,
+              "starsGained": 0,
+              "release": "v4.7.0"
+            },
+            {
+              "date": "2026-06-25",
+              "reason": "release_update",
+              "starsTotal": 54680,
+              "starsGained": 0,
+              "release": "v4.8.3"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "Ponytail 是一套嵌入 AI 编码代理的提示工程技能/规则集，模拟一个“最懒的资深开发者”的决策逻辑。通过一个预定义的阶梯（先问是否要写、是否已有、是否可用标准库/平台特性/已有依赖，最后才是最小实现），强制代理在产生多余代码前停下。它不是一个代码库，而是一组 .md 或 .json 规则文件，以及少量 Node.js 生命周期钩子，用于在 Claude Code、Codex、Copilot CLI、OpenCode、Gemini CLI 等超过 14 种代理工具中激活。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "Star 数超过 5 万，因其精准击中开发者痛点：AI 代理常常为简单需求生成庞大实现（如日期选择器引入整页组件）。Ponytail 通过严格的阶梯规则和始终保留的验证/安全/无障碍检查，将平均代码量削减 54%（在真实 FastAPI+React 仓库上实测），Token 用量和成本降低约 20%，同时保持 100% 的安全护栏，远超简单“写最短代码”提示（后者会丢掉安全护栏）。它适配几乎所有主流代理，零学习成本，且提供了 lite/full/ultra 模式来调整懒惰程度。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "规则文件：纯文本 Markdown 规则，存储在仓库的 .cursor/rules/、.windsurf/rules/、skills/ 等目录，可被各代理直接引用或复制。",
+                "生命周期钩子：极少的 Node.js 脚本（hooks/ 目录），用于在 Claude Code 和 Codex 中实现自动激活和模式切换，其余代理通过预定义的规则文件直接工作。",
+                "平台适配：覆盖 Claude Code、Codex、Copilot CLI、OpenCode、Gemini/Antigravity CLI、Pi、CodeWhale、Swival、OpenClaw 等，对不支持插件的代理提供复制规则文件的方式。"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "阶梯决策模型：7 级阶梯（存在？已有？标准库？原生平台功能？已安装依赖？一行？最小实现）在理解上下文后执行，避免毫无理由地跳过必要代码。",
+                "安全不可妥协：信任边界校验、数据丢失防护、安全性与无障碍永远不被“精简”掉，区别于简单的 YAGNI 一条龙提示。",
+                "模式切换：/ponytail lite、full、ultra、off 命令和 PONYTAIL_DEFAULT_MODE 环境变量控制规则严格程度。",
+                "子代理注入（v4.8.3）：通过 SubagentStart 钩子让派生出的子代理也保持懒惰，防止主线程省而子线程滥写。",
+                "基准量化：提供可复现的 agentic 和单次生成基准测试脚本，证明在多个维度（LOC、tokens、cost、time、safety）全面优于无技能基线和同类简洁提示。"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "使用 Claude Code、Codex、Copilot CLI、OpenCode、Cursor、Windsurf 等现代 AI 编程助理的开发者。",
+                "希望控制 AI 生成成本、提升代码质量、避免过度工程化的团队。",
+                "对多项目管理要求统一编码风格和安全性底线的组织。",
+                "任何想在保留 AI 辅助效率的同时抑制其“创造冲动”的极客。"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "bullets": [
+                "Caveman（稀疏散文风格）：同样精简，但 Ponytail 在 token、成本和时间上均更优，且保持 100% 安全，Caveman 在部分模型上可能导致 token 使用反升。",
+                "自定义 YAGNI + one-liner 提示：代码减少 33%，但安全评分降为 95%，Ponytail 以更少的代码量保持满分。",
+                "项目自带的 .clinerules 或 cursorrules：大多缺乏结构性阶梯和安全锚点，Ponytail 从“最小必要”出发，兼顾实效和安全。"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "最新 v4.8.3 于 2026-06-24 发布，主要新增： ---",
+              "bullets": [
+                "子代理自动注入懒惰规则，确保派生 agent 不会破坏精简原则。",
+                "新增韩文 README 及 OpenCode 的 npm 安装方式说明，废弃旧的命令行符号链接提示。",
+                "连续高频更新（3 天内即从创建到最新版），表明社区活跃、快速迭代。"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：基准测试仅针对一个特定仓库（FastAPI 全栈模板）和 Haiku 4.5 模型，缺乏多项目、多模型的长周期多样性测试数据；对非 JavaScript/TypeScript 项目的效果未明确提及或测试；平台原生特性检测依赖各代理的内置能力，未量化其在不同代理中的实际命中率；对于 Aider、Cline、Zed 等代理仅提供规则文件复制方式，实际集成深度和兼容性没有详细说明；GitHub Star 数高达 54680 但创建和更新日期均为 2026 年（未来时间），可能为虚构数据或特殊事件，未在文档中解释"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "vercel__eve",
+          "fullName": "vercel/eve",
+          "owner": "vercel",
+          "name": "eve",
+          "url": "https://github.com/vercel/eve",
+          "oneLiner": "文件系统即智能体编辑器，用约定目录定义AI代理的行为与工具。",
+          "description": "The Framework for Building Agents",
+          "language": "TypeScript",
+          "category": "AI 应用",
+          "license": "Apache-2.0",
+          "starsTotal": 2522,
+          "starsGained": 0,
+          "streakDays": 9,
+          "isNew": false,
+          "createdAt": "2026-06-16",
+          "pushedAt": "2026-06-24",
+          "latestRelease": "eve@0.13.4",
+          "firstSeen": "2026-06-19",
+          "topics": [
+            "agent",
+            "framework",
+            "harness",
+            "javascript",
+            "markdown",
+            "sandbox",
+            "typescript",
+            "vercel",
+            "workflows"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-19",
+              "reason": "new",
+              "starsTotal": 1561,
+              "starsGained": 0,
+              "release": "eve@0.11.7"
+            },
+            {
+              "date": "2026-06-20",
+              "reason": "lightweight",
+              "starsTotal": 1572,
+              "starsGained": 0,
+              "release": "eve@0.11.7"
+            },
+            {
+              "date": "2026-06-20",
+              "reason": "lightweight",
+              "starsTotal": 1734,
+              "starsGained": 0,
+              "release": "eve@0.11.7"
+            },
+            {
+              "date": "2026-06-20",
+              "reason": "release_update",
+              "starsTotal": 1782,
+              "starsGained": 0,
+              "release": "eve@0.11.8"
+            },
+            {
+              "date": "2026-06-21",
+              "reason": "release_update",
+              "starsTotal": 1853,
+              "starsGained": 0,
+              "release": "eve@0.11.10"
+            },
+            {
+              "date": "2026-06-21",
+              "reason": "lightweight",
+              "starsTotal": 1930,
+              "starsGained": 0,
+              "release": "eve@0.11.10"
+            },
+            {
+              "date": "2026-06-22",
+              "reason": "release_update",
+              "starsTotal": 2075,
+              "starsGained": 0,
+              "release": "eve@0.12.0"
+            },
+            {
+              "date": "2026-06-24",
+              "reason": "release_update",
+              "starsTotal": 2473,
+              "starsGained": 0,
+              "release": "eve@0.13.3"
+            },
+            {
+              "date": "2026-06-25",
+              "reason": "release_update",
+              "starsTotal": 2522,
+              "starsGained": 0,
+              "release": "eve@0.13.4"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "eve 是 Vercel 推出的文件系统优先的持久化 AI 代理框架。项目的核心目标是让代理能力的定义回归到文件系统结构：指令、工具、技能、频道、调度等都按约定目录放置，开发者只需编写 Markdown 和 TypeScript 文件，无需理解复杂的链式 API。代理运行时读取这些文件并拼接成一个可交互的代理。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "由 Vercel 背书，贴合其“前端即产品”的哲学。将代理构建简化为类似 Next.js 的文件约定，踩中开发者对低认知负担框架的渴望。虽然 Star 数尚在早期，但其“文件即配置”的理念在众多代码式代理框架中令人耳目一新，引发讨论。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "语言 & 运行时：TypeScript，Node.js",
+                "核心依赖：Zod（工具参数校验）、可选沙箱引擎（支持 workspace 提升安装）",
+                "多渠道支持：内置 HTTP、Slack、Discord 等频道集成",
+                "客户端：eve/react 包支持 React 集成，使用 Zod 校验 /eve/v1/info 接口",
+                "模型接入：通过字符串标识选择模型（如 anthropic/claude-sonnet-4.6），模型调用细节由框架封装",
+                "文档内嵌：eve npm 包包含完整 docs，方便编码代理在本地读取"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "body": "1. 指令层：instructions.md 作为始终激活的系统提示 2. 工具：tools/*.ts 通过 defineTool 定义可调用函数，参数以 Zod schema 声明 3. 技能：skills/*.md 按需加载的规程，扩展代理能力 4. 频道：channels/*.ts 设定消息接入点，支持 Slack、Discord 等 5. 调度：schedules/*.ts 定义 Cron 作业，实现定时任务 6. 子代理：支持在代理内调用子代理（文档含 subagents.mdx） 7. 人机交互：可在工作流中插入人工审批环节 8. 沙箱：可选的沙箱引擎，提供安全执行环境"
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "需要快速搭建面向用户或团队的 AI 助手（如客服、内部问答）",
+                "多平台同步部署的代理（Slack + Discord 等）",
+                "定时报告、周期工作流",
+                "TypeScript 生态内的原型或生产级代理开发"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "bullets": [
+                "vs LangChain：LangChain 以链式调用和抽象类为核心，学习曲线陡峭；eve 只有文件和函数约定，项目结构更扁平，更适合偏好约定优于配置的团队。",
+                "vs AutoGPT / CrewAI：后者偏重自主任务分解和 agent 协作，配置复杂；eve 聚焦单代理的基础能力组件化，更可控和易调试。",
+                "vs 传统脚本：eve 提供了频道、调度等生产必需模块，同时保留文件系统的透明性，比自写胶水代码更健壮。"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "最新 0.13.4（2026-06-24）主要修复了沙箱引擎自动安装后的弹性加载、客户端中性包拆分以支持 React、Slack 会话授权状态清理，以及工作流开发包升级。版本更新积极，显示维护团队持续完善生产细节。 ---"
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：生产部署是否强制依赖 Vercel 平台未明确说明，自托管支持未知；未提供性能基准或并发容量数据；模型提供商 API Key 的具体配置方式未在 README 覆盖"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "XiaomiMiMo__MiMo-Code",
+          "fullName": "XiaomiMiMo/MiMo-Code",
+          "owner": "XiaomiMiMo",
+          "name": "MiMo-Code",
+          "url": "https://github.com/XiaomiMiMo/MiMo-Code",
+          "oneLiner": "终端AI编程助手，带持久记忆与多代理协同，免配置启动。",
+          "description": "MiMo Code: Where Models and Agents Co-Evolve",
+          "language": "TypeScript",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 10595,
+          "starsGained": 0,
+          "streakDays": 11,
+          "isNew": false,
+          "createdAt": "2026-06-10",
+          "pushedAt": "2026-06-24",
+          "latestRelease": "v0.1.3",
+          "firstSeen": "2026-06-19",
+          "topics": [
+            "ai",
+            "ai-agents",
+            "cli",
+            "mimo",
+            "mimo-code"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-19",
+              "reason": "new",
+              "starsTotal": 9894,
+              "starsGained": 0,
+              "release": "v0.1.1"
+            },
+            {
+              "date": "2026-06-19",
+              "reason": "lightweight",
+              "starsTotal": 9894,
+              "starsGained": 0,
+              "release": "v0.1.1"
+            },
+            {
+              "date": "2026-06-20",
+              "reason": "lightweight",
+              "starsTotal": 9899,
+              "starsGained": 0,
+              "release": "v0.1.1"
+            },
+            {
+              "date": "2026-06-20",
+              "reason": "lightweight",
+              "starsTotal": 10005,
+              "starsGained": 0,
+              "release": "v0.1.1"
+            },
+            {
+              "date": "2026-06-20",
+              "reason": "lightweight",
+              "starsTotal": 10033,
+              "starsGained": 0,
+              "release": "v0.1.1"
+            },
+            {
+              "date": "2026-06-21",
+              "reason": "lightweight",
+              "starsTotal": 10076,
+              "starsGained": 0,
+              "release": "v0.1.1"
+            },
+            {
+              "date": "2026-06-21",
+              "reason": "lightweight",
+              "starsTotal": 10138,
+              "starsGained": 0,
+              "release": "v0.1.1"
+            },
+            {
+              "date": "2026-06-22",
+              "reason": "lightweight",
+              "starsTotal": 10187,
+              "starsGained": 0,
+              "release": "v0.1.1"
+            },
+            {
+              "date": "2026-06-23",
+              "reason": "lightweight",
+              "starsTotal": 10351,
+              "starsGained": 0,
+              "release": "v0.1.1"
+            },
+            {
+              "date": "2026-06-24",
+              "reason": "release_update",
+              "starsTotal": 10549,
+              "starsGained": 0,
+              "release": "v0.1.2"
+            },
+            {
+              "date": "2026-06-25",
+              "reason": "release_update",
+              "starsTotal": 10595,
+              "starsGained": 0,
+              "release": "v0.1.3"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "MiMoCode 是小米推出的终端原生 AI 编程助手，基于 OpenCode 分叉，增加跨会话持久记忆、多代理（build/plan/compose）、目标导向自主循环和语音输入等功能。可通过免费限时通道零配置启动，也支持连接主流 LLM 提供商。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "发布不足一个月即获 10k+ Star，免费使用期降低了尝试门槛，记忆与子代理协同设计直击 AI 编程工具长期上下文丢失痛点。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "语言：TypeScript",
+                "运行时：Bun（开发）",
+                "终端 UI：自研 TUI",
+                "记忆存储：SQLite FTS5",
+                "集成：LSP、MCP、多提供商 API",
+                "语音：TenVAD + MiMo ASR，可选 OpenRouter 等"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "多代理切换：build（全权限）、plan（只读分析）、compose（规格驱动流程）",
+                "持久记忆：项目记忆文件（MEMORY.md）、自动检查点、笔记、任务进度，通过 FTS5 全文搜索注入上下文",
+                "智能上下文管理：自动检查点、接近窗口限制时重建上下文、基于 token 预算的带重要性排序内容注入",
+                "任务追踪：树形任务系统，与检查点联动，会话恢复时保留进度",
+                "子代理系统：主代理可创建子代理并行工作，支持生命周期跟踪和取消",
+                "目标/停止条件：可设置会话停止条件，由独立裁判模型验证，防止过早终止",
+                "Compose 工作流：内置规划、执行、代码审查、TDD、调试、验证、合并等技能，覆盖从 spec 到交付的全生命周期",
+                "语音输入：实时流式语音转文本，支持米默登录用户",
+                "Dream & Distill：从对话轨迹提取项目记忆，去除过时内容；发现重复工作流并封装为技能或命令",
+                "其他：支持 Claude Code 配置导入，MCP 服务器连接，自定义快捷键和主题，实验性 Max 模式"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "body": "复杂中大型项目开发，需要跨多天的上下文持续累积；自主多步骤任务（如重构、跨文件更改）；团队希望沉淀项目级规则和知识；希望减少重复解释、加速 AI 协作效率的开发者。"
+            },
+            {
+              "heading": "同类对比",
+              "body": "与 Claude Code 等相比，MiMoCode 的核心差异化在于持久记忆系统和子代理编排，能够自主保存和利用项目上下文，避免每次对话重新学习。它还继承了 OpenCode 的多提供商、LSP、MCP 等能力，并加入了自我蒸馏的改进闭环。相比通用的 IDE 插件形式 AI，它更偏向终端原生的强大可控性。"
+            },
+            {
+              "heading": "版本动态",
+              "body": "当前版本 v0.1.3（2026-06-24），处于快速迭代期，已具备核心记忆与代理功能。更新方向包括工作流完善、更多提供商支持和社区反馈驱动优化。 ---"
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：无性能 benchmark 数据或准确率对比；MiMo V2.5 模型具体能力（除 ASR 和 voice control）未详述；Dream/Distill 的启发式规则与效果量化未公开；Max Mode 并行推理的具体实现和资源消耗未说明"
+              ]
+            }
+          ]
+        }
+      ],
+      "news": [
+        {
+          "title": "Introducing computer use in Gemini 3.5 Flash",
+          "url": "https://deepmind.google/blog/introducing-computer-use-in-gemini-3-5-flash/",
+          "source": "Google DeepMind",
+          "sourceType": "official",
+          "published": "2026-06-24",
+          "summary": "Gemini 3.5 Flash 引入 computer use 功能，可在网页端操控浏览器。",
+          "category": "模型发布"
+        },
+        {
+          "title": "OpenAI and Broadcom unveil LLM-optimized inference chip",
+          "url": "https://openai.com/index/openai-broadcom-jalapeno-inference-chip",
+          "source": "OpenAI",
+          "sourceType": "official",
+          "published": "2026-06-24",
+          "summary": "OpenAI 与 Broadcom 联合推出 LLM 专用推理芯片 Jalapeño。",
+          "category": "产品"
+        },
+        {
+          "title": "Set up Claude Tag",
+          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE4zVVRoNnhObjdObHk2YzUxdV9oZGgxTDlYbWc2MWk2SEdqbTRDNXpyVHNoUGRUU0JJTmxHY2VGazJnM1REX2dmT3FSaFpJMVBjSFhIZkhHeFRybklXTDZpeE1wdHV1YjA?oc=5",
+          "source": "Claude",
+          "sourceType": "official",
+          "published": "2026-06-23",
+          "summary": "Claude Tag 功能设置指南发布。",
+          "category": "产品"
+        },
+        {
+          "title": "How Omio is building the future of conversational travel",
+          "url": "https://openai.com/index/omio",
+          "source": "OpenAI",
+          "sourceType": "official",
+          "published": "2026-06-23",
+          "summary": "Omio 借助 OpenAI 打造对话式旅行体验，加速产品开发。",
+          "category": "产品"
+        },
+        {
+          "title": "RubyLLM: A Ruby framework for all major AI providers",
+          "url": "https://rubyllm.com/",
+          "source": "Hacker News",
+          "sourceType": "community",
+          "published": "2026-06-24",
+          "summary": "RubyLLM 框架发布，统一调用各大 AI 提供商。",
+          "category": "工程"
+        },
+        {
+          "title": "Reid Hoffman says SpaceX 'not an AI company', xAI 'complete train wreck'",
+          "url": "https://fortune.com/2026/06/24/reid-hoffman-spacex-musk-openai-anthropic-gen-z-mistake/",
+          "source": "Hacker News",
+          "sourceType": "community",
+          "published": "2026-06-24",
+          "summary": "Reid Hoffman 称 SpaceX 非 AI 公司，xAI 彻底混乱。",
+          "category": "观点"
+        },
+        {
+          "title": "Accelerating Transformers Fine-Tuning with NVIDIA NeMo AutoModel",
+          "url": "https://huggingface.co/blog/nvidia/accelerating-fine-tuning-nvidia-nemo-automodel",
+          "source": "HF Blog",
+          "sourceType": "hf",
+          "published": "2026-06-24",
+          "summary": "NVIDIA NeMo AutoModel 加速 Transformers 微调。",
+          "category": "研究"
+        },
+        {
+          "title": "Critique of Agent Model",
+          "url": "https://arxiv.org/abs/2606.23991",
+          "source": "arXiv cs.AI",
+          "sourceType": "paper",
+          "published": "2026-06-24",
+          "summary": "论文批判智能体模型，探讨大语言模型情境下的智能体定义。",
+          "category": "研究"
+        },
+        {
+          "title": "Safe and Generalizable Hierarchical Multi-Agent RL via Constraint Manifold Control",
+          "url": "https://arxiv.org/abs/2606.24010",
+          "source": "arXiv cs.AI",
+          "sourceType": "paper",
+          "published": "2026-06-24",
+          "summary": "提出分层多智能体强化学习安全方法，利用约束流形控制。",
+          "category": "研究"
+        },
+        {
+          "title": "Ground Then Rank: Revisiting Knowledge-Based VQA with Training-Free Entity Identification",
+          "url": "https://arxiv.org/abs/2606.23881",
+          "source": "arXiv cs.CL",
+          "sourceType": "paper",
+          "published": "2026-06-24",
+          "summary": "论文提出无训练实体识别方法，改进知识型视觉问答。",
+          "category": "研究"
+        },
+        {
+          "title": "Do LLM Attribution Metrics Transfer? Auditing Retrieval-Augmented Generation Evaluation Across Datasets and Constructs",
+          "url": "https://arxiv.org/abs/2606.23915",
+          "source": "arXiv cs.CL",
+          "sourceType": "paper",
+          "published": "2026-06-24",
+          "summary": "研究 LLM 检索增强生成中归因指标的跨数据集迁移性。",
+          "category": "研究"
+        },
+        {
+          "title": "Introducing the FFASR Leaderboard: Benchmarking ASR in the Real World",
+          "url": "https://huggingface.co/blog/ffasr-leaderboard",
+          "source": "HF Blog",
+          "sourceType": "hf",
+          "published": "2026-06-24",
+          "summary": "FFASR 排行榜发布，用于真实场景语音识别基准测试。",
+          "category": "产品"
+        }
+      ]
+    },
+    {
       "date": "2026-06-24",
       "count": 16,
       "projects": [
@@ -48,6 +1173,13 @@
               "date": "2026-06-24",
               "reason": "new",
               "starsTotal": 6424,
+              "starsGained": 1216,
+              "release": "v1.4.95"
+            },
+            {
+              "date": "2026-06-25",
+              "reason": "lightweight",
+              "starsTotal": 6642,
               "starsGained": 1216,
               "release": "v1.4.95"
             }
@@ -160,6 +1292,13 @@
               "reason": "new",
               "starsTotal": 201360,
               "starsGained": 936,
+              "release": "v2026.6.19"
+            },
+            {
+              "date": "2026-06-25",
+              "reason": "lightweight",
+              "starsTotal": 201862,
+              "starsGained": 1174,
               "release": "v2026.6.19"
             }
           ],
@@ -462,6 +1601,13 @@
               "starsTotal": 7543,
               "starsGained": 128,
               "release": ""
+            },
+            {
+              "date": "2026-06-25",
+              "reason": "lightweight",
+              "starsTotal": 7669,
+              "starsGained": 274,
+              "release": ""
             }
           ],
           "analysis": [
@@ -636,6 +1782,13 @@
               "starsTotal": 17024,
               "starsGained": 9410,
               "release": ""
+            },
+            {
+              "date": "2026-06-25",
+              "reason": "lightweight",
+              "starsTotal": 18745,
+              "starsGained": 9410,
+              "release": ""
             }
           ],
           "analysis": [
@@ -791,6 +1944,13 @@
               "date": "2026-06-24",
               "reason": "star_jump",
               "starsTotal": 13542,
+              "starsGained": 8536,
+              "release": "v0.8.1"
+            },
+            {
+              "date": "2026-06-25",
+              "reason": "lightweight",
+              "starsTotal": 13985,
               "starsGained": 8536,
               "release": "v0.8.1"
             }
@@ -1080,6 +2240,13 @@
               "starsTotal": 4850,
               "starsGained": 0,
               "release": "v0.3.0"
+            },
+            {
+              "date": "2026-06-25",
+              "reason": "lightweight",
+              "starsTotal": 5111,
+              "starsGained": 0,
+              "release": "v0.3.0"
             }
           ],
           "analysis": [
@@ -1163,7 +2330,7 @@
           "isNew": false,
           "createdAt": "2026-06-16",
           "pushedAt": "2026-06-24",
-          "latestRelease": "eve@0.13.3",
+          "latestRelease": "eve@0.13.4",
           "firstSeen": "2026-06-19",
           "topics": [
             "agent",
@@ -1232,70 +2399,65 @@
               "starsTotal": 2473,
               "starsGained": 0,
               "release": "eve@0.13.3"
+            },
+            {
+              "date": "2026-06-25",
+              "reason": "release_update",
+              "starsTotal": 2522,
+              "starsGained": 0,
+              "release": "eve@0.13.4"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "eve（Vercel 出品）是一个以文件系统为首要创作界面的持久化 AI 代理框架。代理的所有核心能力——系统提示、工具、技能、频道、定时任务——都按约定放在特定的文件与目录中，使得项目结构即代理逻辑，便于检查、扩展和运维。它用 TypeScript 编写，提供 npx eve@latest init 脚手架，内置交互式终端 UI，并支持快速接入 Anthropic 等模型。"
+              "body": "eve 是 Vercel 推出的文件系统优先的持久化 AI 代理框架。项目的核心目标是让代理能力的定义回归到文件系统结构：指令、工具、技能、频道、调度等都按约定目录放置，开发者只需编写 Markdown 和 TypeScript 文件，无需理解复杂的链式 API。代理运行时读取这些文件并拼接成一个可交互的代理。"
             },
             {
               "heading": "为什么火",
-              "bullets": [
-                "极简约定：代理的入口、工具、指令一目了然，无需复杂的对象组装或隐式配置。",
-                "Vercel 背书：由 Vercel 团队维护，与 Vercel 生态（如 AI SDK）存在潜在协同。",
-                "持久化与协作：文件天然可版本控制，适用于需要长期维护、多人参与的代理项目。",
-                "beta 阶段热度：Star 增长较快，社区在 GitHub Discussions 活跃。"
-              ]
+              "body": "由 Vercel 背书，贴合其“前端即产品”的哲学。将代理构建简化为类似 Next.js 的文件约定，踩中开发者对低认知负担框架的渴望。虽然 Star 数尚在早期，但其“文件即配置”的理念在众多代码式代理框架中令人耳目一新，引发讨论。"
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "语言：TypeScript",
-                "运行时：Node.js",
-                "模型接入：通过 defineAgent 配置模型 ID（如 anthropic/claude-sonnet-4.6），需外部 API 密钥",
-                "工具校验：使用 Zod 定义输入 schema",
-                "交互频道：内置 HTTP、Slack、Discord 等频道支持",
-                "调度：基于 cron 的 jobs",
-                "沙箱：主题标签提及 sandbox，但本文档未展开说明，可能指执行环境隔离"
+                "语言 & 运行时：TypeScript，Node.js",
+                "核心依赖：Zod（工具参数校验）、可选沙箱引擎（支持 workspace 提升安装）",
+                "多渠道支持：内置 HTTP、Slack、Discord 等频道集成",
+                "客户端：eve/react 包支持 React 集成，使用 Zod 校验 /eve/v1/info 接口",
+                "模型接入：通过字符串标识选择模型（如 anthropic/claude-sonnet-4.6），模型调用细节由框架封装",
+                "文档内嵌：eve npm 包包含完整 docs，方便编码代理在本地读取"
               ]
             },
             {
               "heading": "核心能力",
-              "body": "1. 指令即文件：instructions.md 是常驻系统提示，修改即更新行为。 2. 工具定义：tools/ 下的 TypeScript 文件导出 defineTool，带 Zod schema 与异步执行逻辑。 3. 技能：skills/ 目录存放按需加载的过程性 Markdown。 4. 频道：channels/ 支持多种消息渠道接入（HTTP、Slack 等）。 5. 定时调度：schedules/ 定义周期性任务。 6. 人工干预：支持 human-in-the-loop 提示。 7. 子代理：可创建子代理协调复杂任务。"
+              "body": "1. 指令层：instructions.md 作为始终激活的系统提示 2. 工具：tools/*.ts 通过 defineTool 定义可调用函数，参数以 Zod schema 声明 3. 技能：skills/*.md 按需加载的规程，扩展代理能力 4. 频道：channels/*.ts 设定消息接入点，支持 Slack、Discord 等 5. 调度：schedules/*.ts 定义 Cron 作业，实现定时任务 6. 子代理：支持在代理内调用子代理（文档含 subagents.mdx） 7. 人机交互：可在工作流中插入人工审批环节 8. 沙箱：可选的沙箱引擎，提供安全执行环境"
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "快速原型：想用最短路径得到一个可交互的 AI 助手。",
-                "团队开发：需要可审查、可版本化的代理配置，避免黑盒。",
-                "渠道集成：需要同时对接 Slack、Discord 等消息平台的机器人。",
-                "工作流自动化：结合定时任务和工具调用，实现定期报告、数据抓取等。"
+                "需要快速搭建面向用户或团队的 AI 助手（如客服、内部问答）",
+                "多平台同步部署的代理（Slack + Discord 等）",
+                "定时报告、周期工作流",
+                "TypeScript 生态内的原型或生产级代理开发"
               ]
             },
             {
               "heading": "同类对比",
-              "body": "对比 LangChain Agent 或 Semantic Kernel，eve 的差异化在于： 当前它更偏向个人与团队的“文件即代理”哲学，而 LangChain 等更偏库式编排。",
               "bullets": [
-                "文件系统优先：将代理逻辑显式化为文件结构，而非全部代码内组装。",
-                "轻量约定：不引入复杂的链式抽象，学习曲线较低。",
-                "Vercel 原生：可能深度集成 Vercel 部署和 AI SDK（具体整合待确认）。"
+                "vs LangChain：LangChain 以链式调用和抽象类为核心，学习曲线陡峭；eve 只有文件和函数约定，项目结构更扁平，更适合偏好约定优于配置的团队。",
+                "vs AutoGPT / CrewAI：后者偏重自主任务分解和 agent 协作，配置复杂；eve 聚焦单代理的基础能力组件化，更可控和易调试。",
+                "vs 传统脚本：eve 提供了频道、调度等生产必需模块，同时保留文件系统的透明性，比自写胶水代码更健壮。"
               ]
             },
             {
               "heading": "版本动态",
-              "body": "---",
-              "bullets": [
-                "最新 Release: eve@0.13.3（2026-06-23），当前为 beta 阶段。",
-                "补丁更新：共享 Chat SDK Block Kit 基元用于 Slack 卡片渲染，可见与 Vercel 其他基础设施的联动。",
-                "行为可能变化，API 在 GA 前不稳定。"
-              ]
+              "body": "最新 0.13.4（2026-06-24）主要修复了沙箱引擎自动安装后的弹性加载、客户端中性包拆分以支持 React、Slack 会话授权状态清理，以及工作流开发包升级。版本更新积极，显示维护团队持续完善生产细节。 ---"
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
-                "置信度：medium",
-                "信息盲区：未说明模型API密钥的具体配置方式（如环境变量名）；未提供沙箱（sandbox）机制的实现细节与隔离程度；未说明自托管部署的完整步骤，以及与Vercel平台的耦合程度；无性能基准或大规模生产数据；子代理、技能（skills）的具体编写规范未在本文档展开"
+                "置信度：high",
+                "信息盲区：生产部署是否强制依赖 Vercel 平台未明确说明，自托管支持未知；未提供性能基准或并发容量数据；模型提供商 API Key 的具体配置方式未在 README 覆盖"
               ]
             }
           ]
@@ -1340,6 +2502,13 @@
               "date": "2026-06-24",
               "reason": "star_jump",
               "starsTotal": 586,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-06-25",
+              "reason": "lightweight",
+              "starsTotal": 635,
               "starsGained": 0,
               "release": ""
             }
@@ -1422,7 +2591,7 @@
           "streakDays": 4,
           "isNew": false,
           "createdAt": "2026-06-09",
-          "pushedAt": "2026-06-23",
+          "pushedAt": "2026-06-24",
           "latestRelease": "",
           "firstSeen": "2026-06-21",
           "topics": [
@@ -1470,6 +2639,13 @@
               "date": "2026-06-24",
               "reason": "star_jump",
               "starsTotal": 786,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-06-25",
+              "reason": "lightweight",
+              "starsTotal": 821,
               "starsGained": 0,
               "release": ""
             }
@@ -1548,7 +2724,7 @@
           "isNew": false,
           "createdAt": "2026-06-10",
           "pushedAt": "2026-06-24",
-          "latestRelease": "v0.1.2",
+          "latestRelease": "v0.1.3",
           "firstSeen": "2026-06-19",
           "topics": [
             "ai",
@@ -1627,69 +2803,67 @@
               "starsTotal": 10549,
               "starsGained": 0,
               "release": "v0.1.2"
+            },
+            {
+              "date": "2026-06-25",
+              "reason": "release_update",
+              "starsTotal": 10595,
+              "starsGained": 0,
+              "release": "v0.1.3"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "MiMoCode 是一个终端原生的 AI 编程助手，可读写代码、运行命令、管理 Git，核心特色是拥有跨会话的持久记忆系统，能够自我改进。它从 OpenCode 分叉而来，保留了多提供商支持、TUI、LSP、MCP 等能力，并增加了智能上下文管理、多代理编排和自主目标驱动的开发循环。"
+              "body": "MiMoCode 是小米推出的终端原生 AI 编程助手，基于 OpenCode 分叉，增加跨会话持久记忆、多代理（build/plan/compose）、目标导向自主循环和语音输入等功能。可通过免费限时通道零配置启动，也支持连接主流 LLM 提供商。"
             },
             {
               "heading": "为什么火",
-              "body": "在众多终端 AI 助手中，MiMoCode 通过“记忆”与“自进化”形成鲜明差异，解决了长期项目中 AI 反复遗忘上下文的问题。内置免费体验通道（MiMo Auto）大幅降低上手门槛，且 Star 超过 1 万，反应出强烈的社区兴趣。"
+              "body": "发布不足一个月即获 10k+ Star，免费使用期降低了尝试门槛，记忆与子代理协同设计直击 AI 编程工具长期上下文丢失痛点。"
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "主语言：TypeScript",
-                "运行环境：Node.js/Bun（bun install/dev/turbo typecheck）",
-                "持久记忆：SQLite FTS5 全文搜索",
-                "界面：终端 TUI",
-                "语音：TenVAD 音频活动检测 + 小米 MiMo ASR",
-                "基础框架：OpenCode（开源终端 AI 助手）"
+                "语言：TypeScript",
+                "运行时：Bun（开发）",
+                "终端 UI：自研 TUI",
+                "记忆存储：SQLite FTS5",
+                "集成：LSP、MCP、多提供商 API",
+                "语音：TenVAD + MiMo ASR，可选 OpenRouter 等"
               ]
             },
             {
               "heading": "核心能力",
               "bullets": [
-                "多 Agent 协作：内置 build（全权限）、plan（只读分析）、compose（规格驱动）三种主 Agent，可创建子 Agent 并行工作。",
-                "持久记忆系统：跨会话的项目记忆（MEMORY.md）、自动检查点（checkpoint.md）、临时笔记、任务进度，通过 FTS5 检索智能注入上下文。",
-                "智能上下文管理：自动保存检查点、上下文接近窗口上限时从检查点重建，并使用 token 预算控制记忆注入量。",
-                "任务跟踪：树状任务 ID（T1, T1.1…）与检查点集成，任务进度在会话重启后保留。",
-                "Goal/Stop 判定：独立 judge 模型评估目标是否真正达成，防止自主工作过早停止。",
-                "Compose 模式：规格驱动的结构化开发工作流，内置规划、执行、代码审查、TDD、调试、验证等技能。",
-                "Dream/Distill 自进化：/dream 从历史会话提取知识到项目记忆；/distill 将重复手动流程封装为可复用技能或子 Agent。",
-                "语音输入：/voice 实时流式语音转录，需 sox 环境。",
-                "零配置启动：MiMo Auto 匿名通道免费使用，也可接入 OpenAI 兼容 API。"
+                "多代理切换：build（全权限）、plan（只读分析）、compose（规格驱动流程）",
+                "持久记忆：项目记忆文件（MEMORY.md）、自动检查点、笔记、任务进度，通过 FTS5 全文搜索注入上下文",
+                "智能上下文管理：自动检查点、接近窗口限制时重建上下文、基于 token 预算的带重要性排序内容注入",
+                "任务追踪：树形任务系统，与检查点联动，会话恢复时保留进度",
+                "子代理系统：主代理可创建子代理并行工作，支持生命周期跟踪和取消",
+                "目标/停止条件：可设置会话停止条件，由独立裁判模型验证，防止过早终止",
+                "Compose 工作流：内置规划、执行、代码审查、TDD、调试、验证、合并等技能，覆盖从 spec 到交付的全生命周期",
+                "语音输入：实时流式语音转文本，支持米默登录用户",
+                "Dream & Distill：从对话轨迹提取项目记忆，去除过时内容；发现重复工作流并封装为技能或命令",
+                "其他：支持 Claude Code 配置导入，MCP 服务器连接，自定义快捷键和主题，实验性 Max 模式"
               ]
             },
             {
               "heading": "适用场景",
-              "bullets": [
-                "需要长期维护同一项目、希望 AI 助手记住架构和习惯的开发者。",
-                "复杂多步骤开发任务，需多代理分工和状态追踪。",
-                "想从会话中自动提炼经验、减少重复机械工作的团队。",
-                "偏好终端工作流、不喜欢离开命令行的极客。"
-              ]
+              "body": "复杂中大型项目开发，需要跨多天的上下文持续累积；自主多步骤任务（如重构、跨文件更改）；团队希望沉淀项目级规则和知识；希望减少重复解释、加速 AI 协作效率的开发者。"
             },
             {
               "heading": "同类对比",
-              "bullets": [
-                "vs Claude Code：Claude Code 也有子代理和类似技能，但未强调显式的跨会话记忆进化机制，MiMoCode 的持久记忆和 dream/distill 是独特优势。",
-                "vs OpenCode：MiMoCode 的直接基座，缺少记忆系统、自主循环、compose 工作流和自我改进，MiMoCode 全面增强。",
-                "vs Aider：专注于 inline 代码编辑，没有记忆系统和多代理编排。",
-                "vs Cursor/Copilot：编辑器集成而非终端原生，不具备项目级持久记忆和自进化。"
-              ]
+              "body": "与 Claude Code 等相比，MiMoCode 的核心差异化在于持久记忆系统和子代理编排，能够自主保存和利用项目上下文，避免每次对话重新学习。它还继承了 OpenCode 的多提供商、LSP、MCP 等能力，并加入了自我蒸馏的改进闭环。相比通用的 IDE 插件形式 AI，它更偏向终端原生的强大可控性。"
             },
             {
               "heading": "版本动态",
-              "body": "当前最新版本为 v0.1.2（2026-06-23），项目处于早期但活跃的迭代阶段，README 已展示大量高级功能。社区有两个微信群二维码，显示有中文用户生态。MIT 许可证，但使用时需遵守额外使用限制及小米 MiMo 服务条款。 ---"
+              "body": "当前版本 v0.1.3（2026-06-24），处于快速迭代期，已具备核心记忆与代理功能。更新方向包括工作流完善、更多提供商支持和社区反馈驱动优化。 ---"
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
                 "置信度：high",
-                "信息盲区：无公开 benchmark 数据，无法比较代码生成或任务完成准确率；记忆检索的实际效果和性能在大型项目中的表现未说明；语音识别准确率无数据支持；MiMo Auto 免费期限和未来定价策略未披露；项目版本号仅 v0.1.2，功能稳定性和成熟度未知"
+                "信息盲区：无性能 benchmark 数据或准确率对比；MiMo V2.5 模型具体能力（除 ASR 和 voice control）未详述；Dream/Distill 的启发式规则与效果量化未公开；Max Mode 并行推理的具体实现和资源消耗未说明"
               ]
             }
           ]
@@ -1745,6 +2919,13 @@
               "date": "2026-06-24",
               "reason": "star_jump",
               "starsTotal": 433,
+              "starsGained": 0,
+              "release": "v0.3.5"
+            },
+            {
+              "date": "2026-06-25",
+              "reason": "lightweight",
+              "starsTotal": 457,
               "starsGained": 0,
               "release": "v0.3.5"
             }
@@ -1864,6 +3045,13 @@
               "starsTotal": 492,
               "starsGained": 0,
               "release": "v0.42.0"
+            },
+            {
+              "date": "2026-06-25",
+              "reason": "lightweight",
+              "starsTotal": 505,
+              "starsGained": 0,
+              "release": "v0.42.0"
             }
           ],
           "analysis": [
@@ -1933,7 +3121,7 @@
           "streakDays": 3,
           "isNew": false,
           "createdAt": "2026-06-03",
-          "pushedAt": "2026-06-23",
+          "pushedAt": "2026-06-24",
           "latestRelease": "v0.2.0",
           "firstSeen": "2026-06-21",
           "topics": [
@@ -1966,6 +3154,13 @@
               "date": "2026-06-24",
               "reason": "release_update",
               "starsTotal": 687,
+              "starsGained": 0,
+              "release": "v0.2.0"
+            },
+            {
+              "date": "2026-06-25",
+              "reason": "lightweight",
+              "starsTotal": 688,
               "starsGained": 0,
               "release": "v0.2.0"
             }
@@ -2401,6 +3596,13 @@
               "starsTotal": 18805,
               "starsGained": 826,
               "release": "v0.3.1"
+            },
+            {
+              "date": "2026-06-25",
+              "reason": "lightweight",
+              "starsTotal": 19159,
+              "starsGained": 693,
+              "release": "v0.3.1"
             }
           ],
           "analysis": [
@@ -2499,6 +3701,13 @@
               "date": "2026-06-24",
               "reason": "star_jump",
               "starsTotal": 586,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-06-25",
+              "reason": "lightweight",
+              "starsTotal": 635,
               "starsGained": 0,
               "release": ""
             }
@@ -2616,6 +3825,13 @@
               "date": "2026-06-24",
               "reason": "star_jump",
               "starsTotal": 433,
+              "starsGained": 0,
+              "release": "v0.3.5"
+            },
+            {
+              "date": "2026-06-25",
+              "reason": "lightweight",
+              "starsTotal": 457,
               "starsGained": 0,
               "release": "v0.3.5"
             }
@@ -2788,6 +4004,13 @@
               "date": "2026-06-24",
               "reason": "star_jump",
               "starsTotal": 17024,
+              "starsGained": 9410,
+              "release": ""
+            },
+            {
+              "date": "2026-06-25",
+              "reason": "lightweight",
+              "starsTotal": 18745,
               "starsGained": 9410,
               "release": ""
             }
@@ -3084,6 +4307,13 @@
               "starsTotal": 4850,
               "starsGained": 0,
               "release": "v0.3.0"
+            },
+            {
+              "date": "2026-06-25",
+              "reason": "lightweight",
+              "starsTotal": 5111,
+              "starsGained": 0,
+              "release": "v0.3.0"
             }
           ],
           "analysis": [
@@ -3349,6 +4579,13 @@
               "date": "2026-06-24",
               "reason": "release_update",
               "starsTotal": 492,
+              "starsGained": 0,
+              "release": "v0.42.0"
+            },
+            {
+              "date": "2026-06-25",
+              "reason": "lightweight",
+              "starsTotal": 505,
               "starsGained": 0,
               "release": "v0.42.0"
             }
@@ -3724,6 +4961,13 @@
               "starsTotal": 870,
               "starsGained": 0,
               "release": ""
+            },
+            {
+              "date": "2026-06-25",
+              "reason": "lightweight",
+              "starsTotal": 873,
+              "starsGained": 0,
+              "release": ""
             }
           ],
           "analysis": [
@@ -3839,6 +5083,13 @@
             },
             {
               "date": "2026-06-24",
+              "reason": "lightweight",
+              "starsTotal": 442,
+              "starsGained": 0,
+              "release": "v0.1.4"
+            },
+            {
+              "date": "2026-06-25",
               "reason": "lightweight",
               "starsTotal": 442,
               "starsGained": 0,
@@ -3962,6 +5213,13 @@
               "starsTotal": 492,
               "starsGained": 0,
               "release": "v0.42.0"
+            },
+            {
+              "date": "2026-06-25",
+              "reason": "lightweight",
+              "starsTotal": 505,
+              "starsGained": 0,
+              "release": "v0.42.0"
             }
           ],
           "analysis": [
@@ -4078,6 +5336,13 @@
               "date": "2026-06-24",
               "reason": "release_update",
               "starsTotal": 4850,
+              "starsGained": 0,
+              "release": "v0.3.0"
+            },
+            {
+              "date": "2026-06-25",
+              "reason": "lightweight",
+              "starsTotal": 5111,
               "starsGained": 0,
               "release": "v0.3.0"
             }
@@ -4291,7 +5556,7 @@
           "isNew": false,
           "createdAt": "2026-06-16",
           "pushedAt": "2026-06-24",
-          "latestRelease": "eve@0.13.3",
+          "latestRelease": "eve@0.13.4",
           "firstSeen": "2026-06-19",
           "topics": [
             "agent",
@@ -4360,70 +5625,65 @@
               "starsTotal": 2473,
               "starsGained": 0,
               "release": "eve@0.13.3"
+            },
+            {
+              "date": "2026-06-25",
+              "reason": "release_update",
+              "starsTotal": 2522,
+              "starsGained": 0,
+              "release": "eve@0.13.4"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "eve（Vercel 出品）是一个以文件系统为首要创作界面的持久化 AI 代理框架。代理的所有核心能力——系统提示、工具、技能、频道、定时任务——都按约定放在特定的文件与目录中，使得项目结构即代理逻辑，便于检查、扩展和运维。它用 TypeScript 编写，提供 npx eve@latest init 脚手架，内置交互式终端 UI，并支持快速接入 Anthropic 等模型。"
+              "body": "eve 是 Vercel 推出的文件系统优先的持久化 AI 代理框架。项目的核心目标是让代理能力的定义回归到文件系统结构：指令、工具、技能、频道、调度等都按约定目录放置，开发者只需编写 Markdown 和 TypeScript 文件，无需理解复杂的链式 API。代理运行时读取这些文件并拼接成一个可交互的代理。"
             },
             {
               "heading": "为什么火",
-              "bullets": [
-                "极简约定：代理的入口、工具、指令一目了然，无需复杂的对象组装或隐式配置。",
-                "Vercel 背书：由 Vercel 团队维护，与 Vercel 生态（如 AI SDK）存在潜在协同。",
-                "持久化与协作：文件天然可版本控制，适用于需要长期维护、多人参与的代理项目。",
-                "beta 阶段热度：Star 增长较快，社区在 GitHub Discussions 活跃。"
-              ]
+              "body": "由 Vercel 背书，贴合其“前端即产品”的哲学。将代理构建简化为类似 Next.js 的文件约定，踩中开发者对低认知负担框架的渴望。虽然 Star 数尚在早期，但其“文件即配置”的理念在众多代码式代理框架中令人耳目一新，引发讨论。"
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "语言：TypeScript",
-                "运行时：Node.js",
-                "模型接入：通过 defineAgent 配置模型 ID（如 anthropic/claude-sonnet-4.6），需外部 API 密钥",
-                "工具校验：使用 Zod 定义输入 schema",
-                "交互频道：内置 HTTP、Slack、Discord 等频道支持",
-                "调度：基于 cron 的 jobs",
-                "沙箱：主题标签提及 sandbox，但本文档未展开说明，可能指执行环境隔离"
+                "语言 & 运行时：TypeScript，Node.js",
+                "核心依赖：Zod（工具参数校验）、可选沙箱引擎（支持 workspace 提升安装）",
+                "多渠道支持：内置 HTTP、Slack、Discord 等频道集成",
+                "客户端：eve/react 包支持 React 集成，使用 Zod 校验 /eve/v1/info 接口",
+                "模型接入：通过字符串标识选择模型（如 anthropic/claude-sonnet-4.6），模型调用细节由框架封装",
+                "文档内嵌：eve npm 包包含完整 docs，方便编码代理在本地读取"
               ]
             },
             {
               "heading": "核心能力",
-              "body": "1. 指令即文件：instructions.md 是常驻系统提示，修改即更新行为。 2. 工具定义：tools/ 下的 TypeScript 文件导出 defineTool，带 Zod schema 与异步执行逻辑。 3. 技能：skills/ 目录存放按需加载的过程性 Markdown。 4. 频道：channels/ 支持多种消息渠道接入（HTTP、Slack 等）。 5. 定时调度：schedules/ 定义周期性任务。 6. 人工干预：支持 human-in-the-loop 提示。 7. 子代理：可创建子代理协调复杂任务。"
+              "body": "1. 指令层：instructions.md 作为始终激活的系统提示 2. 工具：tools/*.ts 通过 defineTool 定义可调用函数，参数以 Zod schema 声明 3. 技能：skills/*.md 按需加载的规程，扩展代理能力 4. 频道：channels/*.ts 设定消息接入点，支持 Slack、Discord 等 5. 调度：schedules/*.ts 定义 Cron 作业，实现定时任务 6. 子代理：支持在代理内调用子代理（文档含 subagents.mdx） 7. 人机交互：可在工作流中插入人工审批环节 8. 沙箱：可选的沙箱引擎，提供安全执行环境"
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "快速原型：想用最短路径得到一个可交互的 AI 助手。",
-                "团队开发：需要可审查、可版本化的代理配置，避免黑盒。",
-                "渠道集成：需要同时对接 Slack、Discord 等消息平台的机器人。",
-                "工作流自动化：结合定时任务和工具调用，实现定期报告、数据抓取等。"
+                "需要快速搭建面向用户或团队的 AI 助手（如客服、内部问答）",
+                "多平台同步部署的代理（Slack + Discord 等）",
+                "定时报告、周期工作流",
+                "TypeScript 生态内的原型或生产级代理开发"
               ]
             },
             {
               "heading": "同类对比",
-              "body": "对比 LangChain Agent 或 Semantic Kernel，eve 的差异化在于： 当前它更偏向个人与团队的“文件即代理”哲学，而 LangChain 等更偏库式编排。",
               "bullets": [
-                "文件系统优先：将代理逻辑显式化为文件结构，而非全部代码内组装。",
-                "轻量约定：不引入复杂的链式抽象，学习曲线较低。",
-                "Vercel 原生：可能深度集成 Vercel 部署和 AI SDK（具体整合待确认）。"
+                "vs LangChain：LangChain 以链式调用和抽象类为核心，学习曲线陡峭；eve 只有文件和函数约定，项目结构更扁平，更适合偏好约定优于配置的团队。",
+                "vs AutoGPT / CrewAI：后者偏重自主任务分解和 agent 协作，配置复杂；eve 聚焦单代理的基础能力组件化，更可控和易调试。",
+                "vs 传统脚本：eve 提供了频道、调度等生产必需模块，同时保留文件系统的透明性，比自写胶水代码更健壮。"
               ]
             },
             {
               "heading": "版本动态",
-              "body": "---",
-              "bullets": [
-                "最新 Release: eve@0.13.3（2026-06-23），当前为 beta 阶段。",
-                "补丁更新：共享 Chat SDK Block Kit 基元用于 Slack 卡片渲染，可见与 Vercel 其他基础设施的联动。",
-                "行为可能变化，API 在 GA 前不稳定。"
-              ]
+              "body": "最新 0.13.4（2026-06-24）主要修复了沙箱引擎自动安装后的弹性加载、客户端中性包拆分以支持 React、Slack 会话授权状态清理，以及工作流开发包升级。版本更新积极，显示维护团队持续完善生产细节。 ---"
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
-                "置信度：medium",
-                "信息盲区：未说明模型API密钥的具体配置方式（如环境变量名）；未提供沙箱（sandbox）机制的实现细节与隔离程度；未说明自托管部署的完整步骤，以及与Vercel平台的耦合程度；无性能基准或大规模生产数据；子代理、技能（skills）的具体编写规范未在本文档展开"
+                "置信度：high",
+                "信息盲区：生产部署是否强制依赖 Vercel 平台未明确说明，自托管支持未知；未提供性能基准或并发容量数据；模型提供商 API Key 的具体配置方式未在 README 覆盖"
               ]
             }
           ]
@@ -4536,6 +5796,13 @@
               "reason": "lightweight",
               "starsTotal": 47718,
               "starsGained": 1119,
+              "release": "v3.23.0"
+            },
+            {
+              "date": "2026-06-25",
+              "reason": "lightweight",
+              "starsTotal": 48309,
+              "starsGained": 4055,
               "release": "v3.23.0"
             }
           ],
@@ -4930,6 +6197,13 @@
               "starsTotal": 983,
               "starsGained": 0,
               "release": "v3.2.5"
+            },
+            {
+              "date": "2026-06-25",
+              "reason": "lightweight",
+              "starsTotal": 986,
+              "starsGained": 0,
+              "release": "v3.2.5"
             }
           ],
           "analysis": [
@@ -5011,7 +6285,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-06-03",
-          "pushedAt": "2026-06-23",
+          "pushedAt": "2026-06-24",
           "latestRelease": "v0.2.0",
           "firstSeen": "2026-06-21",
           "topics": [
@@ -5044,6 +6318,13 @@
               "date": "2026-06-24",
               "reason": "release_update",
               "starsTotal": 687,
+              "starsGained": 0,
+              "release": "v0.2.0"
+            },
+            {
+              "date": "2026-06-25",
+              "reason": "lightweight",
+              "starsTotal": 688,
               "starsGained": 0,
               "release": "v0.2.0"
             }
@@ -5345,6 +6626,13 @@
               "starsTotal": 4850,
               "starsGained": 0,
               "release": "v0.3.0"
+            },
+            {
+              "date": "2026-06-25",
+              "reason": "lightweight",
+              "starsTotal": 5111,
+              "starsGained": 0,
+              "release": "v0.3.0"
             }
           ],
           "analysis": [
@@ -5485,6 +6773,13 @@
               "date": "2026-06-24",
               "reason": "lightweight",
               "starsTotal": 571,
+              "starsGained": 0,
+              "release": "v0.5.2"
+            },
+            {
+              "date": "2026-06-25",
+              "reason": "lightweight",
+              "starsTotal": 573,
               "starsGained": 0,
               "release": "v0.5.2"
             }
@@ -5881,6 +7176,13 @@
               "starsTotal": 33498,
               "starsGained": 2883,
               "release": "v0.5.0"
+            },
+            {
+              "date": "2026-06-25",
+              "reason": "lightweight",
+              "starsTotal": 33763,
+              "starsGained": 2883,
+              "release": "v0.5.0"
             }
           ],
           "analysis": [
@@ -6084,7 +7386,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-06-02",
-          "pushedAt": "2026-06-22",
+          "pushedAt": "2026-06-24",
           "latestRelease": "",
           "firstSeen": "2026-06-20",
           "topics": [
@@ -6138,6 +7440,13 @@
               "date": "2026-06-24",
               "reason": "lightweight",
               "starsTotal": 931,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-06-25",
+              "reason": "lightweight",
+              "starsTotal": 932,
               "starsGained": 0,
               "release": ""
             }
@@ -6333,8 +7642,8 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-06-12",
-          "pushedAt": "2026-06-21",
-          "latestRelease": "v4.7.0",
+          "pushedAt": "2026-06-24",
+          "latestRelease": "v4.8.3",
           "firstSeen": "2026-06-19",
           "topics": [
             "agent-skills",
@@ -6376,69 +7685,73 @@
               "starsTotal": 46152,
               "starsGained": 0,
               "release": "v4.7.0"
+            },
+            {
+              "date": "2026-06-25",
+              "reason": "release_update",
+              "starsTotal": 54680,
+              "starsGained": 0,
+              "release": "v4.8.3"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "Ponytail是一个跨平台AI代理技能，将“最懒的资深开发者”思维注入AI代码代理（如Claude Code、Codex、Copilot CLI等）。它遵循一个阶梯原则：先判断是否需要（YAGNI），再找标准库、原生平台特性、已有依赖，最后才写代码，确保只产出必要代码。"
+              "body": "Ponytail 是一套嵌入 AI 编码代理的提示工程技能/规则集，模拟一个“最懒的资深开发者”的决策逻辑。通过一个预定义的阶梯（先问是否要写、是否已有、是否可用标准库/平台特性/已有依赖，最后才是最小实现），强制代理在产生多余代码前停下。它不是一个代码库，而是一组 .md 或 .json 规则文件，以及少量 Node.js 生命周期钩子，用于在 Claude Code、Codex、Copilot CLI、OpenCode、Gemini CLI 等超过 14 种代理工具中激活。"
             },
             {
               "heading": "为什么火",
-              "body": "度量支撑：在真实开源仓库（FastAPI+React）的12个特性任务中，使用Ponytail的AI代理相比无技能基线，平均减少54%代码行数、22% token消耗、20%成本、27%时间，且零安全事故。而简单的“写单行”提示虽减少代码但牺牲了安全（95%安全）。 社区认可：Star超过39k，发布不到一周已适配14个代理，包含Claude Code、Codex、GitHub Copilot CLI、CodeWhale、Gemini CLI等主流AI编程工具，并迅速支持OpenCode和Kiro。 易于集成：多数代理只需一条安装命令，无需复杂配置。"
+              "body": "Star 数超过 5 万，因其精准击中开发者痛点：AI 代理常常为简单需求生成庞大实现（如日期选择器引入整页组件）。Ponytail 通过严格的阶梯规则和始终保留的验证/安全/无障碍检查，将平均代码量削减 54%（在真实 FastAPI+React 仓库上实测），Token 用量和成本降低约 20%，同时保持 100% 的安全护栏，远超简单“写最短代码”提示（后者会丢掉安全护栏）。它适配几乎所有主流代理，零学习成本，且提供了 lite/full/ultra 模式来调整懒惰程度。"
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "核心是文本规则文件（AGENTS.md, skills/），定义AI行为，不依赖后端服务。",
-                "针对不同平台提供适配：hooks/ 用于Claude Code/Codex生命周期，skills/ 提供可调用的技能，rules/ 用于Cursor/Windsurf/Cline等文本规则加载。",
-                "基准测试使用Claude Code与Haiku 4.5模型实施。",
-                "支持环境变量/配置文件设置默认强度（lite/full/ultra/off）。"
+                "规则文件：纯文本 Markdown 规则，存储在仓库的 .cursor/rules/、.windsurf/rules/、skills/ 等目录，可被各代理直接引用或复制。",
+                "生命周期钩子：极少的 Node.js 脚本（hooks/ 目录），用于在 Claude Code 和 Codex 中实现自动激活和模式切换，其余代理通过预定义的规则文件直接工作。",
+                "平台适配：覆盖 Claude Code、Codex、Copilot CLI、OpenCode、Gemini/Antigravity CLI、Pi、CodeWhale、Swival、OpenClaw 等，对不支持插件的代理提供复制规则文件的方式。"
               ]
             },
             {
               "heading": "核心能力",
               "bullets": [
-                "代码简化阶梯：在写代码前先检查：1. 是否需要？2. 标准库有没有？3. 原生平台特性？4. 已安装依赖？5. 一行能搞定？6. 最少可行代码。",
-                "安全不妥协：绝不牺牲输入验证、错误处理、安全、无障碍性。",
-                "多级强度：支持lite、full、ultra、off模式，ultra模式适合极度精简。",
-                "审查与审计命令：提供/ponytail-review审查当前diff、/ponytail-audit审计全仓库、/ponytail-debt管理延期快捷键等。",
-                "跨代理兼容：一份规则集，多处落地，无需在各代理间手动同步。"
+                "阶梯决策模型：7 级阶梯（存在？已有？标准库？原生平台功能？已安装依赖？一行？最小实现）在理解上下文后执行，避免毫无理由地跳过必要代码。",
+                "安全不可妥协：信任边界校验、数据丢失防护、安全性与无障碍永远不被“精简”掉，区别于简单的 YAGNI 一条龙提示。",
+                "模式切换：/ponytail lite、full、ultra、off 命令和 PONYTAIL_DEFAULT_MODE 环境变量控制规则严格程度。",
+                "子代理注入（v4.8.3）：通过 SubagentStart 钩子让派生出的子代理也保持懒惰，防止主线程省而子线程滥写。",
+                "基准量化：提供可复现的 agentic 和单次生成基准测试脚本，证明在多个维度（LOC、tokens、cost、time、safety）全面优于无技能基线和同类简洁提示。"
               ]
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "用AI代理编写业务代码的开发者，希望减少过度工程和冗余代码。",
-                "团队追求代码简洁性，同时不想牺牲安全性。",
-                "需要审查AI生成代码、发现过度设计的代码审查环节。",
-                "任何需要降低LLM使用成本和响应时间的场景（通过减少生成token实现）。"
+                "使用 Claude Code、Codex、Copilot CLI、OpenCode、Cursor、Windsurf 等现代 AI 编程助理的开发者。",
+                "希望控制 AI 生成成本、提升代码质量、避免过度工程化的团队。",
+                "对多项目管理要求统一编码风格和安全性底线的组织。",
+                "任何想在保留 AI 辅助效率的同时抑制其“创造冲动”的极客。"
               ]
             },
             {
               "heading": "同类对比",
               "bullets": [
-                "无技能基线：正常AI代理易过度设计，生成大量样式、额外组件。",
-                "Caveman（简洁散文控制）：减少20%代码，但token、成本、时间反而上升，因为模型会额外生成解释性文字。",
-                "“YAGNI+单行”提示：减少33%代码，但安全度降至95%（丢失防护），且部分指标不如Ponytail。",
-                "Ponytail：唯一在所有指标（LOC、token、成本、时间）均减少且保持100%安全的方案，对额外思考的模型（GPT-5.5）可能略微增加token，但核心优势明显。"
+                "Caveman（稀疏散文风格）：同样精简，但 Ponytail 在 token、成本和时间上均更优，且保持 100% 安全，Caveman 在部分模型上可能导致 token 使用反升。",
+                "自定义 YAGNI + one-liner 提示：代码减少 33%，但安全评分降为 95%，Ponytail 以更少的代码量保持满分。",
+                "项目自带的 .clinerules 或 cursorrules：大多缺乏结构性阶梯和安全锚点，Ponytail 从“最小必要”出发，兼顾实效和安全。"
               ]
             },
             {
               "heading": "版本动态",
-              "body": "---",
+              "body": "最新 v4.8.3 于 2026-06-24 发布，主要新增： ---",
               "bullets": [
-                "最新v4.7.0（2026-06-16），包含OpenClaw集成。",
-                "仓库创建于2026-06-12，一周内Star从0到39k，发展迅猛。",
-                "支持代理扩展至14个，包含Antigravity CLI、CodeWhale、Zed等，持续增长。",
-                "基准测试经历了从单次生成到真实代理任务的演进，更具说服力。",
-                "未来可能优化对GPT-5.5等模型的token增量问题。"
+                "子代理自动注入懒惰规则，确保派生 agent 不会破坏精简原则。",
+                "新增韩文 README 及 OpenCode 的 npm 安装方式说明，废弃旧的命令行符号链接提示。",
+                "连续高频更新（3 天内即从创建到最新版），表明社区活跃、快速迭代。"
               ]
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
-                "置信度：high"
+                "置信度：high",
+                "信息盲区：基准测试仅针对一个特定仓库（FastAPI 全栈模板）和 Haiku 4.5 模型，缺乏多项目、多模型的长周期多样性测试数据；对非 JavaScript/TypeScript 项目的效果未明确提及或测试；平台原生特性检测依赖各代理的内置能力，未量化其在不同代理中的实际命中率；对于 Aider、Cline、Zed 等代理仅提供规则文件复制方式，实际集成深度和兼容性没有详细说明；GitHub Star 数高达 54680 但创建和更新日期均为 2026 年（未来时间），可能为虚构数据或特殊事件，未在文档中解释"
               ]
             }
           ]
@@ -6460,7 +7773,7 @@
           "isNew": true,
           "createdAt": "2026-06-16",
           "pushedAt": "2026-06-24",
-          "latestRelease": "eve@0.13.3",
+          "latestRelease": "eve@0.13.4",
           "firstSeen": "2026-06-19",
           "topics": [
             "agent",
@@ -6529,70 +7842,65 @@
               "starsTotal": 2473,
               "starsGained": 0,
               "release": "eve@0.13.3"
+            },
+            {
+              "date": "2026-06-25",
+              "reason": "release_update",
+              "starsTotal": 2522,
+              "starsGained": 0,
+              "release": "eve@0.13.4"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "eve（Vercel 出品）是一个以文件系统为首要创作界面的持久化 AI 代理框架。代理的所有核心能力——系统提示、工具、技能、频道、定时任务——都按约定放在特定的文件与目录中，使得项目结构即代理逻辑，便于检查、扩展和运维。它用 TypeScript 编写，提供 npx eve@latest init 脚手架，内置交互式终端 UI，并支持快速接入 Anthropic 等模型。"
+              "body": "eve 是 Vercel 推出的文件系统优先的持久化 AI 代理框架。项目的核心目标是让代理能力的定义回归到文件系统结构：指令、工具、技能、频道、调度等都按约定目录放置，开发者只需编写 Markdown 和 TypeScript 文件，无需理解复杂的链式 API。代理运行时读取这些文件并拼接成一个可交互的代理。"
             },
             {
               "heading": "为什么火",
-              "bullets": [
-                "极简约定：代理的入口、工具、指令一目了然，无需复杂的对象组装或隐式配置。",
-                "Vercel 背书：由 Vercel 团队维护，与 Vercel 生态（如 AI SDK）存在潜在协同。",
-                "持久化与协作：文件天然可版本控制，适用于需要长期维护、多人参与的代理项目。",
-                "beta 阶段热度：Star 增长较快，社区在 GitHub Discussions 活跃。"
-              ]
+              "body": "由 Vercel 背书，贴合其“前端即产品”的哲学。将代理构建简化为类似 Next.js 的文件约定，踩中开发者对低认知负担框架的渴望。虽然 Star 数尚在早期，但其“文件即配置”的理念在众多代码式代理框架中令人耳目一新，引发讨论。"
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "语言：TypeScript",
-                "运行时：Node.js",
-                "模型接入：通过 defineAgent 配置模型 ID（如 anthropic/claude-sonnet-4.6），需外部 API 密钥",
-                "工具校验：使用 Zod 定义输入 schema",
-                "交互频道：内置 HTTP、Slack、Discord 等频道支持",
-                "调度：基于 cron 的 jobs",
-                "沙箱：主题标签提及 sandbox，但本文档未展开说明，可能指执行环境隔离"
+                "语言 & 运行时：TypeScript，Node.js",
+                "核心依赖：Zod（工具参数校验）、可选沙箱引擎（支持 workspace 提升安装）",
+                "多渠道支持：内置 HTTP、Slack、Discord 等频道集成",
+                "客户端：eve/react 包支持 React 集成，使用 Zod 校验 /eve/v1/info 接口",
+                "模型接入：通过字符串标识选择模型（如 anthropic/claude-sonnet-4.6），模型调用细节由框架封装",
+                "文档内嵌：eve npm 包包含完整 docs，方便编码代理在本地读取"
               ]
             },
             {
               "heading": "核心能力",
-              "body": "1. 指令即文件：instructions.md 是常驻系统提示，修改即更新行为。 2. 工具定义：tools/ 下的 TypeScript 文件导出 defineTool，带 Zod schema 与异步执行逻辑。 3. 技能：skills/ 目录存放按需加载的过程性 Markdown。 4. 频道：channels/ 支持多种消息渠道接入（HTTP、Slack 等）。 5. 定时调度：schedules/ 定义周期性任务。 6. 人工干预：支持 human-in-the-loop 提示。 7. 子代理：可创建子代理协调复杂任务。"
+              "body": "1. 指令层：instructions.md 作为始终激活的系统提示 2. 工具：tools/*.ts 通过 defineTool 定义可调用函数，参数以 Zod schema 声明 3. 技能：skills/*.md 按需加载的规程，扩展代理能力 4. 频道：channels/*.ts 设定消息接入点，支持 Slack、Discord 等 5. 调度：schedules/*.ts 定义 Cron 作业，实现定时任务 6. 子代理：支持在代理内调用子代理（文档含 subagents.mdx） 7. 人机交互：可在工作流中插入人工审批环节 8. 沙箱：可选的沙箱引擎，提供安全执行环境"
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "快速原型：想用最短路径得到一个可交互的 AI 助手。",
-                "团队开发：需要可审查、可版本化的代理配置，避免黑盒。",
-                "渠道集成：需要同时对接 Slack、Discord 等消息平台的机器人。",
-                "工作流自动化：结合定时任务和工具调用，实现定期报告、数据抓取等。"
+                "需要快速搭建面向用户或团队的 AI 助手（如客服、内部问答）",
+                "多平台同步部署的代理（Slack + Discord 等）",
+                "定时报告、周期工作流",
+                "TypeScript 生态内的原型或生产级代理开发"
               ]
             },
             {
               "heading": "同类对比",
-              "body": "对比 LangChain Agent 或 Semantic Kernel，eve 的差异化在于： 当前它更偏向个人与团队的“文件即代理”哲学，而 LangChain 等更偏库式编排。",
               "bullets": [
-                "文件系统优先：将代理逻辑显式化为文件结构，而非全部代码内组装。",
-                "轻量约定：不引入复杂的链式抽象，学习曲线较低。",
-                "Vercel 原生：可能深度集成 Vercel 部署和 AI SDK（具体整合待确认）。"
+                "vs LangChain：LangChain 以链式调用和抽象类为核心，学习曲线陡峭；eve 只有文件和函数约定，项目结构更扁平，更适合偏好约定优于配置的团队。",
+                "vs AutoGPT / CrewAI：后者偏重自主任务分解和 agent 协作，配置复杂；eve 聚焦单代理的基础能力组件化，更可控和易调试。",
+                "vs 传统脚本：eve 提供了频道、调度等生产必需模块，同时保留文件系统的透明性，比自写胶水代码更健壮。"
               ]
             },
             {
               "heading": "版本动态",
-              "body": "---",
-              "bullets": [
-                "最新 Release: eve@0.13.3（2026-06-23），当前为 beta 阶段。",
-                "补丁更新：共享 Chat SDK Block Kit 基元用于 Slack 卡片渲染，可见与 Vercel 其他基础设施的联动。",
-                "行为可能变化，API 在 GA 前不稳定。"
-              ]
+              "body": "最新 0.13.4（2026-06-24）主要修复了沙箱引擎自动安装后的弹性加载、客户端中性包拆分以支持 React、Slack 会话授权状态清理，以及工作流开发包升级。版本更新积极，显示维护团队持续完善生产细节。 ---"
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
-                "置信度：medium",
-                "信息盲区：未说明模型API密钥的具体配置方式（如环境变量名）；未提供沙箱（sandbox）机制的实现细节与隔离程度；未说明自托管部署的完整步骤，以及与Vercel平台的耦合程度；无性能基准或大规模生产数据；子代理、技能（skills）的具体编写规范未在本文档展开"
+                "置信度：high",
+                "信息盲区：生产部署是否强制依赖 Vercel 平台未明确说明，自托管支持未知；未提供性能基准或并发容量数据；模型提供商 API Key 的具体配置方式未在 README 覆盖"
               ]
             }
           ]
@@ -6688,6 +7996,13 @@
               "date": "2026-06-24",
               "reason": "lightweight",
               "starsTotal": 4633,
+              "starsGained": 0,
+              "release": "v0.2.0"
+            },
+            {
+              "date": "2026-06-25",
+              "reason": "lightweight",
+              "starsTotal": 4684,
               "starsGained": 0,
               "release": "v0.2.0"
             }
@@ -6823,6 +8138,13 @@
               "date": "2026-06-24",
               "reason": "lightweight",
               "starsTotal": 6565,
+              "starsGained": 1489,
+              "release": ""
+            },
+            {
+              "date": "2026-06-25",
+              "reason": "lightweight",
+              "starsTotal": 6600,
               "starsGained": 1489,
               "release": ""
             }

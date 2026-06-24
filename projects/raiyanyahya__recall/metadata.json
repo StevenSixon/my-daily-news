@@ -25,7 +25,7 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "为 Claude Code 提供持久离线记忆的工具。",
+  "classify_reason": "Durable memory plugin for Claude Code, an AI tool.",
   "one_liner": "全本地、零成本、无 API 的 Claude Code 项目记忆，告别每次重解释",
   "why_worth_it": "消除 Claude Code 会话冷启动的痛苦，纯本地算法生成摘要，保护隐私且零 token 消耗，适合重视隐私和成本的开发者",
   "tags": [
@@ -42,13 +42,13 @@
     "未测试与其他 Claude Code 插件的兼容性"
   ],
   "quality_flags": [],
-  "stars_total": 433,
+  "stars_total": 457,
   "created_at": "2026-06-19",
   "pushed_at": "2026-06-22",
   "latest_release": "v0.3.5",
   "first_seen": "2026-06-23",
-  "last_seen": "2026-06-24",
-  "streak_days": 2,
+  "last_seen": "2026-06-25",
+  "streak_days": 3,
   "analysis_updated_at": "2026-06-24T16:33:28+0800",
   "appearances": [
     {
@@ -62,6 +62,13 @@
       "date": "2026-06-24",
       "reason": "star_jump",
       "stars_total": 433,
+      "stars_gained": 0,
+      "release": "v0.3.5"
+    },
+    {
+      "date": "2026-06-25",
+      "reason": "lightweight",
+      "stars_total": 457,
       "stars_gained": 0,
       "release": "v0.3.5"
     }

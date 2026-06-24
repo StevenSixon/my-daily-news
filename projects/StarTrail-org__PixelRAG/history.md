@@ -3,3 +3,4 @@
 - 2026-06-22 | star_jump | ⭐2526(+0) | release=chrome-150.0.7844.0
 - 2026-06-23 | star_jump | ⭐3474(+0) | release=chrome-150.0.7844.0
 - 2026-06-24 | release_update | ⭐4850(+0) | release=v0.3.0
+- 2026-06-25 | lightweight | ⭐5111(+0) | release=v0.3.0

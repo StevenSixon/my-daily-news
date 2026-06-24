@@ -1,0 +1,63 @@
+{
+  "full_name": "microsoft/presidio",
+  "url": "https://github.com/microsoft/presidio",
+  "description": "An open-source framework for detecting, redacting, masking, and anonymizing sensitive data (PII) across text, images, and structured data. Supports NLP, pattern matching, and customizable pipelines.",
+  "language": "Python",
+  "topics": [
+    "anonymization",
+    "data-anonymization",
+    "data-masking",
+    "data-obfuscation",
+    "data-privacy",
+    "data-redaction",
+    "de-identification",
+    "guardrails",
+    "image-redactor",
+    "named-entity-recognition",
+    "nlp",
+    "personally-identifiable-information",
+    "phi",
+    "pii",
+    "pii-detection",
+    "privacy",
+    "python",
+    "sensitive-data",
+    "spacy",
+    "transformers"
+  ],
+  "license": "MIT",
+  "category": "AI 应用",
+  "classify_reason": "NLP-based PII detection and anonymization framework, an AI application.",
+  "one_liner": "微软开源的多模态PII检测与匿名化框架，支持文本、图像及结构化数据。",
+  "why_worth_it": "提供端到端敏感数据识别与脱敏，内置可插拔NLP+规则引擎，适合合规数据流水线快速集成。",
+  "tags": [
+    "PII脱敏",
+    "文本分析",
+    "可定制管道",
+    "微软开源"
+  ],
+  "confidence": "high",
+  "info_gaps": [
+    "无性能基准测试数据（如吞吐量、延迟指标）",
+    "未提供与同类工具（如 Google Cloud DLP）的横向对比结果",
+    "大规模分布式部署的具体资源消耗未说明"
+  ],
+  "quality_flags": [],
+  "stars_total": 9568,
+  "created_at": "2018-05-04",
+  "pushed_at": "2026-06-24",
+  "latest_release": "2.2.362",
+  "first_seen": "2026-06-25",
+  "last_seen": "2026-06-25",
+  "streak_days": 1,
+  "analysis_updated_at": "2026-06-25T02:24:24+0800",
+  "appearances": [
+    {
+      "date": "2026-06-25",
+      "reason": "new",
+      "stars_total": 9568,
+      "stars_gained": 864,
+      "release": "2.2.362"
+    }
+  ]
+}

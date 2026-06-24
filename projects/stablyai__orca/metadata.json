@@ -25,7 +25,7 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "用于管理并行编码代理舰队的 ADE 工具。",
+  "classify_reason": "ADE for working with a fleet of parallel agents, an AI agent tool.",
   "one_liner": "一站式并行编排多个CLI AI编程Agent，隔离工作树，移动端监控。",
   "why_worth_it": "如果你同时用多个AI编程助手（如Claude Code、Codex等），Orca提供隔离工作区、统一终端和移动端提醒，告别多终端混乱。",
   "tags": [
@@ -43,19 +43,26 @@
     "具体版本管理及账号切换实现依赖（是否仅针对 API key）"
   ],
   "quality_flags": [],
-  "stars_total": 6424,
+  "stars_total": 6642,
   "created_at": "2026-03-17",
   "pushed_at": "2026-06-24",
   "latest_release": "v1.4.95",
   "first_seen": "2026-06-24",
-  "last_seen": "2026-06-24",
-  "streak_days": 1,
+  "last_seen": "2026-06-25",
+  "streak_days": 2,
   "analysis_updated_at": "2026-06-24T16:23:05+0800",
   "appearances": [
     {
       "date": "2026-06-24",
       "reason": "new",
       "stars_total": 6424,
+      "stars_gained": 1216,
+      "release": "v1.4.95"
+    },
+    {
+      "date": "2026-06-25",
+      "reason": "lightweight",
+      "stars_total": 6642,
       "stars_gained": 1216,
       "release": "v1.4.95"
     }
