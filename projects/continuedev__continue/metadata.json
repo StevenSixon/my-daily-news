@@ -1,0 +1,50 @@
+{
+  "full_name": "continuedev/continue",
+  "url": "https://github.com/continuedev/continue",
+  "description": "open-source coding agent",
+  "language": "TypeScript",
+  "topics": [
+    "agent",
+    "ai",
+    "cli",
+    "developer-tools",
+    "open-source"
+  ],
+  "license": "Apache-2.0",
+  "category": "AI 应用",
+  "classify_reason": "开源 AI 编码代理。",
+  "one_liner": "开源的 AI 编码代理，提供 CLI、VS Code 和 JetBrains 插件，但已停止维护。",
+  "why_worth_it": "适合想自托管编码助手的玩家，现已存档只读，可作为开源 Agent 实现的参考代码库。",
+  "tags": [
+    "AI编码代理",
+    "CLI",
+    "IDE插件",
+    "开源"
+  ],
+  "confidence": "medium",
+  "info_gaps": [
+    "README 未描述具体功能（如代码补全、聊天、Agent 行为）",
+    "未提供 benchmark 数据或准确的使用效果说明",
+    "技术架构、支持的 LLM 后端、部署依赖均未在 README 中体现",
+    "只说明最终版本，未解释为何停止维护",
+    "快速开始缺少可运行的命令，实际配置需查阅外部文档"
+  ],
+  "quality_flags": [],
+  "stars_total": 34396,
+  "created_at": "2023-05-24",
+  "pushed_at": "2026-06-23",
+  "latest_release": "v2.0.0-vscode",
+  "first_seen": "2026-06-24",
+  "last_seen": "2026-06-24",
+  "streak_days": 1,
+  "analysis_updated_at": "2026-06-24T16:24:35+0800",
+  "appearances": [
+    {
+      "date": "2026-06-24",
+      "reason": "new",
+      "stars_total": 34396,
+      "stars_gained": 620,
+      "release": "v2.0.0-vscode"
+    }
+  ]
+}

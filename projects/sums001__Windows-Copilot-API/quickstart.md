@@ -1,34 +1,52 @@
-**前提**：Python 3.9+，微软账号。
+## 安装与依赖
+- Python 3.9+
+- Microsoft或Google账号
+- 浏览器（Playwright将自动安装Chromium）
 
 ```bash
-# 1. 克隆并进入目录
-git clone <repo-url> && cd Windows-Copilot-API
+# 克隆项目（仓库URL按实际填写）
+git clone <repo-url>
+cd Windows-Copilot-API
 
-# 2. 创建并激活虚拟环境
-python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
+# 创建虚拟环境
+python3 -m venv venv && source venv/bin/activate   # macOS/Linux
+python -m venv venv && venv\Scripts\activate      # Windows
 
-# 3. 安装依赖
+# 安装依赖
 pip install -r requirements.txt
 playwright install chromium
 
-# 4. 登录微软账号（会打开浏览器）
+# 登录（弹出浏览器，用Microsoft或Google账号登录）
 python -m copilot login
+```
 
-# 5. Python 快速示例
+## 最小可用示例
+### Python库方式
+```python
 from copilot import CopilotClient
-client = CopilotClient()
-reply = client.chat("你好，请用一句话自我介绍")
-print(reply.text)
 
-# 6. 启动 OpenAI 兼容服务器（另一终端）
+client = CopilotClient()
+reply = client.chat("用一句话打招呼")
+print(reply.text)
+```
+
+### OpenAI服务器方式
+```bash
 python app.py
-# 然后使用 openai SDK：
+# 服务运行在 http://localhost:8000
+```
+
+```python
 from openai import OpenAI
+
 client = OpenAI(base_url="http://localhost:8000/v1", api_key="unused")
-resp = client.chat.completions.create(
-    model="copilot",
-    messages=[{"role": "user", "content": "Hello!"}]
-)
+resp = client.chat.completions.create(model="copilot", messages=[{"role":"user","content":"Hello!"}])
 print(resp.choices[0].message.content)
+```
+
+或使用curl：
+```bash
+curl http://localhost:8000/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -d '{"messages":[{"role":"user","content":"Hello!"}]}'
 ```

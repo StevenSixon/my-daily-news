@@ -12,32 +12,32 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "AI模型与代理协同演化的编码工具",
-  "one_liner": "终端原生AI编码助手，多Agent与持久记忆协同进化，零配置免费通道开箱即用。",
-  "why_worth_it": "专治跨会话“失忆”问题，通过自动检查点和项目记忆让Agent真正理解长期项目的上下文，适合持续维护大型代码库的开发者。",
+  "classify_reason": "模型与代理共同进化的 CLI 工具。",
+  "one_liner": "带持久记忆与自我进化能力的终端AI编程助手",
+  "why_worth_it": "为终端AI编程加入跨会话记忆和自进化，让助手持续积累项目知识，超越一次性对话局限",
   "tags": [
-    "Agent框架",
-    "持久内存",
-    "TypeScript",
-    "终端AI"
+    "CLI工具",
+    "AI Agent",
+    "持久记忆",
+    "TypeScript"
   ],
-  "confidence": "medium",
+  "confidence": "high",
   "info_gaps": [
-    "无性能基准或对比测试数据",
-    "未说明 Node.js 最低版本和系统要求",
-    "Dream/Distill 的实际效果缺乏量化或案例说明",
-    "未列出完整支持的主模型列表和上下文长度限制",
-    "与 Aider/Claude Code 等工具的具体差异仅凭架构推测，未实证"
+    "无公开 benchmark 数据，无法比较代码生成或任务完成准确率",
+    "记忆检索的实际效果和性能在大型项目中的表现未说明",
+    "语音识别准确率无数据支持",
+    "MiMo Auto 免费期限和未来定价策略未披露",
+    "项目版本号仅 v0.1.2，功能稳定性和成熟度未知"
   ],
   "quality_flags": [],
-  "stars_total": 10351,
+  "stars_total": 10549,
   "created_at": "2026-06-10",
-  "pushed_at": "2026-06-22",
-  "latest_release": "v0.1.1",
+  "pushed_at": "2026-06-24",
+  "latest_release": "v0.1.2",
   "first_seen": "2026-06-19",
-  "last_seen": "2026-06-23",
-  "streak_days": 9,
-  "analysis_updated_at": "2026-06-19T23:31:10+0800",
+  "last_seen": "2026-06-24",
+  "streak_days": 10,
+  "analysis_updated_at": "2026-06-24T16:32:55+0800",
   "appearances": [
     {
       "date": "2026-06-19",
@@ -101,6 +101,13 @@
       "stars_total": 10351,
       "stars_gained": 0,
       "release": "v0.1.1"
+    },
+    {
+      "date": "2026-06-24",
+      "reason": "release_update",
+      "stars_total": 10549,
+      "stars_gained": 0,
+      "release": "v0.1.2"
     }
   ]
 }

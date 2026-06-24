@@ -16,28 +16,31 @@
   ],
   "license": "Apache-2.0",
   "category": "AI 应用",
-  "classify_reason": "可扩展的像素原生AI搜索系统",
-  "one_liner": "将网页/文档直接渲染为截图，用视觉嵌入实现保留布局与图表的RAG搜索。",
-  "why_worth_it": "解决HTML解析丢失表格、图表等视觉结构的问题，让RAG能看懂网页原貌；适合需要精准提取复杂页面信息的极客或Agent。",
+  "classify_reason": "可扩展的像素原生搜索工具，结合 VLM 和 RAG。",
+  "one_liner": "抛弃HTML文本解析，直接用网页截图进行视觉化检索与生成。",
+  "why_worth_it": "解决传统文本RAG丢失表格/图表/布局信息的问题，保留视觉结构，预置8.28M维基索引即开即用，对需要理解复杂文档布局的极客极具吸引力。",
   "tags": [
-    "多模态RAG",
-    "视觉搜索",
-    "截图检索",
+    "视觉RAG",
+    "多模态检索",
+    "截图索引",
     "自托管"
   ],
   "confidence": "high",
   "info_gaps": [
-    "README 未提供具体 benchmark 数据（如检索准确率、吞吐量），仅指向论文；预建索引的具体架构与资源需求未详述；训练代码与主流水线的适配细节需查阅 train/ 内部文档"
+    "公开 API 限流策略未说明",
+    "README 中未包含标准基准评测数据（如 vs 文本 RAG 的召回率/准确率对比）",
+    "预建索引与最新模型版本的兼容性未明确（索引可能需要随模型升级重新构建）",
+    "Windows 平台的渲染稳定性与完善程度未提供具体测试说明"
   ],
   "quality_flags": [],
-  "stars_total": 3474,
+  "stars_total": 4850,
   "created_at": "2026-05-29",
-  "pushed_at": "2026-06-23",
-  "latest_release": "chrome-150.0.7844.0",
+  "pushed_at": "2026-06-24",
+  "latest_release": "v0.3.0",
   "first_seen": "2026-06-21",
-  "last_seen": "2026-06-23",
-  "streak_days": 4,
-  "analysis_updated_at": "2026-06-23T09:21:30+0800",
+  "last_seen": "2026-06-24",
+  "streak_days": 5,
+  "analysis_updated_at": "2026-06-24T16:29:36+0800",
   "appearances": [
     {
       "date": "2026-06-21",
@@ -66,6 +69,13 @@
       "stars_total": 3474,
       "stars_gained": 0,
       "release": "chrome-150.0.7844.0"
+    },
+    {
+      "date": "2026-06-24",
+      "reason": "release_update",
+      "stars_total": 4850,
+      "stars_gained": 0,
+      "release": "v0.3.0"
     }
   ]
 }

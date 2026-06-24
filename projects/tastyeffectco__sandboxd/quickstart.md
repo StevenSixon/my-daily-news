@@ -1,6 +1,6 @@
 ## 前提
-- Linux 主机，安装 Docker Engine 和 Docker Compose 插件。
-- 克隆仓库。
+- 带 Docker Engine 及 Compose 插件的 Linux 主机
+- 本地开发可用 `*.localhost`（无需 DNS 或证书）
 
 ## 安装
 ```bash
@@ -8,21 +8,26 @@ git clone https://github.com/tastyeffectco/sandboxd.git
 cd sandboxd
 ./install.sh
 ```
-脚本会检查 Docker、生成 `.env`、构建基础镜像和控制平面，启动后 API 在 `http://127.0.0.1:9090`。
+`install.sh` 会检查环境、生成 `.env`、构建基础镜像和控制平面，并启动所有服务。API 默认在 `http://127.0.0.1:9090`。
 
 ## 最小可用示例
 ```bash
-API=http://127.0.0.1:9090
-# 创建沙箱（开放 3000 端口）
-ID=$(curl -s -XPOST $API/sandbox -H 'content-type: application/json' \
-       -d '{"ports":[3000]}' | sed -E 's/.*"id":"([^"]+)".*/\1/')
-# 提交任务让 OpenCode 代理构建应用
-TASK=$(curl -s -XPOST $API/v1/sandboxes/$ID/tasks -H 'content-type: application/json' -d '{
-        "prompt":"create a Vite todo app and run on port 3000",
-        "agent":"opencode"
-     }')
-# 流式获取代理输出
-curl -N $API/v1/sandboxes/$ID/tasks/<taskId>/events
-# 打开预览：http://s-<id>-3000.preview.localhost
+# 1. 创建沙箱（暴露 3000 端口）
+ID=$(curl -s -XPOST http://127.0.0.1:9090/sandbox -H 'content-type: application/json' \
+     -d '{"ports":[3000]}' | sed -E 's/.*"id":"([^"]+)".*/\1/')
+
+# 2. 让 AI 代理在里面生成应用
+curl -s -XPOST http://127.0.0.1:9090/v1/sandboxes/$ID/tasks \
+  -H 'content-type: application/json' \
+  -d '{"prompt":"create a Vite app that shows a todo list and run it on port 3000", "agent":"opencode"}'
+
+# 3. 查看代理输出（SSE 流）
+curl -N http://127.0.0.1:9090/v1/sandboxes/$ID/tasks/<taskId>/events
+
+# 4. 打开预览 URL（服务启动后）
+http://s-<id>-3000.preview.localhost
 ```
-使用 API 密钥时在创建沙箱时传入 `env` 对象。
+若需使用自己的模型 Key，在创建沙箱时传入环境变量：
+```bash
+curl -XPOST ... -d '{"ports":[3000], "env":{"ANTHROPIC_API_KEY":"sk-ant-..."}}'
+```

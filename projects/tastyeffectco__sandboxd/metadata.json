@@ -9,7 +9,6 @@
     "dev-environment",
     "docker",
     "isolation",
-    "pinokio",
     "preview",
     "preview-environment",
     "sandbox",
@@ -17,32 +16,34 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "自托管开发沙箱，为编码代理设计",
-  "one_liner": "一句话命令自托管隔离沙箱、AI编码代理和实时预览URL",
-  "why_worth_it": "省去数月平台搭建：多租户隔离/按需休眠/代理编排/预览URL一体化，单机高密度低成本，胜过手写脚本",
+  "classify_reason": "自托管开发沙箱，为编码代理提供即时预览环境。",
+  "one_liner": "自托管AI应用构建引擎：隔离沙箱 + 内置编码代理 + 预览URL，一条命令启动",
+  "why_worth_it": "为多用户AI编码产品提供隔离、代理、预览、自愈的完整后端，省去数月自研平台工作，单机可跑，比K8s方案轻量",
   "tags": [
     "自托管",
-    "Docker隔离",
-    "AI代理",
-    "预览环境"
+    "AI Agent",
+    "开发沙箱",
+    "Docker"
   ],
-  "confidence": "high",
+  "confidence": "medium",
   "info_gaps": [
-    "未提供并发沙箱数量上限或压力测试数据",
-    "host-memory pressure reaper 的阈值与行为未详细说明",
-    "未公布独立安全审计结果",
-    "生产部署指南仅指向 production-safety.md，详细步骤未知",
-    "沙箱默认的资源限制（内存/PID 上限）未明确"
+    "未说明 API 调用频率限制或请求队列机制",
+    "仅提及单机部署，多节点集群扩展方案未涉及",
+    "生产安全文档 `production-safety.md` 未公开细节，无法确认生产级加固程度",
+    "未提供沙箱资源限制（CPU/内存）的具体默认值和调整方式",
+    "未说明对代理工具以外的其他 AI 工具（如 Aider）的支持计划"
   ],
-  "quality_flags": [],
-  "stars_total": 680,
+  "quality_flags": [
+    "缺小标题：为什么火"
+  ],
+  "stars_total": 687,
   "created_at": "2026-06-03",
-  "pushed_at": "2026-06-16",
-  "latest_release": "0.1.1",
+  "pushed_at": "2026-06-23",
+  "latest_release": "v0.2.0",
   "first_seen": "2026-06-21",
-  "last_seen": "2026-06-22",
-  "streak_days": 2,
-  "analysis_updated_at": "2026-06-21T19:00:22+0800",
+  "last_seen": "2026-06-24",
+  "streak_days": 3,
+  "analysis_updated_at": "2026-06-24T16:35:11+0800",
   "appearances": [
     {
       "date": "2026-06-21",
@@ -57,6 +58,13 @@
       "stars_total": 680,
       "stars_gained": 0,
       "release": "0.1.1"
+    },
+    {
+      "date": "2026-06-24",
+      "reason": "release_update",
+      "stars_total": 687,
+      "stars_gained": 0,
+      "release": "v0.2.0"
     }
   ]
 }

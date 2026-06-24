@@ -1,26 +1,35 @@
 ## 安装
 
-**通过插件市场安装**（仓库即市场）：
-```
+**从插件市场安装**（推荐）：
+```bash
+# 在 Claude Code 中输入
 /plugin marketplace add raiyanyahya/recall
 /plugin install recall@recall
 ```
 
-**本地开发模式**：
-```
+**本地开发模式**（无需安装）：
+```bash
 claude --plugin-dir /path/to/recall
 ```
 
-无需 `pip install`，摘要器已内置并仅依赖标准库（numpy 可选）。
+无需 `pip install`，插件自带总结器，numpy 可选。
 
 ## 最小可用示例
-1. 正常使用 Claude Code 工作，会话活动会自动追加到 `.recall/history.md`。
-2. 会话结束时，在 Claude Code 中输入 `/recall:save`，本地摘要器会生成/更新 `context.md`。
-3. 下次启动 Claude Code 时，插件会自动加载 `context.md` 并询问是否从上次上下文继续。
 
-## 依赖
-- Python 3.9+（运行时环境）
-- 无强制第三方包，选择安装 numpy 可加速大型会话摘要
+1. 在 Claude Code 中开始一次普通会话，修改项目文件。
+2. 会话结束前运行 `/recall:save` 生成摘要。
+3. 下次打开同一项目的新会话，Claude 会展示上次的上下文并询问是否继续。
 
-## 配置（可选）
-在项目根目录创建 `recall.config.json` 可调整输出目录、捕获开关、自动保存模式、摘要句数、脱敏、Git 包含等，完整选项见 README。
+**开启自动保存**（推荐）：在项目根目录创建 `recall.config.json`：
+```json
+{
+  "auto_save_context": "on_end"
+}
+```
+之后每次会话结束都会自动更新 `context.md`，省去手动 `/recall:save`。
+
+## 依赖前提
+
+- Claude Code 客户端（已安装并登录）
+- Python 3.9+（Claude Code 运行环境自带即可）
+- 无外部包依赖（numpy 可选）

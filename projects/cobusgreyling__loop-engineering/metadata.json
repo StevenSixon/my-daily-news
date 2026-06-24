@@ -24,31 +24,31 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "AI 编码代理循环工程实践模式与 CLI 工具",
-  "one_liner": "为AI代理构建自动化提示循环的实战模式、模板与CLI工具集。",
-  "why_worth_it": "解决代理自主循环设计难题，提供可复用的模式与审计CLI，让开发者从手动提示转向系统设计。",
+  "classify_reason": "循环工程的实用模式、启动器和 CLI 工具，用于编排 AI 编码代理。",
+  "one_liner": "设计循环系统取代逐条提示，让AI编码代理在CI/CD中自主运行模式化任务",
+  "why_worth_it": "解决将AI代理纳入实际流水线的安全与工程化难题，提供可复用的生产模式、CLI工具和故障安全机制，大幅降低从实验到上线的摩擦",
   "tags": [
-    "AI代理",
+    "Agent编排",
+    "DevOps自动化",
     "提示工程",
-    "自动化",
-    "开源CLI"
+    "CLI工具"
   ],
   "confidence": "high",
   "info_gaps": [
-    "未提供CLI工具的详细命令行参数文档",
-    "各模式的令牌消耗仅为定性描述（低/中/高），无精确数字",
-    "多代理并发时的冲突处理细节未在README中展开",
-    "MCP连接器的具体配置示例需跳转至外部文档"
+    "无具体令牌消耗基准数据（仅给出 Low/Medium/High 级别）",
+    "各 AI 工具的连接配置细节未在 README 中展开",
+    "CLI 输出格式和审计评分的详细规则未说明",
+    "对 Windows 环境的兼容性未明确说明"
   ],
   "quality_flags": [],
-  "stars_total": 583,
+  "stars_total": 786,
   "created_at": "2026-06-09",
-  "pushed_at": "2026-06-19",
+  "pushed_at": "2026-06-23",
   "latest_release": null,
   "first_seen": "2026-06-21",
-  "last_seen": "2026-06-22",
-  "streak_days": 3,
-  "analysis_updated_at": "2026-06-21T06:33:04+0800",
+  "last_seen": "2026-06-24",
+  "streak_days": 4,
+  "analysis_updated_at": "2026-06-24T16:31:48+0800",
   "appearances": [
     {
       "date": "2026-06-21",
@@ -68,6 +68,13 @@
       "date": "2026-06-22",
       "reason": "lightweight",
       "stars_total": 583,
+      "stars_gained": 0,
+      "release": null
+    },
+    {
+      "date": "2026-06-24",
+      "reason": "star_jump",
+      "stars_total": 786,
       "stars_gained": 0,
       "release": null
     }

@@ -1,0 +1,53 @@
+{
+  "full_name": "affaan-m/ECC",
+  "url": "https://github.com/affaan-m/ECC",
+  "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+  "language": "JavaScript",
+  "topics": [
+    "ai-agents",
+    "anthropic",
+    "claude",
+    "claude-code",
+    "developer-tools",
+    "llm",
+    "mcp",
+    "productivity"
+  ],
+  "license": "MIT",
+  "category": "AI 应用",
+  "classify_reason": "代理 harness 性能优化系统，为 Claude Code/Codex 等提供技能、记忆和安全。",
+  "one_liner": "跨 AI 编程助手的统一操作系统：261 个技能、session 适配与多 agent 编排",
+  "why_worth_it": "解决多 harness 碎片化：一套 skills/rules/hooks 通吃 Claude Code、Cursor、Codex 等，并内置可观测控制面板",
+  "tags": [
+    "AI Agent 框架",
+    "跨平台适配",
+    "开发者工具",
+    "MCP 生态"
+  ],
+  "confidence": "high",
+  "info_gaps": [
+    "未提供性能 benchmark 数据（如技能加载耗时、跨 harness 切换延迟）",
+    "未展示 MCP 库存漂移检测的具体实现细节和误报率",
+    "v2.0.0 control-pane 的生产可用性未明确（标注为 early build）",
+    "未说明 261 个技能中多少已通过生产验证、多少为实验性",
+    "未列明支持的所有 MCP 服务器及兼容性矩阵"
+  ],
+  "quality_flags": [],
+  "stars_total": 220801,
+  "created_at": "2026-01-18",
+  "pushed_at": "2026-06-22",
+  "latest_release": "v2.0.0",
+  "first_seen": "2026-06-24",
+  "last_seen": "2026-06-24",
+  "streak_days": 1,
+  "analysis_updated_at": "2026-06-24T16:25:19+0800",
+  "appearances": [
+    {
+      "date": "2026-06-24",
+      "reason": "new",
+      "stars_total": 220801,
+      "stars_gained": 593,
+      "release": "v2.0.0"
+    }
+  ]
+}

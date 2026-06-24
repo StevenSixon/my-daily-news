@@ -6,40 +6,46 @@
   "topics": [
     "ai",
     "automation",
+    "claude",
     "code-generation",
+    "codex",
     "developer-tools",
+    "harness",
+    "harness-engineering",
     "llm",
+    "opencode",
     "plugin",
     "typescript",
     "workflow"
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "AI工作流自动化与智能代码生成插件",
-  "one_liner": "统一多 AI 终端的九阶段代码研发流水线引擎",
-  "why_worth_it": "解决 AI 辅助开发中流程遗忘、上下文断裂和跨工具不一致的痛点，适合使用多种 AI 助手的严肃团队，用状态机代替人工记忆流程。",
+  "classify_reason": "AI 工作流自动化插件，利用 Claude/Codex 进行代码生成。",
+  "one_liner": "将AI编码变成可审计的工程流水线：九阶段状态机，人类审批门控，多终端一致。",
+  "why_worth_it": "解决AI无约束写码、上下文丢失、多工具流程混乱，为团队提供强制工程纪律与审计能力。",
   "tags": [
-    "工作流引擎",
-    "AI编码助手",
-    "TypeScript",
-    "多AI终端统一"
+    "工作流自动化",
+    "AI工程化",
+    "多AI终端",
+    "TypeScript"
   ],
-  "confidence": "high",
+  "confidence": "medium",
   "info_gaps": [
-    "六套集成标准各自的深度和兼容边界未详细说明",
-    "无性能基准或大规模团队的使用数据",
-    "与 IDE 插件的具体交互细节（如 Cursor 规则文件的格式）仅部分覆盖",
-    "README 截断，可能遗漏后续的架构细节和 API 文档"
+    "无性能 benchmark 或 token 压缩的量化效果数据",
+    "多 AI 终端行为一致性的验证报告缺失",
+    "缺乏生产环境下的稳定性数据和用户案例",
+    "人类门控的具体实现机制未说明（是否仅依赖聊天层面的确认）",
+    "除 Node.js ≥20 外未列出其他系统依赖（如操作系统、额外工具）"
   ],
   "quality_flags": [],
-  "stars_total": 453,
+  "stars_total": 492,
   "created_at": "2026-06-05",
-  "pushed_at": "2026-06-23",
-  "latest_release": "v0.38.0",
+  "pushed_at": "2026-06-24",
+  "latest_release": "v0.42.0",
   "first_seen": "2026-06-22",
-  "last_seen": "2026-06-23",
-  "streak_days": 2,
-  "analysis_updated_at": "2026-06-23T09:22:34+0800",
+  "last_seen": "2026-06-24",
+  "streak_days": 3,
+  "analysis_updated_at": "2026-06-24T16:34:18+0800",
   "appearances": [
     {
       "date": "2026-06-22",
@@ -54,6 +60,13 @@
       "stars_total": 453,
       "stars_gained": 0,
       "release": "v0.38.0"
+    },
+    {
+      "date": "2026-06-24",
+      "reason": "release_update",
+      "stars_total": 492,
+      "stars_gained": 0,
+      "release": "v0.42.0"
     }
   ]
 }

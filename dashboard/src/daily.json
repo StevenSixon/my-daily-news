@@ -1,6 +1,2158 @@
 {
   "editions": [
     {
+      "date": "2026-06-24",
+      "count": 16,
+      "projects": [
+        {
+          "id": "stablyai__orca",
+          "fullName": "stablyai/orca",
+          "owner": "stablyai",
+          "name": "orca",
+          "url": "https://github.com/stablyai/orca",
+          "oneLiner": "一站式并行编排多个CLI AI编程Agent，隔离工作树，移动端监控。",
+          "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop and mobile.",
+          "language": "TypeScript",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 6424,
+          "starsGained": 1216,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-03-17",
+          "pushedAt": "2026-06-24",
+          "latestRelease": "v1.4.95",
+          "firstSeen": "2026-06-24",
+          "topics": [
+            "ade",
+            "agent-ide",
+            "ai-agents",
+            "claude-code",
+            "cli",
+            "codex",
+            "cursor-agent",
+            "devtools",
+            "ghostty",
+            "ide",
+            "mobile-app",
+            "opencode",
+            "orchestration",
+            "parallel-agents",
+            "pi",
+            "terminal",
+            "worktrees",
+            "yc-backed"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-24",
+              "reason": "new",
+              "starsTotal": 6424,
+              "starsGained": 1216,
+              "release": "v1.4.95"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "Orca 是一个专为开发者打造的 Agent 开发环境（ADE），让你在统一界面中并行运行、管理和对比多个 CLI AI 编码 Agent（如 Claude Code、Codex、OpenCode、Pi 等）。每个 Agent 运行在独立的 git 工作树中，互不干扰，支持本地和远程（SSH）。桌面端提供类 VS Code 编辑器、终端分裂、Chromium 内嵌浏览器等能力，移动端可远程监控与交互。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "1. 多 Agent 对比：可以同时向多个 Agent 发同一个 prompt，比较结果，合并最佳代码，极大提升实验和选型效率。 2. 工作区隔离：为每个 Agent 创建独立 git worktree，避免文件冲突，事后可分别 diff 或丢弃，保持主分支干净。 3. 终端一等公民：基于 WebGL 的高性能终端，分割操作及滚动持久化，尤其适合长时间运行的 Agent 任务。 4. 移动端陪伴：当 Agent 跑在桌面时，手机可接收完成通知、查看输出、发送后续指令，适合离开电脑但又想跟踪进度的场景。 5. 成熟的集成生态：内置 GitHub/Li near 任务管理，可右键任务创建 worktree，无缝审查 PR/issue；支持设计模式选中 UI 元素直接注入 Agent 提示。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "主要语言：TypeScript",
+                "桌面框架：Electron（推测，因跨平台桌面应用）",
+                "终端渲染：提及 Ghostty 级终端，可能使用 WebGL 加速；README 提到“Ghostty-class terminals with WebGL rendering”。",
+                "CLI 工具：orca CLI 用于脚本化操作",
+                "移动端：iOS App Store 上线，Android 提供 APK",
+                "许可：MIT"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "并行 Agent 编排：单个提示扇出至多个 Agent，每个在独立 worktree 中运行。",
+                "隔离的工作树：基于 git worktree，可合并、对比、废弃。",
+                "终端分裂与持久化：无限分割，滚动历史重启亦保留。",
+                "内嵌浏览器 & 设计模式：点击 UI 元素自动抓取 HTML/CSS/截图发送给 Agent。",
+                "GitHub/Li near 原生集成：在应用内浏览任务，从任务打开工作树，无需切换上下文。",
+                "AI Diff 注释：在 diff 行上直接添加注释返回给 Agent 迭代。",
+                "SSH 远程工作树：在远程强算力机器上运行 Agent，自动重连和端口转发。",
+                "CLI 驱动：Agent 亦可通过 orca 命令创建 worktree, snapshot, click 等，实现自动化流水线。",
+                "移动端监控：手机接收通知并可发送跟进指令。"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "需要同时试验多种 AI 编程工具的开发者，希望快速横向对比输出。",
+                "追求一键启动多个 Agent 并行解决问题的懒人型极客。",
+                "长期运行 Agent 任务（如大规模重构）时希望离开桌面但保留监控能力的场景。",
+                "团队使用不同 AI 工具，需要统一管理变更和审核流程。"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "body": "Orca 的优势在于将所有 Agent 作为一等公民在同一时空下互不干扰地运行，且融合了 IDE 的编辑、版本控制、任务管理和移动端通知。",
+              "bullets": [
+                "Terminal + tmux + 多个 Agent CLI：手动管理窗口和上下文，缺乏结构化 worktree、通知整合和移动端能力。",
+                "VS Code + Copilot Chat + 其他 Agent 插件：通常是单 Agent 交互，没有原生多 Agent 对比和隔离的工作树。",
+                "Aider / Continue：侧重于单一 Agent 的交互优化，不提供并行编排的统一环境。"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "开发非常活跃，几乎每日发布版本。最新 release v1.4.95 于 2026-06-24 推出，主要改进：可分配快捷键切换休眠工作区、Cmd+J 搜索项目与仓库组、降低 source-control 后台刷新负载、GitHub 任务关闭原因同步等。从 docs 目录看，功能迭代丰富，包括自动化导航栈、远程粘贴修复、渲染器内存剖析、终端确认关闭等细节优化。 ---"
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：medium",
+                "信息盲区：未提供底层架构细节，如是否使用 Electron 或其它框架（仅推测）；性能基准数据缺失，如多 Agent 并行时资源占用；是否需要注册账号或登录（README 未说明）；移动端与桌面端通信协议未明确（本地网络/服务器中转）；具体版本管理及账号切换实现依赖（是否仅针对 API key）"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "NousResearch__hermes-agent",
+          "fullName": "NousResearch/hermes-agent",
+          "owner": "NousResearch",
+          "name": "hermes-agent",
+          "url": "https://github.com/NousResearch/hermes-agent",
+          "oneLiner": "自进化的多模型AI代理，跨平台自托管，无供应商锁定",
+          "description": "The agent that grows with you",
+          "language": "Python",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 201360,
+          "starsGained": 936,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2025-07-22",
+          "pushedAt": "2026-06-24",
+          "latestRelease": "v2026.6.19",
+          "firstSeen": "2026-06-24",
+          "topics": [
+            "ai",
+            "ai-agent",
+            "ai-agents",
+            "anthropic",
+            "chatgpt",
+            "claude",
+            "claude-code",
+            "clawdbot",
+            "codex",
+            "hermes",
+            "hermes-agent",
+            "llm",
+            "moltbot",
+            "nous-research",
+            "openai",
+            "openclaw"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-24",
+              "reason": "new",
+              "starsTotal": 201360,
+              "starsGained": 936,
+              "release": "v2026.6.19"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "由 Nous Research 打造的自我进化的 AI 代理，内置闭环学习引擎——能从对话中创建技能、自动改善技能、主动沉淀记忆，并支持跨会话搜索和用户建模。可在 $5 VPS、GPU 集群或按需无服务器基础设施上运行，通过 CLI 或 Telegram / Discord / Slack / WhatsApp / Signal 等平台交互，实现真正的随时随地个人助手。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "星数超 20 万，社区贡献活跃（v0.17.0 有 245 位贡献者）。它切中了高级用户的痛点：聊天 AI 不该被锁在某个聊天应用的网页或 App 里。Hermes 提供统一的网关和终端界面，允许自由切换 OpenAI、Anthropic、Nous Portal、OpenRouter 等 200+ 模型，同时提供记忆、技能、定时任务、子代理等生产级特性，远超普通聊天壳。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "核心语言：Python",
+                "终端界面：全功能 TUI（多行编辑、自动补全、流式工具输出）",
+                "网关：多平台自托管网关，支持 Telegram、Discord 等，支持语音转写",
+                "后端：本地、Docker、SSH、Singularity、Modal（无服务器休眠/唤醒）、Daytona",
+                "记忆系统：FTS5 全文搜索 + LLM 总结，配合 Honcho 辩证法用户建模",
+                "技能系统：符合 agentskills.io 开放标准，自主创建与自我完善",
+                "工具网关：可通过 Nous Portal 使用 Firecrawl、FAL、OpenAI TTS 等，也可自带密钥",
+                "安装：shell 脚本一键部署 Python 3.11 环境及相关依赖"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "body": "1. 自学习循环：代理自主策划记忆、创建技能，并在使用中自我改进 2. 多模型随意切换：hermes model 一键更换模型，无代码改动 3. 跨平台对话：同一代理在 Telegram、Discord、WhatsApp、Signal、CLI 等保持连续会话 4. 后台自动化：内置 cron 调度器，用自然语言设置定时任务 5. 子代理并发：可派生子代理并行工作，或编写调用工具 RPC 的 Python 脚本压缩上下文成本 6. 无服务器省钱：Modal/Daytona 后端使代理在空闲时休眠，几乎零费用 7. 研究就绪：支持批量轨迹生成和轨迹压缩，用于训练工具调用模型"
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "需要跨平台统一个人助理的极客和远程工作者",
+                "希望完全控制数据、又能低成本自托管的高级用户",
+                "利用模型无关性做 A/B 测试和 prompt 工程的研究人员",
+                "需要定时报告、监控或备份并通知到聊天软件的 DevOps 场景",
+                "想用自然语言调度任务并观察执行的家庭自动化控"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "bullets": [
+                "ChatGPT / Claude 官方客户端：封闭生态，模型锁定，无法自托管，无跨平台网关",
+                "LangChain / Langroid 等 Agent 框架：偏向开发者构建，缺乏开箱即用的终端界面和多平台网关",
+                "OpenClaw / Clawdbot：Hermes 提供迁移命令，表明其前身为 OpenClaw，但 Hermes 强化了记忆与技能的自进化，并扩展了平台覆盖（iMessage、Raft 网络等）",
+                "Home Assistant 语音助手：侧重智能家居，非通用代理"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "最新发布 v2026.6.19（约 1475 次提交、800 个合并 PR），主要更新： ---",
+              "bullets": [
+                "iMessage 支持（通过 Photon，无需 Mac 中继）",
+                "加入 Raft 代理网络作为网关通道",
+                "桌面应用能力大幅增强",
+                "子代理可后台运行",
+                "图像生成支持编辑",
+                "Cursor Composer 模型可通过 xAI Grok 订阅访问",
+                "仪表盘新增个人资料构建和安全登录",
+                "技能中心浏览器改版",
+                "记忆工具升级",
+                "减少辅助模型预算消耗",
+                "安全审计与 300+ 问题关闭"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "continuedev__continue",
+          "fullName": "continuedev/continue",
+          "owner": "continuedev",
+          "name": "continue",
+          "url": "https://github.com/continuedev/continue",
+          "oneLiner": "开源的 AI 编码代理，提供 CLI、VS Code 和 JetBrains 插件，但已停止维护。",
+          "description": "open-source coding agent",
+          "language": "TypeScript",
+          "category": "AI 应用",
+          "license": "Apache-2.0",
+          "starsTotal": 34396,
+          "starsGained": 620,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2023-05-24",
+          "pushedAt": "2026-06-23",
+          "latestRelease": "v2.0.0-vscode",
+          "firstSeen": "2026-06-24",
+          "topics": [
+            "agent",
+            "ai",
+            "cli",
+            "developer-tools",
+            "open-source"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-24",
+              "reason": "new",
+              "starsTotal": 34396,
+              "starsGained": 620,
+              "release": "v2.0.0-vscode"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "Continue 是一个开源的编码代理，提供 CLI、VS Code 扩展和 JetBrains 插件。它曾作为“先驱性”的 AI 开发工具被开发，让开发者在本地或自选环境中使用 AI 辅助编码。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "在 GitHub 上获得了 34k+ Star，反映出社区对开源、可控的 AI 编码助手的强烈需求。它曾与闭源方案（如 GitHub Copilot）形成对比，吸引重视数据隐私和定制性的开发者。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "语言：TypeScript",
+                "分发：VS Code 扩展、npm 包（CLI）、JetBrains 插件",
+                "许可证：Apache 2.0"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "body": "README 未详述功能。文档站点可能覆盖配置自定义模型、聊天、代码补全、代理任务等，但本分析仅基于提供的 README 截断内容，无法确认具体能力。从发布的“2.0.0 final release”看，曾提供了完整的编码代理体验，但细节缺失。"
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "需要离线或私有化部署 AI 编程助手的团队",
+                "研究和学习 AI 编码代理架构的开发者",
+                "对闭源 Copilot 不信任、想自托管增强控制的用户"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "bullets": [
+                "vs GitHub Copilot：Copilot 为闭源云服务；Continue 开源、可自托管，但现已停更，生态和体验可能落后。",
+                "vs Tabby / Codeium 等：同样自托管，但 Continue 更早获得关注，现已进入只读状态。"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "---",
+              "bullets": [
+                "仓库已设为只读，不再积极维护",
+                "2026 年 6 月 19 日发布了最终版 v2.0.0-vscode，移除了匿名遥测和认证，修复了大量 bug",
+                "官方推荐使用 CLI 替代 JetBrains 插件",
+                "未来不会再有新功能，仅作为存档供后人参考"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：medium",
+                "信息盲区：README 未描述具体功能（如代码补全、聊天、Agent 行为）；未提供 benchmark 数据或准确的使用效果说明；技术架构、支持的 LLM 后端、部署依赖均未在 README 中体现；只说明最终版本，未解释为何停止维护；快速开始缺少可运行的命令，实际配置需查阅外部文档"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "affaan-m__ECC",
+          "fullName": "affaan-m/ECC",
+          "owner": "affaan-m",
+          "name": "ECC",
+          "url": "https://github.com/affaan-m/ECC",
+          "oneLiner": "跨 AI 编程助手的统一操作系统：261 个技能、session 适配与多 agent 编排",
+          "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+          "language": "JavaScript",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 220801,
+          "starsGained": 593,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-01-18",
+          "pushedAt": "2026-06-22",
+          "latestRelease": "v2.0.0",
+          "firstSeen": "2026-06-24",
+          "topics": [
+            "ai-agents",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "developer-tools",
+            "llm",
+            "mcp",
+            "productivity"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-24",
+              "reason": "new",
+              "starsTotal": 220801,
+              "starsGained": 593,
+              "release": "v2.0.0"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "ECC（Agent Harness Operating System）是一个面向 AI 编程助手（Claude Code、Codex、OpenCode、Cursor、Gemini、Zed 等）的跨 harness 运行时系统。它提供的不是简单的配置文件集合，而是一整套生产级的技能库、记忆持久化、安全扫描、持续学习与多 agent 编排框架。目前已演进至 v2.0.0，包含 261 个公开技能、64 个 agent 定义和 84 个命令。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "1. 跨 harness 统一抽象——通过 ecc.session.v1 适配器协议，屏蔽不同工具间的差异，同一套 skills/rules/hooks 可在 Claude Code、Cursor、Codex 等之间复用，避免多工具割裂。 2. 生产级可观测性——自带的 control-pane 提供会话指标、工作项看板、MCP 库存漂移检测，甚至曾在开发阶段抓出一次真实的 secret 泄露。 3. 开箱即用的编排能力——orch-* 技能族支持多 agent fan-out、worktree 生命周期管理、合并冲突预测，适合大规模 parallel agent 协作场景。 4. 社区与商业双轨——220K+ star、230+ 贡献者，MCP 生态集成积极，同时提供 Pro 版（$19/月/席位）用于私有仓库。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "主体为 JavaScript/TypeScript 实现",
+                "控制面板：Rust 编写的原型（ecc2/ 目录，处于 alpha 状态）",
+                "提供 npm 包：ecc-universal、ecc-agentshield",
+                "支持 Shell、Python、Go、Java、Perl、Markdown 等多语言生态",
+                "与 MCP（Model Context Protocol）深度绑定，提供 ecc.mcp.v1 库存统一视图"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "261 个公开技能：覆盖编码、研究、安全、媒体、企业运维、agent 工作流",
+                "Session 适配器：统一的多 harness 会话 schema，追踪“哪个 agent 在哪、做什么”",
+                "MCP 库存管理：跨 harness 归一化视图、配置漂移检测、secret 自动脱敏",
+                "Worktree 生命周期服务：并行 agent 工作树的合并冲突预测与安全 GC",
+                "编排能力：orch-* 技能族支持动态多 agent 分工与 fan-out",
+                "持续学习：从会话中自动提取模式并沉淀为可复用技能（v2 规范已有）",
+                "AgentShield 安全扫描：攻击面检测、沙箱化、敏感信息过滤",
+                "控制面板（早期阶段）：本地 Web/TUI 面板展示会话指标、工作项看板、知识召回"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "同时使用多个 AI 编程工具并希望统一配置与工作流的重度用户",
+                "需要多 agent 并行协作的复杂工程任务（大型重构、多服务联调）",
+                "将 AI 辅助开发纳入企业治理流程的团队（需要可观测、可审计的 agent 活动）",
+                "MCP 生态的早期采用者，希望有一个统一的 MCP 服务器配置与监控平面"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "bullets": [
+                "vs 各 harness 原生配置——ECC 将分散在 .claude/、.cursor/、.codex/ 等目录的配置统一抽象，避免重复维护",
+                "vs 单独使用 MCP 服务器——ECC 提供库存管理、漂移检测、secret 脱敏等生产化能力，而非仅仅连接",
+                "vs 自建 agent 编排方案——ECC 的 orch-* 技能族和 worktree 管理提供了开箱即用的多 agent 协作模式",
+                "与 LangChain、AutoGPT 等 agent 框架并非直接竞争，更偏重 IDE/harness 层面的运行时整合"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "---",
+              "bullets": [
+                "v2.0.0 (2026-06-10)：稳定版发布，261 技能、control-pane 底层、orch-* 编排族、Discord 社区上线",
+                "v2.0.0-rc.1 (2026-04)：控制面板 GUI、operator 工作流扩展、优化技能包、预测市场工具（非投资建议）",
+                "v1.9.0 (2026-03)：选择性安装架构、多语言扩展",
+                "v2.0.0 alpha：Rust 控制平面原型已合入主干，提供 dashboard、sessions、status 等命令"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：未提供性能 benchmark 数据（如技能加载耗时、跨 harness 切换延迟）；未展示 MCP 库存漂移检测的具体实现细节和误报率；v2.0.0 control-pane 的生产可用性未明确（标注为 early build）；未说明 261 个技能中多少已通过生产验证、多少为实验性；未列明支持的所有 MCP 服务器及兼容性矩阵"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "revfactory__harness",
+          "fullName": "revfactory/harness",
+          "owner": "revfactory",
+          "name": "harness",
+          "url": "https://github.com/revfactory/harness",
+          "oneLiner": "说“构建一个 harness”，自动生成领域专属的 Agent 团队和技能",
+          "description": "A meta-skill that designs domain-specific agent teams, defines specialized agents, and generates the skills they use.",
+          "language": "HTML",
+          "category": "AI 应用",
+          "license": "Apache-2.0",
+          "starsTotal": 7543,
+          "starsGained": 128,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-03-26",
+          "pushedAt": "2026-06-10",
+          "latestRelease": "",
+          "firstSeen": "2026-06-24",
+          "topics": [
+            "claude-code",
+            "claude-code-plugin",
+            "harness",
+            "harness-engineering"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-24",
+              "reason": "new",
+              "starsTotal": 7543,
+              "starsGained": 128,
+              "release": ""
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "Harness 是一个 Claude Code 的团队架构工厂，位于生态的 L3 Meta-Factory 层。用户只需输入领域描述（如“构建一个用于深度研究的 harness”），它会自动分析需求、选择 6 种预定义团队模式之一，并生成 .claude/agents/ 和 .claude/skills/ 目录下的 Agent 定义与技能文件。整个过程由 6 阶段工作流驱动：领域分析→架构设计→Agent 定义→技能生成→集成编排→验证测试。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "项目在 2026 年 3 月发布后迅速积累 7500+ Star，因为它直击 LLM 多 Agent 编排的痛点——手动拆分任务、定义 Agent 角色和传递规则非常耗时。Harness 将团队设计模式化、自动化，且提供了可复用的团队架构（Pipeline、Fan-out/Fan-in、Expert Pool、Producer-Reviewer、Supervisor、Hierarchical Delegation）。其配套的 A/B 测试显示，使用 Harness 后代码质量平均提升 60%（49.5→79.3），15 项任务全胜，产出方差下降 32%。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "载体：纯 Markdown 配置文件（AGENTS.md、SKILL.md），无额外代码运行时依赖",
+                "分发：Claude Code Plugin 系统（支持 marketplace 安装），也支持直接复制 skill 目录",
+                "架构模式：内建 6 种可组合的团队组织模式，以提示词和编排模板实现",
+                "生成策略：渐进式披露（Progressive Disclosure），按上下文按需加载技能细节，优化 token 消耗"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "模式化团队生成：6 种架构覆盖串行、并行、专家池、生产-审查、监督、层级委托等场景",
+                "技能自动生成：遵循渐进式披露，生成多级技能文件，保持 Agent 上下文高效",
+                "编排与验证：内置错误处理、数据传递协议，支持触发验证、干运行测试、有/无技能对比评估",
+                "多语言触达：支持韩文、日文触发词，国际化演示",
+                "生态配套：衍生仓库 harness-100 提供 100 个开箱即用的团队配置，覆盖 10 个领域"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "内容创作：如 Webtoon 剧集制作、YouTube 内容规划",
+                "软件工程：代码审查、重构、全栈网站开发",
+                "数据与 AI：数据管道设计、LLM 应用开发",
+                "研究与文档：深度调研、API 文档生成",
+                "营销与策略：营销活动策划、商业分析"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "body": "| 工具 | 定位 | 与 Harness 关系 | |------|------|-----------------| | Archon | 确定性运行时配置工厂 | 同一层（L3），不同子层：Archon 管运行时 reproducible，Harness 管团队架构设计 | | meta-harness | 同一概念的 Codex 运行时移植 | 不同运行时：Claude Code vs Codex，互补 | | ECC (everything-claude-code) | 跨 harness 的标准化层（L2） | 上层消费者：ECC 可叠加在 Harness 生成的 harness 上 | | wshobson/agents | 子 Agent/技能目录（182 Agent, 149 Skill） | 零件库：Harness 可引用目录中的部件组装团队 | | LangGraph | 状态图编排，LLM 无关 | 不同赛道：LangGraph 面向长运行、状态恢复，Harness 面向 Claude Code 原生快速搭建 |"
+            },
+            {
+              "heading": "版本动态",
+              "body": "---",
+              "bullets": [
+                "最近推送：2026-06-10",
+                "当前版本：1.2.0",
+                "创建于 2026-03-26，Star 数增长快，目前 7543",
+                "已进行首次 A/B 测试研究，数据较正面（自测），第三方复现尚在计划中",
+                "配套仓库 harness-100 已发布 1808 个 Markdown 文件，涵盖 10 个领域"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：A/B 测试为作者自测，第三方复现尚未完成；README 未明确说明所需 Claude Code 最低版本；直接安装方式仅限于 skill 文件，未说明是否需要额外配置插件注册；语言标签误标为 HTML，实际为 Markdown 配置"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "calesthio__OpenMontage",
+          "fullName": "calesthio/OpenMontage",
+          "owner": "calesthio",
+          "name": "OpenMontage",
+          "url": "https://github.com/calesthio/OpenMontage",
+          "oneLiner": "将AI编程助手变为完整视频制作工作室的开源Agent系统",
+          "description": "World's first open-source, agentic video production system. 12 pipelines, 52 tools, 500+ agent skills. Turn your AI coding assistant into a full video production studio.",
+          "language": "Python",
+          "category": "AI 应用",
+          "license": "AGPL-3.0",
+          "starsTotal": 17024,
+          "starsGained": 9410,
+          "streakDays": 10,
+          "isNew": false,
+          "createdAt": "2026-03-29",
+          "pushedAt": "2026-06-24",
+          "latestRelease": "",
+          "firstSeen": "2026-06-19",
+          "topics": [
+            "agent",
+            "agentic-ai",
+            "ai",
+            "claude",
+            "copilot",
+            "cursor",
+            "elevenlabs",
+            "ffmpeg",
+            "flux",
+            "image-generation",
+            "open-source",
+            "openai",
+            "python",
+            "remotion",
+            "stable-diffusion",
+            "text-to-speech",
+            "text-to-video",
+            "video-generation",
+            "video-production"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-19",
+              "reason": "new",
+              "starsTotal": 6011,
+              "starsGained": 738,
+              "release": ""
+            },
+            {
+              "date": "2026-06-19",
+              "reason": "lightweight",
+              "starsTotal": 6016,
+              "starsGained": 738,
+              "release": ""
+            },
+            {
+              "date": "2026-06-20",
+              "reason": "lightweight",
+              "starsTotal": 6057,
+              "starsGained": 236,
+              "release": ""
+            },
+            {
+              "date": "2026-06-20",
+              "reason": "lightweight",
+              "starsTotal": 6522,
+              "starsGained": 156,
+              "release": ""
+            },
+            {
+              "date": "2026-06-20",
+              "reason": "lightweight",
+              "starsTotal": 6706,
+              "starsGained": 677,
+              "release": ""
+            },
+            {
+              "date": "2026-06-21",
+              "reason": "lightweight",
+              "starsTotal": 6989,
+              "starsGained": 677,
+              "release": ""
+            },
+            {
+              "date": "2026-06-21",
+              "reason": "lightweight",
+              "starsTotal": 7451,
+              "starsGained": 2253,
+              "release": ""
+            },
+            {
+              "date": "2026-06-22",
+              "reason": "lightweight",
+              "starsTotal": 8777,
+              "starsGained": 2867,
+              "release": ""
+            },
+            {
+              "date": "2026-06-23",
+              "reason": "star_jump",
+              "starsTotal": 12130,
+              "starsGained": 6089,
+              "release": ""
+            },
+            {
+              "date": "2026-06-24",
+              "reason": "star_jump",
+              "starsTotal": 17024,
+              "starsGained": 9410,
+              "release": ""
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "OpenMontage 是一个开源、Agent驱动的视频制作系统，可将 Claude Code、Cursor 等 AI 编码助手转化为完整的视频工作室。用户用自然语言描述需求，Agent 自动完成研究、脚本、素材生成、编辑和最终合成。它区别于普通“图片动画”工具，能通过免费档案资料检索真实运动镜头，剪辑成时间线并渲染成片。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "上线不久即获 17k+ Star，因它彻底简化了视频制作流程：无需专业技能，仅靠文字描述即可生成堪比专业水准的视频，且支持零 API 密钥的免费路径（Piper TTS + Archive.org 等）。示例视频从科幻预告片到吉卜力风格动画，成本低至 0.15 美元，极具吸引力。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "语言：Python 3.10+，Node.js 18+",
+                "视频合成：Remotion（React 渲染）或 HyperFrames（HTML/CSS/GSAP）",
+                "语音：Piper TTS（离线），ElevenLabs，OpenAI TTS",
+                "图像/视频生成：FLUX，Stable Diffusion，Google Veo，Kling 等（通过 fal.ai 网关）",
+                "媒体处理：FFmpeg",
+                "素材源：Pexels，Pixabay，Unsplash，Archive.org，NASA，Wikimedia Commons",
+                "编排：管道定义（pipeline_defs），技能注册，工具发现"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "12 个预定义流水线，覆盖动画短片、产品广告、纪录片蒙太奇等多种类型",
+                "输入 YouTube 链接即可分析并生成类似风格新视频",
+                "多维度自我审查：ffprobe 校验、帧采样、音频分析、字幕检查",
+                "成本预估与控制，支持仅用 OpenAI 等单一 API 完成全流程",
+                "GPU 本地视频生成支持（Wan2.1, Hunyuan 等）",
+                "代理能力完善，适合在 OpenClaw 等 agent 环境中自动运行"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "内容创作者快速生成抖音/YouTube 短片",
+                "开发者将视频生成集成到自动化工作流",
+                "教育培训材料制作（解说动画）",
+                "产品宣传视频低成本打样",
+                "AI 研究者探索 agent 在创意领域的应用"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "body": "同类开源视频生成项目多集中在单个模型调用，或仅能生成静态图片拼接动画。OpenMontage 的优势在于： 缺点是目前对硬件（GPU）和 API 密钥仍有一定依赖，且复杂剧情的逻辑控制尚待观察。",
+              "bullets": [
+                "真正的“真实素材”剪辑能力，而非仅图片串烧",
+                "全流程自动化，从策划到渲染无需人工干预",
+                "灵活的提供商体系，自由组合收费/免费工具",
+                "与 AI 编码助手深度集成，而不是单独的命令行工具"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "项目创建于 2026 年 3 月，最近推送 6 月 24 日，活跃开发中。文档目录包含架构说明、提供商指南及阶段门控（stage-gates），表明仍在快速迭代。许可为 AGPL-3.0。 ---"
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：未提供生成视频质量的定量评估或基准测试数据；未详细说明 GPU 本地视频生成的具体硬件要求；未列出所有 52 个工具的具体名称和用途；README 提及 'stage-gates' 但未展开说明其机制"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "DeusData__codebase-memory-mcp",
+          "fullName": "DeusData/codebase-memory-mcp",
+          "owner": "DeusData",
+          "name": "codebase-memory-mcp",
+          "url": "https://github.com/DeusData/codebase-memory-mcp",
+          "oneLiner": "毫秒级代码知识图谱MCP，158语言零依赖，省99% token。",
+          "description": "High-performance code intelligence MCP server. Indexes codebases into a persistent knowledge graph — average repo in milliseconds. 158 languages, sub-ms queries, 99% fewer tokens. Single static binary, zero dependencies.",
+          "language": "C",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 13542,
+          "starsGained": 8536,
+          "streakDays": 7,
+          "isNew": false,
+          "createdAt": "2026-02-24",
+          "pushedAt": "2026-06-24",
+          "latestRelease": "v0.8.1",
+          "firstSeen": "2026-06-19",
+          "topics": [
+            "aider",
+            "ast",
+            "claude-code",
+            "code-analysis",
+            "code-intelligence",
+            "codex",
+            "cursor",
+            "cypher",
+            "developer-tools",
+            "gemini-cli",
+            "graph-visualization",
+            "kilocode",
+            "knowledge-graph",
+            "mcp",
+            "mcp-server",
+            "model-context-protocol",
+            "opencode",
+            "sqlite",
+            "tree-sitter",
+            "windsurf"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-19",
+              "reason": "new",
+              "starsTotal": 7759,
+              "starsGained": 3244,
+              "release": "v0.8.1"
+            },
+            {
+              "date": "2026-06-19",
+              "reason": "lightweight",
+              "starsTotal": 7777,
+              "starsGained": 3244,
+              "release": "v0.8.1"
+            },
+            {
+              "date": "2026-06-20",
+              "reason": "lightweight",
+              "starsTotal": 7854,
+              "starsGained": 3244,
+              "release": "v0.8.1"
+            },
+            {
+              "date": "2026-06-20",
+              "reason": "lightweight",
+              "starsTotal": 8715,
+              "starsGained": 4212,
+              "release": "v0.8.1"
+            },
+            {
+              "date": "2026-06-21",
+              "reason": "lightweight",
+              "starsTotal": 9763,
+              "starsGained": 5419,
+              "release": "v0.8.1"
+            },
+            {
+              "date": "2026-06-22",
+              "reason": "lightweight",
+              "starsTotal": 10300,
+              "starsGained": 6372,
+              "release": "v0.8.1"
+            },
+            {
+              "date": "2026-06-24",
+              "reason": "star_jump",
+              "starsTotal": 13542,
+              "starsGained": 8536,
+              "release": "v0.8.1"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "codebase-memory-mcp 是一个面向 AI 编程代理的高性能代码智能 MCP 服务器。它用 Tree-sitter 解析 158 种语言，构建持久化知识图谱（函数、类、调用链、HTTP 路由等），将整个代码库索引为可秒级查询的 SQLite 数据库。单个 C 语言二进制，无运行时依赖，可一键接入 11 种代理。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "在 GitHub 上已获 13k+ Star。它抓住了 LLM 编码助手反复读取文件、消耗大量 token 和时间的痛点。通过一次索引、毫秒级图查询替代数十次文件抓取，显存/账单节省显著。全本地运行也打消了代码外泄顾虑。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "语言：纯 C（生成单静态二进制）",
+                "解析器：vendored 158 个 tree-sitter 语法",
+                "存储：SQLite（内存+磁盘），LZ4 压缩",
+                "查询引擎：自定义 Cypher 风格模式，FTS5+BM25，11 信号语义搜索（捆绑 Nomic 嵌入模型）",
+                "增量索引：基于 git 的文件监视",
+                "分发：macOS/Linux/Windows，签名+校验+杀毒扫描"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "极速索引：Linux 内核（28M LOC）3 分钟完成",
+                "结构查询：14 个 MCP 工具（搜索、追踪、架构、死代码、影响分析、ADR 管理）",
+                "混合 LSP：为 Python/TS/PHP/C#/Go/C/C++/Java/Kotlin/Rust 等提供类型解析，提升符号解析精度",
+                "跨服务链接：HTTP/gRPC/GraphQL/tRPC 路由匹配，消息通道检测",
+                "语义搜索：内置嵌入模型，99% token 缩减（3.4k vs 412k）",
+                "可视化：内置 3D 图谱 UI（可选）",
+                "IaC 索引：Dockerfile/K8s/Kustomize 作为图节点",
+                "自动同步：后台监测文件变化自动重索引"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "使用 Claude Code、Codex CLI、Gemini CLI、Aider 等 AI 编码代理的开发者，希望给代理全仓结构感知",
+                "大型单体或多仓库项目，需要快速理解架构、调用链、路由关系",
+                "代码审计、死代码发现、架构决策记录管理"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "body": "与 Sourcegraph（服务化、需部署）相比，它是本地单二进制，零配置；与 ast-grep / Semgrep 相比，它侧重构建可查询的全仓图谱而非一次性规则匹配；与基于文件的 MCP 工具相比，它大幅减少 token 消耗和往返次数。"
+            },
+            {
+              "heading": "版本动态",
+              "body": "最新 v0.8.1 发布了自研 HTTP 服务器模块（移除最后一个第三方库）、缩减语法集、增加 SBOM 与第三方声明文件、测试数增至 5604。项目保持高频迭代，专注于二进制体积与安全审计。 ---"
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：Linux 内核 3 分钟索引的具体硬件配置（CPU、内存）未说明；embedding 模型捆绑后二进制文件的体积未提及；增量索引的具体策略（是否依赖 git diff，文件变更粒度）描述较简略；混合 LSP 对各语言的类型解析深度和边界情况未详细展开；与同类工具（如 ast-grep、Semgrep）的量化对比缺失"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "palmier-io__palmier-pro",
+          "fullName": "palmier-io/palmier-pro",
+          "owner": "palmier-io",
+          "name": "palmier-pro",
+          "url": "https://github.com/palmier-io/palmier-pro",
+          "oneLiner": "Swift原生、内置生成式AI、通过MCP与Claude/Cursor协作的macOS视频编辑器",
+          "description": "macOS video editor built for AI",
+          "language": "Swift",
+          "category": "AI 应用",
+          "license": "GPL-3.0",
+          "starsTotal": 8632,
+          "starsGained": 1630,
+          "streakDays": 9,
+          "isNew": false,
+          "createdAt": "2026-04-07",
+          "pushedAt": "2026-06-23",
+          "latestRelease": "v0.4.0",
+          "firstSeen": "2026-06-19",
+          "topics": [
+            "ai-video",
+            "claude",
+            "macos",
+            "mcp",
+            "seedance2",
+            "swift",
+            "video-editor"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-19",
+              "reason": "new",
+              "starsTotal": 1546,
+              "starsGained": 749,
+              "release": "v0.3.4"
+            },
+            {
+              "date": "2026-06-19",
+              "reason": "lightweight",
+              "starsTotal": 1554,
+              "starsGained": 749,
+              "release": "v0.3.4"
+            },
+            {
+              "date": "2026-06-20",
+              "reason": "lightweight",
+              "starsTotal": 1594,
+              "starsGained": 749,
+              "release": "v0.3.4"
+            },
+            {
+              "date": "2026-06-20",
+              "reason": "release_update",
+              "starsTotal": 2206,
+              "starsGained": 756,
+              "release": "v0.3.5"
+            },
+            {
+              "date": "2026-06-20",
+              "reason": "lightweight",
+              "starsTotal": 2603,
+              "starsGained": 904,
+              "release": "v0.3.5"
+            },
+            {
+              "date": "2026-06-21",
+              "reason": "star_jump",
+              "starsTotal": 4041,
+              "starsGained": 902,
+              "release": "v0.3.5"
+            },
+            {
+              "date": "2026-06-22",
+              "reason": "lightweight",
+              "starsTotal": 5186,
+              "starsGained": 1834,
+              "release": "v0.3.5"
+            },
+            {
+              "date": "2026-06-23",
+              "reason": "release_update",
+              "starsTotal": 7386,
+              "starsGained": 2463,
+              "release": "v0.3.6"
+            },
+            {
+              "date": "2026-06-24",
+              "reason": "release_update",
+              "starsTotal": 8632,
+              "starsGained": 1630,
+              "release": "v0.4.0"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "Palmier Pro 是一个用 Swift 从零构建的 macOS 视频编辑器，特色是深度集成 AI 生成与代码助手：编辑器中可直接调用 Seedance、Kling 等模型生成视频/图片，同时内置 MCP 服务器，让 Claude Code、Cursor、Codex 等 AI 助手通过标准协议操控时间线。编辑器本身（不含生成式 AI）完全开源（GPLv3），生成模块闭源，采用订阅制。"
+            },
+            {
+              "heading": "为什么火",
+              "bullets": [
+                "Y Combinator S24 项目，苹果生态原生应用，近 9k Star，吸引了大量对 AI + 创作工具结合的开发者。",
+                "提出“AI 原生视频编辑器”概念：不再只是插件，而是让 AI 成为协作者，通过 MCP 将 Claude 等变成时间线操作手。",
+                "精准卡位 macOS 26（Tahoe）与 Apple Silicon，利用 Metal 加速视觉效果，展现新技术栈潜力。"
+              ]
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "Swift + AppKit/SwiftUI（推测）实现原生 UI 与高性能渲染。",
+                "Metal 用于颜色分级与特效合成（v0.4.0 已集成）。",
+                "MCP 服务器通过 HTTP 暴露在 127.0.0.1:19789，支持 Claude Code/Desktop、Cursor、Codex 等常用 AI 编码工具。",
+                "音频处理支持 PCM 共享读取器、多轨同步，支持 AIFF-C、FLAC 等格式导入。",
+                "生成式 AI 部分闭源，未披露具体协议，或为自研管线与第三方 API 的组合。"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "完整视频编辑：多轨时间线、剪辑、变换、关键帧、分辨率导出（含 2K、匹配时间线）。",
+                "生成式 AI：在时间线内直接生成 Seedance、Kling、Nano Banana Pro 等模型的图像/视频素材。",
+                "智能代理协作：MCP 服务器让外部 AI 助手可以读取、修改项目，实现自动化剪辑。",
+                "多语言支持：15 种语言，包括阿拉伯语等 RTL 语言。",
+                "免费编辑器：无登录即可使用基础编辑功能，MCP 服务也免费开放。"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "视频创作者想要用代码或 AI 助手自动化重复性编辑（如批量加字幕、调色、剪辑片段）。",
+                "开发者试验“AI 代理控制 GUI 工具”的交互范式，利用 MCP 构建自定义剪辑流程。",
+                "macOS 生态重度用户，追求原生性能与 Metal 加速的本地编辑体验。",
+                "对 AI 生成内容与手工编辑混合工作流感兴趣的早期尝鲜者。"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "bullets": [
+                "对比 Premiere Pro/After Effects：Palmier Pro 更轻量，原生集成 AI 代理，而非通过插件层交互，但功能成熟度远不及 Adobe。",
+                "对比 CapCut：CapCut 更偏向移动/桌面全流程一键式模板与 AI 特效，Palmier Pro 开放 MCP，给技术用户更大的自定义空间。",
+                "对比 DaVinci Resolve：DaVinci 有强大的 API 与 Fusion，但并非为 AI 助手原生设计；Palmier Pro 从底层就考虑 Agent 协作。",
+                "独特优势：唯一一个以 MCP 标准正式支持 Claude/Cursor 等工具的视频编辑器，形成“写代码即剪视频”的新路径。"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "---",
+              "bullets": [
+                "最新 v0.4.0（2026-06-23）引入 Metal 颜色与特效、导出添加 2K 和 Match-Timeline 分辨率、多轨音频同步、修复分栏大小持久化等问题。",
+                "社区贡献活跃，多语言本地化持续更新，关注者通过 Discord/X 反馈，项目迭代较快。",
+                "现阶段仍处于早期，编辑器基础功能稳定，但 AI 能力依赖闭源模块，长期发展取决于订阅模式与开放生态的平衡。"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：生成式 AI 功能的具体模型调用方式及后端架构未公开；MCP 提供的工具、资源、prompts 列表未在 README 中详细列出；编辑器功能与专业视频软件（如 Premiere、DaVinci）的详细功能对比缺失；无性能基准测试数据（渲染速度、时间线帧率等）"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "StarTrail-org__PixelRAG",
+          "fullName": "StarTrail-org/PixelRAG",
+          "owner": "StarTrail-org",
+          "name": "PixelRAG",
+          "url": "https://github.com/StarTrail-org/PixelRAG",
+          "oneLiner": "抛弃HTML文本解析，直接用网页截图进行视觉化检索与生成。",
+          "description": "The end of web parsing. The beginning of scalable pixel-native search.",
+          "language": "Python",
+          "category": "AI 应用",
+          "license": "Apache-2.0",
+          "starsTotal": 4850,
+          "starsGained": 0,
+          "streakDays": 5,
+          "isNew": false,
+          "createdAt": "2026-05-29",
+          "pushedAt": "2026-06-24",
+          "latestRelease": "v0.3.0",
+          "firstSeen": "2026-06-21",
+          "topics": [
+            "agent",
+            "ai",
+            "memory",
+            "multimodal",
+            "rag",
+            "search",
+            "searchengine",
+            "vision",
+            "vlm"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-21",
+              "reason": "new",
+              "starsTotal": 1155,
+              "starsGained": 0,
+              "release": "chrome-150.0.7844.0"
+            },
+            {
+              "date": "2026-06-21",
+              "reason": "star_jump",
+              "starsTotal": 1737,
+              "starsGained": 0,
+              "release": "chrome-150.0.7844.0"
+            },
+            {
+              "date": "2026-06-22",
+              "reason": "star_jump",
+              "starsTotal": 2526,
+              "starsGained": 0,
+              "release": "chrome-150.0.7844.0"
+            },
+            {
+              "date": "2026-06-23",
+              "reason": "star_jump",
+              "starsTotal": 3474,
+              "starsGained": 0,
+              "release": "chrome-150.0.7844.0"
+            },
+            {
+              "date": "2026-06-24",
+              "reason": "release_update",
+              "starsTotal": 4850,
+              "starsGained": 0,
+              "release": "v0.3.0"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "PixelRAG 是一种基于视觉的检索增强生成框架——它不解析 HTML/文本，而是将文档（网页、PDF、图片）渲染成一系列截图块，用视觉嵌入模型编码后存入向量索引，检索时返回最相关的截图块，最终让视觉语言模型（VLM）直接“看”图回答。由 Berkeley SkyLab、BAIR 和 Berkeley NLP 团队开发，对应论文已发布。"
+            },
+            {
+              "heading": "为什么火",
+              "bullets": [
+                "痛点直击：传统 RAG 的 HTML 解析或文本提取会丢失表格、图表、复杂排版信息，PixelRAG 则完整保留原始视觉布局，特别适合需要理解图表、财务报表、论文架构的姿态。",
+                "开箱即用：官方托管了 8.28M 维基百科页面的预建索引，无需搭建即可通过 API 进行视觉搜索，极大降低体验门槛。",
+                "Claude Code 插件：作为 pixelbrowse 技能直接赋予 Claude “阅读网页截图”的能力，开发者社区反响热烈。",
+                "完全开源可自托管：Apache-2.0 许可，支持本地构建和部署，满足隐私与定制需求。"
+              ]
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "渲染：Playwright / CDP 驱动的 Chromium 无头浏览器渲染网页；PDF 支持通过 poppler 转为截图。",
+                "嵌入模型：Qwen3-VL-Embedding-2B，用 LoRA 在网页截图数据上微调，实现对视觉内容的语义检索；支持 CUDA 与 Apple Silicon MPS。",
+                "索引与搜索：FAISS 向量索引，提供 FastAPI 搜索服务。",
+                "训练：独立的 uv 项目，使用固定版本 torch/transformers，数据与适配器权重已公开。",
+                "跨平台：Linux（CUDA）、macOS（MPS）、Windows（系统 Chrome）均提供基础支持。"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "body": "1. pixelshot 渲染器：一行命令将 URL/PDF/图片转为统一大小的截图块，支持分页、宽页2D分块。 2. 完整索引流水线：从源文档到可用索引全流程可编排（chunk → embed → build-index），并支持分阶段单独操作。 3. 多模态检索：支持文本查询和图像查询，返回最相关的截图块（及来源信息）。 4. 预置大规模索引：8.28M 维基页面索引已在 API 和 Hugging Face 提供，可直接搜索或下载部署。 5. Claude Code 集成：无需 MCP 服务器，本地 pixelshot 即可为 Claude 提供页面截图浏览能力。 6. 自托管服务：支持从任意文档构建私有索引并对外暴露兼容的搜索 API。"
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "学术文献检索（保留图表、公式布局）",
+                "金融/法律文档问答（表格与格式敏感）",
+                "为 LLM/Agent 提供“视觉浏览”能力（替代易出错的文本抓取）",
+                "构建可理解布局的企业知识库",
+                "视觉驱动的网页内容监控与变化检测"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "bullets": [
+                "vs 文本 RAG 框架（LangChain/LlamaIndex/Haystack）：传统框架依赖文本分块，丢失视觉结构；PixelRAG 直接操作截图，天然适合多版式文档。",
+                "vs 多模态 RAG 方案（如 ColPali）：PixelRAG 提供了完整的渲染→嵌入→检索→服务工具链，集成度高，且已发布经大规模预训练的 LoRA 嵌入模型和数据集，上手更快。",
+                "vs 商业闭源方案：完全开源，可本地部署，数据不出域；易于定制训练其他视觉嵌入骨干。"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "---",
+              "bullets": [
+                "当前版本 v0.3.0（2026-06-23），距离初始版本 v0.1.0 仅两月，迭代迅速。",
+                "v0.3.0 重点：PDF 分页正确渲染、宽页2D分块、Apple Silicon MPS 原生支持、跨平台 Chrome 自动发现、CDP 渲染稳定性增强、文档补全。",
+                "未来路线未在 README 明确，但从代码结构看可能继续增强跨平台兼容性、拓展文档格式支持和云部署友好度。"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：公开 API 限流策略未说明；README 中未包含标准基准评测数据（如 vs 文本 RAG 的召回率/准确率对比）；预建索引与最新模型版本的兼容性未明确（索引可能需要随模型升级重新构建）；Windows 平台的渲染稳定性与完善程度未提供具体测试说明"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "vercel__eve",
+          "fullName": "vercel/eve",
+          "owner": "vercel",
+          "name": "eve",
+          "url": "https://github.com/vercel/eve",
+          "oneLiner": "文件系统驱动 AI 代理框架，项目结构即代理逻辑。",
+          "description": "The Framework for Building Agents",
+          "language": "TypeScript",
+          "category": "AI 应用",
+          "license": "Apache-2.0",
+          "starsTotal": 2473,
+          "starsGained": 0,
+          "streakDays": 8,
+          "isNew": false,
+          "createdAt": "2026-06-16",
+          "pushedAt": "2026-06-24",
+          "latestRelease": "eve@0.13.3",
+          "firstSeen": "2026-06-19",
+          "topics": [
+            "agent",
+            "framework",
+            "harness",
+            "javascript",
+            "markdown",
+            "sandbox",
+            "typescript",
+            "vercel",
+            "workflows"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-19",
+              "reason": "new",
+              "starsTotal": 1561,
+              "starsGained": 0,
+              "release": "eve@0.11.7"
+            },
+            {
+              "date": "2026-06-20",
+              "reason": "lightweight",
+              "starsTotal": 1572,
+              "starsGained": 0,
+              "release": "eve@0.11.7"
+            },
+            {
+              "date": "2026-06-20",
+              "reason": "lightweight",
+              "starsTotal": 1734,
+              "starsGained": 0,
+              "release": "eve@0.11.7"
+            },
+            {
+              "date": "2026-06-20",
+              "reason": "release_update",
+              "starsTotal": 1782,
+              "starsGained": 0,
+              "release": "eve@0.11.8"
+            },
+            {
+              "date": "2026-06-21",
+              "reason": "release_update",
+              "starsTotal": 1853,
+              "starsGained": 0,
+              "release": "eve@0.11.10"
+            },
+            {
+              "date": "2026-06-21",
+              "reason": "lightweight",
+              "starsTotal": 1930,
+              "starsGained": 0,
+              "release": "eve@0.11.10"
+            },
+            {
+              "date": "2026-06-22",
+              "reason": "release_update",
+              "starsTotal": 2075,
+              "starsGained": 0,
+              "release": "eve@0.12.0"
+            },
+            {
+              "date": "2026-06-24",
+              "reason": "release_update",
+              "starsTotal": 2473,
+              "starsGained": 0,
+              "release": "eve@0.13.3"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "eve（Vercel 出品）是一个以文件系统为首要创作界面的持久化 AI 代理框架。代理的所有核心能力——系统提示、工具、技能、频道、定时任务——都按约定放在特定的文件与目录中，使得项目结构即代理逻辑，便于检查、扩展和运维。它用 TypeScript 编写，提供 npx eve@latest init 脚手架，内置交互式终端 UI，并支持快速接入 Anthropic 等模型。"
+            },
+            {
+              "heading": "为什么火",
+              "bullets": [
+                "极简约定：代理的入口、工具、指令一目了然，无需复杂的对象组装或隐式配置。",
+                "Vercel 背书：由 Vercel 团队维护，与 Vercel 生态（如 AI SDK）存在潜在协同。",
+                "持久化与协作：文件天然可版本控制，适用于需要长期维护、多人参与的代理项目。",
+                "beta 阶段热度：Star 增长较快，社区在 GitHub Discussions 活跃。"
+              ]
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "语言：TypeScript",
+                "运行时：Node.js",
+                "模型接入：通过 defineAgent 配置模型 ID（如 anthropic/claude-sonnet-4.6），需外部 API 密钥",
+                "工具校验：使用 Zod 定义输入 schema",
+                "交互频道：内置 HTTP、Slack、Discord 等频道支持",
+                "调度：基于 cron 的 jobs",
+                "沙箱：主题标签提及 sandbox，但本文档未展开说明，可能指执行环境隔离"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "body": "1. 指令即文件：instructions.md 是常驻系统提示，修改即更新行为。 2. 工具定义：tools/ 下的 TypeScript 文件导出 defineTool，带 Zod schema 与异步执行逻辑。 3. 技能：skills/ 目录存放按需加载的过程性 Markdown。 4. 频道：channels/ 支持多种消息渠道接入（HTTP、Slack 等）。 5. 定时调度：schedules/ 定义周期性任务。 6. 人工干预：支持 human-in-the-loop 提示。 7. 子代理：可创建子代理协调复杂任务。"
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "快速原型：想用最短路径得到一个可交互的 AI 助手。",
+                "团队开发：需要可审查、可版本化的代理配置，避免黑盒。",
+                "渠道集成：需要同时对接 Slack、Discord 等消息平台的机器人。",
+                "工作流自动化：结合定时任务和工具调用，实现定期报告、数据抓取等。"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "body": "对比 LangChain Agent 或 Semantic Kernel，eve 的差异化在于： 当前它更偏向个人与团队的“文件即代理”哲学，而 LangChain 等更偏库式编排。",
+              "bullets": [
+                "文件系统优先：将代理逻辑显式化为文件结构，而非全部代码内组装。",
+                "轻量约定：不引入复杂的链式抽象，学习曲线较低。",
+                "Vercel 原生：可能深度集成 Vercel 部署和 AI SDK（具体整合待确认）。"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "---",
+              "bullets": [
+                "最新 Release: eve@0.13.3（2026-06-23），当前为 beta 阶段。",
+                "补丁更新：共享 Chat SDK Block Kit 基元用于 Slack 卡片渲染，可见与 Vercel 其他基础设施的联动。",
+                "行为可能变化，API 在 GA 前不稳定。"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：medium",
+                "信息盲区：未说明模型API密钥的具体配置方式（如环境变量名）；未提供沙箱（sandbox）机制的实现细节与隔离程度；未说明自托管部署的完整步骤，以及与Vercel平台的耦合程度；无性能基准或大规模生产数据；子代理、技能（skills）的具体编写规范未在本文档展开"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "sums001__Windows-Copilot-API",
+          "fullName": "sums001/Windows-Copilot-API",
+          "owner": "sums001",
+          "name": "Windows-Copilot-API",
+          "url": "https://github.com/sums001/Windows-Copilot-API",
+          "oneLiner": "将微软Copilot逆向为免费、无需API密钥的OpenAI兼容API",
+          "description": "Reverse engineered Windows Copilot into an OpenAI-compatible API. Access GPT-4 and GPT-5 models through a simple REST interface without API keys or billing.",
+          "language": "Python",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 586,
+          "starsGained": 0,
+          "streakDays": 2,
+          "isNew": false,
+          "createdAt": "2026-06-19",
+          "pushedAt": "2026-06-24",
+          "latestRelease": "",
+          "firstSeen": "2026-06-23",
+          "topics": [
+            "ai",
+            "ai-agents",
+            "api",
+            "copilot",
+            "llm",
+            "microsoft-copilot",
+            "openai"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-23",
+              "reason": "new",
+              "starsTotal": 361,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-06-24",
+              "reason": "star_jump",
+              "starsTotal": 586,
+              "starsGained": 0,
+              "release": ""
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "一个逆向工程项目，将微软Copilot网页聊天转换为OpenAI兼容的RESTful API和Python库。用户使用自己的Microsoft/Google账号登录一次后，即可通过本地http://localhost:8000端点免费调用Copilot的大模型，并获得流式响应、多轮对话支持。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "它为开发者提供了零成本接入高级LLM的途径，特别适合个人项目、原型验证、学习探索。相比需要付费API key的OpenAI服务，该项目降低了试验门槛，且对OpenAI生态工具（如openai SDK）完全兼容。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "Python 3.9+",
+                "Playwright（浏览器自动化登录）",
+                "FastAPI + uvicorn（服务器端）",
+                "会话持久化（cookies + token）",
+                "令牌桶限流"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "零成本API：基于已有Copilot账号，无每日限额（但建议适度使用）",
+                "OpenAI兼容：/v1/chat/completions和/v1/models端点，官方SDK可直连",
+                "多轮对话：通过conversation_id维持上下文",
+                "流式输出：支持stream=true的参数",
+                "自动登录与刷新：首次运行弹出浏览器完成登录，后续自动复用会话",
+                "速率与并发控制：服务器串行化请求，内置令牌桶限制（默认12次/分），防止上游封禁",
+                "Docker支持：可容器化部署"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "个人开发者用作免费对话API进行原型测试",
+                "需要轻量对话能力的本地应用（如桌面助手、CLI工具）",
+                "学习OpenAI API接口而无需付费",
+                "在匿名Copilot被屏蔽的地区使用已登录账号访问"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "body": "与直接使用OpenAI API相比，主要优势是免费、无密钥管理；劣势在于不稳定（需维护会话、无法保证SLA）、无模型选择、单会话并发能力弱，且受上游微软策略影响。与ChatGPT逆向项目类似，但该项目专注于Copilot，登录更灵活（支持Google账号）。"
+            },
+            {
+              "heading": "版本动态",
+              "body": "---",
+              "bullets": [
+                "项目于2026-06-19创建，近期仍在活跃更新（截止2026-06-24）",
+                "README中已经提供了详细的使用示例、压力测试结果和限速调优方法",
+                "性能评估：GPQA Diamond得分为40.9%，属于GPT-4级，非推理增强模型"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：未明确说明实际使用的模型版本（标题提及GPT-5但README中仅声明为“roughly GPT-4 class”），无法核实是否真正调用GPT-5；GPQA Diamond评估细节（例如是否仅单选选择题、上下文设定）在README中简略，具体benchmark代码未提供；会话持久化安全性细节未深入说明，仅说明保存在本地且git忽略；上游微软服务条款合规性风险未详细讨论"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cobusgreyling__loop-engineering",
+          "fullName": "cobusgreyling/loop-engineering",
+          "owner": "cobusgreyling",
+          "name": "loop-engineering",
+          "url": "https://github.com/cobusgreyling/loop-engineering",
+          "oneLiner": "设计循环系统取代逐条提示，让AI编码代理在CI/CD中自主运行模式化任务",
+          "description": "Practical patterns, starters & CLI tools for loop engineering with AI coding agents. Design systems that prompt and orchestrate agents (inspired by Addy Osmani and Boris Cherny). Includes loop-audit, loop-init, loop-cost.",
+          "language": "JavaScript",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 786,
+          "starsGained": 0,
+          "streakDays": 4,
+          "isNew": false,
+          "createdAt": "2026-06-09",
+          "pushedAt": "2026-06-23",
+          "latestRelease": "",
+          "firstSeen": "2026-06-21",
+          "topics": [
+            "agentic-ai",
+            "ai-agents",
+            "ai-coding",
+            "anthropic",
+            "automation",
+            "claude",
+            "claude-code",
+            "codex",
+            "coding-agents",
+            "devops-automation",
+            "devtools",
+            "github-actions",
+            "grok",
+            "llm",
+            "loop-engineering",
+            "mcp",
+            "prompt-engineering"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-21",
+              "reason": "new",
+              "starsTotal": 496,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-06-21",
+              "reason": "lightweight",
+              "starsTotal": 537,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-06-22",
+              "reason": "lightweight",
+              "starsTotal": 583,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-06-24",
+              "reason": "star_jump",
+              "starsTotal": 786,
+              "starsGained": 0,
+              "release": ""
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "Loop Engineering 是一套方法论、模式库和工具集，旨在使用 AI 编码代理（如 Claude Code、Grok、Codex）构建自主运行的循环任务。其核心理念是“工程师不再手动提示代理，而是设计循环来自动提示、协调代理”，将代理嵌入日常的软件开发流程中。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "随着 AI 编码代理能力增强，开发者面临如何安全、持久地将代理集成进实际工作流的挑战。Loop Engineering 提供了从模式选择、成本估算到阶段化闸门、生产安全清单的完整路径，并得到 Addy Osmani、Boris Cherny 等行业领袖的直接引用，快速积累了早期关注。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "语言与运行环境：JavaScript/Node.js，通过 npx 分发三个核心 CLI 包（loop-init、loop-audit、loop-cost）。",
+                "集成目标：Grok、Claude Code、Codex 以及 GitHub Actions，通过 MCP 等连接器打通外部工具。",
+                "文档与可视化：Jekyll 静态站点，Mermaid 流程图，npm 包装为 @cobusgreyling 作用域。"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "7 种生产级循环模式：每日分诊、PR 看护、CI 清扫、依赖清扫、变更日志生成等，每个模式附带启动器、成本级别和安全指导。",
+                "三合一 CLI：loop-init 快速脚手架项目，loop-audit 评估准备度并给出改进建议，loop-cost 估算令牌花费。",
+                "安全与运维：提供故障模式目录、反模式、安全清单、多循环协调指南及阶段化推出策略（L1 报告 → L2 辅助修复 → L3 无人值守）。",
+                "交互式选择器：帮助用户根据自身需求快速定位应采用的循环。"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "希望将 AI 代理例行自动化集成的 DevOps 或平台工程团队。",
+                "个人开发者或小团队使用 AI 编码代理，期望减少重复性手动提示，提高高质量输出的频率。",
+                "对代理自动化感兴趣但需要安全闸门、可观测性和成本控制的研究者。"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "body": "与通用 CI/CD 工具（如 Jenkins）相比，Loop Engineering 专为 AI 代理的特定行为模式设计，提供的不是流水线引擎，而是代理编排的原语。相对于 LangChain 等链式提示方案，它强调持久运行、状态管理、分级信任，且对多种代理后端进行了抽象，具备更强的生产就绪性。"
+            },
+            {
+              "heading": "版本动态",
+              "body": "---",
+              "bullets": [
+                "仓库创建于 2026-06-09，最近推送 2026-06-23，维护活跃。",
+                "Star 数 786，社区关注度高。",
+                "通过 GitHub Actions 自动运行自身审计工作流，说明维护方在使用自己推广的工具。",
+                "MIT 许可，已有 adopters.md 记录采用者信息。"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：无具体令牌消耗基准数据（仅给出 Low/Medium/High 级别）；各 AI 工具的连接配置细节未在 README 中展开；CLI 输出格式和审计评分的详细规则未说明；对 Windows 环境的兼容性未明确说明"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "XiaomiMiMo__MiMo-Code",
+          "fullName": "XiaomiMiMo/MiMo-Code",
+          "owner": "XiaomiMiMo",
+          "name": "MiMo-Code",
+          "url": "https://github.com/XiaomiMiMo/MiMo-Code",
+          "oneLiner": "带持久记忆与自我进化能力的终端AI编程助手",
+          "description": "MiMo Code: Where Models and Agents Co-Evolve",
+          "language": "TypeScript",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 10549,
+          "starsGained": 0,
+          "streakDays": 10,
+          "isNew": false,
+          "createdAt": "2026-06-10",
+          "pushedAt": "2026-06-24",
+          "latestRelease": "v0.1.2",
+          "firstSeen": "2026-06-19",
+          "topics": [
+            "ai",
+            "ai-agents",
+            "cli",
+            "mimo",
+            "mimo-code"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-19",
+              "reason": "new",
+              "starsTotal": 9894,
+              "starsGained": 0,
+              "release": "v0.1.1"
+            },
+            {
+              "date": "2026-06-19",
+              "reason": "lightweight",
+              "starsTotal": 9894,
+              "starsGained": 0,
+              "release": "v0.1.1"
+            },
+            {
+              "date": "2026-06-20",
+              "reason": "lightweight",
+              "starsTotal": 9899,
+              "starsGained": 0,
+              "release": "v0.1.1"
+            },
+            {
+              "date": "2026-06-20",
+              "reason": "lightweight",
+              "starsTotal": 10005,
+              "starsGained": 0,
+              "release": "v0.1.1"
+            },
+            {
+              "date": "2026-06-20",
+              "reason": "lightweight",
+              "starsTotal": 10033,
+              "starsGained": 0,
+              "release": "v0.1.1"
+            },
+            {
+              "date": "2026-06-21",
+              "reason": "lightweight",
+              "starsTotal": 10076,
+              "starsGained": 0,
+              "release": "v0.1.1"
+            },
+            {
+              "date": "2026-06-21",
+              "reason": "lightweight",
+              "starsTotal": 10138,
+              "starsGained": 0,
+              "release": "v0.1.1"
+            },
+            {
+              "date": "2026-06-22",
+              "reason": "lightweight",
+              "starsTotal": 10187,
+              "starsGained": 0,
+              "release": "v0.1.1"
+            },
+            {
+              "date": "2026-06-23",
+              "reason": "lightweight",
+              "starsTotal": 10351,
+              "starsGained": 0,
+              "release": "v0.1.1"
+            },
+            {
+              "date": "2026-06-24",
+              "reason": "release_update",
+              "starsTotal": 10549,
+              "starsGained": 0,
+              "release": "v0.1.2"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "MiMoCode 是一个终端原生的 AI 编程助手，可读写代码、运行命令、管理 Git，核心特色是拥有跨会话的持久记忆系统，能够自我改进。它从 OpenCode 分叉而来，保留了多提供商支持、TUI、LSP、MCP 等能力，并增加了智能上下文管理、多代理编排和自主目标驱动的开发循环。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "在众多终端 AI 助手中，MiMoCode 通过“记忆”与“自进化”形成鲜明差异，解决了长期项目中 AI 反复遗忘上下文的问题。内置免费体验通道（MiMo Auto）大幅降低上手门槛，且 Star 超过 1 万，反应出强烈的社区兴趣。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "主语言：TypeScript",
+                "运行环境：Node.js/Bun（bun install/dev/turbo typecheck）",
+                "持久记忆：SQLite FTS5 全文搜索",
+                "界面：终端 TUI",
+                "语音：TenVAD 音频活动检测 + 小米 MiMo ASR",
+                "基础框架：OpenCode（开源终端 AI 助手）"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "多 Agent 协作：内置 build（全权限）、plan（只读分析）、compose（规格驱动）三种主 Agent，可创建子 Agent 并行工作。",
+                "持久记忆系统：跨会话的项目记忆（MEMORY.md）、自动检查点（checkpoint.md）、临时笔记、任务进度，通过 FTS5 检索智能注入上下文。",
+                "智能上下文管理：自动保存检查点、上下文接近窗口上限时从检查点重建，并使用 token 预算控制记忆注入量。",
+                "任务跟踪：树状任务 ID（T1, T1.1…）与检查点集成，任务进度在会话重启后保留。",
+                "Goal/Stop 判定：独立 judge 模型评估目标是否真正达成，防止自主工作过早停止。",
+                "Compose 模式：规格驱动的结构化开发工作流，内置规划、执行、代码审查、TDD、调试、验证等技能。",
+                "Dream/Distill 自进化：/dream 从历史会话提取知识到项目记忆；/distill 将重复手动流程封装为可复用技能或子 Agent。",
+                "语音输入：/voice 实时流式语音转录，需 sox 环境。",
+                "零配置启动：MiMo Auto 匿名通道免费使用，也可接入 OpenAI 兼容 API。"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "需要长期维护同一项目、希望 AI 助手记住架构和习惯的开发者。",
+                "复杂多步骤开发任务，需多代理分工和状态追踪。",
+                "想从会话中自动提炼经验、减少重复机械工作的团队。",
+                "偏好终端工作流、不喜欢离开命令行的极客。"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "bullets": [
+                "vs Claude Code：Claude Code 也有子代理和类似技能，但未强调显式的跨会话记忆进化机制，MiMoCode 的持久记忆和 dream/distill 是独特优势。",
+                "vs OpenCode：MiMoCode 的直接基座，缺少记忆系统、自主循环、compose 工作流和自我改进，MiMoCode 全面增强。",
+                "vs Aider：专注于 inline 代码编辑，没有记忆系统和多代理编排。",
+                "vs Cursor/Copilot：编辑器集成而非终端原生，不具备项目级持久记忆和自进化。"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "当前最新版本为 v0.1.2（2026-06-23），项目处于早期但活跃的迭代阶段，README 已展示大量高级功能。社区有两个微信群二维码，显示有中文用户生态。MIT 许可证，但使用时需遵守额外使用限制及小米 MiMo 服务条款。 ---"
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：无公开 benchmark 数据，无法比较代码生成或任务完成准确率；记忆检索的实际效果和性能在大型项目中的表现未说明；语音识别准确率无数据支持；MiMo Auto 免费期限和未来定价策略未披露；项目版本号仅 v0.1.2，功能稳定性和成熟度未知"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "raiyanyahya__recall",
+          "fullName": "raiyanyahya/recall",
+          "owner": "raiyanyahya",
+          "name": "recall",
+          "url": "https://github.com/raiyanyahya/recall",
+          "oneLiner": "全本地、零成本、无 API 的 Claude Code 项目记忆，告别每次重解释",
+          "description": "Stop wasting tokens and re-explaining your project every session. Recall gives Claude Code durable memory — entirely offline.",
+          "language": "Python",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 433,
+          "starsGained": 0,
+          "streakDays": 2,
+          "isNew": false,
+          "createdAt": "2026-06-19",
+          "pushedAt": "2026-06-22",
+          "latestRelease": "v0.3.5",
+          "firstSeen": "2026-06-23",
+          "topics": [
+            "ai",
+            "ai-agents",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "claude-code-plugin",
+            "claude-plugin",
+            "context",
+            "developer-tools",
+            "llm",
+            "local-first",
+            "memory",
+            "offline",
+            "privacy",
+            "productivity",
+            "python",
+            "summarization",
+            "textrank"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-23",
+              "reason": "new",
+              "starsTotal": 323,
+              "starsGained": 0,
+              "release": "v0.3.5"
+            },
+            {
+              "date": "2026-06-24",
+              "reason": "star_jump",
+              "starsTotal": 433,
+              "starsGained": 0,
+              "release": "v0.3.5"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "Recall 是 Claude Code 的一个离线插件，在项目根目录 .recall/ 下自动记录会话历史（history.md）并用纯本地算法生成紧凑的状态摘要（context.md），下次启动时让 Claude 直接恢复上次会话，无需重新解释项目。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "因为 Claude Code 的冷启动问题严重——每次新会话都要花大量 token 解释项目背景，既费钱又费时。Recall 用古典 TextRank 摘要算法在本地完成所有工作，不调任何外部模型，不产生任何费用，且代码和会话记录完全留在用户机器上，击中隐私、成本和效率三个痛点。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "语言: Python (插件逻辑 + CLI 命令)",
+                "核心算法: TF-IDF + TextRank 提取式摘要（自包含在 scripts/summarizer.py）",
+                "依赖: 纯 Python 标准库，numpy 可选（加速用）",
+                "部署: 作为 Claude Code 插件，无 pip install，无外部服务，无 API 调用",
+                "安全: 内置简陋秘密红化，Git 操作时禁用钩子防注入"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "自动捕获：SessionStart/Stop 钩子把每轮对话追加到 history.md",
+                "本地摘要：用户运行 /recall:save 或设置自动保存，用 TextRank 生成 context.md（约 1–2K token），包含目标、文件修改、命令记录、下一步",
+                "会话恢复：新会话开始时展示摘要并询问是否从上次继续",
+                "灵活配置：通过 recall.config.json 调整摘要句数、保存触发时机、是否包含 git diff 等",
+                "隐私安全：完全离线，不联网，不读取密钥，自动红化常见机密格式"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "频繁使用 Claude Code 进行迭代开发的个人开发者",
+                "同一项目多人协作，想通过 .recall/ 共享项目记忆的团队（可提交仓库）",
+                "重视隐私、不能将会话记录上传到第三方模型端点的用户",
+                "使用 Claude 订阅制，希望节省 token 用量的用户"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "body": "与官方内置记忆对比： 与其他第三方记忆工具对比：大多数工具将历史记录发送给外部模型进行总结，Recall 是唯一一个完全在本地运行、不消耗 API 调用、且无网络请求的方案。",
+              "bullets": [
+                "CLAUDE.md/# 是手动编写的规则指令，不自动记录会话",
+                "--continue/--resume 重放完整会话，消耗大量 token，且不生成精炼摘要",
+                "上下文压缩只在单次会话内有效，不跨会话持久化"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "最新版本 v0.3.5 (2026-06-22) 仅在文档层面增加了隐私政策说明，无代码变更。此前版本已实现基本功能、自动保存、安全加固、CI 覆盖 Python 3.9–3.13 及带/不带 numpy 的双路径测试。 ---"
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：未提供 token 节省量的具体基准数据；未说明支持的最低 Claude Code 版本；无实际性能基准数字（仅在 CI 中做质量门控）；未测试与其他 Claude Code 插件的兼容性"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Dong90__oh-my-taiyiforge",
+          "fullName": "Dong90/oh-my-taiyiforge",
+          "owner": "Dong90",
+          "name": "oh-my-taiyiforge",
+          "url": "https://github.com/Dong90/oh-my-taiyiforge",
+          "oneLiner": "将AI编码变成可审计的工程流水线：九阶段状态机，人类审批门控，多终端一致。",
+          "description": "AI workflow automation plugin for intelligent code generation with Claude/Codex",
+          "language": "TypeScript",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 492,
+          "starsGained": 0,
+          "streakDays": 3,
+          "isNew": false,
+          "createdAt": "2026-06-05",
+          "pushedAt": "2026-06-24",
+          "latestRelease": "v0.42.0",
+          "firstSeen": "2026-06-22",
+          "topics": [
+            "ai",
+            "automation",
+            "claude",
+            "code-generation",
+            "codex",
+            "developer-tools",
+            "harness",
+            "harness-engineering",
+            "llm",
+            "opencode",
+            "plugin",
+            "typescript",
+            "workflow"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-22",
+              "reason": "new",
+              "starsTotal": 413,
+              "starsGained": 0,
+              "release": "v0.28.1"
+            },
+            {
+              "date": "2026-06-23",
+              "reason": "release_update",
+              "starsTotal": 453,
+              "starsGained": 0,
+              "release": "v0.38.0"
+            },
+            {
+              "date": "2026-06-24",
+              "reason": "release_update",
+              "starsTotal": 492,
+              "starsGained": 0,
+              "release": "v0.42.0"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "TaiyiForge 是一款 AI 编码工作流自动化插件，将 AI 辅助开发过程从“玄学对话”改造为由状态机驱动的九阶段工程流水线。每个阶段有固定产出和审批点，强制人类在关键决策点介入，确保 AI 不跳过需求、设计或审查。它通过一套统一的 slash 命令，在 Claude、Codex、Cursor、OpenCode 四个 AI 终端中提供一致的行为。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "仓库创建仅 3 周即获 492 星，切中了团队使用 AI 编码的普遍痛点：Agent 总是跳过设计直接写代码、长会话上下文丢失、不同工具流程各异。它给出了一套可落地、可复制的纪律框架，将“AI 写代码”提升到“AI 工程化”，因此吸引关注。"
+            },
+            {
+              "heading": "技术栈",
+              "body": "TypeScript + Node.js (≥20)，通过 npm 包 oh-my-taiyiforge 分发。核心包含状态机引擎、事件总线、ChangeGraph 知识图谱、token 压缩机制及结构化日志。集成到 AI 终端依靠 slash 命令与 SKILL.md 声明。"
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "九阶段流水线：change → requirement → design → ui-design → task → dev → test → review → integration，每步有明确工件。",
+                "人类门控：change、design、review 三个关键阶段必须人类审批，引擎不理会 AI 的自我放行。",
+                "多端一致：28 条 slash 命令及 6 个 umbrella 功能在四端行为完全对齐。",
+                "强制 TDD：dev 阶段必须先写失败的测试再实现，不是建议是硬约束。",
+                "证据防假过门：每个验收标准必须附可执行验证命令（evidence），跑不过不进入下一阶段。",
+                "Token 压缩与断点续传：长会话自动产出 CONTEXT-COMPACT.md，跨天无缝继续。",
+                "ChangeGraph：追踪变更间依赖，改一处知全局。",
+                "灵活 profile：full（大功能）、lite（小修复）、nano（typo 改）等 10 种模式。"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "要求 AI 辅助编码有纪律、可审计的团队。",
+                "同时使用多个 AI 编码工具，需要统一流程。",
+                "需要将 AI 生成的代码置于强制设计、审查和测试门控下的项目。"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "body": "直接与裸 AI 对话相比，TaiyiForge 提供了严格的流程控制和审批，但 README 未展开与同生态工具（Harness、OpenSpec、Superpowers 等）的横向对比，仅声明编排了它们的思想。"
+            },
+            {
+              "heading": "版本动态",
+              "body": "最新 v0.42.0 聚焦文档与工程基建（README 精炼、CI 自动发布）。核心功能在 v0.23–v0.40 期间建立：规范命令集、evidence 强校验、事件总线、ChangeGraph 等。v1.0.0 计划锁定 API、达成四端 parity 并开始收集外部案例。 ---"
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：medium",
+                "信息盲区：无性能 benchmark 或 token 压缩的量化效果数据；多 AI 终端行为一致性的验证报告缺失；缺乏生产环境下的稳定性数据和用户案例；人类门控的具体实现机制未说明（是否仅依赖聊天层面的确认）；除 Node.js ≥20 外未列出其他系统依赖（如操作系统、额外工具）"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "tastyeffectco__sandboxd",
+          "fullName": "tastyeffectco/sandboxd",
+          "owner": "tastyeffectco",
+          "name": "sandboxd",
+          "url": "https://github.com/tastyeffectco/sandboxd",
+          "oneLiner": "自托管AI应用构建引擎：隔离沙箱 + 内置编码代理 + 预览URL，一条命令启动",
+          "description": "Self-hosted dev sandboxes with preview URLs. One command. No Kubernetes, perfect for coding agents and Saas factories",
+          "language": "Go",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 687,
+          "starsGained": 0,
+          "streakDays": 3,
+          "isNew": false,
+          "createdAt": "2026-06-03",
+          "pushedAt": "2026-06-23",
+          "latestRelease": "v0.2.0",
+          "firstSeen": "2026-06-21",
+          "topics": [
+            "ai",
+            "ai-agent",
+            "dev-environment",
+            "docker",
+            "isolation",
+            "preview",
+            "preview-environment",
+            "sandbox",
+            "self-hosted"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-21",
+              "reason": "new",
+              "starsTotal": 678,
+              "starsGained": 0,
+              "release": "0.1.1"
+            },
+            {
+              "date": "2026-06-22",
+              "reason": "lightweight",
+              "starsTotal": 680,
+              "starsGained": 0,
+              "release": "0.1.1"
+            },
+            {
+              "date": "2026-06-24",
+              "reason": "release_update",
+              "starsTotal": 687,
+              "starsGained": 0,
+              "release": "v0.2.0"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "sandboxd 是开源的 AI 应用构建后端，让你用一条命令在自己的服务器上运行类似 Lovable、Bolt、Replit 的体验：发送一个 HTTP 请求，就能创建一个隔离的 Linux 容器，在其中运行 AI 编码代理（OpenCode/Claude Code），并自动获得一个可分享的预览 URL。"
+            },
+            {
+              "heading": "为什么值得关注",
+              "body": "构建“用自然语言生成应用”产品的真正门槛不是 prompt，而是底层的基础设施：多租户隔离、按需启动/休眠、代理编排、文件持久化、崩溃恢复。sandboxd 把这些一次性打成一个单机可运行的二进制 + Docker 方案，没有 Kubernetes、没有独立的数据库或消息队列，非常适合想快速验证想法或构建自托管 AI 平台的团队。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "控制平面：Go 单二进制，通过 Docker CLI 管理容器",
+                "路由/反向代理：Traefik v3，自动发现容器并生成预览域名",
+                "数据存储：SQLite（WAL 模式）作为唯一真实状态源，启动时通过 reconciler 与 Docker 实际状态对齐",
+                "沙箱隔离：基于 Docker + 加固的 runc（cap-drop ALL, no-new-privileges, 只读根文件系统）",
+                "存储：每个沙箱在数据目录下有独立绑挂的工作区目录，持久化保存"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "隔离：每个沙箱拥有独立的文件系统和资源限制，互不可见",
+                "内置编码代理：OpenCode 与 Claude Code 预装在基础镜像中，支持带提示词的 agent 任务（可流式获取进度）",
+                "预览 URL：沙箱自动向 Traefik 注册路由，生成形如 s-<id>-<port>.preview.yourdomain.com 的地址，支持 TLS",
+                "休眠与唤醒：空闲沙箱自动停止释放内存，收到 HTTP 请求时透明唤醒（热启等待页 + 就绪探测）",
+                "持久化：停止/销毁容器可以保留工作区文件，重建时数据不丢失",
+                "应用模板：新版本支持预置可编译运行的脚手架（如 Vite+React+TS），避免代理从空白目录从零开始",
+                "应用实体：引入了高于沙箱生命周期的 app 概念（名称、描述、标签），适合用户视角的应用管理"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "构建 AI 应用生成平台（类似 Lovable/ v0）",
+                "托管多人使用的在线编码环境或编程练习场",
+                "为团队提供按需的预览环境（每个分支/PR 一个沙箱）",
+                "需要完全控制数据与成本的自托管 AI 编码产品"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "bullets": [
+                "自己写 Docker 脚本：单人或少数容器足够，但管理预览域名、休眠唤醒、崩溃恢复、API 权限等会迅速变成平台级工程，sandboxd 替代了这一部分",
+                "基于 Kubernetes 的方案：功能强大但运维复杂，sandboxd 用 SQLite + Docker 单机即可实现，资源开销低，且代码量少可读",
+                "SaaS 方案（Lovable/Replit）：每月付费、数据在外部，sandboxd 自托管让你独享毛利和数据控制"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "最新 v0.2.0 于 2026-06-22 发布，主要改进： 所有改动向下兼容，只需重建基础镜像并让控制平面自动运行迁移即可。 ---",
+              "bullets": [
+                "引入持久化 app 实体与 /v1/apps API，应用生命周期超出单个沙箱",
+                "新增内置的 React 标准模板（启动时自动 seeding），代理立即有可运行的起点",
+                "增加了端到端 CI 和镜像冒烟测试",
+                "任务提交加入 timeout_s 参数，修复了长任务被误杀的问题",
+                "沙箱支持 idle_policy（sleep/always_on）",
+                "多个可靠性修复（快照、空模板创建等）"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：medium",
+                "信息盲区：未说明 API 调用频率限制或请求队列机制；仅提及单机部署，多节点集群扩展方案未涉及；生产安全文档 production-safety.md 未公开细节，无法确认生产级加固程度；未提供沙箱资源限制（CPU/内存）的具体默认值和调整方式；未说明对代理工具以外的其他 AI 工具（如 Aider）的支持计划",
+                "质量提示：缺小标题：为什么火"
+              ]
+            }
+          ]
+        }
+      ],
+      "news": [
+        {
+          "title": "What is Claude Tag?",
+          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1fWks1SmtHVjRfTmhKakR3cWR5dlVVZzMxdW42c0UxZlFjem4wSUtMZ0ltNVpCWUoyby14ak5SREpvQl9heTJ0RGZoUGE4TzBRbGJLTE1UMVFzSksyWk8ydk5mT3BWVnA4Q3FjQkp4TF9oa09H?oc=5",
+          "source": "Claude",
+          "sourceType": "official",
+          "published": "2026-06-23",
+          "summary": "Claude Tag 功能公布，支持为对话添加可搜索标签。",
+          "category": "产品"
+        },
+        {
+          "title": "How GPT-5 helped immunologist Derya Unutmaz solve a 3-year-old mystery",
+          "url": "https://openai.com/index/gpt-5-immunology-mystery",
+          "source": "OpenAI",
+          "sourceType": "official",
+          "published": "2026-06-23",
+          "summary": "GPT-5 Pro 帮助免疫学家解开三年 T 细胞行为谜题，或推动癌症与自身免疫研究。",
+          "category": "研究"
+        },
+        {
+          "title": "Helping build shared standards for advanced AI",
+          "url": "https://openai.com/index/helping-build-shared-standards-for-advanced-ai",
+          "source": "OpenAI",
+          "sourceType": "official",
+          "published": "2026-06-23",
+          "summary": "OpenAI 支持 Appia 基金会构建先进 AI 共享评估标准与安全实践。",
+          "category": "观点"
+        },
+        {
+          "title": "FUTO Swipe – A new swipe typing model",
+          "url": "https://swipe.futo.tech/",
+          "source": "Hacker News",
+          "sourceType": "community",
+          "published": "2026-06-23",
+          "summary": "FUTO 发布新型滑动输入模型。",
+          "category": "模型发布"
+        },
+        {
+          "title": "RIFT-Bench: Dynamic Red-teaming For Agentic AI Systems",
+          "url": "https://arxiv.org/abs/2606.23927",
+          "source": "arXiv cs.AI",
+          "sourceType": "paper",
+          "published": "2026-06-24",
+          "summary": "RIFT-Bench 基准发布，用于动态红队测试智能体 AI 系统。",
+          "category": "研究"
+        },
+        {
+          "title": "Neuro-Symbolic Drive: Rule-Grounded Faithful Reasoning for Driving VLAs",
+          "url": "https://arxiv.org/abs/2606.23938",
+          "source": "arXiv cs.AI",
+          "sourceType": "paper",
+          "published": "2026-06-24",
+          "summary": "Neuro-Symbolic Drive 方法提出，增强驾驶 VLA 模型的规则约束推理。",
+          "category": "研究"
+        },
+        {
+          "title": "EXPO-SQL: Execution-based Clause-level Policy Optimization for Text-to-SQL",
+          "url": "https://arxiv.org/abs/2606.23693",
+          "source": "arXiv cs.CL",
+          "sourceType": "paper",
+          "published": "2026-06-24",
+          "summary": "EXPO-SQL 通过执行感知策略优化提高 Text-to-SQL 性能。",
+          "category": "研究"
+        },
+        {
+          "title": "ModTGCN: Modularity-aware Graph Neural Networks for Text Classification",
+          "url": "https://arxiv.org/abs/2606.23694",
+          "source": "arXiv cs.CL",
+          "sourceType": "paper",
+          "published": "2026-06-24",
+          "summary": "ModTGCN 提出模块化感知图神经网络用于文本分类。",
+          "category": "研究"
+        },
+        {
+          "title": "Build real agentic apps using CUGA: two dozen working examples on a lightweight harness",
+          "url": "https://huggingface.co/blog/ibm-research/cuga-apps",
+          "source": "HF Blog",
+          "sourceType": "hf",
+          "published": "2026-06-23",
+          "summary": "CUGA 平台提供二十余个可运行的智能体应用示例。",
+          "category": "工程"
+        },
+        {
+          "title": "Shipping huggingface_hub every week with AI, open tools, and a human in the loop",
+          "url": "https://huggingface.co/blog/huggingface-hub-release-ci",
+          "source": "HF Blog",
+          "sourceType": "hf",
+          "published": "2026-06-23",
+          "summary": "huggingface_hub 项目利用 AI 与开放工具实现每周发布流程。",
+          "category": "工程"
+        },
+        {
+          "title": "Qwen-AgentWorld-397B-A17B",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1ue56em/qwenagentworld397ba17b/",
+          "source": "r/LocalLLaMA",
+          "sourceType": "community",
+          "published": "2026-06-24",
+          "summary": "Qwen-AgentWorld 系列新模型 Qwen-AgentWorld-397B-A17B 亮相。",
+          "category": "模型发布"
+        },
+        {
+          "title": "Unlimited-OCR is now on ModelScope! A 3.3B multilingual OCR model for one-shot parsing across single images, multi-page documents, and PDFs. License: MIT",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1ue51uk/unlimitedocr_is_now_on_modelscope_a_33b/",
+          "source": "r/LocalLLaMA",
+          "sourceType": "community",
+          "published": "2026-06-24",
+          "summary": "Unlimited-OCR 多语言 OCR 模型在 ModelScope 开源，支持整页文档解析。",
+          "category": "模型发布"
+        }
+      ]
+    },
+    {
       "date": "2026-06-23",
       "count": 10,
       "projects": [
@@ -30,6 +2182,13 @@
               "reason": "new",
               "starsTotal": 113164,
               "starsGained": 573,
+              "release": ""
+            },
+            {
+              "date": "2026-06-24",
+              "reason": "lightweight",
+              "starsTotal": 114502,
+              "starsGained": 1011,
               "release": ""
             }
           ],
@@ -235,6 +2394,13 @@
               "starsTotal": 17758,
               "starsGained": 100,
               "release": "v0.3.1"
+            },
+            {
+              "date": "2026-06-24",
+              "reason": "lightweight",
+              "starsTotal": 18805,
+              "starsGained": 826,
+              "release": "v0.3.1"
             }
           ],
           "analysis": [
@@ -309,7 +2475,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-06-19",
-          "pushedAt": "2026-06-22",
+          "pushedAt": "2026-06-24",
           "latestRelease": "",
           "firstSeen": "2026-06-23",
           "topics": [
@@ -328,67 +2494,73 @@
               "starsTotal": 361,
               "starsGained": 0,
               "release": ""
+            },
+            {
+              "date": "2026-06-24",
+              "reason": "star_jump",
+              "starsTotal": 586,
+              "starsGained": 0,
+              "release": ""
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "一个逆向工程项目，将微软 Copilot 网页版 (copilot.microsoft.com) 的用户会话包装成 OpenAI 兼容的 REST API 和 Python 库。只需一个免费的微软账号登录一次，后续所有请求都复用该会话，无需 API Key、无配额账单。提供 /v1/chat/completions 和 /v1/models 两个端点，支持流式输出和多轮对话（通过 conversation_id），可直接替换 OpenAI 官方 SDK 的 base_url。"
+              "body": "一个逆向工程项目，将微软Copilot网页聊天转换为OpenAI兼容的RESTful API和Python库。用户使用自己的Microsoft/Google账号登录一次后，即可通过本地http://localhost:8000端点免费调用Copilot的大模型，并获得流式响应、多轮对话支持。"
             },
             {
               "heading": "为什么火",
-              "body": "Star 数 361，创建仅 3 天（2026-06-19）就获得关注，因为：",
-              "bullets": [
-                "零摩擦免费：开发者不必申请付费 API，利用已有 Copilot 账号即可获得 GPT-4 级别模型。",
-                "OpenAI 生态即插即用：任何工具只要支持自定义 base_url 就能接入，兼容性极佳。",
-                "无需代理/网关：本地一个进程启动，安全自控。"
-              ]
+              "body": "它为开发者提供了零成本接入高级LLM的途径，特别适合个人项目、原型验证、学习探索。相比需要付费API key的OpenAI服务，该项目降低了试验门槛，且对OpenAI生态工具（如openai SDK）完全兼容。"
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "Python 3.9+ 为主语言",
-                "Playwright 驱动 Chromium 实现网页自动化及登录",
-                "FastAPI 提供 OpenAI 兼容服务器",
-                "Token Bucket 算法实现自限流（server/ratelimit.py）",
-                "Docker 可选部署，需事先在宿主机完成人工登录"
+                "Python 3.9+",
+                "Playwright（浏览器自动化登录）",
+                "FastAPI + uvicorn（服务器端）",
+                "会话持久化（cookies + token）",
+                "令牌桶限流"
               ]
             },
             {
               "heading": "核心能力",
-              "body": "1. Python 客户端：CopilotClient.chat() 返回完整回复和 conversation_id，stream() 逐 token 生成，可维持多轮对话。 2. OpenAI 兼容服务器：启动 app.py 后即可用官方 openai SDK 或任意 HTTP 调用，支持 stream、conversation_id。 3. 会话持久化：浏览器登录后 cookie/token 保存在本地 session/，自动刷新，无需重复登录。 4. 并发与限流控制：上游只支持单会话串行，服务器用锁序列化所有调用。内置 12 rpm 速率限制（可调），保护账号不被封。 5. 模型能力近似：经 GPQA Diamond 测试得到 40.9% 准确率，定性为 GPT-4 级别，无推理模型（o1/o3）能力。"
+              "bullets": [
+                "零成本API：基于已有Copilot账号，无每日限额（但建议适度使用）",
+                "OpenAI兼容：/v1/chat/completions和/v1/models端点，官方SDK可直连",
+                "多轮对话：通过conversation_id维持上下文",
+                "流式输出：支持stream=true的参数",
+                "自动登录与刷新：首次运行弹出浏览器完成登录，后续自动复用会话",
+                "速率与并发控制：服务器串行化请求，内置令牌桶限制（默认12次/分），防止上游封禁",
+                "Docker支持：可容器化部署"
+              ]
             },
             {
               "heading": "适用场景",
-              "body": "不适用：高并发、生产级应用、需要多模型选择、商业用途（受微软服务条款限制）。",
               "bullets": [
-                "个人开发者想用 GPT-4 级模型开发、测试但不想付费。",
-                "本地 AI 工具链需要一个免费后端。",
-                "轻量的一次性自动化任务，并发量极低。"
+                "个人开发者用作免费对话API进行原型测试",
+                "需要轻量对话能力的本地应用（如桌面助手、CLI工具）",
+                "学习OpenAI API接口而无需付费",
+                "在匿名Copilot被屏蔽的地区使用已登录账号访问"
               ]
             },
             {
               "heading": "同类对比",
-              "bullets": [
-                "OpenAI 官方 API：无免费额度，需绑卡；本项目免费但依赖单个 Copilot 账号，响应速度与并发受限。",
-                "其他 Copilot 逆向（如 EdgeGPT）：方法类似，但该项目强调 OpenAI 兼容格式和流式，部署更标准化。",
-                "本地模型（Ollama 等）：硬件要求高，本项目不需要 GPU，利用云端 Copilot。"
-              ]
+              "body": "与直接使用OpenAI API相比，主要优势是免费、无密钥管理；劣势在于不稳定（需维护会话、无法保证SLA）、无模型选择、单会话并发能力弱，且受上游微软策略影响。与ChatGPT逆向项目类似，但该项目专注于Copilot，登录更灵活（支持Google账号）。"
             },
             {
               "heading": "版本动态",
               "body": "---",
               "bullets": [
-                "2026-06-19 首版发布",
-                "2026-06-22 最近更新（示例、测试脚本）",
-                "目前尚无 release tag，早期快速迭代"
+                "项目于2026-06-19创建，近期仍在活跃更新（截止2026-06-24）",
+                "README中已经提供了详细的使用示例、压力测试结果和限速调优方法",
+                "性能评估：GPQA Diamond得分为40.9%，属于GPT-4级，非推理增强模型"
               ]
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
                 "置信度：high",
-                "信息盲区：未提供 GPQA Diamond 基准测试的详细设置（如温度、样本数、prompt 格式等）；未说明 Copilot 背后具体模型版本（GPT-4、4o 等）及其确参；未提及是否支持多模态（图片、文件上传等）；未披露会话 token 自动刷新的具体机制和有效期；未给出高并发下账号被封的风险边界或官方服务条款的可接受范围"
+                "信息盲区：未明确说明实际使用的模型版本（标题提及GPT-5但README中仅声明为“roughly GPT-4 class”），无法核实是否真正调用GPT-5；GPQA Diamond评估细节（例如是否仅单选选择题、上下文设定）在README中简略，具体benchmark代码未提供；会话持久化安全性细节未深入说明，仅说明保存在本地且git忽略；上游微软服务条款合规性风险未详细讨论"
               ]
             }
           ]
@@ -439,73 +2611,71 @@
               "starsTotal": 323,
               "starsGained": 0,
               "release": "v0.3.5"
+            },
+            {
+              "date": "2026-06-24",
+              "reason": "star_jump",
+              "starsTotal": 433,
+              "starsGained": 0,
+              "release": "v0.3.5"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "Recall 是一个 Claude Code 插件，用来给 Claude Code 提供持久记忆。每次会话结束时，它会自动捕获对话、文件操作、命令等信息，并用一个纯本地算法（TF-IDF + TextRank）生成一份简洁的上下文摘要（context.md），下次启动时 Claude 可以直接从这里续上，不再需要重新解释项目。"
+              "body": "Recall 是 Claude Code 的一个离线插件，在项目根目录 .recall/ 下自动记录会话历史（history.md）并用纯本地算法生成紧凑的状态摘要（context.md），下次启动时让 Claude 直接恢复上次会话，无需重新解释项目。"
             },
             {
               "heading": "为什么火",
-              "bullets": [
-                "零成本、零联网：摘要完全在本地 CPU 上跑，无需 API key、不调用外部模型、不消耗 token，对订阅用户免费，对 API 用户省钱。",
-                "隐私优先：所有会话记录和摘要均不离开本机，没有遥测、没有账户、没有第三方服务。",
-                "无缝集成：作为 Claude Code 官方插件格式，安装即用，无需 pip install，无额外依赖（numpy 仅作为可选加速）。"
-              ]
+              "body": "因为 Claude Code 的冷启动问题严重——每次新会话都要花大量 token 解释项目背景，既费钱又费时。Recall 用古典 TextRank 摘要算法在本地完成所有工作，不调任何外部模型，不产生任何费用，且代码和会话记录完全留在用户机器上，击中隐私、成本和效率三个痛点。"
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "语言：Python（标准库为主，无第三方模型依赖）",
-                "摘要算法：TF-IDF 向量化 + 余弦相似图 + TextRank（PageRank 变体），可选 numpy 加速",
-                "集成方式：Claude Code 插件钩子（SessionStart、Stop、SessionEnd）",
-                "数据存储：纯文本 Markdown（.recall/history.md 和 context.md）",
-                "安全措施：内置简易密钥脱敏、Git 命令防注入、输出目录沙箱"
+                "语言: Python (插件逻辑 + CLI 命令)",
+                "核心算法: TF-IDF + TextRank 提取式摘要（自包含在 scripts/summarizer.py）",
+                "依赖: 纯 Python 标准库，numpy 可选（加速用）",
+                "部署: 作为 Claude Code 插件，无 pip install，无外部服务，无 API 调用",
+                "安全: 内置简陋秘密红化，Git 操作时禁用钩子防注入"
               ]
             },
             {
               "heading": "核心能力",
               "bullets": [
-                "自动会话日志：实时追加每次提问、回复、文件操作到 history.md。",
-                "本地上下文摘要：/recall:save 或配置自动触发，用 TextRank 提取最关键的句子，生成 context.md。",
-                "无缝续接：下个会话启动时自动加载摘要，Claude 会询问是否从上次上下文继续。",
-                "与原生记忆互补：不同于 CLAUDE.md（人工规则）或 --continue（重放全部对话），Recall 提供一种自动化、结构化的会话回顾，token 占用极低（~1-2K）。",
-                "可配置：摘要长度、Git 上下文包含、自动保存时机等均可定制。",
-                "隐私硬承诺：无网络调用，无密钥，无第三方模型，且会话记录仅限当前项目。"
+                "自动捕获：SessionStart/Stop 钩子把每轮对话追加到 history.md",
+                "本地摘要：用户运行 /recall:save 或设置自动保存，用 TextRank 生成 context.md（约 1–2K token），包含目标、文件修改、命令记录、下一步",
+                "会话恢复：新会话开始时展示摘要并询问是否从上次继续",
+                "灵活配置：通过 recall.config.json 调整摘要句数、保存触发时机、是否包含 git diff 等",
+                "隐私安全：完全离线，不联网，不读取密钥，自动红化常见机密格式"
               ]
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "需要频繁在多个项目间切换的 Claude Code 用户。",
-                "不想每次会话重新解释项目背景的开发者。",
-                "重视隐私、不愿将工作内容上传到任何服务器的个人或团队。",
-                "用订阅计划且想省 token 的用户（摘要本地生成，续接上下文也很省 token）。",
-                "团队共享记忆：可提交 .recall/ 作为共享上下文（需注意注入风险）。"
+                "频繁使用 Claude Code 进行迭代开发的个人开发者",
+                "同一项目多人协作，想通过 .recall/ 共享项目记忆的团队（可提交仓库）",
+                "重视隐私、不能将会话记录上传到第三方模型端点的用户",
+                "使用 Claude 订阅制，希望节省 token 用量的用户"
               ]
             },
             {
               "heading": "同类对比",
+              "body": "与官方内置记忆对比： 与其他第三方记忆工具对比：大多数工具将历史记录发送给外部模型进行总结，Recall 是唯一一个完全在本地运行、不消耗 API 调用、且无网络请求的方案。",
               "bullets": [
-                "CLAUDE.md / # 规则：需要手动维护，固定指令，不记录会话历史。",
-                "--continue / --resume：能重放会话但 token 消耗高，不够便携，也不提供结构化摘要。",
-                "其他“记忆”工具：通常通过 API 调用外部模型对上下文进行总结，有隐私泄露风险和额外费用，Recall 是少数完全本地运行的选项，且专为 Claude Code 插件生态设计。"
+                "CLAUDE.md/# 是手动编写的规则指令，不自动记录会话",
+                "--continue/--resume 重放完整会话，消耗大量 token，且不生成精炼摘要",
+                "上下文压缩只在单次会话内有效，不跨会话持久化"
               ]
             },
             {
               "heading": "版本动态",
-              "body": "---",
-              "bullets": [
-                "最新版本 v0.3.5（2026-06-22），仅文档更新：新增隐私政策，明确本地运行、无网络、脱敏仅尽力而为等细节。",
-                "上一个功能版本 v0.3.4，代码无变化。",
-                "项目保持活跃维护，CI 覆盖多 Python 版本、lint、安全扫描、基准测试质量门禁。"
-              ]
+              "body": "最新版本 v0.3.5 (2026-06-22) 仅在文档层面增加了隐私政策说明，无代码变更。此前版本已实现基本功能、自动保存、安全加固、CI 覆盖 Python 3.9–3.13 及带/不带 numpy 的双路径测试。 ---"
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
-                "置信度：high"
+                "置信度：high",
+                "信息盲区：未提供 token 节省量的具体基准数据；未说明支持的最低 Claude Code 版本；无实际性能基准数字（仅在 CI 中做质量门控）；未测试与其他 Claude Code 插件的兼容性"
               ]
             }
           ]
@@ -526,7 +2696,7 @@
           "streakDays": 9,
           "isNew": false,
           "createdAt": "2026-03-29",
-          "pushedAt": "2026-06-22",
+          "pushedAt": "2026-06-24",
           "latestRelease": "",
           "firstSeen": "2026-06-19",
           "topics": [
@@ -613,72 +2783,76 @@
               "starsTotal": 12130,
               "starsGained": 6089,
               "release": ""
+            },
+            {
+              "date": "2026-06-24",
+              "reason": "star_jump",
+              "starsTotal": 17024,
+              "starsGained": 9410,
+              "release": ""
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "OpenMontage 是一个开源的代理式视频生产系统，能将 AI 编程助手（Claude Code、Cursor 等）转变为完整的视频制作工作室。它通过 12 条预设管线、52 个工具和 500 多个代理技能，将自然语言描述转化为可渲染的视频项目，支持从真实素材剪辑到 AI 生成动画等多种风格。"
+              "body": "OpenMontage 是一个开源、Agent驱动的视频制作系统，可将 Claude Code、Cursor 等 AI 编码助手转化为完整的视频工作室。用户用自然语言描述需求，Agent 自动完成研究、脚本、素材生成、编辑和最终合成。它区别于普通“图片动画”工具，能通过免费档案资料检索真实运动镜头，剪辑成时间线并渲染成片。"
             },
             {
               "heading": "为什么火",
-              "bullets": [
-                "代理式工作流：完全由代理驱动，自动处理研究、脚本、资产生成、编辑和合成，大幅降低手动操作。",
-                "免费友好：无需 API 密钥即可用 Piper TTS、Archive.org 等免费工具制作视频。",
-                "真实视频能力：不仅仅是图片幻灯片，能使用真实素材和运动剪辑。",
-                "成本披露：示例视频成本低至 $0.15，透明度高。"
-              ]
+              "body": "上线不久即获 17k+ Star，因它彻底简化了视频制作流程：无需专业技能，仅靠文字描述即可生成堪比专业水准的视频，且支持零 API 密钥的免费路径（Piper TTS + Archive.org 等）。示例视频从科幻预告片到吉卜力风格动画，成本低至 0.15 美元，极具吸引力。"
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "语言：Python",
-                "依赖：FFmpeg、Node.js、Remotion 或 HyperFrames 前端渲染",
-                "核心组件：管线定义 (pipeline_defs/)、技能系统 (skills/)、工具注册表 (tools/tool_registry)",
-                "集成提供商：OpenAI、ElevenLabs、FAL、Google 等多种 API，也支持本地 GPU 视频生成（Wan2.1 等）"
+                "语言：Python 3.10+，Node.js 18+",
+                "视频合成：Remotion（React 渲染）或 HyperFrames（HTML/CSS/GSAP）",
+                "语音：Piper TTS（离线），ElevenLabs，OpenAI TTS",
+                "图像/视频生成：FLUX，Stable Diffusion，Google Veo，Kling 等（通过 fal.ai 网关）",
+                "媒体处理：FFmpeg",
+                "素材源：Pexels，Pixabay，Unsplash，Archive.org，NASA，Wikimedia Commons",
+                "编排：管道定义（pipeline_defs），技能注册，工具发现"
               ]
             },
             {
               "heading": "核心能力",
               "bullets": [
-                "多管线支持：图像动画、真实素材纪录片、产品广告、角色动画等",
-                "智能分析：从参考视频提取风格、节奏并生成差异化方案",
-                "渲染引擎：Remotion（React）用于数据驱动动画；HyperFrames（HTML/GSAP）用于动效图形",
-                "自审系统：ffprobe 验证、帧抽样、音频分析等",
-                "无密钥模式：本地 TTS、开放档案素材、免费股票 API"
+                "12 个预定义流水线，覆盖动画短片、产品广告、纪录片蒙太奇等多种类型",
+                "输入 YouTube 链接即可分析并生成类似风格新视频",
+                "多维度自我审查：ffprobe 校验、帧采样、音频分析、字幕检查",
+                "成本预估与控制，支持仅用 OpenAI 等单一 API 完成全流程",
+                "GPU 本地视频生成支持（Wan2.1, Hunyuan 等）",
+                "代理能力完善，适合在 OpenClaw 等 agent 环境中自动运行"
               ]
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "快速生成社交媒体短视频（TikTok、Reels）",
-                "制作低成本广告、产品演示",
-                "内容创作者需要快速将创意变为视频",
-                "开发者在 IDE 中集成视频生成能力"
+                "内容创作者快速生成抖音/YouTube 短片",
+                "开发者将视频生成集成到自动化工作流",
+                "教育培训材料制作（解说动画）",
+                "产品宣传视频低成本打样",
+                "AI 研究者探索 agent 在创意领域的应用"
               ]
             },
             {
               "heading": "同类对比",
+              "body": "同类开源视频生成项目多集中在单个模型调用，或仅能生成静态图片拼接动画。OpenMontage 的优势在于： 缺点是目前对硬件（GPU）和 API 密钥仍有一定依赖，且复杂剧情的逻辑控制尚待观察。",
               "bullets": [
-                "相比 RunwayML 等商业平台：开源、可自托管、成本更低，但需要一定的技术栈",
-                "相比普通的 AI 视频脚本工具：代理式端到端生产，而非仅生成提示词或静态图片",
-                "相比 ComfyUI + AnimateDiff：提供了更高层的抽象和管线管理"
+                "真正的“真实素材”剪辑能力，而非仅图片串烧",
+                "全流程自动化，从策划到渲染无需人工干预",
+                "灵活的提供商体系，自由组合收费/免费工具",
+                "与 AI 编码助手深度集成，而不是单独的命令行工具"
               ]
             },
             {
               "heading": "版本动态",
-              "body": "---",
-              "bullets": [
-                "创建于 2026-03-29，最近推送 2026-06-22",
-                "当前 Star 数 12130，趋势火热",
-                "持续加入新提供商和本地模型支持"
-              ]
+              "body": "项目创建于 2026 年 3 月，最近推送 6 月 24 日，活跃开发中。文档目录包含架构说明、提供商指南及阶段门控（stage-gates），表明仍在快速迭代。许可为 AGPL-3.0。 ---"
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
-                "置信度：medium",
-                "信息盲区：未提供 benchmark 或定量质量评估数据；示例视频的实际生成过程是否经过人工调优未知；本地 GPU 视频生成模型的实际性能和质量未经验证；docs/ARCHITECTURE.md 等详细架构文档内容未在 README 中展示"
+                "置信度：high",
+                "信息盲区：未提供生成视频质量的定量评估或基准测试数据；未详细说明 GPU 本地视频生成的具体硬件要求；未列出所有 52 个工具的具体名称和用途；README 提及 'stage-gates' 但未展开说明其机制"
               ]
             }
           ]
@@ -699,8 +2873,8 @@
           "streakDays": 8,
           "isNew": false,
           "createdAt": "2026-04-07",
-          "pushedAt": "2026-06-22",
-          "latestRelease": "v0.3.6",
+          "pushedAt": "2026-06-23",
+          "latestRelease": "v0.4.0",
           "firstSeen": "2026-06-19",
           "topics": [
             "ai-video",
@@ -767,62 +2941,80 @@
               "starsTotal": 7386,
               "starsGained": 2463,
               "release": "v0.3.6"
+            },
+            {
+              "date": "2026-06-24",
+              "reason": "release_update",
+              "starsTotal": 8632,
+              "starsGained": 1630,
+              "release": "v0.4.0"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "Palmier Pro 是一个从零开始用 Swift 构建的 macOS 视频编辑器，专为 AI 协作设计。它提供完整的时间线编辑能力，同时内置生成式 AI 和 MCP 服务器，允许 Claude、Codex、Cursor 等外部 AI 代理直接操作视频项目。"
+              "body": "Palmier Pro 是一个用 Swift 从零构建的 macOS 视频编辑器，特色是深度集成 AI 生成与代码助手：编辑器中可直接调用 Seedance、Kling 等模型生成视频/图片，同时内置 MCP 服务器，让 Claude Code、Cursor、Codex 等 AI 助手通过标准协议操控时间线。编辑器本身（不含生成式 AI）完全开源（GPLv3），生成模块闭源，采用订阅制。"
             },
             {
               "heading": "为什么火",
               "bullets": [
-                "将 AI 工作流深度整合到传统非线性编辑器中，而不是简单添加插件。",
-                "通过 MCP 协议让你的代码助手和桌面 AI 应用变成视频编辑搭档。",
-                "Y Combinator S24 背景，社区反馈积极（7.3k+ Star）。",
-                "编辑器本身免费开源，降低了体验门槛。"
+                "Y Combinator S24 项目，苹果生态原生应用，近 9k Star，吸引了大量对 AI + 创作工具结合的开发者。",
+                "提出“AI 原生视频编辑器”概念：不再只是插件，而是让 AI 成为协作者，通过 MCP 将 Claude 等变成时间线操作手。",
+                "精准卡位 macOS 26（Tahoe）与 Apple Silicon，利用 Metal 加速视觉效果，展现新技术栈潜力。"
               ]
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "语言：Swift",
-                "平台：macOS 26 (Tahoe) 仅限 Apple Silicon（M系列芯片）",
-                "架构：原生 SwiftUI 应用，内嵌 HTTP MCP 服务器（端口 19789），生成式 AI 后端闭源。",
-                "构建工具：Xcode，CI 在 push/PR 上运行。"
+                "Swift + AppKit/SwiftUI（推测）实现原生 UI 与高性能渲染。",
+                "Metal 用于颜色分级与特效合成（v0.4.0 已集成）。",
+                "MCP 服务器通过 HTTP 暴露在 127.0.0.1:19789，支持 Claude Code/Desktop、Cursor、Codex 等常用 AI 编码工具。",
+                "音频处理支持 PCM 共享读取器、多轨同步，支持 AIFF-C、FLAC 等格式导入。",
+                "生成式 AI 部分闭源，未披露具体协议，或为自研管线与第三方 API 的组合。"
               ]
             },
             {
               "heading": "核心能力",
-              "body": "1. 全功能视频编辑：时间线、剪辑、导出（支持 HEVC 等编解码），文本层、颜色解析等细节打磨。 2. 生成式 AI 集成：在时间线内直接使用 Seedance、Kling、Nano Banana Pro 等模型生成视频/图像（需订阅）。 3. MCP 服务器：应用运行后自动暴露 http://127.0.0.1:19789/mcp，支持 Claude Code/Desktop、Codex、Cursor 通过配置连接。 4. 多语言：README 覆盖 14 种语言，国际化程度高。 5. 社区与支持：Discord、Twitter、邮件渠道。"
+              "bullets": [
+                "完整视频编辑：多轨时间线、剪辑、变换、关键帧、分辨率导出（含 2K、匹配时间线）。",
+                "生成式 AI：在时间线内直接生成 Seedance、Kling、Nano Banana Pro 等模型的图像/视频素材。",
+                "智能代理协作：MCP 服务器让外部 AI 助手可以读取、修改项目，实现自动化剪辑。",
+                "多语言支持：15 种语言，包括阿拉伯语等 RTL 语言。",
+                "免费编辑器：无登录即可使用基础编辑功能，MCP 服务也免费开放。"
+              ]
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "独立视频创作者想用 AI 加速剪辑流程，并让桌面 AI 助手管理项目文件操作。",
-                "开发者探索用 Claude/Cursor 编程式批量处理视频任务，如自动剪辑、加字幕、插入生成片段。",
-                "AI 研究者测试生成模型在现实编辑工作流中的表现。"
+                "视频创作者想要用代码或 AI 助手自动化重复性编辑（如批量加字幕、调色、剪辑片段）。",
+                "开发者试验“AI 代理控制 GUI 工具”的交互范式，利用 MCP 构建自定义剪辑流程。",
+                "macOS 生态重度用户，追求原生性能与 Metal 加速的本地编辑体验。",
+                "对 AI 生成内容与手工编辑混合工作流感兴趣的早期尝鲜者。"
               ]
             },
             {
               "heading": "同类对比",
-              "body": "Palmier Pro 的差异化在于将时间线操作暴露为标准化 MCP 工具，让通用 AI 代理直接操控。",
               "bullets": [
-                "CapCut：免费但闭源，AI 能力有限且无法外部代理控制。",
-                "Adobe Premiere Pro：行业标准但重量级，无原生 MCP 集成，AI 功能依赖插件。",
-                "DaVinci Resolve：调色强，但脚本化需通过 Python/Lua API，非 AI 原语。",
-                "Descript：基于文本的编辑，侧重播客，非传统 NLE。"
+                "对比 Premiere Pro/After Effects：Palmier Pro 更轻量，原生集成 AI 代理，而非通过插件层交互，但功能成熟度远不及 Adobe。",
+                "对比 CapCut：CapCut 更偏向移动/桌面全流程一键式模板与 AI 特效，Palmier Pro 开放 MCP，给技术用户更大的自定义空间。",
+                "对比 DaVinci Resolve：DaVinci 有强大的 API 与 Fusion，但并非为 AI 助手原生设计；Palmier Pro 从底层就考虑 Agent 协作。",
+                "独特优势：唯一一个以 MCP 标准正式支持 Claude/Cursor 等工具的视频编辑器，形成“写代码即剪视频”的新路径。"
               ]
             },
             {
               "heading": "版本动态",
-              "body": "最新 v0.3.6（2026-06-22）修复了预览导出挂起、导入文件夹卡主线程、项目存储目录启动挂起、Clerk 钥匙串主线程卡顿等问题。CI 刚刚建立，表明项目进入快速迭代期。之前还有多语言 README 修复、字体注册修复等，说明团队关注细节和跨语言体验。 ---"
+              "body": "---",
+              "bullets": [
+                "最新 v0.4.0（2026-06-23）引入 Metal 颜色与特效、导出添加 2K 和 Match-Timeline 分辨率、多轨音频同步、修复分栏大小持久化等问题。",
+                "社区贡献活跃，多语言本地化持续更新，关注者通过 Discord/X 反馈，项目迭代较快。",
+                "现阶段仍处于早期，编辑器基础功能稳定，但 AI 能力依赖闭源模块，长期发展取决于订阅模式与开放生态的平衡。"
+              ]
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
                 "置信度：high",
-                "信息盲区：未提供性能基准或与同类编辑器对比的实测数据；生成式 AI 功能闭源，缺乏模型运行细节（本地/云端）和延迟信息；未说明是否支持其他 macOS 版本或 Intel Mac 计划；MCP 工具列表和具体能力未在 README 中列出；无构建/开发环境具体步骤（仅引用 CONTRIBUTING.md）"
+                "信息盲区：生成式 AI 功能的具体模型调用方式及后端架构未公开；MCP 提供的工具、资源、prompts 列表未在 README 中详细列出；编辑器功能与专业视频软件（如 Premiere、DaVinci）的详细功能对比缺失；无性能基准测试数据（渲染速度、时间线帧率等）"
               ]
             }
           ]
@@ -843,8 +3035,8 @@
           "streakDays": 4,
           "isNew": false,
           "createdAt": "2026-05-29",
-          "pushedAt": "2026-06-23",
-          "latestRelease": "chrome-150.0.7844.0",
+          "pushedAt": "2026-06-24",
+          "latestRelease": "v0.3.0",
           "firstSeen": "2026-06-21",
           "topics": [
             "agent",
@@ -885,68 +3077,75 @@
               "starsTotal": 3474,
               "starsGained": 0,
               "release": "chrome-150.0.7844.0"
+            },
+            {
+              "date": "2026-06-24",
+              "reason": "release_update",
+              "starsTotal": 4850,
+              "starsGained": 0,
+              "release": "v0.3.0"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "PixelRAG 是一个以截图而非文本进行文档检索与生成增强（RAG）的框架。它把网页、PDF、图片等渲染成图像瓦片，用微调后的 Qwen3-VL-Embedding 模型生成视觉嵌入，再通过 FAISS 索引实现“所见即所得”的搜索。项目提供了预建的 828 万维基百科页面索引和即时可用 API，同时支持用户自建索引。"
+              "body": "PixelRAG 是一种基于视觉的检索增强生成框架——它不解析 HTML/文本，而是将文档（网页、PDF、图片）渲染成一系列截图块，用视觉嵌入模型编码后存入向量索引，检索时返回最相关的截图块，最终让视觉语言模型（VLM）直接“看”图回答。由 Berkeley SkyLab、BAIR 和 Berkeley NLP 团队开发，对应论文已发布。"
             },
             {
               "heading": "为什么火",
               "bullets": [
-                "保留视觉信息：传统 RAG 将 HTML 解析为纯文本，会丢失表格、图表、排版等结构；PixelRAG 直接使用页面截图，让检索与答案生成能利用完整视觉上下文。",
-                "零门槛体验：官方提供托管 API（无需 API 密钥）和预建索引，一行 curl 即可搜索维基百科；本地使用亦只需 pip install。",
-                "生态延伸：附带 Claude Code 插件（pixelbrowse），让 LLM 通过截图“阅读”网页，无须额外服务；训练代码与数据集公开，便于复现和拓展。"
+                "痛点直击：传统 RAG 的 HTML 解析或文本提取会丢失表格、图表、复杂排版信息，PixelRAG 则完整保留原始视觉布局，特别适合需要理解图表、财务报表、论文架构的姿态。",
+                "开箱即用：官方托管了 8.28M 维基百科页面的预建索引，无需搭建即可通过 API 进行视觉搜索，极大降低体验门槛。",
+                "Claude Code 插件：作为 pixelbrowse 技能直接赋予 Claude “阅读网页截图”的能力，开发者社区反响热烈。",
+                "完全开源可自托管：Apache-2.0 许可，支持本地构建和部署，满足隐私与定制需求。"
               ]
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "渲染引擎：基于 Playwright/CDP 的 pixelshot，支持网页、PDF（需 poppler）以及本地图片。",
-                "嵌入模型：Qwen3-VL-Embedding-2B，LoRA 微调于网页截图数据（权重已发布）。",
-                "索引与搜索：FAISS（支持 CPU/GPU），内置分片构建与服务。",
-                "服务层：FastAPI 提供 REST API；配置通过 YAML 驱动。",
-                "训练工具链：独立 uv 项目，使用 PyTorch 2.9.1 + CUDA 12.9，LoRA 微调流程完整文档化。"
+                "渲染：Playwright / CDP 驱动的 Chromium 无头浏览器渲染网页；PDF 支持通过 poppler 转为截图。",
+                "嵌入模型：Qwen3-VL-Embedding-2B，用 LoRA 在网页截图数据上微调，实现对视觉内容的语义检索；支持 CUDA 与 Apple Silicon MPS。",
+                "索引与搜索：FAISS 向量索引，提供 FastAPI 搜索服务。",
+                "训练：独立的 uv 项目，使用固定版本 torch/transformers，数据与适配器权重已公开。",
+                "跨平台：Linux（CUDA）、macOS（MPS）、Windows（系统 Chrome）均提供基础支持。"
               ]
             },
             {
               "heading": "核心能力",
-              "bullets": [
-                "截图级文档解析：pixelshot 一行命令即可将任意网页或 PDF 转为图像瓦片。",
-                "视觉语义搜索：直接以图像 tile 为检索单元，查询可以是文本或图像（视觉搜索）。",
-                "预建大规模索引：828 万维基百科页面索引，可从 Hugging Face 下载或直接使用官方 API。",
-                "端到端自建流水线：pixelrag index build 一条命令从原始文档到可查询索引。",
-                "生态集成：Claude Code 插件让 AI 助手获得“阅读”网页原貌的能力。"
-              ]
+              "body": "1. pixelshot 渲染器：一行命令将 URL/PDF/图片转为统一大小的截图块，支持分页、宽页2D分块。 2. 完整索引流水线：从源文档到可用索引全流程可编排（chunk → embed → build-index），并支持分阶段单独操作。 3. 多模态检索：支持文本查询和图像查询，返回最相关的截图块（及来源信息）。 4. 预置大规模索引：8.28M 维基页面索引已在 API 和 Hugging Face 提供，可直接搜索或下载部署。 5. Claude Code 集成：无需 MCP 服务器，本地 pixelshot 即可为 Claude 提供页面截图浏览能力。 6. 自托管服务：支持从任意文档构建私有索引并对外暴露兼容的搜索 API。"
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "复杂网页信息抽取：需要理解表格、图表、排版布局的问答或分析任务。",
-                "RAG 系统升级：为现有 LLM 应用增加视觉感知，避免因解析丢失导致答案错误。",
-                "文档数字化与搜索：对 PDF 报告、扫描件等非纯粹文本内容建立视觉索引。",
-                "AI Agent 增强：为浏览器自动化、研究辅助等 Agent 提供更准确的页面理解。"
+                "学术文献检索（保留图表、公式布局）",
+                "金融/法律文档问答（表格与格式敏感）",
+                "为 LLM/Agent 提供“视觉浏览”能力（替代易出错的文本抓取）",
+                "构建可理解布局的企业知识库",
+                "视觉驱动的网页内容监控与变化检测"
               ]
             },
             {
               "heading": "同类对比",
-              "body": "与传统文本 RAG（如 LangChain 文本拆分+向量检索）相比，PixelRAG 的独特优势在于保留视觉结构，回答“表格里某个数字是多少”“图表 X 轴代表什么”之类的问题时不再失效。相较于其他视觉嵌入方案（如 ColPali 使用 ViT 编码器），PixelRAG 采用了完整的多模态 VLM（Qwen3-VL）并针对网页截图微调，更贴合真实网页内容。项目还提供从渲染到索引的全套工程化工具，比纯学术框架更易落地。"
+              "bullets": [
+                "vs 文本 RAG 框架（LangChain/LlamaIndex/Haystack）：传统框架依赖文本分块，丢失视觉结构；PixelRAG 直接操作截图，天然适合多版式文档。",
+                "vs 多模态 RAG 方案（如 ColPali）：PixelRAG 提供了完整的渲染→嵌入→检索→服务工具链，集成度高，且已发布经大规模预训练的 LoRA 嵌入模型和数据集，上手更快。",
+                "vs 商业闭源方案：完全开源，可本地部署，数据不出域；易于定制训练其他视觉嵌入骨干。"
+              ]
             },
             {
               "heading": "版本动态",
               "body": "---",
               "bullets": [
-                "最新 Release: chrome-150.0.7844.0（2026-06-01），主要是 Chromium 头部 shell 补丁，用于 CDP 截图优化。",
-                "主仓库活跃（2026-06-23 推送），已发布 Apache-2.0 论文和完整代码。",
-                "论文题为《PIXELRAG: Web Screenshots Beat Text for Retrieval-Augmented Generation》，由伯克利 SkyLab/BAIR/NLP 出品。"
+                "当前版本 v0.3.0（2026-06-23），距离初始版本 v0.1.0 仅两月，迭代迅速。",
+                "v0.3.0 重点：PDF 分页正确渲染、宽页2D分块、Apple Silicon MPS 原生支持、跨平台 Chrome 自动发现、CDP 渲染稳定性增强、文档补全。",
+                "未来路线未在 README 明确，但从代码结构看可能继续增强跨平台兼容性、拓展文档格式支持和云部署友好度。"
               ]
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
                 "置信度：high",
-                "信息盲区：README 未提供具体 benchmark 数据（如检索准确率、吞吐量），仅指向论文；预建索引的具体架构与资源需求未详述；训练代码与主流水线的适配细节需查阅 train/ 内部文档"
+                "信息盲区：公开 API 限流策略未说明；README 中未包含标准基准评测数据（如 vs 文本 RAG 的召回率/准确率对比）；预建索引与最新模型版本的兼容性未明确（索引可能需要随模型升级重新构建）；Windows 平台的渲染稳定性与完善程度未提供具体测试说明"
               ]
             }
           ]
@@ -967,7 +3166,7 @@
           "streakDays": 6,
           "isNew": false,
           "createdAt": "2026-05-25",
-          "pushedAt": "2026-06-22",
+          "pushedAt": "2026-06-24",
           "latestRelease": "v4.13.0",
           "firstSeen": "2026-06-20",
           "topics": [
@@ -1026,6 +3225,13 @@
               "date": "2026-06-23",
               "reason": "release_update",
               "starsTotal": 1782,
+              "starsGained": 0,
+              "release": "v4.13.0"
+            },
+            {
+              "date": "2026-06-24",
+              "reason": "lightweight",
+              "starsTotal": 1891,
               "starsGained": 0,
               "release": "v4.13.0"
             }
@@ -1106,15 +3312,20 @@
           "streakDays": 2,
           "isNew": false,
           "createdAt": "2026-06-05",
-          "pushedAt": "2026-06-23",
-          "latestRelease": "v0.38.0",
+          "pushedAt": "2026-06-24",
+          "latestRelease": "v0.42.0",
           "firstSeen": "2026-06-22",
           "topics": [
             "ai",
             "automation",
+            "claude",
             "code-generation",
+            "codex",
             "developer-tools",
+            "harness",
+            "harness-engineering",
             "llm",
+            "opencode",
             "plugin",
             "typescript",
             "workflow"
@@ -1133,73 +3344,62 @@
               "starsTotal": 453,
               "starsGained": 0,
               "release": "v0.38.0"
+            },
+            {
+              "date": "2026-06-24",
+              "reason": "release_update",
+              "starsTotal": 492,
+              "starsGained": 0,
+              "release": "v0.42.0"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "TaiyiForge（太一炉）是一个 AI 研发工作流自动化插件，将传统的软件工程标准编排成一条可执行、可审计的九阶段流水线。它不发明新标准，而是把 Harness、OpenSpec、GStack、Superpowers、OMO、Spec-Kit 等六个现有规范的流程变成一台状态机，通过统一的 slash 命令在 Claude、Codex、Cursor、OpenCode 四类 AI 终端中提供一致行为。开发者只需要说 /taiyi:new，引擎就会生成对应的工件、校验门控并自动推进阶段。"
+              "body": "TaiyiForge 是一款 AI 编码工作流自动化插件，将 AI 辅助开发过程从“玄学对话”改造为由状态机驱动的九阶段工程流水线。每个阶段有固定产出和审批点，强制人类在关键决策点介入，确保 AI 不跳过需求、设计或审查。它通过一套统一的 slash 命令，在 Claude、Codex、Cursor、OpenCode 四个 AI 终端中提供一致的行为。"
             },
             {
-              "heading": "为什么火（关注点）",
-              "bullets": [
-                "流程断裂是 AI 编码的普遍痛点：长会话中 Agent 容易忘掉阶段顺序，导致需求丢失或设计半成品直接跳入编码，TaiyiForge 用状态机强制阶段顺序和工件产出，避免了“玄学”式开发。",
-                "多工具统一：不同 AI 终端（Claude Code、Codex、Cursor、OpenCode）各自一套流程，团队难以复用。TaiyiForge 提供一套 28 条 v28 顶栏命令，在任何终端行为一致，降低认知负荷。",
-                "人类门控与自动化的平衡：关键节点（变更审批、设计评审）要求 --approver 人类确认，避免了完全自动化的风险；小修复也有 flow bug 快捷路径，不死板。"
-              ]
+              "heading": "为什么火",
+              "body": "仓库创建仅 3 周即获 492 星，切中了团队使用 AI 编码的普遍痛点：Agent 总是跳过设计直接写代码、长会话上下文丢失、不同工具流程各异。它给出了一套可落地、可复制的纪律框架，将“AI 写代码”提升到“AI 工程化”，因此吸引关注。"
             },
             {
               "heading": "技术栈",
-              "bullets": [
-                "语言：TypeScript",
-                "包管理：npm，零构建安装（npx 分发）",
-                "运行环境：Node.js >= 20",
-                "集成方式：通过 shell 脚本、MCP、命令文件注入 AI 终端的命令系统",
-                "工程化：GitHub Actions CI，829 测试用例，130 源文件"
-              ]
+              "body": "TypeScript + Node.js (≥20)，通过 npm 包 oh-my-taiyiforge 分发。核心包含状态机引擎、事件总线、ChangeGraph 知识图谱、token 压缩机制及结构化日志。集成到 AI 终端依靠 slash 命令与 SKILL.md 声明。"
             },
             {
               "heading": "核心能力",
               "bullets": [
-                "九阶段主流程：change → requirement → design → ui-design → task → dev → test → review → integration → archive，每阶段有固定产出工件（如 CHANGE.md、DESIGN.md）和自动门控校验。",
-                "v28 统一命令：28 条顶栏 slash 命令，分为主链、会话、排查、交付、路由、捷径、伞形命令（Umbrella）七组，覆盖日常开发全流程。",
-                "多终端适配：一键安装到 Claude Code、Codex、Cursor、OpenCode，缺端自动跳过；在 Codex 中自动转换为关键词路由。",
-                "聊天与引擎分轨：用户用 slash 命令，Agent/CI 用 CLI（npx taiyi）运行门控校验和流程推进，避免将大量工件塞入聊天引起上下文爆炸。",
-                "Skill 系统：内置 taiyi-* Skill，如 taiyi-dev 强制 TDD（先红后绿），taiyi-review 支持跨 AI 评审。",
-                "人类审查+自动审计：关键阶段强制人类批准，集成 taiyi_doctor、taiyi_audit 自检与交付门控。"
+                "九阶段流水线：change → requirement → design → ui-design → task → dev → test → review → integration，每步有明确工件。",
+                "人类门控：change、design、review 三个关键阶段必须人类审批，引擎不理会 AI 的自我放行。",
+                "多端一致：28 条 slash 命令及 6 个 umbrella 功能在四端行为完全对齐。",
+                "强制 TDD：dev 阶段必须先写失败的测试再实现，不是建议是硬约束。",
+                "证据防假过门：每个验收标准必须附可执行验证命令（evidence），跑不过不进入下一阶段。",
+                "Token 压缩与断点续传：长会话自动产出 CONTEXT-COMPACT.md，跨天无缝继续。",
+                "ChangeGraph：追踪变更间依赖，改一处知全局。",
+                "灵活 profile：full（大功能）、lite（小修复）、nano（typo 改）等 10 种模式。"
               ]
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "使用 AI 编程助手进行严肃软件开发的团队（尤其多 AI 工具混合使用）",
-                "需要结构化、可审计、可复用的 AI 驱动研发流程",
-                "多人协作、跨会话、持续交付的项目",
-                "不想背诵复杂流程，希望“引擎告诉我下一步”的开发者"
+                "要求 AI 辅助编码有纪律、可审计的团队。",
+                "同时使用多个 AI 编码工具，需要统一流程。",
+                "需要将 AI 生成的代码置于强制设计、审查和测试门控下的项目。"
               ]
             },
             {
               "heading": "同类对比",
-              "bullets": [
-                "相较于直接使用 OpenSpec、Harness 等原始规范：TaiyiForge 将其组合成可编排的状态机，减少了人工串联步骤。",
-                "相较于各 AI 终端原生的 agent 模式：提供了统一的工件锁定和阶段门控，避免了 Agent 忘掉流程。",
-                "相较于单一工具的内置流程（如 Cursor Rules）：跨工具一致性更好，且支持人类审查标记。"
-              ]
+              "body": "直接与裸 AI 对话相比，TaiyiForge 提供了严格的流程控制和审批，但 README 未展开与同生态工具（Harness、OpenSpec、Superpowers 等）的横向对比，仅声明编排了它们的思想。"
             },
             {
               "heading": "版本动态",
-              "body": "---",
-              "bullets": [
-                "最新 Release：v0.38.0 (2026-06-22)，合并 20 个 PR，文档同步，质量审计满分，829 个测试通过。",
-                "近期发展：v0.24 引入零构建安装，v0.25 支持 GitHub 直装，v28 命令体系稳定。",
-                "活跃迹象：快速迭代，命令收敛、安装流程简化。"
-              ]
+              "body": "最新 v0.42.0 聚焦文档与工程基建（README 精炼、CI 自动发布）。核心功能在 v0.23–v0.40 期间建立：规范命令集、evidence 强校验、事件总线、ChangeGraph 等。v1.0.0 计划锁定 API、达成四端 parity 并开始收集外部案例。 ---"
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
-                "置信度：high",
-                "信息盲区：六套集成标准各自的深度和兼容边界未详细说明；无性能基准或大规模团队的使用数据；与 IDE 插件的具体交互细节（如 Cursor 规则文件的格式）仅部分覆盖；README 截断，可能遗漏后续的架构细节和 API 文档"
+                "置信度：medium",
+                "信息盲区：无性能 benchmark 或 token 压缩的量化效果数据；多 AI 终端行为一致性的验证报告缺失；缺乏生产环境下的稳定性数据和用户案例；人类门控的具体实现机制未说明（是否仅依赖聊天层面的确认）；除 Node.js ≥20 外未列出其他系统依赖（如操作系统、额外工具）"
               ]
             }
           ]
@@ -1517,6 +3717,13 @@
               "starsTotal": 863,
               "starsGained": 0,
               "release": ""
+            },
+            {
+              "date": "2026-06-24",
+              "reason": "lightweight",
+              "starsTotal": 870,
+              "starsGained": 0,
+              "release": ""
             }
           ],
           "analysis": [
@@ -1594,7 +3801,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-06-08",
-          "pushedAt": "2026-06-21",
+          "pushedAt": "2026-06-24",
           "latestRelease": "v0.1.4",
           "firstSeen": "2026-06-22",
           "topics": [
@@ -1627,6 +3834,13 @@
               "date": "2026-06-23",
               "reason": "lightweight",
               "starsTotal": 431,
+              "starsGained": 0,
+              "release": "v0.1.4"
+            },
+            {
+              "date": "2026-06-24",
+              "reason": "lightweight",
+              "starsTotal": 442,
               "starsGained": 0,
               "release": "v0.1.4"
             }
@@ -1709,15 +3923,20 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-06-05",
-          "pushedAt": "2026-06-23",
-          "latestRelease": "v0.38.0",
+          "pushedAt": "2026-06-24",
+          "latestRelease": "v0.42.0",
           "firstSeen": "2026-06-22",
           "topics": [
             "ai",
             "automation",
+            "claude",
             "code-generation",
+            "codex",
             "developer-tools",
+            "harness",
+            "harness-engineering",
             "llm",
+            "opencode",
             "plugin",
             "typescript",
             "workflow"
@@ -1736,73 +3955,62 @@
               "starsTotal": 453,
               "starsGained": 0,
               "release": "v0.38.0"
+            },
+            {
+              "date": "2026-06-24",
+              "reason": "release_update",
+              "starsTotal": 492,
+              "starsGained": 0,
+              "release": "v0.42.0"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "TaiyiForge（太一炉）是一个 AI 研发工作流自动化插件，将传统的软件工程标准编排成一条可执行、可审计的九阶段流水线。它不发明新标准，而是把 Harness、OpenSpec、GStack、Superpowers、OMO、Spec-Kit 等六个现有规范的流程变成一台状态机，通过统一的 slash 命令在 Claude、Codex、Cursor、OpenCode 四类 AI 终端中提供一致行为。开发者只需要说 /taiyi:new，引擎就会生成对应的工件、校验门控并自动推进阶段。"
+              "body": "TaiyiForge 是一款 AI 编码工作流自动化插件，将 AI 辅助开发过程从“玄学对话”改造为由状态机驱动的九阶段工程流水线。每个阶段有固定产出和审批点，强制人类在关键决策点介入，确保 AI 不跳过需求、设计或审查。它通过一套统一的 slash 命令，在 Claude、Codex、Cursor、OpenCode 四个 AI 终端中提供一致的行为。"
             },
             {
-              "heading": "为什么火（关注点）",
-              "bullets": [
-                "流程断裂是 AI 编码的普遍痛点：长会话中 Agent 容易忘掉阶段顺序，导致需求丢失或设计半成品直接跳入编码，TaiyiForge 用状态机强制阶段顺序和工件产出，避免了“玄学”式开发。",
-                "多工具统一：不同 AI 终端（Claude Code、Codex、Cursor、OpenCode）各自一套流程，团队难以复用。TaiyiForge 提供一套 28 条 v28 顶栏命令，在任何终端行为一致，降低认知负荷。",
-                "人类门控与自动化的平衡：关键节点（变更审批、设计评审）要求 --approver 人类确认，避免了完全自动化的风险；小修复也有 flow bug 快捷路径，不死板。"
-              ]
+              "heading": "为什么火",
+              "body": "仓库创建仅 3 周即获 492 星，切中了团队使用 AI 编码的普遍痛点：Agent 总是跳过设计直接写代码、长会话上下文丢失、不同工具流程各异。它给出了一套可落地、可复制的纪律框架，将“AI 写代码”提升到“AI 工程化”，因此吸引关注。"
             },
             {
               "heading": "技术栈",
-              "bullets": [
-                "语言：TypeScript",
-                "包管理：npm，零构建安装（npx 分发）",
-                "运行环境：Node.js >= 20",
-                "集成方式：通过 shell 脚本、MCP、命令文件注入 AI 终端的命令系统",
-                "工程化：GitHub Actions CI，829 测试用例，130 源文件"
-              ]
+              "body": "TypeScript + Node.js (≥20)，通过 npm 包 oh-my-taiyiforge 分发。核心包含状态机引擎、事件总线、ChangeGraph 知识图谱、token 压缩机制及结构化日志。集成到 AI 终端依靠 slash 命令与 SKILL.md 声明。"
             },
             {
               "heading": "核心能力",
               "bullets": [
-                "九阶段主流程：change → requirement → design → ui-design → task → dev → test → review → integration → archive，每阶段有固定产出工件（如 CHANGE.md、DESIGN.md）和自动门控校验。",
-                "v28 统一命令：28 条顶栏 slash 命令，分为主链、会话、排查、交付、路由、捷径、伞形命令（Umbrella）七组，覆盖日常开发全流程。",
-                "多终端适配：一键安装到 Claude Code、Codex、Cursor、OpenCode，缺端自动跳过；在 Codex 中自动转换为关键词路由。",
-                "聊天与引擎分轨：用户用 slash 命令，Agent/CI 用 CLI（npx taiyi）运行门控校验和流程推进，避免将大量工件塞入聊天引起上下文爆炸。",
-                "Skill 系统：内置 taiyi-* Skill，如 taiyi-dev 强制 TDD（先红后绿），taiyi-review 支持跨 AI 评审。",
-                "人类审查+自动审计：关键阶段强制人类批准，集成 taiyi_doctor、taiyi_audit 自检与交付门控。"
+                "九阶段流水线：change → requirement → design → ui-design → task → dev → test → review → integration，每步有明确工件。",
+                "人类门控：change、design、review 三个关键阶段必须人类审批，引擎不理会 AI 的自我放行。",
+                "多端一致：28 条 slash 命令及 6 个 umbrella 功能在四端行为完全对齐。",
+                "强制 TDD：dev 阶段必须先写失败的测试再实现，不是建议是硬约束。",
+                "证据防假过门：每个验收标准必须附可执行验证命令（evidence），跑不过不进入下一阶段。",
+                "Token 压缩与断点续传：长会话自动产出 CONTEXT-COMPACT.md，跨天无缝继续。",
+                "ChangeGraph：追踪变更间依赖，改一处知全局。",
+                "灵活 profile：full（大功能）、lite（小修复）、nano（typo 改）等 10 种模式。"
               ]
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "使用 AI 编程助手进行严肃软件开发的团队（尤其多 AI 工具混合使用）",
-                "需要结构化、可审计、可复用的 AI 驱动研发流程",
-                "多人协作、跨会话、持续交付的项目",
-                "不想背诵复杂流程，希望“引擎告诉我下一步”的开发者"
+                "要求 AI 辅助编码有纪律、可审计的团队。",
+                "同时使用多个 AI 编码工具，需要统一流程。",
+                "需要将 AI 生成的代码置于强制设计、审查和测试门控下的项目。"
               ]
             },
             {
               "heading": "同类对比",
-              "bullets": [
-                "相较于直接使用 OpenSpec、Harness 等原始规范：TaiyiForge 将其组合成可编排的状态机，减少了人工串联步骤。",
-                "相较于各 AI 终端原生的 agent 模式：提供了统一的工件锁定和阶段门控，避免了 Agent 忘掉流程。",
-                "相较于单一工具的内置流程（如 Cursor Rules）：跨工具一致性更好，且支持人类审查标记。"
-              ]
+              "body": "直接与裸 AI 对话相比，TaiyiForge 提供了严格的流程控制和审批，但 README 未展开与同生态工具（Harness、OpenSpec、Superpowers 等）的横向对比，仅声明编排了它们的思想。"
             },
             {
               "heading": "版本动态",
-              "body": "---",
-              "bullets": [
-                "最新 Release：v0.38.0 (2026-06-22)，合并 20 个 PR，文档同步，质量审计满分，829 个测试通过。",
-                "近期发展：v0.24 引入零构建安装，v0.25 支持 GitHub 直装，v28 命令体系稳定。",
-                "活跃迹象：快速迭代，命令收敛、安装流程简化。"
-              ]
+              "body": "最新 v0.42.0 聚焦文档与工程基建（README 精炼、CI 自动发布）。核心功能在 v0.23–v0.40 期间建立：规范命令集、evidence 强校验、事件总线、ChangeGraph 等。v1.0.0 计划锁定 API、达成四端 parity 并开始收集外部案例。 ---"
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
-                "置信度：high",
-                "信息盲区：六套集成标准各自的深度和兼容边界未详细说明；无性能基准或大规模团队的使用数据；与 IDE 插件的具体交互细节（如 Cursor 规则文件的格式）仅部分覆盖；README 截断，可能遗漏后续的架构细节和 API 文档"
+                "置信度：medium",
+                "信息盲区：无性能 benchmark 或 token 压缩的量化效果数据；多 AI 终端行为一致性的验证报告缺失；缺乏生产环境下的稳定性数据和用户案例；人类门控的具体实现机制未说明（是否仅依赖聊天层面的确认）；除 Node.js ≥20 外未列出其他系统依赖（如操作系统、额外工具）"
               ]
             }
           ]
@@ -1823,8 +4031,8 @@
           "streakDays": 3,
           "isNew": false,
           "createdAt": "2026-05-29",
-          "pushedAt": "2026-06-23",
-          "latestRelease": "chrome-150.0.7844.0",
+          "pushedAt": "2026-06-24",
+          "latestRelease": "v0.3.0",
           "firstSeen": "2026-06-21",
           "topics": [
             "agent",
@@ -1865,68 +4073,75 @@
               "starsTotal": 3474,
               "starsGained": 0,
               "release": "chrome-150.0.7844.0"
+            },
+            {
+              "date": "2026-06-24",
+              "reason": "release_update",
+              "starsTotal": 4850,
+              "starsGained": 0,
+              "release": "v0.3.0"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "PixelRAG 是一个以截图而非文本进行文档检索与生成增强（RAG）的框架。它把网页、PDF、图片等渲染成图像瓦片，用微调后的 Qwen3-VL-Embedding 模型生成视觉嵌入，再通过 FAISS 索引实现“所见即所得”的搜索。项目提供了预建的 828 万维基百科页面索引和即时可用 API，同时支持用户自建索引。"
+              "body": "PixelRAG 是一种基于视觉的检索增强生成框架——它不解析 HTML/文本，而是将文档（网页、PDF、图片）渲染成一系列截图块，用视觉嵌入模型编码后存入向量索引，检索时返回最相关的截图块，最终让视觉语言模型（VLM）直接“看”图回答。由 Berkeley SkyLab、BAIR 和 Berkeley NLP 团队开发，对应论文已发布。"
             },
             {
               "heading": "为什么火",
               "bullets": [
-                "保留视觉信息：传统 RAG 将 HTML 解析为纯文本，会丢失表格、图表、排版等结构；PixelRAG 直接使用页面截图，让检索与答案生成能利用完整视觉上下文。",
-                "零门槛体验：官方提供托管 API（无需 API 密钥）和预建索引，一行 curl 即可搜索维基百科；本地使用亦只需 pip install。",
-                "生态延伸：附带 Claude Code 插件（pixelbrowse），让 LLM 通过截图“阅读”网页，无须额外服务；训练代码与数据集公开，便于复现和拓展。"
+                "痛点直击：传统 RAG 的 HTML 解析或文本提取会丢失表格、图表、复杂排版信息，PixelRAG 则完整保留原始视觉布局，特别适合需要理解图表、财务报表、论文架构的姿态。",
+                "开箱即用：官方托管了 8.28M 维基百科页面的预建索引，无需搭建即可通过 API 进行视觉搜索，极大降低体验门槛。",
+                "Claude Code 插件：作为 pixelbrowse 技能直接赋予 Claude “阅读网页截图”的能力，开发者社区反响热烈。",
+                "完全开源可自托管：Apache-2.0 许可，支持本地构建和部署，满足隐私与定制需求。"
               ]
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "渲染引擎：基于 Playwright/CDP 的 pixelshot，支持网页、PDF（需 poppler）以及本地图片。",
-                "嵌入模型：Qwen3-VL-Embedding-2B，LoRA 微调于网页截图数据（权重已发布）。",
-                "索引与搜索：FAISS（支持 CPU/GPU），内置分片构建与服务。",
-                "服务层：FastAPI 提供 REST API；配置通过 YAML 驱动。",
-                "训练工具链：独立 uv 项目，使用 PyTorch 2.9.1 + CUDA 12.9，LoRA 微调流程完整文档化。"
+                "渲染：Playwright / CDP 驱动的 Chromium 无头浏览器渲染网页；PDF 支持通过 poppler 转为截图。",
+                "嵌入模型：Qwen3-VL-Embedding-2B，用 LoRA 在网页截图数据上微调，实现对视觉内容的语义检索；支持 CUDA 与 Apple Silicon MPS。",
+                "索引与搜索：FAISS 向量索引，提供 FastAPI 搜索服务。",
+                "训练：独立的 uv 项目，使用固定版本 torch/transformers，数据与适配器权重已公开。",
+                "跨平台：Linux（CUDA）、macOS（MPS）、Windows（系统 Chrome）均提供基础支持。"
               ]
             },
             {
               "heading": "核心能力",
-              "bullets": [
-                "截图级文档解析：pixelshot 一行命令即可将任意网页或 PDF 转为图像瓦片。",
-                "视觉语义搜索：直接以图像 tile 为检索单元，查询可以是文本或图像（视觉搜索）。",
-                "预建大规模索引：828 万维基百科页面索引，可从 Hugging Face 下载或直接使用官方 API。",
-                "端到端自建流水线：pixelrag index build 一条命令从原始文档到可查询索引。",
-                "生态集成：Claude Code 插件让 AI 助手获得“阅读”网页原貌的能力。"
-              ]
+              "body": "1. pixelshot 渲染器：一行命令将 URL/PDF/图片转为统一大小的截图块，支持分页、宽页2D分块。 2. 完整索引流水线：从源文档到可用索引全流程可编排（chunk → embed → build-index），并支持分阶段单独操作。 3. 多模态检索：支持文本查询和图像查询，返回最相关的截图块（及来源信息）。 4. 预置大规模索引：8.28M 维基页面索引已在 API 和 Hugging Face 提供，可直接搜索或下载部署。 5. Claude Code 集成：无需 MCP 服务器，本地 pixelshot 即可为 Claude 提供页面截图浏览能力。 6. 自托管服务：支持从任意文档构建私有索引并对外暴露兼容的搜索 API。"
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "复杂网页信息抽取：需要理解表格、图表、排版布局的问答或分析任务。",
-                "RAG 系统升级：为现有 LLM 应用增加视觉感知，避免因解析丢失导致答案错误。",
-                "文档数字化与搜索：对 PDF 报告、扫描件等非纯粹文本内容建立视觉索引。",
-                "AI Agent 增强：为浏览器自动化、研究辅助等 Agent 提供更准确的页面理解。"
+                "学术文献检索（保留图表、公式布局）",
+                "金融/法律文档问答（表格与格式敏感）",
+                "为 LLM/Agent 提供“视觉浏览”能力（替代易出错的文本抓取）",
+                "构建可理解布局的企业知识库",
+                "视觉驱动的网页内容监控与变化检测"
               ]
             },
             {
               "heading": "同类对比",
-              "body": "与传统文本 RAG（如 LangChain 文本拆分+向量检索）相比，PixelRAG 的独特优势在于保留视觉结构，回答“表格里某个数字是多少”“图表 X 轴代表什么”之类的问题时不再失效。相较于其他视觉嵌入方案（如 ColPali 使用 ViT 编码器），PixelRAG 采用了完整的多模态 VLM（Qwen3-VL）并针对网页截图微调，更贴合真实网页内容。项目还提供从渲染到索引的全套工程化工具，比纯学术框架更易落地。"
+              "bullets": [
+                "vs 文本 RAG 框架（LangChain/LlamaIndex/Haystack）：传统框架依赖文本分块，丢失视觉结构；PixelRAG 直接操作截图，天然适合多版式文档。",
+                "vs 多模态 RAG 方案（如 ColPali）：PixelRAG 提供了完整的渲染→嵌入→检索→服务工具链，集成度高，且已发布经大规模预训练的 LoRA 嵌入模型和数据集，上手更快。",
+                "vs 商业闭源方案：完全开源，可本地部署，数据不出域；易于定制训练其他视觉嵌入骨干。"
+              ]
             },
             {
               "heading": "版本动态",
               "body": "---",
               "bullets": [
-                "最新 Release: chrome-150.0.7844.0（2026-06-01），主要是 Chromium 头部 shell 补丁，用于 CDP 截图优化。",
-                "主仓库活跃（2026-06-23 推送），已发布 Apache-2.0 论文和完整代码。",
-                "论文题为《PIXELRAG: Web Screenshots Beat Text for Retrieval-Augmented Generation》，由伯克利 SkyLab/BAIR/NLP 出品。"
+                "当前版本 v0.3.0（2026-06-23），距离初始版本 v0.1.0 仅两月，迭代迅速。",
+                "v0.3.0 重点：PDF 分页正确渲染、宽页2D分块、Apple Silicon MPS 原生支持、跨平台 Chrome 自动发现、CDP 渲染稳定性增强、文档补全。",
+                "未来路线未在 README 明确，但从代码结构看可能继续增强跨平台兼容性、拓展文档格式支持和云部署友好度。"
               ]
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
                 "置信度：high",
-                "信息盲区：README 未提供具体 benchmark 数据（如检索准确率、吞吐量），仅指向论文；预建索引的具体架构与资源需求未详述；训练代码与主流水线的适配细节需查阅 train/ 内部文档"
+                "信息盲区：公开 API 限流策略未说明；README 中未包含标准基准评测数据（如 vs 文本 RAG 的召回率/准确率对比）；预建索引与最新模型版本的兼容性未明确（索引可能需要随模型升级重新构建）；Windows 平台的渲染稳定性与完善程度未提供具体测试说明"
               ]
             }
           ]
@@ -2075,8 +4290,8 @@
           "streakDays": 7,
           "isNew": false,
           "createdAt": "2026-06-16",
-          "pushedAt": "2026-06-22",
-          "latestRelease": "eve@0.12.0",
+          "pushedAt": "2026-06-24",
+          "latestRelease": "eve@0.13.3",
           "firstSeen": "2026-06-19",
           "topics": [
             "agent",
@@ -2138,66 +4353,77 @@
               "starsTotal": 2075,
               "starsGained": 0,
               "release": "eve@0.12.0"
+            },
+            {
+              "date": "2026-06-24",
+              "reason": "release_update",
+              "starsTotal": 2473,
+              "starsGained": 0,
+              "release": "eve@0.13.3"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "eve 是 Vercel 推出的文件系统优先的 TypeScript 框架，用于构建持久化的 AI 代理（agent）。它强制将代理的核心能力——指令、工具、技能、通道、定时任务——落入约定的目录结构，使项目可直接通过文件树理解行为，降低认知负担。"
+              "body": "eve（Vercel 出品）是一个以文件系统为首要创作界面的持久化 AI 代理框架。代理的所有核心能力——系统提示、工具、技能、频道、定时任务——都按约定放在特定的文件与目录中，使得项目结构即代理逻辑，便于检查、扩展和运维。它用 TypeScript 编写，提供 npx eve@latest init 脚手架，内置交互式终端 UI，并支持快速接入 Anthropic 等模型。"
             },
             {
               "heading": "为什么火",
               "bullets": [
-                "Vercel 背书：依托 Vercel 的开发者生态和设计哲学，与 Next.js 一脉相承的“约定优于配置”体验。",
-                "零胶水起步：一个 instructions.md 加可选工具函数即可运行，初始化命令自动搭建项目。",
-                "开发友好：本地 eve dev 提供交互式终端，支持动态模块热重载，模型与工具变更即时生效。",
-                "可扩展性：内置通道（HTTP、Slack、Discord）、定时任务、子代理等机制，覆盖常见 AI 应用场景。"
+                "极简约定：代理的入口、工具、指令一目了然，无需复杂的对象组装或隐式配置。",
+                "Vercel 背书：由 Vercel 团队维护，与 Vercel 生态（如 AI SDK）存在潜在协同。",
+                "持久化与协作：文件天然可版本控制，适用于需要长期维护、多人参与的代理项目。",
+                "beta 阶段热度：Star 增长较快，社区在 GitHub Discussions 活跃。"
               ]
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "语言：TypeScript（Node.js 运行环境）",
-                "核心依赖：Zod（输入校验）、Vercel AI SDK（模型集成，推测）",
-                "执行模型：本地进程执行工具/skill，可选沙箱隔离（文档提及 sandbox）",
-                "分发方式：npm 包，脚手架通过 npx eve@latest init 使用"
+                "语言：TypeScript",
+                "运行时：Node.js",
+                "模型接入：通过 defineAgent 配置模型 ID（如 anthropic/claude-sonnet-4.6），需外部 API 密钥",
+                "工具校验：使用 Zod 定义输入 schema",
+                "交互频道：内置 HTTP、Slack、Discord 等频道支持",
+                "调度：基于 cron 的 jobs",
+                "沙箱：主题标签提及 sandbox，但本文档未展开说明，可能指执行环境隔离"
               ]
             },
             {
               "heading": "核心能力",
-              "body": "1. 指令系统：instructions.md 作为持久化系统提示词，支持 Markdown 语法，模型始终可见。 2. 工具定义：TypeScript 函数通过 defineTool 暴露给模型，使用 Zod 声明输入格式，同步或异步执行。 3. 技能：按需加载的 Markdown 过程描述或程序模块，适合多步工作流。 4. 通道：声明式接入 Slack、Discord 等外部消息接口，统一消息路由。 5. 定时任务：类似 Cron 的周期性动作，用 TypeScript 定义。 6. 模型灵活：通过 agent.ts 切换提供商（如 Anthropic Claude），支持代码级模型解析与动态导入。 7. 子代理与动态映射：可嵌套代理，动态工具映射支持命名空间隔离，避免冲突。"
+              "body": "1. 指令即文件：instructions.md 是常驻系统提示，修改即更新行为。 2. 工具定义：tools/ 下的 TypeScript 文件导出 defineTool，带 Zod schema 与异步执行逻辑。 3. 技能：skills/ 目录存放按需加载的过程性 Markdown。 4. 频道：channels/ 支持多种消息渠道接入（HTTP、Slack 等）。 5. 定时调度：schedules/ 定义周期性任务。 6. 人工干预：支持 human-in-the-loop 提示。 7. 子代理：可创建子代理协调复杂任务。"
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "个人助理或聊天机器人（支持多通道）",
-                "自动化工作流（定时任务 + 工具调用）",
-                "需要快速原型的多步骤 AI 应用",
-                "希望代码与配置分离、利于团队协作的项目"
+                "快速原型：想用最短路径得到一个可交互的 AI 助手。",
+                "团队开发：需要可审查、可版本化的代理配置，避免黑盒。",
+                "渠道集成：需要同时对接 Slack、Discord 等消息平台的机器人。",
+                "工作流自动化：结合定时任务和工具调用，实现定期报告、数据抓取等。"
               ]
             },
             {
               "heading": "同类对比",
+              "body": "对比 LangChain Agent 或 Semantic Kernel，eve 的差异化在于： 当前它更偏向个人与团队的“文件即代理”哲学，而 LangChain 等更偏库式编排。",
               "bullets": [
-                "vs. LangChain/LlamaIndex：eve 不提供庞大的工具链和 RAG 抽象，而是聚焦文件和约定，更轻量、侵入性更低。",
-                "vs. AutoGen/ CrewAI：后者侧重多代理对话编排，eve 以单代理内嵌工具、技能和子代理方式实现，更贴近传统应用开发。",
-                "独特性：全文件驱动，开发体验极简，天然适合作为 AI 能力嵌入现有 Node.js 项目。"
+                "文件系统优先：将代理逻辑显式化为文件结构，而非全部代码内组装。",
+                "轻量约定：不引入复杂的链式抽象，学习曲线较低。",
+                "Vercel 原生：可能深度集成 Vercel 部署和 AI SDK（具体整合待确认）。"
               ]
             },
             {
               "heading": "版本动态",
               "body": "---",
               "bullets": [
-                "最新版本：0.12.0（2026-06-21）",
-                "关键变更：动态工具映射的 key 不再自动添加文件标识前缀，改为使用原始名称，若冲突需手动命名空间；连接器工具按 <connection>__<tool> 格式重命名。修复了 eve dev 下代码定义模型的解析问题，子代理可复用父级模块映射以避免重复构建。",
-                "发展阶段：仍处 Beta，API 和行为可能变动，遵循 Vercel Beta 条款。"
+                "最新 Release: eve@0.13.3（2026-06-23），当前为 beta 阶段。",
+                "补丁更新：共享 Chat SDK Block Kit 基元用于 Slack 卡片渲染，可见与 Vercel 其他基础设施的联动。",
+                "行为可能变化，API 在 GA 前不稳定。"
               ]
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
                 "置信度：medium",
-                "信息盲区：未提供性能 benchmark 或与其他框架的量化对比；支持的模型提供商列表未在 README 中完全列出（仅示例为 Anthropic）；沙箱执行的具体隔离技术栈（如 Docker、Node.js vm 等）未说明；生产部署方式（是否仅限 Vercel 或可自托管）未明确；子代理间通信与状态共享的具体实现细节缺失"
+                "信息盲区：未说明模型API密钥的具体配置方式（如环境变量名）；未提供沙箱（sandbox）机制的实现细节与隔离程度；未说明自托管部署的完整步骤，以及与Vercel平台的耦合程度；无性能基准或大规模生产数据；子代理、技能（skills）的具体编写规范未在本文档展开"
               ]
             }
           ]
@@ -2271,7 +4497,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-01-10",
-          "pushedAt": "2026-06-22",
+          "pushedAt": "2026-06-24",
           "latestRelease": "v3.23.0",
           "firstSeen": "2026-06-21",
           "topics": [
@@ -2303,6 +4529,13 @@
               "reason": "lightweight",
               "starsTotal": 45846,
               "starsGained": 1557,
+              "release": "v3.23.0"
+            },
+            {
+              "date": "2026-06-24",
+              "reason": "lightweight",
+              "starsTotal": 47718,
+              "starsGained": 1119,
               "release": "v3.23.0"
             }
           ],
@@ -2383,7 +4616,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2025-05-07",
-          "pushedAt": "2026-06-23",
+          "pushedAt": "2026-06-24",
           "latestRelease": "",
           "firstSeen": "2026-06-21",
           "topics": [
@@ -2426,6 +4659,13 @@
               "reason": "lightweight",
               "starsTotal": 73272,
               "starsGained": 738,
+              "release": ""
+            },
+            {
+              "date": "2026-06-24",
+              "reason": "lightweight",
+              "starsTotal": 74194,
+              "starsGained": 739,
               "release": ""
             }
           ],
@@ -2683,6 +4923,13 @@
               "starsTotal": 966,
               "starsGained": 0,
               "release": "v3.2.5"
+            },
+            {
+              "date": "2026-06-24",
+              "reason": "lightweight",
+              "starsTotal": 983,
+              "starsGained": 0,
+              "release": "v3.2.5"
             }
           ],
           "analysis": [
@@ -2764,8 +5011,8 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-06-03",
-          "pushedAt": "2026-06-16",
-          "latestRelease": "0.1.1",
+          "pushedAt": "2026-06-23",
+          "latestRelease": "v0.2.0",
           "firstSeen": "2026-06-21",
           "topics": [
             "ai",
@@ -2773,7 +5020,6 @@
             "dev-environment",
             "docker",
             "isolation",
-            "pinokio",
             "preview",
             "preview-environment",
             "sandbox",
@@ -2793,69 +5039,81 @@
               "starsTotal": 680,
               "starsGained": 0,
               "release": "0.1.1"
+            },
+            {
+              "date": "2026-06-24",
+              "reason": "release_update",
+              "starsTotal": 687,
+              "starsGained": 0,
+              "release": "v0.2.0"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "sandboxd 是一个开源后端引擎，专为 AI 应用构建产品（如 Lovable、Bolt、Replit）设计。它提供按用户隔离的云开发环境、内置编码代理和实时预览 URL，通过自托管方式实现。一个 HTTP 请求即可创建沙箱、运行 AI 代理、生成可访问的预览链接，底层使用 Docker 容器 + SQLite + Traefik 路由，无需 Kubernetes。"
+              "body": "sandboxd 是开源的 AI 应用构建后端，让你用一条命令在自己的服务器上运行类似 Lovable、Bolt、Replit 的体验：发送一个 HTTP 请求，就能创建一个隔离的 Linux 容器，在其中运行 AI 编码代理（OpenCode/Claude Code），并自动获得一个可分享的预览 URL。"
             },
             {
-              "heading": "为什么火（解决什么痛点）",
-              "bullets": [
-                "平台构建者常需从零实现多租户隔离、成本控制、代理编排、预览 URL，耗时数月；sandboxd 将这些集成到一键部署中。",
-                "闲置自动休眠、请求唤醒，极大提高服务器密度，节省云成本。",
-                "开源 MIT 协议，无供应商锁定，适合需要控制数据和利润的团队。"
-              ]
+              "heading": "为什么值得关注",
+              "body": "构建“用自然语言生成应用”产品的真正门槛不是 prompt，而是底层的基础设施：多租户隔离、按需启动/休眠、代理编排、文件持久化、崩溃恢复。sandboxd 把这些一次性打成一个单机可运行的二进制 + Docker 方案，没有 Kubernetes、没有独立的数据库或消息队列，非常适合想快速验证想法或构建自托管 AI 平台的团队。"
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "Go 编写的单一控制平面守护进程，通过 Docker CLI 管理容器。",
-                "数据持久化用 SQLite（WAL），重启后通过协调器恢复状态。",
-                "网络层用 Traefik v3 自动路由 TLS。",
-                "沙箱镜像内置 OpenCode/Claude Code 代理 CLI。"
+                "控制平面：Go 单二进制，通过 Docker CLI 管理容器",
+                "路由/反向代理：Traefik v3，自动发现容器并生成预览域名",
+                "数据存储：SQLite（WAL 模式）作为唯一真实状态源，启动时通过 reconciler 与 Docker 实际状态对齐",
+                "沙箱隔离：基于 Docker + 加固的 runc（cap-drop ALL, no-new-privileges, 只读根文件系统）",
+                "存储：每个沙箱在数据目录下有独立绑挂的工作区目录，持久化保存"
               ]
             },
             {
               "heading": "核心能力",
               "bullets": [
-                "一键创建隔离沙箱（独立文件系统、内存/PID 限制）。",
-                "通过 API 执行命令、写入文件、运行编码代理任务并流式返回进度（SSE）。",
-                "预览地址自动分配，停止后按需唤醒。",
-                "持久化工作区，数据在宿主机目录，容器销毁数据可保留。",
-                "支持 API 密钥注入和环境变量。"
+                "隔离：每个沙箱拥有独立的文件系统和资源限制，互不可见",
+                "内置编码代理：OpenCode 与 Claude Code 预装在基础镜像中，支持带提示词的 agent 任务（可流式获取进度）",
+                "预览 URL：沙箱自动向 Traefik 注册路由，生成形如 s-<id>-<port>.preview.yourdomain.com 的地址，支持 TLS",
+                "休眠与唤醒：空闲沙箱自动停止释放内存，收到 HTTP 请求时透明唤醒（热启等待页 + 就绪探测）",
+                "持久化：停止/销毁容器可以保留工作区文件，重建时数据不丢失",
+                "应用模板：新版本支持预置可编译运行的脚手架（如 Vite+React+TS），避免代理从空白目录从零开始",
+                "应用实体：引入了高于沙箱生命周期的 app 概念（名称、描述、标签），适合用户视角的应用管理"
               ]
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "构建 AI 应用生成器，如“描述应用→实时预览”。",
-                "为用户或分支提供临时预览环境（如 SaaS 工厂）。",
-                "在线编程练习平台、团队协作开发环境。"
+                "构建 AI 应用生成平台（类似 Lovable/ v0）",
+                "托管多人使用的在线编码环境或编程练习场",
+                "为团队提供按需的预览环境（每个分支/PR 一个沙箱）",
+                "需要完全控制数据与成本的自托管 AI 编码产品"
               ]
             },
             {
               "heading": "同类对比",
               "bullets": [
-                "相较于直接用 docker run 脚本：缺乏 URL 路由、空闲回收、状态持久化、API 网关等企业特性，维护成本随规模剧增。",
-                "相较于 Kubernetes：复杂度低，单机即可运行，适合不想维护集群的团队；但缺少跨主机调度，需扩展到集群时可通过接口替换为 k8s 后端。",
-                "相较于 Replit、Pinokio：自托管、无需依赖外部服务，完全掌控数据和成本。"
+                "自己写 Docker 脚本：单人或少数容器足够，但管理预览域名、休眠唤醒、崩溃恢复、API 权限等会迅速变成平台级工程，sandboxd 替代了这一部分",
+                "基于 Kubernetes 的方案：功能强大但运维复杂，sandboxd 用 SQLite + Docker 单机即可实现，资源开销低，且代码量少可读",
+                "SaaS 方案（Lovable/Replit）：每月付费、数据在外部，sandboxd 自托管让你独享毛利和数据控制"
               ]
             },
             {
               "heading": "版本动态",
-              "body": "---",
+              "body": "最新 v0.2.0 于 2026-06-22 发布，主要改进： 所有改动向下兼容，只需重建基础镜像并让控制平面自动运行迁移即可。 ---",
               "bullets": [
-                "当前版本 0.1.1（2026-06-07），仓库从 sandboxes 更名为 sandboxd，环境变量统一为 SANDBOXD_ 前缀，修复了安全风险。",
-                "项目活跃（最近推送 2026-06-16），Star 数 678，处于 Beta 状态。"
+                "引入持久化 app 实体与 /v1/apps API，应用生命周期超出单个沙箱",
+                "新增内置的 React 标准模板（启动时自动 seeding），代理立即有可运行的起点",
+                "增加了端到端 CI 和镜像冒烟测试",
+                "任务提交加入 timeout_s 参数，修复了长任务被误杀的问题",
+                "沙箱支持 idle_policy（sleep/always_on）",
+                "多个可靠性修复（快照、空模板创建等）"
               ]
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
-                "置信度：high",
-                "信息盲区：未提供并发沙箱数量上限或压力测试数据；host-memory pressure reaper 的阈值与行为未详细说明；未公布独立安全审计结果；生产部署指南仅指向 production-safety.md，详细步骤未知；沙箱默认的资源限制（内存/PID 上限）未明确"
+                "置信度：medium",
+                "信息盲区：未说明 API 调用频率限制或请求队列机制；仅提及单机部署，多节点集群扩展方案未涉及；生产安全文档 production-safety.md 未公开细节，无法确认生产级加固程度；未提供沙箱资源限制（CPU/内存）的具体默认值和调整方式；未说明对代理工具以外的其他 AI 工具（如 Aider）的支持计划",
+                "质量提示：缺小标题：为什么火"
               ]
             }
           ]
@@ -2876,8 +5134,8 @@
           "streakDays": 6,
           "isNew": false,
           "createdAt": "2026-04-07",
-          "pushedAt": "2026-06-22",
-          "latestRelease": "v0.3.6",
+          "pushedAt": "2026-06-23",
+          "latestRelease": "v0.4.0",
           "firstSeen": "2026-06-19",
           "topics": [
             "ai-video",
@@ -2944,62 +5202,80 @@
               "starsTotal": 7386,
               "starsGained": 2463,
               "release": "v0.3.6"
+            },
+            {
+              "date": "2026-06-24",
+              "reason": "release_update",
+              "starsTotal": 8632,
+              "starsGained": 1630,
+              "release": "v0.4.0"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "Palmier Pro 是一个从零开始用 Swift 构建的 macOS 视频编辑器，专为 AI 协作设计。它提供完整的时间线编辑能力，同时内置生成式 AI 和 MCP 服务器，允许 Claude、Codex、Cursor 等外部 AI 代理直接操作视频项目。"
+              "body": "Palmier Pro 是一个用 Swift 从零构建的 macOS 视频编辑器，特色是深度集成 AI 生成与代码助手：编辑器中可直接调用 Seedance、Kling 等模型生成视频/图片，同时内置 MCP 服务器，让 Claude Code、Cursor、Codex 等 AI 助手通过标准协议操控时间线。编辑器本身（不含生成式 AI）完全开源（GPLv3），生成模块闭源，采用订阅制。"
             },
             {
               "heading": "为什么火",
               "bullets": [
-                "将 AI 工作流深度整合到传统非线性编辑器中，而不是简单添加插件。",
-                "通过 MCP 协议让你的代码助手和桌面 AI 应用变成视频编辑搭档。",
-                "Y Combinator S24 背景，社区反馈积极（7.3k+ Star）。",
-                "编辑器本身免费开源，降低了体验门槛。"
+                "Y Combinator S24 项目，苹果生态原生应用，近 9k Star，吸引了大量对 AI + 创作工具结合的开发者。",
+                "提出“AI 原生视频编辑器”概念：不再只是插件，而是让 AI 成为协作者，通过 MCP 将 Claude 等变成时间线操作手。",
+                "精准卡位 macOS 26（Tahoe）与 Apple Silicon，利用 Metal 加速视觉效果，展现新技术栈潜力。"
               ]
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "语言：Swift",
-                "平台：macOS 26 (Tahoe) 仅限 Apple Silicon（M系列芯片）",
-                "架构：原生 SwiftUI 应用，内嵌 HTTP MCP 服务器（端口 19789），生成式 AI 后端闭源。",
-                "构建工具：Xcode，CI 在 push/PR 上运行。"
+                "Swift + AppKit/SwiftUI（推测）实现原生 UI 与高性能渲染。",
+                "Metal 用于颜色分级与特效合成（v0.4.0 已集成）。",
+                "MCP 服务器通过 HTTP 暴露在 127.0.0.1:19789，支持 Claude Code/Desktop、Cursor、Codex 等常用 AI 编码工具。",
+                "音频处理支持 PCM 共享读取器、多轨同步，支持 AIFF-C、FLAC 等格式导入。",
+                "生成式 AI 部分闭源，未披露具体协议，或为自研管线与第三方 API 的组合。"
               ]
             },
             {
               "heading": "核心能力",
-              "body": "1. 全功能视频编辑：时间线、剪辑、导出（支持 HEVC 等编解码），文本层、颜色解析等细节打磨。 2. 生成式 AI 集成：在时间线内直接使用 Seedance、Kling、Nano Banana Pro 等模型生成视频/图像（需订阅）。 3. MCP 服务器：应用运行后自动暴露 http://127.0.0.1:19789/mcp，支持 Claude Code/Desktop、Codex、Cursor 通过配置连接。 4. 多语言：README 覆盖 14 种语言，国际化程度高。 5. 社区与支持：Discord、Twitter、邮件渠道。"
+              "bullets": [
+                "完整视频编辑：多轨时间线、剪辑、变换、关键帧、分辨率导出（含 2K、匹配时间线）。",
+                "生成式 AI：在时间线内直接生成 Seedance、Kling、Nano Banana Pro 等模型的图像/视频素材。",
+                "智能代理协作：MCP 服务器让外部 AI 助手可以读取、修改项目，实现自动化剪辑。",
+                "多语言支持：15 种语言，包括阿拉伯语等 RTL 语言。",
+                "免费编辑器：无登录即可使用基础编辑功能，MCP 服务也免费开放。"
+              ]
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "独立视频创作者想用 AI 加速剪辑流程，并让桌面 AI 助手管理项目文件操作。",
-                "开发者探索用 Claude/Cursor 编程式批量处理视频任务，如自动剪辑、加字幕、插入生成片段。",
-                "AI 研究者测试生成模型在现实编辑工作流中的表现。"
+                "视频创作者想要用代码或 AI 助手自动化重复性编辑（如批量加字幕、调色、剪辑片段）。",
+                "开发者试验“AI 代理控制 GUI 工具”的交互范式，利用 MCP 构建自定义剪辑流程。",
+                "macOS 生态重度用户，追求原生性能与 Metal 加速的本地编辑体验。",
+                "对 AI 生成内容与手工编辑混合工作流感兴趣的早期尝鲜者。"
               ]
             },
             {
               "heading": "同类对比",
-              "body": "Palmier Pro 的差异化在于将时间线操作暴露为标准化 MCP 工具，让通用 AI 代理直接操控。",
               "bullets": [
-                "CapCut：免费但闭源，AI 能力有限且无法外部代理控制。",
-                "Adobe Premiere Pro：行业标准但重量级，无原生 MCP 集成，AI 功能依赖插件。",
-                "DaVinci Resolve：调色强，但脚本化需通过 Python/Lua API，非 AI 原语。",
-                "Descript：基于文本的编辑，侧重播客，非传统 NLE。"
+                "对比 Premiere Pro/After Effects：Palmier Pro 更轻量，原生集成 AI 代理，而非通过插件层交互，但功能成熟度远不及 Adobe。",
+                "对比 CapCut：CapCut 更偏向移动/桌面全流程一键式模板与 AI 特效，Palmier Pro 开放 MCP，给技术用户更大的自定义空间。",
+                "对比 DaVinci Resolve：DaVinci 有强大的 API 与 Fusion，但并非为 AI 助手原生设计；Palmier Pro 从底层就考虑 Agent 协作。",
+                "独特优势：唯一一个以 MCP 标准正式支持 Claude/Cursor 等工具的视频编辑器，形成“写代码即剪视频”的新路径。"
               ]
             },
             {
               "heading": "版本动态",
-              "body": "最新 v0.3.6（2026-06-22）修复了预览导出挂起、导入文件夹卡主线程、项目存储目录启动挂起、Clerk 钥匙串主线程卡顿等问题。CI 刚刚建立，表明项目进入快速迭代期。之前还有多语言 README 修复、字体注册修复等，说明团队关注细节和跨语言体验。 ---"
+              "body": "---",
+              "bullets": [
+                "最新 v0.4.0（2026-06-23）引入 Metal 颜色与特效、导出添加 2K 和 Match-Timeline 分辨率、多轨音频同步、修复分栏大小持久化等问题。",
+                "社区贡献活跃，多语言本地化持续更新，关注者通过 Discord/X 反馈，项目迭代较快。",
+                "现阶段仍处于早期，编辑器基础功能稳定，但 AI 能力依赖闭源模块，长期发展取决于订阅模式与开放生态的平衡。"
+              ]
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
                 "置信度：high",
-                "信息盲区：未提供性能基准或与同类编辑器对比的实测数据；生成式 AI 功能闭源，缺乏模型运行细节（本地/云端）和延迟信息；未说明是否支持其他 macOS 版本或 Intel Mac 计划；MCP 工具列表和具体能力未在 README 中列出；无构建/开发环境具体步骤（仅引用 CONTRIBUTING.md）"
+                "信息盲区：生成式 AI 功能的具体模型调用方式及后端架构未公开；MCP 提供的工具、资源、prompts 列表未在 README 中详细列出；编辑器功能与专业视频软件（如 Premiere、DaVinci）的详细功能对比缺失；无性能基准测试数据（渲染速度、时间线帧率等）"
               ]
             }
           ]
@@ -3020,8 +5296,8 @@
           "streakDays": 2,
           "isNew": false,
           "createdAt": "2026-05-29",
-          "pushedAt": "2026-06-23",
-          "latestRelease": "chrome-150.0.7844.0",
+          "pushedAt": "2026-06-24",
+          "latestRelease": "v0.3.0",
           "firstSeen": "2026-06-21",
           "topics": [
             "agent",
@@ -3062,68 +5338,75 @@
               "starsTotal": 3474,
               "starsGained": 0,
               "release": "chrome-150.0.7844.0"
+            },
+            {
+              "date": "2026-06-24",
+              "reason": "release_update",
+              "starsTotal": 4850,
+              "starsGained": 0,
+              "release": "v0.3.0"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "PixelRAG 是一个以截图而非文本进行文档检索与生成增强（RAG）的框架。它把网页、PDF、图片等渲染成图像瓦片，用微调后的 Qwen3-VL-Embedding 模型生成视觉嵌入，再通过 FAISS 索引实现“所见即所得”的搜索。项目提供了预建的 828 万维基百科页面索引和即时可用 API，同时支持用户自建索引。"
+              "body": "PixelRAG 是一种基于视觉的检索增强生成框架——它不解析 HTML/文本，而是将文档（网页、PDF、图片）渲染成一系列截图块，用视觉嵌入模型编码后存入向量索引，检索时返回最相关的截图块，最终让视觉语言模型（VLM）直接“看”图回答。由 Berkeley SkyLab、BAIR 和 Berkeley NLP 团队开发，对应论文已发布。"
             },
             {
               "heading": "为什么火",
               "bullets": [
-                "保留视觉信息：传统 RAG 将 HTML 解析为纯文本，会丢失表格、图表、排版等结构；PixelRAG 直接使用页面截图，让检索与答案生成能利用完整视觉上下文。",
-                "零门槛体验：官方提供托管 API（无需 API 密钥）和预建索引，一行 curl 即可搜索维基百科；本地使用亦只需 pip install。",
-                "生态延伸：附带 Claude Code 插件（pixelbrowse），让 LLM 通过截图“阅读”网页，无须额外服务；训练代码与数据集公开，便于复现和拓展。"
+                "痛点直击：传统 RAG 的 HTML 解析或文本提取会丢失表格、图表、复杂排版信息，PixelRAG 则完整保留原始视觉布局，特别适合需要理解图表、财务报表、论文架构的姿态。",
+                "开箱即用：官方托管了 8.28M 维基百科页面的预建索引，无需搭建即可通过 API 进行视觉搜索，极大降低体验门槛。",
+                "Claude Code 插件：作为 pixelbrowse 技能直接赋予 Claude “阅读网页截图”的能力，开发者社区反响热烈。",
+                "完全开源可自托管：Apache-2.0 许可，支持本地构建和部署，满足隐私与定制需求。"
               ]
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "渲染引擎：基于 Playwright/CDP 的 pixelshot，支持网页、PDF（需 poppler）以及本地图片。",
-                "嵌入模型：Qwen3-VL-Embedding-2B，LoRA 微调于网页截图数据（权重已发布）。",
-                "索引与搜索：FAISS（支持 CPU/GPU），内置分片构建与服务。",
-                "服务层：FastAPI 提供 REST API；配置通过 YAML 驱动。",
-                "训练工具链：独立 uv 项目，使用 PyTorch 2.9.1 + CUDA 12.9，LoRA 微调流程完整文档化。"
+                "渲染：Playwright / CDP 驱动的 Chromium 无头浏览器渲染网页；PDF 支持通过 poppler 转为截图。",
+                "嵌入模型：Qwen3-VL-Embedding-2B，用 LoRA 在网页截图数据上微调，实现对视觉内容的语义检索；支持 CUDA 与 Apple Silicon MPS。",
+                "索引与搜索：FAISS 向量索引，提供 FastAPI 搜索服务。",
+                "训练：独立的 uv 项目，使用固定版本 torch/transformers，数据与适配器权重已公开。",
+                "跨平台：Linux（CUDA）、macOS（MPS）、Windows（系统 Chrome）均提供基础支持。"
               ]
             },
             {
               "heading": "核心能力",
-              "bullets": [
-                "截图级文档解析：pixelshot 一行命令即可将任意网页或 PDF 转为图像瓦片。",
-                "视觉语义搜索：直接以图像 tile 为检索单元，查询可以是文本或图像（视觉搜索）。",
-                "预建大规模索引：828 万维基百科页面索引，可从 Hugging Face 下载或直接使用官方 API。",
-                "端到端自建流水线：pixelrag index build 一条命令从原始文档到可查询索引。",
-                "生态集成：Claude Code 插件让 AI 助手获得“阅读”网页原貌的能力。"
-              ]
+              "body": "1. pixelshot 渲染器：一行命令将 URL/PDF/图片转为统一大小的截图块，支持分页、宽页2D分块。 2. 完整索引流水线：从源文档到可用索引全流程可编排（chunk → embed → build-index），并支持分阶段单独操作。 3. 多模态检索：支持文本查询和图像查询，返回最相关的截图块（及来源信息）。 4. 预置大规模索引：8.28M 维基页面索引已在 API 和 Hugging Face 提供，可直接搜索或下载部署。 5. Claude Code 集成：无需 MCP 服务器，本地 pixelshot 即可为 Claude 提供页面截图浏览能力。 6. 自托管服务：支持从任意文档构建私有索引并对外暴露兼容的搜索 API。"
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "复杂网页信息抽取：需要理解表格、图表、排版布局的问答或分析任务。",
-                "RAG 系统升级：为现有 LLM 应用增加视觉感知，避免因解析丢失导致答案错误。",
-                "文档数字化与搜索：对 PDF 报告、扫描件等非纯粹文本内容建立视觉索引。",
-                "AI Agent 增强：为浏览器自动化、研究辅助等 Agent 提供更准确的页面理解。"
+                "学术文献检索（保留图表、公式布局）",
+                "金融/法律文档问答（表格与格式敏感）",
+                "为 LLM/Agent 提供“视觉浏览”能力（替代易出错的文本抓取）",
+                "构建可理解布局的企业知识库",
+                "视觉驱动的网页内容监控与变化检测"
               ]
             },
             {
               "heading": "同类对比",
-              "body": "与传统文本 RAG（如 LangChain 文本拆分+向量检索）相比，PixelRAG 的独特优势在于保留视觉结构，回答“表格里某个数字是多少”“图表 X 轴代表什么”之类的问题时不再失效。相较于其他视觉嵌入方案（如 ColPali 使用 ViT 编码器），PixelRAG 采用了完整的多模态 VLM（Qwen3-VL）并针对网页截图微调，更贴合真实网页内容。项目还提供从渲染到索引的全套工程化工具，比纯学术框架更易落地。"
+              "bullets": [
+                "vs 文本 RAG 框架（LangChain/LlamaIndex/Haystack）：传统框架依赖文本分块，丢失视觉结构；PixelRAG 直接操作截图，天然适合多版式文档。",
+                "vs 多模态 RAG 方案（如 ColPali）：PixelRAG 提供了完整的渲染→嵌入→检索→服务工具链，集成度高，且已发布经大规模预训练的 LoRA 嵌入模型和数据集，上手更快。",
+                "vs 商业闭源方案：完全开源，可本地部署，数据不出域；易于定制训练其他视觉嵌入骨干。"
+              ]
             },
             {
               "heading": "版本动态",
               "body": "---",
               "bullets": [
-                "最新 Release: chrome-150.0.7844.0（2026-06-01），主要是 Chromium 头部 shell 补丁，用于 CDP 截图优化。",
-                "主仓库活跃（2026-06-23 推送），已发布 Apache-2.0 论文和完整代码。",
-                "论文题为《PIXELRAG: Web Screenshots Beat Text for Retrieval-Augmented Generation》，由伯克利 SkyLab/BAIR/NLP 出品。"
+                "当前版本 v0.3.0（2026-06-23），距离初始版本 v0.1.0 仅两月，迭代迅速。",
+                "v0.3.0 重点：PDF 分页正确渲染、宽页2D分块、Apple Silicon MPS 原生支持、跨平台 Chrome 自动发现、CDP 渲染稳定性增强、文档补全。",
+                "未来路线未在 README 明确，但从代码结构看可能继续增强跨平台兼容性、拓展文档格式支持和云部署友好度。"
               ]
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
                 "置信度：high",
-                "信息盲区：README 未提供具体 benchmark 数据（如检索准确率、吞吐量），仅指向论文；预建索引的具体架构与资源需求未详述；训练代码与主流水线的适配细节需查阅 train/ 内部文档"
+                "信息盲区：公开 API 限流策略未说明；README 中未包含标准基准评测数据（如 vs 文本 RAG 的召回率/准确率对比）；预建索引与最新模型版本的兼容性未明确（索引可能需要随模型升级重新构建）；Windows 平台的渲染稳定性与完善程度未提供具体测试说明"
               ]
             }
           ]
@@ -3195,6 +5478,13 @@
               "date": "2026-06-23",
               "reason": "lightweight",
               "starsTotal": 564,
+              "starsGained": 0,
+              "release": "v0.5.2"
+            },
+            {
+              "date": "2026-06-24",
+              "reason": "lightweight",
+              "starsTotal": 571,
               "starsGained": 0,
               "release": "v0.5.2"
             }
@@ -3584,6 +5874,13 @@
               "starsTotal": 32273,
               "starsGained": 529,
               "release": "v0.5.0"
+            },
+            {
+              "date": "2026-06-24",
+              "reason": "lightweight",
+              "starsTotal": 33498,
+              "starsGained": 2883,
+              "release": "v0.5.0"
             }
           ],
           "analysis": [
@@ -3834,6 +6131,13 @@
               "date": "2026-06-23",
               "reason": "lightweight",
               "starsTotal": 923,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-06-24",
+              "reason": "lightweight",
+              "starsTotal": 931,
               "starsGained": 0,
               "release": ""
             }
@@ -4155,8 +6459,8 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-06-16",
-          "pushedAt": "2026-06-22",
-          "latestRelease": "eve@0.12.0",
+          "pushedAt": "2026-06-24",
+          "latestRelease": "eve@0.13.3",
           "firstSeen": "2026-06-19",
           "topics": [
             "agent",
@@ -4218,66 +6522,77 @@
               "starsTotal": 2075,
               "starsGained": 0,
               "release": "eve@0.12.0"
+            },
+            {
+              "date": "2026-06-24",
+              "reason": "release_update",
+              "starsTotal": 2473,
+              "starsGained": 0,
+              "release": "eve@0.13.3"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "eve 是 Vercel 推出的文件系统优先的 TypeScript 框架，用于构建持久化的 AI 代理（agent）。它强制将代理的核心能力——指令、工具、技能、通道、定时任务——落入约定的目录结构，使项目可直接通过文件树理解行为，降低认知负担。"
+              "body": "eve（Vercel 出品）是一个以文件系统为首要创作界面的持久化 AI 代理框架。代理的所有核心能力——系统提示、工具、技能、频道、定时任务——都按约定放在特定的文件与目录中，使得项目结构即代理逻辑，便于检查、扩展和运维。它用 TypeScript 编写，提供 npx eve@latest init 脚手架，内置交互式终端 UI，并支持快速接入 Anthropic 等模型。"
             },
             {
               "heading": "为什么火",
               "bullets": [
-                "Vercel 背书：依托 Vercel 的开发者生态和设计哲学，与 Next.js 一脉相承的“约定优于配置”体验。",
-                "零胶水起步：一个 instructions.md 加可选工具函数即可运行，初始化命令自动搭建项目。",
-                "开发友好：本地 eve dev 提供交互式终端，支持动态模块热重载，模型与工具变更即时生效。",
-                "可扩展性：内置通道（HTTP、Slack、Discord）、定时任务、子代理等机制，覆盖常见 AI 应用场景。"
+                "极简约定：代理的入口、工具、指令一目了然，无需复杂的对象组装或隐式配置。",
+                "Vercel 背书：由 Vercel 团队维护，与 Vercel 生态（如 AI SDK）存在潜在协同。",
+                "持久化与协作：文件天然可版本控制，适用于需要长期维护、多人参与的代理项目。",
+                "beta 阶段热度：Star 增长较快，社区在 GitHub Discussions 活跃。"
               ]
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "语言：TypeScript（Node.js 运行环境）",
-                "核心依赖：Zod（输入校验）、Vercel AI SDK（模型集成，推测）",
-                "执行模型：本地进程执行工具/skill，可选沙箱隔离（文档提及 sandbox）",
-                "分发方式：npm 包，脚手架通过 npx eve@latest init 使用"
+                "语言：TypeScript",
+                "运行时：Node.js",
+                "模型接入：通过 defineAgent 配置模型 ID（如 anthropic/claude-sonnet-4.6），需外部 API 密钥",
+                "工具校验：使用 Zod 定义输入 schema",
+                "交互频道：内置 HTTP、Slack、Discord 等频道支持",
+                "调度：基于 cron 的 jobs",
+                "沙箱：主题标签提及 sandbox，但本文档未展开说明，可能指执行环境隔离"
               ]
             },
             {
               "heading": "核心能力",
-              "body": "1. 指令系统：instructions.md 作为持久化系统提示词，支持 Markdown 语法，模型始终可见。 2. 工具定义：TypeScript 函数通过 defineTool 暴露给模型，使用 Zod 声明输入格式，同步或异步执行。 3. 技能：按需加载的 Markdown 过程描述或程序模块，适合多步工作流。 4. 通道：声明式接入 Slack、Discord 等外部消息接口，统一消息路由。 5. 定时任务：类似 Cron 的周期性动作，用 TypeScript 定义。 6. 模型灵活：通过 agent.ts 切换提供商（如 Anthropic Claude），支持代码级模型解析与动态导入。 7. 子代理与动态映射：可嵌套代理，动态工具映射支持命名空间隔离，避免冲突。"
+              "body": "1. 指令即文件：instructions.md 是常驻系统提示，修改即更新行为。 2. 工具定义：tools/ 下的 TypeScript 文件导出 defineTool，带 Zod schema 与异步执行逻辑。 3. 技能：skills/ 目录存放按需加载的过程性 Markdown。 4. 频道：channels/ 支持多种消息渠道接入（HTTP、Slack 等）。 5. 定时调度：schedules/ 定义周期性任务。 6. 人工干预：支持 human-in-the-loop 提示。 7. 子代理：可创建子代理协调复杂任务。"
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "个人助理或聊天机器人（支持多通道）",
-                "自动化工作流（定时任务 + 工具调用）",
-                "需要快速原型的多步骤 AI 应用",
-                "希望代码与配置分离、利于团队协作的项目"
+                "快速原型：想用最短路径得到一个可交互的 AI 助手。",
+                "团队开发：需要可审查、可版本化的代理配置，避免黑盒。",
+                "渠道集成：需要同时对接 Slack、Discord 等消息平台的机器人。",
+                "工作流自动化：结合定时任务和工具调用，实现定期报告、数据抓取等。"
               ]
             },
             {
               "heading": "同类对比",
+              "body": "对比 LangChain Agent 或 Semantic Kernel，eve 的差异化在于： 当前它更偏向个人与团队的“文件即代理”哲学，而 LangChain 等更偏库式编排。",
               "bullets": [
-                "vs. LangChain/LlamaIndex：eve 不提供庞大的工具链和 RAG 抽象，而是聚焦文件和约定，更轻量、侵入性更低。",
-                "vs. AutoGen/ CrewAI：后者侧重多代理对话编排，eve 以单代理内嵌工具、技能和子代理方式实现，更贴近传统应用开发。",
-                "独特性：全文件驱动，开发体验极简，天然适合作为 AI 能力嵌入现有 Node.js 项目。"
+                "文件系统优先：将代理逻辑显式化为文件结构，而非全部代码内组装。",
+                "轻量约定：不引入复杂的链式抽象，学习曲线较低。",
+                "Vercel 原生：可能深度集成 Vercel 部署和 AI SDK（具体整合待确认）。"
               ]
             },
             {
               "heading": "版本动态",
               "body": "---",
               "bullets": [
-                "最新版本：0.12.0（2026-06-21）",
-                "关键变更：动态工具映射的 key 不再自动添加文件标识前缀，改为使用原始名称，若冲突需手动命名空间；连接器工具按 <connection>__<tool> 格式重命名。修复了 eve dev 下代码定义模型的解析问题，子代理可复用父级模块映射以避免重复构建。",
-                "发展阶段：仍处 Beta，API 和行为可能变动，遵循 Vercel Beta 条款。"
+                "最新 Release: eve@0.13.3（2026-06-23），当前为 beta 阶段。",
+                "补丁更新：共享 Chat SDK Block Kit 基元用于 Slack 卡片渲染，可见与 Vercel 其他基础设施的联动。",
+                "行为可能变化，API 在 GA 前不稳定。"
               ]
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
                 "置信度：medium",
-                "信息盲区：未提供性能 benchmark 或与其他框架的量化对比；支持的模型提供商列表未在 README 中完全列出（仅示例为 Anthropic）；沙箱执行的具体隔离技术栈（如 Docker、Node.js vm 等）未说明；生产部署方式（是否仅限 Vercel 或可自托管）未明确；子代理间通信与状态共享的具体实现细节缺失"
+                "信息盲区：未说明模型API密钥的具体配置方式（如环境变量名）；未提供沙箱（sandbox）机制的实现细节与隔离程度；未说明自托管部署的完整步骤，以及与Vercel平台的耦合程度；无性能基准或大规模生产数据；子代理、技能（skills）的具体编写规范未在本文档展开"
               ]
             }
           ]
@@ -4298,7 +6613,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-06-11",
-          "pushedAt": "2026-06-22",
+          "pushedAt": "2026-06-24",
           "latestRelease": "v0.2.0",
           "firstSeen": "2026-06-19",
           "topics": [
@@ -4366,6 +6681,13 @@
               "date": "2026-06-22",
               "reason": "lightweight",
               "starsTotal": 4324,
+              "starsGained": 0,
+              "release": "v0.2.0"
+            },
+            {
+              "date": "2026-06-24",
+              "reason": "lightweight",
+              "starsTotal": 4633,
               "starsGained": 0,
               "release": "v0.2.0"
             }
@@ -4443,7 +6765,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-02-07",
-          "pushedAt": "2026-06-21",
+          "pushedAt": "2026-06-24",
           "latestRelease": "",
           "firstSeen": "2026-06-19",
           "topics": [],
@@ -4495,6 +6817,13 @@
               "reason": "lightweight",
               "starsTotal": 6300,
               "starsGained": 1272,
+              "release": ""
+            },
+            {
+              "date": "2026-06-24",
+              "reason": "lightweight",
+              "starsTotal": 6565,
+              "starsGained": 1489,
               "release": ""
             }
           ],

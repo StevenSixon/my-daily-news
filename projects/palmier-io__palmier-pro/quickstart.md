@@ -1,18 +1,23 @@
 ## 安装
-1. 确保使用 macOS 26 (Tahoe) 且 Apple Silicon 芯片的 Mac。
-2. 下载 [Palmier Pro DMG](https://github.com/palmier-io/palmier-pro/releases/latest/download/PalmierPro.dmg) 并安装。
-3. 首次启动无需登录即可使用基础编辑功能。
 
-## 连接 AI 代理
-启动应用后，MCP 服务器自动运行在 `http://127.0.0.1:19789/mcp`。
+1. 确保使用 **Apple Silicon 芯片** 并升级至 **macOS 26 (Tahoe)**。
+2. 从 [GitHub Releases](https://github.com/palmier-io/palmier-pro/releases/latest/download/PalmierPro.dmg) 下载 DMG，安装到 Applications。
+3. 首次打开可能需在“系统设置 > 隐私与安全性”中允许运行。
 
-**Claude Code 示例**：
+## 启用 MCP 服务
+
+启动 Palmier Pro 后，MCP 服务器会自动监听 `http://127.0.0.1:19789/mcp`。无需额外配置。
+
+## 连接 AI 助手
+
+**Claude Code**
 ```bash
 claude mcp add --transport http palmier-pro http://127.0.0.1:19789/mcp
 ```
-然后即可在 Claude Code 中让 AI 操作视频项目。
 
-**Cursor 配置**：在应用内 `Help` → `MCP Instructions` 自动安装，或手动在 `~/.cursor/mcp.json` 添加：
+**Cursor**
+
+打开 App 内 `Help → MCP Instructions → Install in Cursor` 或手动编辑 `~/.cursor/mcp.json`：
 ```json
 {
   "mcpServers": {
@@ -24,12 +29,19 @@ claude mcp add --transport http palmier-pro http://127.0.0.1:19789/mcp
 }
 ```
 
+**Codex**
+```bash
+codex mcp add palmier-pro --url http://127.0.0.1:19789/mcp
+```
+
 ## 最小可用示例
-1. 打开 Palmier Pro，创建一个新项目。
-2. 在 Claude Code 终端中执行自然语言指令，例如 “在当前项目中导入 video.mp4 并放到第一轨道”。
-3. AI 将通过 MCP 操控时间线完成导入和放置。
+
+1. 打开 Palmier Pro，新建或打开一个项目。
+2. 启动你的 AI 客户端（如 Claude Code），询问：“请在时间线上添加一个剪辑，并应用淡入效果。”
+3. AI 助手通过 MCP 操作时间线，你在编辑器中实时看到变化。
 
 ## 依赖前提
-- 硬件：Apple Silicon Mac。
-- 系统：macOS 26 Tahoe。
-- 生成式 AI 功能：需账户和订阅。
+
+- 硬件：Apple Silicon Mac（M1 或更新）
+- 系统：macOS 26 及以上
+- 编辑器本身无需账户，生成式 AI 功能需注册并登录 Palmier 账户。

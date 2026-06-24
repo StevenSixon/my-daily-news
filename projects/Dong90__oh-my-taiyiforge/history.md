@@ -1,2 +1,3 @@
 - 2026-06-22 | 🆕新发现 | ⭐413(+0) | release=v0.28.1
 - 2026-06-23 | release_update | ⭐453(+0) | release=v0.38.0
+- 2026-06-24 | release_update | ⭐492(+0) | release=v0.42.0

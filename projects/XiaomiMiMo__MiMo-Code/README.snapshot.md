@@ -203,7 +203,7 @@ bun turbo typecheck      # Type check
 
 ## Relationship to OpenCode
 
-MiMoCode is built as a fork of [OpenCode](https://github.com/XiaomiMiMo/MiMo-Code). It keeps all core OpenCode capabilities (multiple providers, TUI, LSP, MCP, plugins) and adds persistent memory, intelligent context management, subagent orchestration, goal-driven autonomous loops, compose workflows, and self-improvement via dream/distill.
+MiMoCode is built as a fork of [OpenCode](https://github.com/anomalyco/opencode). It keeps all core OpenCode capabilities (multiple providers, TUI, LSP, MCP, plugins) and adds persistent memory, intelligent context management, subagent orchestration, goal-driven autonomous loops, compose workflows, and self-improvement via dream/distill.
 
 ---
 
@@ -212,7 +212,9 @@ MiMoCode is built as a fork of [OpenCode](https://github.com/XiaomiMiMo/MiMo-Cod
 Scan the QR code to join the community group chat:
 
 <p align="center">
-  <img src="assets/readme/community-qrcode.jpg" alt="Community group chat QR code" width="240">
+  <img src="assets/readme/community-qrcode-1.jpg" alt="Community group chat QR code 1" width="240">
+  &nbsp;&nbsp;
+  <img src="assets/readme/community-qrcode-2.jpg" alt="Community group chat QR code 2" width="240">
 </p>
 
 ---

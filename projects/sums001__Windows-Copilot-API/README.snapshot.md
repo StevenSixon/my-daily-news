@@ -11,9 +11,28 @@ You can use it in two ways:
 - 🐍 **As a Python library:** just call `client.chat("Hi")`. Supports streaming and multi-turn conversations.
 - 🔌 **As a local OpenAI-compatible API:** runs a server at `http://localhost:8000/v1` that speaks the OpenAI format, so the official `openai` SDK (and any OpenAI-compatible app) works as a drop-in, with `localhost` in place of OpenAI.
 
-You sign in once with your Microsoft account in a browser; your session is saved and refreshed automatically after that.
+You sign in once in a browser with your Microsoft **or Google** account; your session is saved and refreshed automatically after that.
 
 > **Unofficial project.** Not affiliated with or endorsed by Microsoft. It automates the consumer Copilot web experience for personal use, so use it responsibly and within Microsoft's terms.
+
+---
+
+## Table of contents
+
+- [Why use this?](#why-use-this)
+- [Requirements](#requirements)
+- [Setup (2 minutes)](#setup-2-minutes)
+- [Run with Docker (optional)](#run-with-docker-optional)
+- [Usage 1: In Python (no server)](#usage-1-in-python-no-server)
+- [Usage 2: As an OpenAI-compatible server](#usage-2-as-an-openai-compatible-server)
+- [Command line](#command-line)
+- [Concurrency & stress test](#concurrency--stress-test)
+- [Rate limiting](#rate-limiting)
+- [Project layout](#project-layout)
+- [Notes & limitations](#notes--limitations)
+- [Troubleshooting](#troubleshooting)
+- [License](#license)
+- [Star History](#star-history)
 
 ---
 
@@ -69,13 +88,15 @@ pip install -r requirements.txt
 # Install the browser Playwright needs (one-time)
 playwright install chromium
 
-# Sign in once: a browser opens, log into your Microsoft account
+# Sign in once: a browser opens, log into your Microsoft or Google account
 python -m copilot login
 ```
 
-That's it. Your session is saved under `session/` (git-ignored, never shared) and reused on every run.
+The browser **closes by itself** once sign-in is detected — you don't need to press Enter or close it manually. After sign-in it sends one short warm-up message to mint the chat token (so a brief "finishing setup…" appears, and a tiny throwaway chat lands in your history). The steps are logged to `session/login.log` if anything goes wrong. That's it: your session is saved under `session/` (git-ignored, never shared) and reused on every run.
 
-> 💡 You can even skip step 4: the **first** time you call `chat()` or start the server, it opens the sign-in browser for you automatically.
+> 💡 You can even skip step 3: the **first** time you call `chat()` or start the server, it opens the sign-in browser for you automatically.
+
+> 🛠️ **Run into trouble during setup or your first run?** Head to the [Troubleshooting](#troubleshooting) section, the bundled diagnostic both *fixes* common issues (captcha/clearance) and *logs* a shareable report.
 
 ---
 
@@ -261,7 +282,7 @@ add a few retries yourself.
 | [copilot/](copilot/) | The core library: `CopilotClient`, auth, browser sign-in, HTTP driver |
 | [server/](server/) | The FastAPI OpenAI-compatible server |
 | [examples/](examples/) | Runnable examples for every feature ([examples/README.md](examples/README.md)) |
-| [tests/](tests/) | Test scripts, including the concurrency stress test ([tests/stress.py](tests/stress.py)) |
+| [tests/](tests/) | Test scripts: the concurrency stress test ([tests/stress.py](tests/stress.py)) and the diagnostic/captcha-fix tool ([tests/diagnostic.py](tests/diagnostic.py)) |
 | [app.py](app.py) | Starts the server |
 
 ---
@@ -278,11 +299,52 @@ add a few retries yourself.
 
 ## Troubleshooting
 
-**`RuntimeError: Copilot error: invalid-event` (or the chat hangs) on a server/VPS.**
-On datacenter IPs Cloudflare withholds bot-clearance, so the chat socket stalls on an empty challenge sometimes. **Fix it manually:** on that machine, open [copilot.microsoft.com](https://copilot.microsoft.com) in a browser and pass the "verify you're human" check once; that sets a `cf_clearance` cookie which the saved session reuses. Re-do it if it expires, or route the server's traffic through a residential connection (e.g. a home-PC exit node).
+**Hit an error? Run the diagnostic first — it both *fixes* and *logs*.**
+
+```bash
+python tests/diagnostic.py                # browser capture + captcha fix + report
+python tests/diagnostic.py --report-only  # headless/VPS: report only, no browser
+```
+
+The default run opens your signed-in browser and asks you to send one short
+message. That single action does two things:
+
+- **Fixes captcha:** it drives a *real* browser on the same `session/profile/`
+  the bridge uses, so passing any "verify you're human" check earns a fresh
+  `cf_clearance` cookie. When the turn completes the tool snapshots that session
+  (cookies + token) into `session/token.json`, so the pure-HTTP driver adopts
+  the clearance immediately.
+- **Captures the protocol** to `session/ws_capture.log`. A clean turn goes
+  `setOptions` → `send` → `appendText…` → `done`; a `{"event":"challenge",
+  "method":"cloudflare",…}` frame means Cloudflare gated you (now cleared).
+
+It also writes `session/diagnostic_report.txt` — environment, the *shape* of your
+session (cookie names + token length, never the values), a live chat probe, and
+redacted log tails. **Both files are safe to share:** access tokens, cookies,
+OAuth codes, and emails are redacted before anything is written. Attach
+`diagnostic_report.txt` to a GitHub issue (skim it first) and the cause is
+usually obvious.
+
+> On a headless **server/VPS** you can't open the browser, so the captcha fix
+> isn't available there — pass `--report-only`, then do the clearance step on a
+> machine with a display (or route traffic through a residential connection,
+> e.g. a home-PC exit node) since datacenter IPs are where Cloudflare withholds
+> clearance and you see `RuntimeError: Copilot error: invalid-event`.
 
 ---
 
 ## License
 
-For personal and educational use. You are responsible for complying with Microsoft's terms of service.
+Released under the [MIT License](LICENSE). As this is an unofficial project, you remain responsible for complying with Microsoft's terms of service.
+
+---
+
+## Star History
+
+<a href="https://www.star-history.com/?repos=sums001%2FWindows-Copilot-API&type=timeline&legend=top-left">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=sums001/Windows-Copilot-API&type=timeline&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=sums001/Windows-Copilot-API&type=timeline&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=sums001/Windows-Copilot-API&type=timeline&legend=top-left" />
+ </picture>
+</a>

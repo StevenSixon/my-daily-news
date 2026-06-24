@@ -1,44 +1,35 @@
 ## 它是什么
-TaiyiForge（太一炉）是一个 AI 研发工作流自动化插件，将传统的软件工程标准编排成一条可执行、可审计的**九阶段流水线**。它不发明新标准，而是把 Harness、OpenSpec、GStack、Superpowers、OMO、Spec-Kit 等六个现有规范的流程变成一台状态机，通过统一的 slash 命令在 Claude、Codex、Cursor、OpenCode 四类 AI 终端中提供一致行为。开发者只需要说 `/taiyi:new`，引擎就会生成对应的工件、校验门控并自动推进阶段。
+TaiyiForge 是一款 AI 编码工作流自动化插件，将 AI 辅助开发过程从“玄学对话”改造为由状态机驱动的九阶段工程流水线。每个阶段有固定产出和审批点，强制人类在关键决策点介入，确保 AI 不跳过需求、设计或审查。它通过一套统一的 slash 命令，在 Claude、Codex、Cursor、OpenCode 四个 AI 终端中提供一致的行为。
 
-## 为什么火（关注点）
-- **流程断裂是 AI 编码的普遍痛点**：长会话中 Agent 容易忘掉阶段顺序，导致需求丢失或设计半成品直接跳入编码，TaiyiForge 用状态机强制阶段顺序和工件产出，避免了“玄学”式开发。
-- **多工具统一**：不同 AI 终端（Claude Code、Codex、Cursor、OpenCode）各自一套流程，团队难以复用。TaiyiForge 提供一套 28 条 v28 顶栏命令，在任何终端行为一致，降低认知负荷。
-- **人类门控与自动化的平衡**：关键节点（变更审批、设计评审）要求 `--approver` 人类确认，避免了完全自动化的风险；小修复也有 `flow bug` 快捷路径，不死板。
+## 为什么火
+仓库创建仅 3 周即获 492 星，切中了团队使用 AI 编码的普遍痛点：Agent 总是跳过设计直接写代码、长会话上下文丢失、不同工具流程各异。它给出了一套可落地、可复制的纪律框架，将“AI 写代码”提升到“AI 工程化”，因此吸引关注。
 
 ## 技术栈
-- 语言：TypeScript
-- 包管理：npm，零构建安装（npx 分发）
-- 运行环境：Node.js >= 20
-- 集成方式：通过 shell 脚本、MCP、命令文件注入 AI 终端的命令系统
-- 工程化：GitHub Actions CI，829 测试用例，130 源文件
+TypeScript + Node.js (≥20)，通过 npm 包 `oh-my-taiyiforge` 分发。核心包含状态机引擎、事件总线、ChangeGraph 知识图谱、token 压缩机制及结构化日志。集成到 AI 终端依靠 slash 命令与 SKILL.md 声明。
 
 ## 核心能力
-- **九阶段主流程**：change → requirement → design → ui-design → task → dev → test → review → integration → archive，每阶段有固定产出工件（如 CHANGE.md、DESIGN.md）和自动门控校验。
-- **v28 统一命令**：28 条顶栏 slash 命令，分为主链、会话、排查、交付、路由、捷径、伞形命令（Umbrella）七组，覆盖日常开发全流程。
-- **多终端适配**：一键安装到 Claude Code、Codex、Cursor、OpenCode，缺端自动跳过；在 Codex 中自动转换为关键词路由。
-- **聊天与引擎分轨**：用户用 slash 命令，Agent/CI 用 CLI（`npx taiyi`）运行门控校验和流程推进，避免将大量工件塞入聊天引起上下文爆炸。
-- **Skill 系统**：内置 `taiyi-*` Skill，如 `taiyi-dev` 强制 TDD（先红后绿），`taiyi-review` 支持跨 AI 评审。
-- **人类审查+自动审计**：关键阶段强制人类批准，集成 `taiyi_doctor`、`taiyi_audit` 自检与交付门控。
+- **九阶段流水线**：change → requirement → design → ui-design → task → dev → test → review → integration，每步有明确工件。
+- **人类门控**：change、design、review 三个关键阶段必须人类审批，引擎不理会 AI 的自我放行。
+- **多端一致**：28 条 slash 命令及 6 个 umbrella 功能在四端行为完全对齐。
+- **强制 TDD**：dev 阶段必须先写失败的测试再实现，不是建议是硬约束。
+- **证据防假过门**：每个验收标准必须附可执行验证命令（evidence），跑不过不进入下一阶段。
+- **Token 压缩与断点续传**：长会话自动产出 CONTEXT-COMPACT.md，跨天无缝继续。
+- **ChangeGraph**：追踪变更间依赖，改一处知全局。
+- **灵活 profile**：full（大功能）、lite（小修复）、nano（typo 改）等 10 种模式。
 
 ## 适用场景
-- 使用 AI 编程助手进行严肃软件开发的团队（尤其多 AI 工具混合使用）
-- 需要结构化、可审计、可复用的 AI 驱动研发流程
-- 多人协作、跨会话、持续交付的项目
-- 不想背诵复杂流程，希望“引擎告诉我下一步”的开发者
+- 要求 AI 辅助编码有纪律、可审计的团队。
+- 同时使用多个 AI 编码工具，需要统一流程。
+- 需要将 AI 生成的代码置于强制设计、审查和测试门控下的项目。
 
 ## 同类对比
-- 相较于直接使用 OpenSpec、Harness 等原始规范：TaiyiForge 将其组合成可编排的状态机，减少了人工串联步骤。
-- 相较于各 AI 终端原生的 agent 模式：提供了统一的工件锁定和阶段门控，避免了 Agent 忘掉流程。
-- 相较于单一工具的内置流程（如 Cursor Rules）：跨工具一致性更好，且支持人类审查标记。
+直接与裸 AI 对话相比，TaiyiForge 提供了严格的流程控制和审批，但 README 未展开与同生态工具（Harness、OpenSpec、Superpowers 等）的横向对比，仅声明编排了它们的思想。
 
 ## 版本动态
-- 最新 Release：v0.38.0 (2026-06-22)，合并 20 个 PR，文档同步，质量审计满分，829 个测试通过。
-- 近期发展：v0.24 引入零构建安装，v0.25 支持 GitHub 直装，v28 命令体系稳定。
-- 活跃迹象：快速迭代，命令收敛、安装流程简化。
+最新 v0.42.0 聚焦文档与工程基建（README 精炼、CI 自动发布）。核心功能在 v0.23–v0.40 期间建立：规范命令集、evidence 强校验、事件总线、ChangeGraph 等。v1.0.0 计划锁定 API、达成四端 parity 并开始收集外部案例。
 ---
 
 ## ℹ️ 置信度与信息盲区
 
-- 置信度：**high**
-- 信息盲区：六套集成标准各自的深度和兼容边界未详细说明；无性能基准或大规模团队的使用数据；与 IDE 插件的具体交互细节（如 Cursor 规则文件的格式）仅部分覆盖；README 截断，可能遗漏后续的架构细节和 API 文档
+- 置信度：**medium**
+- 信息盲区：无性能 benchmark 或 token 压缩的量化效果数据；多 AI 终端行为一致性的验证报告缺失；缺乏生产环境下的稳定性数据和用户案例；人类门控的具体实现机制未说明（是否仅依赖聊天层面的确认）；除 Node.js ≥20 外未列出其他系统依赖（如操作系统、额外工具）

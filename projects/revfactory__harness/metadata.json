@@ -1,0 +1,48 @@
+{
+  "full_name": "revfactory/harness",
+  "url": "https://github.com/revfactory/harness",
+  "description": "A meta-skill that designs domain-specific agent teams, defines specialized agents, and generates the skills they use.",
+  "language": "HTML",
+  "topics": [
+    "claude-code",
+    "claude-code-plugin",
+    "harness",
+    "harness-engineering"
+  ],
+  "license": "Apache-2.0",
+  "category": "AI 应用",
+  "classify_reason": "元技能工具，用于设计特定领域代理团队并生成技能。",
+  "one_liner": "说“构建一个 harness”，自动生成领域专属的 Agent 团队和技能",
+  "why_worth_it": "用 6 种团队架构模式即时生成多 Agent 协作配置，节省人工拆分子任务的时间，实测质量+60%",
+  "tags": [
+    "Claude Code 插件",
+    "Agent 团队生成",
+    "元工厂",
+    "多 Agent 协作"
+  ],
+  "confidence": "high",
+  "info_gaps": [
+    "A/B 测试为作者自测，第三方复现尚未完成",
+    "README 未明确说明所需 Claude Code 最低版本",
+    "直接安装方式仅限于 skill 文件，未说明是否需要额外配置插件注册",
+    "语言标签误标为 HTML，实际为 Markdown 配置"
+  ],
+  "quality_flags": [],
+  "stars_total": 7543,
+  "created_at": "2026-03-26",
+  "pushed_at": "2026-06-10",
+  "latest_release": null,
+  "first_seen": "2026-06-24",
+  "last_seen": "2026-06-24",
+  "streak_days": 1,
+  "analysis_updated_at": "2026-06-24T16:26:09+0800",
+  "appearances": [
+    {
+      "date": "2026-06-24",
+      "reason": "new",
+      "stars_total": 7543,
+      "stars_gained": 128,
+      "release": null
+    }
+  ]
+}

@@ -1,32 +1,21 @@
-## 安装与运行
-### 前提
-- 无需任何运行时依赖，仅需下载二进制。
-- macOS/Linux: 使用curl安装脚本；Windows: PowerShell下载安装脚本。
-
-### 安装
+## 安装
 ```bash
-# 标准版
 curl -fsSL https://raw.githubusercontent.com/DeusData/codebase-memory-mcp/main/install.sh | bash
-
-# 带图可视化UI版
-curl -fsSL https://raw.githubusercontent.com/DeusData/codebase-memory-mcp/main/install.sh | bash -s -- --ui
 ```
+Windows 下使用 PowerShell 运行 `install.ps1`。可选 `--ui` 参数安装可视化版本。
 
-### 使用
-1. 重启你的AI编码代理（如Claude Code、Cursor等）。
-2. 对代理说 **“Index this project”**。二进制将自动分析当前项目并构建知识图谱。
-3. 后续通过代理对话直接发起结构化查询（如“find all functions that call init()”）。
+**依赖前提**：无（单静态二进制）。安装脚本会自动配置检测到的 AI 代理（Claude Code、Aider 等 11 种）。
 
-### 启用UI
-若安装了UI版本，在代理连接时，浏览器打开 `http://localhost:9749` 即可查看3D知识图谱。
+## 最小可用示例
+1. 重启你的 AI 编码代理
+2. 在代理中说 “Index this project”
+3. 查询示例：
+   - “Find dead functions”
+   - “Show architecture overview”
+   - “What HTTP routes exist in this project?”
 
-### 更新
+## 自动索引
 ```bash
-codebase-memory-mcp update
+codebase-memory-mcp config set auto_index true
 ```
-
-### 卸载
-```bash
-codebase-memory-mcp uninstall
-```
-（仅移除代理配置，不删除二进制和数据库。）
+之后首次连接时自动索引项目。

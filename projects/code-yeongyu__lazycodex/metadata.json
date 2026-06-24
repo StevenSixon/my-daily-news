@@ -21,7 +21,7 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "面向复杂代码库的AI代理编码助理",
+  "classify_reason": "面向复杂代码库的代理 harness，集成记忆、规划和执行。",
   "one_liner": "将 OmO 智能体工作流封装为 Codex 的一键发行版，实现规划、执行、验证闭环。",
   "why_worth_it": "解决 Codex 用户搭建多智能体协同门槛高的问题，一键获得项目记忆、模型路由、计划驱动的执行与验证，比原生 OmO 省去大量配置。",
   "tags": [
@@ -38,13 +38,13 @@
     "未说明 API 密钥等环境变量的配置方法"
   ],
   "quality_flags": [],
-  "stars_total": 1782,
+  "stars_total": 1891,
   "created_at": "2026-05-25",
-  "pushed_at": "2026-06-22",
+  "pushed_at": "2026-06-24",
   "latest_release": "v4.13.0",
   "first_seen": "2026-06-20",
-  "last_seen": "2026-06-23",
-  "streak_days": 6,
+  "last_seen": "2026-06-24",
+  "streak_days": 7,
   "analysis_updated_at": "2026-06-23T09:22:00+0800",
   "appearances": [
     {
@@ -86,6 +86,13 @@
       "date": "2026-06-23",
       "reason": "release_update",
       "stars_total": 1782,
+      "stars_gained": 0,
+      "release": "v4.13.0"
+    },
+    {
+      "date": "2026-06-24",
+      "reason": "lightweight",
+      "stars_total": 1891,
       "stars_gained": 0,
       "release": "v4.13.0"
     }
