@@ -19,12 +19,15 @@ name: Daily pipeline
 on:
   schedule:
     # 目标：飞书日报每天早上 8 点（北京时间）到货。
-    # GitHub 的 schedule 是「尽力而为」：高负载时会延迟甚至静默丢弃。单个 cron
-    # 不可靠，故排 3 个错开时刻做冗余；下面的 guard 步骤保证当天只真正跑一次
-    # （已生成则跳过），不会重复推送。GitHub cron 一律按 UTC；北京 = UTC + 8。
+    # GitHub 的 schedule 是「尽力而为」：高负载时会延迟甚至静默丢弃，00:xx UTC
+    # （北京早 8 点）尤其拥堵。故排多个错开时刻做冗余，并把兜底点放到午间/晚间
+    # 这种冷门时段；下面的 guard 步骤保证当天只真正跑一次（已生成则跳过），后续
+    # 补跑会自动跳过、不会重复推送。GitHub cron 一律按 UTC；北京 = UTC + 8。
     - cron: "37 23 * * *"   # 北京 07:37（主）
     - cron: "13 0 * * *"    # 北京 08:13（补跑1）
     - cron: "47 0 * * *"    # 北京 08:47（补跑2）
+    - cron: "12 4 * * *"    # 北京 12:12（午间补跑：早上漏跑时兜底）
+    - cron: "8 12 * * *"    # 北京 20:08（晚间补跑：最后兜底）
   workflow_dispatch: # lets you trigger a run manually from the Actions tab
 
 # Don't let two scheduled runs overlap and fight over the commit.
