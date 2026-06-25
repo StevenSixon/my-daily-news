@@ -1,0 +1,53 @@
+{
+  "full_name": "alibaba/page-agent",
+  "url": "https://github.com/alibaba/page-agent",
+  "description": "JavaScript in-page GUI agent. Control web interfaces with natural language.",
+  "language": "TypeScript",
+  "topics": [
+    "agent",
+    "ai",
+    "ai-agents",
+    "browser-automation",
+    "javascript",
+    "mcp",
+    "typescript",
+    "web"
+  ],
+  "license": "MIT",
+  "category": "AI 应用",
+  "classify_reason": "浏览器内自然语言GUI代理，终端AI工具",
+  "one_liner": "纯前端网页内GUI Agent，用自然语言操控任意Web界面。",
+  "why_worth_it": "在SaaS中一行JS即可嵌入AI助手，无需后端或截图，适合快速构建智能表单、无障碍等前端Copilot。",
+  "tags": [
+    "Agent框架",
+    "浏览器自动化",
+    "TypeScript",
+    "本地优先"
+  ],
+  "confidence": "high",
+  "info_gaps": [
+    "未提供具体性能基准或响应延时数据",
+    "除示例外的兼容 LLM 列表未明确（仅提及 OpenAI 兼容格式）",
+    "MCP Server 仍为 Beta，稳定性和完整功能未详述",
+    "跨浏览器兼容性未承诺（仅确认 Chrome 扩展）",
+    "多页面代理安全模型中禁用的 ScriptExecutionTool 具体影响范围未深入展开"
+  ],
+  "quality_flags": [],
+  "stars_total": 19741,
+  "created_at": "2025-09-23",
+  "pushed_at": "2026-06-25",
+  "latest_release": "v1.10.0",
+  "first_seen": "2026-06-26",
+  "last_seen": "2026-06-26",
+  "streak_days": 1,
+  "analysis_updated_at": "2026-06-26T03:26:29+0800",
+  "appearances": [
+    {
+      "date": "2026-06-26",
+      "reason": "new",
+      "stars_total": 19741,
+      "stars_gained": 196,
+      "release": "v1.10.0"
+    }
+  ]
+}

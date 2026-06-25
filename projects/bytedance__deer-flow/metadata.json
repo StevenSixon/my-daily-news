@@ -25,32 +25,31 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "开源长周期 SuperAgent harness，具备研究、编码和创造能力。",
-  "one_liner": "开源超级智能体框架：通过子代理、沙箱、记忆和技能完成从分钟到小时级的长程任务",
-  "why_worth_it": "解决复杂长周期任务编排问题，适合需要多智能体、工具扩展和持久记忆的开发者，已有7万星社区验证",
+  "classify_reason": "长周期SuperAgent编排工具，支持研究、编码、创建",
+  "one_liner": "重写的超级代理框架，编排子代理与沙盒，胜任长时任务。",
+  "why_worth_it": "支持长时多步任务、沙盒执行与持久记忆，超越单次LLM调用。",
   "tags": [
-    "长程任务代理",
-    "多智能体",
-    "Python",
-    "自托管"
+    "agentic-framework",
+    "multi-agent",
+    "sandbox",
+    "Python"
   ],
   "confidence": "high",
   "info_gaps": [
-    "未提供性能基准测试数据（如任务完成时间、资源消耗对比）",
-    "消息网关的具体实现细节未在 README 中展开",
-    "与其他代理框架的详细对比缺失",
-    "沙箱安全隔离的精确边界未说明",
-    "长期记忆的存储后端和容量限制未提及"
+    "未提供与同类框架（AutoGPT, CrewAI等）的基准性能对比",
+    "内部架构细节（沙盒通信协议、子代理调度算法）未公开",
+    "大规模生产部署（多副本、负载均衡）的最佳实践未详细说明",
+    "部分模型的 token 消耗与成本对比缺失"
   ],
   "quality_flags": [],
-  "stars_total": 74194,
+  "stars_total": 74673,
   "created_at": "2025-05-07",
-  "pushed_at": "2026-06-24",
-  "latest_release": null,
+  "pushed_at": "2026-06-25",
+  "latest_release": "v2.0.0",
   "first_seen": "2026-06-21",
-  "last_seen": "2026-06-24",
-  "streak_days": 4,
-  "analysis_updated_at": "2026-06-21T18:57:47+0800",
+  "last_seen": "2026-06-26",
+  "streak_days": 5,
+  "analysis_updated_at": "2026-06-26T03:28:51+0800",
   "appearances": [
     {
       "date": "2026-06-21",
@@ -79,6 +78,13 @@
       "stars_total": 74194,
       "stars_gained": 739,
       "release": null
+    },
+    {
+      "date": "2026-06-26",
+      "reason": "release_update",
+      "stars_total": 74673,
+      "stars_gained": 3068,
+      "release": "v2.0.0"
     }
   ]
 }

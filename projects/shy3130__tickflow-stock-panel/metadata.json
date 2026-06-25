@@ -19,11 +19,12 @@
     "screener",
     "self-hosted",
     "stock-analysis",
+    "tdx",
     "tickflow"
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "Self-hosted quant platform with AI agent and LLM capability.",
+  "classify_reason": "自托管A股量化工作站，LLM驱动选股与监控",
   "one_liner": "自托管零运维A股量化台：选股监控回测，桌面客户端开箱即用",
   "why_worth_it": "解决个人量化链复杂痛点，桌面端免环境，Polars+DuckDB轻量高效，可扩展外部数据",
   "tags": [
@@ -40,19 +41,26 @@
     "扩展第三方数据时字段映射的具体示例和指南缺失"
   ],
   "quality_flags": [],
-  "stars_total": 220,
+  "stars_total": 273,
   "created_at": "2026-06-18",
-  "pushed_at": "2026-06-24",
+  "pushed_at": "2026-06-25",
   "latest_release": "v0.1.43",
   "first_seen": "2026-06-25",
-  "last_seen": "2026-06-25",
-  "streak_days": 1,
+  "last_seen": "2026-06-26",
+  "streak_days": 2,
   "analysis_updated_at": "2026-06-25T02:26:17+0800",
   "appearances": [
     {
       "date": "2026-06-25",
       "reason": "new",
       "stars_total": 220,
+      "stars_gained": 0,
+      "release": "v0.1.43"
+    },
+    {
+      "date": "2026-06-26",
+      "reason": "lightweight",
+      "stars_total": 273,
       "stars_gained": 0,
       "release": "v0.1.43"
     }

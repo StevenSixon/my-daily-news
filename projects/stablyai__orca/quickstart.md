@@ -1,19 +1,13 @@
 ## 安装
-访问 [https://onorca.dev/download](https://onorca.dev/download) 下载对应平台（macOS/Windows/Linux）安装包。桌面应用安装后初次启动可能需要授权终端及文件访问权限。
-移动端：iOS 用户前往 App Store 搜索 “Orca IDE”；Android 用户从 [GitHub Release](https://github.com/stablyai/orca/releases) 下载 APK 手动安装。
+- 从 [官网](https://onorca.dev/download) 下载对应平台（macOS/Windows/Linux）的桌面应用。
+- 移动端：iOS 通过 App Store 或 TestFlight 安装；Android 下载 [APK](https://github.com/stablyai/orca/releases/download/mobile-android-v0.0.16/app-release.apk)。
 
-## 前提依赖
-- Git 已安装（worktree 功能依赖）
-- 至少一个支持的 CLI Agent（如 Claude Code、Codex 等）需自行安装并配置 API key/订阅
-- 远程工作树需要 SSH 客户端及远程主机可访问
+## 最小使用示例
+1. 启动 Orca，配置你希望使用的 AI 代理的 API 密钥或 CLI 工具（例如安装 `claude`、`codex` 命令行）。
+2. 在 Orca 中打开一个 Git 仓库，点击创建新的工作树（worktree），选择代理并输入 prompt。
+3. 可同时创建多个工作树，分配不同 prompt 或不同代理，观察实时输出，通过 diff 视图对比结果。
+4. 使用拖放或设计模式快速提供代码上下文给代理。
 
-## 快速上手
-1. 启动 Orca，打开已有仓库或克隆一个新仓库。
-2. 在界面中点击“新建 worktree”，选择要运行的 Agent（或者直接在终端中运行 `orca worktree create <agent-name>`）。
-3. 输入任务 prompt，Agent 即在隔离工作树中执行；可同时创建多个不同 Agent 的 worktree。
-4. 通过终端面板实时观察输出，完成后审查 diff，使用 Diff 注释反馈给 Agent。
-5. 合并满意的变更到主分支，删除多余 worktree。
-
-远程使用：配置 SSH 主机后，创建 worktree 时选择远程目标，Agent 便在远程执行，端口转发自动建立。
-
-CLI 高级用法：`orca worktree snapshot` 保存当前状态，`orca click` 模拟点击 UI 元素供 Agent 操作，脚本可全自动编排。
+## 依赖前提
+- 需要在系统上安装对应的 AI 代理 CLI 工具（如 Anthropic 的 `claude`、OpenAI 的 `codex` 等）并配置好认证。
+- Git 仓库支持 `git worktree` 功能。

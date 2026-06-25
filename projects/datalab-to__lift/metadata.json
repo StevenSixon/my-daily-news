@@ -1,0 +1,50 @@
+{
+  "full_name": "datalab-to/lift",
+  "url": "https://github.com/datalab-to/lift",
+  "description": "Extract structured data from documents quickly and accurately.",
+  "language": "Python",
+  "topics": [
+    "ai",
+    "extract",
+    "ocr",
+    "pdf",
+    "python"
+  ],
+  "license": "Apache-2.0",
+  "category": "AI 应用",
+  "classify_reason": "文档结构化数据提取工具，端到端AI",
+  "one_liner": "9B视觉模型+Schema约束解码，从PDF/图片中精准提取结构化JSON",
+  "why_worth_it": "解决文档字段抽取痛点，开源模型中准确率最高（90.2%），可本地部署，适合需高精度、低延迟的文档智能场景",
+  "tags": [
+    "文档解析",
+    "结构化提取",
+    "视觉模型",
+    "自托管"
+  ],
+  "confidence": "high",
+  "info_gaps": [
+    "未明确说明模型的基础架构是否为 Qwen3.5-VL 的视觉版本，仅从致谢推测",
+    "vLLM 服务的 Docker 镜像未提供公开地址，依赖一键脚本 `lift_vllm` 拉取，源镜像透明度不足",
+    "模型权重许可 OpenRAIL-M 的具体限制条款细节未在 README 中完整列出，仅概述",
+    "未说明最大可处理的 PDF 页数或文件大小限制",
+    "Schema Studio 与 CLI 的 \"保存 schema\" 功能依赖的本地目录结构未详细说明"
+  ],
+  "quality_flags": [],
+  "stars_total": 502,
+  "created_at": "2026-06-03",
+  "pushed_at": "2026-06-19",
+  "latest_release": "v0.1.1",
+  "first_seen": "2026-06-26",
+  "last_seen": "2026-06-26",
+  "streak_days": 1,
+  "analysis_updated_at": "2026-06-26T03:27:05+0800",
+  "appearances": [
+    {
+      "date": "2026-06-26",
+      "reason": "new",
+      "stars_total": 502,
+      "stars_gained": 0,
+      "release": "v0.1.1"
+    }
+  ]
+}

@@ -1,6 +1,1118 @@
 {
   "editions": [
     {
+      "date": "2026-06-26",
+      "count": 9,
+      "projects": [
+        {
+          "id": "opendatalab__MinerU",
+          "fullName": "opendatalab/MinerU",
+          "owner": "opendatalab",
+          "name": "MinerU",
+          "url": "https://github.com/opendatalab/MinerU",
+          "oneLiner": "文档解析引擎：PDF/Office转Markdown/JSON，双引擎、109语言、离线部署。",
+          "description": "Transforms complex documents like PDFs and Office docs into LLM-ready markdown/JSON for your Agentic workflows.",
+          "language": "Python",
+          "category": "AI 应用",
+          "license": "NOASSERTION",
+          "starsTotal": 69400,
+          "starsGained": 524,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2024-02-29",
+          "pushedAt": "2026-06-25",
+          "latestRelease": "mineru-3.4.0-released",
+          "firstSeen": "2026-06-26",
+          "topics": [
+            "ai4science",
+            "document-analysis",
+            "docx",
+            "extract-data",
+            "layout-analysis",
+            "ocr",
+            "parser",
+            "pdf",
+            "pdf-converter",
+            "pdf-extractor-llm",
+            "pdf-extractor-pretrain",
+            "pdf-extractor-rag",
+            "pdf-parser",
+            "pptx",
+            "python",
+            "xlsx"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-26",
+              "reason": "new",
+              "starsTotal": 69400,
+              "starsGained": 524,
+              "release": "mineru-3.4.0-released"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "MinerU 是一个高性能文档解析引擎，将 PDF、DOCX、PPTX、XLSX、图片和网页等复杂文档转换为结构化的 Markdown 或 JSON，为 LLM、RAG 和 Agent 工作流提供清洁、可解析的数据。"
+            },
+            {
+              "heading": "为什么火",
+              "bullets": [
+                "社区火爆：GitHub 69.4k stars，频繁更新，已被大量 LLM 应用集成。",
+                "精确解析：支持公式转 LaTeX、表格转 HTML、多栏布局、跨页表格合并，遵循人类阅读顺序，自动去除页眉页脚。",
+                "双引擎：VLM + OCR 双引擎，兼顾精度和效率，OCR 支持 109 种语言。",
+                "全面集成：提供 MCP Server 用于 AI 编程工具（Cursor/Claude Desktop 等），原生集成 LangChain、LlamaIndex、Dify 等 RAG 框架。",
+                "离线安全：支持完全离线部署，适配 10+ 国产 AI 芯片（昇腾、寒武纪等）。"
+              ]
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "语言：Python（主要），也提供 Go/TypeScript SDK、REST API、Docker。",
+                "推理后端：pipeline（快速稳定，CPU/GPU 均可）、vlm-engine（高精度，可对接 vLLM/LMDeploy/mlx）、hybrid-engine（原生文本提取，低幻觉）。",
+                "OCR 引擎：近期升级至 PP-OCRv6，准确率提升 11%，处理速度翻倍。",
+                "模型管理：自动选择下载源，缓存复用。"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "多格式支持：PDF、DOCX、PPTX、XLSX、图片、网页。",
+                "结构化输出：Markdown、JSON，保留阅读顺序和语义结构。",
+                "公式/表格：LaTeX、HTML 忠实还原。",
+                "语言：109 种文字 OCR 识别。",
+                "处理优化：批处理、OCR 加速。"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "构建 RAG 知识库（Dify、FastGPT 等集成）。",
+                "为 LLM 预处理训练数据（学术论文、报告）。",
+                "企业级文档数字化、离线敏感环境。",
+                "AI 编程工具中直接读取文档内容（MCP 协议）。"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "bullets": [
+                "与 PyMuPDF、pdfplumber 相比：MinerU 更侧重 AI 就绪的结构化输出，而非纯提取。",
+                "与 Marker、Unstructured 相比：MinerU 提供更丰富的 Office 格式支持、双引擎选择、更好的中文/多语言支持和国产卡离线适配。",
+                "与商业化服务（如 Docling）相比：开源免费、可完全自托管。"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "最新 3.4 版（2026-06-18）聚焦 pipeline 后端的 OCR 升级（PP-OCRv6），准确率提升约 11%，解析速度翻倍；优化模型下载体验，首次安装自动选源，支持缓存复用。 ---"
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：medium",
+                "信息盲区：README 未提供明确的安装指引和 CLI 示例，仅展示概览，quickstart 命令为推测；未提供全面 benchmark 数据（除 OmniDocBench 上的 OCR 指标提升 11% 外）；模型文件确切大小和下载机制未在 README 中说明；未说明系统依赖和硬件需求（如 GPU 显存）"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "xbtlin__ai-berkshire",
+          "fullName": "xbtlin/ai-berkshire",
+          "owner": "xbtlin",
+          "name": "ai-berkshire",
+          "url": "https://github.com/xbtlin/ai-berkshire",
+          "oneLiner": "基于Claude Code的四大师方法论多Agent价值投资研究框架，一人即投研团队。",
+          "description": "AI 时代的伯克希尔：基于 Claude Code 的价值投资研究框架。巴菲特·芒格·段永平·李录四大师方法论 + 多Agent并行研究。| AI-era Berkshire: a value investing research framework   built on Claude Code. 4 masters' methodologies + multi-agent adversarial analysis.",
+          "language": "Python",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 1757,
+          "starsGained": 201,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-04-07",
+          "pushedAt": "2026-06-25",
+          "latestRelease": "v1.0.0",
+          "firstSeen": "2026-06-26",
+          "topics": [
+            "ai",
+            "ai-agent",
+            "anthropic",
+            "berkshire-hathaway",
+            "charlie-munger",
+            "china-stock",
+            "claude",
+            "claude-code",
+            "financial-analysis",
+            "fintech",
+            "fundamental-analysis",
+            "investment",
+            "investment-research",
+            "llm",
+            "mcp",
+            "portfolio-management",
+            "stock-analysis",
+            "stock-market",
+            "value-investing",
+            "warren-buffett"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-26",
+              "reason": "new",
+              "starsTotal": 1757,
+              "starsGained": 201,
+              "release": "v1.0.0"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "AI Berkshire 是一套基于 Anthropic Claude Code 的投资研究 Skill 集合，将巴菲特、芒格、段永平、李录四位价值投资大师的方法论系统化为 16 个可调用的命令（/investment-research 等）。每个命令内部启动多 Agent 并行研究，各自独立搜索、交叉验证，最终由 Team Lead 综合输出带有明确结论和价格区间的投研报告。 核心思想：一个人 + Claude Code = 一个专业投研团队。提供了实盘两年大幅跑赢标普500和恒生指数的收益数据（2024年+69.29%，2025年至今+66.38%），并附富途账户截图增强可信度。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "> Star 1757，2026年4月发布后迅速获得关注。",
+              "bullets": [
+                "解决真实痛点：直接问 AI “某股票值不值得买”会得到模棱两可的分析，AI Berkshire 强制输出通过/不通过/灰色地带，含具体价格区间和分层投资建议，杜绝“太极回答”。",
+                "四大师视角对抗：段永平看商业模式、巴菲特看财务与护城河、芒格逆向思考风险、李录看长期确定性，四个视角会产生真实的矛盾与张力，避免单一视角盲点。",
+                "可复现的研究流程：同样的输入保证结构和深度一致的输出，支持公司横向对比和时序跟踪。",
+                "内置反偏见机制：信息丰富度评级、芒格式逆向检验、快速否决清单、反共识检查、留白原则等多层防骗设计，让 AI 不自作聪明的幻觉。",
+                "多 Agent 并行：/investment-team 启动4个独立 Agent 同时研究一家公司，每个 Agent 各自进行完整搜索和独立结论，相当于4倍搜索量和信息源。"
+              ]
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "载体：Claude Code（Anthropic 的命令行 AI 编程/研究工具，需 npm 全局安装）。",
+                "Skill 实现：一系列 Markdown 格式的提示文件（skills/*.md），用户复制到 ~/.claude/commands/ 后即可通过 / 命令调用。",
+                "工具支撑：Python 脚本用于精确金融计算（如 decimal.Decimal 计算市值、DCF），部分工具在 tools/ 目录下，确保关键数据多源交叉验证、不依赖 LLM 心算。",
+                "架构：三层设计——Skill 层（16个研究入口）、Agent 层（每个 skill 内4个 Agent 并行）、工具层（精确计算和实时检索）。",
+                "语言标签：Python（因辅助工具）；实际主体为 Claude Code 的 Markdown 指令集。"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "body": "1. 深度研究类（5个）：/investment-research（四大师综合）、/investment-team（4 Agent 并行）、/management-deep-dive（管理层深挖）、/private-company-research（未上市侦探式研究）、/deep-company-series（8篇长文系列拆解）。 2. 财报分析类（2个）：/earnings-review（只读原始财报）、/earnings-team（四大师并行解读财报并输出可发布文章）。 3. 行业筛选类（4个）：/industry-research（产业链全景扫描）、/industry-funnel（全市场漏斗筛选至3家）、/quality-screen（7条硬指标去劣删除）、/investment-checklist（巴菲特的六关快速筛选，10分钟决定是否深入）。 4. 持仓管理类（3个）：/portfolio-review（组合仓位优化）、/thesis-tracker（投资论文持续验证）、/news-pulse（股价异动10分钟归因）。 5. 思维工具类（2个）：/dyp-ask（段永平问答模式）、/financial-data（数据获取与交叉验证规范）。 每个核心能力都具备：",
+              "bullets": [
+                "强制输出“镜子测试”（五句话说清楚买入理由，说不完就不买）",
+                "三情景估值（乐观/中性/悲观）+ 反向DCF",
+                "多源数据交叉验证，市值手算校验",
+                "明确标注信息丰富度等级（A/B/C）和置信度"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "个人投资者想做严肃的个股/行业研究，希望借助 AI 克服认知偏差，获得可执行的决策依据。",
+                "价值投资学习者想学习如何将四大师方法论落地为具体的研究流程。",
+                "分析师/研究员寻找可复现的 AI 辅助投研框架，快速生成初稿或进行多视角验证。",
+                "需要快速筛选：在 10 分钟内判断一家公司是否值得深入研究（/investment-checklist）。",
+                "组合管理：定期审查持仓，跟踪投资论文是否被证伪。"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "bullets": [
+                "直接对话式 AI（ChatGPT/Claude 对话）：缺少强制决策纪律，回答模棱两可；AI Berkshire 给出了结构化评分、镜子测试、具体买卖价格区间。",
+                "传统金融终端（Bloomberg/FactSet）：数据全面但缺乏大师方法论的 AI 执行和多视角对抗，且成本极高；AI Berkshire 成本极低（只需 Claude Code 订阅）。",
+                "其他 AI 投研工具（如 FinChat、Koyfin 的 AI 功能）：强调数据可视化和快速归因，但缺少以四大师为骨架的完整研究框架，也缺乏未上市公司研究和财报深度解读的强制流程。",
+                "自建 LangChain 金融 Agent：灵活但需要大量开发工作，AI Berkshire 开箱即用，且有实盘业绩背书。"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "---",
+              "bullets": [
+                "v1.0.0（2026-04-07）：首个正式版本，包含 16 个 Skill，覆盖深度研究、财报分析、行业筛选、持仓管理、思维工具五大类。",
+                "docs/ROADMAP.md：存在路线图文件，但 README 未展开，未来可能增加更多大师视角和资产类别。",
+                "最新推送（2026-06-25）：项目活跃，社区反馈积极。"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：未说明多 Agent 并行是在 Claude Code 内部通过多轮对话模拟，还是有原生的多 Agent 调度机制；具体并行实现细节未披露；实盘收益截图未公开具体的持仓明细和调仓逻辑，无法独立验证收益归因于框架有效性；tools/ 目录下的 Python 工具具体功能和用法未详细展开（仅提及 financial_rigor.py 一个示例）；ROADMAP 内容未在 README 公开，未来规划不清晰；对非中国股票（美股、港股以外市场）的支持程度未验证"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "alibaba__page-agent",
+          "fullName": "alibaba/page-agent",
+          "owner": "alibaba",
+          "name": "page-agent",
+          "url": "https://github.com/alibaba/page-agent",
+          "oneLiner": "纯前端网页内GUI Agent，用自然语言操控任意Web界面。",
+          "description": "JavaScript in-page GUI agent. Control web interfaces with natural language.",
+          "language": "TypeScript",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 19741,
+          "starsGained": 196,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2025-09-23",
+          "pushedAt": "2026-06-25",
+          "latestRelease": "v1.10.0",
+          "firstSeen": "2026-06-26",
+          "topics": [
+            "agent",
+            "ai",
+            "ai-agents",
+            "browser-automation",
+            "javascript",
+            "mcp",
+            "typescript",
+            "web"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-26",
+              "reason": "new",
+              "starsTotal": 19741,
+              "starsGained": 196,
+              "release": "v1.10.0"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "Page Agent 是阿里巴巴开源的纯浏览器端 GUI Agent，运行在用户当前网页内，通过文本 DOM 操作理解页面结构，用自然语言完成点击、填表、导航等任务。它不依赖后端服务、截图或多模态模型，只需注入一段 JavaScript。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "项目 2025 年 9 月发布，已获超 1.9 万星。最大卖点是将复杂的 Web 自动化能力浓缩为一键式前端脚本，极大降低了集成门槛，尤其吸引 SaaS 开发者、无障碍倡导者和自动化爱好者。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "核心：TypeScript 编写，编译为可在浏览器运行的 IIFE/ESM 包。",
+                "AI 层：通过兼容 OpenAI 格式的 API 调用 LLM（支持自托管），默认使用通义千问。",
+                "感知方式：序列化 DOM 树为结构化文本，交由 LLM 决策操作步骤，无需视觉模型。",
+                "扩展能力：可选的 Chrome 扩展用于多标签页自动化，并提供 MCP Server（Beta）供外部智能体控制浏览器。"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "文本式 DOM 理解：将网页元素转化为 LLM 可解析的结构化描述，实现精准操作。",
+                "可扩展动作：内置点击、输入、滚动、等待、执行 JavaScript 等工具，且支持 abort 信号。",
+                "多页面代理：通过 Chrome 扩展跨标签页工作，已禁用危险的脚本执行工具以提高安全性。",
+                "生命周期管理：v1.10.0 重构了运行状态机，支持异步停止、独立的任务状态和错误记录。",
+                "暗色模式感知：优化了页面主题检测，避免误判。"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "SaaS AI Copilot：为你的产品添加智能助手，用户用自然语言完成复杂操作。",
+                "表单自动填充：将多步骤录入浓缩为一句话指令，适合 ERP、CRM 等企业系统。",
+                "无障碍增强：让视障用户通过语音或文本命令控制网页，无需特殊适配。",
+                "跨页面工作流：配合扩展实现跨标签页的数据抓取或流程自动化。"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "bullets": [
+                "vs. browser-use（Python 库）：browser-use 需要 Python 环境和 headless 浏览器，适合服务端自动化；Page Agent 仅需在目标页面嵌入 JS，天然贴合前端增强场景，且无需截图。",
+                "vs. Playwright + AI：Playwright 同样需要 Node 环境，无法直接嵌入用户浏览器。Page Agent 部署成本极低，但受限于单页面域（多页面需扩展）。",
+                "vs. 其他浏览器扩展 AI 助手：Page Agent 提供 NPM 包和 CDN，允许开发者自定义集成，而非封闭的应用。"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "最新 v1.10.0（2026-06-15）带来破坏性变更：Agent 运行生命周期重写，stop() 变为异步且状态与任务结果解耦，新增 stopped 状态和 agent.lastResult。功能层面新增可中止的 JavaScript 执行、精简 Agent 提示词以降低 LLM 认知负荷、禁用了 MultiPageAgent 的脚本执行工具以提升安全性。修复了滚动断言、等待上报和文档视频等问题。 ---"
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：未提供具体性能基准或响应延时数据；除示例外的兼容 LLM 列表未明确（仅提及 OpenAI 兼容格式）；MCP Server 仍为 Beta，稳定性和完整功能未详述；跨浏览器兼容性未承诺（仅确认 Chrome 扩展）；多页面代理安全模型中禁用的 ScriptExecutionTool 具体影响范围未深入展开"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "datalab-to__lift",
+          "fullName": "datalab-to/lift",
+          "owner": "datalab-to",
+          "name": "lift",
+          "url": "https://github.com/datalab-to/lift",
+          "oneLiner": "9B视觉模型+Schema约束解码，从PDF/图片中精准提取结构化JSON",
+          "description": "Extract structured data from documents quickly and accurately.",
+          "language": "Python",
+          "category": "AI 应用",
+          "license": "Apache-2.0",
+          "starsTotal": 502,
+          "starsGained": 0,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-06-03",
+          "pushedAt": "2026-06-19",
+          "latestRelease": "v0.1.1",
+          "firstSeen": "2026-06-26",
+          "topics": [
+            "ai",
+            "extract",
+            "ocr",
+            "pdf",
+            "python"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-26",
+              "reason": "new",
+              "starsTotal": 502,
+              "starsGained": 0,
+              "release": "v0.1.1"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "lift 是一个从 PDF 和图片中提取结构化数据的 Python 工具，核心是一个 9B 参数的视觉语言模型。你只需传入一个 JSON Schema，它便返回严格符合该 Schema 的 JSON，并通过 Schema 约束解码保证输出永远有效。支持多页文档单次处理，能够提取跨页字段、列表和嵌套对象。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "开源模型在文档字段级提取上长期落后于闭源 API，lift 以 90.2% 的字段准确率（同类开源最高）和 9.5s 的中位延迟吸引了大量关注。它允许开发者本地部署，避免了数据外泄和 API 成本，同时提供了比 NuExtract3、Qwen3.5 等模型更高的单字段精度。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "推理引擎：vLLM（推荐）或 HuggingFace Transformers",
+                "基础框架：基于 Qwen3.5 系列视觉模型微调（感谢 Qwen 3.5）",
+                "语言：Python，提供 CLI 和 Python API",
+                "前端工具：Schema Studio（Streamlit 应用）用于交互式构建和测试 Schema",
+                "部署：Docker 一键启动 vLLM 服务，针对多种 GPU 自动优化"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "Schema 约束解码：输出永远符合给定的 JSON Schema，避免格式错误",
+                "高准确率：在 225 份文档、约 11000 个字段的基准测试中，字段正确率 90.2%，远超 NuExtract3（81.5%）和 Qwen3.5-9B（76.3%）",
+                "多页支持：一次处理多页 PDF，自动聚合跨页值",
+                "灵活性：支持任意 JSON Schema（字符串、数字、布尔、数组、嵌套对象）",
+                "两种推理模式：本地 HF 模型（需 GPU）或通过 vLLM 服务栈（高性能）",
+                "批量处理：CLI 可处理整个目录，适合大规模文档解析"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "发票、合同、表单、报告等文档的自动化信息提取",
+                "金融、物流、法律、医疗等需要从非结构化文档中获取结构化数据的领域",
+                "注重数据隐私、需要本地部署的中小团队或初创公司（<$5M 资金/收入可免费商用）",
+                "任何希望以较低延迟（9.5s/doc）获得高字段级提取精度的场景"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "body": "与基准中的主要模型对比： | 模型 | 字段准确率 | 全文档准确率 | 延迟 | 备注 | |---|---|---|---|---| | lift | 90.2% | 20.9% | 9.5s | 开源，需商业许可 | | Datalab API | 95.9% | 44.4% | 30.8s | 闭源，含验证与引用 | | Gemini Flash 3.5 | 91.3% | 40.0% | 28.1s | 闭源 API | | Qwen3.5-9B | 76.3% | 24.0% | 16.8s | 开源，通用模型 | | NuExtract3-4B | 81.5% | 8.4% | 8.3s | 开源，轻量但全文档精度低 | lift 在字段级准确率上领先所有开源模型，且速度优于同等规模模型。全文档准确率（所有字段完全正确）较低，说明在复杂文档的完整提取上仍有提升空间，但相比 NuExtract3 已是巨大进步。与闭源 API 的差距主要在于缺少验证和引用机制。"
+            },
+            {
+              "heading": "版本动态",
+              "body": "---",
+              "bullets": [
+                "最新 Release：v0.1.1（2026-06-19），仅发布关于从 v0.1.0 升级的简单变更日志",
+                "仓库创建于 2026-06-03，项目尚处于早期快速迭代阶段",
+                "目前模型许可为 OpenRAIL-M，限制商业竞争性使用，需关注后续许可变化"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：未明确说明模型的基础架构是否为 Qwen3.5-VL 的视觉版本，仅从致谢推测；vLLM 服务的 Docker 镜像未提供公开地址，依赖一键脚本 lift_vllm 拉取，源镜像透明度不足；模型权重许可 OpenRAIL-M 的具体限制条款细节未在 README 中完整列出，仅概述；未说明最大可处理的 PDF 页数或文件大小限制；Schema Studio 与 CLI 的 \"保存 schema\" 功能依赖的本地目录结构未详细说明"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "PentesterFlow__agent",
+          "fullName": "PentesterFlow/agent",
+          "owner": "PentesterFlow",
+          "name": "agent",
+          "url": "https://github.com/PentesterFlow/agent",
+          "oneLiner": "终端里的人机协同渗透测试AI代理，支持审批、证据驱动与本地记忆",
+          "description": "Agentic offensive-security in your terminal",
+          "language": "TypeScript",
+          "category": "AI 应用",
+          "license": "Apache-2.0",
+          "starsTotal": 511,
+          "starsGained": 0,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-05-31",
+          "pushedAt": "2026-06-14",
+          "latestRelease": "v0.1.20",
+          "firstSeen": "2026-06-26",
+          "topics": [
+            "ai",
+            "ai-agents",
+            "bugbounty",
+            "penetration-testing",
+            "security-audit",
+            "security-automation"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-26",
+              "reason": "new",
+              "starsTotal": 511,
+              "starsGained": 0,
+              "release": "v0.1.20"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "PentesterFlow 是一个开源的终端 CLI 工具，专为授权渗透测试和漏洞赏金设计。它在终端中构建人机协同的 AI 代理，辅助安全工程师完成侦查、枚举、验证、证据收集和报告等全生命周期工作。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "通用 AI 代理在安全场景中常产生幻觉、上下文丢失，且工具集成弱、审计性差。PentesterFlow 针对这些问题提供了透明 curl-first 的执行、内置渗透测试技能、证据驱动的确认机制、会话记忆和持续学习，让分析师保持控制的同时大幅提升效率。GitHub 已获 511 星，社区关注度高。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "语言：TypeScript",
+                "构建：使用 Bun 编译为独立二进制，跨平台分发（macOS、Linux、Windows）",
+                "LLM 后端：支持 Ollama、LM Studio、Kimi、Groq、Gemini、DeepSeek、OpenRouter 等",
+                "集成：Burp Suite 桥接、浏览器流量捕获、MCP 协议",
+                "存储：本地会话文件（JSON）、项目与个人知识库（JSON Lines）、Markdown 回忆文件"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "Agent 循环：计划 → 行动 → 观察 → 验证 → 报告 → 学习",
+                "内置技能：包含 Web 漏洞、SSRF、SSTI、JWT、GraphQL、竞态条件等 Markdown 技能手册",
+                "工具集：Shell/Bash、HTTP、文件操作、搜索、Burp 导入、浏览器捕获、MCP",
+                "记忆系统：项目级和个人级持久情报，自动静默学习并消重，上下文联想检索",
+                "报告：确认的发现自动生成含证据、PoC 和修复建议的 Markdown 文件",
+                "覆盖度追踪：跟踪已测试的端点/参数/漏洞类别，通过 /next 建议未测试区域"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "授权的渗透测试与红队评估",
+                "漏洞赏金计划中的信息收集与验证",
+                "内部安全审计与持续安全测试",
+                "需要可审计自动化记录的合规测试场景"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "body": "GitHub 上缺少同等定位的开源渗透测试专用 AI 代理。通用 AI 助手（如 ChatGPT、通用 CLI 助手）不具备内置的攻击面知识、证据验证机制和渗透测试生命周期管理。而传统安全自动化（如定制脚本或 Burp 扫描）缺乏自然语言交互和记忆学习。PentesterFlow 填补了这一空白。"
+            },
+            {
+              "heading": "版本动态",
+              "body": "---",
+              "bullets": [
+                "创建于 2026 年 5 月 31 日，至今仅两周即达 511 星，更新频繁",
+                "最新 Release：v0.1.20（2026-06-14）",
+                "路线活跃，高频发布，正在快速迭代中（依据提交历史）"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：二进制文件是否完全自包含（是否内嵌 Node/Bun 运行时）未明确说明；无性能 benchmark 数据（如大型目标处理速度、内存占用）；安全模型的具体实现细节未披露（README 提及但未展开）；与其他安全 AI 工具（如 HackingBuddyGPT）的对比数据缺失；学习系统的检索和消重算法细节未公开"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mukul975__Anthropic-Cybersecurity-Skills",
+          "fullName": "mukul975/Anthropic-Cybersecurity-Skills",
+          "owner": "mukul975",
+          "name": "Anthropic-Cybersecurity-Skills",
+          "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
+          "oneLiner": "817 AI网络安全技能，6大框架映射，26+平台即用",
+          "description": "817 structured cybersecurity skills for AI agents · Mapped to 6 frameworks: MITRE ATT&CK, NIST CSF 2.0, MITRE ATLAS, D3FEND, NIST AI RMF & MITRE F3 (Fight Fraud) · agentskills.io standard · Works with Claude Code, GitHub Copilot, Codex CLI, Cursor, Gemini CLI & 20+ platforms · 29 security domains · Apache 2.0",
+          "language": "Python",
+          "category": "AI 应用",
+          "license": "Apache-2.0",
+          "starsTotal": 21092,
+          "starsGained": 4304,
+          "streakDays": 2,
+          "isNew": false,
+          "createdAt": "2026-02-25",
+          "pushedAt": "2026-06-22",
+          "latestRelease": "v1.3.0",
+          "firstSeen": "2026-06-22",
+          "topics": [
+            "ai-agents",
+            "claude-code",
+            "cloud-security",
+            "cybersecurity",
+            "devsecops",
+            "ethical-hacking",
+            "incident-response",
+            "infosec",
+            "llm",
+            "malware-analysis",
+            "mcp",
+            "mitre-attack",
+            "nist-csf",
+            "osint",
+            "penetration-testing",
+            "red-team",
+            "security",
+            "security-automation",
+            "threat-hunting",
+            "threat-intelligence"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-22",
+              "reason": "new",
+              "starsTotal": 17714,
+              "starsGained": 361,
+              "release": "v1.2.0"
+            },
+            {
+              "date": "2026-06-26",
+              "reason": "release_update",
+              "starsTotal": 21092,
+              "starsGained": 4304,
+              "release": "v1.3.0"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "Anthropic Cybersecurity Skills是一个面向AI代理的网络安全技能库，包含817个结构化技能，覆盖29个安全领域，横跨MITRE ATT&CK、NIST CSF 2.0、MITRE ATLAS、D3FEND、NIST AI RMF和MITRE F3六大框架。它遵循agentskills.io开放标准，将资深安全分析师的实战决策流程编码为YAML+Markdown知识单元，可直接注入Claude Code、GitHub Copilot等26+AI平台，让代理获得专家级安全指导。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "Star数超过21000，反映了安全人才缺口下AI辅助的强烈需求。独特之处在于：一个技能同时满足6个合规框架的映射，解决团队多标准覆盖的痛点；它不是简单的工具列表或检查表，而是包含必要性判断、执行步骤、验证方法的完整决策知识；遵循开放标准，可跨平台复用，大幅降低AI落地安全的门槛。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "技能格式：YAML frontmatter（mitre_attack、nist_csf等字段） + Markdown 步骤描述",
+                "框架验证：使用mitreattack-python库校验MITRE ATT&CK v19.1映射，F3等手动验证",
+                "分发方式：npm包（通过npx skills add）和Git仓库",
+                "兼容平台：Claude Code、GitHub Copilot、OpenAI Codex CLI、Cursor、Gemini CLI等26+"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "body": "1. 统一跨框架映射：技能粒度的ATT&CK、NIST CSF、ATLAS、D3FEND、AI RMF、F3关联，一键满足审计需求。 2. 可执行决策流：每个技能包含前提检查、分步执行、结果验证和参考文件，代理可直接理解并操作。 3. 广泛领域覆盖：云安全、威胁狩猎、事件响应、AI红队、供应链安全等29个领域，紧跟2025-2026年安全趋势。 4. 实时威胁对齐：v1.3.0新增AI安全、硬件固件、F3反欺诈等前沿领域，映射覆盖最新ATT&CK v19.1。 5. 社区标准兼容：Apache 2.0开源，符合agentskills.io规范，保证互操作性。"
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "SOC与事件响应：AI代理快速关联ATT&CK技术，辅助调查、遏制和恢复。",
+                "红队与对抗模拟：提供Sliver/Havoc C2、ADCS攻击、LOTL等高级技能，实现自动化攻击仿真。",
+                "云安全合规：CSPM、云取证、容器安全技能直接映射到NIST CSF 2.0控制项。",
+                "安全研究：恶意软件分析、威胁情报的自动化处理与知识提取。",
+                "DevSecOps：在CI/CD中嵌入Trivy扫描、SBOM生成、依赖混淆检测等技能。"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "bullets": [
+                "vs PayloadsAllTheThings：后者是载荷与技巧集，缺乏决策流和跨框架映射，不能被AI直接消费。",
+                "vs MITRE ATT&CK知识库：只描述技术，本项目将其转化为可执行步骤。",
+                "vs 安全自动化平台：平台提供工作流，非AI原生知识注入；本项目让代理拥有“分析师思维”。",
+                "独特优势：统一agentskills标准，一次编写，26+平台复用。"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "---",
+              "bullets": [
+                "v1.3.0（2026-06-22）：技能数从762增至817，新增MITRE F3反欺诈框架映射，加入AI安全、供应链安全、硬件固件安全3个全新领域，扩展身份、云原生、DFIR等领域，修复插件版本号。",
+                "社区持续维护，未来将随ATT&CK版本更新和新兴威胁扩展。"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：未提供技能在真实场景中的执行准确率或成功率数据；与各AI平台集成的详细步骤文档有限，缺少配置模板；社区贡献的质量保证与评审流程不透明；暂无第三方基准测试或性能评估；项目名称含「Anthropic」但声明非官方，可能造成误解"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "bytedance__deer-flow",
+          "fullName": "bytedance/deer-flow",
+          "owner": "bytedance",
+          "name": "deer-flow",
+          "url": "https://github.com/bytedance/deer-flow",
+          "oneLiner": "重写的超级代理框架，编排子代理与沙盒，胜任长时任务。",
+          "description": "An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message gateway, it handles different levels of tasks that could take minutes to hours.",
+          "language": "Python",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 74673,
+          "starsGained": 3068,
+          "streakDays": 5,
+          "isNew": false,
+          "createdAt": "2025-05-07",
+          "pushedAt": "2026-06-25",
+          "latestRelease": "v2.0.0",
+          "firstSeen": "2026-06-21",
+          "topics": [
+            "agent",
+            "agentic",
+            "agentic-framework",
+            "agentic-workflow",
+            "ai",
+            "ai-agents",
+            "deep-research",
+            "harness",
+            "langchain",
+            "langgraph",
+            "langmanus",
+            "llm",
+            "multi-agent",
+            "nodejs",
+            "podcast",
+            "python",
+            "superagent",
+            "typescript"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-21",
+              "reason": "new",
+              "starsTotal": 72200,
+              "starsGained": 415,
+              "release": ""
+            },
+            {
+              "date": "2026-06-22",
+              "reason": "lightweight",
+              "starsTotal": 72594,
+              "starsGained": 442,
+              "release": ""
+            },
+            {
+              "date": "2026-06-23",
+              "reason": "lightweight",
+              "starsTotal": 73272,
+              "starsGained": 738,
+              "release": ""
+            },
+            {
+              "date": "2026-06-24",
+              "reason": "lightweight",
+              "starsTotal": 74194,
+              "starsGained": 739,
+              "release": ""
+            },
+            {
+              "date": "2026-06-26",
+              "reason": "release_update",
+              "starsTotal": 74673,
+              "starsGained": 3068,
+              "release": "v2.0.0"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "DeerFlow 2.0 是一个从零重写的超级代理编排框架（SuperAgent harness），可协调多个子代理、持久记忆、沙盒化执行环境与可扩展的技能/工具系统，完成从几分钟到数小时的长周期任务。它前身是深度研究框架，现定位为通用“超级代理”平台。"
+            },
+            {
+              "heading": "为什么火",
+              "bullets": [
+                "两周内即登 GitHub 趋势榜首，Star 超 7.4万，社区贡献活跃（v2.0 里程碑合并 182 个 PR）。",
+                "解决了单一 LLM 调用无法处理的复杂多步问题，通过子代理协作、沙盒隔离、长短期记忆实现可靠的任务执行。",
+                "丰富的集成：支持十余种模型、七种 IM 通道、多种搜索引擎，并提供 TUI 终端界面。"
+              ]
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "后端：Python 3.12+，基于 LangChain/LangGraph 生态，使用 uv 包管理。",
+                "前端/工具链：Node.js 22+，TypeScript 项目，包含 TUI 客户端。",
+                "基础设施：Docker 容器化部署，沙盒通过社区 AioSandbox 或本地容器实现；消息网关连接 Slack/Telegram 等。"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "子代理系统：可递归调度子代理处理子任务，并实时归集 token 用量。",
+                "技能与工具：内置深度研究、播客生成、音乐创作、图片/视频处理等技能；支持 Claude Code 集成及 MCP 服务器。",
+                "沙盒化执行：可选远程或本地 Docker 沙盒，安全执行代码与命令。",
+                "持久记忆：代理可更新自身 SOUL.md，实现跨会话学习与用户隔离。",
+                "上下文工程：可配置循环检测、工具频率限制，提升长对话稳定性。",
+                "多模型与渠道：支持 OpenAI、vLLM、Codex CLI、Claude Code OAuth 等；IM 通道可绑定用户自有账号。"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "需要长周期自主研究的任务（市场调研、竞品分析、技术调研）。",
+                "多步骤编码工程（自动生成项目骨架、调试、文档生成）。",
+                "企业内部自动化工作流（通过 IM 通道执行复杂指令，如数据分析、报告撰写）。",
+                "研究者与极客探索 Agent 协作边界。"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "body": "与 LangChain/LangGraph 相比，DeerFlow 提供了开箱即用的超级代理模板与沙盒管理；相较于 AutoGPT、CrewAI 等纯多代理框架，它集成了更丰富的 IM 接入和自更新记忆机制；相比 GPT-Engin，它更侧重长时任务的可恢复性与生产级部署（含 Nginx 统一端点）。但缺乏与这些框架在基准任务上的横向对比数据。"
+            },
+            {
+              "heading": "版本动态",
+              "body": "---",
+              "bullets": [
+                "v2.0.0 为全量重构版本，与 1.x 分支不共享代码（1.x 仍在维护）。",
+                "主要更新：运行状态持久化与中断恢复、用户自有 IM 帐号绑定、新增多个模型和社区搜索工具、可配置循环检测、子代理 token 流式归因等。",
+                "当前主线活跃，文档持续扩充。"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：未提供与同类框架（AutoGPT, CrewAI等）的基准性能对比；内部架构细节（沙盒通信协议、子代理调度算法）未公开；大规模生产部署（多副本、负载均衡）的最佳实践未详细说明；部分模型的 token 消耗与成本对比缺失"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "stablyai__orca",
+          "fullName": "stablyai/orca",
+          "owner": "stablyai",
+          "name": "orca",
+          "url": "https://github.com/stablyai/orca",
+          "oneLiner": "并行编排多个AI编码代理，在隔离的Git工作树中自动运行与对比结果。",
+          "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop and mobile.",
+          "language": "TypeScript",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 7344,
+          "starsGained": 1397,
+          "streakDays": 3,
+          "isNew": false,
+          "createdAt": "2026-03-17",
+          "pushedAt": "2026-06-25",
+          "latestRelease": "v1.4.97",
+          "firstSeen": "2026-06-24",
+          "topics": [
+            "ade",
+            "agent-ide",
+            "ai-agents",
+            "claude-code",
+            "cli",
+            "codex",
+            "cursor-agent",
+            "devtools",
+            "ghostty",
+            "ide",
+            "mobile-app",
+            "opencode",
+            "orchestration",
+            "parallel-agents",
+            "pi",
+            "terminal",
+            "worktrees",
+            "yc-backed"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-24",
+              "reason": "new",
+              "starsTotal": 6424,
+              "starsGained": 1216,
+              "release": "v1.4.95"
+            },
+            {
+              "date": "2026-06-25",
+              "reason": "lightweight",
+              "starsTotal": 6642,
+              "starsGained": 1216,
+              "release": "v1.4.95"
+            },
+            {
+              "date": "2026-06-26",
+              "reason": "release_update",
+              "starsTotal": 7344,
+              "starsGained": 1397,
+              "release": "v1.4.97"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "Orca 是一款桌面+移动端的 AI 开发环境（ADE），能够并行运行多个命令行 AI 编码代理（Claude Code、Codex、OpenCode 等），每个代理运行在独立的 Git worktree 中，所有操作在统一界面内监控、对比和管理。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "满足“同时多路 AI 助手干活”的需求，避免在多终端间反复切换，且通过 Git worktree 天然隔离代码变更，可以快速评估不同代理的输出并选择最佳结果，提升实验与交付速度。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "桌面应用（macOS/Windows/Linux）和移动端（iOS/Android），推测基于 Electron 或类似跨平台框架。",
+                "终端渲染采用 WebGL 技术，具备高性能端口分割和持久化滚动。",
+                "语言为 TypeScript，支持 CLI 脚本化工作流。",
+                "集成 Git 操作、GitHub/Linear API、SSH 远程连接等。"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "并行工作树：一条 prompt 广播给多个代理，在隔离环境中并发执行，可对比 diff 合并胜者。",
+                "终端分割：Ghostty 级终端，支持无限分割，重启后保留历史。",
+                "设计模式：点击浏览器中的 UI 元素，自动提取 HTML/CSS 及截图并注入到代理 prompt。",
+                "GitHub/Linear 集成：在 app 内浏览 PR、Issue、项目看板，一键创建关联工作树。",
+                "SSH 工作树：将代理运行在远程机器上，自动重连和端口转发。",
+                "AI 差异注释：在 diff 上直接评论并反馈给代理，完成审阅-修改闭环。",
+                "拖放文件到代理：使用内置编辑器，支持拖放文件和图片进代理 prompt。",
+                "Orca CLI：可通过命令行脚本化工作流，例如创建工作树、截图、点击、填表等。",
+                "移动伴侣：从手机监控代理、发送后续指令。"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "需要对比多个 AI 编码工具效果的选型或实验。",
+                "高并发开发任务：同时解决多个 Issue 或并行探索不同实现方案。",
+                "需要隔离环境但不想手动创建大量分支的日常编码。",
+                "远程开发，利用强大服务器运行代理。"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "body": "与单个 IDE 插件（如 Cursor、Copilot）不同，Orca 定位在编排层，不替代代理本身，而是用统一界面管理多个代理和任务。相对于直接使用命令行或 tmux 管理多代理，Orca 自动处理 Git worktree 隔离和结果合并，并提供了移动监控、SSH 集成等增值能力。"
+            },
+            {
+              "heading": "版本动态",
+              "body": "仓库更新频繁（每日提交），最新 release v1.4.97 包括增加 Quick Command 代理 prompt 限制、防止终端休眠、修复 Markdown 图片引用、工作树历史堆栈导航、终端控件浮层等改进。项目处于活跃迭代状态，功能列表常落后于实际变化。 ---"
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：未提供性能基准或具体资源占用数据；未说明桌面应用的具体框架（如 Electron）及构建细节；远程 SSH 工作树的详细实现和安全性说明缺失；移动端应用的开源状态未明确（仅提供二进制）；多代理并行时的资源调度和隔离深度限制未知"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "interviewstreet__hiring-agent",
+          "fullName": "interviewstreet/hiring-agent",
+          "owner": "interviewstreet",
+          "name": "hiring-agent",
+          "url": "https://github.com/interviewstreet/hiring-agent",
+          "oneLiner": "本地LLM驱动的简历解析与公平评分代理，集成GitHub信号增强评估。",
+          "description": "AI agent to evaluate and score resumes.",
+          "language": "Python",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 2698,
+          "starsGained": 902,
+          "streakDays": 2,
+          "isNew": false,
+          "createdAt": "2025-07-29",
+          "pushedAt": "2026-06-22",
+          "latestRelease": "",
+          "firstSeen": "2026-06-25",
+          "topics": [],
+          "appearances": [
+            {
+              "date": "2026-06-25",
+              "reason": "new",
+              "starsTotal": 2033,
+              "starsGained": 152,
+              "release": ""
+            },
+            {
+              "date": "2026-06-26",
+              "reason": "star_jump",
+              "starsTotal": 2698,
+              "starsGained": 902,
+              "release": ""
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "一个基于LLM的Resume-to-Score管道，输入PDF简历，输出结构化评价（分项得分、证据、加分/减分项）。核心价值是用大模型理解简历语义而非简单关键词，并结合GitHub公开活动（项目参与、技术栈）客观评估候选人。"
+            },
+            {
+              "heading": "为什么火",
+              "bullets": [
+                "招聘初筛长期依赖人工或规则匹配，主观且耗时；该项目用LLM提供有解释的量化评分，能降低面试官偏见。",
+                "Star数短时间增长至2.7k，说明技术招聘领域对“AI辅助评估”需求旺盛。",
+                "支持完全本地运行（Ollama），保护简历隐私；同时可选Gemini云端模型，灵活性高。"
+              ]
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "语言: Python 3.11+",
+                "PDF解析: PyMuPDF (pymupdf4llm风格) 转Markdown",
+                "LLM后端: Ollama (本地Gemma/其他)、Google Gemini",
+                "模板系统: Jinja2，定义各解析环节的Prompt",
+                "数据模型: Pydantic (JSONResume风格)",
+                "GitHub集成: PyGithub / GitHub API v3，获取profile、repos并做项目分类与选择",
+                "输出: 开发模式缓存中间JSON、附加CSV评估记录"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "body": "1. PDF → Markdown：保留标题、链接、表格。 2. 分节LLM提取：基础信息、工作经历、教育、技能、项目、奖项，每个部分用专用模板严格约束输出格式。 3. GitHub富化：自动识别简历中的GitHub账号，获取repos，LLM挑选前7个代表项目，排除低贡献仓库。 4. 公平评分引擎：评估维度含开源贡献、个人项目、生产级经验、技术技能，并按规则加减分；生成解释性证据。 5. 离线/在线双模式：无API Key可用Ollama本地模型；有Key可切换到Gemini获得更高精度。"
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "技术招聘初筛，尤其是需要评估开源贡献的岗位。",
+                "简历分析工具原型，可集成到ATS或人才库系统。",
+                "开发者想自托管招聘辅助代理，保护候选人隐私。"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "bullets": [
+                "vs 传统ATS（如Greenhouse、Lever）：规则匹配为主，缺少语义理解和GitHub信号。",
+                "vs 纯LLM prompt评价（如ChatGPT简历打分）：该项目提供结构化流水线，分区提取、校验、缓存、可复现，且支持本地部署。",
+                "vs 其他AI招聘产品（如HireVue、Pymetrics）：该项目开源、透明、可定制，但缺少视频分析等模态。"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "---",
+              "bullets": [
+                "初始发布于2025-07-29，最近commit在2026-06-22，仍活跃迭代。",
+                "MIT许可，无商业化限制。",
+                "目前主要支持英文简历，未提及多语言支持。",
+                "社区贡献要求提示词保持声明式、跨提供商兼容，并需用真实简历验证变更。"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：medium",
+                "信息盲区：未提供评估准确性 benchmark（如与人工评分的一致性数据）；未说明对多栏/扫描件简历的解析表现；未披露 prompt 详设，公平约束具体规则不可见；缺少大规模使用案例或性能报告（如解析耗时）；未提及非英文简历的支持情况"
+              ]
+            }
+          ]
+        }
+      ],
+      "news": [
+        {
+          "title": "Best practices for using @Claude",
+          "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9MNzJnTWJUV1R5LS1JTFpFMXhhdW53Z0c1WFc1eldscUpCQnVfY09TOVdMd1VIa3pVVktEbVMyMERaZ2NaVnJfQzlGMzI4MEpNblBzSjhZWEluVlBBajJXYlQxVFhxdEs1bHlISXAzVGVWSWRQWUNFSmFR?oc=5",
+          "source": "Claude",
+          "sourceType": "official",
+          "published": "2026-06-25",
+          "summary": "发布使用Claude的最佳实践指南",
+          "category": "产品"
+        },
+        {
+          "title": "Our latest Google Finance upgrades, including a new app",
+          "url": "https://blog.google/products-and-platforms/products/search/google-finance-updates-june-2026/",
+          "source": "Google AI",
+          "sourceType": "official",
+          "published": "2026-06-25",
+          "summary": "Google Finance升级，新增应用界面",
+          "category": "产品"
+        },
+        {
+          "title": "How agents are transforming work",
+          "url": "https://openai.com/index/how-agents-are-transforming-work",
+          "source": "OpenAI",
+          "sourceType": "official",
+          "published": "2026-06-25",
+          "summary": "OpenAI研究显示AI代理能延长复杂任务时间，扩大生产力",
+          "category": "研究"
+        },
+        {
+          "title": "Claude ecosystem | Claude by Anthropic",
+          "url": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE42dG5xcjNSZHRiN29GZVJDdkJVelhsTmdJRXgzUmVvalhscE82blVob3J5eldqellxaTJETnRKckZlUQ?oc=5",
+          "source": "Claude",
+          "sourceType": "official",
+          "published": "2026-06-24",
+          "summary": "Anthropic发布Claude生态系统介绍",
+          "category": "产品"
+        },
+        {
+          "title": "Introducing Claude Tag",
+          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9iZjJCVWRWdnpWLWtMTGVEcy1RbmFuWGY3UHhfVmFlQkRZalpoOFZMMzhLeEZhYVBTcjhKR0FZaEF5QlpNVzB2bXVIczF0X0RWbmN4NDM4VmUtZGxyU2dHbGRSWQ?oc=5",
+          "source": "Anthropic",
+          "sourceType": "official",
+          "published": "2026-06-23",
+          "summary": "Anthropic推出新功能Claude Tag",
+          "category": "产品"
+        },
+        {
+          "title": "Ford AI hiccups push carmaker to rehire ‘gray beard’ inspectors",
+          "url": "https://www.bloomberg.com/news/articles/2026-06-25/ford-has-been-rehiring-quality-inspectors-after-ai-fell-short",
+          "source": "Hacker News",
+          "sourceType": "community",
+          "published": "2026-06-25",
+          "summary": "福特因AI系统问题重新雇佣经验丰富的检查员",
+          "category": "工程"
+        },
+        {
+          "title": "Which tokens does a hybrid model predict better?",
+          "url": "https://huggingface.co/blog/allenai/hybrid-token-prediction",
+          "source": "HF Blog",
+          "sourceType": "hf",
+          "published": "2026-06-25",
+          "summary": "Hugging Face博客探讨混合模型预测哪些token更优",
+          "category": "研究"
+        },
+        {
+          "title": "Anthropic says Alibaba illicitly extracted Claude AI model capabilities",
+          "url": "https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24/",
+          "source": "Hacker News",
+          "sourceType": "community",
+          "published": "2026-06-24",
+          "summary": "Anthropic指控阿里巴巴非法提取Claude模型能力",
+          "category": "融资/商业"
+        },
+        {
+          "title": "Reinforcement Learning Towards Broadly and Persistently Beneficial Models",
+          "url": "https://arxiv.org/abs/2606.24014",
+          "source": "arXiv cs.AI",
+          "sourceType": "paper",
+          "published": "2026-06-25",
+          "summary": "arXiv论文提出面向广泛持久有益模型的强化学习方法",
+          "category": "研究"
+        },
+        {
+          "title": "Can Language Model Agents be Helpful Circuit Explainers in Mechanistic Interpretability?",
+          "url": "https://arxiv.org/abs/2606.24026",
+          "source": "arXiv cs.AI",
+          "sourceType": "paper",
+          "published": "2026-06-25",
+          "summary": "研究探索语言模型代理能否有效解释电路机制",
+          "category": "研究"
+        },
+        {
+          "title": "Graph-Based Phonetic Error Correction of Noisy ASR",
+          "url": "https://arxiv.org/abs/2606.24889",
+          "source": "arXiv cs.CL",
+          "sourceType": "paper",
+          "published": "2026-06-25",
+          "summary": "基于图的语音识别噪声校正方法论文发布",
+          "category": "研究"
+        },
+        {
+          "title": "Small edits, large models: How Wikipedia advocacy shapes LLM values",
+          "url": "https://arxiv.org/abs/2606.24890",
+          "source": "arXiv cs.CL",
+          "sourceType": "paper",
+          "published": "2026-06-25",
+          "summary": "研究显示维基百科编辑可影响LLM的价值取向",
+          "category": "研究"
+        }
+      ]
+    },
+    {
       "date": "2026-06-25",
       "count": 8,
       "projects": [
@@ -144,67 +1256,75 @@
               "starsTotal": 2033,
               "starsGained": 152,
               "release": ""
+            },
+            {
+              "date": "2026-06-26",
+              "reason": "star_jump",
+              "starsTotal": 2698,
+              "starsGained": 902,
+              "release": ""
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "Hiring Agent 是由 HackerRank（通过 interviewstreet 仓库）开源的一条简历到评分流水线。它从 PDF 简历中提取结构化数据，可选地引入候选人的 GitHub 活动信号，最终输出附带解释的公平评估结果。流水线支持完全本地运行（通过 Ollama）或使用 Google Gemini 云端模型，核心是在保护隐私的前提下自动化技术简历筛选。"
+              "body": "一个基于LLM的Resume-to-Score管道，输入PDF简历，输出结构化评价（分项得分、证据、加分/减分项）。核心价值是用大模型理解简历语义而非简单关键词，并结合GitHub公开活动（项目参与、技术栈）客观评估候选人。"
             },
             {
               "heading": "为什么火",
               "bullets": [
-                "招聘市场一直需要自动化筛选工具，而结合实际代码贡献（GitHub）的评估方案更贴近技术岗位的真实需求。",
-                "本地优先设计避免了将敏感简历数据上传第三方服务，受到注重合规与隐私团队的青睐。",
-                "采用模板化提示词（Jinja），评分标准透明、可定制，适合研究或二次开发。",
-                "以 MIT 许可证开放，降低了企业试用的门槛。"
+                "招聘初筛长期依赖人工或规则匹配，主观且耗时；该项目用LLM提供有解释的量化评分，能降低面试官偏见。",
+                "Star数短时间增长至2.7k，说明技术招聘领域对“AI辅助评估”需求旺盛。",
+                "支持完全本地运行（Ollama），保护简历隐私；同时可选Gemini云端模型，灵活性高。"
               ]
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "Python 3.11+，使用 PyMuPDF 将 PDF 转为 Markdown",
-                "LLM 后端：Ollama（支持 gemma3:4b/12b/1b 等）或 Google Gemini（如 gemini-2.0-flash）",
-                "Pydantic 数据模型，Jinja2 模板管理提示词",
-                "GitHub API 抓取用户 profile 和仓库数据",
-                "本地缓存（JSON 文件）与 CSV 导出（开发模式）"
+                "语言: Python 3.11+",
+                "PDF解析: PyMuPDF (pymupdf4llm风格) 转Markdown",
+                "LLM后端: Ollama (本地Gemma/其他)、Google Gemini",
+                "模板系统: Jinja2，定义各解析环节的Prompt",
+                "数据模型: Pydantic (JSONResume风格)",
+                "GitHub集成: PyGithub / GitHub API v3，获取profile、repos并做项目分类与选择",
+                "输出: 开发模式缓存中间JSON、附加CSV评估记录"
               ]
             },
             {
               "heading": "核心能力",
-              "body": "1. PDF 提取：通过 PyMuPDF 将简历转为 Markdown 文本，保留标题、链接、表格等结构。 2. 分节解析：将简历拆分为基本信息、工作经历、教育、技能、项目、奖项等节，分别调用 LLM 提取为 JSON Resume 结构化数据。 3. GitHub 增强：从简历中识别 GitHub 用户名，抓取个人资料与仓库，由 LLM 精选 7 个最具代表性的项目（倾向有真实贡献的仓库）。 4. 量化评分：基于开源贡献、个人项目、生产级项目、技术能力四个维度打分，并设有加分与扣分机制，输出证据和解释。 5. 开发模式辅助：可缓存中间结果、追加 CSV 记录，便于迭代和调试。"
+              "body": "1. PDF → Markdown：保留标题、链接、表格。 2. 分节LLM提取：基础信息、工作经历、教育、技能、项目、奖项，每个部分用专用模板严格约束输出格式。 3. GitHub富化：自动识别简历中的GitHub账号，获取repos，LLM挑选前7个代表项目，排除低贡献仓库。 4. 公平评分引擎：评估维度含开源贡献、个人项目、生产级经验、技术技能，并按规则加减分；生成解释性证据。 5. 离线/在线双模式：无API Key可用Ollama本地模型；有Key可切换到Gemini获得更高精度。"
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "技术招聘初筛：快速过滤无法体现实际工程能力的简历。",
-                "内部人才盘点：结合代码资产量化评估工程师。",
-                "LLM 招聘工具研究：作为模板化评分流水线的参考实现。",
-                "隐私敏感环境：全本地运行，无需上传简历至任何外部服务。"
+                "技术招聘初筛，尤其是需要评估开源贡献的岗位。",
+                "简历分析工具原型，可集成到ATS或人才库系统。",
+                "开发者想自托管招聘辅助代理，保护候选人隐私。"
               ]
             },
             {
               "heading": "同类对比",
               "bullets": [
-                "传统简历解析 API（如 Affinda、Sovren）：仅提取文本结构化，不包含代码贡献评估，且多为云的付费服务。",
-                "AI 简历排名工具（如一些 ATS 内置评分）：通常是黑箱云端，无公开评分逻辑，且不强制整合 GitHub。",
-                "Hiring Agent 的优势：开源、本地可运行、评分逻辑透明可调、支持自托管、将代码贡献作为定量信号。"
+                "vs 传统ATS（如Greenhouse、Lever）：规则匹配为主，缺少语义理解和GitHub信号。",
+                "vs 纯LLM prompt评价（如ChatGPT简历打分）：该项目提供结构化流水线，分区提取、校验、缓存、可复现，且支持本地部署。",
+                "vs 其他AI招聘产品（如HireVue、Pymetrics）：该项目开源、透明、可定制，但缺少视频分析等模态。"
               ]
             },
             {
               "heading": "版本动态",
               "body": "---",
               "bullets": [
-                "仓库创建于 2025-07-29，最近一次推送在 2026-06-22，说明项目仍在积极维护。",
-                "目前 Star 数超过 2000，社区有一定关注度。",
-                "许可证为 MIT，允许自由使用和修改。"
+                "初始发布于2025-07-29，最近commit在2026-06-22，仍活跃迭代。",
+                "MIT许可，无商业化限制。",
+                "目前主要支持英文简历，未提及多语言支持。",
+                "社区贡献要求提示词保持声明式、跨提供商兼容，并需用真实简历验证变更。"
               ]
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
                 "置信度：medium",
-                "信息盲区：无评分准确率或偏差基准测试数据；未说明大规模批处理简历时的性能表现；评分权重是否可配置需查阅源码，README 未提及；缺乏示例输出，难以直观判断评估质量；未描述 GitHub API 请求频率优化细节（除 token 外）"
+                "信息盲区：未提供评估准确性 benchmark（如与人工评分的一致性数据）；未说明对多栏/扫描件简历的解析表现；未披露 prompt 详设，公平约束具体规则不可见；缺少大规模使用案例或性能报告（如解析耗时）；未提及非英文简历的支持情况"
               ]
             }
           ]
@@ -246,6 +1366,13 @@
             {
               "date": "2026-06-25",
               "reason": "new",
+              "starsTotal": 746,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-06-26",
+              "reason": "lightweight",
               "starsTotal": 746,
               "starsGained": 0,
               "release": ""
@@ -323,7 +1450,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-06-18",
-          "pushedAt": "2026-06-24",
+          "pushedAt": "2026-06-25",
           "latestRelease": "v0.1.43",
           "firstSeen": "2026-06-25",
           "topics": [
@@ -342,6 +1469,7 @@
             "screener",
             "self-hosted",
             "stock-analysis",
+            "tdx",
             "tickflow"
           ],
           "appearances": [
@@ -349,6 +1477,13 @@
               "date": "2026-06-25",
               "reason": "new",
               "starsTotal": 220,
+              "starsGained": 0,
+              "release": "v0.1.43"
+            },
+            {
+              "date": "2026-06-26",
+              "reason": "lightweight",
+              "starsTotal": 273,
               "starsGained": 0,
               "release": "v0.1.43"
             }
@@ -500,6 +1635,13 @@
               "date": "2026-06-25",
               "reason": "new",
               "starsTotal": 309,
+              "starsGained": 0,
+              "release": "v1.0.0"
+            },
+            {
+              "date": "2026-06-26",
+              "reason": "lightweight",
+              "starsTotal": 328,
               "starsGained": 0,
               "release": "v1.0.0"
             }
@@ -868,7 +2010,7 @@
           "streakDays": 11,
           "isNew": false,
           "createdAt": "2026-06-10",
-          "pushedAt": "2026-06-24",
+          "pushedAt": "2026-06-25",
           "latestRelease": "v0.1.3",
           "firstSeen": "2026-06-19",
           "topics": [
@@ -953,6 +2095,13 @@
               "date": "2026-06-25",
               "reason": "release_update",
               "starsTotal": 10595,
+              "starsGained": 0,
+              "release": "v0.1.3"
+            },
+            {
+              "date": "2026-06-26",
+              "reason": "lightweight",
+              "starsTotal": 10730,
               "starsGained": 0,
               "release": "v0.1.3"
             }
@@ -1145,8 +2294,8 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-03-17",
-          "pushedAt": "2026-06-24",
-          "latestRelease": "v1.4.95",
+          "pushedAt": "2026-06-25",
+          "latestRelease": "v1.4.97",
           "firstSeen": "2026-06-24",
           "topics": [
             "ade",
@@ -1182,69 +2331,69 @@
               "starsTotal": 6642,
               "starsGained": 1216,
               "release": "v1.4.95"
+            },
+            {
+              "date": "2026-06-26",
+              "reason": "release_update",
+              "starsTotal": 7344,
+              "starsGained": 1397,
+              "release": "v1.4.97"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "Orca 是一个专为开发者打造的 Agent 开发环境（ADE），让你在统一界面中并行运行、管理和对比多个 CLI AI 编码 Agent（如 Claude Code、Codex、OpenCode、Pi 等）。每个 Agent 运行在独立的 git 工作树中，互不干扰，支持本地和远程（SSH）。桌面端提供类 VS Code 编辑器、终端分裂、Chromium 内嵌浏览器等能力，移动端可远程监控与交互。"
+              "body": "Orca 是一款桌面+移动端的 AI 开发环境（ADE），能够并行运行多个命令行 AI 编码代理（Claude Code、Codex、OpenCode 等），每个代理运行在独立的 Git worktree 中，所有操作在统一界面内监控、对比和管理。"
             },
             {
               "heading": "为什么火",
-              "body": "1. 多 Agent 对比：可以同时向多个 Agent 发同一个 prompt，比较结果，合并最佳代码，极大提升实验和选型效率。 2. 工作区隔离：为每个 Agent 创建独立 git worktree，避免文件冲突，事后可分别 diff 或丢弃，保持主分支干净。 3. 终端一等公民：基于 WebGL 的高性能终端，分割操作及滚动持久化，尤其适合长时间运行的 Agent 任务。 4. 移动端陪伴：当 Agent 跑在桌面时，手机可接收完成通知、查看输出、发送后续指令，适合离开电脑但又想跟踪进度的场景。 5. 成熟的集成生态：内置 GitHub/Li near 任务管理，可右键任务创建 worktree，无缝审查 PR/issue；支持设计模式选中 UI 元素直接注入 Agent 提示。"
+              "body": "满足“同时多路 AI 助手干活”的需求，避免在多终端间反复切换，且通过 Git worktree 天然隔离代码变更，可以快速评估不同代理的输出并选择最佳结果，提升实验与交付速度。"
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "主要语言：TypeScript",
-                "桌面框架：Electron（推测，因跨平台桌面应用）",
-                "终端渲染：提及 Ghostty 级终端，可能使用 WebGL 加速；README 提到“Ghostty-class terminals with WebGL rendering”。",
-                "CLI 工具：orca CLI 用于脚本化操作",
-                "移动端：iOS App Store 上线，Android 提供 APK",
-                "许可：MIT"
+                "桌面应用（macOS/Windows/Linux）和移动端（iOS/Android），推测基于 Electron 或类似跨平台框架。",
+                "终端渲染采用 WebGL 技术，具备高性能端口分割和持久化滚动。",
+                "语言为 TypeScript，支持 CLI 脚本化工作流。",
+                "集成 Git 操作、GitHub/Linear API、SSH 远程连接等。"
               ]
             },
             {
               "heading": "核心能力",
               "bullets": [
-                "并行 Agent 编排：单个提示扇出至多个 Agent，每个在独立 worktree 中运行。",
-                "隔离的工作树：基于 git worktree，可合并、对比、废弃。",
-                "终端分裂与持久化：无限分割，滚动历史重启亦保留。",
-                "内嵌浏览器 & 设计模式：点击 UI 元素自动抓取 HTML/CSS/截图发送给 Agent。",
-                "GitHub/Li near 原生集成：在应用内浏览任务，从任务打开工作树，无需切换上下文。",
-                "AI Diff 注释：在 diff 行上直接添加注释返回给 Agent 迭代。",
-                "SSH 远程工作树：在远程强算力机器上运行 Agent，自动重连和端口转发。",
-                "CLI 驱动：Agent 亦可通过 orca 命令创建 worktree, snapshot, click 等，实现自动化流水线。",
-                "移动端监控：手机接收通知并可发送跟进指令。"
+                "并行工作树：一条 prompt 广播给多个代理，在隔离环境中并发执行，可对比 diff 合并胜者。",
+                "终端分割：Ghostty 级终端，支持无限分割，重启后保留历史。",
+                "设计模式：点击浏览器中的 UI 元素，自动提取 HTML/CSS 及截图并注入到代理 prompt。",
+                "GitHub/Linear 集成：在 app 内浏览 PR、Issue、项目看板，一键创建关联工作树。",
+                "SSH 工作树：将代理运行在远程机器上，自动重连和端口转发。",
+                "AI 差异注释：在 diff 上直接评论并反馈给代理，完成审阅-修改闭环。",
+                "拖放文件到代理：使用内置编辑器，支持拖放文件和图片进代理 prompt。",
+                "Orca CLI：可通过命令行脚本化工作流，例如创建工作树、截图、点击、填表等。",
+                "移动伴侣：从手机监控代理、发送后续指令。"
               ]
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "需要同时试验多种 AI 编程工具的开发者，希望快速横向对比输出。",
-                "追求一键启动多个 Agent 并行解决问题的懒人型极客。",
-                "长期运行 Agent 任务（如大规模重构）时希望离开桌面但保留监控能力的场景。",
-                "团队使用不同 AI 工具，需要统一管理变更和审核流程。"
+                "需要对比多个 AI 编码工具效果的选型或实验。",
+                "高并发开发任务：同时解决多个 Issue 或并行探索不同实现方案。",
+                "需要隔离环境但不想手动创建大量分支的日常编码。",
+                "远程开发，利用强大服务器运行代理。"
               ]
             },
             {
               "heading": "同类对比",
-              "body": "Orca 的优势在于将所有 Agent 作为一等公民在同一时空下互不干扰地运行，且融合了 IDE 的编辑、版本控制、任务管理和移动端通知。",
-              "bullets": [
-                "Terminal + tmux + 多个 Agent CLI：手动管理窗口和上下文，缺乏结构化 worktree、通知整合和移动端能力。",
-                "VS Code + Copilot Chat + 其他 Agent 插件：通常是单 Agent 交互，没有原生多 Agent 对比和隔离的工作树。",
-                "Aider / Continue：侧重于单一 Agent 的交互优化，不提供并行编排的统一环境。"
-              ]
+              "body": "与单个 IDE 插件（如 Cursor、Copilot）不同，Orca 定位在编排层，不替代代理本身，而是用统一界面管理多个代理和任务。相对于直接使用命令行或 tmux 管理多代理，Orca 自动处理 Git worktree 隔离和结果合并，并提供了移动监控、SSH 集成等增值能力。"
             },
             {
               "heading": "版本动态",
-              "body": "开发非常活跃，几乎每日发布版本。最新 release v1.4.95 于 2026-06-24 推出，主要改进：可分配快捷键切换休眠工作区、Cmd+J 搜索项目与仓库组、降低 source-control 后台刷新负载、GitHub 任务关闭原因同步等。从 docs 目录看，功能迭代丰富，包括自动化导航栈、远程粘贴修复、渲染器内存剖析、终端确认关闭等细节优化。 ---"
+              "body": "仓库更新频繁（每日提交），最新 release v1.4.97 包括增加 Quick Command 代理 prompt 限制、防止终端休眠、修复 Markdown 图片引用、工作树历史堆栈导航、终端控件浮层等改进。项目处于活跃迭代状态，功能列表常落后于实际变化。 ---"
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
-                "置信度：medium",
-                "信息盲区：未提供底层架构细节，如是否使用 Electron 或其它框架（仅推测）；性能基准数据缺失，如多 Agent 并行时资源占用；是否需要注册账号或登录（README 未说明）；移动端与桌面端通信协议未明确（本地网络/服务器中转）；具体版本管理及账号切换实现依赖（是否仅针对 API key）"
+                "置信度：high",
+                "信息盲区：未提供性能基准或具体资源占用数据；未说明桌面应用的具体框架（如 Electron）及构建细节；远程 SSH 工作树的详细实现和安全性说明缺失；移动端应用的开源状态未明确（仅提供二进制）；多代理并行时的资源调度和隔离深度限制未知"
               ]
             }
           ]
@@ -1688,7 +2837,7 @@
           "streakDays": 10,
           "isNew": false,
           "createdAt": "2026-03-29",
-          "pushedAt": "2026-06-24",
+          "pushedAt": "2026-06-25",
           "latestRelease": "",
           "firstSeen": "2026-06-19",
           "topics": [
@@ -1789,6 +2938,13 @@
               "starsTotal": 18745,
               "starsGained": 9410,
               "release": ""
+            },
+            {
+              "date": "2026-06-26",
+              "reason": "lightweight",
+              "starsTotal": 21819,
+              "starsGained": 12948,
+              "release": ""
             }
           ],
           "analysis": [
@@ -1872,7 +3028,7 @@
           "streakDays": 7,
           "isNew": false,
           "createdAt": "2026-02-24",
-          "pushedAt": "2026-06-24",
+          "pushedAt": "2026-06-25",
           "latestRelease": "v0.8.1",
           "firstSeen": "2026-06-19",
           "topics": [
@@ -1952,6 +3108,13 @@
               "reason": "lightweight",
               "starsTotal": 13985,
               "starsGained": 8536,
+              "release": "v0.8.1"
+            },
+            {
+              "date": "2026-06-26",
+              "reason": "lightweight",
+              "starsTotal": 14671,
+              "starsGained": 9589,
               "release": "v0.8.1"
             }
           ],
@@ -2245,6 +3408,13 @@
               "date": "2026-06-25",
               "reason": "lightweight",
               "starsTotal": 5111,
+              "starsGained": 0,
+              "release": "v0.3.0"
+            },
+            {
+              "date": "2026-06-26",
+              "reason": "lightweight",
+              "starsTotal": 5300,
               "starsGained": 0,
               "release": "v0.3.0"
             }
@@ -2723,7 +3893,7 @@
           "streakDays": 10,
           "isNew": false,
           "createdAt": "2026-06-10",
-          "pushedAt": "2026-06-24",
+          "pushedAt": "2026-06-25",
           "latestRelease": "v0.1.3",
           "firstSeen": "2026-06-19",
           "topics": [
@@ -2808,6 +3978,13 @@
               "date": "2026-06-25",
               "reason": "release_update",
               "starsTotal": 10595,
+              "starsGained": 0,
+              "release": "v0.1.3"
+            },
+            {
+              "date": "2026-06-26",
+              "reason": "lightweight",
+              "starsTotal": 10730,
               "starsGained": 0,
               "release": "v0.1.3"
             }
@@ -2926,6 +4103,13 @@
               "date": "2026-06-25",
               "reason": "lightweight",
               "starsTotal": 457,
+              "starsGained": 0,
+              "release": "v0.3.5"
+            },
+            {
+              "date": "2026-06-26",
+              "reason": "lightweight",
+              "starsTotal": 534,
               "starsGained": 0,
               "release": "v0.3.5"
             }
@@ -3050,6 +4234,13 @@
               "date": "2026-06-25",
               "reason": "lightweight",
               "starsTotal": 505,
+              "starsGained": 0,
+              "release": "v0.42.0"
+            },
+            {
+              "date": "2026-06-26",
+              "reason": "lightweight",
+              "starsTotal": 544,
               "starsGained": 0,
               "release": "v0.42.0"
             }
@@ -3367,7 +4558,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-03-11",
-          "pushedAt": "2026-06-21",
+          "pushedAt": "2026-06-25",
           "latestRelease": "",
           "firstSeen": "2026-06-23",
           "topics": [],
@@ -3384,6 +4575,13 @@
               "reason": "lightweight",
               "starsTotal": 114502,
               "starsGained": 1011,
+              "release": ""
+            },
+            {
+              "date": "2026-06-26",
+              "reason": "lightweight",
+              "starsTotal": 115661,
+              "starsGained": 836,
               "release": ""
             }
           ],
@@ -3602,6 +4800,13 @@
               "reason": "lightweight",
               "starsTotal": 19159,
               "starsGained": 693,
+              "release": "v0.3.1"
+            },
+            {
+              "date": "2026-06-26",
+              "reason": "lightweight",
+              "starsTotal": 20265,
+              "starsGained": 1021,
               "release": "v0.3.1"
             }
           ],
@@ -3834,6 +5039,13 @@
               "starsTotal": 457,
               "starsGained": 0,
               "release": "v0.3.5"
+            },
+            {
+              "date": "2026-06-26",
+              "reason": "lightweight",
+              "starsTotal": 534,
+              "starsGained": 0,
+              "release": "v0.3.5"
             }
           ],
           "analysis": [
@@ -3912,7 +5124,7 @@
           "streakDays": 9,
           "isNew": false,
           "createdAt": "2026-03-29",
-          "pushedAt": "2026-06-24",
+          "pushedAt": "2026-06-25",
           "latestRelease": "",
           "firstSeen": "2026-06-19",
           "topics": [
@@ -4012,6 +5224,13 @@
               "reason": "lightweight",
               "starsTotal": 18745,
               "starsGained": 9410,
+              "release": ""
+            },
+            {
+              "date": "2026-06-26",
+              "reason": "lightweight",
+              "starsTotal": 21819,
+              "starsGained": 12948,
               "release": ""
             }
           ],
@@ -4314,6 +5533,13 @@
               "starsTotal": 5111,
               "starsGained": 0,
               "release": "v0.3.0"
+            },
+            {
+              "date": "2026-06-26",
+              "reason": "lightweight",
+              "starsTotal": 5300,
+              "starsGained": 0,
+              "release": "v0.3.0"
             }
           ],
           "analysis": [
@@ -4588,6 +5814,13 @@
               "starsTotal": 505,
               "starsGained": 0,
               "release": "v0.42.0"
+            },
+            {
+              "date": "2026-06-26",
+              "reason": "lightweight",
+              "starsTotal": 544,
+              "starsGained": 0,
+              "release": "v0.42.0"
             }
           ],
           "analysis": [
@@ -4808,7 +6041,7 @@
           "name": "Anthropic-Cybersecurity-Skills",
           "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
           "oneLiner": "754结构化安全技能，五框架映射，跨26+AI平台",
-          "description": "754 structured cybersecurity skills for AI agents · Mapped to 5 frameworks: MITRE ATT&CK, NIST CSF 2.0, MITRE ATLAS, D3FEND & NIST AI RMF · agentskills.io standard · Works with Claude Code, GitHub Copilot, Codex CLI, Cursor, Gemini CLI & 20+ platforms · 26 security domains · Apache 2.0",
+          "description": "817 structured cybersecurity skills for AI agents · Mapped to 6 frameworks: MITRE ATT&CK, NIST CSF 2.0, MITRE ATLAS, D3FEND, NIST AI RMF & MITRE F3 (Fight Fraud) · agentskills.io standard · Works with Claude Code, GitHub Copilot, Codex CLI, Cursor, Gemini CLI & 20+ platforms · 29 security domains · Apache 2.0",
           "language": "Python",
           "category": "AI 应用",
           "license": "Apache-2.0",
@@ -4817,8 +6050,8 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-02-25",
-          "pushedAt": "2026-06-20",
-          "latestRelease": "v1.2.0",
+          "pushedAt": "2026-06-22",
+          "latestRelease": "v1.3.0",
           "firstSeen": "2026-06-22",
           "topics": [
             "ai-agents",
@@ -4849,63 +6082,69 @@
               "starsTotal": 17714,
               "starsGained": 361,
               "release": "v1.2.0"
+            },
+            {
+              "date": "2026-06-26",
+              "reason": "release_update",
+              "starsTotal": 21092,
+              "starsGained": 4304,
+              "release": "v1.3.0"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "Anthropic Cybersecurity Skills 是一个面向AI代理的开源网络安全技能库，包含 754个结构化安全技能，覆盖26个安全领域。每个技能遵循 [agentskills.io](https://agentskills.io) 开放标准，使用 YAML 前置元数据 + 结构化 Markdown 描述实际安全专家的操作流程。核心区别在于：它不是脚本或检查清单，而是专为AI代理设计的可执行知识。 该库将每一个技能同时映射到6个安全框架：MITRE ATT&CK、NIST CSF 2.0、MITRE ATLAS、MITRE D3FEND、NIST AI RMF 以及 MITRE F3（欺诈框架），实现跨框架统一覆盖，这是目前唯一一个做到这点的开源项目。"
+              "body": "Anthropic Cybersecurity Skills是一个面向AI代理的网络安全技能库，包含817个结构化技能，覆盖29个安全领域，横跨MITRE ATT&CK、NIST CSF 2.0、MITRE ATLAS、D3FEND、NIST AI RMF和MITRE F3六大框架。它遵循agentskills.io开放标准，将资深安全分析师的实战决策流程编码为YAML+Markdown知识单元，可直接注入Claude Code、GitHub Copilot等26+AI平台，让代理获得专家级安全指导。"
             },
             {
               "heading": "为什么火",
-              "body": "全球网络安全岗位缺口达480万（ISC2 2024），AI代理被认为能弥补能力缺口，但通用LLM缺乏领域专用操作流程。该仓库直接提供一线分析师的决策工作流：何时、如何执行特定技术，前置条件、步骤与验证方法，而不仅仅是工具或漏洞利用代码。自发布以来迅速获得 17.7k Star，被广泛用于 Claude Code、GitHub Copilot 等主流AI编码助手及安全代理平台，因其开箱即用和多框架合规映射能力受到安全团队青睐。"
+              "body": "Star数超过21000，反映了安全人才缺口下AI辅助的强烈需求。独特之处在于：一个技能同时满足6个合规框架的映射，解决团队多标准覆盖的痛点；它不是简单的工具列表或检查表，而是包含必要性判断、执行步骤、验证方法的完整决策知识；遵循开放标准，可跨平台复用，大幅降低AI落地安全的门槛。"
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "技能格式：agentskills.io 标准，每个技能为独立的 Markdown 文件，包含 YAML frontmatter 声明元数据（如 mitre_attack, nist_csf, atlas_techniques 等）。",
-                "仓库结构：主要为文档型仓库；标注语言为 Python（可能包含少量验证脚本），但核心价值在于结构化内容，不依赖特定运行时。",
-                "集成方式：通过 npx skills add 或 git clone 即可为支持的 AI 代理平台提供知识注入。",
-                "验证：利用 mitreattack-python 等库确保框架ID的正确性（如 ATT&CK v19.1），所有映射均经过官方数据源校验。"
+                "技能格式：YAML frontmatter（mitre_attack、nist_csf等字段） + Markdown 步骤描述",
+                "框架验证：使用mitreattack-python库校验MITRE ATT&CK v19.1映射，F3等手动验证",
+                "分发方式：npm包（通过npx skills add）和Git仓库",
+                "兼容平台：Claude Code、GitHub Copilot、OpenAI Codex CLI、Cursor、Gemini CLI等26+"
               ]
             },
             {
               "heading": "核心能力",
-              "bullets": [
-                "26个安全领域全覆盖：云安全（60）、威胁狩猎（55）、恶意软件分析（39）、数字取证（37）、渗透测试（23）等，每个领域提供数十个实战技能。",
-                "六框架深度映射：单个技能可同时关联攻击行为（ATT&CK）、防御对策（D3FEND）、AI对抗威胁（ATLAS）、风险管理（NIST AI RMF）等，满足合规与防御双重需求。",
-                "AI原生工作流：技能结构包含前置条件、执行步骤、验证方法，可直接被AI代理解析并执行，而非简单的工具描述。",
-                "跨平台兼容：支持 26+ 个AI代理平台，包括 Claude Code、GitHub Copilot、Cursor、Windsurf、OpenAI Codex CLI、Gemini CLI 等。"
-              ]
+              "body": "1. 统一跨框架映射：技能粒度的ATT&CK、NIST CSF、ATLAS、D3FEND、AI RMF、F3关联，一键满足审计需求。 2. 可执行决策流：每个技能包含前提检查、分步执行、结果验证和参考文件，代理可直接理解并操作。 3. 广泛领域覆盖：云安全、威胁狩猎、事件响应、AI红队、供应链安全等29个领域，紧跟2025-2026年安全趋势。 4. 实时威胁对齐：v1.3.0新增AI安全、硬件固件、F3反欺诈等前沿领域，映射覆盖最新ATT&CK v19.1。 5. 社区标准兼容：Apache 2.0开源，符合agentskills.io规范，保证互操作性。"
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "安全运营中心（SOC）：借助AI代理快速进行告警研判、日志分析、事件响应，提升效率。",
-                "红队/渗透测试：构建自动化攻击模拟工作流，并参照 ATT&CK 进行战术映射。",
-                "云安全治理：针对 AWS/Azure/GCP 的加固与合规检查，自动生成修复建议。",
-                "AI安全开发：为自研安全Agent或Copilot提供专业知识库，减少从零构建的成本。",
-                "学术研究：用于研究AI代理在网络安全任务中的表现，或作为教育训练材料的来源。"
+                "SOC与事件响应：AI代理快速关联ATT&CK技术，辅助调查、遏制和恢复。",
+                "红队与对抗模拟：提供Sliver/Havoc C2、ADCS攻击、LOTL等高级技能，实现自动化攻击仿真。",
+                "云安全合规：CSPM、云取证、容器安全技能直接映射到NIST CSF 2.0控制项。",
+                "安全研究：恶意软件分析、威胁情报的自动化处理与知识提取。",
+                "DevSecOps：在CI/CD中嵌入Trivy扫描、SBOM生成、依赖混淆检测等技能。"
               ]
             },
             {
               "heading": "同类对比",
-              "body": "| 项目 | 定位 | 与本报库区别 | |------|------|------------| | Atomic Red Team | ATT&CK 测试用例 | 提供可执行测试脚本，但非AI代理可读的工作流级技能，且无多框架映射。 | | Sigma 规则库 | SIEM检测规则 | 专注于检测逻辑，缺少操作流程、框架映射，不面向AI代理。 | | Awesome Security Lists | 资源索引 | 链接集合，无结构化技能定义，无法直接注入AI代理。 | | 本库 | AI代理知识库 | 唯一将安全技能结构化并跨六大框架映射的AI原生知识库。 |"
+              "bullets": [
+                "vs PayloadsAllTheThings：后者是载荷与技巧集，缺乏决策流和跨框架映射，不能被AI直接消费。",
+                "vs MITRE ATT&CK知识库：只描述技术，本项目将其转化为可执行步骤。",
+                "vs 安全自动化平台：平台提供工作流，非AI原生知识注入；本项目让代理拥有“分析师思维”。",
+                "独特优势：统一agentskills标准，一次编写，26+平台复用。"
+              ]
             },
             {
               "heading": "版本动态",
               "body": "---",
               "bullets": [
-                "v1.2.0（2026-04-06）：新增 MITRE ATLAS v5.5、MITRE D3FEND v1.3、NIST AI RMF 1.0 的映射，实现五项框架覆盖。每个 SKILL.md 添加了专门的框架字段。",
-                "MITRE F3 集成：随后引入 MITRE 反欺诈框架 (F3) v1.1，增加 94 个欺诈相关技能映射，覆盖“定位”和“获利”两大新战术。",
-                "持续更新：项目保持与 ATT&CK v19.1 等框架版本同步，skill 数量维持在 754 个，但映射随框架演进不断修订。"
+                "v1.3.0（2026-06-22）：技能数从762增至817，新增MITRE F3反欺诈框架映射，加入AI安全、供应链安全、硬件固件安全3个全新领域，扩展身份、云原生、DFIR等领域，修复插件版本号。",
+                "社区持续维护，未来将随ATT&CK版本更新和新兴威胁扩展。"
               ]
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
                 "置信度：high",
-                "信息盲区：未提供技能在AI代理中的具体执行示例或配置流程，仅说明通过 npx skills add 添加后即可适配。；技能内容的具体深度未展示（如单个技能 Markdown 的完整结构示例），无法评估实际工作流的粒度。；未说明是否包含自动化测试或验证工具，来保证技能的质量与时效性。"
+                "信息盲区：未提供技能在真实场景中的执行准确率或成功率数据；与各AI平台集成的详细步骤文档有限，缺少配置模板；社区贡献的质量保证与评审流程不透明；暂无第三方基准测试或性能评估；项目名称含「Anthropic」但声明非官方，可能造成误解"
               ]
             }
           ]
@@ -4966,6 +6205,13 @@
               "date": "2026-06-25",
               "reason": "lightweight",
               "starsTotal": 873,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-06-26",
+              "reason": "lightweight",
+              "starsTotal": 879,
               "starsGained": 0,
               "release": ""
             }
@@ -5220,6 +6466,13 @@
               "starsTotal": 505,
               "starsGained": 0,
               "release": "v0.42.0"
+            },
+            {
+              "date": "2026-06-26",
+              "reason": "lightweight",
+              "starsTotal": 544,
+              "starsGained": 0,
+              "release": "v0.42.0"
             }
           ],
           "analysis": [
@@ -5343,6 +6596,13 @@
               "date": "2026-06-25",
               "reason": "lightweight",
               "starsTotal": 5111,
+              "starsGained": 0,
+              "release": "v0.3.0"
+            },
+            {
+              "date": "2026-06-26",
+              "reason": "lightweight",
+              "starsTotal": 5300,
               "starsGained": 0,
               "release": "v0.3.0"
             }
@@ -5757,7 +7017,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-01-10",
-          "pushedAt": "2026-06-24",
+          "pushedAt": "2026-06-25",
           "latestRelease": "v3.23.0",
           "firstSeen": "2026-06-21",
           "topics": [
@@ -5803,6 +7063,13 @@
               "reason": "lightweight",
               "starsTotal": 48309,
               "starsGained": 4055,
+              "release": "v3.23.0"
+            },
+            {
+              "date": "2026-06-26",
+              "reason": "lightweight",
+              "starsTotal": 49445,
+              "starsGained": 5185,
               "release": "v3.23.0"
             }
           ],
@@ -5883,8 +7150,8 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2025-05-07",
-          "pushedAt": "2026-06-24",
-          "latestRelease": "",
+          "pushedAt": "2026-06-25",
+          "latestRelease": "v2.0.0",
           "firstSeen": "2026-06-21",
           "topics": [
             "agent",
@@ -5934,68 +7201,74 @@
               "starsTotal": 74194,
               "starsGained": 739,
               "release": ""
+            },
+            {
+              "date": "2026-06-26",
+              "reason": "release_update",
+              "starsTotal": 74673,
+              "starsGained": 3068,
+              "release": "v2.0.0"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "DeerFlow 是由字节跳动开源的超级智能体框架（2.0 版，完全重写），它通过编排子代理、记忆系统、沙箱环境和可扩展技能，能够处理从几分钟到几小时的复杂任务。"
+              "body": "DeerFlow 2.0 是一个从零重写的超级代理编排框架（SuperAgent harness），可协调多个子代理、持久记忆、沙盒化执行环境与可扩展的技能/工具系统，完成从几分钟到数小时的长周期任务。它前身是深度研究框架，现定位为通用“超级代理”平台。"
             },
             {
               "heading": "为什么火",
               "bullets": [
-                "GitHub 7.2万星，2026年2月登顶 Trending #1，社区高度活跃",
-                "支持多种 LLM 提供商（OpenAI、DeepSeek、vLLM 等），灵活配置",
-                "官方提供 Coding Plan 和 InfoQuest 爬虫工具集",
-                "强调长程任务执行与安全隔离"
+                "两周内即登 GitHub 趋势榜首，Star 超 7.4万，社区贡献活跃（v2.0 里程碑合并 182 个 PR）。",
+                "解决了单一 LLM 调用无法处理的复杂多步问题，通过子代理协作、沙盒隔离、长短期记忆实现可靠的任务执行。",
+                "丰富的集成：支持十余种模型、七种 IM 通道、多种搜索引擎，并提供 TUI 终端界面。"
               ]
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "后端: Python 3.12+，依赖 LangChain/LangGraph，支持 Claude Code、Codex CLI 等接口",
-                "前端/工具: Node.js 22+，TypeScript 辅助",
-                "部署: Docker 容器化，支持开发热重载和生产模式",
-                "配置: config.yaml + .env，交互式配置向导"
+                "后端：Python 3.12+，基于 LangChain/LangGraph 生态，使用 uv 包管理。",
+                "前端/工具链：Node.js 22+，TypeScript 项目，包含 TUI 客户端。",
+                "基础设施：Docker 容器化部署，沙盒通过社区 AioSandbox 或本地容器实现；消息网关连接 Slack/Telegram 等。"
               ]
             },
             {
               "heading": "核心能力",
               "bullets": [
-                "技能与工具: 可扩展技能系统，集成 Claude Code 等外部编码代理",
-                "子代理: 并行/层级的多代理协作",
-                "沙箱与文件系统: 隔离执行环境，支持 AIO 沙箱供应商",
-                "上下文工程: 管理长对话上下文，防止遗忘",
-                "长期记忆: 持久化存储，跨会话保留知识",
-                "消息网关: 统一的通信层（README 未展开细节）"
+                "子代理系统：可递归调度子代理处理子任务，并实时归集 token 用量。",
+                "技能与工具：内置深度研究、播客生成、音乐创作、图片/视频处理等技能；支持 Claude Code 集成及 MCP 服务器。",
+                "沙盒化执行：可选远程或本地 Docker 沙盒，安全执行代码与命令。",
+                "持久记忆：代理可更新自身 SOUL.md，实现跨会话学习与用户隔离。",
+                "上下文工程：可配置循环检测、工具频率限制，提升长对话稳定性。",
+                "多模型与渠道：支持 OpenAI、vLLM、Codex CLI、Claude Code OAuth 等；IM 通道可绑定用户自有账号。"
               ]
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "深度研究：生成报告、资料收集",
-                "自动化编码：多步骤开发、修复、测试",
-                "智能助手：结合沙箱和记忆的长期任务",
-                "多代理系统：需要协调子代理的复杂工作流"
+                "需要长周期自主研究的任务（市场调研、竞品分析、技术调研）。",
+                "多步骤编码工程（自动生成项目骨架、调试、文档生成）。",
+                "企业内部自动化工作流（通过 IM 通道执行复杂指令，如数据分析、报告撰写）。",
+                "研究者与极客探索 Agent 协作边界。"
               ]
             },
             {
               "heading": "同类对比",
-              "body": "相比 LangChain/LangGraph 基础框架，DeerFlow 提供更完整的开箱即用能力（沙箱、记忆、技能），但耦合度较高。与 AutoGPT、CrewAI 等相比，强调长程任务和字节内部产品集成。"
+              "body": "与 LangChain/LangGraph 相比，DeerFlow 提供了开箱即用的超级代理模板与沙盒管理；相较于 AutoGPT、CrewAI 等纯多代理框架，它集成了更丰富的 IM 接入和自更新记忆机制；相比 GPT-Engin，它更侧重长时任务的可恢复性与生产级部署（含 Nginx 统一端点）。但缺乏与这些框架在基准任务上的横向对比数据。"
             },
             {
               "heading": "版本动态",
               "body": "---",
               "bullets": [
-                "2.0 完全重写，不兼容 1.x，旧版保留在 1.x 分支",
-                "活跃开发中，最新提交 2026-06-21，持续迭代"
+                "v2.0.0 为全量重构版本，与 1.x 分支不共享代码（1.x 仍在维护）。",
+                "主要更新：运行状态持久化与中断恢复、用户自有 IM 帐号绑定、新增多个模型和社区搜索工具、可配置循环检测、子代理 token 流式归因等。",
+                "当前主线活跃，文档持续扩充。"
               ]
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
                 "置信度：high",
-                "信息盲区：未提供性能基准测试数据（如任务完成时间、资源消耗对比）；消息网关的具体实现细节未在 README 中展开；与其他代理框架的详细对比缺失；沙箱安全隔离的精确边界未说明；长期记忆的存储后端和容量限制未提及"
+                "信息盲区：未提供与同类框架（AutoGPT, CrewAI等）的基准性能对比；内部架构细节（沙盒通信协议、子代理调度算法）未公开；大规模生产部署（多副本、负载均衡）的最佳实践未详细说明；部分模型的 token 消耗与成本对比缺失"
               ]
             }
           ]
@@ -6202,6 +7475,13 @@
               "date": "2026-06-25",
               "reason": "lightweight",
               "starsTotal": 986,
+              "starsGained": 0,
+              "release": "v3.2.5"
+            },
+            {
+              "date": "2026-06-26",
+              "reason": "lightweight",
+              "starsTotal": 994,
               "starsGained": 0,
               "release": "v3.2.5"
             }
@@ -6633,6 +7913,13 @@
               "starsTotal": 5111,
               "starsGained": 0,
               "release": "v0.3.0"
+            },
+            {
+              "date": "2026-06-26",
+              "reason": "lightweight",
+              "starsTotal": 5300,
+              "starsGained": 0,
+              "release": "v0.3.0"
             }
           ],
           "analysis": [
@@ -6780,6 +8067,13 @@
               "date": "2026-06-25",
               "reason": "lightweight",
               "starsTotal": 573,
+              "starsGained": 0,
+              "release": "v0.5.2"
+            },
+            {
+              "date": "2026-06-26",
+              "reason": "lightweight",
+              "starsTotal": 575,
               "starsGained": 0,
               "release": "v0.5.2"
             }
@@ -7183,6 +8477,13 @@
               "starsTotal": 33763,
               "starsGained": 2883,
               "release": "v0.5.0"
+            },
+            {
+              "date": "2026-06-26",
+              "reason": "lightweight",
+              "starsTotal": 34149,
+              "starsGained": 3583,
+              "release": "v0.5.0"
             }
           ],
           "analysis": [
@@ -7386,7 +8687,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-06-02",
-          "pushedAt": "2026-06-24",
+          "pushedAt": "2026-06-25",
           "latestRelease": "",
           "firstSeen": "2026-06-20",
           "topics": [
@@ -7447,6 +8748,13 @@
               "date": "2026-06-25",
               "reason": "lightweight",
               "starsTotal": 932,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-06-26",
+              "reason": "lightweight",
+              "starsTotal": 935,
               "starsGained": 0,
               "release": ""
             }
@@ -7921,7 +9229,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-06-11",
-          "pushedAt": "2026-06-24",
+          "pushedAt": "2026-06-25",
           "latestRelease": "v0.2.0",
           "firstSeen": "2026-06-19",
           "topics": [
@@ -8003,6 +9311,13 @@
               "date": "2026-06-25",
               "reason": "lightweight",
               "starsTotal": 4684,
+              "starsGained": 0,
+              "release": "v0.2.0"
+            },
+            {
+              "date": "2026-06-26",
+              "reason": "lightweight",
+              "starsTotal": 4888,
               "starsGained": 0,
               "release": "v0.2.0"
             }

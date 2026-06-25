@@ -1,7 +1,7 @@
 {
   "full_name": "mukul975/Anthropic-Cybersecurity-Skills",
   "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
-  "description": "754 structured cybersecurity skills for AI agents · Mapped to 5 frameworks: MITRE ATT&CK, NIST CSF 2.0, MITRE ATLAS, D3FEND & NIST AI RMF · agentskills.io standard · Works with Claude Code, GitHub Copilot, Codex CLI, Cursor, Gemini CLI & 20+ platforms · 26 security domains · Apache 2.0",
+  "description": "817 structured cybersecurity skills for AI agents · Mapped to 6 frameworks: MITRE ATT&CK, NIST CSF 2.0, MITRE ATLAS, D3FEND, NIST AI RMF & MITRE F3 (Fight Fraud) · agentskills.io standard · Works with Claude Code, GitHub Copilot, Codex CLI, Cursor, Gemini CLI & 20+ platforms · 29 security domains · Apache 2.0",
   "language": "Python",
   "topics": [
     "ai-agents",
@@ -27,30 +27,32 @@
   ],
   "license": "Apache-2.0",
   "category": "AI 应用",
-  "classify_reason": "754 条面向 AI 代理的结构化网络安全技能",
-  "one_liner": "754结构化安全技能，五框架映射，跨26+AI平台",
-  "why_worth_it": "为AI代理注入专家级安全技能，统一五框架映射，填补AI安全知识空白",
+  "classify_reason": "结构化网络安全技能力包，供AI代理使用的应用",
+  "one_liner": "817 AI网络安全技能，6大框架映射，26+平台即用",
+  "why_worth_it": "将资深安全分析师的决策流程编码为AI可执行的817个技能，跨6大框架映射，填补代理缺乏安全实战知识的空白，非工具集而是知识库。",
   "tags": [
+    "AI代理",
     "网络安全",
-    "AI Agent",
-    "框架映射",
-    "安全自动化"
+    "MITRE映射",
+    "技能库"
   ],
   "confidence": "high",
   "info_gaps": [
-    "未提供技能在AI代理中的具体执行示例或配置流程，仅说明通过 npx skills add 添加后即可适配。",
-    "技能内容的具体深度未展示（如单个技能 Markdown 的完整结构示例），无法评估实际工作流的粒度。",
-    "未说明是否包含自动化测试或验证工具，来保证技能的质量与时效性。"
+    "未提供技能在真实场景中的执行准确率或成功率数据",
+    "与各AI平台集成的详细步骤文档有限，缺少配置模板",
+    "社区贡献的质量保证与评审流程不透明",
+    "暂无第三方基准测试或性能评估",
+    "项目名称含「Anthropic」但声明非官方，可能造成误解"
   ],
   "quality_flags": [],
-  "stars_total": 17714,
+  "stars_total": 21092,
   "created_at": "2026-02-25",
-  "pushed_at": "2026-06-20",
-  "latest_release": "v1.2.0",
+  "pushed_at": "2026-06-22",
+  "latest_release": "v1.3.0",
   "first_seen": "2026-06-22",
-  "last_seen": "2026-06-22",
-  "streak_days": 1,
-  "analysis_updated_at": "2026-06-22T09:21:15+0800",
+  "last_seen": "2026-06-26",
+  "streak_days": 2,
+  "analysis_updated_at": "2026-06-26T03:28:23+0800",
   "appearances": [
     {
       "date": "2026-06-22",
@@ -58,6 +60,13 @@
       "stars_total": 17714,
       "stars_gained": 361,
       "release": "v1.2.0"
+    },
+    {
+      "date": "2026-06-26",
+      "reason": "release_update",
+      "stars_total": 21092,
+      "stars_gained": 4304,
+      "release": "v1.3.0"
     }
   ]
 }
