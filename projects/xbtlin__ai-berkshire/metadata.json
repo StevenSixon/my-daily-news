@@ -27,38 +27,45 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "基于Claude Code的价值投资多Agent研究框架，终端AI工具",
-  "one_liner": "基于Claude Code的四大师方法论多Agent价值投资研究框架，一人即投研团队。",
-  "why_worth_it": "解决“AI分析漂亮但没法决策”的问题，通过多视角对抗、强制结构化结论和精确金融计算，让AI输出可执行的投研报告。",
+  "classify_reason": "基于Claude Code的多Agent价值投资研究框架",
+  "one_liner": "用 Claude Code 复现巴菲特等四大师投研方法论，多 Agent 并行深度分析股票。",
+  "why_worth_it": "为投资者提供可复现、强结论的深度投研框架，解决通用 AI “看起来都对” 但无法决策的问题。",
   "tags": [
-    "AI Agent",
     "价值投资",
+    "AI Agent",
     "Claude Code",
-    "金融分析"
+    "股票分析"
   ],
   "confidence": "high",
   "info_gaps": [
-    "未说明多 Agent 并行是在 Claude Code 内部通过多轮对话模拟，还是有原生的多 Agent 调度机制；具体并行实现细节未披露",
-    "实盘收益截图未公开具体的持仓明细和调仓逻辑，无法独立验证收益归因于框架有效性",
-    "tools/ 目录下的 Python 工具具体功能和用法未详细展开（仅提及 financial_rigor.py 一个示例）",
-    "ROADMAP 内容未在 README 公开，未来规划不清晰",
-    "对非中国股票（美股、港股以外市场）的支持程度未验证"
+    "Agent 并行机制的具体实现方式未说明（如是否依赖 Claude 的多会话管理或内部线程）",
+    "使用 Claude Code 的最低订阅要求或 API 调用成本估算未提供",
+    "Python 工具模块的完整依赖和安装方法未在 README 展示",
+    "未提供分析结果的准确率基准测试或交叉验证数据",
+    "对于 Claude Code 以外的 LLM 是否支持，未明确说明"
   ],
   "quality_flags": [],
-  "stars_total": 1757,
+  "stars_total": 3013,
   "created_at": "2026-04-07",
-  "pushed_at": "2026-06-25",
+  "pushed_at": "2026-06-26",
   "latest_release": "v1.0.0",
   "first_seen": "2026-06-26",
-  "last_seen": "2026-06-26",
-  "streak_days": 1,
-  "analysis_updated_at": "2026-06-26T03:25:59+0800",
+  "last_seen": "2026-06-27",
+  "streak_days": 2,
+  "analysis_updated_at": "2026-06-27T02:20:07+0800",
   "appearances": [
     {
       "date": "2026-06-26",
       "reason": "new",
       "stars_total": 1757,
       "stars_gained": 201,
+      "release": "v1.0.0"
+    },
+    {
+      "date": "2026-06-27",
+      "reason": "star_jump",
+      "stars_total": 3013,
+      "stars_gained": 1270,
       "release": "v1.0.0"
     }
   ]

@@ -1,0 +1,62 @@
+{
+  "full_name": "inkeep/open-knowledge",
+  "url": "https://github.com/inkeep/open-knowledge",
+  "description": "Beautiful, AI-native markdown editor and LLM Wiki",
+  "language": "TypeScript",
+  "topics": [
+    "2nd-brain",
+    "agent-skills",
+    "claude",
+    "codex",
+    "docs",
+    "knowledge-base",
+    "knowledge-management",
+    "llm",
+    "llm-wiki",
+    "markdown",
+    "markdown-editor",
+    "md",
+    "mdx",
+    "notes",
+    "pkm",
+    "second-brain",
+    "skills"
+  ],
+  "license": "GPL-3.0",
+  "category": "AI 应用",
+  "classify_reason": "AI原生markdown编辑器和LLM维基",
+  "one_liner": "本地AI原生WYSIWYG Markdown编辑器，集成多智能体，专为第二大脑与LLM Wiki设计。",
+  "why_worth_it": "给需要本地控制、多AI代理协作的知识工作者，提供开箱即用的WYSIWYG编辑与Agent集成，弥补了Obsidian等需要插件的割裂体验。",
+  "tags": [
+    "本地优先",
+    "Agent框架",
+    "WYSIWYG",
+    "TypeScript"
+  ],
+  "confidence": "medium",
+  "info_gaps": [
+    "未说明桌面应用的底层构建方式（Electron/Tauri/原生）",
+    "没有性能或资源占用基准数据",
+    "离线功能程度未知（AI 代理显然需联网，但编辑器自身是否完全离线未提及）",
+    "移动端支持情况未披露",
+    "MCP 和 skills 的具体能力范围未详细展开"
+  ],
+  "quality_flags": [],
+  "stars_total": 964,
+  "created_at": "2026-06-03",
+  "pushed_at": "2026-06-26",
+  "latest_release": "v0.19.2",
+  "first_seen": "2026-06-27",
+  "last_seen": "2026-06-27",
+  "streak_days": 1,
+  "analysis_updated_at": "2026-06-27T02:17:26+0800",
+  "appearances": [
+    {
+      "date": "2026-06-27",
+      "reason": "new",
+      "stars_total": 964,
+      "stars_gained": 0,
+      "release": "v0.19.2"
+    }
+  ]
+}

@@ -66,7 +66,7 @@ A loop is a recursive goal: you define a purpose and the AI iterates (often with
 | [Loop Design Checklist](docs/loop-design-checklist.md) | Ship readiness rubric |
 | [Patterns](patterns/README.md) | 7 production patterns + [interactive picker](https://cobusgreyling.github.io/loop-engineering/#interactive) |
 | [Starters](starters/) | Clone-and-run kits (Grok, Claude Code, Codex) |
-| [loop-audit](tools/loop-audit/) | Loop Readiness Score CLI (v1.4 + activity detection) — `npx @cobusgreyling/loop-audit . --suggest` |
+| [loop-audit](tools/loop-audit/) | Loop Readiness Score CLI (v1.4 + activity detection) — `npx @cobusgreyling/loop-audit . --suggest` · `--badge` for README |
 | [loop-init](tools/loop-init/) | Scaffold starters + budget/run-log (v1.2) — `npx @cobusgreyling/loop-init . --pattern daily-triage --tool grok` |
 | [loop-cost](tools/loop-cost/) | Token spend estimator — `npx @cobusgreyling/loop-cost` |
 | [Goal Engineering](https://github.com/cobusgreyling/goal-engineering) | Companion: Grok Build `/goal` — run-until-done objectives (`npx @cobusgreyling/goal-audit`) |
@@ -147,6 +147,9 @@ npx @cobusgreyling/loop-cost --pattern daily-triage --level L1
 
 # 3. Audit readiness (budget + run-log now scored)
 npx @cobusgreyling/loop-audit . --suggest
+
+# Optional: paste Loop Ready badge into your README
+npx @cobusgreyling/loop-audit . --badge
 
 # 4. See scores climb: empty → L1 → L2
 bash scripts/before-after-demo.sh

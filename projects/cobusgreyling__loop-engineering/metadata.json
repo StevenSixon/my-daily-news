@@ -24,31 +24,31 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "Patterns, starters, and CLI tools for loop engineering with AI coding agents.",
-  "one_liner": "设计循环系统取代逐条提示，让AI编码代理在CI/CD中自主运行模式化任务",
-  "why_worth_it": "解决将AI代理纳入实际流水线的安全与工程化难题，提供可复用的生产模式、CLI工具和故障安全机制，大幅降低从实验到上线的摩擦",
+  "classify_reason": "AI代理循环工程实用工具集",
+  "one_liner": "通过可复用的循环模式与CLI工具，将AI编码代理编排为自主工作流。",
+  "why_worth_it": "用预设的检查清单和启动器把AI代理从单次提示升级为持续运行的自动化系统，适合已经用Claude Code/Grok的开发者快速落地可靠代理。",
   "tags": [
-    "Agent编排",
-    "DevOps自动化",
-    "提示工程",
-    "CLI工具"
+    "Agent框架",
+    "自动化循环",
+    "CLI工具",
+    "AI编码"
   ],
   "confidence": "high",
   "info_gaps": [
-    "无具体令牌消耗基准数据（仅给出 Low/Medium/High 级别）",
-    "各 AI 工具的连接配置细节未在 README 中展开",
-    "CLI 输出格式和审计评分的详细规则未说明",
-    "对 Windows 环境的兼容性未明确说明"
+    "未提供大规模生产环境的token消耗实测数据",
+    "未说明在非GitHub生态下的集成方案",
+    "CLI工具的具体覆盖率和误报率无量化指标",
+    "未展示多循环并发时的资源冲突处理细节"
   ],
   "quality_flags": [],
-  "stars_total": 821,
+  "stars_total": 2445,
   "created_at": "2026-06-09",
-  "pushed_at": "2026-06-24",
+  "pushed_at": "2026-06-26",
   "latest_release": null,
   "first_seen": "2026-06-21",
-  "last_seen": "2026-06-25",
-  "streak_days": 5,
-  "analysis_updated_at": "2026-06-24T16:31:48+0800",
+  "last_seen": "2026-06-27",
+  "streak_days": 6,
+  "analysis_updated_at": "2026-06-27T02:19:05+0800",
   "appearances": [
     {
       "date": "2026-06-21",
@@ -82,6 +82,13 @@
       "date": "2026-06-25",
       "reason": "lightweight",
       "stars_total": 821,
+      "stars_gained": 0,
+      "release": null
+    },
+    {
+      "date": "2026-06-27",
+      "reason": "star_jump",
+      "stars_total": 2445,
       "stars_gained": 0,
       "release": null
     }

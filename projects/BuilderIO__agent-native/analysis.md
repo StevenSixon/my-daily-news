@@ -1,53 +1,43 @@
 ## 它是什么
-
-BuilderIO/agent-native 是一个开源的 TypeScript 框架，用于构建“agent-native”应用程序。它让 AI 代理和用户界面成为同一系统中的平等公民，共享同一个数据库和状态，实现实时双向同步。开发者只需定义一次动作（Action），即可在 UI、Agent 聊天、HTTP API、MCP、A2A 等多种场景复用，无需重复实现。
+Agent-Native 是 BuilderIO 开源的 Agent 应用框架，核心理念是让 Agent 作为应用的“一等公民”，直接操控 UI、状态和数据，而非仅以聊天窗口外挂。提供 actions、agent runtime、SQL 状态管理、多协议端点（HTTP/MCP/A2A/CLI）等全套基元。
 
 ## 为什么火
-
-- **打破 AI 与 UI 的隔阂**：传统 AI 聊天无法深度操控应用状态，而 Agent-native 让代理直接读写数据库，UI 实时响应。
-- **全栈一体**：从无头 API 到富聊天到完整应用，三种形态使用同一套动作定义，大幅降低构建复杂度。
-- **实时协作**：人类与代理通过 CRDT 在同一个文档上实时协作，支持多人、多代理同时编辑。
-- **开放无锁定**：任何 Drizzle 支持的 SQL 数据库、任何 Nitro 支持的托管平台，避免厂商绑定。
+- 解决 Agent 与产品UI割裂的问题：传统 AI 只能通过聊天窗口交互，Agent-Native 让 Agent 所见即所得，操作与用户点击共用同一 action 定义。
+- 开箱即用的模板（邮件、看板、文档等）可直接克隆，降低启动成本。
+- 后端无关（任意兼容 Drizzle 的 SQL 库，Nitro 托管），用户掌控代码和部署。
 
 ## 技术栈
-
 - 语言：TypeScript
-- 核心库：`@agent-native/core`
-- 数据库：Drizzle ORM（支持多数关系型数据库）
-- 主机适配：Nitro（多种部署目标）
-- 前端：React（模板使用），但框架本身可对接任意前端
-- 协议：A2A、MCP、MCP Apps、OAuth、OpenAI AG-UI、Claude Agent SDK 等
+- 核心库：@agent-native/core, @agent-native/skills
+- 状态：SQL 数据库（需 Drizzle 适配器）
+- 部署：任意支持 Nitro 的平台
+- 协议：HTTP, MCP, A2A (Agent-to-Agent), CLI
 
 ## 核心能力
-
-- **actions**：定义一次，用于 UI、agent、HTTP、MCP、CLI 等所有通道。
-- **Agent 运行时**：内置对话、工具、技能、记忆、任务、可观测性、代理间切换。
-- **多形态部署**：headless、rich chat、完整应用。
-- **Workspace 工作区**：monorepo 支持多个应用共享认证和跨应用 A2A 通信。
-- **技能系统**：可安装技能扩展代理能力（如 visual-plan）。
-- **模板市场**：Calendar、Content、Slides 等多个完整可克隆 SaaS 模板。
+- **Actions 复用**：一次定义，UI 点击、Agent 调用、API、MCP、CLI 等端通用。
+- **Agent 运行时**：内置对话、工具调用、技能、记忆、定时任务、可观察性、转交（handoffs）。
+- **实时协作**：人和 Agent 共享同一数据库，状态实时同步。
+- **上下文感知**：Agent 知道用户当前聚焦的界面元素，可选中文本按 Cmd+I 指示操作。
+- **Agent 间调用**：通过 A2A 协议跨应用协调。
+- **自我演化**：Agent 可添加功能、修 bug、优化 UI。
 
 ## 适用场景
-
-- 需要将 AI 深度集成到业务逻辑的全栈应用（如邮件、日历、数据分析）
-- 构建既有人工交互又有自主代理操作的协作工具
-- 希望快速启动、拥有完整 UI 和 AI 能力的 SaaS 起步项目
-- 企业内部工具，要求代理能操作数据并实时反馈到界面
+- 构建下一代 AI 原生 SaaS（如邮件、日历、文档编辑工具），Agent 深度参与交互和功能修改。
+- 需要 Agent 与真实应用界面协同操作的内部工具或原型。
+- 快速搭建可定制、自托管的 Agent 前端应用，如视觉规划工具、内容编辑器等。
 
 ## 同类对比
-
-| 框架 | 定位 | Agent-UI 同步 | 行动定义复用 | 多代理通信 | 厂商锁定 |
-|------|------|--------------|--------------|------------|----------|
-| LangChain/LangGraph | 通用 Agent 框架 | 需自行实现 | 需封装 | 有限 | 部分锁定 |
-| AutoGen | 多 Agent 对话 | 通常无内置 UI | 无 | 强 | 开源 |
-| Agent-Native | 全栈 Agent-Native | 原生双向同步 | 一处定义，多处使用 | 内置 A2A | 无锁定（任意 DB/主机） |
+- 相比纯 Agent 框架（如 LangChain、AutoGPT）：Agent-Native 更强调与 UI 的共生，提供完整的前端接入，而不仅是逻辑编排。
+- 相比传统 SaaS 工具：用户拥有代码，可完全自定义，Agent 能动态改应用。
+- 相比 copilot 式聊天助手：不再外挂聊天窗口，Agent 在应用内直接行动，多模态交互。
 
 ## 版本动态
-
-最新 Release 为 @agent-native/core@0.63.4（2026-06-19），属于修补版本，主要修复了 UI 细节（注解高亮、工具提示、深度链接保持）。框架仍在快速迭代，尚未发布 1.0。
+- 2026-03 创建，活跃开发中，最新 Release 为 @agent-native/skills@0.2.140 (2026-06-26)。
+- 核心库 @agent-native/core@0.79.12 频繁迭代。
+- 文档初步完善，包含 auth、neon-netlify 集成等指南。
 ---
 
 ## ℹ️ 置信度与信息盲区
 
-- 置信度：**high**
-- 信息盲区：许可类型未在仓库中明确说明（标注为 None）；未提供性能基准数据；未明确最低 Node.js 版本要求（推测为 18+）；Nitro 部署目标细节未列出，仅说明支持任何 Nitro 托管
+- 置信度：**medium**
+- 信息盲区：许可协议信息矛盾：README 声明 MIT，但仓库元数据显示 None；无性能基准或压力测试数据；未明确 Auth 实现细节及第三方认证支持范围；未说明生产环境部署建议和高可用方案；缺少 actions/runtime 的详细 API 文档链接（未提供全文）

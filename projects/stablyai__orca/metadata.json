@@ -25,32 +25,32 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "并行编码代理工作台，面向用户的应用",
-  "one_liner": "并行编排多个AI编码代理，在隔离的Git工作树中自动运行与对比结果。",
-  "why_worth_it": "用单一界面同时调度多个AI代理并行干不同活，自动隔离环境，省去手动切分支、合并的麻烦，适合高频使用AI辅助开发的极客。",
+  "classify_reason": "并行代理舰队开发环境(ADE)",
+  "one_liner": "开源并行AI代理编排IDE，多worktree+终端+手机监控",
+  "why_worth_it": "同时跑多个AI编码代理，一键发散再收敛最佳结果，带SSH远程和移动通知，效率碾压单代理",
   "tags": [
-    "平行代理编排",
-    "IDE",
-    "Git工作树",
-    "TypeScript"
+    "并行代理编排",
+    "终端",
+    "TypeScript",
+    "工作树"
   ],
   "confidence": "high",
   "info_gaps": [
-    "未提供性能基准或具体资源占用数据",
-    "未说明桌面应用的具体框架（如 Electron）及构建细节",
-    "远程 SSH 工作树的详细实现和安全性说明缺失",
-    "移动端应用的开源状态未明确（仅提供二进制）",
-    "多代理并行时的资源调度和隔离深度限制未知"
+    "未说明桌面端具体技术栈（如是否基于 Electron）",
+    "移动端实现方式未提及（React Native?）",
+    "没有提供性能 Benchmark 或代理并行效率数据",
+    "代理间的上下文共享或消息传递机制未在 README 中详细描述",
+    "自托管/企业部署方案未在 README 中出现"
   ],
   "quality_flags": [],
-  "stars_total": 7344,
+  "stars_total": 7870,
   "created_at": "2026-03-17",
-  "pushed_at": "2026-06-25",
-  "latest_release": "v1.4.97",
+  "pushed_at": "2026-06-26",
+  "latest_release": "v1.4.101",
   "first_seen": "2026-06-24",
-  "last_seen": "2026-06-26",
-  "streak_days": 3,
-  "analysis_updated_at": "2026-06-26T03:29:18+0800",
+  "last_seen": "2026-06-27",
+  "streak_days": 4,
+  "analysis_updated_at": "2026-06-27T02:18:39+0800",
   "appearances": [
     {
       "date": "2026-06-24",
@@ -72,6 +72,13 @@
       "stars_total": 7344,
       "stars_gained": 1397,
       "release": "v1.4.97"
+    },
+    {
+      "date": "2026-06-27",
+      "reason": "release_update",
+      "stars_total": 7870,
+      "stars_gained": 1949,
+      "release": "v1.4.101"
     }
   ]
 }

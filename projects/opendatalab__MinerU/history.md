@@ -1,1 +1,2 @@
 - 2026-06-26 | 🆕新发现 | ⭐69400(+524) | release=mineru-3.4.0-released
+- 2026-06-27 | lightweight | ⭐70271(+944) | release=mineru-3.4.0-released

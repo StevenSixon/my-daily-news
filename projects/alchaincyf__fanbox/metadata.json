@@ -17,31 +17,30 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "Vibe coding驾驶舱，集成文件管理与终端，面向AI编码",
-  "one_liner": "本地AI编码驾驶舱：文件、终端、预览三合一，实时追踪Agent每次文件改动。",
-  "why_worth_it": "解决AI起项目后找不回、看不清改动问题，适合用Claude Code/Codex的开发者，一体化窗口免于多应用切换。",
+  "classify_reason": "vibe coding驾驶舱，为AI代理而设计",
+  "one_liner": "本地 Coding Agent 驾驶舱：找回项目、看清改动、指挥终端。",
+  "why_worth_it": "解决 AI 生成项目散落难找、改动不可见、终端与文件浏览割裂的痛点，对频繁使用 Claude Code/Codex 的开发者极其实用。",
   "tags": [
+    "Agent 驾驶舱",
     "本地优先",
-    "Agent驾驶舱",
     "Electron",
-    "vibe-coding"
+    "开发者工具"
   ],
-  "confidence": "medium",
+  "confidence": "high",
   "info_gaps": [
-    "当前仅发布 macOS Apple Silicon 版本，Windows 和 Intel Mac 版本仍在规划中，未提供具体发布时间。",
-    "未提供大规模文件负载下的性能基准测试数据（仅提及缩略图滚动 <0.1秒）。"
+    "未提供性能基准数据",
+    "未说明对 Node.js 或其他运行时版本的具体依赖",
+    "AI 整理功能的具体模型交互流程细节未公开"
   ],
-  "quality_flags": [
-    "缺小标题：为什么火"
-  ],
-  "stars_total": 804,
+  "quality_flags": [],
+  "stars_total": 811,
   "created_at": "2026-06-10",
-  "pushed_at": "2026-06-18",
-  "latest_release": "v2.3.1",
+  "pushed_at": "2026-06-26",
+  "latest_release": "v2.3.2",
   "first_seen": "2026-06-20",
-  "last_seen": "2026-06-26",
-  "streak_days": 10,
-  "analysis_updated_at": "2026-06-20T00:35:41+0800",
+  "last_seen": "2026-06-27",
+  "streak_days": 11,
+  "analysis_updated_at": "2026-06-27T02:22:06+0800",
   "appearances": [
     {
       "date": "2026-06-20",
@@ -112,6 +111,13 @@
       "stars_total": 804,
       "stars_gained": 0,
       "release": "v2.3.1"
+    },
+    {
+      "date": "2026-06-27",
+      "reason": "release_update",
+      "stars_total": 811,
+      "stars_gained": 0,
+      "release": "v2.3.2"
     }
   ]
 }

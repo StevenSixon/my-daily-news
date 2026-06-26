@@ -6,7 +6,7 @@
   "topics": [],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "来自 .claude 目录的 AI 编码代理技能文件",
+  "classify_reason": "AI编码代理技能包",
   "one_liner": "一套可组合的工程技能，专治AI编码代理的对齐、啰嗦、质量与架构退化四大顽疾",
   "why_worth_it": "直接解决AI辅助编程中最常见的沟通错位、代码腐烂和失控问题，轻量且不绑定特定模型，比GSD等方案更灵活实用",
   "tags": [
@@ -23,13 +23,13 @@
     "是否支持非 Node.js 环境或纯 Web 代理未说明"
   ],
   "quality_flags": [],
-  "stars_total": 139791,
+  "stars_total": 147315,
   "created_at": "2026-02-03",
-  "pushed_at": "2026-06-18",
+  "pushed_at": "2026-06-25",
   "latest_release": "v1.0.1",
   "first_seen": "2026-06-22",
-  "last_seen": "2026-06-22",
-  "streak_days": 1,
+  "last_seen": "2026-06-27",
+  "streak_days": 2,
   "analysis_updated_at": "2026-06-22T09:20:11+0800",
   "appearances": [
     {
@@ -37,6 +37,13 @@
       "reason": "new",
       "stars_total": 139791,
       "stars_gained": 1443,
+      "release": "v1.0.1"
+    },
+    {
+      "date": "2026-06-27",
+      "reason": "lightweight",
+      "stars_total": 147315,
+      "stars_gained": 11246,
       "release": "v1.0.1"
     }
   ]

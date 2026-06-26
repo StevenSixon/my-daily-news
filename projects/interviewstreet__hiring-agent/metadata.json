@@ -6,7 +6,7 @@
   "topics": [],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "AI代理评估简历，终端招聘应用",
+  "classify_reason": "AI代理评估和打分简历",
   "one_liner": "本地LLM驱动的简历解析与公平评分代理，集成GitHub信号增强评估。",
   "why_worth_it": "用LLM将简历自动转为结构化评分，引入开源贡献等信号，比纯关键词匹配更客观、对技术招聘更深度。",
   "tags": [
@@ -24,13 +24,13 @@
     "未提及非英文简历的支持情况"
   ],
   "quality_flags": [],
-  "stars_total": 2698,
+  "stars_total": 2889,
   "created_at": "2025-07-29",
   "pushed_at": "2026-06-22",
   "latest_release": null,
   "first_seen": "2026-06-25",
-  "last_seen": "2026-06-26",
-  "streak_days": 2,
+  "last_seen": "2026-06-27",
+  "streak_days": 3,
   "analysis_updated_at": "2026-06-26T03:29:41+0800",
   "appearances": [
     {
@@ -45,6 +45,13 @@
       "reason": "star_jump",
       "stars_total": 2698,
       "stars_gained": 902,
+      "release": null
+    },
+    {
+      "date": "2026-06-27",
+      "reason": "lightweight",
+      "stars_total": 2889,
+      "stars_gained": 1507,
       "release": null
     }
   ]

@@ -1,0 +1,43 @@
+{
+  "full_name": "aws/agent-toolkit-for-aws",
+  "url": "https://github.com/aws/agent-toolkit-for-aws",
+  "description": "Official, AWS-supported MCP servers, skills, and plugins to help AI agents build on AWS",
+  "language": "Python",
+  "topics": [],
+  "license": "Apache-2.0",
+  "category": "AI 应用",
+  "classify_reason": "AWS官方MCP服务器与插件，帮助AI代理构建在AWS上",
+  "one_liner": "AWS官方MCP服务器、技能与插件，赋能AI代理构建云应用",
+  "why_worth_it": "为AI编码代理提供AWS官方MCP集成，内置企业审计与沙箱，比社区方案更安全可控",
+  "tags": [
+    "MCP服务器",
+    "AWS工具",
+    "AI Agent",
+    "插件化"
+  ],
+  "confidence": "high",
+  "info_gaps": [
+    "未提供性能基准测试数据",
+    "未说明MCP服务器的具体实现语言和架构",
+    "插件内部技能指令的格式和细节未公开",
+    "未说明是否支持本地部署MCP服务器实例"
+  ],
+  "quality_flags": [],
+  "stars_total": 1303,
+  "created_at": "2026-04-23",
+  "pushed_at": "2026-06-26",
+  "latest_release": null,
+  "first_seen": "2026-06-27",
+  "last_seen": "2026-06-27",
+  "streak_days": 1,
+  "analysis_updated_at": "2026-06-27T02:15:40+0800",
+  "appearances": [
+    {
+      "date": "2026-06-27",
+      "reason": "new",
+      "stars_total": 1303,
+      "stars_gained": 238,
+      "release": null
+    }
+  ]
+}

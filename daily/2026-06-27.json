@@ -1,0 +1,1378 @@
+{
+  "date": "2026-06-27",
+  "count": 12,
+  "items": [
+    {
+      "full_name": "aws/agent-toolkit-for-aws",
+      "url": "https://github.com/aws/agent-toolkit-for-aws",
+      "one_liner": "AWS官方MCP服务器、技能与插件，赋能AI代理构建云应用",
+      "why_worth_it": "为AI编码代理提供AWS官方MCP集成，内置企业审计与沙箱，比社区方案更安全可控",
+      "tags": [
+        "MCP服务器",
+        "AWS工具",
+        "AI Agent",
+        "插件化"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "未提供性能基准测试数据",
+        "未说明MCP服务器的具体实现语言和架构",
+        "插件内部技能指令的格式和细节未公开",
+        "未说明是否支持本地部署MCP服务器实例"
+      ],
+      "language": "Python",
+      "stars_total": 1303,
+      "stars_gained": 238,
+      "streak_days": 1,
+      "is_new": true,
+      "refreshed": true,
+      "revisit_reason": "new",
+      "report_path": "../projects/aws__agent-toolkit-for-aws/analysis.md"
+    },
+    {
+      "full_name": "alchaincyf/zhangxuefeng-skill",
+      "url": "https://github.com/alchaincyf/zhangxuefeng-skill",
+      "one_liner": "张雪峰认知操作系统：用其思维框架实战解答高考/考研/职业选择。",
+      "why_worth_it": "将张雪峰的实战思维蒸馏为可对话的Agent Skill，比零散语录更系统，适合学生与家长快速获得深度建议。",
+      "tags": [
+        "Agent Skill",
+        "教育咨询",
+        "思维框架",
+        "AI Agent"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "调研文件（references/research/）的具体内容未在README中展示，无法核实提炼的准确性",
+        "未说明对话示例是否为实际生成效果或是人工编写",
+        "未提供与真实张雪峰建议的一致性测试或用户评测数据",
+        "无性能指标（如响应时间、资源消耗）",
+        "未明确所需runtime的最低版本或模型能力门槛"
+      ],
+      "language": null,
+      "stars_total": 9225,
+      "stars_gained": 185,
+      "streak_days": 1,
+      "is_new": true,
+      "refreshed": true,
+      "revisit_reason": "new",
+      "report_path": "../projects/alchaincyf__zhangxuefeng-skill/analysis.md"
+    },
+    {
+      "full_name": "commaai/openpilot",
+      "url": "https://github.com/commaai/openpilot",
+      "one_liner": "开源机器人操作系统，可升级300+车型的L2辅助驾驶",
+      "why_worth_it": "让量产车拥有持续进化的ADAS，社区活跃，支持300+车型，硬件统一采购，降低DIY自动驾驶门槛",
+      "tags": [
+        "ADAS",
+        "机器人操作系统",
+        "自动驾驶",
+        "开源硬件"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "未披露端到端模型的具体架构与训练细节",
+        "未提供在非 comma 硬件上运行的具体支持范围和性能",
+        "无基准测试或对比数据（如 AEB 制动距离、弯道保持极限）",
+        "快速入门未列出开发环境的具体系统依赖和安装步骤"
+      ],
+      "language": "Python",
+      "stars_total": 61719,
+      "stars_gained": 67,
+      "streak_days": 1,
+      "is_new": true,
+      "refreshed": true,
+      "revisit_reason": "new",
+      "report_path": "../projects/commaai__openpilot/analysis.md"
+    },
+    {
+      "full_name": "inkeep/open-knowledge",
+      "url": "https://github.com/inkeep/open-knowledge",
+      "one_liner": "本地AI原生WYSIWYG Markdown编辑器，集成多智能体，专为第二大脑与LLM Wiki设计。",
+      "why_worth_it": "给需要本地控制、多AI代理协作的知识工作者，提供开箱即用的WYSIWYG编辑与Agent集成，弥补了Obsidian等需要插件的割裂体验。",
+      "tags": [
+        "本地优先",
+        "Agent框架",
+        "WYSIWYG",
+        "TypeScript"
+      ],
+      "confidence": "medium",
+      "info_gaps": [
+        "未说明桌面应用的底层构建方式（Electron/Tauri/原生）",
+        "没有性能或资源占用基准数据",
+        "离线功能程度未知（AI 代理显然需联网，但编辑器自身是否完全离线未提及）",
+        "移动端支持情况未披露",
+        "MCP 和 skills 的具体能力范围未详细展开"
+      ],
+      "language": "TypeScript",
+      "stars_total": 964,
+      "stars_gained": 0,
+      "streak_days": 1,
+      "is_new": true,
+      "refreshed": true,
+      "revisit_reason": "new",
+      "report_path": "../projects/inkeep__open-knowledge/analysis.md"
+    },
+    {
+      "full_name": "tigicion/dao-code",
+      "url": "https://github.com/tigicion/dao-code",
+      "one_liner": "基于 DeepSeek V4 的终端编码 agent，缓存命中 >95%，成本比 Claude 省 30 倍",
+      "why_worth_it": "面向国内可用，MIT 开源，DeepSeek 直连免代理，长任务自愈与记忆自校验，极客低成本尝鲜",
+      "tags": [
+        "Coding Agent",
+        "DeepSeek",
+        "TypeScript",
+        "CLI 工具"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "未明确是否支持除 DeepSeek 以外的模型（如 OpenAI 兼容接口）",
+        "未提供完整的 SWE-bench 评测报告链接（只有 7 个任务的成本数据）",
+        "未说明维护者背景或社区活跃度（仅有单个 GitHub 账号）",
+        "未提及是否需要特殊硬件的运行依赖（如本地 GPU 等）"
+      ],
+      "language": "TypeScript",
+      "stars_total": 419,
+      "stars_gained": 0,
+      "streak_days": 1,
+      "is_new": true,
+      "refreshed": true,
+      "revisit_reason": "new",
+      "report_path": "../projects/tigicion__dao-code/analysis.md"
+    },
+    {
+      "full_name": "stablyai/orca",
+      "url": "https://github.com/stablyai/orca",
+      "one_liner": "开源并行AI代理编排IDE，多worktree+终端+手机监控",
+      "why_worth_it": "同时跑多个AI编码代理，一键发散再收敛最佳结果，带SSH远程和移动通知，效率碾压单代理",
+      "tags": [
+        "并行代理编排",
+        "终端",
+        "TypeScript",
+        "工作树"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "未说明桌面端具体技术栈（如是否基于 Electron）",
+        "移动端实现方式未提及（React Native?）",
+        "没有提供性能 Benchmark 或代理并行效率数据",
+        "代理间的上下文共享或消息传递机制未在 README 中详细描述",
+        "自托管/企业部署方案未在 README 中出现"
+      ],
+      "language": "TypeScript",
+      "stars_total": 7870,
+      "stars_gained": 1949,
+      "streak_days": 4,
+      "is_new": false,
+      "refreshed": true,
+      "revisit_reason": "release_update",
+      "report_path": "../projects/stablyai__orca/analysis.md"
+    },
+    {
+      "full_name": "cobusgreyling/loop-engineering",
+      "url": "https://github.com/cobusgreyling/loop-engineering",
+      "one_liner": "通过可复用的循环模式与CLI工具，将AI编码代理编排为自主工作流。",
+      "why_worth_it": "用预设的检查清单和启动器把AI代理从单次提示升级为持续运行的自动化系统，适合已经用Claude Code/Grok的开发者快速落地可靠代理。",
+      "tags": [
+        "Agent框架",
+        "自动化循环",
+        "CLI工具",
+        "AI编码"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "未提供大规模生产环境的token消耗实测数据",
+        "未说明在非GitHub生态下的集成方案",
+        "CLI工具的具体覆盖率和误报率无量化指标",
+        "未展示多循环并发时的资源冲突处理细节"
+      ],
+      "language": "JavaScript",
+      "stars_total": 2445,
+      "stars_gained": 0,
+      "streak_days": 6,
+      "is_new": false,
+      "refreshed": true,
+      "revisit_reason": "star_jump",
+      "report_path": "../projects/cobusgreyling__loop-engineering/analysis.md"
+    },
+    {
+      "full_name": "BuilderIO/agent-native",
+      "url": "https://github.com/BuilderIO/agent-native",
+      "one_liner": "一套框架让Agent直接操控真实应用界面，而非仅聊天窗交互。",
+      "why_worth_it": "统一UI与Agent的动作定义，一次编写多端复用，适合想将AI深度嵌入产品的SaaS团队。",
+      "tags": [
+        "Agent-native",
+        "TypeScript",
+        "多端复用",
+        "SQL驱动"
+      ],
+      "confidence": "medium",
+      "info_gaps": [
+        "许可协议信息矛盾：README 声明 MIT，但仓库元数据显示 None",
+        "无性能基准或压力测试数据",
+        "未明确 Auth 实现细节及第三方认证支持范围",
+        "未说明生产环境部署建议和高可用方案",
+        "缺少 actions/runtime 的详细 API 文档链接（未提供全文）"
+      ],
+      "language": "TypeScript",
+      "stars_total": 2473,
+      "stars_gained": 1588,
+      "streak_days": 4,
+      "is_new": false,
+      "refreshed": true,
+      "revisit_reason": "release_update",
+      "report_path": "../projects/BuilderIO__agent-native/analysis.md"
+    },
+    {
+      "full_name": "xbtlin/ai-berkshire",
+      "url": "https://github.com/xbtlin/ai-berkshire",
+      "one_liner": "用 Claude Code 复现巴菲特等四大师投研方法论，多 Agent 并行深度分析股票。",
+      "why_worth_it": "为投资者提供可复现、强结论的深度投研框架，解决通用 AI “看起来都对” 但无法决策的问题。",
+      "tags": [
+        "价值投资",
+        "AI Agent",
+        "Claude Code",
+        "股票分析"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "Agent 并行机制的具体实现方式未说明（如是否依赖 Claude 的多会话管理或内部线程）",
+        "使用 Claude Code 的最低订阅要求或 API 调用成本估算未提供",
+        "Python 工具模块的完整依赖和安装方法未在 README 展示",
+        "未提供分析结果的准确率基准测试或交叉验证数据",
+        "对于 Claude Code 以外的 LLM 是否支持，未明确说明"
+      ],
+      "language": "Python",
+      "stars_total": 3013,
+      "stars_gained": 1270,
+      "streak_days": 2,
+      "is_new": false,
+      "refreshed": true,
+      "revisit_reason": "star_jump",
+      "report_path": "../projects/xbtlin__ai-berkshire/analysis.md"
+    },
+    {
+      "full_name": "vercel/eve",
+      "url": "https://github.com/vercel/eve",
+      "one_liner": "基于文件系统布局的 TypeScript Agent 框架，让代理定义即目录结构",
+      "why_worth_it": "为 TypeScript/Node 开发者提供可检查、可扩展的代理架构，通过文件规范消除模板代码，快速集成工具与通道",
+      "tags": [
+        "Agent框架",
+        "文件系统优先",
+        "TypeScript",
+        "Vercel"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "未说明支持的 Node.js 最低版本",
+        "未提供性能基准或与同类框架的对比",
+        "未列出完整支持的 LLM 提供商/模型列表",
+        "持久化机制细节未在 README 中展开",
+        "与 Vercel AI SDK 的协作关系未明确说明"
+      ],
+      "language": "TypeScript",
+      "stars_total": 2661,
+      "stars_gained": 0,
+      "streak_days": 10,
+      "is_new": false,
+      "refreshed": true,
+      "revisit_reason": "release_update",
+      "report_path": "../projects/vercel__eve/analysis.md"
+    },
+    {
+      "full_name": "raiyanyahya/recall",
+      "url": "https://github.com/raiyanyahya/recall",
+      "one_liner": "让 Claude Code 拥有完全离线的持久项目记忆，不再重复解释上下文。",
+      "why_worth_it": "解决每次会话冷启动需重述项目背景的痛点，完全本地摘要、零 token 消耗，适合注重隐私与用量控制的 Claude Code 用户。",
+      "tags": [
+        "claude插件",
+        "本地优先",
+        "离线记忆",
+        "隐私保护"
+      ],
+      "confidence": "high",
+      "info_gaps": [],
+      "language": "Python",
+      "stars_total": 566,
+      "stars_gained": 0,
+      "streak_days": 5,
+      "is_new": false,
+      "refreshed": true,
+      "revisit_reason": "release_update",
+      "report_path": "../projects/raiyanyahya__recall/analysis.md"
+    },
+    {
+      "full_name": "alchaincyf/fanbox",
+      "url": "https://github.com/alchaincyf/fanbox",
+      "one_liner": "本地 Coding Agent 驾驶舱：找回项目、看清改动、指挥终端。",
+      "why_worth_it": "解决 AI 生成项目散落难找、改动不可见、终端与文件浏览割裂的痛点，对频繁使用 Claude Code/Codex 的开发者极其实用。",
+      "tags": [
+        "Agent 驾驶舱",
+        "本地优先",
+        "Electron",
+        "开发者工具"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "未提供性能基准数据",
+        "未说明对 Node.js 或其他运行时版本的具体依赖",
+        "AI 整理功能的具体模型交互流程细节未公开"
+      ],
+      "language": "JavaScript",
+      "stars_total": 811,
+      "stars_gained": 0,
+      "streak_days": 11,
+      "is_new": false,
+      "refreshed": true,
+      "revisit_reason": "release_update",
+      "report_path": "../projects/alchaincyf__fanbox/analysis.md"
+    }
+  ],
+  "streaks": [
+    {
+      "full_name": "Panniantong/Agent-Reach",
+      "url": "https://github.com/Panniantong/Agent-Reach",
+      "one_liner": "一句 CLI 给 AI 装上全互联网眼睛，零 API 费读遍微博客、视频、论坛",
+      "why_worth_it": "",
+      "tags": [],
+      "confidence": "medium",
+      "info_gaps": [],
+      "language": "Python",
+      "stars_total": 42158,
+      "stars_gained": 6830,
+      "streak_days": 13,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/Panniantong__Agent-Reach/analysis.md"
+    },
+    {
+      "full_name": "calesthio/OpenMontage",
+      "url": "https://github.com/calesthio/OpenMontage",
+      "one_liner": "将AI编程助手变为完整视频制作工作室的开源Agent系统",
+      "why_worth_it": "零成本制作真实素材或AI生成视频，用自然语言驱动从策划到渲染的全流程，优于单一图片动画方案",
+      "tags": [
+        "Agent框架",
+        "视频生成",
+        "开源",
+        "多流水线"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "未提供生成视频质量的定量评估或基准测试数据",
+        "未详细说明 GPU 本地视频生成的具体硬件要求",
+        "未列出所有 52 个工具的具体名称和用途",
+        "README 提及 'stage-gates' 但未展开说明其机制"
+      ],
+      "language": "Python",
+      "stars_total": 23360,
+      "stars_gained": 15793,
+      "streak_days": 13,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/calesthio__OpenMontage/analysis.md"
+    },
+    {
+      "full_name": "XiaomiMiMo/MiMo-Code",
+      "url": "https://github.com/XiaomiMiMo/MiMo-Code",
+      "one_liner": "终端AI编程助手，带持久记忆与多代理协同，免配置启动。",
+      "why_worth_it": "解决 AI 助手会话间项目遗忘问题，通过记忆、子代理和自蒸馏持续改进开发流程。",
+      "tags": [
+        "AI编程助手",
+        "记忆系统",
+        "终端优先",
+        "TypeScript"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "无性能 benchmark 数据或准确率对比",
+        "MiMo V2.5 模型具体能力（除 ASR 和 voice control）未详述",
+        "Dream/Distill 的启发式规则与效果量化未公开",
+        "Max Mode 并行推理的具体实现和资源消耗未说明"
+      ],
+      "language": "TypeScript",
+      "stars_total": 10851,
+      "stars_gained": 0,
+      "streak_days": 13,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/XiaomiMiMo__MiMo-Code/analysis.md"
+    },
+    {
+      "full_name": "omnigent-ai/omnigent",
+      "url": "https://github.com/omnigent-ai/omnigent",
+      "one_liner": "统一编排 Claude Code/Codex/Cursor 等 AI 编码 agent 的框架，内置沙箱与策略",
+      "why_worth_it": "解决多 AI 编码工具碎片化问题，在一个会话中混合编排并互相审查，带策略与沙箱，适合重视安全的团队协作",
+      "tags": [
+        "Agent 框架",
+        "多 Agent 编排",
+        "安全沙箱",
+        "实时协作"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "无性能基准测试数据（如编排延迟、多 agent 并发开销）",
+        "策略系统的完整表达能力未提供详尽说明，仅靠文档推断",
+        "对 Cursor 集成是否支持全部 Cursor 功能或存在限制未明确",
+        "无大规模部署案例或生产环境稳定性报告",
+        "沙箱各后端的成熟度和隔离强度无量化比较"
+      ],
+      "language": "Python",
+      "stars_total": 4986,
+      "stars_gained": 0,
+      "streak_days": 11,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/omnigent-ai__omnigent/analysis.md"
+    },
+    {
+      "full_name": "alchaincyf/fanbox",
+      "url": "https://github.com/alchaincyf/fanbox",
+      "one_liner": "本地 Coding Agent 驾驶舱：找回项目、看清改动、指挥终端。",
+      "why_worth_it": "解决 AI 生成项目散落难找、改动不可见、终端与文件浏览割裂的痛点，对频繁使用 Claude Code/Codex 的开发者极其实用。",
+      "tags": [
+        "Agent 驾驶舱",
+        "本地优先",
+        "Electron",
+        "开发者工具"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "未提供性能基准数据",
+        "未说明对 Node.js 或其他运行时版本的具体依赖",
+        "AI 整理功能的具体模型交互流程细节未公开"
+      ],
+      "language": "JavaScript",
+      "stars_total": 811,
+      "stars_gained": 0,
+      "streak_days": 11,
+      "is_new": false,
+      "refreshed": true,
+      "revisit_reason": "release_update",
+      "report_path": "../projects/alchaincyf__fanbox/analysis.md"
+    },
+    {
+      "full_name": "DeusData/codebase-memory-mcp",
+      "url": "https://github.com/DeusData/codebase-memory-mcp",
+      "one_liner": "毫秒级代码知识图谱MCP，158语言零依赖，省99% token。",
+      "why_worth_it": "为AI编程代理提供全量代码库结构查询，替代逐文件grep，单二进制本地运行，安全且节省上百倍token与延迟。",
+      "tags": [
+        "MCP工具",
+        "代码智能",
+        "知识图谱",
+        "本地优先"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "Linux 内核 3 分钟索引的具体硬件配置（CPU、内存）未说明",
+        "embedding 模型捆绑后二进制文件的体积未提及",
+        "增量索引的具体策略（是否依赖 git diff，文件变更粒度）描述较简略",
+        "混合 LSP 对各语言的类型解析深度和边界情况未详细展开",
+        "与同类工具（如 ast-grep、Semgrep）的量化对比缺失"
+      ],
+      "language": "C",
+      "stars_total": 15340,
+      "stars_gained": 8024,
+      "streak_days": 10,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/DeusData__codebase-memory-mcp/analysis.md"
+    },
+    {
+      "full_name": "vercel/eve",
+      "url": "https://github.com/vercel/eve",
+      "one_liner": "基于文件系统布局的 TypeScript Agent 框架，让代理定义即目录结构",
+      "why_worth_it": "为 TypeScript/Node 开发者提供可检查、可扩展的代理架构，通过文件规范消除模板代码，快速集成工具与通道",
+      "tags": [
+        "Agent框架",
+        "文件系统优先",
+        "TypeScript",
+        "Vercel"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "未说明支持的 Node.js 最低版本",
+        "未提供性能基准或与同类框架的对比",
+        "未列出完整支持的 LLM 提供商/模型列表",
+        "持久化机制细节未在 README 中展开",
+        "与 Vercel AI SDK 的协作关系未明确说明"
+      ],
+      "language": "TypeScript",
+      "stars_total": 2661,
+      "stars_gained": 0,
+      "streak_days": 10,
+      "is_new": false,
+      "refreshed": true,
+      "revisit_reason": "release_update",
+      "report_path": "../projects/vercel__eve/analysis.md"
+    },
+    {
+      "full_name": "TestSprite/testsprite-cli",
+      "url": "https://github.com/TestSprite/testsprite-cli",
+      "one_liner": "让AI编程智能体通过真实环境自验证测试循环，一键定位失败根因",
+      "why_worth_it": "解决AI编码后缺乏即时真实验证的问题，面向Coding Agent使用者，提供确定性失败定位包，杜绝合成上下文",
+      "tags": [
+        "AI测试",
+        "CLI工具",
+        "E2E自动化",
+        "Playwright"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "未提供测试计划文件的格式规范（plan.json schema）",
+        "未说明云环境下浏览器/API的配置选项（如屏幕分辨率、地理位置等）",
+        "未公开定价信息，仅提及需要API key",
+        "未明确支持的后端API/协议类型（REST/gRPC等）",
+        "没有性能基准数据（如测试执行耗时）"
+      ],
+      "language": "TypeScript",
+      "stars_total": 1074,
+      "stars_gained": 0,
+      "streak_days": 10,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/TestSprite__testsprite-cli/analysis.md"
+    },
+    {
+      "full_name": "eli-labz/Third-Eye",
+      "url": "https://github.com/eli-labz/Third-Eye",
+      "one_liner": "零配置GPU加速OSINT平台，聚合16种实时情报层",
+      "why_worth_it": "集成13+公开情报源，自托管无需密钥，内置侦察套件，为OSINT分析师提供一站式态势感知。",
+      "tags": [
+        "OSINT",
+        "自托管",
+        "WebGL",
+        "TypeScript"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "Smart System 模块的完整后端依赖（如 Vercel KV 或 Upstash）未在 README 中具体说明，仅给出环境变量示例",
+        "未提供性能对比的基准数据（如边缘请求减少的绝对数值、在不同实体数量下的帧率测试）",
+        "Telegram OSINT 默认频道列表未公开，实际抓取的频道不透明",
+        "各数据层的更新延迟和覆盖范围未量化（如 OpenSky 的飞机位置刷新率）",
+        "RECON 工具的扫描器后端部署说明缺失，仅给出 SCANNER_URL 变量"
+      ],
+      "language": "TypeScript",
+      "stars_total": 888,
+      "stars_gained": 0,
+      "streak_days": 10,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/eli-labz__Third-Eye/analysis.md"
+    },
+    {
+      "full_name": "koala73/worldmonitor",
+      "url": "https://github.com/koala73/worldmonitor",
+      "one_liner": "57000星！AI融合500+信源的全球态势感知OSINT仪表板",
+      "why_worth_it": "自托管开源Palantir替代，本地AI免密钥，双地图+多信号关联，适合地缘/金融极客",
+      "tags": [
+        "OSINT",
+        "态势感知",
+        "本地AI",
+        "TypeScript"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "生产环境详细部署依赖（Redis等）仅在外部文档说明，README未直接列出",
+        "未提供性能基准数据（如大量并发源处理延迟）"
+      ],
+      "language": "TypeScript",
+      "stars_total": 60055,
+      "stars_gained": 3059,
+      "streak_days": 9,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/koala73__worldmonitor/analysis.md"
+    },
+    {
+      "full_name": "superloglabs/superlog",
+      "url": "https://github.com/superloglabs/superlog",
+      "one_liner": "AI 代理驱动的 OpenTelemetry 观测系统，自动分组事件并自愈",
+      "why_worth_it": "减少告警噪声，用 AI 代理自动排查与恢复，自托管免费，适合快速迭代的小团队",
+      "tags": [
+        "AI代理",
+        "OpenTelemetry",
+        "自托管",
+        "可观测性"
+      ],
+      "confidence": "medium",
+      "info_gaps": [
+        "AI 代理的具体修复能力未说明（社区版仅生成本地摘要）",
+        "无性能基准数据",
+        "事件分组算法未披露",
+        "ClickHouse 部署细节未提及",
+        "与同类工具详细功能对比缺失"
+      ],
+      "language": "TypeScript",
+      "stars_total": 937,
+      "stars_gained": 0,
+      "streak_days": 9,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/superloglabs__superlog/analysis.md"
+    },
+    {
+      "full_name": "StarTrail-org/PixelRAG",
+      "url": "https://github.com/StarTrail-org/PixelRAG",
+      "one_liner": "抛弃HTML文本解析，直接用网页截图进行视觉化检索与生成。",
+      "why_worth_it": "解决传统文本RAG丢失表格/图表/布局信息的问题，保留视觉结构，预置8.28M维基索引即开即用，对需要理解复杂文档布局的极客极具吸引力。",
+      "tags": [
+        "视觉RAG",
+        "多模态检索",
+        "截图索引",
+        "自托管"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "公开 API 限流策略未说明",
+        "README 中未包含标准基准评测数据（如 vs 文本 RAG 的召回率/准确率对比）",
+        "预建索引与最新模型版本的兼容性未明确（索引可能需要随模型升级重新构建）",
+        "Windows 平台的渲染稳定性与完善程度未提供具体测试说明"
+      ],
+      "language": "Python",
+      "stars_total": 5406,
+      "stars_gained": 0,
+      "streak_days": 8,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/StarTrail-org__PixelRAG/analysis.md"
+    },
+    {
+      "full_name": "2aronS/Duel-Agents",
+      "url": "https://github.com/2aronS/Duel-Agents",
+      "one_liner": "IDE 多模型对决路由层，自动挑最便宜赢家，省成本不降质量。",
+      "why_worth_it": "将多模型成本优化无缝嵌入 Claude Code/Cursor 等 IDE，一键安装，省去自建路由的麻烦，适合 AI 编码重度用户。",
+      "tags": [
+        "AI编码工具",
+        "多模型路由",
+        "IDE插件",
+        "TypeScript"
+      ],
+      "confidence": "medium",
+      "info_gaps": [
+        "npm 包未发布，安装命令的可用性存疑",
+        "无多模型路由的 benchmark 或成本对比数据",
+        "中心化服务依赖 duagents.com/v1，无法自托管，可用性和延迟未说明",
+        "未给出“最便宜赢家”的具体判定逻辑和模型列表",
+        "$DUEL 代币的用途和与 API 服务的关系不明"
+      ],
+      "language": "TypeScript",
+      "stars_total": 1001,
+      "stars_gained": 0,
+      "streak_days": 8,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/2aronS__Duel-Agents/analysis.md"
+    },
+    {
+      "full_name": "kadevin/ilab-gpt-conjure",
+      "url": "https://github.com/kadevin/ilab-gpt-conjure",
+      "one_liner": "解压即用的GPT-image-2本地WebUI工作台，集成图库、模板与多任务并发。",
+      "why_worth_it": "为本地AI生图提供一键启动的完整工作流，省去API调试与界面缺失，适合个人与团队快速复用素材。",
+      "tags": [
+        "AI绘图",
+        "自托管",
+        "WebUI",
+        "一键包"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "未说明是否依赖 GPU 或本地模型（实际通过远程 API 生成，但未明确本地无需 GPU）",
+        "未提供 API 响应性能基准数据",
+        "未列出 macOS 包是否经过公证和签名（已知为未签名 portable zip）"
+      ],
+      "language": "JavaScript",
+      "stars_total": 578,
+      "stars_gained": 0,
+      "streak_days": 8,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/kadevin__ilab-gpt-conjure/analysis.md"
+    },
+    {
+      "full_name": "dzcmemory-web/bazi-ziwei-skill",
+      "url": "https://github.com/dzcmemory-web/bazi-ziwei-skill",
+      "one_liner": "算法精准排盘 + LLM分析 + 水墨海报，八字紫微综合印证 Skill",
+      "why_worth_it": "解决纯LLM排盘常出错的问题，提供八字与紫微交叉印证，适合需要可靠命理分析底座的 Agent 开发者和民俗研究者。",
+      "tags": [
+        "Agent技能",
+        "八字紫微",
+        "算法排盘",
+        "TypeScript"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "算法回归验证的7组案例无详细数据或 benchmark 报告",
+        "未提供性能指标（如排盘耗时）",
+        "海报的视觉自定义范围未详细说明",
+        "无真实用户案例或社区反馈引用",
+        "未明确 SKILL.md 规范之外的 Agent 适配细节"
+      ],
+      "language": "TypeScript",
+      "stars_total": 517,
+      "stars_gained": 0,
+      "streak_days": 8,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/dzcmemory-web__bazi-ziwei-skill/analysis.md"
+    },
+    {
+      "full_name": "ZhuLinsen/daily_stock_analysis",
+      "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+      "one_liner": "LLM驱动多市场股票智能分析，零成本GitHub Actions定时推送决策仪表盘",
+      "why_worth_it": "解决散户每日盯盘与信息过载痛点，聚合A/港/美/日/韩多市场行情、新闻与AI研判，自动生成信号闭环报告并推送至企微/飞书/Telegram等，零成本自托管",
+      "tags": [
+        "LLM驱动",
+        "多市场",
+        "量化分析",
+        "自动化推送"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "日韩股票分析目前标注为 MVP，资金流、龙虎榜、板块等高阶数据因市场边界降级为 `not_supported`，实际可用深度尚未公布基准对比",
+        "LLM 生成决策的准确率、回测表现或用户反馈统计未提供",
+        "Agent 策略有效性及自定义策略的实际表现无量化说明",
+        "推送到多个渠道时是否存在限流或延迟情况不明",
+        "大数据量（例如数百只自选股）下的分析耗时和成本没有给出参考值"
+      ],
+      "language": "Python",
+      "stars_total": 50050,
+      "stars_gained": 6383,
+      "streak_days": 7,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/ZhuLinsen__daily_stock_analysis/analysis.md"
+    },
+    {
+      "full_name": "jamiepine/voicebox",
+      "url": "https://github.com/jamiepine/voicebox",
+      "one_liner": "本地优先的AI语音工作室，同时替代ElevenLabs和WisprFlow，覆盖TTS/STT/听写/代理语音全链路",
+      "why_worth_it": "一站式解决隐私敏感的本地语音I/O闭环：七引擎多语言TTS与Whisper转录，加上全局热键听写和MCP代理语音输出，比单一云服务更省钱、更可控",
+      "tags": [
+        "TTS/STT 套件",
+        "本地优先",
+        "MCP集成",
+        "TypeScript"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "未提供各模型的VRAM占用、延迟和MOS得分等性能基准数据",
+        "未说明内置LLM的具体模型名称和量化版本",
+        "多GPU/多实例推理支持未提及",
+        "Linux预构建二进制发布时间未定",
+        "跨平台自动粘贴在非macOS上的实现成熟度未详述"
+      ],
+      "language": "TypeScript",
+      "stars_total": 34436,
+      "stars_gained": 3688,
+      "streak_days": 7,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/jamiepine__voicebox/analysis.md"
+    },
+    {
+      "full_name": "gykim80/perfectpixel-studio",
+      "url": "https://github.com/gykim80/perfectpixel-studio",
+      "one_liner": "从文本生成8方向100+动作的精灵动画，用信号处理后管道确保帧对齐与透明背景。",
+      "why_worth_it": "解决AI精灵生成中帧数错误、身份漂移和无透明背景痛点，通过确定性后处理提供工程化的游戏精灵管线。",
+      "tags": [
+        "AI精灵生成",
+        "游戏开发工具",
+        "本地优先",
+        "确定性后处理"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "README 被截断，未完整展示导出格式、会话管理的详细说明",
+        "未提供 AI 生成速度或资源消耗的基准测试数据",
+        "未明确支持的桌面平台（macOS/Windows/Linux）完整列表",
+        "生成角色和动画的 token/成本估算未提及"
+      ],
+      "language": "Go",
+      "stars_total": 383,
+      "stars_gained": 0,
+      "streak_days": 7,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/gykim80__perfectpixel-studio/analysis.md"
+    },
+    {
+      "full_name": "DietrichGebert/ponytail",
+      "url": "https://github.com/DietrichGebert/ponytail",
+      "one_liner": "让AI代理像最懒的资深开发者一样思考，用阶梯规则消灭过度工程，代码量砍半且安全不减",
+      "why_worth_it": "解决AI编码代理生成冗余代码、浪费Token和成本的问题，为所有主流代理提供统一的安全最小化规则，实测省54%代码且100%安全",
+      "tags": [
+        "提示工程",
+        "AI代理",
+        "多平台规则集",
+        "JavaScript"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "基准测试仅针对一个特定仓库（FastAPI 全栈模板）和 Haiku 4.5 模型，缺乏多项目、多模型的长周期多样性测试数据",
+        "对非 JavaScript/TypeScript 项目的效果未明确提及或测试",
+        "平台原生特性检测依赖各代理的内置能力，未量化其在不同代理中的实际命中率",
+        "对于 Aider、Cline、Zed 等代理仅提供规则文件复制方式，实际集成深度和兼容性没有详细说明",
+        "GitHub Star 数高达 54680 但创建和更新日期均为 2026 年（未来时间），可能为虚构数据或特殊事件，未在文档中解释"
+      ],
+      "language": "JavaScript",
+      "stars_total": 59816,
+      "stars_gained": 0,
+      "streak_days": 6,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/DietrichGebert__ponytail/analysis.md"
+    },
+    {
+      "full_name": "cobusgreyling/loop-engineering",
+      "url": "https://github.com/cobusgreyling/loop-engineering",
+      "one_liner": "通过可复用的循环模式与CLI工具，将AI编码代理编排为自主工作流。",
+      "why_worth_it": "用预设的检查清单和启动器把AI代理从单次提示升级为持续运行的自动化系统，适合已经用Claude Code/Grok的开发者快速落地可靠代理。",
+      "tags": [
+        "Agent框架",
+        "自动化循环",
+        "CLI工具",
+        "AI编码"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "未提供大规模生产环境的token消耗实测数据",
+        "未说明在非GitHub生态下的集成方案",
+        "CLI工具的具体覆盖率和误报率无量化指标",
+        "未展示多循环并发时的资源冲突处理细节"
+      ],
+      "language": "JavaScript",
+      "stars_total": 2445,
+      "stars_gained": 0,
+      "streak_days": 6,
+      "is_new": false,
+      "refreshed": true,
+      "revisit_reason": "star_jump",
+      "report_path": "../projects/cobusgreyling__loop-engineering/analysis.md"
+    },
+    {
+      "full_name": "Dong90/oh-my-taiyiforge",
+      "url": "https://github.com/Dong90/oh-my-taiyiforge",
+      "one_liner": "将AI编码变成可审计的工程流水线：九阶段状态机，人类审批门控，多终端一致。",
+      "why_worth_it": "解决AI无约束写码、上下文丢失、多工具流程混乱，为团队提供强制工程纪律与审计能力。",
+      "tags": [
+        "工作流自动化",
+        "AI工程化",
+        "多AI终端",
+        "TypeScript"
+      ],
+      "confidence": "medium",
+      "info_gaps": [
+        "无性能 benchmark 或 token 压缩的量化效果数据",
+        "多 AI 终端行为一致性的验证报告缺失",
+        "缺乏生产环境下的稳定性数据和用户案例",
+        "人类门控的具体实现机制未说明（是否仅依赖聊天层面的确认）",
+        "除 Node.js ≥20 外未列出其他系统依赖（如操作系统、额外工具）"
+      ],
+      "language": "TypeScript",
+      "stars_total": 576,
+      "stars_gained": 0,
+      "streak_days": 6,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/Dong90__oh-my-taiyiforge/analysis.md"
+    },
+    {
+      "full_name": "JCodesMore/ai-website-cloner-template",
+      "url": "https://github.com/JCodesMore/ai-website-cloner-template",
+      "one_liner": "一键用AI代理将任意网站克隆为Next.js项目",
+      "why_worth_it": "自动逆向工程网站，提取设计令牌与组件并并行构建，极大加速从老旧平台迁移到现代技术栈",
+      "tags": [
+        "AI Agent",
+        "网站克隆",
+        "Next.js",
+        "TypeScript"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "未提供克隆过程的时间或性能基准数据",
+        "未说明生成的代码质量如何评估或是否需人工调整",
+        "未提及对动态渲染网站（SPA）的支持程度",
+        "部分 AI 代理的具体版本要求（除 Claude Code）未明确"
+      ],
+      "language": "TypeScript",
+      "stars_total": 21205,
+      "stars_gained": 3039,
+      "streak_days": 5,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/JCodesMore__ai-website-cloner-template/analysis.md"
+    },
+    {
+      "full_name": "tastyeffectco/sandboxd",
+      "url": "https://github.com/tastyeffectco/sandboxd",
+      "one_liner": "自托管AI应用构建引擎：隔离沙箱 + 内置编码代理 + 预览URL，一条命令启动",
+      "why_worth_it": "为多用户AI编码产品提供隔离、代理、预览、自愈的完整后端，省去数月自研平台工作，单机可跑，比K8s方案轻量",
+      "tags": [
+        "自托管",
+        "AI Agent",
+        "开发沙箱",
+        "Docker"
+      ],
+      "confidence": "medium",
+      "info_gaps": [
+        "未说明 API 调用频率限制或请求队列机制",
+        "仅提及单机部署，多节点集群扩展方案未涉及",
+        "生产安全文档 `production-safety.md` 未公开细节，无法确认生产级加固程度",
+        "未提供沙箱资源限制（CPU/内存）的具体默认值和调整方式",
+        "未说明对代理工具以外的其他 AI 工具（如 Aider）的支持计划"
+      ],
+      "language": "Go",
+      "stars_total": 696,
+      "stars_gained": 0,
+      "streak_days": 5,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/tastyeffectco__sandboxd/analysis.md"
+    },
+    {
+      "full_name": "raiyanyahya/recall",
+      "url": "https://github.com/raiyanyahya/recall",
+      "one_liner": "让 Claude Code 拥有完全离线的持久项目记忆，不再重复解释上下文。",
+      "why_worth_it": "解决每次会话冷启动需重述项目背景的痛点，完全本地摘要、零 token 消耗，适合注重隐私与用量控制的 Claude Code 用户。",
+      "tags": [
+        "claude插件",
+        "本地优先",
+        "离线记忆",
+        "隐私保护"
+      ],
+      "confidence": "high",
+      "info_gaps": [],
+      "language": "Python",
+      "stars_total": 566,
+      "stars_gained": 0,
+      "streak_days": 5,
+      "is_new": false,
+      "refreshed": true,
+      "revisit_reason": "release_update",
+      "report_path": "../projects/raiyanyahya__recall/analysis.md"
+    },
+    {
+      "full_name": "OtterMind/Nubase",
+      "url": "https://github.com/OtterMind/Nubase",
+      "one_liner": "AI 原生后端平台，让 AI 生成的代码分钟级上线",
+      "why_worth_it": "AI 编码代理直接操作数据库、认证、存储、记忆和部署，一站自托管，多项目隔离，超适合想快速把 AI 原型变成产品的团队",
+      "tags": [
+        "自托管",
+        "后端即服务",
+        "AI Agent 工具",
+        "多项目"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "未提供实际 benchmark 或性能数据",
+        "没有明确的多项目资源隔离的安全细节",
+        "未说明企业级部署的高可用/扩展方案",
+        "未提供与其他后端（如 Appwrite、Convex）的详细对比"
+      ],
+      "language": "Java",
+      "stars_total": 447,
+      "stars_gained": 0,
+      "streak_days": 5,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/OtterMind__Nubase/analysis.md"
+    },
+    {
+      "full_name": "garrytan/gstack",
+      "url": "https://github.com/garrytan/gstack",
+      "one_liner": "23个AI角色驱动的个人软件工厂，用Claude Code打造CEO到QA全栈团队",
+      "why_worth_it": "将单人开发团队化，用规范化流程从构思到交付无缝衔接，面向想用AI提速的创始人和技术负责人",
+      "tags": [
+        "Agent框架",
+        "TypeScript",
+        "开发者工具",
+        "AI辅助编码"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "未提供各技能的详细性能与时间消耗数据",
+        "缺乏与同类工具的直接对比测试结果",
+        "未说明使用时Claude API的成本或速率限制影响",
+        "对不同编程语言/架构的适配程度未量化",
+        "安全审计（/cso）的具体检查项范围未详细展开"
+      ],
+      "language": "TypeScript",
+      "stars_total": 116482,
+      "stars_gained": 919,
+      "streak_days": 4,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/garrytan__gstack/analysis.md"
+    },
+    {
+      "full_name": "stablyai/orca",
+      "url": "https://github.com/stablyai/orca",
+      "one_liner": "开源并行AI代理编排IDE，多worktree+终端+手机监控",
+      "why_worth_it": "同时跑多个AI编码代理，一键发散再收敛最佳结果，带SSH远程和移动通知，效率碾压单代理",
+      "tags": [
+        "并行代理编排",
+        "终端",
+        "TypeScript",
+        "工作树"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "未说明桌面端具体技术栈（如是否基于 Electron）",
+        "移动端实现方式未提及（React Native?）",
+        "没有提供性能 Benchmark 或代理并行效率数据",
+        "代理间的上下文共享或消息传递机制未在 README 中详细描述",
+        "自托管/企业部署方案未在 README 中出现"
+      ],
+      "language": "TypeScript",
+      "stars_total": 7870,
+      "stars_gained": 1949,
+      "streak_days": 4,
+      "is_new": false,
+      "refreshed": true,
+      "revisit_reason": "release_update",
+      "report_path": "../projects/stablyai__orca/analysis.md"
+    },
+    {
+      "full_name": "BuilderIO/agent-native",
+      "url": "https://github.com/BuilderIO/agent-native",
+      "one_liner": "一套框架让Agent直接操控真实应用界面，而非仅聊天窗交互。",
+      "why_worth_it": "统一UI与Agent的动作定义，一次编写多端复用，适合想将AI深度嵌入产品的SaaS团队。",
+      "tags": [
+        "Agent-native",
+        "TypeScript",
+        "多端复用",
+        "SQL驱动"
+      ],
+      "confidence": "medium",
+      "info_gaps": [
+        "许可协议信息矛盾：README 声明 MIT，但仓库元数据显示 None",
+        "无性能基准或压力测试数据",
+        "未明确 Auth 实现细节及第三方认证支持范围",
+        "未说明生产环境部署建议和高可用方案",
+        "缺少 actions/runtime 的详细 API 文档链接（未提供全文）"
+      ],
+      "language": "TypeScript",
+      "stars_total": 2473,
+      "stars_gained": 1588,
+      "streak_days": 4,
+      "is_new": false,
+      "refreshed": true,
+      "revisit_reason": "release_update",
+      "report_path": "../projects/BuilderIO__agent-native/analysis.md"
+    },
+    {
+      "full_name": "sums001/Windows-Copilot-API",
+      "url": "https://github.com/sums001/Windows-Copilot-API",
+      "one_liner": "将微软Copilot逆向为免费、无需API密钥的OpenAI兼容API",
+      "why_worth_it": "无需付费即可将Copilot用作个人GPT-4级API，适合原型开发、个人助手等低吞吐场景",
+      "tags": [
+        "LLM API",
+        "自托管",
+        "本地代理",
+        "免费"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "未明确说明实际使用的模型版本（标题提及GPT-5但README中仅声明为“roughly GPT-4 class”），无法核实是否真正调用GPT-5",
+        "GPQA Diamond评估细节（例如是否仅单选选择题、上下文设定）在README中简略，具体benchmark代码未提供",
+        "会话持久化安全性细节未深入说明，仅说明保存在本地且git忽略",
+        "上游微软服务条款合规性风险未详细讨论"
+      ],
+      "language": "Python",
+      "stars_total": 796,
+      "stars_gained": 0,
+      "streak_days": 4,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/sums001__Windows-Copilot-API/analysis.md"
+    },
+    {
+      "full_name": "mukul975/Anthropic-Cybersecurity-Skills",
+      "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
+      "one_liner": "817 AI网络安全技能，6大框架映射，26+平台即用",
+      "why_worth_it": "将资深安全分析师的决策流程编码为AI可执行的817个技能，跨6大框架映射，填补代理缺乏安全实战知识的空白，非工具集而是知识库。",
+      "tags": [
+        "AI代理",
+        "网络安全",
+        "MITRE映射",
+        "技能库"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "未提供技能在真实场景中的执行准确率或成功率数据",
+        "与各AI平台集成的详细步骤文档有限，缺少配置模板",
+        "社区贡献的质量保证与评审流程不透明",
+        "暂无第三方基准测试或性能评估",
+        "项目名称含「Anthropic」但声明非官方，可能造成误解"
+      ],
+      "language": "Python",
+      "stars_total": 21713,
+      "stars_gained": 4596,
+      "streak_days": 3,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/mukul975__Anthropic-Cybersecurity-Skills/analysis.md"
+    },
+    {
+      "full_name": "interviewstreet/hiring-agent",
+      "url": "https://github.com/interviewstreet/hiring-agent",
+      "one_liner": "本地LLM驱动的简历解析与公平评分代理，集成GitHub信号增强评估。",
+      "why_worth_it": "用LLM将简历自动转为结构化评分，引入开源贡献等信号，比纯关键词匹配更客观、对技术招聘更深度。",
+      "tags": [
+        "简历解析",
+        "LLM代理",
+        "本地优先",
+        "招聘工具"
+      ],
+      "confidence": "medium",
+      "info_gaps": [
+        "未提供评估准确性 benchmark（如与人工评分的一致性数据）",
+        "未说明对多栏/扫描件简历的解析表现",
+        "未披露 prompt 详设，公平约束具体规则不可见",
+        "缺少大规模使用案例或性能报告（如解析耗时）",
+        "未提及非英文简历的支持情况"
+      ],
+      "language": "Python",
+      "stars_total": 2889,
+      "stars_gained": 1507,
+      "streak_days": 3,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/interviewstreet__hiring-agent/analysis.md"
+    },
+    {
+      "full_name": "amElnagdy/guard-skills",
+      "url": "https://github.com/amElnagdy/guard-skills",
+      "one_liner": "专查 AI 生成代码/测试/文档常见缺陷的质量门禁套件",
+      "why_worth_it": "针对 LLM 输出特有的幻觉、过度抽象、安全绕过等问题做第二道审查，比通用 linter 更贴 AI 故障模式，适合用 AI 写代码的开发者",
+      "tags": [
+        "AI代码审查",
+        "代理技能",
+        "质量门禁",
+        "WordPress"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "未提供各守卫的检测准确率、误报率或性能基准数据",
+        "依赖的 Skills CLI 具体版本未明确",
+        "未列出所有兼容代理及其确切版本支持范围",
+        "未说明除 WordPress/WooCommerce 外其他平台的特化守卫计划",
+        "缺少对守卫运行耗时或资源消耗的描述"
+      ],
+      "language": null,
+      "stars_total": 896,
+      "stars_gained": 0,
+      "streak_days": 3,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/amElnagdy__guard-skills/analysis.md"
+    },
+    {
+      "full_name": "duckbugio/flock",
+      "url": "https://github.com/duckbugio/flock",
+      "one_liner": "在 Docker 中运行多代理 Claude 开发团队，从聊天下需求到自动提 PR",
+      "why_worth_it": "自托管、用 Claude 订阅无 token 计费，多代理流水线更贴合真实 CI 流程，适合想从聊天直接出 PR 的小团队",
+      "tags": [
+        "自托管",
+        "多代理协作",
+        "Claude Code",
+        "Go"
+      ],
+      "confidence": "medium",
+      "info_gaps": [
+        "多仓库微服务的分支与 PR 协调具体实现未公开",
+        "子代理（planner/coder/tester/reviewer/arbiter）的提示词与互动细节缺失",
+        "与 Devin、Sweep 等同类工具的量化对比数据不存在",
+        "高并发或大型代码库下的资源消耗和性能基准未知",
+        "安全沙盒的具体隔离措施和限制边界未详细说明"
+      ],
+      "language": "Go",
+      "stars_total": 746,
+      "stars_gained": 0,
+      "streak_days": 3,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/duckbugio__flock/analysis.md"
+    },
+    {
+      "full_name": "shy3130/tickflow-stock-panel",
+      "url": "https://github.com/shy3130/tickflow-stock-panel",
+      "one_liner": "自托管零运维A股量化台：选股监控回测，桌面客户端开箱即用",
+      "why_worth_it": "解决个人量化链复杂痛点，桌面端免环境，Polars+DuckDB轻量高效，可扩展外部数据",
+      "tags": [
+        "量化",
+        "桌面客户端",
+        "自托管",
+        "Polars"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "未提供大规模回测性能基准（如全市场5000+股票回测耗时）",
+        "未说明TickFlow数据延迟及盘中实时行情支持情况（目前只看到盘后定时管道）",
+        "桌面版纯Polars回测引擎与vectorbt回测的功能差异细节未列出",
+        "扩展第三方数据时字段映射的具体示例和指南缺失"
+      ],
+      "language": "TypeScript",
+      "stars_total": 379,
+      "stars_gained": 0,
+      "streak_days": 3,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "star_jump",
+      "report_path": "../projects/shy3130__tickflow-stock-panel/analysis.md"
+    },
+    {
+      "full_name": "larlarua/AutoCVE",
+      "url": "https://github.com/larlarua/AutoCVE",
+      "one_liner": "Multi-Agent源码审计平台，7天挖掘30个CVE，覆盖14个项目",
+      "why_worth_it": "专为CVE设计的Agent驱动审计，提供ReAct循环与工具编排，实际产出30个真实CVE，一键Docker部署，适合安全研究者快速出洞",
+      "tags": [
+        "Multi-Agent",
+        "源码审计",
+        "CVE自动化",
+        "Docker部署"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "README 未说明支持的 LLM 模型列表及其配置方式，需进入 Web 界面或查阅 docs/ 才知晓",
+        "未提供各 Agent 审计单个项目的时间、资源消耗基准数据或推荐硬件配置",
+        "CVE 成果的具体复现步骤与审计过程在 README 中未展开，细节收录在外部仓库（larlarua/vulnerability-reports）"
+      ],
+      "language": "Python",
+      "stars_total": 355,
+      "stars_gained": 0,
+      "streak_days": 3,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/larlarua__AutoCVE/analysis.md"
+    }
+  ],
+  "news": [
+    {
+      "title": "Previewing GPT-5.6 Sol: a next-generation model",
+      "url": "https://openai.com/index/previewing-gpt-5-6-sol",
+      "source": "OpenAI",
+      "source_type": "official",
+      "published": "2026-06-26",
+      "summary_zh": "OpenAI 预览下一代模型 GPT-5.6 Sol，增强编程、科学与网络安全能力。",
+      "category": "模型发布"
+    },
+    {
+      "title": "Feature availability",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFAyXzdvSEx3TDdwS2lPRkpMNzZiN0ViNHEyWEdMbTl4ZGpuTmZPaUg0VlpCV1RXSVRlbUdIejdBdV9OdUg2eURXMU5KQlNsSTF5Q2JfNW4xOEJnQkpaNGR2UGZB?oc=5",
+      "source": "Claude",
+      "source_type": "official",
+      "published": "2026-06-25",
+      "summary_zh": "Claude 更新功能可用性说明。",
+      "category": "产品"
+    },
+    {
+      "title": "Dropbox",
+      "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTFBCOHYxckpTNHNlZ3NmYjUxY1hnYVh5YUpLZFFIVzlqaWZpQmlsOWQwVkFhNnNFdnFxWjhXY1NlZmFBN1JwTU5FQVFB?oc=5",
+      "source": "Claude",
+      "source_type": "official",
+      "published": "2026-06-25",
+      "summary_zh": "Claude 与 Dropbox 集成或相关功能上线。",
+      "category": "产品"
+    },
+    {
+      "title": "What happened after 2k people tried to hack my AI assistant",
+      "url": "https://www.fernandoi.cl/posts/hackmyclaw/",
+      "source": "Hacker News",
+      "source_type": "community",
+      "published": "2026-06-26",
+      "summary_zh": "2000 人尝试攻击作者的 AI 助手后的经验与发现。",
+      "category": "观点"
+    },
+    {
+      "title": "Detecting and Controlling Sycophancy with Cascading Linear Features",
+      "url": "https://arxiv.org/abs/2606.26155",
+      "source": "arXiv cs.AI",
+      "source_type": "paper",
+      "published": "2026-06-26",
+      "summary_zh": "使用级联线性特征检测与控制模型谄媚行为的新方法。",
+      "category": "研究"
+    },
+    {
+      "title": "Life After Benchmark Saturation: A Case Study of CORE-Bench",
+      "url": "https://arxiv.org/abs/2606.26158",
+      "source": "arXiv cs.AI",
+      "source_type": "paper",
+      "published": "2026-06-26",
+      "summary_zh": "以 CORE-Bench 为例研究基准饱和后如何延续评估价值。",
+      "category": "研究"
+    },
+    {
+      "title": "HierBias: Context-Conditioned Hierarchical Media Bias Detection with Multi-Task Type Classification",
+      "url": "https://arxiv.org/abs/2606.26100",
+      "source": "arXiv cs.CL",
+      "source_type": "paper",
+      "published": "2026-06-26",
+      "summary_zh": "提出 HierBias 框架，实现上下文条件下的层级式媒体偏见检测。",
+      "category": "研究"
+    },
+    {
+      "title": "Where Larger Models Excel: The Primacy of Constraint-Guided Reasoning",
+      "url": "https://arxiv.org/abs/2606.26108",
+      "source": "arXiv cs.CL",
+      "source_type": "paper",
+      "published": "2026-06-26",
+      "summary_zh": "发现大型语言模型在约束引导推理上具有显著优势。",
+      "category": "研究"
+    },
+    {
+      "title": "Run a vLLM Server on HF Jobs in One Command",
+      "url": "https://huggingface.co/blog/vllm-jobs",
+      "source": "HF Blog",
+      "source_type": "hf",
+      "published": "2026-06-26",
+      "summary_zh": "Hugging Face 博客展示一键在 HF Jobs 上启动 vLLM 服务器。",
+      "category": "工程"
+    },
+    {
+      "title": "Why do people keep investing in Intel for AI?",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1ugcbqx/why_do_people_keep_investing_in_intel_for_ai/",
+      "source": "r/LocalLLaMA",
+      "source_type": "community",
+      "published": "2026-06-26",
+      "summary_zh": "社区讨论为何持续向英特尔 AI 领域投资。",
+      "category": "观点"
+    },
+    {
+      "title": "What's one local AI workflow you wish you'd discovered sooner?",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1ugba2x/whats_one_local_ai_workflow_you_wish_youd/",
+      "source": "r/LocalLLaMA",
+      "source_type": "community",
+      "published": "2026-06-26",
+      "summary_zh": "用户分享最希望早知道的本地 AI 工作流技巧。",
+      "category": "观点"
+    }
+  ]
+}

@@ -16,7 +16,7 @@
   ],
   "license": "Apache-2.0",
   "category": "AI 应用",
-  "classify_reason": "像素级原生多模态RAG搜索引擎，终端AI应用",
+  "classify_reason": "像素原生搜索，结合VLM与Agent的搜索工具",
   "one_liner": "抛弃HTML文本解析，直接用网页截图进行视觉化检索与生成。",
   "why_worth_it": "解决传统文本RAG丢失表格/图表/布局信息的问题，保留视觉结构，预置8.28M维基索引即开即用，对需要理解复杂文档布局的极客极具吸引力。",
   "tags": [
@@ -33,13 +33,13 @@
     "Windows 平台的渲染稳定性与完善程度未提供具体测试说明"
   ],
   "quality_flags": [],
-  "stars_total": 5300,
+  "stars_total": 5406,
   "created_at": "2026-05-29",
-  "pushed_at": "2026-06-24",
+  "pushed_at": "2026-06-26",
   "latest_release": "v0.3.0",
   "first_seen": "2026-06-21",
-  "last_seen": "2026-06-26",
-  "streak_days": 7,
+  "last_seen": "2026-06-27",
+  "streak_days": 8,
   "analysis_updated_at": "2026-06-24T16:29:36+0800",
   "appearances": [
     {
@@ -88,6 +88,13 @@
       "date": "2026-06-26",
       "reason": "lightweight",
       "stars_total": 5300,
+      "stars_gained": 0,
+      "release": "v0.3.0"
+    },
+    {
+      "date": "2026-06-27",
+      "reason": "lightweight",
+      "stars_total": 5406,
       "stars_gained": 0,
       "release": "v0.3.0"
     }

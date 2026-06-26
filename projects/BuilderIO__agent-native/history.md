@@ -1,3 +1,4 @@
 - 2026-06-19 | 🆕新发现 | ⭐890(+172) | release=@agent-native/core@0.63.4
 - 2026-06-20 | lightweight | ⭐916(+172) | release=@agent-native/core@0.63.4
 - 2026-06-20 | lightweight | ⭐1168(+147) | release=@agent-native/core@0.63.4
+- 2026-06-27 | release_update | ⭐2473(+1588) | release=@agent-native/skills@0.2.140

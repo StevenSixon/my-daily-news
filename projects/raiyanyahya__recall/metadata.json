@@ -25,31 +25,26 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "为Claude Code提供持久记忆的离线工具，终端增强",
-  "one_liner": "全本地、零成本、无 API 的 Claude Code 项目记忆，告别每次重解释",
-  "why_worth_it": "消除 Claude Code 会话冷启动的痛苦，纯本地算法生成摘要，保护隐私且零 token 消耗，适合重视隐私和成本的开发者",
+  "classify_reason": "给Claude Code提供持久记忆的本地工具",
+  "one_liner": "让 Claude Code 拥有完全离线的持久项目记忆，不再重复解释上下文。",
+  "why_worth_it": "解决每次会话冷启动需重述项目背景的痛点，完全本地摘要、零 token 消耗，适合注重隐私与用量控制的 Claude Code 用户。",
   "tags": [
-    "Claude 插件",
+    "claude插件",
     "本地优先",
-    "AI Agent",
-    "开发者工具"
+    "离线记忆",
+    "隐私保护"
   ],
   "confidence": "high",
-  "info_gaps": [
-    "未提供 token 节省量的具体基准数据",
-    "未说明支持的最低 Claude Code 版本",
-    "无实际性能基准数字（仅在 CI 中做质量门控）",
-    "未测试与其他 Claude Code 插件的兼容性"
-  ],
+  "info_gaps": [],
   "quality_flags": [],
-  "stars_total": 534,
+  "stars_total": 566,
   "created_at": "2026-06-19",
-  "pushed_at": "2026-06-22",
-  "latest_release": "v0.3.5",
+  "pushed_at": "2026-06-26",
+  "latest_release": "v0.3.6",
   "first_seen": "2026-06-23",
-  "last_seen": "2026-06-26",
-  "streak_days": 4,
-  "analysis_updated_at": "2026-06-24T16:33:28+0800",
+  "last_seen": "2026-06-27",
+  "streak_days": 5,
+  "analysis_updated_at": "2026-06-27T02:21:47+0800",
   "appearances": [
     {
       "date": "2026-06-23",
@@ -78,6 +73,13 @@
       "stars_total": 534,
       "stars_gained": 0,
       "release": "v0.3.5"
+    },
+    {
+      "date": "2026-06-27",
+      "reason": "release_update",
+      "stars_total": 566,
+      "stars_gained": 0,
+      "release": "v0.3.6"
     }
   ]
 }

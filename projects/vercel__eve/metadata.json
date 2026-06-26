@@ -16,9 +16,9 @@
   ],
   "license": "Apache-2.0",
   "category": "AI 应用",
-  "classify_reason": "Framework for building agents, an AI agent development tool.",
-  "one_liner": "文件系统即智能体编辑器，用约定目录定义AI代理的行为与工具。",
-  "why_worth_it": "让AI代理开发回归文件组织，省去复杂框架学习，对TypeScript开发者极快上手。",
+  "classify_reason": "构建代理的框架",
+  "one_liner": "基于文件系统布局的 TypeScript Agent 框架，让代理定义即目录结构",
+  "why_worth_it": "为 TypeScript/Node 开发者提供可检查、可扩展的代理架构，通过文件规范消除模板代码，快速集成工具与通道",
   "tags": [
     "Agent框架",
     "文件系统优先",
@@ -27,19 +27,21 @@
   ],
   "confidence": "high",
   "info_gaps": [
-    "生产部署是否强制依赖 Vercel 平台未明确说明，自托管支持未知",
-    "未提供性能基准或并发容量数据",
-    "模型提供商 API Key 的具体配置方式未在 README 覆盖"
+    "未说明支持的 Node.js 最低版本",
+    "未提供性能基准或与同类框架的对比",
+    "未列出完整支持的 LLM 提供商/模型列表",
+    "持久化机制细节未在 README 中展开",
+    "与 Vercel AI SDK 的协作关系未明确说明"
   ],
   "quality_flags": [],
-  "stars_total": 2522,
+  "stars_total": 2661,
   "created_at": "2026-06-16",
-  "pushed_at": "2026-06-24",
-  "latest_release": "eve@0.13.4",
+  "pushed_at": "2026-06-26",
+  "latest_release": "eve@0.15.4",
   "first_seen": "2026-06-19",
-  "last_seen": "2026-06-25",
-  "streak_days": 9,
-  "analysis_updated_at": "2026-06-25T02:28:08+0800",
+  "last_seen": "2026-06-27",
+  "streak_days": 10,
+  "analysis_updated_at": "2026-06-27T02:20:43+0800",
   "appearances": [
     {
       "date": "2026-06-19",
@@ -103,6 +105,13 @@
       "stars_total": 2522,
       "stars_gained": 0,
       "release": "eve@0.13.4"
+    },
+    {
+      "date": "2026-06-27",
+      "reason": "release_update",
+      "stars_total": 2661,
+      "stars_gained": 0,
+      "release": "eve@0.15.4"
     }
   ]
 }

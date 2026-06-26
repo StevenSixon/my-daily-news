@@ -12,6 +12,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Release](https://img.shields.io/github/v/release/alchaincyf/fanbox?label=Release&color=blue)](https://github.com/alchaincyf/fanbox/releases/latest)
 [![Platform](https://img.shields.io/badge/macOS-Apple%20Silicon-black?logo=apple)](https://github.com/alchaincyf/fanbox/releases/latest)
+[![Windows](https://img.shields.io/badge/Windows-community%20port-lightgrey?logo=windows)](#install)
 [![Runtime](https://img.shields.io/badge/Runtime-no--build-blueviolet)](#architecture)
 
 <br>
@@ -155,6 +156,21 @@ Download the latest `.dmg` from [**Releases**](https://github.com/alchaincyf/fan
 >
 > 应用内置**更新提醒**：检测到 GitHub 上有新 Release 时，右下角会弹一条提示引导下载，不强更、可对单个版本「不再提醒」。  
 > Built-in **update notifications**: when a new release lands on GitHub, a capsule appears at the bottom right. Never forced; individual versions can be muted.
+
+### Windows（社区移植，非官方）/ Windows (community ports, unofficial)
+
+我自己没有 Windows 电脑，没法稳定验证 Windows 版的体验，也不了解 Windows 用户的操作习惯，所以**官方不出 Windows 版**。但社区里有同学基于 FanBox 拓展了 Windows 版本，想在 Windows 上体验的朋友可以试试，谢谢他们的工作 🙏。
+
+> ⚠️ 这些都不是我的改造，我没有参与开发、也没法对它们的体验和安全负责。请自行评估后使用。
+
+I don't own a Windows machine and can't reliably verify a Windows build or judge what Windows users need, so **there is no official Windows version**. The community has built Windows ports of FanBox — if you're on Windows, give one a try, and thanks to the maintainers 🙏.
+
+> ⚠️ These are not my builds. I'm not involved in their development and can't vouch for their experience or security. Use at your own discretion.
+
+| 移植 / Port | 链接 / Link |
+|---|---|
+| daodao166888/fanbox-windows | [Releases](https://github.com/daodao166888/fanbox-windows/releases) |
+| cookiesheep/fanbox（v2.3.0 Windows） | [Release](https://github.com/cookiesheep/fanbox/releases/tag/v2.3.0-windows) |
 
 ### 网页版（不打包，直接跑）/ Web (no packaging)
 

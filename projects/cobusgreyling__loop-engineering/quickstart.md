@@ -1,24 +1,26 @@
-### 前提条件
-- Node.js 环境（可执行 npx）
-- 目标 AI 编码代理已安装或可访问（如 Grok、Claude Code 或 Codex）
-
-### 5 分钟快速开始
+### 安装
+无需克隆仓库，直接使用npm CLI：
 ```bash
-# 1. 用 daily-triage 模式脚手架项目（以 Grok 为例）
+# 初始化一个循环启动模板（如daily-triage，面向grok）
 npx @cobusgreyling/loop-init . --pattern daily-triage --tool grok
 
-# 2. 估算 token 花费（L1 报告级别）
+# 估算该模式token花费
 npx @cobusgreyling/loop-cost --pattern daily-triage --level L1
 
-# 3. 审计当前目录的准备度
+# 审计当前项目循环就绪度
 npx @cobusgreyling/loop-audit . --suggest
 
-# 4. 在 AI 代理界面（如 Grok）中启动仅报告循环
+# 生成就绪度徽章
+npx @cobusgreyling/loop-audit . --badge
+```
+
+### 最小可用示例（Grok）
+在项目根目录生成STATE.md后，用Grok运行只报告模式：
+```
 /loop 1d Run loop-triage. Update STATE.md. No auto-fix in week one.
 ```
-### 开发者（从源码使用）
-```bash
-cd tools/loop-init && npm ci && npm test && node dist/cli.js /path/to/project --pattern daily-triage --tool grok
-cd tools/loop-audit && npm ci && npm test && node dist/cli.js /path/to/project --suggest
-cd tools/loop-cost && npm ci && npm test && node dist/cli.js --pattern ci-sweeper --cadence 15m
-```
+
+### 依赖前提
+- Node.js ≥ 18（用于运行npx CLI）
+- 已配置的AI编码代理（Grok、Claude Code或Codex）且能访问项目仓库
+- 建议先阅读项目Pattern Picker确定适合的起步模式（docs/pattern-picker.md）
