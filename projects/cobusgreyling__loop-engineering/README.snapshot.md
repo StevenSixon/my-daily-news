@@ -19,20 +19,24 @@
 
 
 <p align="center">
-  <img src="assets/visuals/loop-engineering-logo.jpg" alt="Loop Engineering" width="96" />
+  <a href="https://cobusgreyling.github.io/loop-engineering/">
+    <img src="assets/visuals/loop-engineering-logo.svg" alt="Loop Engineering logo" width="88" />
+  </a>
+</p>
+
+<p align="center">
+  <img src="assets/visuals/LE5.jpeg" alt="Loop Engineering — design the system that prompts your agents" width="100%" />
 </p>
 
 **Loop engineering is replacing yourself as the person who prompts the agent. You design the system that does it instead.**
+
+**New here?** [Quickstart (5 min)](docs/QUICKSTART.md) · [Interactive picker](https://cobusgreyling.github.io/loop-engineering/#interactive)
 
 For developers using Grok, Claude Code, Codex, Cursor, and other AI coding agents.
 
 A loop is a recursive goal: you define a purpose and the AI iterates (often with sub-agents, verification, and external state) until the goal is complete or the loop decides to hand off to you.
 
 
-
-<p align="center">
-  <img src="assets/visuals/loop-engineering-social-banner.jpg" alt="Loop Engineering — Design the system that prompts your agents" width="100%" />
-</p>
 
 <p align="center">
   <strong><a href="https://cobusgreyling.github.io/loop-engineering/">→ Interactive showcase + pattern picker</a></strong>
@@ -44,6 +48,7 @@ A loop is a recursive goal: you define a purpose and the AI iterates (often with
 
 ## Contents
 
+- [Quickstart (5 min)](docs/QUICKSTART.md)
 - [Quick Links](#quick-links)
 - [Why This Matters](#why-this-matters)
 - [The Five Building Blocks + Memory](#the-five-building-blocks--memory)
@@ -60,7 +65,8 @@ A loop is a recursive goal: you define a purpose and the AI iterates (often with
 
 | Start here | Description |
 |------------|-------------|
-| [Loop Engineering essay](https://cobusgreyling.substack.com/p/loop-engineering) | The concept, primitives, and Grok mapping — **read this first** |
+| [Quickstart (5 min)](docs/QUICKSTART.md) | Scaffold → cost check → audit → first loop — **start here if you just landed** |
+| [Loop Engineering essay](https://cobusgreyling.substack.com/p/loop-engineering) | The concept, primitives, and Grok mapping — read for the why |
 | [Pattern Picker](docs/pattern-picker.md) | Which loop to run first — **start here if unsure** |
 | [Primitives Matrix](docs/primitives-matrix.md) | Grok vs Claude Code vs Codex — bookmark this |
 | [Loop Design Checklist](docs/loop-design-checklist.md) | Ship readiness rubric |
@@ -71,6 +77,10 @@ A loop is a recursive goal: you define a purpose and the AI iterates (often with
 | [loop-cost](tools/loop-cost/) | Token spend estimator — `npx @cobusgreyling/loop-cost` |
 | [Goal Engineering](https://github.com/cobusgreyling/goal-engineering) | Companion: Grok Build `/goal` — run-until-done objectives (`npx @cobusgreyling/goal-audit`) |
 | [Stories](stories/) | Real wins and honest failures |
+
+<p align="center">
+  <img src="assets/visuals/section-divider.svg" alt="" width="100%" />
+</p>
 
 ## Why This Matters
 
@@ -101,7 +111,14 @@ Full detail: [docs/primitives.md](docs/primitives.md) · Cross-tool matrix: [doc
   <img src="assets/visuals/primitives-infographic.jpg" alt="The Five Building Blocks + Memory — Loop Engineering" width="100%" />
 </p>
 
-### Anatomy of a Loop (Mermaid)
+### Anatomy of a Loop
+
+<p align="center">
+  <img src="assets/visuals/loop-cycle-animated.svg" alt="Animated loop flow — schedule, triage, state, worktree, implement, verify, MCP, human gate" width="100%" />
+</p>
+
+<details>
+<summary>Mermaid diagram (copy-friendly)</summary>
 
 ```mermaid
 flowchart LR
@@ -118,9 +135,15 @@ flowchart LR
     J --> A
 ```
 
+</details>
+
 **This reference repo now runs its own `validate-patterns` + `audit` workflows on every push/PR** (see `.github/workflows/`). We also added `LOOP.md` describing the loops that will maintain it.
 
 ## Patterns
+
+<p align="center">
+  <img src="assets/visuals/patterns-overview.svg" alt="Seven production loop patterns with cadence and token cost" width="100%" />
+</p>
 
 | Pattern | Cadence | Starter | Week 1 | Token cost |
 |---------|---------|---------|--------|------------|

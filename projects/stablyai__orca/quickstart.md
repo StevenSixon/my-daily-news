@@ -1,12 +1,7 @@
-## 安装
-从 [onorca.dev/download](https://onorca.dev/download) 下载对应操作系统的安装包，安装并启动。移动端可从 App Store 或 TestFlight/APK 获取。
+1. 访问 [onorca.dev/download](https://onorca.dev/download) 下载对应操作系统的安装包（macOS/Windows/Linux）。
+2. 安装并启动 Orca。
+3. 配置你要使用的代理的 API 密钥（例如 Claude Code、Codex 等）。
+4. 打开一个项目，创建新的工作树，选择代理即可并行启动。
+5. （可选）安装移动端：iOS 从 App Store/TestFlight，Android 下载 APK。
 
-## 依赖前提
-至少安装一种 CLI 编码代理（如 `claude-code`、`codex`），并拥有有效的 API 订阅。确保代理命令在系统 PATH 中可用。
-
-## 最小可用示例
-1. 启动 Orca，点击“+”创建新 Worktree，选择本地 git 仓库。
-2. 在终端分屏中运行代理 CLI，例如 `claude` 或 `codex`。
-3. 通过快捷键或菜单将同一提示发送到多个 worktree，观察各代理输出。
-4. 使用 Diff 视图比较结果，标注反馈，合并最佳代码。
-5. 安装移动端 App 接收代理完成的通知，随时发送跟进指令。
+依赖前提：需有对应代理的 CLI 工具已在本地安装并配置认证；远程工作树需能通过 SSH 访问目标主机。

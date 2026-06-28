@@ -14,7 +14,7 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "逆向Windows Copilot为OpenAI兼容API，便于接入AI模型",
+  "classify_reason": "逆向Windows Copilot为OpenAI兼容API的工具",
   "one_liner": "将微软Copilot逆向为免费、无需API密钥的OpenAI兼容API",
   "why_worth_it": "无需付费即可将Copilot用作个人GPT-4级API，适合原型开发、个人助手等低吞吐场景",
   "tags": [
@@ -31,13 +31,13 @@
     "上游微软服务条款合规性风险未详细讨论"
   ],
   "quality_flags": [],
-  "stars_total": 796,
+  "stars_total": 895,
   "created_at": "2026-06-19",
-  "pushed_at": "2026-06-24",
+  "pushed_at": "2026-06-27",
   "latest_release": null,
   "first_seen": "2026-06-23",
-  "last_seen": "2026-06-27",
-  "streak_days": 4,
+  "last_seen": "2026-06-28",
+  "streak_days": 5,
   "analysis_updated_at": "2026-06-24T16:30:58+0800",
   "appearances": [
     {
@@ -65,6 +65,13 @@
       "date": "2026-06-27",
       "reason": "lightweight",
       "stars_total": 796,
+      "stars_gained": 0,
+      "release": null
+    },
+    {
+      "date": "2026-06-28",
+      "reason": "lightweight",
+      "stars_total": 895,
       "stars_gained": 0,
       "release": null
     }

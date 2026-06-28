@@ -23,32 +23,30 @@
   ],
   "license": "Apache-2.0",
   "category": "AI 应用",
-  "classify_reason": "多代理编排框架/元harness",
-  "one_liner": "统一编排 Claude Code/Codex/Cursor 等 AI 编码 agent 的框架，内置沙箱与策略",
-  "why_worth_it": "解决多 AI 编码工具碎片化问题，在一个会话中混合编排并互相审查，带策略与沙箱，适合重视安全的团队协作",
+  "classify_reason": "开源AI代理元编排框架",
+  "one_liner": "跨多个AI编码代理的统一编排与治理层，支持策略、沙箱与多端协作",
+  "why_worth_it": "让团队用任意AI编码工具时统一管控策略与成本，避免供应商锁定，且跨终端实时协同",
   "tags": [
-    "Agent 框架",
-    "多 Agent 编排",
-    "安全沙箱",
-    "实时协作"
+    "Agent编排",
+    "多代理治理",
+    "沙箱安全",
+    "开发者工具"
   ],
   "confidence": "high",
   "info_gaps": [
-    "无性能基准测试数据（如编排延迟、多 agent 并发开销）",
-    "策略系统的完整表达能力未提供详尽说明，仅靠文档推断",
-    "对 Cursor 集成是否支持全部 Cursor 功能或存在限制未明确",
-    "无大规模部署案例或生产环境稳定性报告",
-    "沙箱各后端的成熟度和隔离强度无量化比较"
+    "未提供性能基准或与同类框架的量化对比",
+    "文档中未详细说明自定义 YAML 代理的完整规范，仅有 AGENT_YAML_SPEC.md 文件存在但内容未知",
+    "沙箱各目标的具体配置复杂度未详细展开"
   ],
   "quality_flags": [],
-  "stars_total": 4986,
+  "stars_total": 5180,
   "created_at": "2026-06-11",
-  "pushed_at": "2026-06-26",
-  "latest_release": "v0.2.0",
+  "pushed_at": "2026-06-28",
+  "latest_release": "v0.3.0",
   "first_seen": "2026-06-19",
-  "last_seen": "2026-06-27",
-  "streak_days": 11,
-  "analysis_updated_at": "2026-06-19T23:36:30+0800",
+  "last_seen": "2026-06-28",
+  "streak_days": 12,
+  "analysis_updated_at": "2026-06-28T18:19:35+0800",
   "appearances": [
     {
       "date": "2026-06-19",
@@ -126,6 +124,13 @@
       "stars_total": 4986,
       "stars_gained": 0,
       "release": "v0.2.0"
+    },
+    {
+      "date": "2026-06-28",
+      "reason": "release_update",
+      "stars_total": 5180,
+      "stars_gained": 0,
+      "release": "v0.3.0"
     }
   ]
 }

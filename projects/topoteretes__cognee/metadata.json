@@ -26,32 +26,31 @@
   ],
   "license": "Apache-2.0",
   "category": "AI 应用",
-  "classify_reason": "开源 AI 记忆平台，为代理提供持久长期记忆",
-  "one_liner": "自托管知识图谱驱动的AI代理持久记忆平台",
-  "why_worth_it": "为Agent提供跨会话长期记忆，基于本地图谱实现语义关联与推理，比纯向量方案更懂上下文",
+  "classify_reason": "面向AI代理的开源记忆平台",
+  "one_liner": "开源AI记忆平台，用自托管知识图谱为Agent提供持久化记忆",
+  "why_worth_it": "解决Agent跨会话遗忘问题，自托管知识图谱+向量检索，可按反馈持续进化，适合追求可控、可解释记忆的开发者",
   "tags": [
-    "代理记忆",
+    "Agent记忆",
     "知识图谱",
     "自托管",
-    "Python"
+    "GraphRAG"
   ],
   "confidence": "high",
   "info_gaps": [
-    "具体的多模态支持格式未说明",
-    "未提供与其他记忆方案的性能基准对比",
-    "图数据库选型细节（如 Neo4j 连接配置）在核心文档里简略",
-    "LLM 提供商的具体适配名单未在 README 中展开",
-    "推理能力（如多步推理）的实际评估数据缺失"
+    "未提供具体性能 benchmark 数据（如检索延迟、吞吐量）",
+    "大规模部署下的存储后端选择与资源消耗建议缺失",
+    "非 OpenAI LLM 的集成详细步骤与兼容性未在 README 展开",
+    "多租户隔离的具体实现与安全保证未深入说明"
   ],
   "quality_flags": [],
-  "stars_total": 18648,
+  "stars_total": 24326,
   "created_at": "2023-08-16",
-  "pushed_at": "2026-06-21",
-  "latest_release": "v1.2.1",
+  "pushed_at": "2026-06-27",
+  "latest_release": "v1.2.2",
   "first_seen": "2026-06-21",
-  "last_seen": "2026-06-22",
-  "streak_days": 2,
-  "analysis_updated_at": "2026-06-22T09:23:32+0800",
+  "last_seen": "2026-06-28",
+  "streak_days": 3,
+  "analysis_updated_at": "2026-06-28T18:15:41+0800",
   "appearances": [
     {
       "date": "2026-06-21",
@@ -66,6 +65,13 @@
       "stars_total": 18648,
       "stars_gained": 347,
       "release": "v1.2.1"
+    },
+    {
+      "date": "2026-06-28",
+      "reason": "release_update",
+      "stars_total": 24326,
+      "stars_gained": 5519,
+      "release": "v1.2.2"
     }
   ]
 }

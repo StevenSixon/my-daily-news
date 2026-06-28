@@ -1,7 +1,7 @@
 {
   "full_name": "shy3130/tickflow-stock-panel",
   "url": "https://github.com/shy3130/tickflow-stock-panel",
-  "description": "自托管、零运维的 A 股「选股 + 监控 + 回测」量化工作台 | 基于 TickFlow 数据 | 能力驱动适配全档位订阅 | 自由接入第三方扩展数据(Tushare 等)",
+  "description": "自托管、零运维的 A 股「选股 + 监控 + 回测」量化工作台 | 基于 TickFlow 数据 | LLM能力驱使策略定制+个股分析+复盘 | 自由接入第三方个性化扩展数据",
   "language": "TypeScript",
   "topics": [
     "a-stock",
@@ -26,31 +26,31 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "集成AI代理的A股量化工作台",
-  "one_liner": "自托管零运维A股量化台：选股监控回测，桌面客户端开箱即用",
-  "why_worth_it": "解决个人量化链复杂痛点，桌面端免环境，Polars+DuckDB轻量高效，可扩展外部数据",
+  "classify_reason": "LLM增强的A股量化工作台",
+  "one_liner": "自托管A股量化工作台，LLM驱动策略生成与多维分析",
+  "why_worth_it": "专为散户打造的零运维量化工具，LLM生成策略，Polars毫秒级全市场扫描，免费数据源可启步",
   "tags": [
-    "量化",
-    "桌面客户端",
     "自托管",
-    "Polars"
+    "Polars",
+    "LLM策略",
+    "A股"
   ],
-  "confidence": "high",
+  "confidence": "medium",
   "info_gaps": [
-    "未提供大规模回测性能基准（如全市场5000+股票回测耗时）",
-    "未说明TickFlow数据延迟及盘中实时行情支持情况（目前只看到盘后定时管道）",
-    "桌面版纯Polars回测引擎与vectorbt回测的功能差异细节未列出",
-    "扩展第三方数据时字段映射的具体示例和指南缺失"
+    "未提供性能基准测试数据（如全市场扫描耗时）",
+    "回测准确性未经验证或对比说明",
+    "生产环境下的稳定性与并发处理能力未提及",
+    "第三方数据接入的具体实现和稳定性未详细披露"
   ],
   "quality_flags": [],
-  "stars_total": 379,
+  "stars_total": 484,
   "created_at": "2026-06-18",
-  "pushed_at": "2026-06-26",
-  "latest_release": "v0.1.43",
+  "pushed_at": "2026-06-28",
+  "latest_release": "v0.1.62",
   "first_seen": "2026-06-25",
-  "last_seen": "2026-06-27",
-  "streak_days": 3,
-  "analysis_updated_at": "2026-06-25T02:26:17+0800",
+  "last_seen": "2026-06-28",
+  "streak_days": 4,
+  "analysis_updated_at": "2026-06-28T18:21:38+0800",
   "appearances": [
     {
       "date": "2026-06-25",
@@ -72,6 +72,13 @@
       "stars_total": 379,
       "stars_gained": 0,
       "release": "v0.1.43"
+    },
+    {
+      "date": "2026-06-28",
+      "reason": "release_update",
+      "stars_total": 484,
+      "stars_gained": 0,
+      "release": "v0.1.62"
     }
   ]
 }

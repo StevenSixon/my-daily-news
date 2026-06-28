@@ -25,7 +25,7 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "给Claude Code提供持久记忆的本地工具",
+  "classify_reason": "为Claude Code提供离线持久记忆的工具",
   "one_liner": "让 Claude Code 拥有完全离线的持久项目记忆，不再重复解释上下文。",
   "why_worth_it": "解决每次会话冷启动需重述项目背景的痛点，完全本地摘要、零 token 消耗，适合注重隐私与用量控制的 Claude Code 用户。",
   "tags": [
@@ -37,13 +37,13 @@
   "confidence": "high",
   "info_gaps": [],
   "quality_flags": [],
-  "stars_total": 566,
+  "stars_total": 586,
   "created_at": "2026-06-19",
   "pushed_at": "2026-06-26",
   "latest_release": "v0.3.6",
   "first_seen": "2026-06-23",
-  "last_seen": "2026-06-27",
-  "streak_days": 5,
+  "last_seen": "2026-06-28",
+  "streak_days": 6,
   "analysis_updated_at": "2026-06-27T02:21:47+0800",
   "appearances": [
     {
@@ -78,6 +78,13 @@
       "date": "2026-06-27",
       "reason": "release_update",
       "stars_total": 566,
+      "stars_gained": 0,
+      "release": "v0.3.6"
+    },
+    {
+      "date": "2026-06-28",
+      "reason": "lightweight",
+      "stars_total": 586,
       "stars_gained": 0,
       "release": "v0.3.6"
     }

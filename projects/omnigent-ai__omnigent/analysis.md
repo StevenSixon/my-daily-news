@@ -1,39 +1,42 @@
 ## 它是什么
-Omnigent 是一个开源的 AI agent 框架与“meta-harness”，为 Claude Code、Codex、Cursor、Pi 等主流编码 agent 提供统一编排层。你可以用 YAML 定义自定义 agent，并在同一个会话中调度、监督、切换他们，无需重写任何 harness。同时提供策略引擎、沙箱隔离、多设备实时协作和云端部署能力。
+Omnigent 是一个开源的“元线束”（meta-harness），在 Claude Code、Codex、Cursor、OpenCode、Hermes、Pi 等 AI 编码代理之上提供统一编排层。你可以不重写逻辑就切换底层代理，强制实施策略和沙箱，并通过终端、浏览器、手机或桌面应用实时协作。
 
 ## 为什么火
-发布不到 10 天即获近 4000 star，因为它切中了开发者实际痛点：不同 AI 编码助手各有所长，但单独使用容易割裂。Omnigent 允许同一个会话中混合多个 agent，让 Claude 写代码、Codex 审查，或将任务分发给不同特化的子 agent，同时为所有操作施加统一的安全策略和沙箱。对团队而言，它带来了前所未有的控制力与灵活性。
+随着多供应商的 AI 编码代理（Claude Code、Cursor、Codex 等）涌现，团队面临碎片化的治理、安全性和成本控制挑战。Omnigent 在 Star 5k+ 的验证下，成为解决这一问题的中心化框架，允许安全地混合使用不同代理、一键部署会话到云端沙箱，并实现团队共享会话。
 
 ## 技术栈
-- 语言：Python 3.12+，CLI 工具 `omnigent`（缩写 `omni`）
-- 依赖：Node.js 22+（用于 Claude/Codex/Pi 的 harness），tmux，Linux 需 bubblewrap 做 OS 级沙箱，macOS 使用内置 seatbelt
-- 部署支持：本地 `docker compose up`，一键部署到 Render、Fly.io、Railway、Hugging Face Spaces、Modal 等云平台
-- 模型接入：第一方 API 密钥、OpenAI/Anthropic 订阅、兼容网关（OpenRouter/Ollama/vLLM）、Databricks
-- 沙箱后端：Modal、Daytona、Islo、NVIDIA OpenShell、E2B、CoreWeave、Podman 等
+- 语言：Python 3.12+
+- 安装方式：curl 脚本、uv、pip、Homebrew
+- 依赖：Node.js 22+、npm、tmux（终端模式）、bubblewrap（Linux 沙箱）
+- 模型接入：Anthropic/OpenAI API key、订阅凭证、兼容网关（OpenRouter、Ollama、LiteLLM 等）、Databricks
+- 沙箱支持：Modal、Daytona、Islo、E2B、CoreWeave、Kubernetes、OpenShell、Boxlite、Databricks
+- 部署：Docker、Render、Railway、Fly.io、Hugging Face Spaces、Modal、Cloudflare、Databricks Apps
 
 ## 核心能力
-- **多 agent 编排**：同一会话启动 Claude Code、Codex、Cursor、Pi 及自定义 agent，支持 agent 间相互 review，子代理在独立 git worktree 中并行工作
-- **统一策略治理**：服务器/agent/会话三级策略，可暂停等待审批、限制支出、工具白名单，发送通知
-- **沙箱隔离**：所有 agent 运行在沙箱中，通过 `credential_proxy` 注入认证信息，密钥不进入沙箱
-- **多设备实时协作**：终端、浏览器、手机同步会话；可分享会话给队友实时观看或共同操作，支持 fork 会话
-- **灵活模型切换**：在会话中用 `/model` 切换模型，支持多种凭证类型，默认值可按 agent 独立设置
-- **一键自升级**：`omni upgrade` 自动检测安装方式并升级，支持索引 URL 配置
-- **扩展性**：用 YAML 定义 agent，SDK 插件化接入新 harness（v0.2.0 新增）
+- **多代理编排**：通过统一的 YAML 配置或 SDK 接入 7 个以上代理，可在同一会话中调用不同代理
+- **策略治理**：可设置批准流程、支出上限、工具限制，策略作用于服务器、代理或单次会话级别
+- **沙箱隔离**：支持多种云端或本地沙箱，在隔离环境中执行代理
+- **跨设备协作**：会话状态同步，支持共享、分叉、实时观看
+- **原生终端 + Web UI + 桌面应用**：提供多种交互界面，桌面应用自动管理服务与运行器
+- **模型灵活切换**：每个代理可独立绑定模型，会话中动态切换
 
 ## 适用场景
-- 研发团队同时使用多种 AI 编码助手，需要统一入口、相互审查和策略管控
-- 需要强安全约束的企业环境（禁止某 agent 联网、限制命令执行等）
-- 远程/分布式团队，需要实时共享和协作 AI 编码会话
-- 个人开发者希望在手机端继续电脑上的 agent 会话
+- 多团队共用一个代理运行时，需要统一的安全和费用管控
+- 希望在不同 AI 编码工具间按任务做最优选择，避免重构
+- 需要将代理执行环境部署到安全沙箱，防止越权操作
+- 分布式团队通过手机或浏览器参与代理会话审阅
 
 ## 同类对比
-相较单一 Agent（如 GitHub Copilot、Claude Code 单独使用），Omnigent 提供了编排与审查能力。对比 LangChain、AutoGPT 等通用 agent 框架，它更聚焦于编码场景，且对现有 CLI agent 做到“无痛集成”，无需重写逻辑。与其它多 agent 编排项目相比，其核心差异在于原生集成多个头部编码 agent、内置策略和沙箱、直接从移动端操控的生产力设计。
+- **AutoGen / CrewAI**：侧重于多代理对话与工作流，Omnigent 更侧重于对现有商业 CLI 代理的统一封装与沙箱执行
+- **LangChain/LlamaIndex**：主要是 LLM 应用框架，不直接管理 Claude Code 等完整交互式代理
+- **Aider / Continue**：单个编程助手，缺乏多代理治理和沙箱能力
+- 优势：直接接入原生 CLI 代理（无 SDK 适配层）、丰富的策略与沙箱集成、首日即支持多供应商
 
 ## 版本动态
-当前版本 v0.2.0（2026-06-19），刚刚在一周前发布。新增多厂商 agent SDK、更多沙箱与部署目标、secretless egress、MLflow 追踪、`omni upgrade` 命令等大量功能，并修复了数个关键 bug。项目尚处 alpha 阶段，但迭代速度极快，社区贡献活跃。
+最新 v0.3.0（2026-06-27）加入 7 个新代理线束、原生桌面应用、项目分组、更多沙箱目标、Windows 基础支持、自定义代理创建 UI、并修复了多项稳定性问题。仓库活跃，社区通过 Discord 沟通。
 ---
 
 ## ℹ️ 置信度与信息盲区
 
 - 置信度：**high**
-- 信息盲区：无性能基准测试数据（如编排延迟、多 agent 并发开销）；策略系统的完整表达能力未提供详尽说明，仅靠文档推断；对 Cursor 集成是否支持全部 Cursor 功能或存在限制未明确；无大规模部署案例或生产环境稳定性报告；沙箱各后端的成熟度和隔离强度无量化比较
+- 信息盲区：未提供性能基准或与同类框架的量化对比；文档中未详细说明自定义 YAML 代理的完整规范，仅有 AGENT_YAML_SPEC.md 文件存在但内容未知；沙箱各目标的具体配置复杂度未详细展开

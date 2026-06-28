@@ -1,31 +1,24 @@
-## 安装与最小可用示例
-
 ### 前置依赖
-- Python >= 3.11
-- Node >= 20
-- Docker (最简单方式) 或 pnpm + uv
+- Python≥3.11, Node≥20, uv, pnpm
+- 克隆仓库：`git clone https://github.com/shy3130/tickflow-stock-panel`
 
-### Docker 部署 (推荐)
-```bash
-cp .env.example .env   # 留空 TickFlow Key 使用 Free 模式
-docker compose up --build
-# 访问 http://localhost:3018
-```
-
-### 桌面客户端
-从 [GitHub Releases](https://github.com/shy3130/tickflow-stock-panel/releases/latest) 下载对应平台安装包，双击安装即可启动。
-
-### 第一次使用
-1. 打开面板，进入 设置 → 凭据与能力 → 重新检测
-2. 点“立即跑盘后管道”拉取K线（Free模式仅10只示例股）
-3. 自选页添加股票，查看K线
-4. 选股页执行内置策略或自定义信号
-5. 监控中心配置告警规则
-
-### Dev 模式 (二次开发)
+### 快速启动
+#### 开发模式
 ```bash
 cp .env.example .env
-./dev.sh   # macOS/Linux
-.\dev.ps1 # Windows
+./dev.sh        # 同时启动前后端
 ```
-后端启动在 :3018, 前端在 :3011
+访问 http://localhost:3011 （前端）
+
+#### Docker部署
+```bash
+cp .env.example .env
+docker compose up --build
+```
+访问 http://localhost:3018
+
+### 最小可用示例
+1. 进入Web面板，设置页点击“立即跑盘后管道”加载历史日K。
+2. 在选股页选择内置策略（如“均线多头”）点击扫描，查看结果。
+3. 在回测页选择策略和日期区间运行回测，观察净值曲线。
+无需填写任何API Key即可体验（None模式）。

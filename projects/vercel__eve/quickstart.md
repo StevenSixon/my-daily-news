@@ -1,18 +1,38 @@
+### 安装
 ```bash
 npx eve@latest init my-agent
-cd my-agent
 ```
+或添加到现有项目：
+```bash
+cd myapp && npx eve@latest init .
+```
+前置要求：Node.js 环境。
 
-用你喜欢的编辑器修改 `agent/instructions.md` 来定义系统角色。
+### 最小示例
+1. 编辑 `agent/instructions.md`：
+```markdown
+You are a concise weather demo assistant. Tell users that the weather data is mocked.
+```
+2. 添加工具 `agent/tools/get_weather.ts`：
+```ts
+import { defineTool } from "eve/tools";
+import { z } from "zod";
 
-添加工具：在 `agent/tools/` 下创建 TypeScript 文件，使用 `defineTool` 和 Zod schema。
-
-配置模型：编辑 `agent/agent.ts`，设置 `model` 字段（如 `"anthropic/claude-sonnet-4.6"`）。
-
-启动开发：
-
+export default defineTool({
+  description: "Return mock weather data for a city.",
+  inputSchema: z.object({ city: z.string().min(1) }),
+  async execute({ city }) {
+    return { city, condition: "Sunny", temperatureF: 72 };
+  },
+});
+```
+3. 配置模型 `agent/agent.ts`：
+```ts
+import { defineAgent } from "eve";
+export default defineAgent({ model: "anthropic/claude-sonnet-4.6" });
+```
+4. 启动：
 ```bash
 npm run dev
 ```
-
-更多功能参考 [官方文档](https://eve.dev/docs)。
+终端 UI 等待交互，按提示操作即可。

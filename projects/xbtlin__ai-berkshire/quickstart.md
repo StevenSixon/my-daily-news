@@ -1,30 +1,24 @@
-### 前提
-- 安装 Node.js 与 npm
-- 拥有 Anthropic Claude Code 访问权限（需相应订阅或 API 额度）
-- 基本的命令行操作能力
-
-### 安装
+## 安装
 ```bash
-# 克隆仓库
-git clone https://github.com/xbtlin/ai-berkshire.git
+# 1. 安装 Claude Code（需 Node.js）
+npm install -g @anthropic-ai/claude-code
 
-# 复制所有 Skill 文件到 Claude Code 全局命令目录
-cp ai-berkshire/skills/*.md ~/.claude/commands/
+# 2. 克隆仓库并安装 Skills
+git clone https://github.com/xbtlin/ai-berkshire.git
+cd ai-berkshire
+./scripts/install-claude-commands.sh
 ```
 
-### 最小可用示例
-在 Claude Code 交互界面中执行：
-```bash
+Codex 用户用 `./scripts/install-codex-skills.sh` 替代。
+
+## 最小可用示例
+在 Claude Code 终端直接输入：
+```
 /investment-research 腾讯
 ```
-系统将按七模块顺序生成四大师综合深度报告，包含生意本质、护城河、逆向思考、管理层评估、文明趋势、估值及决策备忘录，并输出明确的通过/不通过/灰色地带结论与建议价格区间。
+即可获得包含四大师评分、估值区间、操作建议的完整投研报告。
 
-其他高频用法：
-```bash
-/investment-team 美团          # 4 个 Agent 并行研究
-/investment-checklist 茅台,苹果 # 六关快速筛选
-/industry-research 核电        # 产业链全景扫描
-/earnings-review 腾讯 2025Q4   # 一手财报精读
-/portfolio-review              # 现有持仓诊断
-```
-更多 Skill 及详细用法见仓库 README。
+## 前提
+- Claude Code 或 Codex 客户端已安装并配置 API 密钥
+- 网络搜索功能可用（Agent 需要实时信息）
+- 对价值投资基本概念有了解（能力圈、安全边际等）

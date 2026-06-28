@@ -14,36 +14,42 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "终端编码代理，支持DeepSeek",
-  "one_liner": "基于 DeepSeek V4 的终端编码 agent，缓存命中 >95%，成本比 Claude 省 30 倍",
-  "why_worth_it": "面向国内可用，MIT 开源，DeepSeek 直连免代理，长任务自愈与记忆自校验，极客低成本尝鲜",
+  "classify_reason": "基于DeepSeek的终端编码代理",
+  "one_liner": "专为DeepSeek V4打造的终端编码Agent，极致缓存工程让7个bug修复仅花¥1.07",
+  "why_worth_it": "解决国内用户用Claude Code门槛高、成本贵的痛点，凭DeepSeek低价与缓存优化，成本降至闭源方案的1/30，同时提供记忆、反思、长任务稳健等高级能力，适合成本敏感型开发者",
   "tags": [
-    "Coding Agent",
-    "DeepSeek",
-    "TypeScript",
-    "CLI 工具"
+    "编码Agent",
+    "终端CLI",
+    "成本优化",
+    "DeepSeek"
   ],
   "confidence": "high",
   "info_gaps": [
-    "未明确是否支持除 DeepSeek 以外的模型（如 OpenAI 兼容接口）",
-    "未提供完整的 SWE-bench 评测报告链接（只有 7 个任务的成本数据）",
-    "未说明维护者背景或社区活跃度（仅有单个 GitHub 账号）",
-    "未提及是否需要特殊硬件的运行依赖（如本地 GPU 等）"
+    "case-studies目录内容未在README展示，无法验证真实任务多样性",
+    "自验证记忆的具体算法和准确性尚无独立验证",
+    "未与其他开源编码agent（如Aider）进行基准对比，仅与Claude Code做了成本比较"
   ],
   "quality_flags": [],
-  "stars_total": 419,
+  "stars_total": 547,
   "created_at": "2026-06-08",
   "pushed_at": "2026-06-25",
   "latest_release": "v0.2.0",
   "first_seen": "2026-06-27",
-  "last_seen": "2026-06-27",
-  "streak_days": 1,
-  "analysis_updated_at": "2026-06-27T02:17:59+0800",
+  "last_seen": "2026-06-28",
+  "streak_days": 2,
+  "analysis_updated_at": "2026-06-28T18:20:55+0800",
   "appearances": [
     {
       "date": "2026-06-27",
       "reason": "new",
       "stars_total": 419,
+      "stars_gained": 0,
+      "release": "v0.2.0"
+    },
+    {
+      "date": "2026-06-28",
+      "reason": "star_jump",
+      "stars_total": 547,
       "stars_gained": 0,
       "release": "v0.2.0"
     }

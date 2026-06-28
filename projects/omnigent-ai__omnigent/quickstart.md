@@ -1,34 +1,47 @@
 ## 安装
+### 一键安装（推荐）
 ```bash
-# 一键安装脚本
 curl -fsSL https://raw.githubusercontent.com/omnigent-ai/omnigent/main/scripts/install_oss.sh | sh
-# 或使用 uv（需 Python 3.12+）
-uv tool install omnigent
-# 或 Homebrew
+```
+### 手动安装
+- 需要 Python 3.12+
+```bash
+uv tool install omnigent    # 或者 pip install omnigent
+```
+或
+```bash
 brew install omnigent-ai/tap/omnigent
 ```
-**前提依赖**：`git`、`uv`、Node.js 22+（含 npm）、`tmux`；Linux 还需 `bubblewrap`（`apt install bubblewrap`）。安装脚本会尝试自动配置缺失项。
 
 ## 最小可用示例
+启动第一个代理（交互式选择模型）：
 ```bash
-# 启动默认 agent
 omnigent
-
-# 直接使用特定 agent
-omnigent claude
-omnigent codex
-
-# 运行自定义 agent（示例项目自带）
-omnigent run examples/polly/    # 多 agent 编码 orchestrator
-omnigent run examples/debby/    # 双头辩论 agent
-
-# 配置模型
-omnigent setup
-
-# 启动服务器并注册本机为 host，通过浏览器使用
-omnigent server start
-omnigent host
-# 访问 http://localhost:6767
 ```
-## 从手机使用
-在同一局域网内，手机浏览器访问本机 IP:6767；或部署到云服务器并 `omnigent login https://your-server`，即可跨设备使用。
+直接使用特定代理运行时：
+```bash
+omnigent claude    # Claude Code
+omnigent codex     # Codex
+omnigent cursor    # Cursor
+omnigent opencode  # OpenCode
+omnigent hermes    # Hermes
+omnigent pi        # Pi
+```
+运行示例项目：
+```bash
+omnigent run examples/polly/   # 多代理编码协调员
+omnigent run examples/debby/   # 双头头脑风暴伙伴
+```
+
+## 依赖前提
+- Python 3.12+
+- Node.js 22 LTS 及 npm（用于安装各代理 CLI）
+- tmux（用于终端原生交互，Windows 无需）
+- Linux 需要 bubblewrap 做沙箱隔离
+- 模型凭证：至少一个 API key 或配置好的 CLI 登录
+
+详细配置模型与凭证：
+```bash
+omnigent setup
+```
+然后根据指引添加 API key、订阅凭证或网关地址。

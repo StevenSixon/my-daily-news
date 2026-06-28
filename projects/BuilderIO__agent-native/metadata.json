@@ -10,32 +10,32 @@
   ],
   "license": null,
   "category": "AI 应用",
-  "classify_reason": "构建agent-native应用的框架",
-  "one_liner": "一套框架让Agent直接操控真实应用界面，而非仅聊天窗交互。",
-  "why_worth_it": "统一UI与Agent的动作定义，一次编写多端复用，适合想将AI深度嵌入产品的SaaS团队。",
+  "classify_reason": "构建AI代理原生应用的框架",
+  "one_liner": "定义一次动作，同时驱动 UI、Agent、API、MCP、A2A 和 CLI",
+  "why_worth_it": "解决了 Agent 与真实应用 UI 割裂的痛点，让你直接用共享动作和 SQL 状态构建人机协同的 SaaS，无需重复对接接口。",
   "tags": [
-    "Agent-native",
+    "Agent 框架",
     "TypeScript",
-    "多端复用",
-    "SQL驱动"
+    "全栈应用",
+    "可克隆模板"
   ],
-  "confidence": "medium",
+  "confidence": "high",
   "info_gaps": [
-    "许可协议信息矛盾：README 声明 MIT，但仓库元数据显示 None",
-    "无性能基准或压力测试数据",
-    "未明确 Auth 实现细节及第三方认证支持范围",
-    "未说明生产环境部署建议和高可用方案",
-    "缺少 actions/runtime 的详细 API 文档链接（未提供全文）"
+    "未提供与同类框架的性能对比或并发处理基准",
+    "自托管完整部署步骤（数据库配置、环境变量）未在 README 中详述",
+    "A2A 协议的具体实现规范和兼容性未说明",
+    "是否支持自定义 LLM 提供商或本地模型的接入细节待确认",
+    "未说明是否支持流式响应（streaming）及多租户隔离方案"
   ],
   "quality_flags": [],
-  "stars_total": 2473,
+  "stars_total": 2776,
   "created_at": "2026-03-12",
-  "pushed_at": "2026-06-26",
-  "latest_release": "@agent-native/skills@0.2.140",
+  "pushed_at": "2026-06-28",
+  "latest_release": "@agent-native/skills@0.2.153",
   "first_seen": "2026-06-19",
-  "last_seen": "2026-06-27",
-  "streak_days": 4,
-  "analysis_updated_at": "2026-06-27T02:19:26+0800",
+  "last_seen": "2026-06-28",
+  "streak_days": 5,
+  "analysis_updated_at": "2026-06-28T18:17:07+0800",
   "appearances": [
     {
       "date": "2026-06-19",
@@ -64,6 +64,13 @@
       "stars_total": 2473,
       "stars_gained": 1588,
       "release": "@agent-native/skills@0.2.140"
+    },
+    {
+      "date": "2026-06-28",
+      "reason": "release_update",
+      "stars_total": 2776,
+      "stars_gained": 1474,
+      "release": "@agent-native/skills@0.2.153"
     }
   ]
 }

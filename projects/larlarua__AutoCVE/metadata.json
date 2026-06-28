@@ -21,30 +21,31 @@
   ],
   "license": "AGPL-3.0",
   "category": "AI 应用",
-  "classify_reason": "代理驱动自动CVE发现与验证平台",
-  "one_liner": "Multi-Agent源码审计平台，7天挖掘30个CVE，覆盖14个项目",
-  "why_worth_it": "专为CVE设计的Agent驱动审计，提供ReAct循环与工具编排，实际产出30个真实CVE，一键Docker部署，适合安全研究者快速出洞",
+  "classify_reason": "代理驱动的自动CVE发现平台",
+  "one_liner": "Agent 驱动的全自动 CVE 挖掘流水线：筛项目、审源码、验漏洞、出报告",
+  "why_worth_it": "7 天挖出 30 个 CVE，覆盖 14 个开源项目；为白帽子提供从源码到申报的全流程自动化，大幅降低重复劳动",
   "tags": [
     "Multi-Agent",
-    "源码审计",
-    "CVE自动化",
-    "Docker部署"
+    "漏洞挖掘",
+    "自托管",
+    "全流程自动化"
   ],
   "confidence": "high",
   "info_gaps": [
-    "README 未说明支持的 LLM 模型列表及其配置方式，需进入 Web 界面或查阅 docs/ 才知晓",
-    "未提供各 Agent 审计单个项目的时间、资源消耗基准数据或推荐硬件配置",
-    "CVE 成果的具体复现步骤与审计过程在 README 中未展开，细节收录在外部仓库（larlarua/vulnerability-reports）"
+    "未列出支持的 LLM 模型/提供商，以及需要何种 API 格式（OpenAI 兼容）的详细说明",
+    "缺少基准测试数据（如单个仓库的平均审计耗时、误报率、API token 消耗量）",
+    "沙箱执行环境的安全隔离细节未公开（Agent 调用系统命令时的权限边界）",
+    "AGPL-3.0 许可证对二次开发/商业化的限制，以及企业使用是否需要额外授权未说明"
   ],
   "quality_flags": [],
-  "stars_total": 355,
+  "stars_total": 429,
   "created_at": "2026-06-15",
-  "pushed_at": "2026-06-19",
-  "latest_release": "v1.0.0",
+  "pushed_at": "2026-06-27",
+  "latest_release": "v1.0.3",
   "first_seen": "2026-06-25",
-  "last_seen": "2026-06-27",
-  "streak_days": 3,
-  "analysis_updated_at": "2026-06-25T02:26:50+0800",
+  "last_seen": "2026-06-28",
+  "streak_days": 4,
+  "analysis_updated_at": "2026-06-28T18:22:04+0800",
   "appearances": [
     {
       "date": "2026-06-25",
@@ -66,6 +67,13 @@
       "stars_total": 355,
       "stars_gained": 0,
       "release": "v1.0.0"
+    },
+    {
+      "date": "2026-06-28",
+      "reason": "release_update",
+      "stars_total": 429,
+      "stars_gained": 0,
+      "release": "v1.0.3"
     }
   ]
 }

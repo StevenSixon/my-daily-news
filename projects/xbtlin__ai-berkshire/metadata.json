@@ -1,7 +1,7 @@
 {
   "full_name": "xbtlin/ai-berkshire",
   "url": "https://github.com/xbtlin/ai-berkshire",
-  "description": "AI 时代的伯克希尔：基于 Claude Code 的价值投资研究框架。巴菲特·芒格·段永平·李录四大师方法论 + 多Agent并行研究。| AI-era Berkshire: a value investing research framework   built on Claude Code. 4 masters' methodologies + multi-agent adversarial analysis.",
+  "description": "AI 时代的伯克希尔：基于 Claude Code / Codex 的价值投资研究框架。巴菲特·芒格·段永平·李录四大师方法论 + 多Agent并行研究。| AI-era Berkshire: a value investing research framework built for Claude Code / Codex. 4 masters' methodologies + multi-agent adversarial analysis.",
   "language": "Python",
   "topics": [
     "ai",
@@ -27,32 +27,32 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "基于Claude Code的多Agent价值投资研究框架",
-  "one_liner": "用 Claude Code 复现巴菲特等四大师投研方法论，多 Agent 并行深度分析股票。",
-  "why_worth_it": "为投资者提供可复现、强结论的深度投研框架，解决通用 AI “看起来都对” 但无法决策的问题。",
+  "classify_reason": "基于Claude Code/Codex的AI价值投资研究框架",
+  "one_liner": "多Agent并行携手四位价值投资大师体系，让个人获得专业投研战斗力。",
+  "why_worth_it": "不是简单问AI，而是强制输出可决策报告，内置四大师对抗、反偏见校验和精确财务计算。适合想用AI辅助投资决策的个人投资者。",
   "tags": [
+    "投资研究",
+    "多Agent",
     "价值投资",
-    "AI Agent",
-    "Claude Code",
-    "股票分析"
+    "Claude Code"
   ],
   "confidence": "high",
   "info_gaps": [
-    "Agent 并行机制的具体实现方式未说明（如是否依赖 Claude 的多会话管理或内部线程）",
-    "使用 Claude Code 的最低订阅要求或 API 调用成本估算未提供",
-    "Python 工具模块的完整依赖和安装方法未在 README 展示",
-    "未提供分析结果的准确率基准测试或交叉验证数据",
-    "对于 Claude Code 以外的 LLM 是否支持，未明确说明"
+    "4个Agent并行具体如何实现（Claude Code 是否原生支持多Agent，还是通过多次调用模拟）",
+    "实盘收益的持仓明细未公开，无法核实一致性",
+    "Python 工具（如 financial_rigor.py）的具体实现未在 README 中展示，仅示例用法",
+    "Codex 兼容程度细节（Skill 转换脚本的保真度）",
+    "docs/ROADMAP.md 内容未提供，无法评估发展规划"
   ],
   "quality_flags": [],
-  "stars_total": 3013,
+  "stars_total": 4843,
   "created_at": "2026-04-07",
-  "pushed_at": "2026-06-26",
+  "pushed_at": "2026-06-27",
   "latest_release": "v1.0.0",
   "first_seen": "2026-06-26",
-  "last_seen": "2026-06-27",
-  "streak_days": 2,
-  "analysis_updated_at": "2026-06-27T02:20:07+0800",
+  "last_seen": "2026-06-28",
+  "streak_days": 3,
+  "analysis_updated_at": "2026-06-28T18:18:18+0800",
   "appearances": [
     {
       "date": "2026-06-26",
@@ -66,6 +66,13 @@
       "reason": "star_jump",
       "stars_total": 3013,
       "stars_gained": 1270,
+      "release": "v1.0.0"
+    },
+    {
+      "date": "2026-06-28",
+      "reason": "star_jump",
+      "stars_total": 4843,
+      "stars_gained": 685,
       "release": "v1.0.0"
     }
   ]

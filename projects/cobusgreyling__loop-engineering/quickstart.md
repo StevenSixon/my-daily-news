@@ -1,26 +1,24 @@
-### 安装
-无需克隆仓库，直接使用npm CLI：
+## 安装
+无需安装，直接使用 npx 运行 CLI 工具（需要 Node.js 环境），或者克隆仓库从源码构建。
+
+## 最小可用示例
+### 1. 脚手架一个每日分类循环
 ```bash
-# 初始化一个循环启动模板（如daily-triage，面向grok）
 npx @cobusgreyling/loop-init . --pattern daily-triage --tool grok
-
-# 估算该模式token花费
+```
+### 2. 估算令牌成本
+```bash
 npx @cobusgreyling/loop-cost --pattern daily-triage --level L1
-
-# 审计当前项目循环就绪度
+```
+### 3. 审计准备状态
+```bash
 npx @cobusgreyling/loop-audit . --suggest
-
-# 生成就绪度徽章
-npx @cobusgreyling/loop-audit . --badge
 ```
-
-### 最小可用示例（Grok）
-在项目根目录生成STATE.md后，用Grok运行只报告模式：
-```
+### 4. 开始循环（以 Grok 为例）
+```bash
 /loop 1d Run loop-triage. Update STATE.md. No auto-fix in week one.
 ```
-
-### 依赖前提
-- Node.js ≥ 18（用于运行npx CLI）
-- 已配置的AI编码代理（Grok、Claude Code或Codex）且能访问项目仓库
-- 建议先阅读项目Pattern Picker确定适合的起步模式（docs/pattern-picker.md）
+## 前提
+- 拥有可用的 AI 编码代理环境（Grok、Claude Code、Codex 或 Cursor）
+- 基本了解目标工具的指令语法
+- 项目已初始化 Git（部分循环依赖版本控制）

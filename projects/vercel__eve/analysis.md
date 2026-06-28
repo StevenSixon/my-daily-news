@@ -1,45 +1,34 @@
 ## 它是什么
-
-eve 是 Vercel 推出的 agent 框架，采用文件系统优先的设计，将代理的能力（指令、工具、技能、通道、调度）约定为固定目录和文件。项目结构即配置，使得 AI 代理可读、易维护。
+eve 是 Vercel 推出的文件系统优先的 AI Agent 框架，使用 TypeScript。通过 agent/agent.ts、instructions.md、tools/、skills/、channels/、schedules/ 等约定目录来组织 Agent 的全部能力，强调项目可审查与可扩展，避免黑盒式 Agent 实现。
 
 ## 为什么火
-
-Star 数快速增长（2661），源于 Vercel 的品牌效应和开发者对可组合代理的渴求。文件系统布局降低了认知负担，结合 Markdown 指令和 TypeScript 工具定义，让构建生产级 agent 像写传统应用一样自然。
+Vercel 的品牌加持加上对 Agent 工程化痛点的针对性解决（约定优于配置），使它在发布短时间内获得 2831 Star。社区活跃于 GitHub Discussions，但项目尚处 beta，API 可能变动。
 
 ## 技术栈
-
-- 核心语言 TypeScript，运行于 Node.js  
-- 通过 npm 包 `eve` 提供脚手架、运行时和类型  
-- 模型对接多种 LLM（示例用 claude-sonnet-4.6），通过 `agent.ts` 配置  
-- 兼容 Vercel 部署，支持 Docker/microsandbox 本地后端，部署时需切换兼容后端  
-- 工具定义使用 Zod 进行输入校验  
+TypeScript + Node.js，定义工具使用 defineTool + Zod schema，模型配置通过 defineAgent 指定（如 anthropic/claude-sonnet-4.6）。内置 channels（HTTP/Slack/Discord）、schedules（cron），底层可能依赖 Vercel Workflows 基础设施。文档集成在 npm 包内，方便本地 AI 编码工具查阅。
 
 ## 核心能力
-
-- **文件系统即接口**：`agent/` 目录下规范放置 instructions.md、tools/、skills/、channels/、schedules/  
-- **持久化代理**：框架自称 “durable”，暗示支持状态保持和长运行  
-- **多通道支持**：内置 Slack、HTTP 等消息通道  
-- **人机协同**：可添加 human-in-the-loop 提示  
-- **子代理与技能**：按需加载的 Markdown 过程文件  
-- **评估辅助**：提供 `mockModel` 评估工具  
-- **调度任务**：cron 表达的定时工作  
+- **文件系统即创作界面**：无需重型 IDE 集成，目录结构就是 Agent 蓝图。
+- **工具与技能分离**：工具是模型可直接调用的函数，技能是按需加载的过程。
+- **多通道接入**：原生支持 Slack、Discord 等消息通道。
+- **定时任务**：通过 schedules 定义 cron 作业。
+- **本地开发体验**：一条命令 `npx eve@latest init` 创建项目，`npm run dev` 启动交互终端 UI。
 
 ## 适用场景
-
-- 需要快速搭建含工具、多通道的交互式 AI 助手  
-- 希望在项目中保持代理逻辑与业务代码相邻，便于团队协作  
-- 构建内部工具、Slack 机器人、定期报告 agent  
+需要快速构建可维护 AI Agent 的 TypeScript 团队，尤其适合：
+- 内部流程自动化（如定时总结、周报生成）
+- 聊天机器人（Slack/Discord 集成）
+- 工具调用型 Agent（天气查询、数据检索）
+- 已在 Vercel 生态中的项目
 
 ## 同类对比
-
-相比于 LangChain 的代码为中心、AutoGPT 的自治模式，eve 更强调约定优于配置，适合希望减少抽象层的 TypeScript 开发者。与 Vercel AI SDK 互补，但 eve 更聚焦 agent 结构化和全生命周期管理。目前仍 beta，文档和稳定性和成熟度不如 LangChain。
+与 LangChain（重抽象、生态大）相比，eve 更轻量、更约定化；与 AutoGPT 等独立 Agent 相比，更侧重工程化与可审查性。但目前生态较小，且与 Vercel 平台绑定较深。
 
 ## 版本动态
-
-最新 0.15.4（2026-06-26）修复了 Slack 状态文本的 Markdown 剥离、新增 mockModel 评估工具、为多 agent 部署隔离工作流队列前缀，以及优化 Vercel 构建失败提示。迭代活跃，功能扩展迅速。
+当前 beta 版本 eve@0.16.2（2026-06-27），最近的 patch 禁用了 Workflow SDK turbo 第一交付路径，回归全序运行时路径。这表明框架仍在快速调整执行引擎，生产使用需关注变更。
 ---
 
 ## ℹ️ 置信度与信息盲区
 
 - 置信度：**high**
-- 信息盲区：未说明支持的 Node.js 最低版本；未提供性能基准或与同类框架的对比；未列出完整支持的 LLM 提供商/模型列表；持久化机制细节未在 README 中展开；与 Vercel AI SDK 的协作关系未明确说明
+- 信息盲区：未明确部署到生产是否需要 Vercel 账户或特定定价计划；未提供性能或可靠性 benchmark 数据；subagents 和 schedules 的具体实现限制与持久化机制未在 README 展现；与 Vercel Workflows 的依赖关系及独立部署可行性未说明
