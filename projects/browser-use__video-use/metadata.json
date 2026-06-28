@@ -1,0 +1,44 @@
+{
+  "full_name": "browser-use/video-use",
+  "url": "https://github.com/browser-use/video-use",
+  "description": "Edit videos with coding agents",
+  "language": "Python",
+  "topics": [],
+  "license": "MIT",
+  "category": "AI 应用",
+  "classify_reason": "基于编码Agent的视频编辑工具",
+  "one_liner": "用聊天命令让 AI 代理自动剪辑视频：去停顿、字幕、调色、动画一站式输出。",
+  "why_worth_it": "给想用自然语言控制剪辑的创作者/开发者，免去时间线手动操作，靠文本+音频时序精准切割，比传统工具更轻量、可复现。",
+  "tags": [
+    "Agent框架",
+    "AI视频编辑",
+    "Python",
+    "本地优先"
+  ],
+  "confidence": "high",
+  "info_gaps": [
+    "未提供处理视频长度、分辨率上限等性能基准",
+    "未说明除英语外的语言转录支持程度",
+    "未提及代理运行是否需要 GPU 资源",
+    "依赖 ElevenLabs API 可能成本较高且无本地替代方案说明",
+    "未提供与其他剪辑工具的横向对比数据"
+  ],
+  "quality_flags": [],
+  "stars_total": 10797,
+  "created_at": "2026-04-12",
+  "pushed_at": "2026-05-15",
+  "latest_release": null,
+  "first_seen": "2026-06-29",
+  "last_seen": "2026-06-29",
+  "streak_days": 1,
+  "analysis_updated_at": "2026-06-29T00:44:36+0800",
+  "appearances": [
+    {
+      "date": "2026-06-29",
+      "reason": "new",
+      "stars_total": 10797,
+      "stars_gained": 324,
+      "release": null
+    }
+  ]
+}

@@ -1,19 +1,19 @@
-## 安装与快速开始
-**前提**：Node.js ≥ 20，Git，AI 终端（Claude/Cursor/OpenCode/Codex 至少一种）。
+## 安装与最小示例
+**依赖前提**：Node.js（版本未明确，建议 LTS），npm，至少一个支持的 AI 终端（Claude Code/Cursor/OpenCode/Codex）。
 
 ```bash
-# 1. 克隆仓库并构建
-git clone https://github.com/Dong90/oh-my-taiyiforge.git
-cd oh-my-taiyiforge
-npm install && npm run build
+# 1. 全局安装
+npm install oh-my-taiyiforge
 
-# 2. 将 Skill 安装到你的 AI 终端（以全部安装为例）
-node scripts/taiyi-forge.sh install --all
+# 2. 同步 Skill 到所有 AI 终端
+npx taiyi-forge-install --all
 
-# 3. 在 AI 终端聊天中开始第一个 change
+# 3. 在 AI 终端中创建第一个变更
 /taiyi:new "优化登录流程"
 /taiyi:status
-```
-之后引擎会逐步提示下一步命令，你只需按阶段产出规定写 Markdown 和代码，审批点需人工确认。
 
-也可单独安装到某个终端，如 `node scripts/taiyi-forge.sh install --cursor`。
+# 或者从需求文档一键生成全栈骨架（auto 模式）
+/taiyi:plan README.md --auto
+```
+
+自动生成的代码位于 `examples/<项目>/agent/` 目录，包含 FastAPI 后端、前端、测试及 Docker 配置。

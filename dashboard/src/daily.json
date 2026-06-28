@@ -1,6 +1,1125 @@
 {
   "editions": [
     {
+      "date": "2026-06-29",
+      "count": 9,
+      "projects": [
+        {
+          "id": "Robbyant__lingbot-map",
+          "fullName": "Robbyant/lingbot-map",
+          "owner": "Robbyant",
+          "name": "lingbot-map",
+          "url": "https://github.com/Robbyant/lingbot-map",
+          "oneLiner": "流式3D重建前馈模型，20 FPS稳定推理超万帧长序列",
+          "description": "A feed-forward 3D foundation model for reconstructing scenes from streaming data",
+          "language": "Python",
+          "category": "AI 应用",
+          "license": "Apache-2.0",
+          "starsTotal": 8087,
+          "starsGained": 372,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-04-15",
+          "pushedAt": "2026-06-25",
+          "latestRelease": "",
+          "firstSeen": "2026-06-29",
+          "topics": [],
+          "appearances": [
+            {
+              "date": "2026-06-29",
+              "reason": "new",
+              "starsTotal": 8087,
+              "starsGained": 372,
+              "release": ""
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "LingBot-Map 是一个面向流式数据的3D重建基础模型，采用前馈的几何上下文Transformer架构，直接从连续的2D图像序列重建3D场景几何与相机位姿，无需传统SLAM或后端优化。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "1. 实时的长序列建图：能稳定推理超过10,000帧的流式序列，保持~20 FPS，解决了长程漂移问题。 2. 统一的几何上下文：通过anchor context、pose-reference window和trajectory memory，在一个框架内处理坐标对准、密集几何线索和漂移校正。 3. 开箱即用：提供预训练模型和demo，支持视频、图像文件夹输入，交互式可视化，降低了应用门槛。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "核心模型：PyTorch 2.8.0，前馈Transformer，使用分页KV缓存注意力（FlashInfer）实现高效流式推理。",
+                "可视化：基于viser的浏览器3D查看器。",
+                "辅助工具：ONNX天空分割模型（自动下载），用于室外点云过滤。",
+                "离线渲染：NVIDIA Kaolin依赖（可选）。"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "流式3D重建：输入2D图像序列，输出相机轨迹和3D点云。",
+                "长序列支持：通过关键帧间隔、窗口模式等策略，可处理10,000+帧。",
+                "天空掩码：自动分割天空区域，提升室外场景可视化质量。",
+                "多平台模型：在HuggingFace、ModelScope发布多个checkpoint（长序列专用、均衡版、阶段一）。",
+                "评估基准：支持KITTI、Oxford Spires等多个真实数据集。"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "手持相机、无人机或移动机器人拍摄的实时3D建图",
+                "室内/室外大规模场景的离线重建",
+                "需要长序列一致性且不能进行全局优化的边缘端应用"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "body": "README中自称在多个基准上优于“现有的流式方法和迭代优化方法”，但未给出具体指标。与传统SLAM（如ORB-SLAM）或基于NeRF/3DGS的优化方法相比，核心优势是前馈推理速度，但可能在绝对精度或细节丰富度上有妥协（未验证）。"
+            },
+            {
+              "heading": "版本动态",
+              "body": "---",
+              "bullets": [
+                "2026-04-15创建，之后快速迭代，已释放评估脚本、多个演示视频、加速推理支持。",
+                "TODO列表显示已完成8个数据集的评估，但尚未发布数值。",
+                "声明正在训练更强的长序列版本。"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：medium",
+                "信息盲区：未公布benchmark具体指标数值，仅有定性描述“superior performance”；模型参数量、训练数据规模、显存占用等硬件需求未说明；与其他方法的定量对比缺失；窗口模式默认参数的有效性未经验证说明；长序列（>10k帧）时实际漂移量未提供量化分析"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "browser-use__video-use",
+          "fullName": "browser-use/video-use",
+          "owner": "browser-use",
+          "name": "video-use",
+          "url": "https://github.com/browser-use/video-use",
+          "oneLiner": "用聊天命令让 AI 代理自动剪辑视频：去停顿、字幕、调色、动画一站式输出。",
+          "description": "Edit videos with coding agents",
+          "language": "Python",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 10797,
+          "starsGained": 324,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-04-12",
+          "pushedAt": "2026-05-15",
+          "latestRelease": "",
+          "firstSeen": "2026-06-29",
+          "topics": [],
+          "appearances": [
+            {
+              "date": "2026-06-29",
+              "reason": "new",
+              "starsTotal": 10797,
+              "starsGained": 324,
+              "release": ""
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "Video-Use 是一个基于 LLM 代理的视频自动剪辑工具。你把原始素材放到文件夹，在 Claude Code 等命令行代理里说“剪成发布视频”，它就会读取音频转录和可选视觉合成图，生成剪辑决策列表（EDL），渲染输出 final.mp4，并自我评估每个剪切点，确保无爆音、无视觉跳跃。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "仓库在 1 个月内获得 10k+ Star，痛点清晰：非编软件学习曲线陡、重复性剪辑（去除口头禅、加字幕）枯燥。Video-Use 以文本为第一操作界面，LLM 通过结构化转录（每词时间戳、说话人分离）进行精准剪切，无需逐帧浏览。每次会话记忆持久化，迭代效率高。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "运行环境：Python，需 ffmpeg 和 yt-dlp。",
+                "LLM 代理：Claude Code、Codex、Hermes 等，要求 Shell 访问权限。",
+                "音频转写：ElevenLabs Scribe（需 API Key），输出含词级时间戳和说话人标记。",
+                "可视化：timeline_view 生成波形+胶片条+词标签的 PNG，用于决策点。",
+                "动画层：可调用 HyperFrames、Remotion、Manim 或 PIL，并发子代理生成。",
+                "输出：EDL → ffmpeg 渲染 → 自评估循环（最多 3 次修正）。",
+                "持久化：project.md 保存会话状态，下次继续使用。"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "body": "1. 智能剪切：自动识别填充词、静音间隙、无效片段。 2. 自动调色：可为每段应用预设或自定义 ffmpeg 链。 3. 音频平滑：所有切割点 30ms 淡入淡出，避免音爆。 4. 字幕生成：默认全大写两词块，可定制样式。 5. 动画叠加：并发子代理生成 Remotion/Manim 等动画。 6. 自评估渲染：输出前在切割点检查视觉/听觉缺陷。 7. 零预设内容：不假设视频类型，通用处理。"
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "播客/访谈剪辑：快速清除口头禅，保留关键发言。",
+                "教学视频制作：将多段录制拼接为带字幕的成品。",
+                "旅行/Vlog：自动生成带转场和音乐卡的短视频。",
+                "社交媒体剪辑：一键生成不同比例、字幕样式版本。"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "body": "与传统非编软件（Premiere、DaVinci）相比，Video-Use 无需 GUI 操作，通过自然语言一次定义风格即可批量产出。与 AI 剪辑工具（如 Descript）差异在于：它是开源的、本地优先，并且将剪辑过程完全代理化，开发者可自定义每一步逻辑，并可集成到自有流水线。"
+            },
+            {
+              "heading": "版本动态",
+              "body": "---",
+              "bullets": [
+                "创建于 2026-04-12。",
+                "最近推送 2026-05-15，持续活跃。",
+                "当前 Stars 10.8k，社区增长迅速。",
+                "说明文档包含 install.md、SKILL.md 和 helpers/ 脚本目录，结构规范。"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：未提供处理视频长度、分辨率上限等性能基准；未说明除英语外的语言转录支持程度；未提及代理运行是否需要 GPU 资源；依赖 ElevenLabs API 可能成本较高且无本地替代方案说明；未提供与其他剪辑工具的横向对比数据"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "altic-dev__FluidVoice",
+          "fullName": "altic-dev/FluidVoice",
+          "owner": "altic-dev",
+          "name": "FluidVoice",
+          "url": "https://github.com/altic-dev/FluidVoice",
+          "oneLiner": "macOS隐私控救星：最快本地听写+多模型+本地AI增强，开源无云",
+          "description": "FluidVoice - Fastest macOS Offline Dictation app - Voice to Text fully Local. One ⭐ takes us a long way :)) ",
+          "language": "Swift",
+          "category": "AI 应用",
+          "license": "GPL-3.0",
+          "starsTotal": 3457,
+          "starsGained": 264,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2025-09-21",
+          "pushedAt": "2026-06-28",
+          "latestRelease": "v1.6.1",
+          "firstSeen": "2026-06-29",
+          "topics": [],
+          "appearances": [
+            {
+              "date": "2026-06-29",
+              "reason": "new",
+              "starsTotal": 3457,
+              "starsGained": 264,
+              "release": "v1.6.1"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "FluidVoice 是一款 macOS 开源的离线语音转文字应用，完全本地运行，无需网络即可将语音实时转为文字并插入任意应用。核心卖点：极低延迟的本地推理、支持多种语音模型（从零下载的 Apple Speech 到高精度的 Nemotron / Whisper）、可选的本机 AI 增强（Fluid Intelligence）和云 AI 后处理。"
+            },
+            {
+              "heading": "为什么火",
+              "bullets": [
+                "极致的隐私与速度：所有语音处理均可留在本机，无数据泄露风险；同时自研的 Parakeet 实现号称“几乎零延迟”显示文字。",
+                "模型选择自由：内置 8 种语音模型，覆盖 40+ 语言，从快速英文到多语言高精度，用户可自由切换，无需订阅。",
+                "实用的智能增强：可选的本地 AI 修正能智能格式化、自动补全大小写，甚至通过语音控制 Mac（Command Mode）和重写文本（Write Mode）。",
+                "开源 + 活跃开发：GPLv3 协议，社区反馈积极，迭代迅速，刚发布 v1.6.1。"
+              ]
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "语言：Swift",
+                "平台：macOS 15.0+ (Apple Silicon 全模型支持，Intel 仅用 Whisper 模型)",
+                "推理引擎：内置自研的 Parakeet 运行时、Whisper、Apple Speech 框架等",
+                "AI 增强：可选本地 Fluid Intelligence（闭源组件）或接入 OpenAI/Groq 等云 API",
+                "打包：Homebrew Cask、手动下载 DMG",
+                "测试/构建：Xcode、Swift Package Manager"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "body": "1. 实时语音转文字：支持全局热键触发，菜单栏集成，会话历史保存在本地。 2. 多引擎选择：可按需下载不同模型，适配低延迟英语场景或高精度多语种场景。 3. AI 增强与自动化： 4. 隐私与可定制：所有功能均可选配，音频历史支持本地管理，不强制云服务；主题自适应；支持各应用独立配置。",
+              "bullets": [
+                "Fluid Intelligence（本地）：智能格式化、上下文感知大写、后处理",
+                "Command Mode：用语音启动应用、执行快捷指令、控制系统",
+                "Write Mode：在任意文本框中口述写入或重写内容"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "写作者、笔记党：快速将想法转文字，无需切换到键盘",
+                "隐私敏感者：会议记录、个人备忘，不希望上传到任何服务器",
+                "效率极客：利用 Command/Write 模式实现语音自动化",
+                "多语言用户：在一款应用中切换不同语言模型进行听写"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "bullets": [
+                "Apple Dictation：系统自带，无需安装，但模型选择单一，无 AI 增强和灵活历史管理。",
+                "Otter.ai / Descript：功能丰富但依赖云端，有隐私顾虑且需付费。",
+                "Speechify / Whisper 桌面版： FluidVoice 的优势在于深度集成 macOS 无障碍 API、极快的本地 Parakeet 实现和可选的本地 AI 增强，且完全开源。"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "---",
+              "bullets": [
+                "最新稳定版 v1.6.1（2026-06-28）：改进自定义词典管理、快捷键冲突处理、模型下载安全校验、修复 UI 和 Ollama 流式请求等问题。",
+                "v1.6.0 引入 Parakeet 极速重构、Fluid Intelligence 本地 AI、刷新主题和引导流程。",
+                "路线图中包含 MACOS_UI_AUTOMATION_BRANCH_PLAN.md，计划增强 macOS UI 自动化能力。",
+                "社区积极贡献，已有 4 位外部贡献者参与小版本修复。"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：未提供语音转写速度、延迟等 benchmark 数据；Fluid Intelligence 具体模型架构、算法细节未公开；Parakeet 自研实现的内部优化方式未说明"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "usestrix__strix",
+          "fullName": "usestrix/strix",
+          "owner": "usestrix",
+          "name": "strix",
+          "url": "https://github.com/usestrix/strix",
+          "oneLiner": "开源AI代理模拟黑客动态验证漏洞并生成PoC，减少误报。",
+          "description": "Open-source AI hackers to find and fix your app’s vulnerabilities.",
+          "language": "Python",
+          "category": "AI 应用",
+          "license": "Apache-2.0",
+          "starsTotal": 26517,
+          "starsGained": 88,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2025-08-05",
+          "pushedAt": "2026-06-26",
+          "latestRelease": "v1.0.4",
+          "firstSeen": "2026-06-29",
+          "topics": [
+            "agents",
+            "ai-hacking",
+            "ai-penetration-testing",
+            "ai-pentesting",
+            "ai-security",
+            "artificial-intelligence",
+            "bug-bounty",
+            "code-quality",
+            "ctf-tools",
+            "cybersecurity",
+            "cybersecurity-tools",
+            "ethical-hacking",
+            "hacking",
+            "llm-security",
+            "offensive-security",
+            "penetration-testing",
+            "pentesting-tools",
+            "red-teaming",
+            "security",
+            "security-automation"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-29",
+              "reason": "new",
+              "starsTotal": 26517,
+              "starsGained": 88,
+              "release": "v1.0.4"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "Strix 是一套开源AI驱动的自主渗透测试代理，能像真实黑客一样动态执行目标应用、寻找漏洞并通过PoC验证。它不只是静态代码扫描器，而是装备完整黑客工具链（HTTP代理、浏览器、终端、Python运行时）的Agent，能协同工作，给出可复现的攻击证据。"
+            },
+            {
+              "heading": "为什么火",
+              "bullets": [
+                "2025年8月发布，短短不到一年Star数超26.5k，反映社区对AI安全自动化的强需求。",
+                "解决传统静态分析误报率高、手动渗透测试耗时长的痛点。动态验证+PoC生成让安全测试从“猜”变成“确认”。",
+                "本地CLI + 云平台 + CI/CD集成，覆盖从个人开发者到企业团队的全场景。",
+                "支持多模型（OpenAI、Anthropic、Google等），可灵活切换。"
+              ]
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "核心语言：Python",
+                "沙盒环境：Docker（隔离执行）",
+                "LLM集成：基于LiteLLM统一接口，支持OpenAI、Anthropic、VertexAI等",
+                "浏览器自动化：Playwright",
+                "HTTP代理：Caido",
+                "模板扫描：Nuclei",
+                "TUI界面：Textual",
+                "构建工具：PyPI包strix-agent，安装脚本一键部署"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "真实动态验证：在沙盒中运行目标应用，模拟注入、越权、业务逻辑等攻击并给出PoC。",
+                "多代理协作（Graph of Agents）：分布式工作流，专业化代理并行攻击不同资产，动态共享发现。",
+                "全工具链：HTTP代理（请求/响应操纵）、浏览器（XSS/CSRF/auth测试）、终端（命令执行）、Python运行时（提权利用）。",
+                "漏洞覆盖：OWASP Top 10 + 业务逻辑（IDOR、race condition、JWT弱点等），涵盖服务端与客户端。",
+                "模式灵活：白盒（源码+部署）、黑盒（仅URL）、灰盒（认证信息），支持多目标、指令文件、diff范围扫描。",
+                "报告与修复：自动生成修复建议，可一键提交PR（云平台）。",
+                "CI/CD原生：GitHub Actions等，非交互模式输出结果并退出码指示漏洞存在。"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "应用安全测试：开发阶段自动发现漏洞，阻断不安全的代码合入。",
+                "快速渗透测试：代替昂贵的手工测试，在数小时内完成合规扫描并输出报告。",
+                "Bug Bounty自动化：辅助白帽高效生成PoC，加速报告提交。",
+                "CI/CD流水线：PR检测，仅扫描变更文件差异，防止新漏洞进入生产。"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "bullets": [
+                "vs 静态分析工具（如SonarQube、Semgrep）：Strix通过动态执行和PoC验证大幅降低误报，但耗时更长，依赖LLM费用。",
+                "vs 传统漏扫（如Burp Suite、Nessus）：Strix更侧重“黑客思维”和利用验证，而非依赖已知特征库，可能发现逻辑漏洞，但稳定性受模型影响。",
+                "vs 其他AI安全代理（如HackerGPT）：Strix定位为可编程的hacker agent而非对话式助手，支持多代理协作、沙盒执行和CI/CD嵌入，偏向工程自动化。"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "---",
+              "bullets": [
+                "最新稳定版 v1.0.4（2026-06-09），重点修复：TUI退出时强制结束沙盒容器、流消费者处理沙盒竞态、视觉拒绝时剥离所有图像、终端输出过滤ANSI转义与控制字符。",
+                "前序版本 v1.0.3 未详细说明，推测为常规迭代，团队持续打磨稳定性和交互体验。"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：未提供漏洞检测准确率、误报率等benchmark数据；大规模扫描（多目标并发）的资源消耗和推荐配置未说明；企业版自托管或VPC部署的具体架构和技术要求未公开；各LLM模型在该任务下的效果对比（如判断准确率、token消耗）未提供"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "NotASithLord__peerd",
+          "fullName": "NotASithLord/peerd",
+          "owner": "NotASithLord",
+          "name": "peerd",
+          "url": "https://github.com/NotASithLord/peerd",
+          "oneLiner": "首个零后端、纯浏览器内运行的AI代理扩展，BYOK驱动标签页和WASM沙箱",
+          "description": "The first AI agent harness native to the browser. A Chrome/Firefox extension that runs the agent loop in your browser — drives your tabs, spins up sandboxed compute (JS notebooks, WASM Linux VMs, client-side apps), and shares what it builds peer-to-peer. BYOK · no backend · no telemetry.",
+          "language": "JavaScript",
+          "category": "AI 应用",
+          "license": "Apache-2.0",
+          "starsTotal": 213,
+          "starsGained": 0,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-06-22",
+          "pushedAt": "2026-06-28",
+          "latestRelease": "v0.1.5",
+          "firstSeen": "2026-06-29",
+          "topics": [
+            "agentic",
+            "ai-agent",
+            "browser-extension",
+            "chrome-extension",
+            "firefox-extension",
+            "llm",
+            "manifest-v3",
+            "p2p",
+            "webassembly",
+            "webrtc"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-29",
+              "reason": "new",
+              "starsTotal": 213,
+              "starsGained": 0,
+              "release": "v0.1.5"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "peerd 是一个运行在浏览器里的 AI 代理扩展（Chrome/Firefox），没有后端、没有云组件、没有遥测。它利用浏览器自身的沙箱（V8 隔离、WebCrypto、opaque-origin iframe）在本地执行完整的代理循环：读取和操控标签页、启动 JS Notebook 或 WASM Linux 虚拟机、构建客户端应用，并通过支持 P2P WebRTC 的预览通道在代理间共享构建物。密钥由用户自行提供（BYOK），所有数据仅加密存储在本地 vault 中。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "尽管 Star 不多（213），但它的架构理念击中了一个痛点：既想要浏览器自动化能力，又拒绝将 API 密钥或浏览行为交给第三方后端。它把信任边界收缩到浏览器平台本身，无构建步骤、纯原生 JS，安全模型建立在多年打磨的 Web 平台能力之上。对安全型极客、注重隐私的个人和想探索去中心化代理的开发者极具吸引力。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "语言：纯 JavaScript（ES2024+），无 TypeScript、无 JSX、无打包工具",
+                "运行时：Manifest V3（Chrome/Firefox）",
+                "沙箱：WebAssembly 运行 Linux VM，V8 隔离执行不可信代码",
+                "安全：WebCrypto 加密本地 vault，WebAuthn passkey 解锁，Subresource Integrity，safeFetch 封装；代理持有密钥的部分从不接触原始页面",
+                "架构：五个模块（provider/egress/engine/runtime/distributed），每个模块独立 README，跨模块通过 index.js 导入",
+                "预览功能：P2P WebRTC 网络实现去中心化应用共享"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "标签页驱动：AI 可读取、操控任意打开的标签页，执行网页自动化",
+                "沙箱计算：在浏览器内启动 JS Notebook、完整的 WASM Linux VM、客户端应用",
+                "安全模型：运行不可信代码的“一次性 runner”无密钥无网络，输出结果被标记不受信任；每个动作在生效前需通过实时页面验证",
+                "本地推理：支持 Ollama，完全无需联网和账单",
+                "去中心化共享：预览通道下的 P2P dwapps，构建物直接在代理间传输"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "个人浏览器自动化：表单填充、信息批量提取、日常重复任务",
+                "本地开发与测试：在浏览器内运行轻量级沙箱环境进行代码评估",
+                "隐私敏感场景：研究需要无后端、无遥测的全栈代理环境",
+                "探索去中心化 Web 应用：跨浏览器实例共享 AI 生成的组件"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "bullets": [
+                "与 Selenium/Playwright 等自动化工具相比，peerd 是 AI 原生的代理，可理解自然语言指令，无需编写脚本",
+                "与基于云端的 AI 浏览器代理（如某些 Chrome 扩展）相比，peerd 完全离线可用（Ollama），密钥和会话零泄露，无供应商绑定",
+                "与 Copy-as-curl/开发者工具扩展相比，peerd 具备完整的沙箱计算和代理循环，功能更聚合"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "---",
+              "bullets": [
+                "当前 v0.1.5（2026-06-26），处于 0.x 实验阶段，界面和存储格式尚不稳定，可能发生破坏性变更",
+                "活跃开发中（最近推送 2026-06-28）",
+                "主推 Chrome 平台，Firefox 支持正在完善",
+                "提供三通道：源码开发加载、即将上线的应用商店版（不含 dweb 预览）、预览频道（含 P2P 网络）"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：未提供性能基准数据（如大型页面自动化耗时）；Firefox 兼容细节尚不清晰，文档称仍在完善；沙箱 WASM VM 的资源消耗（内存/CPU）未说明；P2P 网络的实际可用性和稳定性未经验证（标注为研究级）；未提及其他 AI 代理扩展的具体对比测试报告"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ZhuLinsen__daily_stock_analysis",
+          "fullName": "ZhuLinsen/daily_stock_analysis",
+          "owner": "ZhuLinsen",
+          "name": "daily_stock_analysis",
+          "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+          "oneLiner": "LLM 驱动的多市场股票智能分析仪表盘，零成本定时推送决策报告。",
+          "description": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。  LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
+          "language": "Python",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 51014,
+          "starsGained": 7137,
+          "streakDays": 9,
+          "isNew": false,
+          "createdAt": "2026-01-10",
+          "pushedAt": "2026-06-28",
+          "latestRelease": "v3.24.1",
+          "firstSeen": "2026-06-21",
+          "topics": [
+            "a-stock",
+            "ai-agent",
+            "aigc",
+            "llm",
+            "quant",
+            "quantitative-finance",
+            "quantitative-trading"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-21",
+              "reason": "new",
+              "starsTotal": 43816,
+              "starsGained": 519,
+              "release": "v3.23.0"
+            },
+            {
+              "date": "2026-06-22",
+              "reason": "lightweight",
+              "starsTotal": 44486,
+              "starsGained": 568,
+              "release": "v3.23.0"
+            },
+            {
+              "date": "2026-06-23",
+              "reason": "lightweight",
+              "starsTotal": 45846,
+              "starsGained": 1557,
+              "release": "v3.23.0"
+            },
+            {
+              "date": "2026-06-24",
+              "reason": "lightweight",
+              "starsTotal": 47718,
+              "starsGained": 1119,
+              "release": "v3.23.0"
+            },
+            {
+              "date": "2026-06-25",
+              "reason": "lightweight",
+              "starsTotal": 48309,
+              "starsGained": 4055,
+              "release": "v3.23.0"
+            },
+            {
+              "date": "2026-06-26",
+              "reason": "lightweight",
+              "starsTotal": 49445,
+              "starsGained": 5185,
+              "release": "v3.23.0"
+            },
+            {
+              "date": "2026-06-27",
+              "reason": "lightweight",
+              "starsTotal": 50050,
+              "starsGained": 6383,
+              "release": "v3.23.0"
+            },
+            {
+              "date": "2026-06-28",
+              "reason": "lightweight",
+              "starsTotal": 50782,
+              "starsGained": 7137,
+              "release": "v3.23.0"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "release_update",
+              "starsTotal": 51014,
+              "starsGained": 7137,
+              "release": "v3.24.1"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "一个基于大语言模型的多市场股票智能分析系统，支持 A 股、港股、美股、日股、韩股，每日自动拉取行情与新闻数据，由 AI 生成包含评分、趋势、买卖点位、风险警报和催化因素的决策仪表盘，并推送到企业微信、飞书、Telegram 等渠道。提供 Web/桌面工作台，支持 Agent 策略问股与智能股票导入。"
+            },
+            {
+              "heading": "为什么火",
+              "bullets": [
+                "零成本定时运行：利用 GitHub Actions 实现工作日自动分析，无需服务器。",
+                "多市场覆盖：原生支持五大市场，数据源丰富，适合跨市场投资者。",
+                "高度集成：内置多种 AI 模型（OpenAI 兼容、Gemini、Claude、本地 Ollama 等）和新闻搜索源，配置灵活。",
+                "社区活跃：Star 超 5.1 万，持续更新，文档齐全（中英双语），有多篇部署视频教程。"
+              ]
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "语言：Python 3.10+",
+                "核心框架：FastAPI（Web 后端）、GitHub Actions（定时任务）、Docker（自托管部署）",
+                "数据源：TickFlow、AkShare、Tushare、YFinance、Longbridge 等",
+                "模型接入：Anspire、AIHubMix、Gemini、OpenAI、DeepSeek、Claude、本地模型等",
+                "通知渠道：企业微信、飞书、Telegram、Discord、Slack、邮件",
+                "前端：Web 工作台（浅/深色主题）、桌面端（Electron 打包）"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "每日决策仪表盘：AI 生成核心结论、评分、趋势判断、买卖点位、风险警报、催化因素、操作清单。",
+                "多市场数据聚合：涵盖行情、K 线、技术指标、资金流、筹码、新闻、公告、基本面，日韩市场提供基础行情降级展示。",
+                "Web/桌面工作台：手动分析、历史报告、回测、持仓管理、智能导入、配置管理。",
+                "Agent 策略问股：多轮追问，内置 15 种策略（均线、缠论、波浪等），支持实时行情与新闻调用。",
+                "零成本自动化：通过 GitHub Actions 定时执行，支持非交易日跳过、断点续传。",
+                "多通知渠道推送：支持 Markdown 报告和图片模式。"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "个人投资者每日快速获取自选股综合评估，辅助决策。",
+                "跨市场（A/港/美/日/韩）交易者的一站式分析看板。",
+                "想学习 LLM 在金融分析中应用的开发者，可基于开源代码二次开发。",
+                "量化新手尝试轻量级自动化分析，避免复杂回测系统。"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "body": "| 项目 | 差异 | |------|------| | OpenBB Terminal | 重交互式金融数据分析，无 AI 生成报告和多渠道推送。 | | FinGPT | 专注金融大模型微调，缺少开箱即用的多市场每日分析流水线。| | 传统量化平台（聚宽/米筐）| 偏向策略回测与实盘交易，DSA 更侧重 AI 解读与推送，部署更轻量。| | 自行搭建爬虫+GPT 分析 | DSA 已整合数据源与通知，配置简单，社区维护活跃。|"
+            },
+            {
+              "heading": "版本动态",
+              "body": "最新版本 v3.24.1（2026-06-28）新增： 项目处于活跃迭代期，贡献者多，相关衍生项目 AlphaSift（选股）和 AlphaEvo（回测进化）形成生态。 ---",
+              "bullets": [
+                "覆盖台股、日股、韩股市场，含机构流数据。",
+                "接入 TickFlow 作为 A 股核心数据源，增强行情与 K 线预取。",
+                "新增本地生成后端（codex_cli、Hermes），支持 prompt cache 能力。",
+                "改进定时任务与 Web 设置页，强化信号归因与概念板块展示。",
+                "修复桌面/Docker 发布、回测空结果、通知 Markdown 等稳定性问题。"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：报告生成质量与 LLM 选择的依赖关系未提供基准测试数据；多市场数据稳定性与延迟未给出实测指标；本地 CLI 后端（codex_cli）的具体使用说明未在 README 中展开；桌面客户端的详细功能与支持平台未在 README 中明确"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "palmier-io__palmier-pro",
+          "fullName": "palmier-io/palmier-pro",
+          "owner": "palmier-io",
+          "name": "palmier-pro",
+          "url": "https://github.com/palmier-io/palmier-pro",
+          "oneLiner": "macOS 原生 AI 视频编辑器，通过 MCP 让 Claude/Codex/Cursor 直接操控时间线。",
+          "description": "macOS video editor built for AI",
+          "language": "Swift",
+          "category": "AI 应用",
+          "license": "GPL-3.0",
+          "starsTotal": 9270,
+          "starsGained": 6126,
+          "streakDays": 10,
+          "isNew": false,
+          "createdAt": "2026-04-07",
+          "pushedAt": "2026-06-28",
+          "latestRelease": "v0.4.5",
+          "firstSeen": "2026-06-19",
+          "topics": [
+            "ai-video",
+            "claude",
+            "macos",
+            "mcp",
+            "seedance2",
+            "swift",
+            "video-editor"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-19",
+              "reason": "new",
+              "starsTotal": 1546,
+              "starsGained": 749,
+              "release": "v0.3.4"
+            },
+            {
+              "date": "2026-06-19",
+              "reason": "lightweight",
+              "starsTotal": 1554,
+              "starsGained": 749,
+              "release": "v0.3.4"
+            },
+            {
+              "date": "2026-06-20",
+              "reason": "lightweight",
+              "starsTotal": 1594,
+              "starsGained": 749,
+              "release": "v0.3.4"
+            },
+            {
+              "date": "2026-06-20",
+              "reason": "release_update",
+              "starsTotal": 2206,
+              "starsGained": 756,
+              "release": "v0.3.5"
+            },
+            {
+              "date": "2026-06-20",
+              "reason": "lightweight",
+              "starsTotal": 2603,
+              "starsGained": 904,
+              "release": "v0.3.5"
+            },
+            {
+              "date": "2026-06-21",
+              "reason": "star_jump",
+              "starsTotal": 4041,
+              "starsGained": 902,
+              "release": "v0.3.5"
+            },
+            {
+              "date": "2026-06-22",
+              "reason": "lightweight",
+              "starsTotal": 5186,
+              "starsGained": 1834,
+              "release": "v0.3.5"
+            },
+            {
+              "date": "2026-06-23",
+              "reason": "release_update",
+              "starsTotal": 7386,
+              "starsGained": 2463,
+              "release": "v0.3.6"
+            },
+            {
+              "date": "2026-06-24",
+              "reason": "release_update",
+              "starsTotal": 8632,
+              "starsGained": 1630,
+              "release": "v0.4.0"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "release_update",
+              "starsTotal": 9270,
+              "starsGained": 6126,
+              "release": "v0.4.5"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "Palmier Pro 是用 Swift 从零构建的开源 macOS 视频编辑器，内置生成式 AI（与 Seedance、Kling 等模型集成），并通过 MCP 协议暴露时间线控制接口，让 Claude Code、Codex、Cursor 等外部代理直接参与视频编辑项目。编辑器部分完全开源（GPLv3），生成式 AI 处理端闭源，需订阅。"
+            },
+            {
+              "heading": "为什么火",
+              "bullets": [
+                "首个原生支持 MCP 的视频剪辑工具：代理可通过 HTTP 发送命令操作轨道、剪辑、预览，相当于把视频编辑变成可编程任务。",
+                "YC S24 阵容 + 社区反馈：9k Star 在 2 个多月内积累，说明需求明确。",
+                "工程师导向：用熟悉的 LLM 工具链替代手动操作，降低视频制作门槛，尤其适合开发者快速产出 demo 或内容。"
+              ]
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "语言：Swift（SwiftUI/AppKit）",
+                "平台：macOS 26 (Tahoe) on Apple Silicon 独占",
+                "通信协议：MCP over HTTP（本地 127.0.0.1:19789/mcp）",
+                "生成模型：Seedance、Kling、Nano Banana Pro（云端调用）",
+                "发行格式：DMG，通过 Sparkle appcast 更新"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "完整视频时间线编辑（片段剪切、多轨排列、波纹删除、同步锁定等）",
+                "拖拽轨道重排序、Shift 拖拽执行波纹修整",
+                "内建生成式 AI 生图/生视频（需订阅）",
+                "本地 MCP 服务即时启动，暴露剪辑、项目控制等工具",
+                "与 Claude Code/Desktop、Cursor、Codex 原生集成，提供一键安装扩展",
+                "多语言 README，社区 Discord 活跃"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "开发者批量生成或剪辑视频片段（自动化教程、产品演示）",
+                "LLM 代理爱好者演练更具实操性的多步工具调用",
+                "小型团队快速出片，利用 AI 辅助初剪，减少重复劳动"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "body": "Palmier 优势在于与 LLM 代理的原生结合，劣势是编辑功能成熟度尚不及老牌软件，且仅限于 macOS 26。",
+              "bullets": [
+                "Adobe Premiere Pro / DaVinci Resolve：功能完整但无 MCP 集成，AI 能力需插件，不开源。",
+                "CapCut/DavinCi Neural Engine：封闭生态，无代理交互。",
+                "Flowblade/Kdenlive：开源跨平台但非原生 macOS，无 MCP 设计。"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "最新 v0.4.5（2026-06-28）聚焦时间线增强：新增帧选取预览、波纹插入预览、轨道拖拽重排、波纹修整边缘拖拽等编辑功能，同时修复 MCP 数字参数溢出、窗口尺寸、fcpxml 格式等 bugs，并开始引入“Skills”设置页面，暗示代理能力可配置化。 ---"
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：未列出 MCP 工具集的具体命令/API 描述；生成式 AI 的模型选择及订阅价格未公开；未提供视频导出的格式、编码器支持细节；未说明是否依赖额外系统库（如 FFmpeg）；目前无性能基准测试或稳定性报告"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "abundantbeing__hermes-browser-extension",
+          "fullName": "abundantbeing/hermes-browser-extension",
+          "owner": "abundantbeing",
+          "name": "hermes-browser-extension",
+          "url": "https://github.com/abundantbeing/hermes-browser-extension",
+          "oneLiner": "为Hermes Agent提供本地优先浏览器侧面板，支持隐私上下文与标签隔离对话。",
+          "description": "Browser-native side panel for Hermes Agent — connect web context to your local Hermes runtime.",
+          "language": "JavaScript",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 276,
+          "starsGained": 0,
+          "streakDays": 2,
+          "isNew": false,
+          "createdAt": "2026-06-24",
+          "pushedAt": "2026-06-28",
+          "latestRelease": "v0.1.6",
+          "firstSeen": "2026-06-28",
+          "topics": [
+            "ai-agent",
+            "browser-extension",
+            "chrome-extension",
+            "edge-extension",
+            "hermes-agent",
+            "local-first",
+            "nous-research",
+            "sidepanel"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-28",
+              "reason": "new",
+              "starsTotal": 262,
+              "starsGained": 0,
+              "release": "v0.1.5"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "release_update",
+              "starsTotal": 276,
+              "starsGained": 0,
+              "release": "v0.1.6"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "Hermes Browser Extension 是一个社区开发的 Chrome/Edge/Chromium 侧面板扩展，专为 Nous Research 的 Hermes Agent 设计。它通过浏览器内置的 Side Panel API，将当前标签页的网页上下文（标题、URL、正文、表单等）注入到托管在本地或远程的 Hermes Agent 会话中，并流式返回响应。扩展不内嵌任何 AI 模型，完全依赖已有的 Hermes 实例，实现本地优先、只读的浏览器集成。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "项目在发布后几天内获得 276 星，反映了 Hermes Agent 社区对浏览器集成需求的迫切。相比常规 AI 浏览器助手，它不依赖第三方 API，所有处理在用户信任域内完成，且 v0.1.6 新增快速命令、标签隔离和敏感信息自动红化，让极客用户可以安全地在日常浏览中利用 AI 能力，无需担心银行、密码等标签泄露。这种“本地优先+隐私感”的设计击中了本地 AI 用户的痛点。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "扩展框架：Chrome Extension Manifest V3，使用 Side Panel API、service worker 等。",
+                "前端：纯 JavaScript，无重型框架，自主构建脚本（npm run build）生成 dist 目录。",
+                "通信：通过 fetch 与 Hermes API 服务器交互，支持 WebSocket（Dashboard 模式），自动处理会话同步。",
+                "Hermes 集成：调用 /v1/models、/api/sessions、/v1/skills 等端点，兼容 Hermes Agent 的工具、技能、MCP 服务器生态。"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "body": "1. 上下文注入：自动捕获活动标签页的标题、URL、可读文本、选中内容、链接、表单等，封装为“不可信上下文”发送给 Hermes。 2. 标签控制：支持跟随活动标签或固定到特定标签，固定标签下保持独立的对话历史与 Hermes 会话绑定。 3. 隐私保护：自动识别银行、密码、支付等敏感标签，红化其标题和 URL，防止泄露；扩展无 debugger、cookies 等侵入性权限。 4. 快速命令：内置 /summarize、/explain、/rewrite、/tabs、/action-items 等快捷操作。 5. 上下文收据：每轮对话后展示“What Hermes saw”，方便调试与信任。 6. 多标签选择：可选择多个打开标签注入上下文。 7. 语音输入：优先使用 Hermes 音频转录，降级为浏览器语音。 8. 主题与配置：提供多套主题，支持本地代理端口切换。"
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "研究者/开发者：拥有本地 Hermes Agent 环境，希望快速总结、解释网页内容，或基于多标签调研生成报告。",
+                "隐私敏感用户：需要在涉及敏感信息的浏览过程中使用 AI 助手，但不愿将数据发送到外部服务。",
+                "本地 AI 工作流：将浏览器作为 Hermes 的感知窗口，驱动无头分析或知识提取。"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "body": "常见浏览器 AI 扩展（如 ChatGPT Sidebar、Monica）依赖云端 API，数据会离开浏览器，且无法与本地 Agent 工具链整合。Hermes Browser Extension 完全自托管，可重用 Hermes 已配置的模型、技能和 MCP 服务器，实现端到端数据控制。其敏感信息红化和标签隔离是专为本地 Agent 设计的隐私增益，而多数竞品缺乏此类细粒度控制。"
+            },
+            {
+              "heading": "版本动态",
+              "body": "项目仍处于公共 alpha（未上架商店），最新 v0.1.6 于 2026-06-28 发布，重点强化了上下文控制和隐私保护，添加快速命令、标签隔离和敏感信息红化，权限模型保持最小化。后续可能放宽可选主机权限。社区贡献活跃，已有两位贡献者推动多标签选择与快速命令功能。 ---"
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：未提供与 Hermes Agent 特定版本的兼容性要求；未描述扩展如何处理超大页面上下文（token 截断策略）；无性能延迟基准数据"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Dong90__oh-my-taiyiforge",
+          "fullName": "Dong90/oh-my-taiyiforge",
+          "owner": "Dong90",
+          "name": "oh-my-taiyiforge",
+          "url": "https://github.com/Dong90/oh-my-taiyiforge",
+          "oneLiner": "九阶段状态机引擎，让AI代码生成在多终端可审查、可重复。",
+          "description": "AI workflow automation plugin for intelligent code generation with Claude/Codex",
+          "language": "TypeScript",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 631,
+          "starsGained": 0,
+          "streakDays": 8,
+          "isNew": false,
+          "createdAt": "2026-06-05",
+          "pushedAt": "2026-06-28",
+          "latestRelease": "v1.0.0",
+          "firstSeen": "2026-06-22",
+          "topics": [
+            "ai",
+            "automation",
+            "claude",
+            "code-generation",
+            "codex",
+            "developer-tools",
+            "harness",
+            "harness-engineering",
+            "llm",
+            "opencode",
+            "plugin",
+            "typescript",
+            "workflow"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-22",
+              "reason": "new",
+              "starsTotal": 413,
+              "starsGained": 0,
+              "release": "v0.28.1"
+            },
+            {
+              "date": "2026-06-23",
+              "reason": "release_update",
+              "starsTotal": 453,
+              "starsGained": 0,
+              "release": "v0.38.0"
+            },
+            {
+              "date": "2026-06-24",
+              "reason": "release_update",
+              "starsTotal": 492,
+              "starsGained": 0,
+              "release": "v0.42.0"
+            },
+            {
+              "date": "2026-06-25",
+              "reason": "lightweight",
+              "starsTotal": 505,
+              "starsGained": 0,
+              "release": "v0.42.0"
+            },
+            {
+              "date": "2026-06-26",
+              "reason": "lightweight",
+              "starsTotal": 544,
+              "starsGained": 0,
+              "release": "v0.42.0"
+            },
+            {
+              "date": "2026-06-27",
+              "reason": "lightweight",
+              "starsTotal": 576,
+              "starsGained": 0,
+              "release": "v0.42.0"
+            },
+            {
+              "date": "2026-06-28",
+              "reason": "lightweight",
+              "starsTotal": 625,
+              "starsGained": 0,
+              "release": "v0.42.0"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "release_update",
+              "starsTotal": 631,
+              "starsGained": 0,
+              "release": "v1.0.0"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "TaiyiForge（太一炉）是一套把 AI 代码生成过程强制编排为九阶段流水线的工具。通过状态机引擎，约束 Claude、Codex、Cursor 等 AI 终端必须按序产出需求、设计、任务拆分、TDD 开发、测试证据和人工审批，避免 Agent “偷跑”。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "当前 AI 辅助编程普遍存在流程跳跃、上下文丢失、多工具行为不一致的痛点。TaiyiForge 用 Skill 插件统一指令集，用硬门控阻断跳过设计，用 token 压缩机制保持长会话可持续，击中工程团队对 AI 产出的审计需求。其 /taiyi:plan 一键生成全栈骨架的 auto 模式（79 文件，1,170 测试 0 失败）展示了直接可用的工程化产出能力。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "语言：TypeScript",
+                "分发方式：npm 包，通过 npx taiyi-forge-install 安装 Skill 到各 AI 终端（Claude Code、Cursor、OpenCode、Codex）",
+                "测试：151 个测试文件，1,170 测试用例，包含 CLI 冒烟测试、Agent 角色测试、E2E",
+                "许可证：MIT"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "九阶段契约流水线：change → requirement → design → ui-design → task → dev → test → review → integration，每阶段固定产出，关键节点人工审批。",
+                "跨终端统一指令：28 条规范 slash 命令，同一套词汇在各平台行为一致。",
+                "项目级规划：/taiyi:plan 接收 README/PRD/PDF/URL，自动分解为独立变更模块，支持半自动确认或全自动生成骨架（含 FastAPI 后端、前端、测试、Docker 等）。",
+                "强制 TDD + evidence：dev 阶段先红后绿，每个验收标准必须有可执行验证命令，打通过门控。",
+                "上下文管理：长会话自动产出上下文压缩文档，支持跨天续接。",
+                "柔性 profile：提供 full、lite、nano 等 8 种流程裁切，适应不同规模需求。"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "用多个 AI 编程工具、但希望流程标准化的团队",
+                "需要产出可审计设计文档和测试证据的项目",
+                "想从零快速生成全栈项目骨架（FastAPI 后端 + 前端）的场景",
+                "已有 Harness、OpenSpec、Superpowers 等插件的用户（TaiyiForge 将其编排成统一状态机）"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "body": "与直接和 AI 对话比，TaiyiForge 用状态机保证阶段不跳、审批硬拦、上下文持久化。相比 oh-my-claudecode / oh-my-codex 等单一工具插件，它实现了跨终端一致性和项目级规划能力，但不提供 AI 模型本身，定位为流程编排壳。"
+            },
+            {
+              "heading": "版本动态",
+              "body": "v1.0.0（2026-06-28）为首个正式版，包含 609 个文件、2.8 万行代码变更、8 套完整示例工程。仓库创建仅 23 天即发布稳定版，迭代速度极快。 ---"
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：未明确最小 Node.js 版本要求；无性能基准测试数据；与其他工作流工具（如 Aider、Continue）的具体对比缺失；未说明是否支持非 FastAPI 技术栈生成"
+              ]
+            }
+          ]
+        }
+      ],
+      "news": [
+        {
+          "title": "Anthropic Economic Index Understanding AI’s effects on the economy",
+          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE4wcEZ6cjlBVzhrMXplMmJVWHFZN3owVk1BY0JBNEFFaEVpYzNjMWtpUlp4U1NaclhSQjcxU0w2ZmFHaFNZUlMwRHNQM09LSklrU3c?oc=5",
+          "source": "Anthropic",
+          "sourceType": "official",
+          "published": "2026-06-26",
+          "summary": "Anthropic 发布经济指数报告，旨在衡量 AI 对经济的影响。",
+          "category": "研究"
+        },
+        {
+          "title": "Asian AI startups launch Mythos-like models",
+          "url": "https://techcrunch.com/2026/06/27/asian-ai-startups-launch-mythos-like-models-as-anthropics-export-ban-drags-on/",
+          "source": "Hacker News",
+          "sourceType": "community",
+          "published": "2026-06-27",
+          "summary": "多家亚洲 AI 初创公司推出类似 Mythos 的模型。",
+          "category": "模型发布"
+        },
+        {
+          "title": "DSpark: Speculative decoding accelerates LLM inference [pdf]",
+          "url": "https://github.com/deepseek-ai/DeepSpec/blob/main/DSpark_paper.pdf",
+          "source": "Hacker News",
+          "sourceType": "community",
+          "published": "2026-06-27",
+          "summary": "论文提出 DSpark 方法，利用推测解码加速大模型推理。",
+          "category": "研究"
+        },
+        {
+          "title": "DeepSpec - a deepseek-ai Collection",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uhyhl3/deepspec_a_deepseekai_collection/",
+          "source": "r/LocalLLaMA",
+          "sourceType": "community",
+          "published": "2026-06-28",
+          "summary": "DeepSeek-AI 发布 DeepSpec 代码库，用于训练推测解码草案模型。",
+          "category": "工程"
+        },
+        {
+          "title": "DFlash support merged into llama.cpp",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uhx862/dflash_support_merged_into_llamacpp/",
+          "source": "r/LocalLLaMA",
+          "sourceType": "community",
+          "published": "2026-06-28",
+          "summary": "DFlash 推测解码支持已合并到 llama.cpp 项目。",
+          "category": "工程"
+        }
+      ]
+    },
+    {
       "date": "2026-06-28",
       "count": 18,
       "projects": [
@@ -357,6 +1476,13 @@
               "starsTotal": 13922,
               "starsGained": 92,
               "release": "v0.1.10"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
+              "starsTotal": 14137,
+              "starsGained": 490,
+              "release": "v0.1.10"
             }
           ],
           "analysis": [
@@ -445,8 +1571,8 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-06-24",
-          "pushedAt": "2026-06-27",
-          "latestRelease": "v0.1.5",
+          "pushedAt": "2026-06-28",
+          "latestRelease": "v0.1.6",
           "firstSeen": "2026-06-28",
           "topics": [
             "ai-agent",
@@ -465,57 +1591,58 @@
               "starsTotal": 262,
               "starsGained": 0,
               "release": "v0.1.5"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "release_update",
+              "starsTotal": 276,
+              "starsGained": 0,
+              "release": "v0.1.6"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "一个浏览器侧边面板扩展，为 [Hermes Agent](https://hermes-agent.nousresearch.com/docs) 提供前端界面。它不是独立的聊天机器人，而是将当前浏览页面的上下文（标题、URL、选中文本、可读内容等）安全地发送到用户本地或远程运行的 Hermes 运行时，并流式展示 Agent 的回复。"
+              "body": "Hermes Browser Extension 是一个社区开发的 Chrome/Edge/Chromium 侧面板扩展，专为 Nous Research 的 Hermes Agent 设计。它通过浏览器内置的 Side Panel API，将当前标签页的网页上下文（标题、URL、正文、表单等）注入到托管在本地或远程的 Hermes Agent 会话中，并流式返回响应。扩展不内嵌任何 AI 模型，完全依赖已有的 Hermes 实例，实现本地优先、只读的浏览器集成。"
             },
             {
               "heading": "为什么火",
-              "body": "Hermes Agent 是 Nous Research 推出的本地优先、可组合的 AI Agent 框架，近期关注度很高。该扩展填补了浏览器与 Agent 之间的鸿沟，让用户在日常浏览中直接利用本地 Agent 的模型、工具、技能和记忆，且所有上下文处理都在用户控制的网关内完成，契合隐私优先和自托管的趋势。"
+              "body": "项目在发布后几天内获得 276 星，反映了 Hermes Agent 社区对浏览器集成需求的迫切。相比常规 AI 浏览器助手，它不依赖第三方 API，所有处理在用户信任域内完成，且 v0.1.6 新增快速命令、标签隔离和敏感信息自动红化，让极客用户可以安全地在日常浏览中利用 AI 能力，无需担心银行、密码等标签泄露。这种“本地优先+隐私感”的设计击中了本地 AI 用户的痛点。"
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "JavaScript/TypeScript 构建，使用 Manifest V3 规范",
-                "基于 Chrome/Edge 的 Side Panel API 实现侧栏",
-                "与 Hermes Gateway 的 REST API 通信（/v1/*, /api/*），支持 WebSocket 仪表板模式",
-                "面向 Hermes 的本地/远程 API 服务器，默认地址 http://127.0.0.1:8642",
-                "前端主题系统支持 6 种预设（Nous, Midnight, Ember, Mono, Cyberpunk, Slate）及明暗模式"
+                "扩展框架：Chrome Extension Manifest V3，使用 Side Panel API、service worker 等。",
+                "前端：纯 JavaScript，无重型框架，自主构建脚本（npm run build）生成 dist 目录。",
+                "通信：通过 fetch 与 Hermes API 服务器交互，支持 WebSocket（Dashboard 模式），自动处理会话同步。",
+                "Hermes 集成：调用 /v1/models、/api/sessions、/v1/skills 等端点，兼容 Hermes Agent 的工具、技能、MCP 服务器生态。"
               ]
             },
             {
               "heading": "核心能力",
-              "bullets": [
-                "上下文捕获：自动提取当前标签页标题、URL、打开标签列表、选中文本、页面可读正文、元数据、标题、表单、链接和按钮等，并标记为不可信内容发送给 Hermes",
-                "能力协商：通过 /v1/capabilities 检测 Hermes 网关支持的功能，对不支持的路线提供明确的降级提示（如语音转录回退到浏览器 Web Speech）",
-                "连接模式：支持本地 API 服务器、远程 API 服务器（通过 HTTP/HTTPS）以及仅仪表板 WebSocket 模式",
-                "安全控制：API 密钥掩码显示，可一键清除；提供“What Hermes saw”收据，展示每次发送的上下文载荷；仅使用最小权限（无调试器、无原生消息、无下载/历史记录权限）",
-                "主题与体验：类桌面应用的样式设置，流式响应展示，并支持语音输入（Hermes STT 或浏览器语音）"
-              ]
+              "body": "1. 上下文注入：自动捕获活动标签页的标题、URL、可读文本、选中内容、链接、表单等，封装为“不可信上下文”发送给 Hermes。 2. 标签控制：支持跟随活动标签或固定到特定标签，固定标签下保持独立的对话历史与 Hermes 会话绑定。 3. 隐私保护：自动识别银行、密码、支付等敏感标签，红化其标题和 URL，防止泄露；扩展无 debugger、cookies 等侵入性权限。 4. 快速命令：内置 /summarize、/explain、/rewrite、/tabs、/action-items 等快捷操作。 5. 上下文收据：每轮对话后展示“What Hermes saw”，方便调试与信任。 6. 多标签选择：可选择多个打开标签注入上下文。 7. 语音输入：优先使用 Hermes 音频转录，降级为浏览器语音。 8. 主题与配置：提供多套主题，支持本地代理端口切换。"
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "希望通过浏览器即时让本地 Hermes Agent 分析网页、提取信息或执行与研究相关的 Agent 任务的开发者",
-                "注重隐私、不想将浏览数据发送至第三方云端的用户",
-                "已经搭建好 Hermes 环境，需要简便的浏览器原生交互界面的场景"
+                "研究者/开发者：拥有本地 Hermes Agent 环境，希望快速总结、解释网页内容，或基于多标签调研生成报告。",
+                "隐私敏感用户：需要在涉及敏感信息的浏览过程中使用 AI 助手，但不愿将数据发送到外部服务。",
+                "本地 AI 工作流：将浏览器作为 Hermes 的感知窗口，驱动无头分析或知识提取。"
               ]
             },
             {
               "heading": "同类对比",
-              "body": "与通用的 AI 侧边栏扩展（如 ChatGPT 浏览器插件）不同，Hermes Browser Extension 专为 Hermes Agent 设计，不去依赖云端 API，所有模型调用和工具执行都在用户控制的本地或远程运行环境中完成。它不直接操纵页面，而是作为“只读上下文桥梁”，更符合安全准则。当前其他本地 Agent 框架（如 Open Interpreter、AutoGPT 等）尚未推出类似的官方浏览器扩展，该扩展填补了社区生态的一块空白。"
+              "body": "常见浏览器 AI 扩展（如 ChatGPT Sidebar、Monica）依赖云端 API，数据会离开浏览器，且无法与本地 Agent 工具链整合。Hermes Browser Extension 完全自托管，可重用 Hermes 已配置的模型、技能和 MCP 服务器，实现端到端数据控制。其敏感信息红化和标签隔离是专为本地 Agent 设计的隐私增益，而多数竞品缺乏此类细粒度控制。"
             },
             {
               "heading": "版本动态",
-              "body": "最新版本 v0.1.5（2026-06-27）仍处于公开 alpha 阶段，主要强化了兼容性与信任机制：新增能力面板、连接流程优化、语音能力门控、令牌安全 UI、上下文收据等功能。已有 6 次后续补丁提交和 2 个合并 PR，1 位社区贡献者参与，并增加了静态检查。目前尚未上架 Chrome Web Store，需手动加载。 ---"
+              "body": "项目仍处于公共 alpha（未上架商店），最新 v0.1.6 于 2026-06-28 发布，重点强化了上下文控制和隐私保护，添加快速命令、标签隔离和敏感信息红化，权限模型保持最小化。后续可能放宽可选主机权限。社区贡献活跃，已有两位贡献者推动多标签选择与快速命令功能。 ---"
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
-                "置信度：high"
+                "置信度：high",
+                "信息盲区：未提供与 Hermes Agent 特定版本的兼容性要求；未描述扩展如何处理超大页面上下文（token 截断策略）；无性能延迟基准数据"
               ]
             }
           ]
@@ -579,6 +1706,13 @@
               "date": "2026-06-28",
               "reason": "release_update",
               "starsTotal": 24326,
+              "starsGained": 5519,
+              "release": "v1.2.2"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
+              "starsTotal": 24658,
               "starsGained": 5519,
               "release": "v1.2.2"
             }
@@ -716,6 +1850,13 @@
               "date": "2026-06-28",
               "reason": "release_update",
               "starsTotal": 8449,
+              "starsGained": 2554,
+              "release": "v1.4.103"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
+              "starsTotal": 8525,
               "starsGained": 2554,
               "release": "v1.4.103"
             }
@@ -991,6 +2132,13 @@
               "starsTotal": 3445,
               "starsGained": 0,
               "release": ""
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
+              "starsTotal": 3580,
+              "starsGained": 0,
+              "release": ""
             }
           ],
           "analysis": [
@@ -1068,7 +2216,7 @@
           "streakDays": 3,
           "isNew": false,
           "createdAt": "2026-04-07",
-          "pushedAt": "2026-06-27",
+          "pushedAt": "2026-06-28",
           "latestRelease": "v1.0.0",
           "firstSeen": "2026-06-26",
           "topics": [
@@ -1113,6 +2261,13 @@
               "reason": "star_jump",
               "starsTotal": 4843,
               "starsGained": 685,
+              "release": "v1.0.0"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
+              "starsTotal": 5144,
+              "starsGained": 1456,
               "release": "v1.0.0"
             }
           ],
@@ -1222,6 +2377,13 @@
               "date": "2026-06-28",
               "reason": "star_jump",
               "starsTotal": 1397,
+              "starsGained": 0,
+              "release": "v0.19.2"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
+              "starsTotal": 1421,
               "starsGained": 0,
               "release": "v0.19.2"
             }
@@ -1401,6 +2563,13 @@
               "date": "2026-06-28",
               "reason": "release_update",
               "starsTotal": 5180,
+              "starsGained": 0,
+              "release": "v0.3.0"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
+              "starsTotal": 5248,
               "starsGained": 0,
               "release": "v0.3.0"
             }
@@ -1668,6 +2837,13 @@
               "starsTotal": 547,
               "starsGained": 0,
               "release": "v0.2.0"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
+              "starsTotal": 547,
+              "starsGained": 0,
+              "release": "v0.2.0"
             }
           ],
           "analysis": [
@@ -1738,7 +2914,7 @@
           "isNew": false,
           "createdAt": "2026-06-18",
           "pushedAt": "2026-06-28",
-          "latestRelease": "v0.1.62",
+          "latestRelease": "v0.1.64",
           "firstSeen": "2026-06-25",
           "topics": [
             "a-stock",
@@ -1789,6 +2965,13 @@
               "starsTotal": 484,
               "starsGained": 0,
               "release": "v0.1.62"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "release_update",
+              "starsTotal": 542,
+              "starsGained": 0,
+              "release": "v0.1.64"
             }
           ],
           "analysis": [
@@ -1909,6 +3092,13 @@
             {
               "date": "2026-06-28",
               "reason": "release_update",
+              "starsTotal": 429,
+              "starsGained": 0,
+              "release": "v1.0.3"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
               "starsTotal": 429,
               "starsGained": 0,
               "release": "v1.0.3"
@@ -2066,6 +3256,13 @@
               "date": "2026-06-28",
               "reason": "release_update",
               "starsTotal": 586,
+              "starsGained": 0,
+              "release": "v0.5.3"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
+              "starsTotal": 590,
               "starsGained": 0,
               "release": "v0.5.3"
             }
@@ -2245,6 +3442,13 @@
               "starsTotal": 817,
               "starsGained": 0,
               "release": "v2.3.3"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
+              "starsTotal": 818,
+              "starsGained": 0,
+              "release": "v2.3.3"
             }
           ],
           "analysis": [
@@ -2410,6 +3614,13 @@
               "date": "2026-06-28",
               "reason": "lightweight",
               "starsTotal": 1508,
+              "starsGained": 524,
+              "release": ""
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
+              "starsTotal": 1527,
               "starsGained": 524,
               "release": ""
             }
@@ -2602,6 +3813,13 @@
               "starsTotal": 62172,
               "starsGained": 322,
               "release": "v0.11.1"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
+              "starsTotal": 62279,
+              "starsGained": 265,
+              "release": "v0.11.1"
             }
           ],
           "analysis": [
@@ -2724,6 +3942,13 @@
               "starsTotal": 1397,
               "starsGained": 0,
               "release": "v0.19.2"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
+              "starsTotal": 1421,
+              "starsGained": 0,
+              "release": "v0.19.2"
             }
           ],
           "analysis": [
@@ -2821,6 +4046,13 @@
             {
               "date": "2026-06-28",
               "reason": "star_jump",
+              "starsTotal": 547,
+              "starsGained": 0,
+              "release": "v0.2.0"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
               "starsTotal": 547,
               "starsGained": 0,
               "release": "v0.2.0"
@@ -2949,6 +4181,13 @@
               "date": "2026-06-28",
               "reason": "release_update",
               "starsTotal": 8449,
+              "starsGained": 2554,
+              "release": "v1.4.103"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
+              "starsTotal": 8525,
               "starsGained": 2554,
               "release": "v1.4.103"
             }
@@ -3100,6 +4339,13 @@
               "date": "2026-06-28",
               "reason": "star_jump",
               "starsTotal": 3445,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
+              "starsTotal": 3580,
               "starsGained": 0,
               "release": ""
             }
@@ -3301,7 +4547,7 @@
           "streakDays": 2,
           "isNew": false,
           "createdAt": "2026-04-07",
-          "pushedAt": "2026-06-27",
+          "pushedAt": "2026-06-28",
           "latestRelease": "v1.0.0",
           "firstSeen": "2026-06-26",
           "topics": [
@@ -3346,6 +4592,13 @@
               "reason": "star_jump",
               "starsTotal": 4843,
               "starsGained": 685,
+              "release": "v1.0.0"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
+              "starsTotal": 5144,
+              "starsGained": 1456,
               "release": "v1.0.0"
             }
           ],
@@ -3645,6 +4898,13 @@
               "starsTotal": 586,
               "starsGained": 0,
               "release": "v0.3.6"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
+              "starsTotal": 599,
+              "starsGained": 0,
+              "release": "v0.3.6"
             }
           ],
           "analysis": [
@@ -3823,6 +5083,13 @@
               "date": "2026-06-28",
               "reason": "release_update",
               "starsTotal": 817,
+              "starsGained": 0,
+              "release": "v2.3.3"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
+              "starsTotal": 818,
               "starsGained": 0,
               "release": "v2.3.3"
             }
@@ -4010,7 +5277,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2024-02-29",
-          "pushedAt": "2026-06-26",
+          "pushedAt": "2026-06-27",
           "latestRelease": "mineru-3.4.0-released",
           "firstSeen": "2026-06-26",
           "topics": [
@@ -4044,6 +5311,13 @@
               "reason": "lightweight",
               "starsTotal": 70271,
               "starsGained": 944,
+              "release": "mineru-3.4.0-released"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
+              "starsTotal": 71371,
+              "starsGained": 426,
               "release": "mineru-3.4.0-released"
             }
           ],
@@ -4127,7 +5401,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-04-07",
-          "pushedAt": "2026-06-27",
+          "pushedAt": "2026-06-28",
           "latestRelease": "v1.0.0",
           "firstSeen": "2026-06-26",
           "topics": [
@@ -4172,6 +5446,13 @@
               "reason": "star_jump",
               "starsTotal": 4843,
               "starsGained": 685,
+              "release": "v1.0.0"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
+              "starsTotal": 5144,
+              "starsGained": 1456,
               "release": "v1.0.0"
             }
           ],
@@ -4274,6 +5555,13 @@
               "starsTotal": 20417,
               "starsGained": 1649,
               "release": "v1.10.0"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
+              "starsTotal": 20445,
+              "starsGained": 1649,
+              "release": "v1.10.0"
             }
           ],
           "analysis": [
@@ -4372,6 +5660,13 @@
               "date": "2026-06-28",
               "reason": "lightweight",
               "starsTotal": 601,
+              "starsGained": 0,
+              "release": "v0.1.1"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
+              "starsTotal": 610,
               "starsGained": 0,
               "release": "v0.1.1"
             }
@@ -4751,6 +6046,13 @@
               "starsTotal": 75124,
               "starsGained": 3258,
               "release": "v2.0.0"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
+              "starsTotal": 75184,
+              "starsGained": 3258,
+              "release": "v2.0.0"
             }
           ],
           "analysis": [
@@ -4890,6 +6192,13 @@
               "starsTotal": 8449,
               "starsGained": 2554,
               "release": "v1.4.103"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
+              "starsTotal": 8525,
+              "starsGained": 2554,
+              "release": "v1.4.103"
             }
           ],
           "analysis": [
@@ -5000,6 +6309,13 @@
               "date": "2026-06-28",
               "reason": "lightweight",
               "starsTotal": 3099,
+              "starsGained": 1836,
+              "release": ""
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
+              "starsTotal": 3136,
               "starsGained": 1836,
               "release": ""
             }
@@ -5345,6 +6661,13 @@
               "starsTotal": 3099,
               "starsGained": 1836,
               "release": ""
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
+              "starsTotal": 3136,
+              "starsGained": 1836,
+              "release": ""
             }
           ],
           "analysis": [
@@ -5472,6 +6795,13 @@
               "starsTotal": 716,
               "starsGained": 0,
               "release": ""
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
+              "starsTotal": 719,
+              "starsGained": 0,
+              "release": ""
             }
           ],
           "analysis": [
@@ -5547,7 +6877,7 @@
           "isNew": true,
           "createdAt": "2026-06-18",
           "pushedAt": "2026-06-28",
-          "latestRelease": "v0.1.62",
+          "latestRelease": "v0.1.64",
           "firstSeen": "2026-06-25",
           "topics": [
             "a-stock",
@@ -5598,6 +6928,13 @@
               "starsTotal": 484,
               "starsGained": 0,
               "release": "v0.1.62"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "release_update",
+              "starsTotal": 542,
+              "starsGained": 0,
+              "release": "v0.1.64"
             }
           ],
           "analysis": [
@@ -5718,6 +7055,13 @@
             {
               "date": "2026-06-28",
               "reason": "release_update",
+              "starsTotal": 429,
+              "starsGained": 0,
+              "release": "v1.0.3"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
               "starsTotal": 429,
               "starsGained": 0,
               "release": "v1.0.3"
@@ -6200,6 +7544,13 @@
               "starsTotal": 10962,
               "starsGained": 0,
               "release": "v0.1.3"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
+              "starsTotal": 10990,
+              "starsGained": 0,
+              "release": "v0.1.3"
             }
           ],
           "analysis": [
@@ -6446,6 +7797,13 @@
               "date": "2026-06-28",
               "reason": "release_update",
               "starsTotal": 8449,
+              "starsGained": 2554,
+              "release": "v1.4.103"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
+              "starsTotal": 8525,
               "starsGained": 2554,
               "release": "v1.4.103"
             }
@@ -7073,6 +8431,13 @@
               "starsTotal": 26000,
               "starsGained": 18000,
               "release": ""
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
+              "starsTotal": 26571,
+              "starsGained": 18000,
+              "release": ""
             }
           ],
           "analysis": [
@@ -7258,6 +8623,13 @@
               "starsTotal": 18409,
               "starsGained": 7674,
               "release": "v0.8.1"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
+              "starsTotal": 19041,
+              "starsGained": 7674,
+              "release": "v0.8.1"
             }
           ],
           "analysis": [
@@ -7334,8 +8706,8 @@
           "streakDays": 9,
           "isNew": false,
           "createdAt": "2026-04-07",
-          "pushedAt": "2026-06-23",
-          "latestRelease": "v0.4.0",
+          "pushedAt": "2026-06-28",
+          "latestRelease": "v0.4.5",
           "firstSeen": "2026-06-19",
           "topics": [
             "ai-video",
@@ -7409,73 +8781,75 @@
               "starsTotal": 8632,
               "starsGained": 1630,
               "release": "v0.4.0"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "release_update",
+              "starsTotal": 9270,
+              "starsGained": 6126,
+              "release": "v0.4.5"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "Palmier Pro 是一个用 Swift 从零构建的 macOS 视频编辑器，特色是深度集成 AI 生成与代码助手：编辑器中可直接调用 Seedance、Kling 等模型生成视频/图片，同时内置 MCP 服务器，让 Claude Code、Cursor、Codex 等 AI 助手通过标准协议操控时间线。编辑器本身（不含生成式 AI）完全开源（GPLv3），生成模块闭源，采用订阅制。"
+              "body": "Palmier Pro 是用 Swift 从零构建的开源 macOS 视频编辑器，内置生成式 AI（与 Seedance、Kling 等模型集成），并通过 MCP 协议暴露时间线控制接口，让 Claude Code、Codex、Cursor 等外部代理直接参与视频编辑项目。编辑器部分完全开源（GPLv3），生成式 AI 处理端闭源，需订阅。"
             },
             {
               "heading": "为什么火",
               "bullets": [
-                "Y Combinator S24 项目，苹果生态原生应用，近 9k Star，吸引了大量对 AI + 创作工具结合的开发者。",
-                "提出“AI 原生视频编辑器”概念：不再只是插件，而是让 AI 成为协作者，通过 MCP 将 Claude 等变成时间线操作手。",
-                "精准卡位 macOS 26（Tahoe）与 Apple Silicon，利用 Metal 加速视觉效果，展现新技术栈潜力。"
+                "首个原生支持 MCP 的视频剪辑工具：代理可通过 HTTP 发送命令操作轨道、剪辑、预览，相当于把视频编辑变成可编程任务。",
+                "YC S24 阵容 + 社区反馈：9k Star 在 2 个多月内积累，说明需求明确。",
+                "工程师导向：用熟悉的 LLM 工具链替代手动操作，降低视频制作门槛，尤其适合开发者快速产出 demo 或内容。"
               ]
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "Swift + AppKit/SwiftUI（推测）实现原生 UI 与高性能渲染。",
-                "Metal 用于颜色分级与特效合成（v0.4.0 已集成）。",
-                "MCP 服务器通过 HTTP 暴露在 127.0.0.1:19789，支持 Claude Code/Desktop、Cursor、Codex 等常用 AI 编码工具。",
-                "音频处理支持 PCM 共享读取器、多轨同步，支持 AIFF-C、FLAC 等格式导入。",
-                "生成式 AI 部分闭源，未披露具体协议，或为自研管线与第三方 API 的组合。"
+                "语言：Swift（SwiftUI/AppKit）",
+                "平台：macOS 26 (Tahoe) on Apple Silicon 独占",
+                "通信协议：MCP over HTTP（本地 127.0.0.1:19789/mcp）",
+                "生成模型：Seedance、Kling、Nano Banana Pro（云端调用）",
+                "发行格式：DMG，通过 Sparkle appcast 更新"
               ]
             },
             {
               "heading": "核心能力",
               "bullets": [
-                "完整视频编辑：多轨时间线、剪辑、变换、关键帧、分辨率导出（含 2K、匹配时间线）。",
-                "生成式 AI：在时间线内直接生成 Seedance、Kling、Nano Banana Pro 等模型的图像/视频素材。",
-                "智能代理协作：MCP 服务器让外部 AI 助手可以读取、修改项目，实现自动化剪辑。",
-                "多语言支持：15 种语言，包括阿拉伯语等 RTL 语言。",
-                "免费编辑器：无登录即可使用基础编辑功能，MCP 服务也免费开放。"
+                "完整视频时间线编辑（片段剪切、多轨排列、波纹删除、同步锁定等）",
+                "拖拽轨道重排序、Shift 拖拽执行波纹修整",
+                "内建生成式 AI 生图/生视频（需订阅）",
+                "本地 MCP 服务即时启动，暴露剪辑、项目控制等工具",
+                "与 Claude Code/Desktop、Cursor、Codex 原生集成，提供一键安装扩展",
+                "多语言 README，社区 Discord 活跃"
               ]
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "视频创作者想要用代码或 AI 助手自动化重复性编辑（如批量加字幕、调色、剪辑片段）。",
-                "开发者试验“AI 代理控制 GUI 工具”的交互范式，利用 MCP 构建自定义剪辑流程。",
-                "macOS 生态重度用户，追求原生性能与 Metal 加速的本地编辑体验。",
-                "对 AI 生成内容与手工编辑混合工作流感兴趣的早期尝鲜者。"
+                "开发者批量生成或剪辑视频片段（自动化教程、产品演示）",
+                "LLM 代理爱好者演练更具实操性的多步工具调用",
+                "小型团队快速出片，利用 AI 辅助初剪，减少重复劳动"
               ]
             },
             {
               "heading": "同类对比",
+              "body": "Palmier 优势在于与 LLM 代理的原生结合，劣势是编辑功能成熟度尚不及老牌软件，且仅限于 macOS 26。",
               "bullets": [
-                "对比 Premiere Pro/After Effects：Palmier Pro 更轻量，原生集成 AI 代理，而非通过插件层交互，但功能成熟度远不及 Adobe。",
-                "对比 CapCut：CapCut 更偏向移动/桌面全流程一键式模板与 AI 特效，Palmier Pro 开放 MCP，给技术用户更大的自定义空间。",
-                "对比 DaVinci Resolve：DaVinci 有强大的 API 与 Fusion，但并非为 AI 助手原生设计；Palmier Pro 从底层就考虑 Agent 协作。",
-                "独特优势：唯一一个以 MCP 标准正式支持 Claude/Cursor 等工具的视频编辑器，形成“写代码即剪视频”的新路径。"
+                "Adobe Premiere Pro / DaVinci Resolve：功能完整但无 MCP 集成，AI 能力需插件，不开源。",
+                "CapCut/DavinCi Neural Engine：封闭生态，无代理交互。",
+                "Flowblade/Kdenlive：开源跨平台但非原生 macOS，无 MCP 设计。"
               ]
             },
             {
               "heading": "版本动态",
-              "body": "---",
-              "bullets": [
-                "最新 v0.4.0（2026-06-23）引入 Metal 颜色与特效、导出添加 2K 和 Match-Timeline 分辨率、多轨音频同步、修复分栏大小持久化等问题。",
-                "社区贡献活跃，多语言本地化持续更新，关注者通过 Discord/X 反馈，项目迭代较快。",
-                "现阶段仍处于早期，编辑器基础功能稳定，但 AI 能力依赖闭源模块，长期发展取决于订阅模式与开放生态的平衡。"
-              ]
+              "body": "最新 v0.4.5（2026-06-28）聚焦时间线增强：新增帧选取预览、波纹插入预览、轨道拖拽重排、波纹修整边缘拖拽等编辑功能，同时修复 MCP 数字参数溢出、窗口尺寸、fcpxml 格式等 bugs，并开始引入“Skills”设置页面，暗示代理能力可配置化。 ---"
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
                 "置信度：high",
-                "信息盲区：生成式 AI 功能的具体模型调用方式及后端架构未公开；MCP 提供的工具、资源、prompts 列表未在 README 中详细列出；编辑器功能与专业视频软件（如 Premiere、DaVinci）的详细功能对比缺失；无性能基准测试数据（渲染速度、时间线帧率等）"
+                "信息盲区：未列出 MCP 工具集的具体命令/API 描述；生成式 AI 的模型选择及订阅价格未公开；未提供视频导出的格式、编码器支持细节；未说明是否依赖额外系统库（如 FFmpeg）；目前无性能基准测试或稳定性报告"
               ]
             }
           ]
@@ -7861,6 +9235,13 @@
               "starsTotal": 895,
               "starsGained": 0,
               "release": ""
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
+              "starsTotal": 919,
+              "starsGained": 0,
+              "release": ""
             }
           ],
           "analysis": [
@@ -8010,6 +9391,13 @@
               "date": "2026-06-28",
               "reason": "star_jump",
               "starsTotal": 3445,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
+              "starsTotal": 3580,
               "starsGained": 0,
               "release": ""
             }
@@ -8197,6 +9585,13 @@
               "starsTotal": 10962,
               "starsGained": 0,
               "release": "v0.1.3"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
+              "starsTotal": 10990,
+              "starsGained": 0,
+              "release": "v0.1.3"
             }
           ],
           "analysis": [
@@ -8336,6 +9731,13 @@
               "starsTotal": 586,
               "starsGained": 0,
               "release": "v0.3.6"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
+              "starsTotal": 599,
+              "starsGained": 0,
+              "release": "v0.3.6"
             }
           ],
           "analysis": [
@@ -8418,7 +9820,7 @@
           "isNew": false,
           "createdAt": "2026-06-05",
           "pushedAt": "2026-06-28",
-          "latestRelease": "v0.42.0",
+          "latestRelease": "v1.0.0",
           "firstSeen": "2026-06-22",
           "topics": [
             "ai",
@@ -8484,55 +9886,66 @@
               "starsTotal": 625,
               "starsGained": 0,
               "release": "v0.42.0"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "release_update",
+              "starsTotal": 631,
+              "starsGained": 0,
+              "release": "v1.0.0"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "TaiyiForge 是一款 AI 编码工作流自动化插件，将 AI 辅助开发过程从“玄学对话”改造为由状态机驱动的九阶段工程流水线。每个阶段有固定产出和审批点，强制人类在关键决策点介入，确保 AI 不跳过需求、设计或审查。它通过一套统一的 slash 命令，在 Claude、Codex、Cursor、OpenCode 四个 AI 终端中提供一致的行为。"
+              "body": "TaiyiForge（太一炉）是一套把 AI 代码生成过程强制编排为九阶段流水线的工具。通过状态机引擎，约束 Claude、Codex、Cursor 等 AI 终端必须按序产出需求、设计、任务拆分、TDD 开发、测试证据和人工审批，避免 Agent “偷跑”。"
             },
             {
               "heading": "为什么火",
-              "body": "仓库创建仅 3 周即获 492 星，切中了团队使用 AI 编码的普遍痛点：Agent 总是跳过设计直接写代码、长会话上下文丢失、不同工具流程各异。它给出了一套可落地、可复制的纪律框架，将“AI 写代码”提升到“AI 工程化”，因此吸引关注。"
+              "body": "当前 AI 辅助编程普遍存在流程跳跃、上下文丢失、多工具行为不一致的痛点。TaiyiForge 用 Skill 插件统一指令集，用硬门控阻断跳过设计，用 token 压缩机制保持长会话可持续，击中工程团队对 AI 产出的审计需求。其 /taiyi:plan 一键生成全栈骨架的 auto 模式（79 文件，1,170 测试 0 失败）展示了直接可用的工程化产出能力。"
             },
             {
               "heading": "技术栈",
-              "body": "TypeScript + Node.js (≥20)，通过 npm 包 oh-my-taiyiforge 分发。核心包含状态机引擎、事件总线、ChangeGraph 知识图谱、token 压缩机制及结构化日志。集成到 AI 终端依靠 slash 命令与 SKILL.md 声明。"
+              "bullets": [
+                "语言：TypeScript",
+                "分发方式：npm 包，通过 npx taiyi-forge-install 安装 Skill 到各 AI 终端（Claude Code、Cursor、OpenCode、Codex）",
+                "测试：151 个测试文件，1,170 测试用例，包含 CLI 冒烟测试、Agent 角色测试、E2E",
+                "许可证：MIT"
+              ]
             },
             {
               "heading": "核心能力",
               "bullets": [
-                "九阶段流水线：change → requirement → design → ui-design → task → dev → test → review → integration，每步有明确工件。",
-                "人类门控：change、design、review 三个关键阶段必须人类审批，引擎不理会 AI 的自我放行。",
-                "多端一致：28 条 slash 命令及 6 个 umbrella 功能在四端行为完全对齐。",
-                "强制 TDD：dev 阶段必须先写失败的测试再实现，不是建议是硬约束。",
-                "证据防假过门：每个验收标准必须附可执行验证命令（evidence），跑不过不进入下一阶段。",
-                "Token 压缩与断点续传：长会话自动产出 CONTEXT-COMPACT.md，跨天无缝继续。",
-                "ChangeGraph：追踪变更间依赖，改一处知全局。",
-                "灵活 profile：full（大功能）、lite（小修复）、nano（typo 改）等 10 种模式。"
+                "九阶段契约流水线：change → requirement → design → ui-design → task → dev → test → review → integration，每阶段固定产出，关键节点人工审批。",
+                "跨终端统一指令：28 条规范 slash 命令，同一套词汇在各平台行为一致。",
+                "项目级规划：/taiyi:plan 接收 README/PRD/PDF/URL，自动分解为独立变更模块，支持半自动确认或全自动生成骨架（含 FastAPI 后端、前端、测试、Docker 等）。",
+                "强制 TDD + evidence：dev 阶段先红后绿，每个验收标准必须有可执行验证命令，打通过门控。",
+                "上下文管理：长会话自动产出上下文压缩文档，支持跨天续接。",
+                "柔性 profile：提供 full、lite、nano 等 8 种流程裁切，适应不同规模需求。"
               ]
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "要求 AI 辅助编码有纪律、可审计的团队。",
-                "同时使用多个 AI 编码工具，需要统一流程。",
-                "需要将 AI 生成的代码置于强制设计、审查和测试门控下的项目。"
+                "用多个 AI 编程工具、但希望流程标准化的团队",
+                "需要产出可审计设计文档和测试证据的项目",
+                "想从零快速生成全栈项目骨架（FastAPI 后端 + 前端）的场景",
+                "已有 Harness、OpenSpec、Superpowers 等插件的用户（TaiyiForge 将其编排成统一状态机）"
               ]
             },
             {
               "heading": "同类对比",
-              "body": "直接与裸 AI 对话相比，TaiyiForge 提供了严格的流程控制和审批，但 README 未展开与同生态工具（Harness、OpenSpec、Superpowers 等）的横向对比，仅声明编排了它们的思想。"
+              "body": "与直接和 AI 对话比，TaiyiForge 用状态机保证阶段不跳、审批硬拦、上下文持久化。相比 oh-my-claudecode / oh-my-codex 等单一工具插件，它实现了跨终端一致性和项目级规划能力，但不提供 AI 模型本身，定位为流程编排壳。"
             },
             {
               "heading": "版本动态",
-              "body": "最新 v0.42.0 聚焦文档与工程基建（README 精炼、CI 自动发布）。核心功能在 v0.23–v0.40 期间建立：规范命令集、evidence 强校验、事件总线、ChangeGraph 等。v1.0.0 计划锁定 API、达成四端 parity 并开始收集外部案例。 ---"
+              "body": "v1.0.0（2026-06-28）为首个正式版，包含 609 个文件、2.8 万行代码变更、8 套完整示例工程。仓库创建仅 23 天即发布稳定版，迭代速度极快。 ---"
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
-                "置信度：medium",
-                "信息盲区：无性能 benchmark 或 token 压缩的量化效果数据；多 AI 终端行为一致性的验证报告缺失；缺乏生产环境下的稳定性数据和用户案例；人类门控的具体实现机制未说明（是否仅依赖聊天层面的确认）；除 Node.js ≥20 外未列出其他系统依赖（如操作系统、额外工具）"
+                "置信度：high",
+                "信息盲区：未明确最小 Node.js 版本要求；无性能基准测试数据；与其他工作流工具（如 Aider、Continue）的具体对比缺失；未说明是否支持非 FastAPI 技术栈生成"
               ]
             }
           ]
@@ -9091,6 +10504,13 @@
               "starsTotal": 22444,
               "starsGained": 4565,
               "release": "v0.3.1"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
+              "starsTotal": 22652,
+              "starsGained": 4565,
+              "release": "v0.3.1"
             }
           ],
           "analysis": [
@@ -9210,6 +10630,13 @@
               "date": "2026-06-28",
               "reason": "lightweight",
               "starsTotal": 895,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
+              "starsTotal": 919,
               "starsGained": 0,
               "release": ""
             }
@@ -9355,6 +10782,13 @@
               "date": "2026-06-28",
               "reason": "lightweight",
               "starsTotal": 586,
+              "starsGained": 0,
+              "release": "v0.3.6"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
+              "starsTotal": 599,
               "starsGained": 0,
               "release": "v0.3.6"
             }
@@ -9560,6 +10994,13 @@
               "starsTotal": 26000,
               "starsGained": 18000,
               "release": ""
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
+              "starsTotal": 26571,
+              "starsGained": 18000,
+              "release": ""
             }
           ],
           "analysis": [
@@ -9643,8 +11084,8 @@
           "streakDays": 8,
           "isNew": false,
           "createdAt": "2026-04-07",
-          "pushedAt": "2026-06-23",
-          "latestRelease": "v0.4.0",
+          "pushedAt": "2026-06-28",
+          "latestRelease": "v0.4.5",
           "firstSeen": "2026-06-19",
           "topics": [
             "ai-video",
@@ -9718,73 +11159,75 @@
               "starsTotal": 8632,
               "starsGained": 1630,
               "release": "v0.4.0"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "release_update",
+              "starsTotal": 9270,
+              "starsGained": 6126,
+              "release": "v0.4.5"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "Palmier Pro 是一个用 Swift 从零构建的 macOS 视频编辑器，特色是深度集成 AI 生成与代码助手：编辑器中可直接调用 Seedance、Kling 等模型生成视频/图片，同时内置 MCP 服务器，让 Claude Code、Cursor、Codex 等 AI 助手通过标准协议操控时间线。编辑器本身（不含生成式 AI）完全开源（GPLv3），生成模块闭源，采用订阅制。"
+              "body": "Palmier Pro 是用 Swift 从零构建的开源 macOS 视频编辑器，内置生成式 AI（与 Seedance、Kling 等模型集成），并通过 MCP 协议暴露时间线控制接口，让 Claude Code、Codex、Cursor 等外部代理直接参与视频编辑项目。编辑器部分完全开源（GPLv3），生成式 AI 处理端闭源，需订阅。"
             },
             {
               "heading": "为什么火",
               "bullets": [
-                "Y Combinator S24 项目，苹果生态原生应用，近 9k Star，吸引了大量对 AI + 创作工具结合的开发者。",
-                "提出“AI 原生视频编辑器”概念：不再只是插件，而是让 AI 成为协作者，通过 MCP 将 Claude 等变成时间线操作手。",
-                "精准卡位 macOS 26（Tahoe）与 Apple Silicon，利用 Metal 加速视觉效果，展现新技术栈潜力。"
+                "首个原生支持 MCP 的视频剪辑工具：代理可通过 HTTP 发送命令操作轨道、剪辑、预览，相当于把视频编辑变成可编程任务。",
+                "YC S24 阵容 + 社区反馈：9k Star 在 2 个多月内积累，说明需求明确。",
+                "工程师导向：用熟悉的 LLM 工具链替代手动操作，降低视频制作门槛，尤其适合开发者快速产出 demo 或内容。"
               ]
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "Swift + AppKit/SwiftUI（推测）实现原生 UI 与高性能渲染。",
-                "Metal 用于颜色分级与特效合成（v0.4.0 已集成）。",
-                "MCP 服务器通过 HTTP 暴露在 127.0.0.1:19789，支持 Claude Code/Desktop、Cursor、Codex 等常用 AI 编码工具。",
-                "音频处理支持 PCM 共享读取器、多轨同步，支持 AIFF-C、FLAC 等格式导入。",
-                "生成式 AI 部分闭源，未披露具体协议，或为自研管线与第三方 API 的组合。"
+                "语言：Swift（SwiftUI/AppKit）",
+                "平台：macOS 26 (Tahoe) on Apple Silicon 独占",
+                "通信协议：MCP over HTTP（本地 127.0.0.1:19789/mcp）",
+                "生成模型：Seedance、Kling、Nano Banana Pro（云端调用）",
+                "发行格式：DMG，通过 Sparkle appcast 更新"
               ]
             },
             {
               "heading": "核心能力",
               "bullets": [
-                "完整视频编辑：多轨时间线、剪辑、变换、关键帧、分辨率导出（含 2K、匹配时间线）。",
-                "生成式 AI：在时间线内直接生成 Seedance、Kling、Nano Banana Pro 等模型的图像/视频素材。",
-                "智能代理协作：MCP 服务器让外部 AI 助手可以读取、修改项目，实现自动化剪辑。",
-                "多语言支持：15 种语言，包括阿拉伯语等 RTL 语言。",
-                "免费编辑器：无登录即可使用基础编辑功能，MCP 服务也免费开放。"
+                "完整视频时间线编辑（片段剪切、多轨排列、波纹删除、同步锁定等）",
+                "拖拽轨道重排序、Shift 拖拽执行波纹修整",
+                "内建生成式 AI 生图/生视频（需订阅）",
+                "本地 MCP 服务即时启动，暴露剪辑、项目控制等工具",
+                "与 Claude Code/Desktop、Cursor、Codex 原生集成，提供一键安装扩展",
+                "多语言 README，社区 Discord 活跃"
               ]
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "视频创作者想要用代码或 AI 助手自动化重复性编辑（如批量加字幕、调色、剪辑片段）。",
-                "开发者试验“AI 代理控制 GUI 工具”的交互范式，利用 MCP 构建自定义剪辑流程。",
-                "macOS 生态重度用户，追求原生性能与 Metal 加速的本地编辑体验。",
-                "对 AI 生成内容与手工编辑混合工作流感兴趣的早期尝鲜者。"
+                "开发者批量生成或剪辑视频片段（自动化教程、产品演示）",
+                "LLM 代理爱好者演练更具实操性的多步工具调用",
+                "小型团队快速出片，利用 AI 辅助初剪，减少重复劳动"
               ]
             },
             {
               "heading": "同类对比",
+              "body": "Palmier 优势在于与 LLM 代理的原生结合，劣势是编辑功能成熟度尚不及老牌软件，且仅限于 macOS 26。",
               "bullets": [
-                "对比 Premiere Pro/After Effects：Palmier Pro 更轻量，原生集成 AI 代理，而非通过插件层交互，但功能成熟度远不及 Adobe。",
-                "对比 CapCut：CapCut 更偏向移动/桌面全流程一键式模板与 AI 特效，Palmier Pro 开放 MCP，给技术用户更大的自定义空间。",
-                "对比 DaVinci Resolve：DaVinci 有强大的 API 与 Fusion，但并非为 AI 助手原生设计；Palmier Pro 从底层就考虑 Agent 协作。",
-                "独特优势：唯一一个以 MCP 标准正式支持 Claude/Cursor 等工具的视频编辑器，形成“写代码即剪视频”的新路径。"
+                "Adobe Premiere Pro / DaVinci Resolve：功能完整但无 MCP 集成，AI 能力需插件，不开源。",
+                "CapCut/DavinCi Neural Engine：封闭生态，无代理交互。",
+                "Flowblade/Kdenlive：开源跨平台但非原生 macOS，无 MCP 设计。"
               ]
             },
             {
               "heading": "版本动态",
-              "body": "---",
-              "bullets": [
-                "最新 v0.4.0（2026-06-23）引入 Metal 颜色与特效、导出添加 2K 和 Match-Timeline 分辨率、多轨音频同步、修复分栏大小持久化等问题。",
-                "社区贡献活跃，多语言本地化持续更新，关注者通过 Discord/X 反馈，项目迭代较快。",
-                "现阶段仍处于早期，编辑器基础功能稳定，但 AI 能力依赖闭源模块，长期发展取决于订阅模式与开放生态的平衡。"
-              ]
+              "body": "最新 v0.4.5（2026-06-28）聚焦时间线增强：新增帧选取预览、波纹插入预览、轨道拖拽重排、波纹修整边缘拖拽等编辑功能，同时修复 MCP 数字参数溢出、窗口尺寸、fcpxml 格式等 bugs，并开始引入“Skills”设置页面，暗示代理能力可配置化。 ---"
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
                 "置信度：high",
-                "信息盲区：生成式 AI 功能的具体模型调用方式及后端架构未公开；MCP 提供的工具、资源、prompts 列表未在 README 中详细列出；编辑器功能与专业视频软件（如 Premiere、DaVinci）的详细功能对比缺失；无性能基准测试数据（渲染速度、时间线帧率等）"
+                "信息盲区：未列出 MCP 工具集的具体命令/API 描述；生成式 AI 的模型选择及订阅价格未公开；未提供视频导出的格式、编码器支持细节；未说明是否依赖额外系统库（如 FFmpeg）；目前无性能基准测试或稳定性报告"
               ]
             }
           ]
@@ -10111,7 +11554,7 @@
           "isNew": false,
           "createdAt": "2026-06-05",
           "pushedAt": "2026-06-28",
-          "latestRelease": "v0.42.0",
+          "latestRelease": "v1.0.0",
           "firstSeen": "2026-06-22",
           "topics": [
             "ai",
@@ -10177,55 +11620,66 @@
               "starsTotal": 625,
               "starsGained": 0,
               "release": "v0.42.0"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "release_update",
+              "starsTotal": 631,
+              "starsGained": 0,
+              "release": "v1.0.0"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "TaiyiForge 是一款 AI 编码工作流自动化插件，将 AI 辅助开发过程从“玄学对话”改造为由状态机驱动的九阶段工程流水线。每个阶段有固定产出和审批点，强制人类在关键决策点介入，确保 AI 不跳过需求、设计或审查。它通过一套统一的 slash 命令，在 Claude、Codex、Cursor、OpenCode 四个 AI 终端中提供一致的行为。"
+              "body": "TaiyiForge（太一炉）是一套把 AI 代码生成过程强制编排为九阶段流水线的工具。通过状态机引擎，约束 Claude、Codex、Cursor 等 AI 终端必须按序产出需求、设计、任务拆分、TDD 开发、测试证据和人工审批，避免 Agent “偷跑”。"
             },
             {
               "heading": "为什么火",
-              "body": "仓库创建仅 3 周即获 492 星，切中了团队使用 AI 编码的普遍痛点：Agent 总是跳过设计直接写代码、长会话上下文丢失、不同工具流程各异。它给出了一套可落地、可复制的纪律框架，将“AI 写代码”提升到“AI 工程化”，因此吸引关注。"
+              "body": "当前 AI 辅助编程普遍存在流程跳跃、上下文丢失、多工具行为不一致的痛点。TaiyiForge 用 Skill 插件统一指令集，用硬门控阻断跳过设计，用 token 压缩机制保持长会话可持续，击中工程团队对 AI 产出的审计需求。其 /taiyi:plan 一键生成全栈骨架的 auto 模式（79 文件，1,170 测试 0 失败）展示了直接可用的工程化产出能力。"
             },
             {
               "heading": "技术栈",
-              "body": "TypeScript + Node.js (≥20)，通过 npm 包 oh-my-taiyiforge 分发。核心包含状态机引擎、事件总线、ChangeGraph 知识图谱、token 压缩机制及结构化日志。集成到 AI 终端依靠 slash 命令与 SKILL.md 声明。"
+              "bullets": [
+                "语言：TypeScript",
+                "分发方式：npm 包，通过 npx taiyi-forge-install 安装 Skill 到各 AI 终端（Claude Code、Cursor、OpenCode、Codex）",
+                "测试：151 个测试文件，1,170 测试用例，包含 CLI 冒烟测试、Agent 角色测试、E2E",
+                "许可证：MIT"
+              ]
             },
             {
               "heading": "核心能力",
               "bullets": [
-                "九阶段流水线：change → requirement → design → ui-design → task → dev → test → review → integration，每步有明确工件。",
-                "人类门控：change、design、review 三个关键阶段必须人类审批，引擎不理会 AI 的自我放行。",
-                "多端一致：28 条 slash 命令及 6 个 umbrella 功能在四端行为完全对齐。",
-                "强制 TDD：dev 阶段必须先写失败的测试再实现，不是建议是硬约束。",
-                "证据防假过门：每个验收标准必须附可执行验证命令（evidence），跑不过不进入下一阶段。",
-                "Token 压缩与断点续传：长会话自动产出 CONTEXT-COMPACT.md，跨天无缝继续。",
-                "ChangeGraph：追踪变更间依赖，改一处知全局。",
-                "灵活 profile：full（大功能）、lite（小修复）、nano（typo 改）等 10 种模式。"
+                "九阶段契约流水线：change → requirement → design → ui-design → task → dev → test → review → integration，每阶段固定产出，关键节点人工审批。",
+                "跨终端统一指令：28 条规范 slash 命令，同一套词汇在各平台行为一致。",
+                "项目级规划：/taiyi:plan 接收 README/PRD/PDF/URL，自动分解为独立变更模块，支持半自动确认或全自动生成骨架（含 FastAPI 后端、前端、测试、Docker 等）。",
+                "强制 TDD + evidence：dev 阶段先红后绿，每个验收标准必须有可执行验证命令，打通过门控。",
+                "上下文管理：长会话自动产出上下文压缩文档，支持跨天续接。",
+                "柔性 profile：提供 full、lite、nano 等 8 种流程裁切，适应不同规模需求。"
               ]
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "要求 AI 辅助编码有纪律、可审计的团队。",
-                "同时使用多个 AI 编码工具，需要统一流程。",
-                "需要将 AI 生成的代码置于强制设计、审查和测试门控下的项目。"
+                "用多个 AI 编程工具、但希望流程标准化的团队",
+                "需要产出可审计设计文档和测试证据的项目",
+                "想从零快速生成全栈项目骨架（FastAPI 后端 + 前端）的场景",
+                "已有 Harness、OpenSpec、Superpowers 等插件的用户（TaiyiForge 将其编排成统一状态机）"
               ]
             },
             {
               "heading": "同类对比",
-              "body": "直接与裸 AI 对话相比，TaiyiForge 提供了严格的流程控制和审批，但 README 未展开与同生态工具（Harness、OpenSpec、Superpowers 等）的横向对比，仅声明编排了它们的思想。"
+              "body": "与直接和 AI 对话比，TaiyiForge 用状态机保证阶段不跳、审批硬拦、上下文持久化。相比 oh-my-claudecode / oh-my-codex 等单一工具插件，它实现了跨终端一致性和项目级规划能力，但不提供 AI 模型本身，定位为流程编排壳。"
             },
             {
               "heading": "版本动态",
-              "body": "最新 v0.42.0 聚焦文档与工程基建（README 精炼、CI 自动发布）。核心功能在 v0.23–v0.40 期间建立：规范命令集、evidence 强校验、事件总线、ChangeGraph 等。v1.0.0 计划锁定 API、达成四端 parity 并开始收集外部案例。 ---"
+              "body": "v1.0.0（2026-06-28）为首个正式版，包含 609 个文件、2.8 万行代码变更、8 套完整示例工程。仓库创建仅 23 天即发布稳定版，迭代速度极快。 ---"
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
-                "置信度：medium",
-                "信息盲区：无性能 benchmark 或 token 压缩的量化效果数据；多 AI 终端行为一致性的验证报告缺失；缺乏生产环境下的稳定性数据和用户案例；人类门控的具体实现机制未说明（是否仅依赖聊天层面的确认）；除 Node.js ≥20 外未列出其他系统依赖（如操作系统、额外工具）"
+                "置信度：high",
+                "信息盲区：未明确最小 Node.js 版本要求；无性能基准测试数据；与其他工作流工具（如 Aider、Continue）的具体对比缺失；未说明是否支持非 FastAPI 技术栈生成"
               ]
             }
           ]
@@ -10724,6 +12178,13 @@
               "starsTotal": 451,
               "starsGained": 0,
               "release": "v0.1.4"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
+              "starsTotal": 451,
+              "starsGained": 0,
+              "release": "v0.1.4"
             }
           ],
           "analysis": [
@@ -10805,7 +12266,7 @@
           "isNew": true,
           "createdAt": "2026-06-05",
           "pushedAt": "2026-06-28",
-          "latestRelease": "v0.42.0",
+          "latestRelease": "v1.0.0",
           "firstSeen": "2026-06-22",
           "topics": [
             "ai",
@@ -10871,55 +12332,66 @@
               "starsTotal": 625,
               "starsGained": 0,
               "release": "v0.42.0"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "release_update",
+              "starsTotal": 631,
+              "starsGained": 0,
+              "release": "v1.0.0"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "TaiyiForge 是一款 AI 编码工作流自动化插件，将 AI 辅助开发过程从“玄学对话”改造为由状态机驱动的九阶段工程流水线。每个阶段有固定产出和审批点，强制人类在关键决策点介入，确保 AI 不跳过需求、设计或审查。它通过一套统一的 slash 命令，在 Claude、Codex、Cursor、OpenCode 四个 AI 终端中提供一致的行为。"
+              "body": "TaiyiForge（太一炉）是一套把 AI 代码生成过程强制编排为九阶段流水线的工具。通过状态机引擎，约束 Claude、Codex、Cursor 等 AI 终端必须按序产出需求、设计、任务拆分、TDD 开发、测试证据和人工审批，避免 Agent “偷跑”。"
             },
             {
               "heading": "为什么火",
-              "body": "仓库创建仅 3 周即获 492 星，切中了团队使用 AI 编码的普遍痛点：Agent 总是跳过设计直接写代码、长会话上下文丢失、不同工具流程各异。它给出了一套可落地、可复制的纪律框架，将“AI 写代码”提升到“AI 工程化”，因此吸引关注。"
+              "body": "当前 AI 辅助编程普遍存在流程跳跃、上下文丢失、多工具行为不一致的痛点。TaiyiForge 用 Skill 插件统一指令集，用硬门控阻断跳过设计，用 token 压缩机制保持长会话可持续，击中工程团队对 AI 产出的审计需求。其 /taiyi:plan 一键生成全栈骨架的 auto 模式（79 文件，1,170 测试 0 失败）展示了直接可用的工程化产出能力。"
             },
             {
               "heading": "技术栈",
-              "body": "TypeScript + Node.js (≥20)，通过 npm 包 oh-my-taiyiforge 分发。核心包含状态机引擎、事件总线、ChangeGraph 知识图谱、token 压缩机制及结构化日志。集成到 AI 终端依靠 slash 命令与 SKILL.md 声明。"
+              "bullets": [
+                "语言：TypeScript",
+                "分发方式：npm 包，通过 npx taiyi-forge-install 安装 Skill 到各 AI 终端（Claude Code、Cursor、OpenCode、Codex）",
+                "测试：151 个测试文件，1,170 测试用例，包含 CLI 冒烟测试、Agent 角色测试、E2E",
+                "许可证：MIT"
+              ]
             },
             {
               "heading": "核心能力",
               "bullets": [
-                "九阶段流水线：change → requirement → design → ui-design → task → dev → test → review → integration，每步有明确工件。",
-                "人类门控：change、design、review 三个关键阶段必须人类审批，引擎不理会 AI 的自我放行。",
-                "多端一致：28 条 slash 命令及 6 个 umbrella 功能在四端行为完全对齐。",
-                "强制 TDD：dev 阶段必须先写失败的测试再实现，不是建议是硬约束。",
-                "证据防假过门：每个验收标准必须附可执行验证命令（evidence），跑不过不进入下一阶段。",
-                "Token 压缩与断点续传：长会话自动产出 CONTEXT-COMPACT.md，跨天无缝继续。",
-                "ChangeGraph：追踪变更间依赖，改一处知全局。",
-                "灵活 profile：full（大功能）、lite（小修复）、nano（typo 改）等 10 种模式。"
+                "九阶段契约流水线：change → requirement → design → ui-design → task → dev → test → review → integration，每阶段固定产出，关键节点人工审批。",
+                "跨终端统一指令：28 条规范 slash 命令，同一套词汇在各平台行为一致。",
+                "项目级规划：/taiyi:plan 接收 README/PRD/PDF/URL，自动分解为独立变更模块，支持半自动确认或全自动生成骨架（含 FastAPI 后端、前端、测试、Docker 等）。",
+                "强制 TDD + evidence：dev 阶段先红后绿，每个验收标准必须有可执行验证命令，打通过门控。",
+                "上下文管理：长会话自动产出上下文压缩文档，支持跨天续接。",
+                "柔性 profile：提供 full、lite、nano 等 8 种流程裁切，适应不同规模需求。"
               ]
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "要求 AI 辅助编码有纪律、可审计的团队。",
-                "同时使用多个 AI 编码工具，需要统一流程。",
-                "需要将 AI 生成的代码置于强制设计、审查和测试门控下的项目。"
+                "用多个 AI 编程工具、但希望流程标准化的团队",
+                "需要产出可审计设计文档和测试证据的项目",
+                "想从零快速生成全栈项目骨架（FastAPI 后端 + 前端）的场景",
+                "已有 Harness、OpenSpec、Superpowers 等插件的用户（TaiyiForge 将其编排成统一状态机）"
               ]
             },
             {
               "heading": "同类对比",
-              "body": "直接与裸 AI 对话相比，TaiyiForge 提供了严格的流程控制和审批，但 README 未展开与同生态工具（Harness、OpenSpec、Superpowers 等）的横向对比，仅声明编排了它们的思想。"
+              "body": "与直接和 AI 对话比，TaiyiForge 用状态机保证阶段不跳、审批硬拦、上下文持久化。相比 oh-my-claudecode / oh-my-codex 等单一工具插件，它实现了跨终端一致性和项目级规划能力，但不提供 AI 模型本身，定位为流程编排壳。"
             },
             {
               "heading": "版本动态",
-              "body": "最新 v0.42.0 聚焦文档与工程基建（README 精炼、CI 自动发布）。核心功能在 v0.23–v0.40 期间建立：规范命令集、evidence 强校验、事件总线、ChangeGraph 等。v1.0.0 计划锁定 API、达成四端 parity 并开始收集外部案例。 ---"
+              "body": "v1.0.0（2026-06-28）为首个正式版，包含 609 个文件、2.8 万行代码变更、8 套完整示例工程。仓库创建仅 23 天即发布稳定版，迭代速度极快。 ---"
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
-                "置信度：medium",
-                "信息盲区：无性能 benchmark 或 token 压缩的量化效果数据；多 AI 终端行为一致性的验证报告缺失；缺乏生产环境下的稳定性数据和用户案例；人类门控的具体实现机制未说明（是否仅依赖聊天层面的确认）；除 Node.js ≥20 外未列出其他系统依赖（如操作系统、额外工具）"
+                "置信度：high",
+                "信息盲区：未明确最小 Node.js 版本要求；无性能基准测试数据；与其他工作流工具（如 Aider、Continue）的具体对比缺失；未说明是否支持非 FastAPI 技术栈生成"
               ]
             }
           ]
@@ -11142,6 +12614,13 @@
               "date": "2026-06-28",
               "reason": "release_update",
               "starsTotal": 24326,
+              "starsGained": 5519,
+              "release": "v1.2.2"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
+              "starsTotal": 24658,
               "starsGained": 5519,
               "release": "v1.2.2"
             }
@@ -11436,7 +12915,7 @@
           "isNew": true,
           "createdAt": "2026-01-10",
           "pushedAt": "2026-06-28",
-          "latestRelease": "v3.23.0",
+          "latestRelease": "v3.24.1",
           "firstSeen": "2026-06-21",
           "topics": [
             "a-stock",
@@ -11503,65 +12982,80 @@
               "starsTotal": 50782,
               "starsGained": 7137,
               "release": "v3.23.0"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "release_update",
+              "starsTotal": 51014,
+              "starsGained": 7137,
+              "release": "v3.24.1"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "daily_stock_analysis 是一个基于 AI 大模型的个人股票决策助手，能每日自动拉取多市场行情、实时新闻、技术指标，由 LLM 生成包含评分、趋势、买卖点位、风险警报和操作清单的「决策仪表盘」，并通过企业微信、飞书、Telegram、Discord、邮件等渠道自动推送到你的设备上。 项目支持 A股、港股、美股、日股、韩股（日韩尚处 MVP 阶段），19 种数据源 + 14 种搜索/舆情接口，15 种内置策略的 Agent 问答，以及 Web 工作台、桌面客户端、Docker 一键部署。"
+              "body": "一个基于大语言模型的多市场股票智能分析系统，支持 A 股、港股、美股、日股、韩股，每日自动拉取行情与新闻数据，由 AI 生成包含评分、趋势、买卖点位、风险警报和催化因素的决策仪表盘，并推送到企业微信、飞书、Telegram 等渠道。提供 Web/桌面工作台，支持 Agent 策略问股与智能股票导入。"
             },
             {
               "heading": "为什么火",
               "bullets": [
-                "零成本自动化：依赖 GitHub Actions 即可实现工作日内每日 18:00 自动运行，无需服务器，Fork + 配置 Secrets 5 分钟上线。",
-                "全市场覆盖：A/港/美/ETF 及近期加入的日韩股（.T、.KS、.KQ），适配不同市场的数据边界（筹码、龙虎榜等不支持的板块自动降级为 not_supported）。",
-                "AI 决策闭环：v3.23.0 起引入 DecisionSignal 机制，打通 AI 建议→报告展示→用户反馈→后验通知→组合风险监控的完整链路。",
-                "开箱即用的 Agent：既可在 Web 界面追问均线、缠论、波浪等策略，也支持自定义策略文件及多 Agent 编排。",
-                "成熟的开发生态：44000+ Star，活跃维护，配套 AlphaSift（选股）和 AlphaEvo（策略进化）系列项目，并已接入 HelloGitHub 等平台推荐。"
+                "零成本定时运行：利用 GitHub Actions 实现工作日自动分析，无需服务器。",
+                "多市场覆盖：原生支持五大市场，数据源丰富，适合跨市场投资者。",
+                "高度集成：内置多种 AI 模型（OpenAI 兼容、Gemini、Claude、本地 Ollama 等）和新闻搜索源，配置灵活。",
+                "社区活跃：Star 超 5.1 万，持续更新，文档齐全（中英双语），有多篇部署视频教程。"
               ]
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "语言/框架：Python 3.10+，FastAPI 提供 Web 与 API 服务，Docker 支持",
-                "AI 层：支持 Anspire、AIHubMix、Gemini、Claude、OpenAI 兼容（DeepSeek、通义千问）、Ollama 本地等，通过统一适配器调度",
-                "数据源：行情（AkShare、Tushare、Pytdx、Baostock、YFinance、Longbridge）、新闻搜索（Anspire、SerpAPI、Tavily、博查、Brave、MiniMax、SearXNG）、社交舆情（Reddit/X/Polymarket）",
-                "自动化与部署：GitHub Actions、Docker、定时任务，Token 用量监控与调用可观测性埋点",
-                "前端展示：Web 工作台（深色/浅色主题）、桌面端打包、实时任务进度、回测、持仓管理、智能导入与补全"
+                "语言：Python 3.10+",
+                "核心框架：FastAPI（Web 后端）、GitHub Actions（定时任务）、Docker（自托管部署）",
+                "数据源：TickFlow、AkShare、Tushare、YFinance、Longbridge 等",
+                "模型接入：Anspire、AIHubMix、Gemini、OpenAI、DeepSeek、Claude、本地模型等",
+                "通知渠道：企业微信、飞书、Telegram、Discord、Slack、邮件",
+                "前端：Web 工作台（浅/深色主题）、桌面端（Electron 打包）"
               ]
             },
             {
               "heading": "核心能力",
-              "body": "1. 每日决策报告：核心结论、多空评分、趋势判断、买卖点位、风险警报、催化因素、操作检查清单 2. 多市场数据聚合：跨 A/港/美/日/韩的行情、K线、技术指标、资金流、筹码、新闻、公告和基本面，日韩市场在资金流、龙虎榜、板块等高阶数据上自动降级 3. Agent 策略问股：支持多轮追问，内置均线、缠论、波浪、趋势、热点、事件、成长等 15 种策略，可自定义策略文件 4. 闭环信号追踪：v3.23.0 新增的 DecisionSignal 将 AI 买卖建议提取为结构化信号，串联报告展示、用户反馈、后验验证和组合风险监控 5. 多通道推送：企业微信、飞书、Telegram、Discord、Slack、邮件，支持分组推送与 Markdown 转图片 6. 零成本定时运行：GitHub Actions 自动执行，非交易日跳过，支持断点续传 7. Web 与桌面工作台：手动分析、历史报告查看、完整 Markdown、回测、持仓、智能导入，一键启动 python main.py --webui"
+              "bullets": [
+                "每日决策仪表盘：AI 生成核心结论、评分、趋势判断、买卖点位、风险警报、催化因素、操作清单。",
+                "多市场数据聚合：涵盖行情、K 线、技术指标、资金流、筹码、新闻、公告、基本面，日韩市场提供基础行情降级展示。",
+                "Web/桌面工作台：手动分析、历史报告、回测、持仓管理、智能导入、配置管理。",
+                "Agent 策略问股：多轮追问，内置 15 种策略（均线、缠论、波浪等），支持实时行情与新闻调用。",
+                "零成本自动化：通过 GitHub Actions 定时执行，支持非交易日跳过、断点续传。",
+                "多通知渠道推送：支持 Markdown 报告和图片模式。"
+              ]
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "个人投资者日常盯盘，希望减少信息筛选时间，获得结构化的多因子决策参考",
-                "小型投研团队需要低成本的自动化晨会报告与推送",
-                "量化爱好者研究 AI 驱动的策略生成、Agent 对话与信号反馈闭环",
-                "学习或教学中使用开源系统演示多市场金融数据聚合与 LLM 应用"
+                "个人投资者每日快速获取自选股综合评估，辅助决策。",
+                "跨市场（A/港/美/日/韩）交易者的一站式分析看板。",
+                "想学习 LLM 在金融分析中应用的开发者，可基于开源代码二次开发。",
+                "量化新手尝试轻量级自动化分析，避免复杂回测系统。"
               ]
             },
             {
               "heading": "同类对比",
-              "body": "与一般开源量化框架（如 vnpy、Backtrader）相比，daily_stock_analysis 更侧重“AI 解读 + 日常推送”而非交易执行；与 StockBot 等聊天机械人相比，它直接提供全市场数据聚合、决策仪表盘和 Agent 策略组合，并支持零成本的 GitHub Actions 部署。与作者的另一项目 AlphaSift（选股）和 AlphaEvo（策略进化）形成“选股→每日分析→策略验证”的工具体系。"
+              "body": "| 项目 | 差异 | |------|------| | OpenBB Terminal | 重交互式金融数据分析，无 AI 生成报告和多渠道推送。 | | FinGPT | 专注金融大模型微调，缺少开箱即用的多市场每日分析流水线。| | 传统量化平台（聚宽/米筐）| 偏向策略回测与实盘交易，DSA 更侧重 AI 解读与推送，部署更轻量。| | 自行搭建爬虫+GPT 分析 | DSA 已整合数据源与通知，配置简单，社区维护活跃。|"
             },
             {
               "heading": "版本动态",
-              "body": "近期 v3.23.0 版本关键更新： ---",
+              "body": "最新版本 v3.24.1（2026-06-28）新增： 项目处于活跃迭代期，贡献者多，相关衍生项目 AlphaSift（选股）和 AlphaEvo（回测进化）形成生态。 ---",
               "bullets": [
-                "DecisionSignal 闭环：AI 建议可被报告提取、Web 展示、用户反馈、后验计算和告警推送，进入可追踪的组合风险管理流程。",
-                "新增合规新闻源（RSS/Atom 与 NewsNow），分析、Agent 和大盘复盘可在资讯源故障时复用本地缓存证据。",
-                "日韩股票 MVP 支持：通过 YFinance 获取 .T、.KS、.KQ 标的日线行情与技术指标。",
-                "可观测性增强：Token 用量监控看板、legacy LLM 调用遥测、消息稳定性审计。"
+                "覆盖台股、日股、韩股市场，含机构流数据。",
+                "接入 TickFlow 作为 A 股核心数据源，增强行情与 K 线预取。",
+                "新增本地生成后端（codex_cli、Hermes），支持 prompt cache 能力。",
+                "改进定时任务与 Web 设置页，强化信号归因与概念板块展示。",
+                "修复桌面/Docker 发布、回测空结果、通知 Markdown 等稳定性问题。"
               ]
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
                 "置信度：high",
-                "信息盲区：日韩股票分析目前标注为 MVP，资金流、龙虎榜、板块等高阶数据因市场边界降级为 not_supported，实际可用深度尚未公布基准对比；LLM 生成决策的准确率、回测表现或用户反馈统计未提供；Agent 策略有效性及自定义策略的实际表现无量化说明；推送到多个渠道时是否存在限流或延迟情况不明；大数据量（例如数百只自选股）下的分析耗时和成本没有给出参考值"
+                "信息盲区：报告生成质量与 LLM 选择的依赖关系未提供基准测试数据；多市场数据稳定性与延迟未给出实测指标；本地 CLI 后端（codex_cli）的具体使用说明未在 README 中展开；桌面客户端的详细功能与支持平台未在 README 中明确"
               ]
             }
           ]
@@ -11645,6 +13139,13 @@
               "date": "2026-06-28",
               "reason": "lightweight",
               "starsTotal": 75124,
+              "starsGained": 3258,
+              "release": "v2.0.0"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
+              "starsTotal": 75184,
               "starsGained": 3258,
               "release": "v2.0.0"
             }
@@ -11771,6 +13272,13 @@
               "date": "2026-06-28",
               "reason": "release_update",
               "starsTotal": 24326,
+              "starsGained": 5519,
+              "release": "v1.2.2"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
+              "starsTotal": 24658,
               "starsGained": 5519,
               "release": "v1.2.2"
             }
@@ -12144,8 +13652,8 @@
           "streakDays": 6,
           "isNew": false,
           "createdAt": "2026-04-07",
-          "pushedAt": "2026-06-23",
-          "latestRelease": "v0.4.0",
+          "pushedAt": "2026-06-28",
+          "latestRelease": "v0.4.5",
           "firstSeen": "2026-06-19",
           "topics": [
             "ai-video",
@@ -12219,73 +13727,75 @@
               "starsTotal": 8632,
               "starsGained": 1630,
               "release": "v0.4.0"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "release_update",
+              "starsTotal": 9270,
+              "starsGained": 6126,
+              "release": "v0.4.5"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "Palmier Pro 是一个用 Swift 从零构建的 macOS 视频编辑器，特色是深度集成 AI 生成与代码助手：编辑器中可直接调用 Seedance、Kling 等模型生成视频/图片，同时内置 MCP 服务器，让 Claude Code、Cursor、Codex 等 AI 助手通过标准协议操控时间线。编辑器本身（不含生成式 AI）完全开源（GPLv3），生成模块闭源，采用订阅制。"
+              "body": "Palmier Pro 是用 Swift 从零构建的开源 macOS 视频编辑器，内置生成式 AI（与 Seedance、Kling 等模型集成），并通过 MCP 协议暴露时间线控制接口，让 Claude Code、Codex、Cursor 等外部代理直接参与视频编辑项目。编辑器部分完全开源（GPLv3），生成式 AI 处理端闭源，需订阅。"
             },
             {
               "heading": "为什么火",
               "bullets": [
-                "Y Combinator S24 项目，苹果生态原生应用，近 9k Star，吸引了大量对 AI + 创作工具结合的开发者。",
-                "提出“AI 原生视频编辑器”概念：不再只是插件，而是让 AI 成为协作者，通过 MCP 将 Claude 等变成时间线操作手。",
-                "精准卡位 macOS 26（Tahoe）与 Apple Silicon，利用 Metal 加速视觉效果，展现新技术栈潜力。"
+                "首个原生支持 MCP 的视频剪辑工具：代理可通过 HTTP 发送命令操作轨道、剪辑、预览，相当于把视频编辑变成可编程任务。",
+                "YC S24 阵容 + 社区反馈：9k Star 在 2 个多月内积累，说明需求明确。",
+                "工程师导向：用熟悉的 LLM 工具链替代手动操作，降低视频制作门槛，尤其适合开发者快速产出 demo 或内容。"
               ]
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "Swift + AppKit/SwiftUI（推测）实现原生 UI 与高性能渲染。",
-                "Metal 用于颜色分级与特效合成（v0.4.0 已集成）。",
-                "MCP 服务器通过 HTTP 暴露在 127.0.0.1:19789，支持 Claude Code/Desktop、Cursor、Codex 等常用 AI 编码工具。",
-                "音频处理支持 PCM 共享读取器、多轨同步，支持 AIFF-C、FLAC 等格式导入。",
-                "生成式 AI 部分闭源，未披露具体协议，或为自研管线与第三方 API 的组合。"
+                "语言：Swift（SwiftUI/AppKit）",
+                "平台：macOS 26 (Tahoe) on Apple Silicon 独占",
+                "通信协议：MCP over HTTP（本地 127.0.0.1:19789/mcp）",
+                "生成模型：Seedance、Kling、Nano Banana Pro（云端调用）",
+                "发行格式：DMG，通过 Sparkle appcast 更新"
               ]
             },
             {
               "heading": "核心能力",
               "bullets": [
-                "完整视频编辑：多轨时间线、剪辑、变换、关键帧、分辨率导出（含 2K、匹配时间线）。",
-                "生成式 AI：在时间线内直接生成 Seedance、Kling、Nano Banana Pro 等模型的图像/视频素材。",
-                "智能代理协作：MCP 服务器让外部 AI 助手可以读取、修改项目，实现自动化剪辑。",
-                "多语言支持：15 种语言，包括阿拉伯语等 RTL 语言。",
-                "免费编辑器：无登录即可使用基础编辑功能，MCP 服务也免费开放。"
+                "完整视频时间线编辑（片段剪切、多轨排列、波纹删除、同步锁定等）",
+                "拖拽轨道重排序、Shift 拖拽执行波纹修整",
+                "内建生成式 AI 生图/生视频（需订阅）",
+                "本地 MCP 服务即时启动，暴露剪辑、项目控制等工具",
+                "与 Claude Code/Desktop、Cursor、Codex 原生集成，提供一键安装扩展",
+                "多语言 README，社区 Discord 活跃"
               ]
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "视频创作者想要用代码或 AI 助手自动化重复性编辑（如批量加字幕、调色、剪辑片段）。",
-                "开发者试验“AI 代理控制 GUI 工具”的交互范式，利用 MCP 构建自定义剪辑流程。",
-                "macOS 生态重度用户，追求原生性能与 Metal 加速的本地编辑体验。",
-                "对 AI 生成内容与手工编辑混合工作流感兴趣的早期尝鲜者。"
+                "开发者批量生成或剪辑视频片段（自动化教程、产品演示）",
+                "LLM 代理爱好者演练更具实操性的多步工具调用",
+                "小型团队快速出片，利用 AI 辅助初剪，减少重复劳动"
               ]
             },
             {
               "heading": "同类对比",
+              "body": "Palmier 优势在于与 LLM 代理的原生结合，劣势是编辑功能成熟度尚不及老牌软件，且仅限于 macOS 26。",
               "bullets": [
-                "对比 Premiere Pro/After Effects：Palmier Pro 更轻量，原生集成 AI 代理，而非通过插件层交互，但功能成熟度远不及 Adobe。",
-                "对比 CapCut：CapCut 更偏向移动/桌面全流程一键式模板与 AI 特效，Palmier Pro 开放 MCP，给技术用户更大的自定义空间。",
-                "对比 DaVinci Resolve：DaVinci 有强大的 API 与 Fusion，但并非为 AI 助手原生设计；Palmier Pro 从底层就考虑 Agent 协作。",
-                "独特优势：唯一一个以 MCP 标准正式支持 Claude/Cursor 等工具的视频编辑器，形成“写代码即剪视频”的新路径。"
+                "Adobe Premiere Pro / DaVinci Resolve：功能完整但无 MCP 集成，AI 能力需插件，不开源。",
+                "CapCut/DavinCi Neural Engine：封闭生态，无代理交互。",
+                "Flowblade/Kdenlive：开源跨平台但非原生 macOS，无 MCP 设计。"
               ]
             },
             {
               "heading": "版本动态",
-              "body": "---",
-              "bullets": [
-                "最新 v0.4.0（2026-06-23）引入 Metal 颜色与特效、导出添加 2K 和 Match-Timeline 分辨率、多轨音频同步、修复分栏大小持久化等问题。",
-                "社区贡献活跃，多语言本地化持续更新，关注者通过 Discord/X 反馈，项目迭代较快。",
-                "现阶段仍处于早期，编辑器基础功能稳定，但 AI 能力依赖闭源模块，长期发展取决于订阅模式与开放生态的平衡。"
-              ]
+              "body": "最新 v0.4.5（2026-06-28）聚焦时间线增强：新增帧选取预览、波纹插入预览、轨道拖拽重排、波纹修整边缘拖拽等编辑功能，同时修复 MCP 数字参数溢出、窗口尺寸、fcpxml 格式等 bugs，并开始引入“Skills”设置页面，暗示代理能力可配置化。 ---"
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
                 "置信度：high",
-                "信息盲区：生成式 AI 功能的具体模型调用方式及后端架构未公开；MCP 提供的工具、资源、prompts 列表未在 README 中详细列出；编辑器功能与专业视频软件（如 Premiere、DaVinci）的详细功能对比缺失；无性能基准测试数据（渲染速度、时间线帧率等）"
+                "信息盲区：未列出 MCP 工具集的具体命令/API 描述；生成式 AI 的模型选择及订阅价格未公开；未提供视频导出的格式、编码器支持细节；未说明是否依赖额外系统库（如 FFmpeg）；目前无性能基准测试或稳定性报告"
               ]
             }
           ]
@@ -12551,6 +14061,13 @@
               "date": "2026-06-28",
               "reason": "release_update",
               "starsTotal": 586,
+              "starsGained": 0,
+              "release": "v0.5.3"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
+              "starsTotal": 590,
               "starsGained": 0,
               "release": "v0.5.3"
             }
@@ -12980,6 +14497,13 @@
               "starsTotal": 35120,
               "starsGained": 3965,
               "release": "v0.5.0"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
+              "starsTotal": 35281,
+              "starsGained": 3965,
+              "release": "v0.5.0"
             }
           ],
           "analysis": [
@@ -13265,6 +14789,13 @@
               "date": "2026-06-28",
               "reason": "lightweight",
               "starsTotal": 951,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
+              "starsTotal": 952,
               "starsGained": 0,
               "release": ""
             }
@@ -13866,6 +15397,13 @@
               "date": "2026-06-28",
               "reason": "release_update",
               "starsTotal": 5180,
+              "starsGained": 0,
+              "release": "v0.3.0"
+            },
+            {
+              "date": "2026-06-29",
+              "reason": "lightweight",
+              "starsTotal": 5248,
               "starsGained": 0,
               "release": "v0.3.0"
             }

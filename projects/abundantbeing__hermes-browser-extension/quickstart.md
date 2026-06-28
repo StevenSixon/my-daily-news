@@ -1,29 +1,23 @@
-### 1. 准备工作
-- 确保已安装并运行 Hermes Agent，且 API 服务器已启用。
-- 在 Hermes 的 `~/.hermes/.env` 中配置如下（示例）：
-  ```bash
-  API_SERVER_ENABLED=true
-  API_SERVER_HOST=127.0.0.1
-  API_SERVER_PORT=8642
-  API_SERVER_KEY=<your-key>
-  API_SERVER_CORS_ORIGINS=chrome-extension://<extension-id>
-  ```
-  启动网关：`hermes gateway run`
-- 本机需有 Node.js 20+ 和 Chrome/Edge 114+ 浏览器。
-
-### 2. 构建扩展
+## 安装与构建
 ```bash
 git clone https://github.com/abundantbeing/hermes-browser-extension.git
 cd hermes-browser-extension
 npm install
 npm run build
 ```
-生成的扩展目录为 `dist/`。
+生成的 `dist/` 即扩展目录。
 
-### 3. 加载扩展
-进入 `chrome://extensions` 或 `edge://extensions`，开启开发者模式，点击“加载已解压的扩展”，选择 `dist/` 文件夹。
+## 加载到 Chrome
+1. 打开 `chrome://extensions`，启用“开发者模式”。
+2. 点击“加载已解压的扩展程序”，选择 `dist/` 文件夹。
+3. 点击工具栏扩展图标打开侧面板。
 
-### 4. 连接 Hermes 并测试
-点击扩展图标打开侧面板，选择“Connect to Hermes” -> “Manual setup”（如果自动审批不可用时），选择 Local gateway，填入 `http://127.0.0.1:8642` 及你的 API 密钥，点击“Test connection”确认连通性后保存。
+## 连接 Hermes
+- **本地模式**：确保 Hermes Gateway 已在 `127.0.0.1:8642` 运行，并配置 `API_SERVER_KEY`。
+- 扩展侧面板中点击“Manual setup”，选择“Local gateway”，输入 `http://127.0.0.1:8642` 和你的浏览器 token/API key，测试连接后保存。
+- **远程模式**：类似但填写可访问的远程 URL。
 
-打开一个正常的 HTTPS 网页（如一篇博客），在侧面板输入：“Summarize this page in one sentence.” 即可看到 Agent 的回复。
+## 最小示例
+打开任意 `https://` 页面（如一篇博客），在侧面板中输入：“Summarize this page in one sentence.” 即可获得基于上下文的摘要。可试用 `/summarize` 快速命令。
+
+**依赖**：Node.js 20+，Chrome 114+，已安装并运行 Hermes Agent。

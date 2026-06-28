@@ -7,11 +7,7 @@
 **把 AI 写代码的玄学，变成一条可执行、可审计的工程流水线。**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Node](https://img.shields.io/badge/node-%3E%3D20-brightgreen)](package.json)
 [![npm version](https://img.shields.io/npm/v/oh-my-taiyiforge.svg)](https://www.npmjs.com/package/oh-my-taiyiforge)
-[![npm downloads](https://img.shields.io/npm/dm/oh-my-taiyiforge.svg)](https://www.npmjs.com/package/oh-my-taiyiforge)
-[![Version](https://img.shields.io/badge/version-0.40.0-orange)](CHANGELOG.md)
-[![v28 canonical](https://img.shields.io/badge/v28-28%20slashes%20%C2%B7%206%20umbrellas-blue)](docs/taiyi/canonical-commands.md)
 [![CI](https://img.shields.io/github/actions/workflow/status/Dong90/oh-my-taiyiforge/ci.yml?branch=main&label=CI)](https://github.com/Dong90/oh-my-taiyiforge/actions/workflows/ci.yml)
 [![Platforms](https://img.shields.io/badge/platforms-OpenCode%20%7C%20Claude%20%7C%20Codex%20%7C%20Cursor-8a2be2)](docs/QUICKSTART.md)
 
@@ -37,7 +33,7 @@
 
 **TaiyiForge 的回答**：一套九阶段工件契约 + 状态机引擎。在四套 AI 终端里行为完全一致。
 
-> `/taiyi:new` → 引擎告诉你下一步。不用背阶段顺序，不用记工件模板。
+> `/taiyi:plan` 默认半自动（拆模块 + 推荐 profile，人确认后批量 `/taiyi:new`）；切到 auto 模式即可一键生成全栈骨架（见下方"一键生成"小节）。不用背阶段顺序，不用记工件模板。
 
 ---
 
@@ -54,28 +50,35 @@
 ## 快速开始
 
 ```bash
-# 1. 克隆并构建
-git clone https://github.com/Dong90/oh-my-taiyiforge.git
-cd oh-my-taiyiforge
-npm install && npm run build
+# 1. 安装
+npm install oh-my-taiyiforge
 
 # 2. 同步 Skill 到你的 AI 终端（Claude / Cursor / OpenCode / Codex）
-node scripts/taiyi-forge.sh install --all
+npx taiyi-forge-install --all
 
 # 3. 在聊天里创建第一个 change
 /taiyi:new "优化登录流程"
 /taiyi:status
+
+# 或者：把整份需求丢给 /taiyi:plan，让引擎一次性拆出全部模块
+/taiyi:plan README.md           # 也可以是 PRD.md / PDF / URL
+# → 自动生成 examples/<项目>/agent/{backend,frontend}/ 全栈骨架（见下方"一键生成"小节）
 ```
 
 **你只管写 Markdown 和代码。阶段顺序、工件模板、门控校验全是引擎的活。**
 
 ```bash
 # 只装某一端
-node scripts/taiyi-forge.sh install --cursor
-node scripts/taiyi-forge.sh install --claude --opencode
+npx taiyi-forge-install --cursor
+npx taiyi-forge-install --claude --opencode
+
+# 源码安装
+git clone https://github.com/Dong90/oh-my-taiyiforge.git
+cd oh-my-taiyiforge && npm install && npm run build
+node scripts/taiyi-forge.sh install --all
 ```
 
-[详细安装说明 →](docs/QUICKSTART.md)
+[详细安装 →](docs/QUICKSTART.md)
 
 ---
 
@@ -108,19 +111,67 @@ change → requirement → design → ui-design → task → dev → test → re
 
 不管是 Claude Code 的 `/taiyi:new`、Cursor 的同名 slash、Codex 的 `$taiyi-new`，还是 OpenCode 的插件工具——**同一套词汇，同一种行为**。
 
-| 版本 | 状态 | 关键里程碑 |
-|------|------|----------|
-| v0.23.0 | ✅ 已发布 | **canonical v28**: 28 顶栏 slashes + 6 umbrellas(`token`/`test`/`review`/`diagram`/`mode`/`workflow`) + `skill-fusion-principles.md` + `validateV28CatalogSync` gate |
-| v0.24.0 | ✅ 已发布 | 首次 npm 发布 · `npx taiyi-forge-install` 零构建安装 · README v28 收敛重写 · IDE 菜单裁剪为 28 条（umbrella Phase 2） |
-| v0.26.0 | ✅ 已发布 | **evidence 强校验**: AC 必配 `evidence{command,exitCode:0}` 防假过门 · commit trailer 强制执行 · status 5s 防抖 · profile 扩容 10 种 |
-| v0.27.0 | ✅ 已发布 | **event bus** + structured logger · CLI 62→18 瘦身（handlers map 替代巨型 switch）· TODO 里程碑总览 · schema 扩展 + 10 个 SKILL.md 重写 |
-| v0.30.0 | ✅ 已发布 | **data-driven Mermaid chain**: 设计图 SSOT 三源绑定 + rollback 追溯 · `is_cli_only` 跳过 UI 阶段契约 · ast-grep 陷阱规则(8 patterns) + `scan.sh` |
-| v0.35.0 | ✅ 已发布 | **ChangeGraph 知识图谱**: load/edges/query/render — 49 tests · `PHASE-CONTEXT.md` 图谱驱动生成（替代逐份读上游工件） |
-| v0.40.0 | ✅ 最新 | review 日绑定 + SSOT 交叉引用 · E2E fixtures 扩 7 字段 · graph 上下文压缩 · 平台冒烟 CI / Playwright / vitest 超时修复 |
-| v1.0.0 | ⏳ 计划 | 锁定 9 阶段 API · 四端 parity · 外部案例收集 |
+| 命令 | 做什么 |
+|------|-------|
+| `/taiyi:plan [file]` | **项目规划**：README / PRD / PDF / URL → 一次性拆出全部模块 + 一键生成代码骨架 |
+| `/taiyi:new` | 创建变更 |
+| `/taiyi:status` | 查看进度 |
+| `/taiyi:write` | 写当前阶段 |
+| `/taiyi:continue` | 推进下一阶段 |
+| `/taiyi:apply` | 进入实现 |
+| `/taiyi:archive` | 全阶段归档 |
 
-**已就绪**: 完整九阶段流水线 · 四端共享 Skill · 强制 TDD · evidence 防假过门 · token 压缩 · ChangeGraph 知识图谱 · 平台冒烟 CI · 零构建一行安装(v0.24+)
-**未就绪**: 生产级 SLA · 完整 i18n
+[29 条完整命令表 →](docs/taiyi/canonical-commands.md)
+
+### 项目级 vs Change 级
+
+| 层级 | 入口 | 做什么 | 产出 |
+|------|------|--------|------|
+| **项目级** | `/taiyi:plan` | 把大需求拆成模块 + 推荐 profile + 处理冲突 | 批量 `/taiyi:new` |
+| **Change 级** | `/taiyi:new` | 单模块走九阶段 | CHANGE → CHANGELOG |
+
+### `/taiyi:plan` 一键生成的全栈骨架（auto 模式）
+
+`/taiyi:plan` 默认半自动——拆完模块后等人确认再批量 `/taiyi:new`。**auto 模式**则一口气把后端、前端、测试、迁移全跑完，单条命令生成可直接跑的全栈工程。
+
+下面就是 auto 模式一次产出的真实结构（[`examples/translation-assistant/agent/`](examples/translation-assistant/agent/)，79 文件 / 23 目录）：
+
+```
+agent/
+├── backend/                          # FastAPI 后端
+│   ├── app/
+│   │   ├── main.py                   # 入口
+│   │   ├── controllers/v1/           # HTTP 层（路由 + 校验）
+│   │   ├── services/                 # 业务编排（LLM 调用、缓存、限流）
+│   │   ├── strategies/               # ≥2 策略可替换（同步 / 异步 / 流式翻译）
+│   │   ├── repositories/             # 数据访问
+│   │   ├── models/                   # ORM / Schema
+│   │   ├── middleware/               # auth / logging / ratelimit / cors
+│   │   ├── adapters/                 # 外部服务接入（LLM provider、Redis）
+│   │   ├── tasks/                    # 异步任务
+│   │   ├── db/  cache/  telemetry/  core/  config/  # 横切关注点
+│   │   └── alembic/env.py            # 迁移入口
+│   └── tests/
+│       ├── test_controllers.py test_services.py test_core.py
+│       ├── test_models.py test_adapters.py test_strategies.py
+│       └── integration/  performance/  e2e/         # 三层测试套件
+└── frontend/                         # 前端
+    ├── index.html                    # 入口
+    ├── app.js                        # 业务逻辑
+    ├── style.css                     # 样式
+    └── metrics.js                    # 前端指标上报
+```
+
+**对应九阶段工件**：每个模块同步产出 `CHANGE.md → REQUIREMENT.md → DESIGN.md → TASK.md → TEST.md`（在 `.taiyi/changes/<slug>/` 下，仓库不提交，本地可见）。整个产物**过了 48 个单测 + e2e + integration**，CI 全绿。
+
+**怎么跑**：从需求文件开始
+
+```bash
+/taiyi:plan README.md --auto         # auto 模式：一键骨架
+/taiyi:plan PRD.pdf --profile=full   # 半自动：拆模块后等人确认
+```
+
+[完整示例 →](examples/translation-assistant/agent/) · [plan 命令参考 →](docs/taiyi/canonical-commands.md#taiyiplan)
 
 ### 不止流水线
 
@@ -151,7 +202,8 @@ change → requirement → design → ui-design → task → dev → test → re
 | [QUICKSTART](docs/QUICKSTART.md) | 5 分钟走通全流程 | 第一次用 |
 | [USAGE](docs/USAGE.md) | 日常节奏、场景、交付链 | 跑通之后 |
 | [ARCHITECTURE](docs/ARCHITECTURE.md) | 系统架构 + 代码布局 | 想改引擎 |
-| [canonical-commands](docs/taiyi/canonical-commands.md) | 28 条 slack 命令表 | 查命令 |
+| [canonical-commands](docs/taiyi/canonical-commands.md) | 29 条 slash 命令表 | 查命令 |
+| [examples/translation-assistant/agent/](examples/translation-assistant/agent/) | `/taiyi:plan --auto` 一次产出的全栈骨架 | 想要代码长什么样 |
 | [control-plane](docs/taiyi/control-plane.md) | Agent 纪律 + token 纪律 | 给 Agent 配 onboarding |
 | [full-oss-flow](docs/taiyi/full-oss-flow.md) | Superpowers + 全插件端到端 | 想看完整流程 |
 | [CONTRIBUTING](CONTRIBUTING.md) | 贡献指南 | 开 PR 之前 |

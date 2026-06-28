@@ -14,31 +14,32 @@
   ],
   "license": "GPL-3.0",
   "category": "AI 应用",
-  "classify_reason": "专为 AI 工作流构建的 macOS 视频编辑器，可能集成 AI 功能。",
-  "one_liner": "Swift原生、内置生成式AI、通过MCP与Claude/Cursor协作的macOS视频编辑器",
-  "why_worth_it": "让开发者直接用代码助手操控时间线，探索AI自动化视频编辑新范式，适合极客和原型速成",
+  "classify_reason": "内置AI功能的macOS视频编辑器",
+  "one_liner": "macOS 原生 AI 视频编辑器，通过 MCP 让 Claude/Codex/Cursor 直接操控时间线。",
+  "why_worth_it": "首次把开源视频编辑与 MCP 深度打通，适合想用 AI 代理自动剪片的极客，比多数插件方案更底层、更灵活。",
   "tags": [
-    "视频编辑器",
-    "MCP",
-    "Swift",
+    "AI 视频编辑",
+    "MCP 集成",
+    "Swift 原生",
     "macOS"
   ],
   "confidence": "high",
   "info_gaps": [
-    "生成式 AI 功能的具体模型调用方式及后端架构未公开",
-    "MCP 提供的工具、资源、prompts 列表未在 README 中详细列出",
-    "编辑器功能与专业视频软件（如 Premiere、DaVinci）的详细功能对比缺失",
-    "无性能基准测试数据（渲染速度、时间线帧率等）"
+    "未列出 MCP 工具集的具体命令/API 描述",
+    "生成式 AI 的模型选择及订阅价格未公开",
+    "未提供视频导出的格式、编码器支持细节",
+    "未说明是否依赖额外系统库（如 FFmpeg）",
+    "目前无性能基准测试或稳定性报告"
   ],
   "quality_flags": [],
-  "stars_total": 8632,
+  "stars_total": 9270,
   "created_at": "2026-04-07",
-  "pushed_at": "2026-06-23",
-  "latest_release": "v0.4.0",
+  "pushed_at": "2026-06-28",
+  "latest_release": "v0.4.5",
   "first_seen": "2026-06-19",
-  "last_seen": "2026-06-24",
-  "streak_days": 9,
-  "analysis_updated_at": "2026-06-24T16:28:28+0800",
+  "last_seen": "2026-06-29",
+  "streak_days": 10,
+  "analysis_updated_at": "2026-06-29T00:46:59+0800",
   "appearances": [
     {
       "date": "2026-06-19",
@@ -102,6 +103,13 @@
       "stars_total": 8632,
       "stars_gained": 1630,
       "release": "v0.4.0"
+    },
+    {
+      "date": "2026-06-29",
+      "reason": "release_update",
+      "stars_total": 9270,
+      "stars_gained": 6126,
+      "release": "v0.4.5"
     }
   ]
 }

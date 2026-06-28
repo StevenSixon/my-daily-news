@@ -21,7 +21,7 @@
   ],
   "license": "AGPL-3.0",
   "category": "AI 应用",
-  "classify_reason": "代理驱动的自动CVE发现平台",
+  "classify_reason": "AI驱动的自动CVE漏洞发现平台",
   "one_liner": "Agent 驱动的全自动 CVE 挖掘流水线：筛项目、审源码、验漏洞、出报告",
   "why_worth_it": "7 天挖出 30 个 CVE，覆盖 14 个开源项目；为白帽子提供从源码到申报的全流程自动化，大幅降低重复劳动",
   "tags": [
@@ -43,8 +43,8 @@
   "pushed_at": "2026-06-27",
   "latest_release": "v1.0.3",
   "first_seen": "2026-06-25",
-  "last_seen": "2026-06-28",
-  "streak_days": 4,
+  "last_seen": "2026-06-29",
+  "streak_days": 5,
   "analysis_updated_at": "2026-06-28T18:22:04+0800",
   "appearances": [
     {
@@ -71,6 +71,13 @@
     {
       "date": "2026-06-28",
       "reason": "release_update",
+      "stars_total": 429,
+      "stars_gained": 0,
+      "release": "v1.0.3"
+    },
+    {
+      "date": "2026-06-29",
+      "reason": "lightweight",
       "stars_total": 429,
       "stars_gained": 0,
       "release": "v1.0.3"

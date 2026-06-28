@@ -33,6 +33,9 @@ This repo is specifically for the **Hermes Browser Extension**: the Chrome/Edge/
 - Auto-syncs connected Hermes providers/models, profiles, skills, sessions, and capabilities.
 - Shows a Hermes compatibility panel so older gateways degrade into explicit fallback/manual modes instead of broken route errors.
 - Sends active tab/browser context into a persisted Hermes session.
+- Adds follow/pin context controls so a side panel can stay locked to a specific browser tab.
+- Keeps pinned-tab conversations isolated with per-tab local history and Hermes session bindings.
+- Adds quick commands for common browser-context work, including `/summarize`, `/explain`, `/rewrite`, `/tabs`, and `/action-items`.
 - Adds a collapsible “What Hermes saw” receipt after each sent turn for transparent context/debugging.
 - Captures active tab title/URL, open tabs, selected text, readable page text, metadata, headings, forms, links, and buttons where available.
 - Supports voice dictation through Hermes audio transcription when available, with Browser speech fallback when the connected runtime does not expose STT.
@@ -197,16 +200,16 @@ See [`SECURITY.md`](SECURITY.md), [`PERMISSIONS.md`](PERMISSIONS.md), [`DATA-FLO
 
 Make sure you loaded `dist/`, not the repo root. The selected folder must contain `manifest.json` directly.
 
-### Chrome still shows version `0.1.4` after updating
+### Chrome still shows an older version after updating
 
-The browser is still using an old unpacked folder or an unpacked extension card that was not reloaded. The shipped v0.1.5 source, built `dist/`, and release archive all contain `manifest.json` version `0.1.5`.
+The browser is still using an old unpacked folder or an unpacked extension card that was not reloaded. The shipped v0.1.6 source, built `dist/`, and release archive all contain `manifest.json` version `0.1.6`.
 
 Fix:
 
-1. Extract/download the v0.1.5 release or run `npm run build` locally.
+1. Extract/download the v0.1.6 release or run `npm run build` locally.
 2. Open `chrome://extensions` or `edge://extensions`.
 3. On the Hermes Browser Extension card, click **Reload**.
-4. If it still says `0.1.4`, click **Remove**, then **Load unpacked** again and select the fresh v0.1.5 `dist/` folder.
+4. If it still shows an older version, click **Remove**, then **Load unpacked** again and select the fresh v0.1.6 `dist/` folder.
 5. Click **service worker** / **Inspect views** only for debugging; it is not the version source.
 
 ### The side panel says it cannot connect

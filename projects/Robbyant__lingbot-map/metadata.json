@@ -1,0 +1,44 @@
+{
+  "full_name": "Robbyant/lingbot-map",
+  "url": "https://github.com/Robbyant/lingbot-map",
+  "description": "A feed-forward 3D foundation model for reconstructing scenes from streaming data",
+  "language": "Python",
+  "topics": [],
+  "license": "Apache-2.0",
+  "category": "AI 应用",
+  "classify_reason": "3D场景重建基础模型，可直接使用的AI工具",
+  "one_liner": "流式3D重建前馈模型，20 FPS稳定推理超万帧长序列",
+  "why_worth_it": "解决实时3D建图长序列漂移问题，前馈架构省去迭代优化，20fps处理10k+帧，适用于机器人、AR/VR、自动驾驶场景",
+  "tags": [
+    "3D重建",
+    "前馈模型",
+    "流式推理",
+    "Transformer"
+  ],
+  "confidence": "medium",
+  "info_gaps": [
+    "未公布benchmark具体指标数值，仅有定性描述“superior performance”",
+    "模型参数量、训练数据规模、显存占用等硬件需求未说明",
+    "与其他方法的定量对比缺失",
+    "窗口模式默认参数的有效性未经验证说明",
+    "长序列（>10k帧）时实际漂移量未提供量化分析"
+  ],
+  "quality_flags": [],
+  "stars_total": 8087,
+  "created_at": "2026-04-15",
+  "pushed_at": "2026-06-25",
+  "latest_release": null,
+  "first_seen": "2026-06-29",
+  "last_seen": "2026-06-29",
+  "streak_days": 1,
+  "analysis_updated_at": "2026-06-29T00:44:10+0800",
+  "appearances": [
+    {
+      "date": "2026-06-29",
+      "reason": "new",
+      "stars_total": 8087,
+      "stars_gained": 372,
+      "release": null
+    }
+  ]
+}

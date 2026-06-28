@@ -25,7 +25,7 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "并行AI代理开发环境和运行平台",
+  "classify_reason": "并行AI代理编排ADEs",
   "one_liner": "并行运行多个AI编程代理，自带Git工作树隔离与移动端监控。",
   "why_worth_it": "同时驾驭多个编码代理比较输出，免去终端切换与手动管理 Git worktree，支持几乎所有 CLI 代理。",
   "tags": [
@@ -43,13 +43,13 @@
     "移动端具体功能范围未展开"
   ],
   "quality_flags": [],
-  "stars_total": 8449,
+  "stars_total": 8525,
   "created_at": "2026-03-17",
   "pushed_at": "2026-06-28",
   "latest_release": "v1.4.103",
   "first_seen": "2026-06-24",
-  "last_seen": "2026-06-28",
-  "streak_days": 5,
+  "last_seen": "2026-06-29",
+  "streak_days": 6,
   "analysis_updated_at": "2026-06-28T18:16:17+0800",
   "appearances": [
     {
@@ -84,6 +84,13 @@
       "date": "2026-06-28",
       "reason": "release_update",
       "stars_total": 8449,
+      "stars_gained": 2554,
+      "release": "v1.4.103"
+    },
+    {
+      "date": "2026-06-29",
+      "reason": "lightweight",
+      "stars_total": 8525,
       "stars_gained": 2554,
       "release": "v1.4.103"
     }

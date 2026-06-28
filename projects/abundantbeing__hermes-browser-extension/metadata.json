@@ -15,26 +15,30 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "连接浏览器的 Hermes AI 代理扩展",
-  "one_liner": "Hermes Agent 浏览器侧栏，一键将页面上下文注入本地/远程 Agent 并安全回传。",
-  "why_worth_it": "为本地 AI Agent 装上浏览器“眼睛”，在浏览网页时直接调用 Agent 能力，全程数据自控。",
+  "classify_reason": "AI代理浏览器扩展",
+  "one_liner": "为Hermes Agent提供本地优先浏览器侧面板，支持隐私上下文与标签隔离对话。",
+  "why_worth_it": "Hermes用户可将网页上下文安全接入本地AI运行时，避免敏感泄露，比通用扩展更尊重隐私。",
   "tags": [
     "本地优先",
     "浏览器扩展",
-    "AI Agent 集成",
-    "自托管"
+    "AI Agent",
+    "隐私保护"
   ],
   "confidence": "high",
-  "info_gaps": [],
+  "info_gaps": [
+    "未提供与 Hermes Agent 特定版本的兼容性要求",
+    "未描述扩展如何处理超大页面上下文（token 截断策略）",
+    "无性能延迟基准数据"
+  ],
   "quality_flags": [],
-  "stars_total": 262,
+  "stars_total": 276,
   "created_at": "2026-06-24",
-  "pushed_at": "2026-06-27",
-  "latest_release": "v0.1.5",
+  "pushed_at": "2026-06-28",
+  "latest_release": "v0.1.6",
   "first_seen": "2026-06-28",
-  "last_seen": "2026-06-28",
-  "streak_days": 1,
-  "analysis_updated_at": "2026-06-28T18:15:16+0800",
+  "last_seen": "2026-06-29",
+  "streak_days": 2,
+  "analysis_updated_at": "2026-06-29T00:49:43+0800",
   "appearances": [
     {
       "date": "2026-06-28",
@@ -42,6 +46,13 @@
       "stars_total": 262,
       "stars_gained": 0,
       "release": "v0.1.5"
+    },
+    {
+      "date": "2026-06-29",
+      "reason": "release_update",
+      "stars_total": 276,
+      "stars_gained": 0,
+      "release": "v0.1.6"
     }
   ]
 }

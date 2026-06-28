@@ -25,7 +25,7 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "开源长程超级代理框架",
+  "classify_reason": "长时域自主超级代理",
   "one_liner": "重写的超级代理框架，编排子代理与沙盒，胜任长时任务。",
   "why_worth_it": "支持长时多步任务、沙盒执行与持久记忆，超越单次LLM调用。",
   "tags": [
@@ -42,13 +42,13 @@
     "部分模型的 token 消耗与成本对比缺失"
   ],
   "quality_flags": [],
-  "stars_total": 75124,
+  "stars_total": 75184,
   "created_at": "2025-05-07",
   "pushed_at": "2026-06-28",
   "latest_release": "v2.0.0",
   "first_seen": "2026-06-21",
-  "last_seen": "2026-06-28",
-  "streak_days": 6,
+  "last_seen": "2026-06-29",
+  "streak_days": 7,
   "analysis_updated_at": "2026-06-26T03:28:51+0800",
   "appearances": [
     {
@@ -90,6 +90,13 @@
       "date": "2026-06-28",
       "reason": "lightweight",
       "stars_total": 75124,
+      "stars_gained": 3258,
+      "release": "v2.0.0"
+    },
+    {
+      "date": "2026-06-29",
+      "reason": "lightweight",
+      "stars_total": 75184,
       "stars_gained": 3258,
       "release": "v2.0.0"
     }
