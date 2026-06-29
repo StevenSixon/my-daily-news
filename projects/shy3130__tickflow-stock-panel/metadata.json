@@ -25,8 +25,8 @@
     "tickflow"
   ],
   "license": "MIT",
-  "category": "AI 应用",
-  "classify_reason": "LLM增强的量化交易工作台",
+  "category": "AI应用",
+  "classify_reason": "自托管的A股量化分析工作台，利用LLM进行策略定制和个股分析。",
   "one_liner": "自托管A股量化工作台，LLM驱动策略生成与多维分析",
   "why_worth_it": "专为散户打造的零运维量化工具，LLM生成策略，Polars毫秒级全市场扫描，免费数据源可启步",
   "tags": [
@@ -43,13 +43,13 @@
     "第三方数据接入的具体实现和稳定性未详细披露"
   ],
   "quality_flags": [],
-  "stars_total": 542,
+  "stars_total": 595,
   "created_at": "2026-06-18",
-  "pushed_at": "2026-06-28",
+  "pushed_at": "2026-06-29",
   "latest_release": "v0.1.64",
   "first_seen": "2026-06-25",
-  "last_seen": "2026-06-29",
-  "streak_days": 5,
+  "last_seen": "2026-06-30",
+  "streak_days": 6,
   "analysis_updated_at": "2026-06-28T18:21:38+0800",
   "appearances": [
     {
@@ -84,6 +84,13 @@
       "date": "2026-06-29",
       "reason": "release_update",
       "stars_total": 542,
+      "stars_gained": 0,
+      "release": "v0.1.64"
+    },
+    {
+      "date": "2026-06-30",
+      "reason": "lightweight",
+      "stars_total": 595,
       "stars_gained": 0,
       "release": "v0.1.64"
     }

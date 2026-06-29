@@ -1,3 +1,4 @@
 - 2026-06-27 | 🆕新发现 | ⭐419(+0) | release=v0.2.0
 - 2026-06-28 | star_jump | ⭐547(+0) | release=v0.2.0
 - 2026-06-29 | lightweight | ⭐547(+0) | release=v0.2.0
+- 2026-06-30 | release_update | ⭐550(+0) | release=v0.4.0

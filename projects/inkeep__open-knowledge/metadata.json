@@ -23,33 +23,33 @@
     "skills"
   ],
   "license": "GPL-3.0",
-  "category": "AI 应用",
-  "classify_reason": "AI原生Markdown编辑器和LLM Wiki",
-  "one_liner": "AI原生的所见即所得MD编辑器，打造第二大脑和LLM Wiki",
-  "why_worth_it": "本地免费集成Claude/Codex等代理，让MD文件直接可被AI编辑搜索，极客私有两用知识系统。",
+  "category": "AI应用",
+  "classify_reason": "AI原生的Markdown编辑器和LLM Wiki，知识管理工具。",
+  "one_liner": "AI-native 的 WYSIWYG Markdown 编辑器，原生集成 Claude/Codex 与 MCP",
+  "why_worth_it": "将 Markdown 笔记与 AI 代理深度绑定，本地优先、文件级透明，适合需要 Claude/Codex 直接干预知识库的极客与工程团队",
   "tags": [
-    "本地优先",
-    "AI协作",
     "Markdown编辑器",
-    "知识管理"
+    "本地优先",
+    "AI集成",
+    "MCP"
   ],
-  "confidence": "medium",
+  "confidence": "high",
   "info_gaps": [
-    "团队共享时 GitHub 同步的具体机制与权限要求未详述",
-    "大文件/多文件的性能表现未知",
-    "是否支持离线 AI 推理（如本地模型）或仅依赖外部 Agent",
-    "桌面应用的技术栈（Tauri/Electron）未说明",
-    "没有自托管服务端的更多信息"
+    "桌面应用技术栈未披露（Electron / Tauri 等）",
+    "MCP 和 Skill 的具体能力边界、可扩展性及安全性未详细说明",
+    "团队共享基于 GitHub 同步，但本地多人同时编辑的冲突处理策略未提及",
+    "无性能基准或大知识库处理能力数据",
+    "终端内嵌功能的具体实现（PTY？）未知"
   ],
   "quality_flags": [],
-  "stars_total": 1421,
+  "stars_total": 1524,
   "created_at": "2026-06-03",
-  "pushed_at": "2026-06-28",
-  "latest_release": "v0.19.2",
+  "pushed_at": "2026-06-29",
+  "latest_release": "v0.20.0",
   "first_seen": "2026-06-27",
-  "last_seen": "2026-06-29",
-  "streak_days": 3,
-  "analysis_updated_at": "2026-06-28T18:19:07+0800",
+  "last_seen": "2026-06-30",
+  "streak_days": 4,
+  "analysis_updated_at": "2026-06-30T00:52:40+0800",
   "appearances": [
     {
       "date": "2026-06-27",
@@ -71,6 +71,13 @@
       "stars_total": 1421,
       "stars_gained": 0,
       "release": "v0.19.2"
+    },
+    {
+      "date": "2026-06-30",
+      "reason": "release_update",
+      "stars_total": 1524,
+      "stars_gained": 0,
+      "release": "v0.20.0"
     }
   ]
 }

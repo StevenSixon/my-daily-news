@@ -1,51 +1,32 @@
 ## 安装
-### 方式一：一键安装（推荐）
-```bash
-curl -fsSL https://raw.githubusercontent.com/tigicion/dao-code/master/install.sh | sh
-```
-或从[Releases](https://github.com/tigicion/dao-code/releases)下载对应平台的二进制文件，Unix下添加执行权限后直接运行。
+- **一行命令（无需 Node）**：`curl -fsSL https://raw.githubusercontent.com/tigicion/dao-code/master/install.sh | sh`（macOS/Linux/Windows 预编译二进制）
+- **npm**：`npx dao-code`（零安装试用）或 `npm i -g dao-code`（命令名 `dao`）
+- **源码构建**：`git clone` 后 `npm install && npm run build && npm link`
 
-### 方式二：使用npx（需Node >=20）
-```bash
-npx dao-code
-```
-
-### 方式三：全局安装
-```bash
-npm i -g dao-code
-```
-
-## 初始配置
-1. 获取DeepSeek API key：https://platform.deepseek.com/api_keys
-2. 运行`dao`，首次启动时会引导输入key并自动保存至`~/.dao/config.json`。
-   也可手动设置环境变量：
-   ```bash
-   export DEEPSEEK_API_KEY=sk-...
-   ```
+**前置条件**：Node ≥20（npm 方式）；DeepSeek API key（从 platform.deepseek.com/api_keys 获取）
 
 ## 最小可用示例
 ```bash
-# 交互模式（直接启动对话）
+# 首次运行，按提示输入 API key
 dao
+# 或携带 key 单次执行
+dao --api-key sk-xxx --provider deepseek "告诉我一个笑话"
 
-# 一次性任务模式
-dao "把我src/utils.ts里的formatDate函数改成支持时区"
+# 交互模式：进入后直接提问
+dao
+> 给 src/utils.ts 的 formatDate 函数添加时区支持
 
-# 自动批准模式（跳过询问）
-dao --yolo "将README.md里所有的DAO_CODE改为DAO CODE"
+# 单次执行模式
+dao "把 package.json 里的版本升级到 2.0.0"
 
-# 长任务自主模式
-dao --goal "实现用户登录功能，包含JWT和刷新token"
+# 查看成本与缓存命中率
+/cost
 ```
 
-## 常用命令
-- `/init`：扫描项目生成DAO.md，供后续会话自动加载项目上下文
-- `/cost`：查看token用量与缓存命中率
-- `/compact`：手动压缩对话历史，释放上下文窗口
-- `/help`：查看所有命令
-- `Ctrl+O`：展开/收齐工具输出的全量内容
-
-## 依赖前提
-- DeepSeek API key（必须）
-- 终端环境（支持Unix shell或Windows CMD/PowerShell）
-- 如使用npm方式，需Node.js >=20；二进制方式无额外依赖
+## 关键快捷键/命令
+- `/init`：扫描仓库生成 DAO.md 项目说明
+- `/model [id]`：切换模型（无参在 pro/flash 间切换）
+- `/mode [x]`：切换权限模式（default/acceptEdits/auto/plan）
+- `Ctrl+O`：展开/折叠完整输出
+- `ESC`：中断当前 turn
+- `--yolo`：启动后自动批准所有操作

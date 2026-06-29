@@ -1,0 +1,55 @@
+{
+  "full_name": "eli-labz/Godcoder",
+  "url": "https://github.com/eli-labz/Godcoder",
+  "description": "A local-first, open-source coding agent for your desktop. Bring your own LLM key; your code stays on your machine and only ever leaves to the model provider. The AI Agent builds its own Harnes.",
+  "language": "Rust",
+  "topics": [
+    "ai",
+    "coding-agent",
+    "desktop-app",
+    "llm",
+    "local-first",
+    "mcp",
+    "open-source",
+    "openai",
+    "rust",
+    "tauri"
+  ],
+  "license": "NOASSERTION",
+  "category": "AI应用",
+  "classify_reason": "本地优先、开源的桌面AI编码代理应用。",
+  "one_liner": "本地优先、自优化AI编码代理，能构建自身工具链并自动化桌面任务",
+  "why_worth_it": "代码不离机，自带LLM密钥即用；自构建工具链并持续进化，适合注重隐私和自动化的Rust开发者",
+  "tags": [
+    "编码代理",
+    "本地优先",
+    "Rust",
+    "自优化"
+  ],
+  "confidence": "medium",
+  "info_gaps": [
+    "无基准测试数据，无法评估代理的计划、编码或自动化任务成功率",
+    "无预构建二进制文件，需从源码编译，对非Rust开发者门槛较高",
+    "CoWork模式的GUI自动化执行效果未经第三方验证，可能依赖特定环境",
+    "上下文引擎的准确性和性能未提供量化指标",
+    "未说明支持的操作系统范围（虽提及Windows快捷方式，但未列出全部支持平台）"
+  ],
+  "quality_flags": [],
+  "stars_total": 250,
+  "created_at": "2026-06-27",
+  "pushed_at": "2026-06-28",
+  "latest_release": "Godcoder",
+  "first_seen": "2026-06-30",
+  "last_seen": "2026-06-30",
+  "streak_days": 1,
+  "analysis_updated_at": "2026-06-30T00:49:31+0800",
+  "appearances": [
+    {
+      "date": "2026-06-30",
+      "reason": "new",
+      "stars_total": 250,
+      "stars_gained": 0,
+      "release": "Godcoder"
+    }
+  ]
+}

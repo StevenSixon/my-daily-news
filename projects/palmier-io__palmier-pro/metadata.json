@@ -13,8 +13,8 @@
     "video-editor"
   ],
   "license": "GPL-3.0",
-  "category": "AI 应用",
-  "classify_reason": "内置AI功能的macOS视频编辑器",
+  "category": "AI应用",
+  "classify_reason": "面向AI的macOS视频编辑器。",
   "one_liner": "macOS 原生 AI 视频编辑器，通过 MCP 让 Claude/Codex/Cursor 直接操控时间线。",
   "why_worth_it": "首次把开源视频编辑与 MCP 深度打通，适合想用 AI 代理自动剪片的极客，比多数插件方案更底层、更灵活。",
   "tags": [
@@ -32,13 +32,13 @@
     "目前无性能基准测试或稳定性报告"
   ],
   "quality_flags": [],
-  "stars_total": 9270,
+  "stars_total": 9491,
   "created_at": "2026-04-07",
-  "pushed_at": "2026-06-28",
+  "pushed_at": "2026-06-29",
   "latest_release": "v0.4.5",
   "first_seen": "2026-06-19",
-  "last_seen": "2026-06-29",
-  "streak_days": 10,
+  "last_seen": "2026-06-30",
+  "streak_days": 11,
   "analysis_updated_at": "2026-06-29T00:46:59+0800",
   "appearances": [
     {
@@ -109,6 +109,13 @@
       "reason": "release_update",
       "stars_total": 9270,
       "stars_gained": 6126,
+      "release": "v0.4.5"
+    },
+    {
+      "date": "2026-06-30",
+      "reason": "lightweight",
+      "stars_total": 9491,
+      "stars_gained": 5034,
       "release": "v0.4.5"
     }
   ]

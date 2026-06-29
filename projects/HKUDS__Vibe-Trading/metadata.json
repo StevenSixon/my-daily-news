@@ -16,8 +16,8 @@
     "trading"
   ],
   "license": "MIT",
-  "category": "AI 应用",
-  "classify_reason": "个人AI交易代理",
+  "category": "AI应用",
+  "classify_reason": "个人AI交易代理，用于自动化交易。",
   "one_liner": "一只命令构建AI交易代理，覆盖18数据源、LLM策略生成到执行",
   "why_worth_it": "量化交易全流程自动化，尤其适合想用LLM探索策略的开发者，比传统回测框架多了AI原生的数据理解与决策能力。",
   "tags": [
@@ -34,13 +34,13 @@
     "LLM策略生成的过拟合风险未评估"
   ],
   "quality_flags": [],
-  "stars_total": 14137,
+  "stars_total": 14939,
   "created_at": "2026-04-01",
-  "pushed_at": "2026-06-28",
+  "pushed_at": "2026-06-29",
   "latest_release": "v0.1.10",
   "first_seen": "2026-06-28",
-  "last_seen": "2026-06-29",
-  "streak_days": 2,
+  "last_seen": "2026-06-30",
+  "streak_days": 3,
   "analysis_updated_at": "2026-06-28T18:14:40+0800",
   "appearances": [
     {
@@ -55,6 +55,13 @@
       "reason": "lightweight",
       "stars_total": 14137,
       "stars_gained": 490,
+      "release": "v0.1.10"
+    },
+    {
+      "date": "2026-06-30",
+      "reason": "lightweight",
+      "stars_total": 14939,
+      "stars_gained": 840,
       "release": "v0.1.10"
     }
   ]

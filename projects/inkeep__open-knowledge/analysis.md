@@ -1,49 +1,46 @@
 ## 它是什么
-
-OpenKnowledge 是一个面向本地 Markdown/MDX 文件的编辑器，提供真实 WYSIWYG 体验，并深度集成了 Claude、Codex、Cursor 等 AI Agent。它定位为“个人第二大脑”和“LLM Wiki”，用户可以用它撰写笔记、工程规格、文档，并允许 AI 代理参与编辑、搜索和知识图谱构建。项目提供 macOS 桌面应用和基于 Next.js 的 Web 界面，通过 CLI（需 Node.js 24+）在 Linux/Windows 上运行。
+OpenKnowledge 是一个漂亮的本地 Markdown/MDX 编辑器，定位为“LLM Wiki”与第二大脑。它提供真正的所见即所得编辑，同时内建与 Claude、Codex、Cursor 等桌面 AI 代理的协作能力，让 AI 像同事一样直接改写文件。
 
 ## 为什么火
-
-- **AI 原生协作**：不单是粘帖对话，而是直接将 AI 代理接入编辑器，像多人协作一样修改文档，符合 LLM 时代的知识工作流。
-- **本地优先与自由**：所有文件保留在本地，无需托管，隐私安全；GPL-3.0 许可，源码开放，支持自构建。
-- **统一工具链**：将 Obsidian 式的链接/图谱、Notion 的编辑体验、VS Code 式的文件树/终端融为一炉，并支持 MCP 协议和 Agent Skills，智能体可直接操作知识库。
+- 填补了 Obsidian/VSCode 等编辑器与 AI 对话式交互之间的断层：编辑器内嵌 MCP、Skill 和代理搜索，AI 可主动参与知识整理。
+- 全本地运行，免费、隐私，数据只是你文件夹里的 Markdown。
+- 桌面端（macOS）+ Web 端统一体验，支持 Git 同步与团队分享，兼顾单人与协作场景。
 
 ## 技术栈
-
-- 前端/编辑器：TypeScript，基于 Next.js（见 next.config.ts），Tailwind CSS，可能使用 TipTap 或 Slate 作为富文本引擎，实现 WYSIWYG Markdown。
-- 桌面应用：用 Tauri 或 Electron 打包（macOS DMG），内部集成 Web UI 和终端。
-- 后端/服务：CLI 服务提供本地 Web 服务器，支持 MCP 协议。通过 `@inkeep/open-knowledge-core` 和 `@inkeep/open-knowledge-server` 包组织。
-- 同步与协作：底层依赖 Git/GitHub 实现团队共享和自动同步。
+- 前端：TypeScript + Next.js（Web 端），Tailwind CSS。桌面应用技术未披露（猜测 Electron 或 Tauri）。
+- 核心：自有 `@inkeep/open-knowledge-core` 与 `@inkeep/open-knowledge-server` 包，提供 CLI 与服务端。
+- AI 集成通过 MCP 和自定义 Skill 文件实现，与 Claude Desktop、Codex、Cursor 对接。
 
 ## 核心能力
-
-1. **所见即所得编辑**：Markdown 文件编辑如同 Google Docs，避免源码与预览分离。
-2. **多代理集成**：支持 Claude Code、Codex、Cursor 和任意 MCP/CLI Agent（如 OpenCode），Agent 可以直接读取、修改文件。
-3. **MCP 与 Skills 开箱即用**：自动检测并配置代理工具的技能与上下文，使得知识库成为 Agent 可用的工具集。
-4. **知识图谱与搜索**：侧边栏展示 Wiki 链接图，Agentic Search 让代理能检索知识库内容。
-5. **团队共享**：基于 GitHub 的用户管理，无代码配置即可实现多人协同，自动同步更改。
-6. **嵌入式富组件**：支持 HTML、图表等，方便写技术规格和可视化报告。
-7. **双界面**：桌面端内置终端 UI（TUI），同时提供完整 Web 界面。
+1. **完整 WYSIWYG**：像编辑 Google Doc 一样编辑 Markdown，渲染与编辑合一。
+2. **AI 协同**：通过 `ok cowork` 等命令构建 Skill 包，手动导入至 Claude 等桌面 APP，让 AI 在上下文内读写你的知识库。
+3. **扩展与嵌入**：支持 MDX 组件、嵌入式 HTML，适合工程规范、数据报告。
+4. **终端内嵌**：桌面应用内置终端面板，方便命令行操作。
+5. **项目自动配置**：`ok init` 检测本机已有代理并自动注入 MCP/Skill 配置。
+6. **团队共享**：基于 Git/GitHub 实现无代码同步与分享。
 
 ## 适用场景
-
-- 个人知识管理：构建第二大脑，笔记、想法、读书摘要。
-- 技术文档团队：多人协作撰写产品文档、API 文档，并用 AI 辅助生成和维护。
-- AI 代理的“长期记忆”：作为 Agent 的持久化知识库，通过 MCP 连接，让 Agent 具备学习和记忆能力。
-- 工程规范与设计文档：内嵌图表，AI 辅助起草架构稿。
+- 个人知识管理（PKM）与第二大脑
+- LLM 的知识底座（Wiki）供代理检索
+- 工程团队的技术规范、设计文档，配合 AI 评审
+- 已有 Obsidian 等 Vault 的增强，可叠加 AI 能力
 
 ## 同类对比
-
-- **vs. Notion**：Notion 为云托管，AI 功能收费；OpenKnowledge 本地存储，自由度高，AI 集成更深且免费。
-- **vs. Obsidian**：Obsidian 有强大的本地日志和插件系统，但原生 AI 交互弱，WYSIWYG 模式非默认；OpenKnowledge 聚焦 AI 协作与所见即所得，提供类似 Notion 的流畅体验。
-- **vs. VS Code + 插件**：VS Code 可编辑 Markdown 并接入 Copilot，但编辑体验仍偏向源码，缺乏无缝的 WYSIWYG 和知识库专用功能（如图谱视图、Wiki 链接自动补全）。
+- **vs Obsidian**：Obsidian 侧重双向链接与插件生态，OpenKnowledge 自带 AI 原生集成，无需额外配插件。
+- **vs Notion**：Notion 在线重度，不便本地文件级控制；OK 全本地、Markdown 文件透明，可版本控制。
+- **vs VSCode + AI 插件**：VSCode 是代码编辑器，OK 专为知识文档优化，编辑体验更接近 Word。
+- **vs 其他 AI 笔记工具**：多数是云端 AI 生成摘要，OK 强调 AI 作为合作者直接参与编辑，且完全本地化。
 
 ## 版本动态
-
-最新稳定版 v0.19.2 主要修复了“Ask AI”中终端行标签的可访问性，并隐藏了自动生成的 `opencode.json` 配置文件，避免在文件树中干扰用户。项目处于较早期的活跃开发阶段，近期更新频繁，社区通过 Discord 和 X 频道响应问题。
+最新 v0.20.0 稳定版已整合之前 beta 的多个修复：
+- 命令隐藏优化，`ok install-skill` 更名为隐藏的 `ok cowork`，避免误导自动安装。
+- 修复 git worktree 子文件夹项目创建错误。
+- 阻止同一文件双开标签页，改为聚焦已有标签。
+- 桌前终端引入，方便不离开编辑器执行命令。
+表明项目正在打磨桌面集成与工作流稳定性。
 ---
 
 ## ℹ️ 置信度与信息盲区
 
-- 置信度：**medium**
-- 信息盲区：团队共享时 GitHub 同步的具体机制与权限要求未详述；大文件/多文件的性能表现未知；是否支持离线 AI 推理（如本地模型）或仅依赖外部 Agent；桌面应用的技术栈（Tauri/Electron）未说明；没有自托管服务端的更多信息
+- 置信度：**high**
+- 信息盲区：桌面应用技术栈未披露（Electron / Tauri 等）；MCP 和 Skill 的具体能力边界、可扩展性及安全性未详细说明；团队共享基于 GitHub 同步，但本地多人同时编辑的冲突处理策略未提及；无性能基准或大知识库处理能力数据；终端内嵌功能的具体实现（PTY？）未知

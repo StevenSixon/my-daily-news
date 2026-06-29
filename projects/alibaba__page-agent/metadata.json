@@ -14,8 +14,8 @@
     "web"
   ],
   "license": "MIT",
-  "category": "AI 应用",
-  "classify_reason": "浏览器内自然语言GUI代理",
+  "category": "AI应用",
+  "classify_reason": "通过自然语言控制网页界面的浏览器内GUI代理。",
   "one_liner": "纯前端网页内GUI Agent，用自然语言操控任意Web界面。",
   "why_worth_it": "在SaaS中一行JS即可嵌入AI助手，无需后端或截图，适合快速构建智能表单、无障碍等前端Copilot。",
   "tags": [
@@ -33,13 +33,13 @@
     "多页面代理安全模型中禁用的 ScriptExecutionTool 具体影响范围未深入展开"
   ],
   "quality_flags": [],
-  "stars_total": 20445,
+  "stars_total": 20588,
   "created_at": "2025-09-23",
   "pushed_at": "2026-06-25",
   "latest_release": "v1.10.0",
   "first_seen": "2026-06-26",
-  "last_seen": "2026-06-29",
-  "streak_days": 3,
+  "last_seen": "2026-06-30",
+  "streak_days": 4,
   "analysis_updated_at": "2026-06-26T03:26:29+0800",
   "appearances": [
     {
@@ -61,6 +61,13 @@
       "reason": "lightweight",
       "stars_total": 20445,
       "stars_gained": 1649,
+      "release": "v1.10.0"
+    },
+    {
+      "date": "2026-06-30",
+      "reason": "lightweight",
+      "stars_total": 20588,
+      "stars_gained": 1778,
       "release": "v1.10.0"
     }
   ]

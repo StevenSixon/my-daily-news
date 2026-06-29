@@ -16,33 +16,30 @@
     "yagni"
   ],
   "license": "MIT",
-  "category": "AI 应用",
-  "classify_reason": "让AI代理模拟懒散高级开发者的思维工具",
-  "one_liner": "让AI代理像最懒的资深开发者一样思考，用阶梯规则消灭过度工程，代码量砍半且安全不减",
-  "why_worth_it": "解决AI编码代理生成冗余代码、浪费Token和成本的问题，为所有主流代理提供统一的安全最小化规则，实测省54%代码且100%安全",
+  "category": "AI应用",
+  "classify_reason": "使AI代理遵循极简开发原则的工具，帮助控制AI生成代码的膨胀。",
+  "one_liner": "让AI代理像资深懒人一样编码，平均减少54%代码量且100%安全。",
+  "why_worth_it": "根治AI代理过度工程，安全地削码降本，支持16种代理平台。",
   "tags": [
-    "提示工程",
-    "AI代理",
-    "多平台规则集",
-    "JavaScript"
+    "agent-skills",
+    "prompt-engineering",
+    "YAGNI",
+    "developer-tools"
   ],
   "confidence": "high",
   "info_gaps": [
-    "基准测试仅针对一个特定仓库（FastAPI 全栈模板）和 Haiku 4.5 模型，缺乏多项目、多模型的长周期多样性测试数据",
-    "对非 JavaScript/TypeScript 项目的效果未明确提及或测试",
-    "平台原生特性检测依赖各代理的内置能力，未量化其在不同代理中的实际命中率",
-    "对于 Aider、Cline、Zed 等代理仅提供规则文件复制方式，实际集成深度和兼容性没有详细说明",
-    "GitHub Star 数高达 54680 但创建和更新日期均为 2026 年（未来时间），可能为虚构数据或特殊事件，未在文档中解释"
+    "基准测试的具体任务和安全测试细节未在 README 中展开，需查看外部链接",
+    "未详细说明各平台版本的最低兼容要求"
   ],
   "quality_flags": [],
-  "stars_total": 62498,
+  "stars_total": 66839,
   "created_at": "2026-06-12",
-  "pushed_at": "2026-06-26",
-  "latest_release": "v4.8.3",
+  "pushed_at": "2026-06-29",
+  "latest_release": "v4.8.4",
   "first_seen": "2026-06-19",
-  "last_seen": "2026-06-28",
-  "streak_days": 7,
-  "analysis_updated_at": "2026-06-25T02:27:27+0800",
+  "last_seen": "2026-06-30",
+  "streak_days": 8,
+  "analysis_updated_at": "2026-06-30T00:50:57+0800",
   "appearances": [
     {
       "date": "2026-06-19",
@@ -92,6 +89,13 @@
       "stars_total": 62498,
       "stars_gained": 0,
       "release": "v4.8.3"
+    },
+    {
+      "date": "2026-06-30",
+      "reason": "release_update",
+      "stars_total": 66839,
+      "stars_gained": 0,
+      "release": "v4.8.4"
     }
   ]
 }

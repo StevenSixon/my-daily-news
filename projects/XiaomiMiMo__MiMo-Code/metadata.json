@@ -11,32 +11,33 @@
     "mimo-code"
   ],
   "license": "MIT",
-  "category": "AI 应用",
-  "classify_reason": "模型与代理协同进化的编码工具",
-  "one_liner": "终端AI编程助手，带持久记忆与多代理协同，免配置启动。",
-  "why_worth_it": "解决 AI 助手会话间项目遗忘问题，通过记忆、子代理和自蒸馏持续改进开发流程。",
+  "category": "AI应用",
+  "classify_reason": "模型与代理协同演化的工具，直接面向用户提供AI代理功能。",
+  "one_liner": "终端原生AI编码助手，支持持久记忆、多代理协作与自主演进。",
+  "why_worth_it": "跨会话记忆、多代理自主协作、自我改进工作流，适合长期终端开发的AI助手。",
   "tags": [
-    "AI编程助手",
-    "记忆系统",
-    "终端优先",
-    "TypeScript"
+    "CLI工具",
+    "Agent框架",
+    "TypeScript",
+    "自主编程"
   ],
   "confidence": "high",
   "info_gaps": [
-    "无性能 benchmark 数据或准确率对比",
-    "MiMo V2.5 模型具体能力（除 ASR 和 voice control）未详述",
-    "Dream/Distill 的启发式规则与效果量化未公开",
-    "Max Mode 并行推理的具体实现和资源消耗未说明"
+    "无公开 benchmark 或对比测试数据",
+    "未说明最大上下文窗口 token 数及具体模型参数",
+    "语音输入依赖的 TenVAD 和 MiMo ASR 模型细节未公开",
+    "MCP 服务器的具体配置方法和支持范围未详述",
+    "插件系统的具体开发文档缺失"
   ],
   "quality_flags": [],
-  "stars_total": 10990,
+  "stars_total": 11044,
   "created_at": "2026-06-10",
-  "pushed_at": "2026-06-28",
-  "latest_release": "v0.1.3",
+  "pushed_at": "2026-06-29",
+  "latest_release": "v0.1.4",
   "first_seen": "2026-06-19",
-  "last_seen": "2026-06-29",
-  "streak_days": 15,
-  "analysis_updated_at": "2026-06-25T02:28:33+0800",
+  "last_seen": "2026-06-30",
+  "streak_days": 16,
+  "analysis_updated_at": "2026-06-30T00:53:20+0800",
   "appearances": [
     {
       "date": "2026-06-19",
@@ -142,6 +143,13 @@
       "stars_total": 10990,
       "stars_gained": 0,
       "release": "v0.1.3"
+    },
+    {
+      "date": "2026-06-30",
+      "reason": "release_update",
+      "stars_total": 11044,
+      "stars_gained": 0,
+      "release": "v0.1.4"
     }
   ]
 }

@@ -50,6 +50,31 @@ sudo apt install xsel
 ```
 </details>
 
+<details>
+<summary><strong>Windows: garbled CJK (Chinese/Japanese/Korean) output in the shell</strong></summary>
+
+On Windows with a non-UTF-8 system locale (e.g. zh-CN, whose active code page is 936/GBK),
+command output containing CJK characters may appear garbled (mojibake). MiMoCode forces
+UTF-8 output for spawned PowerShell/cmd subprocesses. If you still encounter garbled output
+in cases this does not yet cover, enable Windows' system-wide UTF-8 support:
+
+**Settings → Time & language → Language & region → Administrative language settings →
+Change system locale → check "Beta: Use Unicode UTF-8 for worldwide language support" →
+reboot.**
+
+This switches the active code page (ACP) to UTF-8 (65001) for all programs, so subprocesses
+no longer inherit the legacy code page. Note it is a system-wide Beta toggle and may cause
+some older non-Unicode programs to display incorrectly, so treat it as a workaround.
+</details>
+
+---
+
+## MiMo Ecosystem
+
+Beyond MiMoCode, Xiaomi MiMo models also work in other agents and coding tools like Cursor, Cline, and Zed.
+
+**[awesome-mimo-agent](https://github.com/XiaomiMiMo/awesome-mimo-agent)** collects setup guides for using MiMo in those tools — worth a look if you want to try MiMo elsewhere. Contributions welcome: open a PR to add your own setup.
+
 ---
 
 ## Core Features
@@ -188,6 +213,38 @@ MiMoCode is configured via `.mimocode/mimocode.json` in the project directory (o
 - Keybindings and theme
 
 Max Mode (parallel best-of-N reasoning with judge selection) can be enabled via `experimental.maxMode` in the config.
+
+<details>
+<summary><strong>Allowing the system temp directory (<code>/tmp</code>)</strong></summary>
+
+By default, reading or writing files outside the project working directory triggers an
+`external_directory` permission prompt — including the system temp directory. This is
+intentional: MiMoCode does not silently widen permissions, so you stay in control of what
+the model can touch outside your project.
+
+The temp directory comes up often because most models reach for it as scratch space (e.g.
+a quick script, a throwaway data file). If you trust your environment and would rather not
+be prompted each time, you can opt in by allowing it in your config:
+
+```json title=".mimocode/mimocode.json"
+{
+  "$schema": "https://opencode.ai/config.json",
+  "permission": {
+    "external_directory": {
+      "/tmp/**": "allow"
+    }
+  }
+}
+```
+
+**This setting has known risks — use it at your own risk.** The temp directory is
+world-writable and shared with every other process and user on the machine. Auto-allowing
+it means the model can read and write there without confirmation, which widens your exposure
+to predictable temp-path / symlink tricks (e.g. another process pre-creating `/tmp/foo` as a
+symlink to a sensitive file). For that reason it is only recommended for single-user,
+controlled environments or inside a container. Keep the allowlist as narrow as possible.
+
+</details>
 
 ---
 

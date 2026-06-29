@@ -9,8 +9,8 @@
     "robotics"
   ],
   "license": "MIT",
-  "category": "AI 应用",
-  "classify_reason": "基于AI的驾驶辅助系统，面向终端",
+  "category": "AI应用",
+  "classify_reason": "openpilot是用于驾驶辅助系统的AI操作系统，属于自动驾驶AI应用。",
   "one_liner": "开源机器人操作系统，可升级300+车型的L2辅助驾驶",
   "why_worth_it": "让量产车拥有持续进化的ADAS，社区活跃，支持300+车型，硬件统一采购，降低DIY自动驾驶门槛",
   "tags": [
@@ -27,13 +27,13 @@
     "快速入门未列出开发环境的具体系统依赖和安装步骤"
   ],
   "quality_flags": [],
-  "stars_total": 62279,
+  "stars_total": 62703,
   "created_at": "2016-11-24",
-  "pushed_at": "2026-06-28",
+  "pushed_at": "2026-06-29",
   "latest_release": "v0.11.1",
   "first_seen": "2026-06-27",
-  "last_seen": "2026-06-29",
-  "streak_days": 3,
+  "last_seen": "2026-06-30",
+  "streak_days": 4,
   "analysis_updated_at": "2026-06-27T02:16:45+0800",
   "appearances": [
     {
@@ -55,6 +55,13 @@
       "reason": "lightweight",
       "stars_total": 62279,
       "stars_gained": 265,
+      "release": "v0.11.1"
+    },
+    {
+      "date": "2026-06-30",
+      "reason": "lightweight",
+      "stars_total": 62703,
+      "stars_gained": 465,
       "release": "v0.11.1"
     }
   ]

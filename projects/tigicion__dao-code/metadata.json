@@ -1,7 +1,7 @@
 {
   "full_name": "tigicion/dao-code",
   "url": "https://github.com/tigicion/dao-code",
-  "description": "Terminal coding agent for DeepSeek V4 — cost-efficient, self-verifying memory, robust long tasks.  MIT",
+  "description": "Open-source TypeScript terminal coding agent for DeepSeek-V4 — builds on DeepSeek's strong price-performance and ultra-cheap cache pricing, engineering byte-stable prefixes and cache-reusing forks so cross-session memory and a continuous self-correction layer add almost no token cost; 1M context, Skills/MCP/Hooks, Claude Code config compatible.",
   "language": "TypeScript",
   "topics": [
     "ai-agent",
@@ -13,31 +13,32 @@
     "typescript"
   ],
   "license": "MIT",
-  "category": "AI 应用",
-  "classify_reason": "终端编码代理（DeepSeek V4）",
-  "one_liner": "专为DeepSeek V4打造的终端编码Agent，极致缓存工程让7个bug修复仅花¥1.07",
-  "why_worth_it": "解决国内用户用Claude Code门槛高、成本贵的痛点，凭DeepSeek低价与缓存优化，成本降至闭源方案的1/30，同时提供记忆、反思、长任务稳健等高级能力，适合成本敏感型开发者",
+  "category": "AI应用",
+  "classify_reason": "面向DeepSeek的开源终端编码代理。",
+  "one_liner": "利用DeepSeek超低价缓存，实现近乎零额外开销的跨会话记忆编码代理",
+  "why_worth_it": "想在终端用AI写代码但苦于Claude Code昂贵或被墙？这个工具把DeepSeek V4的缓存命中率做到95%，一次复杂修复平均只花一块钱",
   "tags": [
-    "编码Agent",
-    "终端CLI",
-    "成本优化",
-    "DeepSeek"
+    "编码代理",
+    "DeepSeek优化",
+    "成本优先",
+    "TypeScript CLI"
   ],
   "confidence": "high",
   "info_gaps": [
-    "case-studies目录内容未在README展示，无法验证真实任务多样性",
-    "自验证记忆的具体算法和准确性尚无独立验证",
-    "未与其他开源编码agent（如Aider）进行基准对比，仅与Claude Code做了成本比较"
+    "未说明是否支持除 DeepSeek 外的 API 提供商（如 OpenAI 兼容接口）",
+    "未提供与其他开源编码代理（Aider、OpenHands）的全面功能对比",
+    "评估中 1/14 失败任务的详情未披露",
+    "长任务压缩和自修正的独立消融实验结果未给出"
   ],
   "quality_flags": [],
-  "stars_total": 547,
+  "stars_total": 550,
   "created_at": "2026-06-08",
-  "pushed_at": "2026-06-25",
-  "latest_release": "v0.2.0",
+  "pushed_at": "2026-06-29",
+  "latest_release": "v0.4.0",
   "first_seen": "2026-06-27",
-  "last_seen": "2026-06-29",
-  "streak_days": 3,
-  "analysis_updated_at": "2026-06-28T18:20:55+0800",
+  "last_seen": "2026-06-30",
+  "streak_days": 4,
+  "analysis_updated_at": "2026-06-30T00:53:58+0800",
   "appearances": [
     {
       "date": "2026-06-27",
@@ -59,6 +60,13 @@
       "stars_total": 547,
       "stars_gained": 0,
       "release": "v0.2.0"
+    },
+    {
+      "date": "2026-06-30",
+      "reason": "release_update",
+      "stars_total": 550,
+      "stars_gained": 0,
+      "release": "v0.4.0"
     }
   ]
 }

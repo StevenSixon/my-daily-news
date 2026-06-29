@@ -25,8 +25,8 @@
     "vector-database"
   ],
   "license": "Apache-2.0",
-  "category": "AI 应用",
-  "classify_reason": "为AI代理提供记忆的知识图谱平台",
+  "category": "AI应用",
+  "classify_reason": "为AI代理提供持久记忆的AI记忆平台，可直接集成到代理应用中。",
   "one_liner": "开源AI记忆平台，用自托管知识图谱为Agent提供持久化记忆",
   "why_worth_it": "解决Agent跨会话遗忘问题，自托管知识图谱+向量检索，可按反馈持续进化，适合追求可控、可解释记忆的开发者",
   "tags": [
@@ -43,13 +43,13 @@
     "多租户隔离的具体实现与安全保证未深入说明"
   ],
   "quality_flags": [],
-  "stars_total": 24658,
+  "stars_total": 25506,
   "created_at": "2023-08-16",
-  "pushed_at": "2026-06-27",
+  "pushed_at": "2026-06-29",
   "latest_release": "v1.2.2",
   "first_seen": "2026-06-21",
-  "last_seen": "2026-06-29",
-  "streak_days": 4,
+  "last_seen": "2026-06-30",
+  "streak_days": 5,
   "analysis_updated_at": "2026-06-28T18:15:41+0800",
   "appearances": [
     {
@@ -78,6 +78,13 @@
       "reason": "lightweight",
       "stars_total": 24658,
       "stars_gained": 5519,
+      "release": "v1.2.2"
+    },
+    {
+      "date": "2026-06-30",
+      "reason": "lightweight",
+      "stars_total": 25506,
+      "stars_gained": 6064,
       "release": "v1.2.2"
     }
   ]
