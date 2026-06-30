@@ -26,8 +26,8 @@
     "windsurf"
   ],
   "license": "MIT",
-  "category": "AI应用",
-  "classify_reason": "为AI编码代理提供高性能代码智能的MCP服务器，构成AI编码工作流的关键工具。",
+  "category": "AI 应用",
+  "classify_reason": "高性能代码智能MCP服务器，为AI代理提供代码库记忆，属于AI中间件",
   "one_liner": "毫秒级代码知识图谱MCP，158语言零依赖，省99% token。",
   "why_worth_it": "为AI编程代理提供全量代码库结构查询，替代逐文件grep，单二进制本地运行，安全且节省上百倍token与延迟。",
   "tags": [
@@ -45,13 +45,13 @@
     "与同类工具（如 ast-grep、Semgrep）的量化对比缺失"
   ],
   "quality_flags": [],
-  "stars_total": 21110,
+  "stars_total": 22622,
   "created_at": "2026-02-24",
-  "pushed_at": "2026-06-29",
+  "pushed_at": "2026-06-30",
   "latest_release": "v0.8.1",
   "first_seen": "2026-06-19",
-  "last_seen": "2026-06-30",
-  "streak_days": 13,
+  "last_seen": "2026-07-01",
+  "streak_days": 14,
   "analysis_updated_at": "2026-06-24T16:27:31+0800",
   "appearances": [
     {
@@ -143,6 +143,13 @@
       "reason": "lightweight",
       "stars_total": 21110,
       "stars_gained": 8926,
+      "release": "v0.8.1"
+    },
+    {
+      "date": "2026-07-01",
+      "reason": "lightweight",
+      "stars_total": 22622,
+      "stars_gained": 9899,
       "release": "v0.8.1"
     }
   ]

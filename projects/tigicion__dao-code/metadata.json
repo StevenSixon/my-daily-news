@@ -13,8 +13,8 @@
     "typescript"
   ],
   "license": "MIT",
-  "category": "AI应用",
-  "classify_reason": "面向DeepSeek的开源终端编码代理。",
+  "category": "AI 应用",
+  "classify_reason": "为DeepSeek-V4设计的终端编码代理，充分发挥其性价比",
   "one_liner": "利用DeepSeek超低价缓存，实现近乎零额外开销的跨会话记忆编码代理",
   "why_worth_it": "想在终端用AI写代码但苦于Claude Code昂贵或被墙？这个工具把DeepSeek V4的缓存命中率做到95%，一次复杂修复平均只花一块钱",
   "tags": [
@@ -31,13 +31,13 @@
     "长任务压缩和自修正的独立消融实验结果未给出"
   ],
   "quality_flags": [],
-  "stars_total": 550,
+  "stars_total": 680,
   "created_at": "2026-06-08",
   "pushed_at": "2026-06-29",
   "latest_release": "v0.4.0",
   "first_seen": "2026-06-27",
-  "last_seen": "2026-06-30",
-  "streak_days": 4,
+  "last_seen": "2026-07-01",
+  "streak_days": 5,
   "analysis_updated_at": "2026-06-30T00:53:58+0800",
   "appearances": [
     {
@@ -65,6 +65,13 @@
       "date": "2026-06-30",
       "reason": "release_update",
       "stars_total": 550,
+      "stars_gained": 0,
+      "release": "v0.4.0"
+    },
+    {
+      "date": "2026-07-01",
+      "reason": "lightweight",
+      "stars_total": 680,
       "stars_gained": 0,
       "release": "v0.4.0"
     }

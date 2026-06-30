@@ -3,3 +3,4 @@
 - 2026-06-20 | lightweight | ⭐1168(+147) | release=@agent-native/core@0.63.4
 - 2026-06-27 | release_update | ⭐2473(+1588) | release=@agent-native/skills@0.2.140
 - 2026-06-28 | release_update | ⭐2776(+1474) | release=@agent-native/skills@0.2.153
+- 2026-07-01 | release_update | ⭐3187(+1679) | release=@agent-native/core@0.81.3

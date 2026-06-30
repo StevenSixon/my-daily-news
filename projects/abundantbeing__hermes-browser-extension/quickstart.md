@@ -1,23 +1,19 @@
-## 安装与构建
+## 安装要求
+- 安装并运行 Hermes Agent（需配置 API 服务器，开启 HTTPS/HTTP）
+- Node.js 20+
+- Chrome/Edge 114+ 浏览器
+
+## 构建与加载
 ```bash
 git clone https://github.com/abundantbeing/hermes-browser-extension.git
 cd hermes-browser-extension
 npm install
 npm run build
 ```
-生成的 `dist/` 即扩展目录。
-
-## 加载到 Chrome
-1. 打开 `chrome://extensions`，启用“开发者模式”。
-2. 点击“加载已解压的扩展程序”，选择 `dist/` 文件夹。
-3. 点击工具栏扩展图标打开侧面板。
+在浏览器扩展管理页面开启开发者模式，加载 `dist/` 文件夹。
 
 ## 连接 Hermes
-- **本地模式**：确保 Hermes Gateway 已在 `127.0.0.1:8642` 运行，并配置 `API_SERVER_KEY`。
-- 扩展侧面板中点击“Manual setup”，选择“Local gateway”，输入 `http://127.0.0.1:8642` 和你的浏览器 token/API key，测试连接后保存。
-- **远程模式**：类似但填写可访问的远程 URL。
-
-## 最小示例
-打开任意 `https://` 页面（如一篇博客），在侧面板中输入：“Summarize this page in one sentence.” 即可获得基于上下文的摘要。可试用 `/summarize` 快速命令。
-
-**依赖**：Node.js 20+，Chrome 114+，已安装并运行 Hermes Agent。
+1. 在 Hermes 网关配置中启用 API 服务器，设置 KEY 和 CORS 允许 `chrome-extension://<扩展ID>`。
+2. 启动网关。
+3. 在扩展侧边栏选择“手动设置” -> “本地网关”，填入 `http://127.0.0.1:8642` 和 API KEY，测试连接后保存。
+4. 打开任意网页，点击扩展图标，即可在侧边栏看到页面上下文计数，输入“Summarize this page”测试。

@@ -1,53 +1,42 @@
 ## 它是什么
-
-Agent-Native 是一个 TypeScript 全栈框架，核心理念是“动作（Action）定义一次，处处可用”。开发者用 Zod 描述输入，只需编写一段业务逻辑，它就能同时暴露给 UI 按钮、Agent 对话、HTTP API、MCP 服务、A2A 协议和 CLI。框架集成了完整的 Agent 运行时（对话、工具调用、技能、记忆、任务、交接等）和 Drizzle 驱动的 SQL 状态存储，并配套六个可克隆的完整 SaaS 模板。
+BuilderIO出品的Agent-Native框架，核心理念是让Agent成为应用的一等公民，而非附着在聊天界面的插件。通过统一的Action抽象，一次定义即可在UI组件、Agent工具、HTTP API、MCP工具、A2A接口及CLI中使用。Agent直接操作真实应用状态，与用户实时协作。
 
 ## 为什么火
-
-当前 AI Agent 开发常陷入“聊天窗口强、融入产品弱”的困境。Agent-Native 将 Agent 做成应用的一等公民：人类和 Agent 共享同一套动作和状态，Agent 能感知用户正在看什么，并像真人协作者一样操作 UI、调用其他 Agent。最近火热的编码 Agent 可视化规划功能（`/visual-plan`/`/visual-recap`）可直接注入现有开发环境，大大降低高阶 Agent 能力的接入成本。
+2026年3月发布后短时间获3k+星，源于它提出了“Agent-Native”这一差异定位。传统AI应用在既有UI上叠加速成Agent，而Agent-Native在设计上让Agent与原生的UI、数据、逻辑共享同一套Action和数据库。提供邮件、日历、设计、分析等完整模板，降低了构建复杂Agent应用的门槛，且完全开源自托管，吸引了追求深度定制的开发者。
 
 ## 技术栈
-
-- **语言**：TypeScript
-- **后端**：Nitro 服务器（兼容 Vercel、Netlify、Node 等）
-- **数据库**：Drizzle ORM + 任意 SQL 数据库（PostgreSQL、SQLite 等）
-- **前端**：React（通过模板可见），使用 Builder.io 组件库
-- **Agent 协议**：MCP、A2A（Agent-to-Agent）
-- **包结构**：`@agent-native/core`、`@agent-native/skills` 等
+- 语言：TypeScript
+- 后端数据库：任何Drizzle兼容的SQL数据库
+- 服务端运行环境：Nitro兼容宿主
+- 前端框架：React（嵌入、交互及模板UI）
+- 包管理：pnpm
+- 协议支持：MCP、A2A、HTTP、WebSocket（推测用于实时协作）
 
 ## 核心能力
-
-1. **统一动作原语**：`defineAction` 一次定义，UI、Agent、HTTP API、MCP、A2A、CLI 六端复用。
-2. **内建 Agent 运行时**：对话管理、记忆（SQL 状态）、技能扩展、定时任务、可观察性、Agent 间交接。
-3. **实时人机协同**：数据库状态双向即时同步，Agent 可看见用户高亮内容（Cmd+I），支持多 Agent 交互。
-4. **模板生态**：提供 Clips（录屏+日志修复）、Plans（可视化编码规划）、Design（HTML 原型）、Content（本地 MDX 编辑）、Slides（幻灯片生成）、Analytics（看板）六个开箱即用的 SaaS 应用，可独立或组合克隆。
-5. **技能注入**：`npx @agent-native/core skills add` 可为 Claude Code、Cursor 等现有编码 Agent 追加可视化规划与回顾命令。
-6. **渐进式启动**：支持 Chat 模式（带轻量 UI）、Headless 模式（纯 API/CLI）和完整模板三种起点。
+- **Action原语**：定义带有zod schema和run函数的Action，系统自动将该Action暴露为UI操作按钮、Agent工具、API端点、MCP工具、A2A接口和CLI命令，避免重复开发。
+- **Agent运行时**：内置聊天、工具调用、技能、记忆、定时任务、可观测性及Agent间handoff，开箱即用。
+- **双重身份UI**：Agent和用户平等操作同一UI，状态实时同步，支持选中文本→快捷键→Agent处理的内联交互，Agent之间可相互调用。
+- **技能扩展**：可通过`npx @agent-native/core skills add`为现有编码Agent（Claude Code, Codex, Cursor等）增加可视化计划和回顾能力。
+- **模板市场**：提供Clips（录屏+Agent排错）、Plans（可视化编码计划）、Design（设计原型）、Content（MDX编辑）、Slides（演示文稿）、Analytics（分析仪表板）等全栈模板，均可克隆并独立开发。
+- **自托管与中立**：不锁定数据库或云平台，代码完全归开发者所有，支持任意数据库和部署方式。
 
 ## 适用场景
-
-- 需要 Agent 深入参与业务流程的 SaaS 产品（客服、设计协作、数据洞察）
-- 想快速交付智能功能的团队（直接克隆模板二次开发）
-- 为已有编码 Agent 补充结构化规划与复盘的中大型团队
-- 追求“自进化”应用，让 Agent 直接修改 UI 或业务逻辑的探索性项目
+- 构建需要深度AI集成的SaaS产品：如协作工具、项目管理、内容创作、数据分析。
+- 为现有编码助手增添可视化计划、代码审查等高级技能。
+- 快速基于模板原型化Agent增强的应用，再逐步定制。
+- 内部工具开发，让Agent参与业务流程操作而非仅回答问题。
 
 ## 同类对比
-
-- vs **LangChain / CrewAI**：后者是后端 Agent 编排库，Agent-Native 则是从接口、UI 到数据库的全套架构，更偏向产品化，而非仅 Agent 逻辑。
-- vs **Vercel AI SDK / CopilotKit**：它们提供聊天组件和前端 AI 交互，Agent-Native 则通过 Action 共享让 Agent 与 UI 完全同权，模板更完整。
-- vs **OpenAgents / GPT Engineer**：前者多为聊天式代码或任务代理，Agent-Native 额外提供了对业务状态、实时协同和可视化规划的原生支持。
-
-当前项目尚在早期（0.x 版本，Star 2776），生态规模较小，但核心设计理念差异化明确。
+- **LangChain/LangGraph**：专注Agent工作流，无内置UI，需自己搭建应用壳。Agent-Native提供完整应用架构和UI-Agent对称的设计。
+- **CopilotKit**：为React应用增加Copilot侧边栏，Agent与主应用松散耦合。Agent-Native让Agent直接操作应用状态，且Action可跨端复用。
+- **Vercel AI SDK**：提供聊天和流式工具调用，但缺少统一的状态管理、多端Action暴露及应用级实时协作。Agent-Native更像Next.js之于React的定位——一个全栈框架。
+- **Streamlit / Gradio**：偏数据展示而非Agent原生，且不提供统一的Action抽象跨端复用。
 
 ## 版本动态
-
-- 最新 Release：`@agent-native/skills@0.2.153`（2026-06-28），为 Patch 更新，依赖 `@agent-native/core@0.79.25`。
-- 首次提交：2026-03-12，项目仅三个多月，迭代活跃。
-- 文档量：主站文档位于 agent-native.com，仓库内仅提供 `auth.md` 和 `neon-netlify-integration.md`，表明当前重点在认证和无服务器数据库集成。
-- 许可：MIT，全部开源。
+最新版本`@agent-native/core@0.81.3`（2026-06-30）专注于修复MCP应用嵌入ChatGPT/Codex宿主的渲染问题：解决了空白iframe、尺寸不匹配、空嵌入显示等体验缺陷。显示团队正积极打磨与外部Agent宿主环境的集成稳定性。整体框架仍在0.x阶段，API可能变动，但已可投产使用。
 ---
 
 ## ℹ️ 置信度与信息盲区
 
 - 置信度：**high**
-- 信息盲区：未提供与同类框架的性能对比或并发处理基准；自托管完整部署步骤（数据库配置、环境变量）未在 README 中详述；A2A 协议的具体实现规范和兼容性未说明；是否支持自定义 LLM 提供商或本地模型的接入细节待确认；未说明是否支持流式响应（streaming）及多租户隔离方案
+- 信息盲区：未提供性能及规模基准数据；实时协作的底层技术（WebSocket/SSE等）未明确说明；认证模块具体支持的身份提供商和扩展细节未在README中展开（仅提及auth.md）；技能系统的完整开发指南和可扩展性未在片段中体现；0.x版本API稳定性及正式版路线图未披露

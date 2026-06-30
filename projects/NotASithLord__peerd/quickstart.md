@@ -1,16 +1,10 @@
 ## 安装
 1. 克隆仓库：`git clone https://github.com/NotASithLord/peerd.git`
-2. 打开 Chrome，进入 `chrome://extensions`，开启 **开发者模式**
-3. 点击 **加载已解压的扩展**，选择项目内的 `extension/` 文件夹
-4. 固定 peerd 图标到工具栏
+2. 在 Chrome 浏览器中，进入 `chrome://extensions`，开启“开发者模式”。
+3. 点击“加载已解压的扩展程序”，选择仓库内的 `extension/` 文件夹。
+4. 固定 peerd 图标到工具栏。
+5. 打开 peerd 侧边栏，创建本地保管库（建议使用 Touch ID 或 Passkey 解锁）。
+6. 在“设置” → “API 密钥”中添加 Anthropic (`sk-ant-...`) 或 OpenRouter (`sk-or-...`) 密钥；也可以使用本地 Ollama（无需密钥，无花费）。
+7. 开始对话：peerd 可以读取和驱动标签页，运行沙盒命令等。可在设置中开启“操作前确认”。
 
-## 最小示例
-1. 首次启动需创建本地 vault：点击图标 → 设置 Touch ID/passkey 或恢复口令
-2. 在 **设置 → API keys** 中填入 Anthropic 或 OpenRouter 密钥（或使用本地 Ollama 无需密钥）
-3. 回到对话界面，输入自然语言指令，例如：“总结当前标签页的内容”或“打开 abc.com 并填充表单”
-4. 如需安全审批，可在设置中开启“操作前确认”
-
-## 依赖前提
-- Chromium 内核浏览器（Chrome/Edge/Brave/Arc 等）
-- 模型 API 密钥（Anthropic/OpenRouter）或已安装 Ollama 并在本地运行模型
-- 无需 Node.js、npm，无构建步骤
+**依赖前提**：Chrome 或 Edge/Arc 等 Chromium 内核浏览器；Firefox 亦可但尚在完善。需要相应模型 provider 的 API key，或本地已运行 Ollama。

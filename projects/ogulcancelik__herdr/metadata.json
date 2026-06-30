@@ -1,0 +1,63 @@
+{
+  "full_name": "ogulcancelik/herdr",
+  "url": "https://github.com/ogulcancelik/herdr",
+  "description": "agent multiplexer that lives in your terminal.",
+  "language": "Rust",
+  "topics": [
+    "agent",
+    "agent-orchestration",
+    "ai",
+    "ai-agents",
+    "claude-code",
+    "cli",
+    "codex",
+    "coding-agents",
+    "developer-tools",
+    "devtools",
+    "multiplexer",
+    "rust",
+    "terminal",
+    "terminal-multiplexer",
+    "terminal-ui",
+    "tmux",
+    "tui",
+    "workspace-manager"
+  ],
+  "license": "NOASSERTION",
+  "category": "AI 应用",
+  "classify_reason": "终端内的代理多路复用器，管理多个AI代理",
+  "one_liner": "终端里的 AI 代理多路复用器，像 tmux 但能感知代理的阻塞/工作中/完成状态。",
+  "why_worth_it": "同时管理多个命令行 AI agent，保持会话不中断、任意终端重连，告别 GUI 捆绑，对运维和远程开发极度友好。",
+  "tags": [
+    "终端复用器",
+    "Agent编排",
+    "Rust",
+    "自托管"
+  ],
+  "confidence": "high",
+  "info_gaps": [
+    "代理状态检测的准确率无量化数据，仅提及基于进程名和输出启发式",
+    "Windows beta 版本的完整功能覆盖度和稳定性未说明",
+    "多用户场景下的会话隔离、权限模型未提及",
+    "无性能基准数据（如大量代理时的延迟或内存占用）",
+    "插件生态现状（社区贡献的插件数量、成熟度）未公开"
+  ],
+  "quality_flags": [],
+  "stars_total": 8887,
+  "created_at": "2026-03-27",
+  "pushed_at": "2026-06-30",
+  "latest_release": "v0.7.1",
+  "first_seen": "2026-07-01",
+  "last_seen": "2026-07-01",
+  "streak_days": 1,
+  "analysis_updated_at": "2026-07-01T02:27:33+0800",
+  "appearances": [
+    {
+      "date": "2026-07-01",
+      "reason": "new",
+      "stars_total": 8887,
+      "stars_gained": 485,
+      "release": "v0.7.1"
+    }
+  ]
+}

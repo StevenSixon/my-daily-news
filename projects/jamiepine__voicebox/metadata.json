@@ -14,8 +14,8 @@
     "whisper"
   ],
   "license": "MIT",
-  "category": "AI应用",
-  "classify_reason": "开源AI语音工作室，可用于语音克隆、听写等。",
+  "category": "AI 应用",
+  "classify_reason": "开源AI语音工作室，支持声音克隆、听写和创作",
   "one_liner": "本地优先的AI语音工作室，同时替代ElevenLabs和WisprFlow，覆盖TTS/STT/听写/代理语音全链路",
   "why_worth_it": "一站式解决隐私敏感的本地语音I/O闭环：七引擎多语言TTS与Whisper转录，加上全局热键听写和MCP代理语音输出，比单一云服务更省钱、更可控",
   "tags": [
@@ -33,13 +33,13 @@
     "跨平台自动粘贴在非macOS上的实现成熟度未详述"
   ],
   "quality_flags": [],
-  "stars_total": 35762,
+  "stars_total": 36243,
   "created_at": "2026-01-25",
-  "pushed_at": "2026-06-29",
+  "pushed_at": "2026-06-30",
   "latest_release": "v0.5.0",
   "first_seen": "2026-06-20",
-  "last_seen": "2026-06-30",
-  "streak_days": 10,
+  "last_seen": "2026-07-01",
+  "streak_days": 11,
   "analysis_updated_at": "2026-06-20T22:44:43+0800",
   "appearances": [
     {
@@ -110,6 +110,13 @@
       "reason": "lightweight",
       "stars_total": 35762,
       "stars_gained": 3883,
+      "release": "v0.5.0"
+    },
+    {
+      "date": "2026-07-01",
+      "reason": "lightweight",
+      "stars_total": 36243,
+      "stars_gained": 3884,
       "release": "v0.5.0"
     }
   ]

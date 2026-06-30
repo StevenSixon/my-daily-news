@@ -1,12 +1,12 @@
 {
   "full_name": "altic-dev/FluidVoice",
   "url": "https://github.com/altic-dev/FluidVoice",
-  "description": "FluidVoice - Fastest macOS Offline Dictation app - Voice to Text fully Local. One ⭐ takes us a long way :)) ",
+  "description": "Fastest and only macOS Dictation app with on-device STT and custom trained AI enhancement model - Local Wispr Flow alternative. One ⭐ takes us a long way :)) Windows, iOS and Linux coming soon.",
   "language": "Swift",
   "topics": [],
   "license": "GPL-3.0",
-  "category": "AI应用",
-  "classify_reason": "macOS离线语音转文字听写应用，利用语音识别AI技术。",
+  "category": "AI 应用",
+  "classify_reason": "macOS上的AI听写应用，内置设备端AI增强模型",
   "one_liner": "macOS隐私控救星：最快本地听写+多模型+本地AI增强，开源无云",
   "why_worth_it": "面向macOS隐私极客，提供零延迟多模型本地语音转文字和可选本地AI修正，无数据上传，开源可控。",
   "tags": [
@@ -22,13 +22,13 @@
     "Parakeet 自研实现的内部优化方式未说明"
   ],
   "quality_flags": [],
-  "stars_total": 4231,
+  "stars_total": 4818,
   "created_at": "2025-09-21",
-  "pushed_at": "2026-06-28",
+  "pushed_at": "2026-06-30",
   "latest_release": "v1.6.1",
   "first_seen": "2026-06-29",
-  "last_seen": "2026-06-30",
-  "streak_days": 2,
+  "last_seen": "2026-07-01",
+  "streak_days": 3,
   "analysis_updated_at": "2026-06-29T00:45:05+0800",
   "appearances": [
     {
@@ -43,6 +43,13 @@
       "reason": "lightweight",
       "stars_total": 4231,
       "stars_gained": 836,
+      "release": "v1.6.1"
+    },
+    {
+      "date": "2026-07-01",
+      "reason": "lightweight",
+      "stars_total": 4818,
+      "stars_gained": 586,
       "release": "v1.6.1"
     }
   ]

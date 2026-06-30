@@ -1,34 +1,52 @@
 ## 它是什么
-eve 是 Vercel 推出的文件系统优先的 AI Agent 框架，使用 TypeScript。通过 agent/agent.ts、instructions.md、tools/、skills/、channels/、schedules/ 等约定目录来组织 Agent 的全部能力，强调项目可审查与可扩展，避免黑盒式 Agent 实现。
+
+eve 是 Vercel 推出的文件系统优先（filesystem-first）的 AI 代理框架，采用 TypeScript 编写。它将代理的核心能力映射到约定好的目录结构中：`agent/instructions.md` 为系统提示词，`agent/tools/` 存放可调用的工具函数，`agent/skills/` 管理按需加载的过程文件，`agent/channels/` 处理 Slack、Discord 等消息渠道，`agent/schedules/` 配置定时任务，而 `agent/agent.ts` 集中定义模型与运行时选项。整个项目外观就是一个普通代码仓库，易于版本控制、多人协作和持续集成。
 
 ## 为什么火
-Vercel 的品牌加持加上对 Agent 工程化痛点的针对性解决（约定优于配置），使它在发布短时间内获得 2831 Star。社区活跃于 GitHub Discussions，但项目尚处 beta，API 可能变动。
+
+由 Vercel 背书，项目从创建到 0.17.1 版本仅两周即获得近 3000 Star。开发者被其“约定优于配置”的设计吸引：无需学习新的 DSL，直接用文件系统组织代理逻辑，自然融入 Git 工作流，降低了从单人实验到团队生产的迁移成本。内置的交互式终端 UI（`eve dev`）和丰富的文档（打包在 `node_modules` 内）也降低了上手门槛。
 
 ## 技术栈
-TypeScript + Node.js，定义工具使用 defineTool + Zod schema，模型配置通过 defineAgent 指定（如 anthropic/claude-sonnet-4.6）。内置 channels（HTTP/Slack/Discord）、schedules（cron），底层可能依赖 Vercel Workflows 基础设施。文档集成在 npm 包内，方便本地 AI 编码工具查阅。
+
+- **语言与运行时**：TypeScript，运行于 Node.js。
+- **核心依赖**：使用 zod 做输入校验，集成 Workflow SDK 5.0.0 beta 提供工作流编排能力。
+- **模型绑定**：当前示例显示直接指定模型标识符（如 `anthropic/claude-sonnet-4.6`），推测通过统一接口适配不同模型提供商。
+- **交互界面**：提供 `eve dev` 终端 UI，支持 HTTP Basic 等认证方式访问受保护的远程部署。
+- **部署**：与 Vercel 平台深度绑定（beta 条款引用 Vercel 的公共 beta 协议），但框架本身在本地即可运行开发模式。
 
 ## 核心能力
-- **文件系统即创作界面**：无需重型 IDE 集成，目录结构就是 Agent 蓝图。
-- **工具与技能分离**：工具是模型可直接调用的函数，技能是按需加载的过程。
-- **多通道接入**：原生支持 Slack、Discord 等消息通道。
-- **定时任务**：通过 schedules 定义 cron 作业。
-- **本地开发体验**：一条命令 `npx eve@latest init` 创建项目，`npm run dev` 启动交互终端 UI。
+
+1. **文件系统约定**：通过目录结构声明代理的各个组件，职责清晰，无需额外配置文件。
+2. **工具定义**：`defineTool` + zod schema 快速声明带类型校验的工具函数，支持 mock 数据返回。
+3. **子代理与委托**：支持在代理内部调用另一个代理，且最新版本已优化子代理的提示词注入逻辑，避免冗余描述。
+4. **工作流引擎**：集成 Workflow SDK（当前 5.0.0 beta），可用于编排多步任务。
+5. **多渠道接入**：原生支持 HTTP、Slack、Discord 等渠道，可在 `channels/` 下定义连接逻辑。
+6. **定时任务**：`schedules/` 目录下的文件可定义 cron 任务，实现定期执行的代理行为。
+7. **内置文档**：`node_modules/eve/docs` 包含完整指南，方便本地 AI 编程助手直接阅读。
+8. **交互终端**：`eve dev` 提供本地 UI，支持传入自定义 header 访问远程服务。
 
 ## 适用场景
-需要快速构建可维护 AI Agent 的 TypeScript 团队，尤其适合：
-- 内部流程自动化（如定时总结、周报生成）
-- 聊天机器人（Slack/Discord 集成）
-- 工具调用型 Agent（天气查询、数据检索）
-- 已在 Vercel 生态中的项目
+
+- 需要多人协作维护的长期运行代理（客服机器人、自动化工单处理）。
+- 希望用 TypeScript 全栈且依赖简单、易于审查的团队。
+- 原型阶段快速验证代理逻辑，后续可直接切换至生产部署。
+- 与 Vercel 基础设施结合紧密的项目。
 
 ## 同类对比
-与 LangChain（重抽象、生态大）相比，eve 更轻量、更约定化；与 AutoGPT 等独立 Agent 相比，更侧重工程化与可审查性。但目前生态较小，且与 Vercel 平台绑定较深。
+
+相比 LangChain 的抽象链式调用，eve 更偏向“文件即模块”，学习曲线更低，结构更透明。对比 CrewAI 等 Multi-Agent 框架，eve 的子代理机制更轻量，且直接受益于文件系统的版本管理能力。比 AutoGPT 等以 UI 为中心的方案，eve 更贴近后端开发者习惯。但其渠道与工作流功能尚未覆盖 RabbitMQ、Kafka 等企业级消息中间件，模型提供商的适配灵活度在公开文档中未充分说明。
 
 ## 版本动态
-当前 beta 版本 eve@0.16.2（2026-06-27），最近的 patch 禁用了 Workflow SDK turbo 第一交付路径，回归全序运行时路径。这表明框架仍在快速调整执行引擎，生产使用需关注变更。
+
+- **最新版本**：0.17.1（2026-06-29）
+- **主要变更**：
+  - 为 `eve dev` 的 URL 目标增加 HTTP Basic 认证和可重复的 `-H` 头支持。
+  - 停止向被委托的子代理提示中注入工具描述，改由父代理传递委托消息。
+  - 将内置 Workflow SDK 依赖集更新至 5.0.0 beta，保持核心包与工作流环境对齐。
+- **状态**：公开 beta，API 和行为可能在正式版前变化。
 ---
 
 ## ℹ️ 置信度与信息盲区
 
-- 置信度：**high**
-- 信息盲区：未明确部署到生产是否需要 Vercel 账户或特定定价计划；未提供性能或可靠性 benchmark 数据；subagents 和 schedules 的具体实现限制与持久化机制未在 README 展现；与 Vercel Workflows 的依赖关系及独立部署可行性未说明
+- 置信度：**medium**
+- 信息盲区：未提供与其他框架的性能对比或基准测试数据；模型提供商具体接入方式（是否支持本地模型或任意 OpenAI 兼容 API）未在 README 中说明；沙盒（Sandbox）特性仅在标签中出现，README 与 Release 说明均未涉及；是否必须绑定 Vercel 平台才能部署生产环境未明确；无安全审计或安全实践细节，仅提及负责任披露渠道

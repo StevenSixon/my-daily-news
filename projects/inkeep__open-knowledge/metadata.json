@@ -23,33 +23,32 @@
     "skills"
   ],
   "license": "GPL-3.0",
-  "category": "AI应用",
-  "classify_reason": "AI原生的Markdown编辑器和LLM Wiki，知识管理工具。",
-  "one_liner": "AI-native 的 WYSIWYG Markdown 编辑器，原生集成 Claude/Codex 与 MCP",
-  "why_worth_it": "将 Markdown 笔记与 AI 代理深度绑定，本地优先、文件级透明，适合需要 Claude/Codex 直接干预知识库的极客与工程团队",
+  "category": "AI 应用",
+  "classify_reason": "AI原生的Markdown编辑器与LLM维基，兼具知识管理",
+  "one_liner": "AI-native WYSIWYG Markdown编辑器，集成Claude/Codex，构建本地LLM知识库。",
+  "why_worth_it": "为AI代理提供私有本地的知识管理，原生接入Claude/Codex等MCP客户端，让LLM直接读写笔记，比Notion更AI-native。",
   "tags": [
-    "Markdown编辑器",
+    "AI-native",
     "本地优先",
-    "AI集成",
-    "MCP"
+    "MCP",
+    "Markdown编辑器"
   ],
   "confidence": "high",
   "info_gaps": [
-    "桌面应用技术栈未披露（Electron / Tauri 等）",
-    "MCP 和 Skill 的具体能力边界、可扩展性及安全性未详细说明",
-    "团队共享基于 GitHub 同步，但本地多人同时编辑的冲突处理策略未提及",
-    "无性能基准或大知识库处理能力数据",
-    "终端内嵌功能的具体实现（PTY？）未知"
+    "未提及除 Claude/Codex/Cursor 外的 MCP 客户端测试情况",
+    "无性能基准数据（如大型知识库的索引速度）",
+    "未说明 Web UI 模式的最低内存/CPU 要求",
+    "分享功能（sharing r...）在 Release notes 中被截断，未完全描述"
   ],
   "quality_flags": [],
-  "stars_total": 1524,
+  "stars_total": 1628,
   "created_at": "2026-06-03",
-  "pushed_at": "2026-06-29",
-  "latest_release": "v0.20.0",
+  "pushed_at": "2026-06-30",
+  "latest_release": "v0.21.0",
   "first_seen": "2026-06-27",
-  "last_seen": "2026-06-30",
-  "streak_days": 4,
-  "analysis_updated_at": "2026-06-30T00:52:40+0800",
+  "last_seen": "2026-07-01",
+  "streak_days": 5,
+  "analysis_updated_at": "2026-07-01T02:31:55+0800",
   "appearances": [
     {
       "date": "2026-06-27",
@@ -78,6 +77,13 @@
       "stars_total": 1524,
       "stars_gained": 0,
       "release": "v0.20.0"
+    },
+    {
+      "date": "2026-07-01",
+      "reason": "release_update",
+      "stars_total": 1628,
+      "stars_gained": 0,
+      "release": "v0.21.0"
     }
   ]
 }

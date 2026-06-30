@@ -23,7 +23,9 @@ This repo is specifically for the **Hermes Browser Extension**: the Chrome/Edge/
 
 | Side panel | Theme settings | Local agents |
 | --- | --- | --- |
-| <img src="./assets/readme/hermes-browser-sidepanel.png" alt="Hermes Browser Extension side panel in Mono theme" width="300" /> | <img src="./assets/readme/hermes-browser-theme-settings.png" alt="Hermes Browser Extension appearance settings with color mode and theme picker" width="300" /> | <img src="./assets/readme/hermes-browser-settings-agent-picker.png" alt="Hermes Browser Extension settings with connected local agent picker" width="300" /> |
+| <img src="./assets/readme/hermes-browser-sidepanel.png" alt="Hermes Browser Extension side panel in Mono theme" width="300" /> | <img src="./assets/readme/hermes-browser-theme-picker-v017.png" alt="Hermes Browser Extension appearance settings with color mode and theme picker" width="300" /> | <img src="./assets/readme/hermes-browser-local-agents-v017.png" alt="Hermes Browser Extension settings with connected local agent picker" width="300" /> |
+| Browser behavior | Page-only context | Hermes compatibility |
+| <img src="./assets/readme/hermes-browser-browser-behavior.png" alt="Hermes Browser Extension browser behavior settings for auto naming, prompt context, and tab-attached panels" width="300" /> | <img src="./assets/readme/hermes-browser-context-scope.png" alt="Hermes Browser Extension context scope menu with Chat only, Follow active tab, and Page only controls" width="300" /> | <img src="./assets/readme/hermes-browser-compatibility.png" alt="Hermes Browser Extension compatibility panel showing fallback modes and connection security" width="300" /> |
 
 ## Highlights
 
@@ -32,8 +34,9 @@ This repo is specifically for the **Hermes Browser Extension**: the Chrome/Edge/
 - Supports dashboard WebSocket mode when you have a signed-in remote Hermes dashboard tab and no API key.
 - Auto-syncs connected Hermes providers/models, profiles, skills, sessions, and capabilities.
 - Shows a Hermes compatibility panel so older gateways degrade into explicit fallback/manual modes instead of broken route errors.
-- Sends active tab/browser context into a persisted Hermes session.
-- Adds follow/pin context controls so a side panel can stay locked to a specific browser tab.
+- Sends active tab/browser context into a persisted Hermes session, or switches to Chat only when you do not want browser context attached.
+- Adds a composer-header context menu for Chat only, following the active tab, pinning a specific tab, and choosing which open tabs appear in the prompt.
+- Opens as a tab-attached side panel by default, with a setting to keep the panel global across tabs.
 - Keeps pinned-tab conversations isolated with per-tab local history and Hermes session bindings.
 - Adds quick commands for common browser-context work, including `/summarize`, `/explain`, `/rewrite`, `/tabs`, and `/action-items`.
 - Adds a collapsible “What Hermes saw” receipt after each sent turn for transparent context/debugging.
@@ -375,3 +378,13 @@ Built by **Jon Komet** (`@abundantbeing`).
 ## License
 
 MIT. See [`LICENSE`](LICENSE).
+
+## Star History
+
+<a href="https://www.star-history.com/?repos=abundantbeing%2Fhermes-browser-extension&type=date&legend=top-left">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=abundantbeing/hermes-browser-extension&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=abundantbeing/hermes-browser-extension&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=abundantbeing/hermes-browser-extension&type=date&legend=top-left" />
+ </picture>
+</a>

@@ -4,13 +4,12 @@
 
 [![CI](https://github.com/NotASithLord/peerd/actions/workflows/package-and-release.yml/badge.svg)](https://github.com/NotASithLord/peerd/actions/workflows/package-and-release.yml)
 [![License: Apache 2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
-[![Status: 0.x experimental](https://img.shields.io/badge/status-0.x%20experimental-orange.svg)](STATUS.md)
+[![Status: 0.x experimental](https://img.shields.io/badge/status-0.x%20experimental-orange.svg)](#install)
 [![Manifest V3](https://img.shields.io/badge/Manifest%20V3-Chrome%20%26%20Firefox-informational.svg)](#install)
-[![No build step](https://img.shields.io/badge/build-none%20(vanilla%20JS)-success.svg)](CONTRIBUTING.md#development-setup)
+[![No build step](https://img.shields.io/badge/build-none%20(vanilla%20JS)-success.svg)](#getting-started)
 <!-- types badge: STATIC while the repo is private (shields can't fetch raw.githubusercontent on a private repo → "resource not found"). At public launch, swap the line below for the auto-updating endpoint badge — the JSON is already generated + drift-gated:
 [![types: ts-check coverage](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/NotASithLord/peerd/main/badges/tscheck.json)](packaging/check-tscheck.ts) -->
 [![types: 100% ts-check](https://img.shields.io/badge/types-100%25%20%2F%2F%20%40ts--check-brightgreen.svg)](packaging/check-tscheck.ts)
-[![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![Security policy](https://img.shields.io/badge/security-policy-blue.svg)](SECURITY.md)
 
 **peerd is the first AI agent harness native to the browser.** It's a
@@ -39,21 +38,26 @@ peerd uses *the browser* as its runtime and its security model. It builds
 on decades of hardened browser platform work (V8 isolates for sandboxing,
 WebCrypto for the vault, WebAuthn passkeys to unlock it, opaque-origin
 iframes, Subresource Integrity) and writes none of its own cryptographic
-or process-isolation code. The agent that holds your keys never reads a
-raw page; a disposable runner with no keys and no network does, and its
-output comes back fenced as untrusted. Every action the agent drives is
+or process-isolation code. The agent that holds your keys never operates
+an environment itself: each browser tab, VM, notebook, and app is driven
+by its own keyless actor sub-agent that exclusively holds that
+environment's tools. The main agent acts as an orchestrator. It delegates
+a goal to an actor and gets back a summary fenced as untrusted, so raw
+page text and command output never reach the context that holds your
+keys, and a confused or prompt-injected main agent has no tool to touch
+an environment with in the first place. Every action an actor drives is
 verified against the live page before it counts as done. (More at
 [peerd.ai](https://peerd.ai).)
 
 **Status: 0.x, experimental beta.** The initial feature buildout is
-complete and integrated (see `STATUS.md`), but the surface is still
+complete and integrated, but the surface is still
 moving: **breaking changes are likely**, storage formats may shift, and
 it drives your browser and holds your API keys, so use it with care.
 There is no "V1" commitment; versions stay in the 0.x range until the
 surface stabilizes.
 
-For the full, itemized list of what's shipped, categorized by module,
-see [`FEATURES.md`](FEATURES.md).
+For what's shipped, read the module code under `extension/peerd-*/`:
+the code is the spec.
 
 ## Install
 
@@ -197,66 +201,73 @@ untrusted-content handling, no telemetry) in [`SECURITY.md`](SECURITY.md).
   and is meant to be read carefully.
 
 The full version of these conventions and the architectural rationale
-lives in `CLAUDE.md` (orientation), `ARCHITECTURE.md` (module
-organization), and `DESIGN.md` (the full technical design record:
-vault crypto, dispatcher gates, prompt-injection defenses, the MV3
-keepalive trick; long, historical, and worth searching before
-reopening a settled question).
+lives in `CLAUDE.md` (orientation) and in the module code under
+`extension/peerd-*/`: the code is the spec (vault crypto, dispatcher
+gates, prompt-injection defenses, and the MV3 keepalive trick all live
+in the modules that own them).
 
 ## The five modules
 
 The five-letter wordmark *is* the architecture: each colored letter is
-one top-level module. **Each module has its own README** with how it
-works today, its public API, known limitations, and TODOs:
+one top-level module, each owning its public API through `index.js`:
 
 | | Module | Role |
 |---|---|---|
-| **`p`** · cyan | [`peerd-provider`](extension/peerd-provider/README.md) | Model adapters — Anthropic, OpenRouter, Ollama (streaming, caching, cost, retries) |
-| **`e`** · red | [`peerd-egress`](extension/peerd-egress/README.md) | Security — the vault, the egress chokepoint, the denylist, the audit log |
-| **`e`** · amber | [`peerd-engine`](extension/peerd-engine/README.md) | Sandboxes — WebVMs, Notebooks, Apps, and the headless worker |
-| **`r`** · green | [`peerd-runtime`](extension/peerd-runtime/README.md) | The agent — loop, tools, do/get/check, memory, skills, review, goal mode, voice |
-| **`d`** · magenta | [`peerd-distributed`](extension/peerd-distributed/README.md) | The dweb — the peer-to-peer network (preview channel only) |
+| **`p`** · cyan | [`peerd-provider`](extension/peerd-provider/) | Model adapters — Anthropic, OpenRouter, Ollama (streaming, caching, cost, retries) |
+| **`e`** · red | [`peerd-egress`](extension/peerd-egress/) | Security — the vault, the egress chokepoint, the denylist, the audit log |
+| **`e`** · amber | [`peerd-engine`](extension/peerd-engine/) | Sandboxes — WebVMs, Notebooks, Apps, and the headless worker |
+| **`r`** · green | [`peerd-runtime`](extension/peerd-runtime/) | The orchestrator — agent loop, tools, the `message_actor` delegation channel, actors, sessions, memory, skills, review, goal mode, voice |
+| **`d`** · magenta | [`peerd-distributed`](extension/peerd-distributed/) | The dweb — the peer-to-peer network (preview channel only) |
 
 The brand IS the architecture: cross-module imports go through each
 module's `index.js`, never deep paths; nothing outside
-`peerd-distributed/` imports it at all. See
-[`ARCHITECTURE.md`](ARCHITECTURE.md) for the dependency graph.
+`peerd-distributed/` imports it at all. Each module's README and its
+`index.js` are the dependency graph.
 
 ## Trust boundaries
 
 peerd's safety is *who is allowed to do what*: small boundaries
 enforced by the browser platform, not by peerd's own crypto. Two
 principles run through all of it: **the agent that holds your keys never
-touches a raw page or runs untrusted code**, and **the agent never gets the
-final word on correctness; every action is verified against the live page
-before it counts as done.**
+touches a raw page or runs untrusted code** — the environment-operating
+tools are not even attached to it, they belong to per-environment actor
+sub-agents — and **the agent never gets the final word on correctness;
+every action is verified against the live page before it counts as done.**
+
+The orchestrator delegates; an actor does the work. Each tab, VM,
+notebook, and app is owned by one actor that holds only that
+environment's tools, runs without keys, and hands back a fenced summary.
+So isolation between environments is structural, not a convention: even a
+fully prompt-injected main agent cannot reach an environment it was not
+asked to, because it never held the tool.
 
 | Actor | Trusted with | Never |
 |---|---|---|
 | **The vault** (`peerd-egress/vault`) | your API keys + secrets, decrypted only after Touch ID / passkey / passphrase unlock; idle auto-lock | leaving the device — keys go only to the provider you chose |
-| **The main agent** (`peerd-runtime/loop`) | the conversation, planning, tool dispatch | reading raw page bytes or running untrusted code directly |
-| **The disposable runner** (`peerd-runtime/runner`) | driving + reading the page via do/get/check | holding keys or its own network; its output returns `wrapUntrusted`-fenced |
+| **The orchestrator** (`peerd-runtime/loop`) | the conversation, planning, delegating a goal to an actor via `message_actor` | holding any environment's tools, reading raw page bytes, or running untrusted code directly |
+| **An actor** (`peerd-runtime/subagent`) | driving ONE tab / VM / notebook / app — it exclusively holds that environment's tools, keyless | touching another environment, holding keys, or returning anything to the orchestrator except a `wrapUntrusted`-fenced summary |
+| **The disposable runner** (`peerd-runtime/runner`) | driving + reading a page keyless via do/get/check — the lineage a web actor and subagents use | holding keys or its own network; its output returns `wrapUntrusted`-fenced |
 | **The egress chokepoint** (`safeFetch` / `webFetch`) | every outbound byte — provider allowlist + denylist + SSRF guard | being bypassed; a bare `fetch` is lint-forbidden |
 | **The sandboxes** (WebVM · Notebook · App) | running code — V8 isolates + opaque-origin iframes | extension access; their HTTP routes back through egress |
 | **Web content** | nothing by default | being trusted — all of it is fenced as untrusted input |
 
 The AI proposes and drives; the browser platform (WebCrypto vault,
 WebAuthn unlock, V8 isolates, SRI) and the live DOM decide what actually
-happens. Full detail in [`SECURITY.md`](SECURITY.md) and `DESIGN.md`.
+happens. Full detail in [`SECURITY.md`](SECURITY.md) and the
+`peerd-egress` / `peerd-runtime` code.
 
 ## Documentation
 
-Read `CLAUDE.md` for quick orientation, `ARCHITECTURE.md` for the
-five-module organization, `ARCHITECTURE-CHANGES.md` if you're picking
-up work from a previous session, `FEATURES.md` for what's shipped,
-`PACKAGING.md` for the dual-distribution
-packaging system, and
-`docs/DECISIONS.md` for the recorded design tradeoffs.
+The code is the spec. Read `CLAUDE.md` for orientation, the per-module
+READMEs under `extension/peerd-*/` for how each module works and its
+public API, and the code itself for the rest. `SECURITY.md` covers the
+trust boundaries; `docs/store/` holds the store-listing and compliance
+material.
 
 ## Repo layout
 
-The five-letter wordmark *is* the architecture (see `ARCHITECTURE.md`).
-Each colored letter maps to a top-level module:
+The five-letter wordmark *is* the architecture (the module code is the
+detail). Each colored letter maps to a top-level module:
 
 ```
 peerd/
@@ -278,11 +289,11 @@ peerd/
 │   ├── tests/                # in-browser test runner — open runner.html
 │   ├── vendor/               # third-party deps, committed as-is (CheerpX, xterm, mithril, Moonshine)
 │   └── permissions/          # permission-grant pages (mic, etc.)
-├── manifests/                # base manifest + per-channel patch documents (PACKAGING.md)
+├── manifests/                # base manifest + per-channel patch documents
 ├── packaging/                # Bun packaging scripts: manifest gen, channel artifacts, signing, feeds
 ├── tests/                    # Bun test suite (bun test ./tests)
 ├── update-feeds/             # generated auto-update feeds served at peerd.ai/updates/ (copied to peerd-site to deploy)
-├── docs/                     # DECISIONS.md, distributed/, store/, and friends
+├── docs/                     # store/ — store-listing + compliance material
 ├── signaling-node/           # dweb rendezvous server shells (share the pure signaling reducer)
 ├── v1-deliverables/          # V1 buildout record: INTEGRATION-LOG.md, TEST-PLAN.md
 └── scripts/                  # dev helpers (cdp/ headless harness, dev-server.sh, vendor-*)
@@ -292,28 +303,35 @@ peerd ships from this one tree in **two channels**: `peerd` (Chrome Web
 Store / Firefox Add-ons, no dweb code in the artifact) and
 `peerd preview` (GitHub Releases, dweb enabled, signed,
 auto-updating). Same source, same version, same release; the channel
-only decides whether the dweb module ships. `PACKAGING.md` has the
-whole story.
+only decides whether the dweb module ships. The `packaging/` scripts
+have the whole story.
 
 Cross-module imports go through each module's `index.js`, never deep
 paths. ESLint enforces. Within a module, deep imports are fine.
 
 ## Execution instances
 
-`peerd-engine` hosts Sandboxes: four execution kinds (taxonomy in
-DESIGN.md §8.5). Three are discrete, persistent browser tabs the user can
+`peerd-engine` hosts Sandboxes: four execution kinds (taxonomy in the
+`peerd-engine/` code). Three are
+discrete, persistent browser tabs the user can
 see, focus, and close, grouped under "peerd" in the tab strip and
 surviving browser restarts: the WebVM, the Notebook, and the App. The
 fourth, the headless worker (`js_run`), runs the Notebook's sealed worker
 offscreen with no tab: ephemeral, for the agent's own quick compute. The
-agent picks the lightest kind that fits the task.
+orchestrator picks the lightest kind that fits the task, bootstraps the
+instance, and then delegates the work to that instance's actor; the
+tool lists below are the surface an actor drives, not the main agent. One
+main-agent tool spans all of them: **`actor_list`** enumerates every
+addressable actor — WebVMs, Notebooks, Apps, open tabs, and API
+integrations — each tagged with its `type` and the handle to pass to
+`message_actor`, so discovery is one call instead of five.
 
 **WebVM**: CheerpX-emulated Debian (sandboxed Linux). Own disk (IDB
 overlay), own bash, own POSIX. ~10s first boot. Use it when you need
 real binaries, a shell, or multi-language stacks.
 
 ```
-vm_list   vm_create   vm_boot   vm_import   vm_write_file   vm_delete
+vm_create   vm_boot   vm_import   vm_write_file   vm_delete
 ```
 
 HTTP egress from the VM (curl / wget / git clone) is intercepted by
@@ -328,7 +346,7 @@ worker's only network, routed through `peerd-egress` so it's honest. Each
 `peerd.self.writeFile`/`readFile` to the OPFS file tree.
 
 ```
-js_list   js_create   js_notebook   js_run   js_write_file   js_read_file   js_delete
+js_create   js_notebook   js_run   js_write_file   js_read_file   js_delete
 ```
 
 **Headless worker** is the same sealed worker as a Notebook, but headless:
@@ -344,7 +362,7 @@ search across name, tags, and body. `app_update` auto-reloads the open
 tab so iterations show live.
 
 ```
-app_list   app_create   app_update   app_open   app_search   app_delete
+app_create   app_update   app_open   app_search   app_delete
 ```
 
 ## Tests
@@ -434,7 +452,7 @@ whatever CheerpX license your use requires is your responsibility, not
 peerd's** — contact Leaning Technologies before any commercial launch.
 ² Local in-browser WebGPU inference is **early but proven**: one model
 (Gemma-4-E2B) ships behind an opt-in download, WebGPU-only; broader model
-support is staged. Design notes: `docs/LOCAL-INFERENCE.md`.
+support is staged. The runner lives in `offscreen/local-model.js`.
 
 ### Models and data fetched at runtime
 

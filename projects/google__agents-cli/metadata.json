@@ -1,0 +1,51 @@
+{
+  "full_name": "google/agents-cli",
+  "url": "https://github.com/google/agents-cli",
+  "description": "The CLI and skills that turn any coding assistant into an expert at creating, evaluating, and deploying AI agents on Google Cloud.",
+  "language": "Python",
+  "topics": [
+    "adk",
+    "agent-development-kit",
+    "agents",
+    "coding-agent",
+    "gemini",
+    "gemini-enterprise-agent-platform",
+    "generative-ai",
+    "google-cloud"
+  ],
+  "license": "Apache-2.0",
+  "category": "AI 应用",
+  "classify_reason": "使任意编码助手成为创建、评估、部署AI代理专家的CLI与技能集",
+  "one_liner": "赋能编码助手，一站式构建、评估、部署谷歌云Agent",
+  "why_worth_it": "让编码助手掌握Agent开发全栈，省去开发者学习Google Cloud繁琐命令与最佳实践的时间",
+  "tags": [
+    "Agent开发套件",
+    "Google Cloud",
+    "Coding Agent",
+    "CLI工具"
+  ],
+  "confidence": "high",
+  "info_gaps": [
+    "技能文件的具体格式（是否为 Markdown 指引）未公开",
+    "未提供与直接使用 ADK 的性能或效率对比数据",
+    "部署到 Cloud Run/GKE 的默认资源配置和成本未说明"
+  ],
+  "quality_flags": [],
+  "stars_total": 4047,
+  "created_at": "2026-04-08",
+  "pushed_at": "2026-06-28",
+  "latest_release": "v0.6.1",
+  "first_seen": "2026-07-01",
+  "last_seen": "2026-07-01",
+  "streak_days": 1,
+  "analysis_updated_at": "2026-07-01T02:28:27+0800",
+  "appearances": [
+    {
+      "date": "2026-07-01",
+      "reason": "new",
+      "stars_total": 4047,
+      "stars_gained": 433,
+      "release": "v0.6.1"
+    }
+  ]
+}
