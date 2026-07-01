@@ -27,7 +27,7 @@
   ],
   "license": "Apache-2.0",
   "category": "AI 应用",
-  "classify_reason": "AI渗透测试工具，为安全测试提供AI能力",
+  "classify_reason": "AI渗透测试工具",
   "one_liner": "开源AI代理模拟黑客动态验证漏洞并生成PoC，减少误报。",
   "why_worth_it": "为开发/安全团队提供动态渗透测试自动化，用真实攻击手法验证漏洞，把数周的手工测试缩短至小时。",
   "tags": [
@@ -44,13 +44,13 @@
     "各LLM模型在该任务下的效果对比（如判断准确率、token消耗）未提供"
   ],
   "quality_flags": [],
-  "stars_total": 27948,
+  "stars_total": 29385,
   "created_at": "2025-08-05",
   "pushed_at": "2026-06-30",
   "latest_release": "v1.0.4",
   "first_seen": "2026-06-29",
-  "last_seen": "2026-07-01",
-  "streak_days": 2,
+  "last_seen": "2026-07-02",
+  "streak_days": 3,
   "analysis_updated_at": "2026-06-29T00:45:33+0800",
   "appearances": [
     {
@@ -65,6 +65,13 @@
       "reason": "lightweight",
       "stars_total": 27948,
       "stars_gained": 395,
+      "release": "v1.0.4"
+    },
+    {
+      "date": "2026-07-02",
+      "reason": "lightweight",
+      "stars_total": 29385,
+      "stars_gained": 1802,
       "release": "v1.0.4"
     }
   ]

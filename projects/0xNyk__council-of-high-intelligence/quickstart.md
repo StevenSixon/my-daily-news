@@ -1,23 +1,29 @@
-## 安装
+## 安装与使用
+
+### 前提
+- 已安装 Claude Code 或 Codex CLI。
+- 若需使用非 Anthropic 模型，需额外安装对应 CLI（如 `gemini`、`ollama`）并导出相应的 API 密钥。
+
+### 安装
 ```bash
 git clone https://github.com/0xNyk/council-of-high-intelligence.git
 cd council-of-high-intelligence
-# 为 Claude Code 安装
-./install.sh
-# 或为 Codex 安装
-./install.sh --codex
+./install.sh          # 为 Claude Code 安装
+# 或
+./install.sh --codex   # 为 Codex 安装
 ```
 
-## 最小可用示例
-在 Claude Code 或 Codex 会话中直接调用：
+### 最小可用示例
+在 Claude Code 或 Codex 会话中：
 ```
-/council Should we open-source our agent framework?
-/council --quick Should we add caching here?
-/council --duo Should we use microservices or monolith?
-/council --triad strategy What's our competitive moat?
+/council 我们应该开源我们的智能体框架吗？
+/council --quick 这里应该加缓存吗？
+/council --duo 使用微服务还是单体？
 ```
 
-## 依赖前提
-- 至少安装一个 LLM 提供商 CLI（Claude、Codex、Gemini、Ollama、Cursor 或 NVIDIA NIM 环境变量）
-- 对于 NVIDIA NIM，需导出 `NVIDIA_API_KEY`；对于 Cursor，需安装 `cursor-agent` 并配置 API key
-- Shell 环境（Bash/Zsh）
+### 高级用法
+- 指定三人组：`/council --triad architecture 什么是我们的竞争护城河？`
+- 仅用双人并指名：`/council --duo --members torvalds,ada 这个抽象值得吗？`
+- 使用预定义配置文件：`/council --profile execution-lean 今天发布吗？`
+
+安装后即通过自动探测分配服务提供者，无需额外配置。

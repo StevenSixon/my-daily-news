@@ -1,0 +1,61 @@
+{
+  "full_name": "umacloud/umadev",
+  "url": "https://github.com/umacloud/umadev",
+  "description": "UmaDev: A coding agent that works like a real dev team, commanding the Claude Code / Codex / OpenCode you already use.",
+  "language": "Rust",
+  "topics": [
+    "agents",
+    "ai",
+    "ai-agents",
+    "ai-coding",
+    "claude-code",
+    "codex-cli",
+    "coding",
+    "coding-agent",
+    "coding-agents",
+    "open-code",
+    "rag",
+    "rust",
+    "rust-agent",
+    "rust-lang",
+    "tui",
+    "vibe-coding"
+  ],
+  "license": "MIT",
+  "category": "AI 应用",
+  "classify_reason": "模拟开发团队的编码代理",
+  "one_liner": "扮演完整开发团队的本地 agent，驱动你已有的 Claude Code/Codex/OpenCode，零额外 API 开销",
+  "why_worth_it": "根治 AI 编程无规划、代码混乱、无交付物的问题：全流程规范输出，自带知识库与本地 RAG，适合追求工程严谨的极客",
+  "tags": [
+    "Agent框架",
+    "Rust",
+    "本地RAG",
+    "自托管"
+  ],
+  "confidence": "high",
+  "info_gaps": [
+    "未提供性能基准（如构建中等规模项目的耗时）",
+    "未说明 TUI 的具体实现框架",
+    "未提及 Windows 上外部 CLI 的兼容性细节",
+    "未提供社区活跃度（issue/PR 数量、响应时间）",
+    "知识库 459 个文件的具体范围和来源未完全列举"
+  ],
+  "quality_flags": [],
+  "stars_total": 211,
+  "created_at": "2026-06-19",
+  "pushed_at": "2026-07-01",
+  "latest_release": "v1.0.21",
+  "first_seen": "2026-07-02",
+  "last_seen": "2026-07-02",
+  "streak_days": 1,
+  "analysis_updated_at": "2026-07-02T03:19:06+0800",
+  "appearances": [
+    {
+      "date": "2026-07-02",
+      "reason": "new",
+      "stars_total": 211,
+      "stars_gained": 0,
+      "release": "v1.0.21"
+    }
+  ]
+}

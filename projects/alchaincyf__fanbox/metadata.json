@@ -17,7 +17,7 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "vibe coding的驾驶舱，集成文件管理、终端，帮助观察AI生成代码的改动",
+  "classify_reason": "vibe coding驾驶舱，文件管理与终端+代理命令集成",
   "one_liner": "AI生成项目的找回与监控驾驶舱，文件浏览+终端+预览三合一",
   "why_worth_it": "为高频使用Claude Code/Codex的开发者提供统一本地工作台，无需窗口跳转，状态保留零配置",
   "tags": [
@@ -35,13 +35,13 @@
     "未提供自动更新或错误报告的详细机制（仅提及通知提醒）"
   ],
   "quality_flags": [],
-  "stars_total": 830,
+  "stars_total": 837,
   "created_at": "2026-06-10",
   "pushed_at": "2026-06-26",
   "latest_release": "v2.3.3",
   "first_seen": "2026-06-20",
-  "last_seen": "2026-07-01",
-  "streak_days": 15,
+  "last_seen": "2026-07-02",
+  "streak_days": 16,
   "analysis_updated_at": "2026-06-28T18:23:30+0800",
   "appearances": [
     {
@@ -146,6 +146,13 @@
       "date": "2026-07-01",
       "reason": "lightweight",
       "stars_total": 830,
+      "stars_gained": 0,
+      "release": "v2.3.3"
+    },
+    {
+      "date": "2026-07-02",
+      "reason": "lightweight",
+      "stars_total": 837,
       "stars_gained": 0,
       "release": "v2.3.3"
     }

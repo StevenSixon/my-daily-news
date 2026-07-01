@@ -1,27 +1,34 @@
-## 安装
+### 安装
 ```bash
 pip install vulnclaw
 ```
-## 最小可用示例
-1. 配置模型提供商
+
+### 配置 API
 ```bash
-vulnclaw config provider deepseek   # 或其他兼容模型
+# 选择提供商（自动填充 base URL）
+vulnclaw config provider minimax   # 或 openai/deepseek 等
+# 设置 API Key
 vulnclaw config set llm.api_key sk-your-key
 ```
-2. 运行环境检查
+
+### 启动
+```bash
+# 进入 REPL 模式，可直接输入自然语言任务
+vulnclaw
+# 或直接一键执行全流程
+vulnclaw run http://testphp.vulnweb.com
+# 启动 Web UI
+vulnclaw web
+```
+
+### 环境检查
 ```bash
 vulnclaw doctor
 ```
-3. 启动交互式会话，对目标进行渗透测试
+输出会检查 Python、Node.js、npx、nmap 等依赖。手动安装时建议提前安装 nmap 和 Node.js (≥14)。
+
+### Docker 快速体验
 ```bash
-vulnclaw
-# 进入 CLI 后输入：对 http://testphp.vulnweb.com 进行渗透测试
+docker compose up --build
 ```
-或使用单命令模式：
-```bash
-vulnclaw run http://testphp.vulnweb.com
-```
-## 依赖前提
-- Python 3.10+
-- Node.js（用于 MCP 服务）
-- nmap（可选，用于端口扫描）
+镜像已包含所有 MCP 运行时，访问 http://127.0.0.1:7788。

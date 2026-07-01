@@ -3,10 +3,17 @@
   "url": "https://github.com/altic-dev/FluidVoice",
   "description": "Fastest and only macOS Dictation app with on-device STT and custom trained AI enhancement model - Local Wispr Flow alternative. One ⭐ takes us a long way :)) Windows, iOS and Linux coming soon.",
   "language": "Swift",
-  "topics": [],
+  "topics": [
+    "ai",
+    "dictation",
+    "ios",
+    "llama-cpp",
+    "macos",
+    "swift"
+  ],
   "license": "GPL-3.0",
   "category": "AI 应用",
-  "classify_reason": "macOS上的AI听写应用，内置设备端AI增强模型",
+  "classify_reason": "macOS语音听写应用，内置AI增强模型",
   "one_liner": "macOS隐私控救星：最快本地听写+多模型+本地AI增强，开源无云",
   "why_worth_it": "面向macOS隐私极客，提供零延迟多模型本地语音转文字和可选本地AI修正，无数据上传，开源可控。",
   "tags": [
@@ -22,13 +29,13 @@
     "Parakeet 自研实现的内部优化方式未说明"
   ],
   "quality_flags": [],
-  "stars_total": 4818,
+  "stars_total": 5393,
   "created_at": "2025-09-21",
-  "pushed_at": "2026-06-30",
+  "pushed_at": "2026-07-01",
   "latest_release": "v1.6.1",
   "first_seen": "2026-06-29",
-  "last_seen": "2026-07-01",
-  "streak_days": 3,
+  "last_seen": "2026-07-02",
+  "streak_days": 4,
   "analysis_updated_at": "2026-06-29T00:45:05+0800",
   "appearances": [
     {
@@ -50,6 +57,13 @@
       "reason": "lightweight",
       "stars_total": 4818,
       "stars_gained": 586,
+      "release": "v1.6.1"
+    },
+    {
+      "date": "2026-07-02",
+      "reason": "lightweight",
+      "stars_total": 5393,
+      "stars_gained": 568,
       "release": "v1.6.1"
     }
   ]

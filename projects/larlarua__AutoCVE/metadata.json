@@ -21,29 +21,32 @@
   ],
   "license": "AGPL-3.0",
   "category": "AI 应用",
-  "classify_reason": "代理驱动的自动化CVE发现平台，用于源代码审计和漏洞验证",
-  "one_liner": "一键自动化CVE挖掘：选仓库、审源码、验漏洞、出报告",
-  "why_worth_it": "30个真实CVE成果验证，全流程Multi-Agent自动化，零手工扫描，适合漏洞赏金猎人和安全研究者快速产出",
+  "classify_reason": "AI代理驱动的自动CVE发现平台",
+  "one_liner": "一键CVE挖掘：Multi-Agent全流程自动化源码审计与漏洞报告平台",
+  "why_worth_it": "7天产出30个真实CVE验证效率，打通从项目筛选到CVE申报的全流程，安全研究人员的自动化助手。",
   "tags": [
-    "安全审计Agent",
-    "自托管",
+    "Multi-Agent",
     "CVE自动化",
-    "Multi-Agent"
+    "AI安全",
+    "自托管"
   ],
   "confidence": "high",
   "info_gaps": [
-    "未说明 LLM 提供商的具体要求（仅提及 OpenAI 兼容接口，未测试其他），无公开 benchmark 数据，未说明沙箱环境的安全隔离细节",
-    "部署需要用户自行提供 LLM API 服务，未捆绑任何模型服务"
+    "未公开具体使用的 SAST 工具/扫描规则集",
+    "未列出已验证支持的 LLM 模型/提供商列表",
+    "无扫描性能基准数据（如单个仓库平均耗时）",
+    "一键 CVE 的项目筛选规则与优先级未说明",
+    "对主机硬件资源（CPU/内存）的最低详细要求未明确"
   ],
   "quality_flags": [],
-  "stars_total": 661,
+  "stars_total": 868,
   "created_at": "2026-06-15",
   "pushed_at": "2026-06-27",
   "latest_release": "v1.0.3",
   "first_seen": "2026-06-25",
-  "last_seen": "2026-07-01",
-  "streak_days": 7,
-  "analysis_updated_at": "2026-07-01T02:30:54+0800",
+  "last_seen": "2026-07-02",
+  "streak_days": 8,
+  "analysis_updated_at": "2026-07-02T03:22:18+0800",
   "appearances": [
     {
       "date": "2026-06-25",
@@ -91,6 +94,13 @@
       "date": "2026-07-01",
       "reason": "star_jump",
       "stars_total": 661,
+      "stars_gained": 0,
+      "release": "v1.0.3"
+    },
+    {
+      "date": "2026-07-02",
+      "reason": "star_jump",
+      "stars_total": 868,
       "stars_gained": 0,
       "release": "v1.0.3"
     }

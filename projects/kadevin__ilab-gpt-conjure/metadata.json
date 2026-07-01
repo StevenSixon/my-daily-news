@@ -27,7 +27,7 @@
   ],
   "license": "AGPL-3.0",
   "category": "AI 应用",
-  "classify_reason": "面向GPT-image-2的AI图片生成WebUI工作台，支持多模型接入和批量任务",
+  "classify_reason": "GPT-image-2的AI图片生成WebUI工作台",
   "one_liner": "解压即用的GPT-image-2本地图片生成工作台，集成图库、模板与并发队列管理",
   "why_worth_it": "解决多API接入、提示词复用与任务管理痛点，适合想快速构建稳定生图管线的个人和团队",
   "tags": [
@@ -43,13 +43,13 @@
     "OAuth 模式的接口稳定性未量化"
   ],
   "quality_flags": [],
-  "stars_total": 595,
+  "stars_total": 598,
   "created_at": "2026-06-08",
   "pushed_at": "2026-06-30",
   "latest_release": "v0.5.4",
   "first_seen": "2026-06-21",
-  "last_seen": "2026-07-01",
-  "streak_days": 12,
+  "last_seen": "2026-07-02",
+  "streak_days": 13,
   "analysis_updated_at": "2026-07-01T02:33:42+0800",
   "appearances": [
     {
@@ -133,6 +133,13 @@
       "date": "2026-07-01",
       "reason": "release_update",
       "stars_total": 595,
+      "stars_gained": 0,
+      "release": "v0.5.4"
+    },
+    {
+      "date": "2026-07-02",
+      "reason": "lightweight",
+      "stars_total": 598,
       "stars_gained": 0,
       "release": "v0.5.4"
     }

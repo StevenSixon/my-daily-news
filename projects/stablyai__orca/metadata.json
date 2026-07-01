@@ -25,32 +25,31 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "并行代理舰队的开发环境，可运行各类编码代理",
-  "one_liner": "并行运行多AI代理的桌面与移动IDE，用自有订阅指挥编码舰队。",
-  "why_worth_it": "解决单代理排队、难比较结果痛点；适合想用Claude Code/Codex等并行开发并需统一UI和移动监控的极客。",
+  "classify_reason": "并行代理的代理开发环境（ADE），AI工具",
+  "one_liner": "并行运行多个 AI 代理的桌面 ADE，支持工作树隔离与移动监控",
+  "why_worth_it": "统一管理 Claude Code/Codex 等，用 git worktree 隔离对比结果，避免终端和 IDE 碎片化",
   "tags": [
-    "parallel-agents",
-    "worktrees",
-    "terminal",
-    "agent-ide"
+    "Agent 编排",
+    "桌面应用",
+    "TypeScript",
+    "多代理并行"
   ],
   "confidence": "high",
   "info_gaps": [
-    "未提供桌面应用的技术栈具体实现（如 Electron 版本或构建工具链）",
-    "无性能 Benchmark 数据（如终端渲染帧率、并行 worktree 资源占用）",
-    "未说明最低系统要求（内存、CPU 核心数）",
-    "移动端 Android 具体版本兼容性未明确",
-    "远程 SSH 工作树的详细配置参数和限制未展开"
+    "未提供内部架构细节（如是否采用 Electron/Tauri）",
+    "未公开并行调度和资源隔离的 benchmark 数据",
+    "移动端与桌面端通信协议未说明",
+    "未提及对 Windows/macOS 的安装包大小和系统要求"
   ],
   "quality_flags": [],
-  "stars_total": 9572,
+  "stars_total": 10191,
   "created_at": "2026-03-17",
-  "pushed_at": "2026-06-30",
-  "latest_release": "v1.4.110",
+  "pushed_at": "2026-07-01",
+  "latest_release": "v1.4.114",
   "first_seen": "2026-06-24",
-  "last_seen": "2026-07-01",
-  "streak_days": 8,
-  "analysis_updated_at": "2026-07-01T02:29:36+0800",
+  "last_seen": "2026-07-02",
+  "streak_days": 9,
+  "analysis_updated_at": "2026-07-02T03:20:12+0800",
   "appearances": [
     {
       "date": "2026-06-24",
@@ -107,6 +106,13 @@
       "stars_total": 9572,
       "stars_gained": 3047,
       "release": "v1.4.110"
+    },
+    {
+      "date": "2026-07-02",
+      "reason": "release_update",
+      "stars_total": 10191,
+      "stars_gained": 3311,
+      "release": "v1.4.114"
     }
   ]
 }

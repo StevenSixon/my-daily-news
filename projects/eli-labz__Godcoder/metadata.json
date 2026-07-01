@@ -17,7 +17,7 @@
   ],
   "license": "NOASSERTION",
   "category": "AI 应用",
-  "classify_reason": "本地优先的开源桌面编码代理，自带LLM密钥",
+  "classify_reason": "本地优先的开源桌面编码代理",
   "one_liner": "本地优先、自优化AI编码代理，能构建自身工具链并自动化桌面任务",
   "why_worth_it": "代码不离机，自带LLM密钥即用；自构建工具链并持续进化，适合注重隐私和自动化的Rust开发者",
   "tags": [
@@ -35,13 +35,13 @@
     "未说明支持的操作系统范围（虽提及Windows快捷方式，但未列出全部支持平台）"
   ],
   "quality_flags": [],
-  "stars_total": 253,
+  "stars_total": 265,
   "created_at": "2026-06-27",
   "pushed_at": "2026-06-30",
   "latest_release": "Godcoder",
   "first_seen": "2026-06-30",
-  "last_seen": "2026-07-01",
-  "streak_days": 2,
+  "last_seen": "2026-07-02",
+  "streak_days": 3,
   "analysis_updated_at": "2026-06-30T00:49:31+0800",
   "appearances": [
     {
@@ -55,6 +55,13 @@
       "date": "2026-07-01",
       "reason": "lightweight",
       "stars_total": 253,
+      "stars_gained": 0,
+      "release": "Godcoder"
+    },
+    {
+      "date": "2026-07-02",
+      "reason": "lightweight",
+      "stars_total": 265,
       "stars_gained": 0,
       "release": "Godcoder"
     }
