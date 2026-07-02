@@ -25,7 +25,7 @@
   ],
   "license": "NOASSERTION",
   "category": "AI 应用",
-  "classify_reason": "终端内的代理多路复用器，AI工具",
+  "classify_reason": "终端内的代理多路复用器，管理多个 AI 代理。",
   "one_liner": "终端里的 AI 代理多路复用器，像 tmux 但能感知代理的阻塞/工作中/完成状态。",
   "why_worth_it": "同时管理多个命令行 AI agent，保持会话不中断、任意终端重连，告别 GUI 捆绑，对运维和远程开发极度友好。",
   "tags": [
@@ -43,13 +43,13 @@
     "插件生态现状（社区贡献的插件数量、成熟度）未公开"
   ],
   "quality_flags": [],
-  "stars_total": 9498,
+  "stars_total": 10047,
   "created_at": "2026-03-27",
-  "pushed_at": "2026-07-01",
+  "pushed_at": "2026-07-02",
   "latest_release": "v0.7.1",
   "first_seen": "2026-07-01",
-  "last_seen": "2026-07-02",
-  "streak_days": 2,
+  "last_seen": "2026-07-03",
+  "streak_days": 3,
   "analysis_updated_at": "2026-07-01T02:27:33+0800",
   "appearances": [
     {
@@ -64,6 +64,13 @@
       "reason": "lightweight",
       "stars_total": 9498,
       "stars_gained": 611,
+      "release": "v0.7.1"
+    },
+    {
+      "date": "2026-07-03",
+      "reason": "lightweight",
+      "stars_total": 10047,
+      "stars_gained": 2401,
       "release": "v0.7.1"
     }
   ]

@@ -15,7 +15,7 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "Hermes Agent的浏览器侧边栏扩展",
+  "classify_reason": "Hermes Agent 的浏览器扩展，在侧面板连接本地运行时。",
   "one_liner": "将网页上下文直送本地/远程 Hermes Agent 的浏览器侧边栏扩展",
   "why_worth_it": "为 Hermes Agent 用户提供原生标签页级上下文注入，支持纯聊天/跟随标签/固定标签多种模式，比通用浏览器 AI 插件更专注本地 Agent 工作流。",
   "tags": [
@@ -31,13 +31,13 @@
     "未说明对 Firefox/Safari 的支持计划"
   ],
   "quality_flags": [],
-  "stars_total": 416,
+  "stars_total": 443,
   "created_at": "2026-06-24",
-  "pushed_at": "2026-06-30",
+  "pushed_at": "2026-07-02",
   "latest_release": "v0.1.7",
   "first_seen": "2026-06-28",
-  "last_seen": "2026-07-02",
-  "streak_days": 5,
+  "last_seen": "2026-07-03",
+  "streak_days": 6,
   "analysis_updated_at": "2026-07-01T02:33:11+0800",
   "appearances": [
     {
@@ -72,6 +72,13 @@
       "date": "2026-07-02",
       "reason": "lightweight",
       "stars_total": 416,
+      "stars_gained": 0,
+      "release": "v0.1.7"
+    },
+    {
+      "date": "2026-07-03",
+      "reason": "lightweight",
+      "stars_total": 443,
       "stars_gained": 0,
       "release": "v0.1.7"
     }

@@ -26,7 +26,7 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "LLM驱动的A股选股监控回测量化工作台",
+  "classify_reason": "自托管 A 股量化工作台，结合 LLM 进行策略定制与分析。",
   "one_liner": "自托管A股量化工作台，LLM驱动策略生成与多维分析",
   "why_worth_it": "专为散户打造的零运维量化工具，LLM生成策略，Polars毫秒级全市场扫描，免费数据源可启步",
   "tags": [
@@ -43,13 +43,13 @@
     "第三方数据接入的具体实现和稳定性未详细披露"
   ],
   "quality_flags": [],
-  "stars_total": 736,
+  "stars_total": 1125,
   "created_at": "2026-06-18",
-  "pushed_at": "2026-07-01",
+  "pushed_at": "2026-07-02",
   "latest_release": "v0.1.64",
   "first_seen": "2026-06-25",
-  "last_seen": "2026-07-02",
-  "streak_days": 8,
+  "last_seen": "2026-07-03",
+  "streak_days": 9,
   "analysis_updated_at": "2026-06-28T18:21:38+0800",
   "appearances": [
     {
@@ -105,6 +105,13 @@
       "date": "2026-07-02",
       "reason": "lightweight",
       "stars_total": 736,
+      "stars_gained": 0,
+      "release": "v0.1.64"
+    },
+    {
+      "date": "2026-07-03",
+      "reason": "star_jump",
+      "stars_total": 1125,
       "stars_gained": 0,
       "release": "v0.1.64"
     }

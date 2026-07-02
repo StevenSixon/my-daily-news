@@ -1,31 +1,28 @@
-## 安装
-**方式一：免安装一键包（推荐）**
-1. 前往 [Releases](https://github.com/kadevin/ilab-gpt-conjure/releases) 下载对应平台（Windows x64 / macOS arm64 / macOS x64）的 portable zip。
-2. 解压到用户目录，双击 `Start WebUI Portable.bat`（Win）或 `Start WebUI Portable.command`（Mac）。
-3. 若浏览器未自动打开，手动访问 `http://127.0.0.1:8787/`。
+**前提**：Python 3.11+，git，或直接下载标准包。
 
-**方式二：从源码运行**
+**安装（源码）**
 ```bash
 git clone https://github.com/kadevin/ilab-gpt-conjure.git
 cd ilab-gpt-conjure
 python3 -m venv .venv
-.venv/bin/pip install -r requirements-webui.txt
-.venv/bin/python -m uvicorn codex_image.webui.app:app --host 127.0.0.1 --port 8787 --no-access-log
+.venv/bin/python -m pip install -r requirements-webui.txt
 ```
 
-## 最小可用示例
-1. 打开 WebUI 后，进入系统设置（右上角齿轮），在 API 供应商卡中添加你的 OpenAI API Key 和 Base URL。
-2. 选择“API”认证模式，确保模型为 GPT-image-2。
-3. 在主界面提示词框输入：“A cute cat wearing a wizard hat, digital art”。
-4. 点击“生成”，任务将进入左侧队列，生成完成后在预览区查看结果，可下载或保存至历史库。
+**启动 WebUI**
+- macOS: `open "Start WebUI.command"` 或手动 `uvicorn codex_image.webui.app:app --host 127.0.0.1 --port 8787`
+- Windows: 双击 `Start WebUI.bat`
 
-**CLI 快速测试**：
+访问 `http://127.0.0.1:8787/`。
+
+**最小示例（CLI）**
 ```bash
-.venv/bin/python -m codex_image generate --prompt "A clean product photo of a ceramic mug" --out mug.png
+.venv/bin/python -m codex_image generate --prompt "一只戴着帽子的猫" --out output.png
 ```
 
-## 依赖前提
-- 一键包自带 Python 3.11+ 和所有依赖，无需额外安装。
-- 源码部署需要 Python 3.11+ 和 `pip install -r requirements-webui.txt`。
-- 若修改前端 TypeScript/CSS，需安装 Node.js 并执行 `npm install`，构建后静态资源输出到 `codex_image/webui/static/`。
-- macOS 用户首次启动时若被拦截，执行 `xattr -dr com.apple.quarantine /path/to/ilab-gpt-conjure_macos_portable_xxx` 或右键启动脚本选择 Open。
+**使用标准包（推荐新手）**
+1. 从 [Release 页面](https://github.com/kadevin/ilab-gpt-conjure/releases/tag/v0.5.5) 下载对应平台的 DMG 或 ZIP。
+2. macOS 将 .app 拖入 Applications；Windows 解压后双击 exe。
+3. 首次启动配置 API 供应商（OpenAI‑compatible 模式），输入 Base URL 和 API Key。
+4. 通过 `@` 图库 Chip、`~` 提示词片段快速构建提示词，设置参数后点击生成。
+
+**注意**：默认推荐 API 模式。若使用高级 OAuth 模式，需本机已登录 ChatGPT，风险自负。

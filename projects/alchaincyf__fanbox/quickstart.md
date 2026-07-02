@@ -1,15 +1,16 @@
-### 安装
-1. 从 [Releases 页面](https://github.com/alchaincyf/fanbox/releases/latest) 下载最新的 `.dmg` 文件。
-2. 将应用拖入“应用程序”文件夹。
-3. 首次打开时若 macOS 提示“未验证的开发者”，请右键点击应用图标 → 打开 → 确认，即可运行。
+## 安装
+1. 访问 [Releases](https://github.com/alchaincyf/fanbox/releases/latest) 下载对应架构的 `.dmg`（Apple 芯片选 arm64，Intel 选 x64）。
+2. 双击挂载后拖入 `应用程序` 文件夹。
+3. 首次打开若提示安全警告，**右键点击 → 打开 → 确认**。
 
-### 最小可用示例
-1. 启动 FanBox，使用 ⌘K 打开模糊搜索，输入项目名片段，选择文件夹以加载文件树。
-2. 在右侧或下方的内嵌终端中键入 `claude` 或 `codex` 开始 agent 会话。
-3. 拖拽文件到终端以插入路径作为上下文；点击终端输出中的文件路径可在 FanBox 内直接预览。
-4. 当 agent 创建或修改文件时，左侧卡片会出现涟漪动画，点击跟随按钮可实时追踪当前编辑的文件。
+## 最小可用示例
+1. 打开 FanBox，点击 `+` 或按 `⌘K` 搜索并打开本地项目文件夹。
+2. 在右侧终端区域，点击面板上的 `Claude Code` 或 `Codex` 按钮（如果未安装会提示安装命令）。
+3. 输入 agent 指令（如 `创建一个 React 组件`），观察左侧文件列表：agent 修改的文件卡片会亮起呼吸光效。
+4. 点击任意文件预览内容，或打开 **跟随模式** 实时观看 agent 编辑的文件和 HTML 渲染。
+5. 点击底部状态栏的“回合存档”查看会话历史，随时一键回滚。
 
-### 依赖前提
-- **系统**：macOS（Apple Silicon 原生支持，Intel Mac 未提供官方构建）
-- **Agent**：需自行安装 Claude Code 或 Codex CLI 工具并在 PATH 中可用
-- 应用本身零运行时依赖，无需 Node.js 或额外配置
+## 依赖前提
+- macOS 操作系统（Elecron 打包，Apple Silicon 原生，Intel 兼容）
+- 无需 Node.js、Python 等运行时，应用内自带终端依赖
+- 运行 agent 需对应 CLI 已安装（如 Claude Code、Codex 等），FanBox 会提示安装命令但不会自行安装

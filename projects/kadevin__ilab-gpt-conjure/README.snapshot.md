@@ -40,7 +40,7 @@ iLab GPT Conjure 是面向 GPT-image-2 的 AI 图片生成 WebUI 工作台，同
 公开版推荐优先使用 OpenAI-compatible API 模式，通过你配置的供应商使用
 Images API 或 Responses API 形态。
 
-免安装一键包下载见 [下载 / Releases](RELEASES.md)。
+标准包和过渡期免安装一键包下载见 [下载 / Releases](RELEASES.md)。
 
 ## 功能
 
@@ -56,7 +56,8 @@ Images API 或 Responses API 形态。
 - 系统设置提供语言下拉菜单，支持简体中文、正體中文、繁体中文、日语、韩语、English、西班牙语、葡萄牙语、法语、德语、俄语、意大利语和印地语；首次启动自动跟随浏览器语言，手动选择后偏好保存在当前浏览器。
 - 系统设置整合 API 设置、Codex 通道、语言 / Language、存储与通知四个 Tab；API 设置默认第一位。
 - API 供应商以卡片快速选择，默认只读详情，支持显式编辑、复制、删除确认和多供应商排序。
-- 免安装一键包启动脚本只负责本地启动；更新脚本需手动运行，会校验 SHA256、保留 `data/`，并把被替换文件备份到 `.backup/`。
+- 标准 macOS DMG 和 Windows App ZIP 提供 Rust 托盘 / 菜单栏启动器、小兔子图标、系统语言跟随、原生关于窗口，并在首次启动时由用户确认复制旧 portable 数据。
+- 过渡期 portable 包继续把数据保存在同级 `data/`，并支持用户确认后的自动替换更新；更新器读取带签名的 `latest.json` manifest、校验 Ed25519 签名和 SHA256、保留 `data/`，并把被替换文件备份到 `.backup/`。
 - 高级本机 OAuth 工作流支持个人本地 Codex 使用，并明确提示接口风险。
 - API 供应商配置，支持 Base URL、API Key、图像模型、调用方式和并发上限。
 - CLI 支持生成、参考图、图像编辑、mask 和 dry-run。
@@ -122,17 +123,34 @@ Start WebUI.bat
 http://127.0.0.1:8787/
 ```
 
-## 免安装一键包
+## 应用包下载
 
-当前可用的一键包见 [下载 / Releases](RELEASES.md)，也可以直接打开
-[GitHub Release v0.5.4](https://github.com/kadevin/ilab-gpt-conjure/releases/tag/v0.5.4)。
+当前可用的标准包和一键包见 [下载 / Releases](RELEASES.md)，也可以直接打开
+[GitHub Release v0.5.5](https://github.com/kadevin/ilab-gpt-conjure/releases/tag/v0.5.5)。
 
-这些包面向希望像 ComfyUI 一样“解压即用”的用户：
+新用户建议优先下载标准包：
+
+1. macOS：Apple Silicon 下载 `iLab-GPT-CONJURE-macos-arm64-0.5.5.dmg`，
+   Intel 下载 `iLab-GPT-CONJURE-macos-x64-0.5.5.dmg`，然后把
+   `iLab GPT CONJURE.app` 拖到 Applications。
+2. Windows：下载 `iLab-GPT-CONJURE-windows-x64_0.5.5.zip`，
+   解压到普通用户目录，双击 `iLab GPT CONJURE.exe`。
+
+标准包的用户数据会写入 macOS 的
+`~/Library/Application Support/iLab GPT CONJURE` 或 Windows 的
+`%APPDATA%\iLab GPT CONJURE`。首次启动时，标准包可以检测相邻旧 portable
+`data/`，并在用户确认后复制旧数据；旧目录不会被移动或删除，目标标准数据目录
+已有 WebUI 数据时不会自动覆盖。
+
+`v0.5.4` 及更早 portable 用户首次升级到 `0.5.5` 时，建议手动下载完整标准包或完整 portable 包；旧 updater 只保证升级 WebUI/依赖，不保证安装新的小兔子启动器、标准 `.app` / `.exe` 入口和迁移助手。
+
+portable 包继续提供给老用户、调试用户，以及希望像 ComfyUI 一样“解压即用”的用户：
 
 1. 从下载页选择对应平台的 portable zip。
 2. 解压到普通用户目录。
-3. Windows 双击 `Start WebUI Portable.bat`；macOS 双击
-   `Start WebUI Portable.command`。
+3. Windows 双击 `Start iLab GPT CONJURE.exe`；macOS 双击
+   `Start iLab GPT CONJURE.app`。旧的 `Start WebUI Portable.bat` /
+   `Start WebUI Portable.command` 仍保留，用于终端调试。
 4. 如果浏览器没有自动打开，手动访问 `http://127.0.0.1:8787/`。
 
 一键包内包含打包好的 CPython、已安装的 WebUI 依赖、预构建的 WebUI 静态资源、
@@ -143,19 +161,20 @@ http://127.0.0.1:8787/
 TypeScript 或 CSS 并从源码重新生成 `codex_image/webui/static/app.js` 时，才需要
 本机安装 Node.js。
 
-更新已经解压的一键包时，先关闭 WebUI 服务窗口，然后运行 Windows 的
-`Update WebUI Portable.bat` 或 macOS 的 `Update WebUI Portable.command`。
-启动脚本不会访问 GitHub，也不会自动更新文件。更新脚本会下载当前平台对应的最新
-GitHub Release 资产，执行前显示所选资产和 SHA256 文件，校验 SHA256，只替换一键包目录内由程序管理的文件，保留本地 `data/`，并把被替换文件备份到 `.backup/`。
+一键包启动器不会后台自动访问 GitHub。更新已经解压的一键包时，可在托盘 / 菜单栏
+菜单选择检查更新，并在发现新版本后确认 `安装更新`；也可以退出启动器后手动运行
+Windows 的 `Update WebUI Portable.bat` 或 macOS 的 `Update WebUI Portable.command`。
+更新脚本会读取带签名的 `latest.json`
+manifest，先用启动器内置公钥校验 Ed25519 签名，再下载当前平台对应的最新
+GitHub Release 资产，执行前显示所选资产和 manifest SHA256，校验下载 zip 的
+SHA256，只替换一键包目录内由程序管理的文件，保留本地 `data/`，并把被替换文件备份到 `.backup/`。
 
 Apple Silicon Mac 下载 `macos_portable_arm64`，Intel Mac 下载
 `macos_portable_x64`。
 
-macOS 包是未签名 portable zip，不是已签名 `.app` 或 notarized DMG；构建它
-不需要 Apple Developer 账号。启动脚本会尝试在启动前移除当前解压目录内的
-quarantine 标记，再启动包内 Python.framework。如果 macOS 仍然拦截下载后的
-启动脚本，可以右键或 Control-click `Start WebUI Portable.command`，选择 Open，
-并在系统安全提示里再次确认 Open。也可以对解压目录执行：
+0.5.5 的标准 macOS DMG 和 portable zip 都暂未签名、未 notarize。如果 macOS
+拦截下载后的 App，可以右键或 Control-click App，选择 Open，并在系统安全提示里
+再次确认 Open。portable zip 还可以对解压目录执行：
 
 ```bash
 xattr -dr com.apple.quarantine /path/to/ilab-gpt-conjure_macos_portable_arm64
@@ -166,10 +185,13 @@ xattr -dr com.apple.quarantine /path/to/ilab-gpt-conjure_macos_portable_x64
 不要把一键包里的 Python、依赖、API key、OAuth 文件、本地输入图、生成结果、
 SQLite 数据库或日志提交回 Git。
 
-一键包打包和 CI 明确分离：`Portable Release` workflow 只会在 `CI` workflow 于
-`main` push 上成功完成后运行，并上传 zip 与 SHA256 文件作为 workflow artifact。
-如果该提交带有 `v*` tag，同一份文件会上传到对应 GitHub Release。对于已经通过
-CI 的 tag，也可以手动运行同一个 workflow，并填写 `ref` 与 `release_tag`。
+应用包打包和 CI 明确分离：`Portable Release` workflow 只会在 `CI` workflow 于
+`main` push 上成功完成后运行，并生成标准包、portable 包和 SHA256 文件作为
+workflow artifact。如果该提交带有 `v*` tag，release job 还会使用
+`ILAB_CONJURE_UPDATE_SIGNING_PRIVATE_KEY_B64` secret 生成仅供 portable 自动更新使用的
+signed `latest.json`，并把所有安装包、SHA256 文件与更新 manifest 上传到对应
+GitHub Release。对于已经通过 CI 的 tag，也可以手动运行同一个 workflow，并填写
+`ref` 与 `release_tag`。
 
 ## WebUI 使用说明
 

@@ -12,7 +12,7 @@
   ],
   "license": "Apache-2.0",
   "category": "AI 应用",
-  "classify_reason": "文档结构化数据提取工具，使用AI/OCR",
+  "classify_reason": "从文档中快速准确提取结构化数据的 AI 工具。",
   "one_liner": "9B视觉模型+Schema约束解码，从PDF/图片中精准提取结构化JSON",
   "why_worth_it": "解决文档字段抽取痛点，开源模型中准确率最高（90.2%），可本地部署，适合需高精度、低延迟的文档智能场景",
   "tags": [
@@ -30,13 +30,13 @@
     "Schema Studio 与 CLI 的 \"保存 schema\" 功能依赖的本地目录结构未详细说明"
   ],
   "quality_flags": [],
-  "stars_total": 690,
+  "stars_total": 699,
   "created_at": "2026-06-03",
   "pushed_at": "2026-06-19",
   "latest_release": "v0.1.1",
   "first_seen": "2026-06-26",
-  "last_seen": "2026-07-02",
-  "streak_days": 6,
+  "last_seen": "2026-07-03",
+  "streak_days": 7,
   "analysis_updated_at": "2026-06-26T03:27:05+0800",
   "appearances": [
     {
@@ -78,6 +78,13 @@
       "date": "2026-07-02",
       "reason": "lightweight",
       "stars_total": 690,
+      "stars_gained": 0,
+      "release": "v0.1.1"
+    },
+    {
+      "date": "2026-07-03",
+      "reason": "lightweight",
+      "stars_total": 699,
       "stars_gained": 0,
       "release": "v0.1.1"
     }

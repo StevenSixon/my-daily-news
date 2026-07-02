@@ -1,30 +1,23 @@
-**安装**
 ```bash
-npm install -g umadev
-```
-确保已安装并登录至少一个 AI 编码 CLI（任选）：
-- Claude Code: `npm i -g @anthropic-ai/claude-code && claude auth login`
-- Codex: `npm i -g @openai/codex && codex login`
-- OpenCode: 见 opencode.ai, `opencode auth login`
+# 1. 确保已安装一个 AI 编码 CLI 并登录，例如
+npm i -g @anthropic-ai/claude-code
+claude auth login
 
-**最小可用**
-```bash
-umadev          # 启动聊天界面，首次运行会要求选择基地
-```
-然后输入需求，例如：
-```
-> add CSV export to the reports page
-```
-或直接非交互式构建：
-```bash
+# 2. 安装 umadev
+npm install -g umadev
+
+# 3. 启动交互式 chat UI（首次运行会提示选择 base）
+umadev
+
+# 4. 在提示符下输入需求，例如
+# > add CSV export to the reports page
+
+# 或者直接无交互式运行
 umadev run "add CSV export to the reports page" --backend claude-code
 ```
-umadev 会自动规划并执行，输出文档、代码和交付物。所有构建在隔离分支完成，不干扰当前工作目录。
 
-**若想从源码构建（可选）**
-```bash
-git clone https://github.com/umacloud/umadev.git
-cd umadev && cargo build --release --features vector-local
-./target/release/umadev --version
-```
-需要提前下载嵌入模型到 `~/.umadev/embed-model/`，否则仅退化为 BM25 检索。
+**依赖前提**：
+- Node.js 环境（用于 npm 安装）
+- 至少一个受支持的 AI 编码 CLI（Claude Code / Codex / OpenCode）并已登录
+- 如需本地向量检索，确保网络可下载 ~224 MB 的嵌入模型（会自动处理），或手动下载至 `~/.umadev/embed-model/`
+- 从源码构建需 Rust 1.87+ 并手动下载模型

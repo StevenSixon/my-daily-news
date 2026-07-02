@@ -21,7 +21,7 @@
   ],
   "license": "AGPL-3.0",
   "category": "AI 应用",
-  "classify_reason": "AI代理驱动的自动CVE发现平台",
+  "classify_reason": "代理驱动的自动化 CVE 发现平台，进行代码审计和漏洞验证。",
   "one_liner": "一键CVE挖掘：Multi-Agent全流程自动化源码审计与漏洞报告平台",
   "why_worth_it": "7天产出30个真实CVE验证效率，打通从项目筛选到CVE申报的全流程，安全研究人员的自动化助手。",
   "tags": [
@@ -39,13 +39,13 @@
     "对主机硬件资源（CPU/内存）的最低详细要求未明确"
   ],
   "quality_flags": [],
-  "stars_total": 868,
+  "stars_total": 887,
   "created_at": "2026-06-15",
-  "pushed_at": "2026-06-27",
+  "pushed_at": "2026-07-02",
   "latest_release": "v1.0.3",
   "first_seen": "2026-06-25",
-  "last_seen": "2026-07-02",
-  "streak_days": 8,
+  "last_seen": "2026-07-03",
+  "streak_days": 9,
   "analysis_updated_at": "2026-07-02T03:22:18+0800",
   "appearances": [
     {
@@ -101,6 +101,13 @@
       "date": "2026-07-02",
       "reason": "star_jump",
       "stars_total": 868,
+      "stars_gained": 0,
+      "release": "v1.0.3"
+    },
+    {
+      "date": "2026-07-03",
+      "reason": "lightweight",
+      "stars_total": 887,
       "stars_gained": 0,
       "release": "v1.0.3"
     }

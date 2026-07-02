@@ -15,7 +15,7 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "代理 harness 性能优化系统，为 Claude Code/Codex 等提供技能、记忆和安全。",
+  "classify_reason": "代理性能优化系统，面向 AI 编码代理的开发辅助工具。",
   "one_liner": "跨 AI 编程助手的统一操作系统：261 个技能、session 适配与多 agent 编排",
   "why_worth_it": "解决多 harness 碎片化：一套 skills/rules/hooks 通吃 Claude Code、Cursor、Codex 等，并内置可观测控制面板",
   "tags": [
@@ -33,13 +33,13 @@
     "未列明支持的所有 MCP 服务器及兼容性矩阵"
   ],
   "quality_flags": [],
-  "stars_total": 220801,
+  "stars_total": 225062,
   "created_at": "2026-01-18",
-  "pushed_at": "2026-06-22",
+  "pushed_at": "2026-07-01",
   "latest_release": "v2.0.0",
   "first_seen": "2026-06-24",
-  "last_seen": "2026-06-24",
-  "streak_days": 1,
+  "last_seen": "2026-07-03",
+  "streak_days": 2,
   "analysis_updated_at": "2026-06-24T16:25:19+0800",
   "appearances": [
     {
@@ -47,6 +47,13 @@
       "reason": "new",
       "stars_total": 220801,
       "stars_gained": 593,
+      "release": "v2.0.0"
+    },
+    {
+      "date": "2026-07-03",
+      "reason": "lightweight",
+      "stars_total": 225062,
+      "stars_gained": 508,
       "release": "v2.0.0"
     }
   ]

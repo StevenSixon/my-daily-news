@@ -27,30 +27,31 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "AI网关工具，聚合多个AI提供商",
-  "one_liner": "免费AI网关：一个端点聚合236家模型，自动回退与95%压缩。",
-  "why_worth_it": "本地部署的万能路由器，把多AI工具的免费额度利用率拉满，开发者零成本突破速率限制。",
+  "classify_reason": "免费 AI 网关，连接编码代理到多个免费模型，面向开发者。",
+  "one_liner": "免费聚合237+AI的网关，自动失效转移与95%令牌压缩",
+  "why_worth_it": "为AI编码工具提供海量免费Provider和压缩，节省95%令牌成本，适用高强度开发者",
   "tags": [
     "AI网关",
-    "TypeScript",
-    "自托管",
-    "Token节省"
+    "免费聚合",
+    "令牌压缩",
+    "TypeScript"
   ],
-  "confidence": "high",
+  "confidence": "medium",
   "info_gaps": [
-    "README 未提供与同类产品的性能对比基准",
-    "未说明大规模并发下的延迟和可靠性数据",
-    "未详细解释 MCP 工具的具体列表和技术细节"
+    "快速启动命令未经实际验证，基于 npm 包和 Docker 镜像名推断",
+    "RTK/Caveman 压缩的具体技术原理未在片段中详细展开",
+    "部分提供商实际可用性与免费配额准确性未验证",
+    "未给出明确的 API 密钥配置方式与环境变量清单"
   ],
   "quality_flags": [],
-  "stars_total": 9390,
+  "stars_total": 10162,
   "created_at": "2026-02-13",
-  "pushed_at": "2026-07-01",
-  "latest_release": "v3.8.42",
+  "pushed_at": "2026-07-02",
+  "latest_release": "v3.8.43",
   "first_seen": "2026-07-01",
-  "last_seen": "2026-07-02",
-  "streak_days": 2,
-  "analysis_updated_at": "2026-07-01T02:27:55+0800",
+  "last_seen": "2026-07-03",
+  "streak_days": 3,
+  "analysis_updated_at": "2026-07-03T02:25:02+0800",
   "appearances": [
     {
       "date": "2026-07-01",
@@ -65,6 +66,13 @@
       "stars_total": 9390,
       "stars_gained": 1012,
       "release": "v3.8.42"
+    },
+    {
+      "date": "2026-07-03",
+      "reason": "release_update",
+      "stars_total": 10162,
+      "stars_gained": 2497,
+      "release": "v3.8.43"
     }
   ]
 }

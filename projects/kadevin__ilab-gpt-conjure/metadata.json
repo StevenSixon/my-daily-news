@@ -27,30 +27,32 @@
   ],
   "license": "AGPL-3.0",
   "category": "AI 应用",
-  "classify_reason": "GPT-image-2的AI图片生成WebUI工作台",
-  "one_liner": "解压即用的GPT-image-2本地图片生成工作台，集成图库、模板与并发队列管理",
-  "why_worth_it": "解决多API接入、提示词复用与任务管理痛点，适合想快速构建稳定生图管线的个人和团队",
+  "classify_reason": "面向 GPT-image-2 的 AI 图片生成 WebUI 工作台，含模板、队列等完整界面。",
+  "one_liner": "GPT-image-2 本地生图工作台，图库 Chip 引用、模板与并发队列",
+  "why_worth_it": "为 GPT‑image‑2 提供专用本地 GUI，内置图库、Chip 引用和并发队列，解决共享素材和批量生成管理痛点",
   "tags": [
-    "本地化WebUI",
-    "AI图片生成",
-    "提示词模板",
-    "多供应商Task管理"
+    "本地优先",
+    "AI图像生成",
+    "Python/TypeScript",
+    "自托管"
   ],
   "confidence": "high",
   "info_gaps": [
-    "未提供生成图片质量对比数据",
-    "未说明与其他 Diffusion 工具的混合使用最佳实践",
-    "OAuth 模式的接口稳定性未量化"
+    "OAuth 模式的具体令牌获取流程未说明，仅提及“本机复用登录态”",
+    "未说明是否支持 GPT-image-2 以外的模型（如图像编辑是否可用 DALL·E）",
+    "无性能基准测试或生成速度数据",
+    "未提及是否计划支持 Docker 部署",
+    "macOS 包未签名，可能带来安全性顾虑，但安全责任声明已给出"
   ],
   "quality_flags": [],
-  "stars_total": 598,
+  "stars_total": 600,
   "created_at": "2026-06-08",
-  "pushed_at": "2026-06-30",
-  "latest_release": "v0.5.4",
+  "pushed_at": "2026-07-02",
+  "latest_release": "v0.5.5",
   "first_seen": "2026-06-21",
-  "last_seen": "2026-07-02",
-  "streak_days": 13,
-  "analysis_updated_at": "2026-07-01T02:33:42+0800",
+  "last_seen": "2026-07-03",
+  "streak_days": 14,
+  "analysis_updated_at": "2026-07-03T02:29:43+0800",
   "appearances": [
     {
       "date": "2026-06-21",
@@ -142,6 +144,13 @@
       "stars_total": 598,
       "stars_gained": 0,
       "release": "v0.5.4"
+    },
+    {
+      "date": "2026-07-03",
+      "reason": "release_update",
+      "stars_total": 600,
+      "stars_gained": 0,
+      "release": "v0.5.5"
     }
   ]
 }

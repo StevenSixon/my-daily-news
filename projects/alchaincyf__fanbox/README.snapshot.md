@@ -130,6 +130,8 @@ The UI was designed with [huashu-design](https://github.com/alchaincyf/huashu-de
   Select text in a preview and fling it into the terminal with file provenance + fencing (bracketed paste, never executed line by line).
 - **态势感知 / Situational awareness** — 标签圆点显示 agent 运行/空闲/退出；agent 把球踢回给你时终端边缘呼吸提示「轮到你」，长任务完成发系统通知。  
   Tab dots show running/idle/exited; when the agent hands the ball back, the terminal edge breathes; long tasks fire a system notification.
+- **11 个 agent 一键启动 / 11 built-in agent launchers** — Claude Code、Codex、Hermes Agent、OpenClaw、Kimi Code、ZCode、opencode、pi、CodeBuddy、WorkBuddy、Qoder CLI，官方图标 + 核实过的启动命令。滑杆按钮打开设置面板勾选启用哪些（默认 Claude Code + Codex），未装的一键复制安装命令；`~/.fanbox/config.json` 的 `agents` 数组可自定义命令或追加新 agent。  
+  All with official icons and verified launch commands. A sliders button opens the picker (defaults: Claude Code + Codex); not-installed entries copy their install command in one click; the `agents` array in `~/.fanbox/config.json` overrides commands or adds new agents.
 
 ### Editing · WYSIWYG / 编辑 · 所见即所得
 
