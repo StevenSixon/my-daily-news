@@ -15,21 +15,31 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "代理技能框架与开发方法论，面向AI代理开发",
-  "one_liner": "为编码智能体提供系统的 TDD 开发方法论（红绿重构）与子代理驱动流水线。",
-  "why_worth_it": "",
-  "tags": [],
-  "confidence": "medium",
-  "info_gaps": [],
+  "classify_reason": "智能体技能框架及开发方法论",
+  "one_liner": "为AI编码代理提供强制TDD、分步计划和子代理驱动的完整工作流技能框架",
+  "why_worth_it": "根治代理“直接写代码”的毛病，强制遵循TDD和审查流程，适配Claude Code、Cursor等主流AI工具",
+  "tags": [
+    "Agent工作流",
+    "TDD强制",
+    "多平台插件",
+    "子代理驱动"
+  ],
+  "confidence": "high",
+  "info_gaps": [
+    "未说明各代理的最低版本要求",
+    "未提供性能或成功率基准",
+    "自定义技能开发的具体 API 或元数据格式未在 README 中详述（仅有 writing-skills 技能可参考）",
+    "未说明是否支持除 Git 外的版本控制系统"
+  ],
   "quality_flags": [],
-  "stars_total": 242332,
+  "stars_total": 245342,
   "created_at": "2025-10-09",
-  "pushed_at": "2026-06-30",
-  "latest_release": "v6.0.3",
+  "pushed_at": "2026-07-02",
+  "latest_release": "v6.1.1",
   "first_seen": "2026-06-19",
-  "last_seen": "2026-07-01",
-  "streak_days": 6,
-  "analysis_updated_at": "2026-06-19T22:20:18+0800",
+  "last_seen": "2026-07-04",
+  "streak_days": 7,
+  "analysis_updated_at": "2026-07-04T01:11:49+0800",
   "appearances": [
     {
       "date": "2026-06-19",
@@ -72,6 +82,13 @@
       "stars_total": 242332,
       "stars_gained": 884,
       "release": "v6.0.3"
+    },
+    {
+      "date": "2026-07-04",
+      "reason": "release_update",
+      "stars_total": 245342,
+      "stars_gained": 1205,
+      "release": "v6.1.1"
     }
   ]
 }

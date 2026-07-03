@@ -1,24 +1,37 @@
-### 前置依赖
-- Python≥3.11, Node≥20, uv, pnpm
-- 克隆仓库：`git clone https://github.com/shy3130/tickflow-stock-panel`
+## 环境准备
 
-### 快速启动
-#### 开发模式
-```bash
-cp .env.example .env
-./dev.sh        # 同时启动前后端
-```
-访问 http://localhost:3011 （前端）
+- Python ≥ 3.11
+- Node.js ≥ 20
+- [uv](https://docs.astral.sh/uv/) 包管理器
+- pnpm (`npm i -g pnpm`)
 
-#### Docker部署
+## 最小部署
+
+### 方式一：Docker（推荐）
+
 ```bash
+git clone https://github.com/shy3130/tickflow-stock-panel.git
+cd tickflow-stock-panel
 cp .env.example .env
+# 编辑.env，可选择填写TICKFLOW_API_KEY（留空为None免费模式）
 docker compose up --build
 ```
-访问 http://localhost:3018
 
-### 最小可用示例
-1. 进入Web面板，设置页点击“立即跑盘后管道”加载历史日K。
-2. 在选股页选择内置策略（如“均线多头”）点击扫描，查看结果。
-3. 在回测页选择策略和日期区间运行回测，观察净值曲线。
-无需填写任何API Key即可体验（None模式）。
+访问 `http://localhost:3018`
+
+### 方式二：开发模式
+
+```bash
+cp .env.example .env
+./dev.sh           # Windows: .\dev.ps1
+```
+
+自动启动后端（3018端口）和前端（3011端口）。
+
+## 初始化使用
+
+1. 打开面板，进入“设置→凭据与能力”，点击“重新检测”确认数据档位
+2. “设置→立即跑盘后管道”拉取日K并计算指标（当日数据盘后1-2小时可用）
+3. 在“自选”页添加股票，进入“选股”运行策略
+4. 在“回测”页选择策略+区间查看绩效
+5. 配置“监控中心”实现盘中实时提醒

@@ -1,14 +1,14 @@
-### 安装
-**CDN 直接体验（限评估）**
+### CDN 一键体验
 ```html
-<script src="https://cdn.jsdelivr.net/npm/page-agent@1.10.0/dist/iife/page-agent.demo.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/page-agent@1.11.0/dist/iife/page-agent.demo.js" crossorigin="true"></script>
 ```
-该脚本会自动初始化一个 Agent，使用阿里巴巴提供的免费测试 LLM（需同意条款）。`?autoInit=false` 可阻止自动运行，之后手动 `new window.PageAgent(...)`。
+使用免费测试 LLM，适合快速评估。添加 `?autoInit=false` 可手动初始化。
 
-**NPM 集成**
+### NPM 安装
 ```bash
 npm install page-agent
 ```
+
 ```javascript
 import { PageAgent } from 'page-agent'
 
@@ -19,10 +19,6 @@ const agent = new PageAgent({
     language: 'en-US',
 })
 
-await agent.execute('点击登录按钮')
+await agent.execute('Click the login button')
 ```
-
-### 依赖前提
-- 现代浏览器（支持 ES2020+）
-- 有效的 LLM API 端点（兼容 OpenAI 格式），或使用免费 CDN 测试端点
-- 若需跨页面任务，安装 Chrome 扩展（可选）
+**依赖前提**：Node.js 环境（若使用 npm）；若通过 CDN 方式，可直接在现代浏览器中运行，无需任何构建工具。需要有效的 LLM API key（推荐阿里云 DashScope 或兼容接口）。

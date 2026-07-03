@@ -1,10 +1,18 @@
-## 依赖
-- Node.js LTS 版本
-- Chrome 当前稳定版 或 Chrome for Testing
-- npm
+## 安装前准备
+- 安装 Node.js LTS 版本（https://nodejs.org/）
+- 安装 Chrome 最新稳定版或 Chrome for Testing（https://developer.chrome.com/blog/chrome-for-testing/）
+- 确认 npm 可用
 
-## 安装与最小可用示例
-在 MCP 客户端配置文件（如 Claude Desktop 的 `mcpServers` 配置）中添加：
+## 最小可用配置（以Claude Code为例）
+```bash
+# 在终端中添加MCP服务器，scope user表示全局生效
+claude mcp add chrome-devtools --scope user npx chrome-devtools-mcp@latest
+```
+重启Claude Code后，即可在对话中让代理操作浏览器：
+> “打开 https://example.com，检查控制台错误，并分析性能”
+
+## 通用的MCP客户端配置
+如果你的AI客户端需要手动编辑配置文件，添加：
 ```json
 {
   "mcpServers": {
@@ -15,23 +23,13 @@
   }
 }
 ```
-重启客户端后，即可在对话中让 AI 使用 Chrome DevTools 工具。
 
-若只想做基本浏览器任务，可启用精简模式：
-```json
-{
-  "mcpServers": {
-    "chrome-devtools": {
-      "command": "npx",
-      "args": ["-y", "chrome-devtools-mcp@latest", "--slim", "--headless"]
-    }
-  }
-}
-```
+## 可选模式
+- **Slim模式**（仅基础工具，更快启动）：加上 `--slim` 参数。
+- **无头模式**：加上 `--headless`。
+- **禁用性能CrUX数据**：加上 `--no-performance-crux`。
 
-也可用 Claude Code CLI 快速添加：
-```bash
-claude mcp add chrome-devtools --scope user npx chrome-devtools-mcp@latest
-```
-
-启动后 AI 代理即可执行 `take_screenshot`、`navigate_page`、`performance_start_trace` 等操作。
+## 开箱即用示例
+- 截图：代理调用 `take_screenshot` 工具。
+- 性能分析：代理调用 `performance_start_trace`，操作后调用 `performance_stop_trace` 获取指标。
+- 网络检查：使用 `list_network_requests` 查看所有请求，`get_network_request` 获取详情。

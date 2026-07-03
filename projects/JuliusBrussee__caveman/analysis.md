@@ -1,56 +1,48 @@
 ## 它是什么
-
-一个 Claude Code 技能（同时支持 Codex、Gemini、Cursor、Windsurf、Cline、Copilot 等 30+ 代理），通过注入压缩规则，强制代理**去除冗余用语，仅保留技术实质**，将输出 token 降低 65–75%，但完全不损失代码、命令、路径等准确信息。
-
-核心哲学：**“why use many token when few do trick”**。提供 4 档压缩等级（lite / full / ultra / 文言文），支持多语言输出压缩，并能压缩记忆文件（CLAUDE.md）、提交信息、PR 评审等，形成一套完整的代理输出瘦身体系。
+一个跨30+种AI编码代理的Skill/插件，通过强制使用极简“穴居人”风格回答，让每次对话的输出Token平均减少65%，但不改代码、命令与错误信息的原始内容。
 
 ## 为什么火
-
-- **省钱省时**：API 输出成本直降 65%，回复速度提升约 3 倍，上下文窗口更耐用。
-- **真实可信**：README 中给出 10 项任务实测数据，平均从 1214 token 降至 294 token，并提供 `benchmarks/` 复现脚本。
-- **安装无痛**：一条 curl 命令自动检测已安装代理并注入规则，多平台开箱即用。
-- **社区 meme 化 + 学术背书**：引用 2026 年论文《Brevity Constraints Reverse Performance Hierarchies》，表明精简有时反而提升准确性。
+- 成本与速度双赢：每次回复都省输出Token，大模型API调用更便宜、更快速
+- 可读性提升：去除冗余后，信息密度更高，人类反而读得更快
+- 生态完整：不仅有核心压缩，还衍生出内存文件压缩caveman-compress、MCP中间件caveman-shrink、子代理cavecrew-*，覆盖整个工作流
+- 开源透明：提供可复现的benchmark与诚实的使用边界说明（如可能净增Token的场景）
 
 ## 技术栈
-
-- 语言：JavaScript（Node.js 脚本）
-- 安装方式：bash / zsh / PowerShell 脚本，通过 curl 或 irm 拉取
-- 规则存储：Markdown 技能文件（SKILL.md）、钩子脚本、环境标记文件
-- 集成方式：利用各代理的自定义技能/插件机制（Claude Code skills、Codex plugins、Cursor rules 等）
-- 分发：GitHub Release 标签 v1.9.0（不可变安装），含 SHA-256 完整性校验
+- 语言：JavaScript/Node.js (≥18)
+- 机制：Hook注入、MCP中间件、自然语言触发器
+- 支持代理：Claude Code, Codex, Gemini, Cursor, Windsurf, Cline, Copilot等30+
 
 ## 核心能力
-
-- `/caveman [lite|full|ultra|wenyan]` ：切换压缩级别，会话内生效
-- `/caveman-commit`：生成 ≤50 字符的约定式提交信息
-- `/caveman-review`：单行 PR 评论（位置 + 严重度 + 问题 + 修复）
-- `/caveman-stats`：展示当前会话及累计节省 token 数、美元估值，可生成可分享的文字
-- `/caveman-compress <file>`：将记忆文件（如 CLAUDE.md）压成原始人风格，平均再省 46% 输入 token
-- `caveman-shrink`：MCP 中间件，压缩任何 MCP 服务器的工具描述
-- `cavecrew-*`：压缩版子代理（investigator/builder/reviewer），让主上下文存活更久
+- **多级压缩**：lite/full/ultra/wenyan，可随时切换，不改输出语言只压缩风格
+- **单次命令**：/caveman-commit 生成规范提交信息、/caveman-review 产出简洁评审、/caveman-compress 压缩内存文件（一次性减少后续会话输入Token ~46%）
+- **统计仪表盘**：/caveman-stats 展示会话与终身节省的Token及费用，支持分享；状态行显示实时节省量
+- **MCP压缩**：caveman-shrink 包装任意MCP服务器，压缩工具描述
+- **子代理体系**：cavecrew-* 系列子代理，在执行任务时同样受益于Token节省
 
 ## 适用场景
-
-- 高频使用 AI 编程助手回复场景（日常编程、Code Review、Debug）
-- 希望降低 API 成本、加速响应、减少阅读时间的个人或团队
-- 多代理环境下统一输出风格，减少上下文膨胀
-- 作为 Claude Code 记忆文件（CLAUDE.md、project-notes.md）的定期压缩工具
+- 日常AI辅助编码，想控制Token费用或提升响应速度
+- 团队成员共享的代理配置，统一输出风格，减少沟通噪音
+- 与记忆文件、issue模板等配合，系统性降低长期Token消耗
+- 结合caveman-code等工具，打造全链路极简AI开发体验
 
 ## 同类对比
-
-- **直接提示“回答简洁”**：效果有限且不稳定，caveman 通过规则注入实现持续、可靠的压缩，且与最新研究结果一致（约束指令可提升准确性）。
-- **其他 token 压缩工具**：多数侧重输入压缩（如摘要记忆），caveman 专注**输出端压缩**，并与 `caveman-compress` 形成输入输出双重瘦身组合。
-- **与完整代理 caveman-code**：本仓库是输出压缩技能，其同门项目 [caveman-code](https://github.com/JuliusBrussee/caveman-code) 是全方位压缩的终端编码代理，token 消耗更少。
+与其他简单“请精简回答”的提示词或插件相比，caveman的优势在于：
+- **系统化**: 提供精确可测量的压缩率，不只是模糊指令
+- **跨代理**: 一键安装适配多种主流编程代理，不绑定单一平台
+- **诚实边界**: 文档明确说明何时净增Token、仅压缩输出不压缩输入，避免虚假宣传
+- **生态矩阵**: 从说话到代理本身（caveman-code）到记忆（cavemem）全有覆盖，形成统一方法论
 
 ## 版本动态
-
-- 最新版 v1.9.0（2026-06-12）引入固定标签安装 + SHA-256 完整性校验，修复文档站 DOM XSS
-- 针对 opencode 的兼容性从“完全不可用”修至全线跑通（生命周期钩子、命令扩展、会话标记等问题同步修复）
-- 新增仓库级配置 `.caveman/config.json`，支持团队级默认模式
-- 增加自然语言触发词（“less tokens”“be brief”等）
-- 安装器增加 Copilot 检测路径修复
+v1.9.1 (2026-07-03)：
+- 统一宣传数字为65%平均输出压缩率，移除旧版不准确声称
+- 修复统计归因错误，避免模式切换后数据失真
+- 增加限额头空间指示器（订阅用户）
+- 改进Hook稳定性（自然语言防误触发、stdin错误处理、SessionStart路径修复）
+- 新增Hermes Agent支持，文档增加Honest-Numbers页面
+- 发布完整性校验的安装钩子清单，使curl|bash回退路径稳定
 ---
 
 ## ℹ️ 置信度与信息盲区
 
 - 置信度：**high**
+- 信息盲区：未列出全部30+种代理的具体名称；caveman-compress 和 cavecrew-* 的实现细节未详述；wenyan模式的具体效果范围及非中文语言下的行为未阐明

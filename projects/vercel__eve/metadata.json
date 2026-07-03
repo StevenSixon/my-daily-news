@@ -16,32 +16,32 @@
   ],
   "license": "Apache-2.0",
   "category": "AI 应用",
-  "classify_reason": "构建代理的框架，用于定义和运行各类代理",
-  "one_liner": "文件系统即代理配置界面，TypeScript 优先的持久化 AI 代理框架。",
-  "why_worth_it": "用目录约定定义代理结构，直接融入 Git 工作流，降低协作与审查成本，适合需要可维护代理集群的团队。",
+  "classify_reason": "用于构建Agents的框架",
+  "one_liner": "文件系统即代理配置：基于目录约定定义AI代理，可观测、可扩展、TypeScript原生。",
+  "why_worth_it": "用文件约定代替代码配置，简化代理创建与维护；Vercel出品，适合全栈TS开发者。",
   "tags": [
     "Agent框架",
-    "文件驱动",
+    "文件系统驱动",
     "TypeScript",
-    "Workflow"
+    "Vercel"
   ],
   "confidence": "medium",
   "info_gaps": [
-    "未提供与其他框架的性能对比或基准测试数据",
-    "模型提供商具体接入方式（是否支持本地模型或任意 OpenAI 兼容 API）未在 README 中说明",
-    "沙盒（Sandbox）特性仅在标签中出现，README 与 Release 说明均未涉及",
-    "是否必须绑定 Vercel 平台才能部署生产环境未明确",
-    "无安全审计或安全实践细节，仅提及负责任披露渠道"
+    "未说明持久化机制和代理状态管理细节",
+    "未列出支持的模型提供商及其具体配置方式",
+    "未提供性能基准或与同类框架的对比数据",
+    "未明确沙盒执行技术和隔离级别",
+    "未描述生产部署流程（是否需要Vercel账号，自托管选项）"
   ],
   "quality_flags": [],
-  "stars_total": 2981,
+  "stars_total": 3141,
   "created_at": "2026-06-16",
-  "pushed_at": "2026-06-30",
-  "latest_release": "eve@0.17.1",
+  "pushed_at": "2026-07-03",
+  "latest_release": "eve@0.19.0",
   "first_seen": "2026-06-19",
-  "last_seen": "2026-07-01",
-  "streak_days": 12,
-  "analysis_updated_at": "2026-07-01T02:31:31+0800",
+  "last_seen": "2026-07-04",
+  "streak_days": 13,
+  "analysis_updated_at": "2026-07-04T01:14:21+0800",
   "appearances": [
     {
       "date": "2026-06-19",
@@ -126,6 +126,13 @@
       "stars_total": 2981,
       "stars_gained": 0,
       "release": "eve@0.17.1"
+    },
+    {
+      "date": "2026-07-04",
+      "reason": "release_update",
+      "stars_total": 3141,
+      "stars_gained": 0,
+      "release": "eve@0.19.0"
     }
   ]
 }

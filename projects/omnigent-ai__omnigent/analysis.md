@@ -1,42 +1,40 @@
 ## 它是什么
-Omnigent 是一个开源的“元线束”（meta-harness），在 Claude Code、Codex、Cursor、OpenCode、Hermes、Pi 等 AI 编码代理之上提供统一编排层。你可以不重写逻辑就切换底层代理，强制实施策略和沙箱，并通过终端、浏览器、手机或桌面应用实时协作。
+Omnigent 是一个开源的**元代理框架（meta-harness）**，为多种 AI 编码代理（Claude Code、Codex、Cursor、OpenCode、Hermes、Pi 及自定义代理）提供统一的编排层。它允许开发者在不重写业务逻辑的情况下切换或组合不同的底层代理运行时，同时强制执行安全策略和沙箱隔离，支持从终端、浏览器、手机或桌面应用实时协作。
 
 ## 为什么火
-随着多供应商的 AI 编码代理（Claude Code、Cursor、Codex 等）涌现，团队面临碎片化的治理、安全性和成本控制挑战。Omnigent 在 Star 5k+ 的验证下，成为解决这一问题的中心化框架，允许安全地混合使用不同代理、一键部署会话到云端沙箱，并实现团队共享会话。
+Star 6.1k，发布仅数周即迭代至 v0.4.0。核心吸引力在于解决“代理碎片化”痛点：开发者常需在多个编码代理工具之间切换，每种工具的命令行接口、配置方式、安全模型不同。Omnigent 通过插件化的 harness 层统一接入，并提供策略引擎（审批、额度、工具限制）和云沙箱（Modal、Daytona 等），让团队能安全地组合使用不同代理，甚至实现代理间的互审与并行分工。
 
 ## 技术栈
 - 语言：Python 3.12+
-- 安装方式：curl 脚本、uv、pip、Homebrew
-- 依赖：Node.js 22+、npm、tmux（终端模式）、bubblewrap（Linux 沙箱）
-- 模型接入：Anthropic/OpenAI API key、订阅凭证、兼容网关（OpenRouter、Ollama、LiteLLM 等）、Databricks
-- 沙箱支持：Modal、Daytona、Islo、E2B、CoreWeave、Kubernetes、OpenShell、Boxlite、Databricks
-- 部署：Docker、Render、Railway、Fly.io、Hugging Face Spaces、Modal、Cloudflare、Databricks Apps
+- 安装工具：uv / pip / Homebrew / 源代码
+- 关键依赖：Node.js 22+（用于 npm 安装的编码代理 CLI）、tmux（终端封装）、bubblewrap（Linux 沙箱）、各代理 CLI
+- 支持平台：Linux (需要 bwrap)、macOS (seatbelt 沙箱)、Windows（降级支持，无文件系统/网络隔离）
 
 ## 核心能力
-- **多代理编排**：通过统一的 YAML 配置或 SDK 接入 7 个以上代理，可在同一会话中调用不同代理
-- **策略治理**：可设置批准流程、支出上限、工具限制，策略作用于服务器、代理或单次会话级别
-- **沙箱隔离**：支持多种云端或本地沙箱，在隔离环境中执行代理
-- **跨设备协作**：会话状态同步，支持共享、分叉、实时观看
-- **原生终端 + Web UI + 桌面应用**：提供多种交互界面，桌面应用自动管理服务与运行器
-- **模型灵活切换**：每个代理可独立绑定模型，会话中动态切换
+- **多代理运行**：原生支持 `omnigent claude`、`omnigent codex`、`omnigent cursor` 等直接启动，并可通过 `omnigent run <agent.yaml>` 运行自定义 YAML 定义代理。
+- **Harness 插件 SDK**：v0.4.0 引入，允许任何代理作为可安装 Python 包提供，通过入口点发现，无需修改核心代码。
+- **智能模型路由**：服务器端 judge 自动为每个轮次选择最优 harness 和模型，并可提供 `sys_advise_models` 工具用于编排器决策。
+- **策略治理**：支持审批暂停、消费上限、工具限制等，可应用于服务器、代理或单个会话。
+- **云沙箱**：支持 Modal、Daytona、Islo、E2B、CoreWeave、Kubernetes 等多种沙箱后端，可从 CLI 创建或服务器按需分配。
+- **实时协作**：会话可在终端、Web UI、手机间同步，支持团队同屏观察、共同操控或分叉会话。
+- **多代理示例**：Polly 多代理编程协调器（将任务分派给不同编码代理并行工作并交叉评审），Debby 双头辩论代理（同时调用 Claude 和 GPT 并对比）。
 
 ## 适用场景
-- 多团队共用一个代理运行时，需要统一的安全和费用管控
-- 希望在不同 AI 编码工具间按任务做最优选择，避免重构
-- 需要将代理执行环境部署到安全沙箱，防止越权操作
-- 分布式团队通过手机或浏览器参与代理会话审阅
+- 需要在多种编码代理间切换或组合使用的开发团队，避免维护多套集成代码。
+- 希望为代理操作增加安全护栏（审批、预算、工具白名单）的企业或个人开发者。
+- 需要远程协作、从手机监控代理进度的场景。
+- 希望利用不同代理特长进行任务分解与交叉验证的复杂工作流。
 
 ## 同类对比
-- **AutoGen / CrewAI**：侧重于多代理对话与工作流，Omnigent 更侧重于对现有商业 CLI 代理的统一封装与沙箱执行
-- **LangChain/LlamaIndex**：主要是 LLM 应用框架，不直接管理 Claude Code 等完整交互式代理
-- **Aider / Continue**：单个编程助手，缺乏多代理治理和沙箱能力
-- 优势：直接接入原生 CLI 代理（无 SDK 适配层）、丰富的策略与沙箱集成、首日即支持多供应商
+与 LangChain、CrewAI 等面向应用层的 agent 框架不同，Omnigent 定位于 **meta-harness**，更底层地管理现有独立编码代理的运行环境，而非从头构建代理。它类似于一个“代理的容器管理器”，提供统一的 CLI、GUI 和 API。与直接使用各代理厂商的原生 CLI 相比，Omnigent 增加了编排、策略、沙箱和协作能力。目前缺少与同类工具（如 AG2、AutoGen）的详细功能对比和性能基准。
 
 ## 版本动态
-最新 v0.3.0（2026-06-27）加入 7 个新代理线束、原生桌面应用、项目分组、更多沙箱目标、Windows 基础支持、自定义代理创建 UI、并修复了多项稳定性问题。仓库活跃，社区通过 Discord 沟通。
+- 最新稳定版：v0.4.0（2026-07-03）
+- 主要更新：Harness 插件 SDK、Polly 多代理编排扩展、智能模型路由自动化、原生 harness 成熟度提升（Kiro 完全对等、Claude 实时 UI 卡片、Qwen 工具支持等）。
+- 状态明确标注为 alpha，尚在快速迭代期，API 可能变动。
 ---
 
 ## ℹ️ 置信度与信息盲区
 
 - 置信度：**high**
-- 信息盲区：未提供性能基准或与同类框架的量化对比；文档中未详细说明自定义 YAML 代理的完整规范，仅有 AGENT_YAML_SPEC.md 文件存在但内容未知；沙箱各目标的具体配置复杂度未详细展开
+- 信息盲区：无性能基准数据或横向对比；部署到生产环境的详细资源需求和容量规划未在 README 中提及；插件 SDK 的详细开发文档需查阅 docs/ 目录，README 未展开

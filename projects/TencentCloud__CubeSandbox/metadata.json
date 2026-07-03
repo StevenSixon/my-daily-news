@@ -10,28 +10,32 @@
   ],
   "license": "NOASSERTION",
   "category": "AI 应用",
-  "classify_reason": "为AI代理提供的轻量沙箱，AI基础设施工具",
-  "one_liner": "毫秒级冷启动、硬件隔离、兼容E2B的AI Agent沙箱服务",
-  "why_worth_it": "解决AI Agent执行不可信代码的隔离与性能矛盾，替代Docker弱隔离和传统VM高开销，密度极高。",
+  "classify_reason": "专为AI代理设计的沙箱环境",
+  "one_liner": "毫秒级启动、硬件隔离、E2B原生兼容的AI Agent安全沙箱",
+  "why_worth_it": "解决AI生成代码的安全执行痛点，比Docker隔离性强，比传统VM启动快百倍，单机可跑数千实例，直接替换E2B零代码改动",
   "tags": [
-    "沙箱运行时",
-    "AI Agent安全",
-    "KVM虚拟化",
-    "E2B兼容"
+    "AI沙箱",
+    "硬件隔离",
+    "E2B兼容",
+    "高密度部署"
   ],
   "confidence": "high",
   "info_gaps": [
-    "仓库许可证字段为 NOASSERTION，README 标注 Apache 2.0 但 LICENSE 文件内容未展示，实际许可需核实。"
+    "许可证类型为 NOASSERTION，可能为 Apache 2.0（通过徽章显示），但需确认",
+    "安装脚本的具体命令未在 README 中展示，需跳转到文档",
+    "对 Windows/macOS 部署的支持未明确（似乎仅 Linux）",
+    "性能基准测试的环境配置（裸金属具体型号等）未详细说明",
+    "与 E2B API 的兼容性边界（如哪些 endpoint 完全支持）未列出"
   ],
   "quality_flags": [],
-  "stars_total": 6737,
+  "stars_total": 7107,
   "created_at": "2026-04-10",
-  "pushed_at": "2026-07-01",
-  "latest_release": "v0.4.0",
+  "pushed_at": "2026-07-03",
+  "latest_release": "v0.5.0",
   "first_seen": "2026-07-02",
-  "last_seen": "2026-07-02",
-  "streak_days": 1,
-  "analysis_updated_at": "2026-07-02T03:16:54+0800",
+  "last_seen": "2026-07-04",
+  "streak_days": 2,
+  "analysis_updated_at": "2026-07-04T01:15:50+0800",
   "appearances": [
     {
       "date": "2026-07-02",
@@ -39,6 +43,13 @@
       "stars_total": 6737,
       "stars_gained": 46,
       "release": "v0.4.0"
+    },
+    {
+      "date": "2026-07-04",
+      "reason": "release_update",
+      "stars_total": 7107,
+      "stars_gained": 86,
+      "release": "v0.5.0"
     }
   ]
 }

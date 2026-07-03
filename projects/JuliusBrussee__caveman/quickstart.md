@@ -1,46 +1,18 @@
 ## 安装
-
-**前提条件**：Node.js ≥ 18
-
-### 一键安装（macOS / Linux / WSL / Git Bash）
-
 ```bash
+# macOS/Linux/WSL
 curl -fsSL https://raw.githubusercontent.com/JuliusBrussee/caveman/main/install.sh | bash
-```
 
-### Windows（PowerShell 5.1+）
-
-```powershell
+# Windows (PowerShell 5.1+)
 irm https://raw.githubusercontent.com/JuliusBrussee/caveman/main/install.ps1 | iex
 ```
-
-安装过程约 30 秒，会自动检测已安装的代理并注入技能文件。已有代理未检测到可忽略，重新运行不会重复安装。
+**要求**: Node.js ≥18。安装器会自动检测本机代理并安装对应插件/扩展/规则文件。
 
 ## 最小可用示例
+1. 在支持的代理（如Claude Code）中对话，代理已默认启用穴居人模式，或手动输入 `/caveman` 或说 "talk like caveman"。
+2. 测试效果：输入“解释React组件为什么重新渲染？”，代理会回答精简版，如“New object ref each render. Wrap in useMemo.”
+3. 切换级别：`/caveman ultra` 获得更短回复；`/caveman wenyan` 尝试文言风。关闭：说 "normal mode"。
 
-1. 在任意支持的代理（Claude Code、Cursor、Codex 等）对话中输入：
-
-   ```
-   /caveman
-   ```
-
-   或自然语言：“talk like caveman”。
-
-2. 之后所有回复将被压缩，例如：
-
-   > **原来**：“The reason your React component is re-rendering is likely because you're creating a new object reference on each render cycle. When you pass an inline object as a prop, React's shallow comparison sees it as a different object every time, which triggers a re-render. I'd recommend using useMemo to memoize the object.”（69 token）
-   > 
-   > **压缩后**：“New object ref each render. Inline object prop = new ref = re-render. Wrap in `useMemo`.”（19 token）
-
-3. 恢复正常模式：
-
-   ```
-   normal mode
-   ```
-
-## 进阶用法
-
-- 切换压缩等级：`/caveman ultra`
-- 查看节省统计：`/caveman-stats`
-- 压缩记忆文件：`/caveman-compress CLAUDE.md`
-- 生成提交信息：`/caveman-commit`
+## 依赖前提
+- Node.js ≥18
+- 至少安装了一个支持的AI代理（Claude Code CLI, Gemini CLI, Cursor等）

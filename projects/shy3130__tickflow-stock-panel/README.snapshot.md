@@ -1,6 +1,13 @@
+
 <div align="center">
 
 # 📈 A股智能量化工作台
+
+[![声明:个人开源](https://img.shields.io/badge/⚠️_声明-个人开源_非_TickFlow_官方项目-green?style=for-the-badge&labelColor=red)](https://github.com/shy3130/tickflow-stock-panel)
+
+**本项目个人开源，非 [TickFlow](https://tickflow.org/auth/register?ref=V3KDKGXPEA) 官方项目。** 仅供学习研究使用，与 TickFlow 官方无任何隶属或合作关系。
+
+
 
 **自托管、零运维的 A 股「选股 + 监控 + 回测」量化工作台**
 
@@ -16,27 +23,74 @@
 </div>
 
 <div align="center">
+  
 
-**[快速开始](#-快速开始)** · **[核心功能](#-核心功能)** · **[配置](#️-配置)** · **[路线图](#-路线图)**
+
+**[快速开始](#-快速开始)** · **[核心功能](#-核心功能)** · **[配置](#️-配置)** · **[完整文档](#-完整文档)**
 
 </div>
 
-- 🆓 **开箱即用** — 留空 Key 即进 None 模式,历史日 K 免费体验,**无需付费**
-- 🏠 **自托管零运维** — Docker 单容器部署,数据完全掌握在自己手里
-- 🔍 **三位一体** — 选股(20 内置策略)+ 实时监控 + 向量化回测,Polars 毫秒级扫描全 A 股
-- 🤖 **AI 加持** — 一句话生成策略代码,任意 OpenAI 兼容接口均可接入(留空即关闭)
-- 🔌 **自由扩展** — 接入 Tushare（开发中） / 自有量化项目数据,与内置数据同台分析
-- 🇨🇳 **A 股专用** — 连板梯队、涨停动量、内置ths 概念 / 行业
 
-> 基于 [TickFlow](https://tickflow.org/auth/register?ref=V3KDKGXPEA) 数据源。**明确不做**:不对标同花顺 / 通达信,不内置「AI 荐股 / 涨停预测」。
 
-觉得有用可以点个 Star，蟹蟹 🌹
+
+基于 [TickFlow](https://tickflow.org/auth/register?ref=V3KDKGXPEA) 数据源,并非tickflow官方项目。**明确不做**:不对标同花顺 / 通达信,不内置「AI 荐股 / 涨停预测」。
+
+> ⚠️ 考虑到 tickflow 数据源没有人气/资金流向等个性化数据,我将开放自有的第三方数据以供大佬们研究使用,包括但不限于当前内置的 ths 概念/ths 行业(后续更新在这里)。
+
+> 有更多想法,或提交建议/意见的道友可以邮件到 415333856@qq.com,Q 群 109338242。
+
+觉得有用可以点个 Star,蟹蟹 🌹
 
 ---
 
-## 🎯 项目定位
+## ✨ 核心功能
 
-**面向个人散户与量化爱好者的 A 股分析工作台**,聚焦「**选股 + 监控 + 回测**」三大场景,LLM能力驱动进行市场分析，掌控市场节奏；让普通投资者也能拥有一套可自定义策略的量化工具。
+| 模块             | 一句话                                                                 | 详见                              |
+| :--------------- | :--------------------------------------------------------------------- | :-------------------------------- |
+| 🔍 **选股引擎**   | 18 个内置策略 + 自定义信号 + AI 生成 + 代码迁移,Polars 毫秒级扫全 A 股 | [strategy.md](./docs/strategy.md) |
+| 📊 **指标流水线** | MA/EMA/MACD/RSI/KDJ/布林/量比等,一次扫表落盘 enriched Parquet          | [features.md](./docs/features.md) |
+| 🧪 **回测引擎**   | 三种模式(个股/策略组合/自由信号),T+1/手续费/滑点/止损,SSE 流式进度     | [features.md](./docs/features.md) |
+| 📡 **监控中心**   | 四类监控(策略/个股信号/价格/异动),多条件 AND/OR + 飞书推送             | [features.md](./docs/features.md) |
+| 📈 **个股分析**   | 9 类关键价位 + AI 四维分析(技术/基本面/财务/消息面)                    | [features.md](./docs/features.md) |
+| 🏆 **连板梯队**   | 连板层级统计 + 概念涨幅轮动 + 盘后 AI 复盘 + 炸板/翘板预警             | [features.md](./docs/features.md) |
+| 🧰 **数据扩展**   | TickFlow 多源 + 第三方接入(接口/推送/CSV/JSON)同台分析                   | [features.md](./docs/features.md) |
+
+
+
+
+
+<details>
+<summary><b>📦 主要页面与功能</b></summary>
+
+**📊 行情总览**
+- **看板** Dashboard — 市场情绪评分 + 涨跌/成交额榜单 + 概念领涨领跌 + 大盘异动事件流,一日全貌
+- **自选** Watchlist — 自选股池,表格/卡片双视图,换手/量比/RSI 等实时指标
+- **指数** Indices — 沪深指数浏览与同步
+
+**🔍 选股与回测**
+- **策略** Screener — Polars 毫秒级扫描全 A 股,18 个内置策略卡片 + 自定义条件
+- **回测** Backtest — 两种模式:
+  - **因子回测** — IC/IR、分层收益、多空组合,先筛掉无效指标
+  - **策略回测** — 净值曲线、回撤、夏普、胜率,支持 T+1/手续费/滑点/止损,SSE 流式进度
+
+**📈 个股与板块分析**
+- **个股分析** Stock Analysis (Beta) — 日K + 9 类关键价位 + AI 四维分析(技术/基本面/财务/消息面)
+- **财务分析** Financials — 利润表/资负表/现金流/关键指标 + AI 解读
+- **概念分析** Concept Analysis — ths 概念涨幅轮动矩阵 + 领涨/领跌主线 + 个股穿透
+- **行业分析** Industry Analysis — 行业分层涨幅轮动 + 领涨/领跌主线 + 成分股
+- **连板梯队** Limit Up Ladder — 连板层级统计 + 概念/行业分布 + 封单监控(可切换连跌梯队)
+
+**🔔 监控与复盘**
+- **监控中心** Monitor — 策略/个股信号/价格/异动四类规则,盘中实时弹窗 + 触发记录持久化
+- **复盘** Review (Beta) — 盘后 AI 自动生成市场复盘,可定时执行、推送飞书、下载 Markdown
+
+**🗄️ 数据与扩展**
+- **数据** Data — 本地数据画像与同步状态(维表/日K/除权/Enriched/指数/ETF/分钟K/财务),盘后管道与历史扩展
+- **扩展分析** (动态菜单) — 把任意第三方/扩展数据字段配成一级菜单,与内置数据同台分析
+- **设置** Settings — TickFlow Key 与订阅档位、AI 接口、实时监控、扩展页面、信号库、菜单与系统设置
+
+</details>
+
 
 ---
 
@@ -75,18 +129,15 @@
 
 </div>
 
+
 ---
+
+
+
 
 ## 🚀 快速开始
 
-### 前置依赖
-
-| 工具                               | 版本   | 安装                                               |
-| :--------------------------------- | :----- | :------------------------------------------------- |
-| Python                             | ≥ 3.11 | [python.org](https://www.python.org/)              |
-| Node                               | ≥ 20   | [nodejs.org](https://nodejs.org/)                  |
-| [`uv`](https://docs.astral.sh/uv/) | latest | `curl -LsSf https://astral.sh/uv/install.sh \| sh` |
-| `pnpm`                             | 9      | `npm i -g pnpm`                                    |
+> 前置依赖:Python ≥ 3.11 · Node ≥ 20 · [`uv`](https://docs.astral.sh/uv/) · `pnpm`(`npm i -g pnpm`)
 
 ### 方式 A:Dev 模式(二次开发推荐)
 
@@ -95,10 +146,7 @@ cp .env.example .env       # 按需填 TICKFLOW_API_KEY(留空 = None 模式)
 ./dev.sh                   # Windows: .\dev.ps1
 ```
 
-自动检查 / 下载依赖、释放端口、同时起前后端,Ctrl-C 一并关闭。默认:
-
-- 后端 → <http://localhost:3018> · 前端 → <http://localhost:3011>
-- 自定义端口:`BACKEND_PORT=8000 FRONTEND_PORT=5173 ./dev.sh`
+自动检查 / 下载依赖、释放端口、同时起前后端。后端 → <http://localhost:3018> · 前端 → <http://localhost:3011>。
 
 ### 方式 B:Docker(部署最省心)
 
@@ -108,153 +156,29 @@ docker compose up --build
 # 打开 http://localhost:3018
 ```
 
-<details>
-<summary><b>环境适配与高级选项(老 CPU · 手动启动 · 回测依赖)</b></summary>
+> 📖 Docker 进阶、GitHub Actions 自构建、老 CPU 兼容、访问密码设置等见 [docs/deployment.md](./docs/deployment.md)。
 
-**老 CPU 兼容(avx2/fma 缺失报错或 exit 132)**:桌面客户端安装包已内置兼容内核(新老 CPU 通吃)。Docker / 源码用户在 `.env` 打开 `BACKEND_EXTRAS=legacy-cpu` 后重建,会给 Polars 切到 `rtcompat` 运行时;需回测则 `BACKEND_EXTRAS=legacy-cpu backtest`。
-
-**手动分别启动:**
-
-```bash
-# 后端
-cd backend && uv sync --extra backtest   # 含回测依赖
-uv run uvicorn app.main:app --reload --port 3018
-
-# 前端
-cd frontend && pnpm install && pnpm dev   # http://localhost:3011
-```
-
-**回测依赖**:vectorbt → numba 体积较大,作为可选 extras(`uv sync --extra backtest`)。macOS / Intel 无预构建 wheel 时需 `brew install cmake` 现场编译。
-
-</details>
-
-### 🔄 更新代码(已部署用户必读)
-
-拉取新版本只需一条命令:
-
-```bash
-git pull
-```
-
-**整个 `data/` 目录都不纳入 git**——行情 K线、财务、自选、回测、监控记录,乃至概念/行业扩展数据,全部是程序运行时生成/拉取的用户数据,`git pull` 物理上无法影响它们。新用户首次启动时,概念/行业两份扩展数据会自动从远程接口拉取,无需任何手动操作。
-
-> ⚠️ **切勿使用以下命令"解决冲突"或"清理",它们会一次性删光 `data/` 下所有未被 git 跟踪的数据:**
-> - `git clean -fdx`(最危险,会删掉所有 `.gitignore` 忽略的文件)
-> - `git reset --hard`
-> - 直接删除整个项目文件夹重新 `git clone`
->
-> 若 `git pull` 报冲突,通常是本地误改了被跟踪的文件,请先 `git stash` 暂存再 pull,或单独联系作者,不要直接执行上面的命令。
-
-### 🧭 跑起来后的第一次使用
+### 跑起来后的第一次使用
 
 1. **设置 → 凭据与能力** → 点 **重新检测**,确认档位标签
 2. **设置** → **立即跑盘后管道**:拉日 K + 计算 enriched 表(None / Free 走 free-api,当日数据盘后 1-2 小时可用)
 3. **自选**页加标的 → **选股**页点策略卡片扫描 / 配自定义信号
 4. **回测**页选策略 + 区间 → 看净值 / 夏普 / 交易明细(SSE 实时进度)
-5. **监控中心**配规则(策略 / 个股信号 / 价格 / 异动),盘中实时弹窗 + 持久化记录
-
----
-
-## ✨ 核心功能
-
-### 🔍 选股引擎(Screener)
-
-**20 个内置策略**,每个策略一个独立 Python 文件,基于 Polars 表达式向量化实现(`backend/app/strategy/builtin/`):
-
-| 类型        | 代表策略                                                 |
-| :---------- | :------------------------------------------------------- |
-| 趋势 / 形态 | 趋势突破 · 均线多头 · MA 金叉 · MACD 金叉放量 · 布林突破 |
-| 量价 / 涨停 | 量价齐升 · 高换手强势 · 连板股 · 断板反包 · 涨停动量     |
-| 反转 / 波动 | 超跌反弹 · 超卖反转 · 新低反转 · 低波动龙头 · 回踩 MA20  |
-
-**扩展策略的三种方式:**
-
-| 方式              | 说明                                                                                                  |
-| :---------------- | :---------------------------------------------------------------------------------------------------- |
-| **🎛️ 自定义信号** | 不写代码,UI 上 `字段 + 操作符 + 阈值` 组合编译成 Polars 表达式热加载                                  |
-| **🤖 AI 生成**    | 一句话描述思路,LLM 读 `strategy-guide.md` 生成完整策略文件(经 `ast` 校验)→ 落入 `data/strategies/ai/` |
-| **📝 代码迁移**   | 参照开发指南把已有策略改写为 Polars 文件放入 `data/strategies/custom/`,引擎自动发现                   |
-
-### 📊 指标流水线(Indicators)
-
-原生 Polars 向量化,全 A 股一次扫表落盘 enriched Parquet:
-
-- **均线 / 趋势**:MA(5-60)· EMA · MACD · 动量 · 布林带
-- **震荡 / 波动**:RSI · KDJ · ATR · 年化波动率 · 振幅
-- **量能 / 涨跌停**:量比 · 量均线 · 涨停信号 · 连板数
-- **原子信号**:MA / MACD 金叉死叉 · N 日新高新低 · 布林突破
-- **复权**:基于除权因子自动前复权,回测与指标口径一致
-
-### 🧪 回测引擎(Backtest)
-
-基于 vectorbt:**三种模式**(个股 / 策略组合 / 自由信号组合),真实约束(T+1 · 手续费 · 滑点 · 止损 · 最大持仓天数),组合管理(最大持仓 · 敞口 · 等权 / 自定义仓位)。SSE 流式进度支持切页重连,输出净值曲线 · 夏普 · 最大回撤 · 胜率 · 交易明细。
-
-### 📡 监控中心(Monitor)
-
-统一规则引擎,一个页面管理**四类监控**(策略 · 个股信号 · 价格涨跌 · 全市场异动):
-
-- 多条件 AND/OR + 冷却期去重 + 严重级别(info/warn/critical)
-- 多入口配置:监控中心新建 / 个股详情页「加监控」/ 策略卡片一键开启
-- 命中后右下角弹窗(可配声效)+ 持久化到 `alerts.jsonl`,菜单未读徽标
-
-### 📈 个股分析(Beta)
-
-以「行情 + 关键价位」为主体的单标的决策页:
-
-- **专用日 K 图表**:主图 + 成交量 + 滑块,默认近 6 个月
-- **9 类关键价位**(纯函数实时计算,毫秒级):压力支撑 · 成交密集区 · 枢轴点 · 前高前低 · Keltner 通道 · ATR 止损 · 缺口位 · 斐波那契 · 整数关口
-- **AI 四维分析**:技术 / 基本面 / 财务 / 消息面流式生成,实战派交易员视角
-
-### 🧰 数据与扩展
-
-- **TickFlow 多源数据**:日 K / 分钟 K / 指数 / 财务 / 实时行情
-- **🔌 第三方接入(重点)**:Tushare 等 HTTP 定时拉取 · CSV / Excel 上传 · JSON 写入,自动 schema 发现 + 符号归一,页面可视化配置,**可与自有量化项目数据并入 DuckDB 同台分析**
-- **盘后定时管道**:APScheduler 15:30 CST 自动拉日 K + 重算 enriched + 跑监控
-- **令牌桶限流**:适配各档位 rpm / batch,批量合并 + 增量拉取
+5. **监控中心**配规则,盘中实时弹窗 + 持久化记录
 
 ---
 
 ## ⚙️ 配置
 
-所有配置从根目录 `.env` 读取(复制 `.env.example` 开始),也可在面板 **设置** 页修改。
-
-### 数据源:TickFlow
+所有配置从根目录 `.env` 读取(复制 `.env.example` 开始),也可在面板 **设置** 页修改。最常用的三项:
 
 ```ini
-TICKFLOW_API_KEY=              # 留空 = None 模式(历史日K免费);填 Key = 按订阅档位解锁
+TICKFLOW_API_KEY=              # 留空 = None 模式(历史日K免费);填 Key 解锁更多
+AI_API_KEY=                    # 留空 = 关闭 AI;填 Key 启用策略生成
+PORT=3018                      # 服务端口
 ```
 
-留空即 None 模式,通过 free-api 使用历史日 K(当日数据盘后 1-2 小时可用);免费注册 Key 后进 Free 模式,开启自选股实时监控。**实时行情按档位**:
-
-| 档位     | 实时能力                                 |
-| :------- | :--------------------------------------- |
-| Free     | 自选页前 5 个标的实时监控(最低 6 秒刷新) |
-| Starter+ | 全市场实时行情                           |
-| Pro      | 分钟 K + 盘口                            |
-| Expert   | WebSocket + 财务数据                     |
-
-> 完整能力矩阵见 [tickflow.org/pricing](https://tickflow.org/pricing/),高等档位含较低档全部权益。
-
-### AI(可选)
-
-用于自然语言生成策略。**所有配置留空即跳过**,不影响核心功能。支持任意 OpenAI 兼容接口:
-
-```ini
-AI_PROVIDER=openai_compat              # openai_compat | ollama
-AI_BASE_URL=https://api.deepseek.com/v1
-AI_API_KEY=                            # 留空 = 关闭 AI
-AI_MODEL=deepseek-chat
-AI_DAILY_TOKEN_BUDGET=500000           # 每日 token 预算上限
-```
-
-### 服务与数据
-
-```ini
-HOST=0.0.0.0          # 监听地址
-PORT=3018             # 服务端口
-LOG_LEVEL=INFO        # DEBUG | INFO | WARNING | ERROR
-DATA_DIR=./data       # Parquet / DuckDB 数据存储目录
-```
+> 📖 完整配置项(数据源档位、AI、服务、密码、老 CPU 兼容)见 [docs/configuration.md](./docs/configuration.md)。
 
 ---
 
@@ -265,7 +189,7 @@ DATA_DIR=./data       # Parquet / DuckDB 数据存储目录
 | **后端**     | FastAPI · Pydantic v2 · APScheduler · sse-starlette                                               |
 | **数据**     | Polars(计算)· DuckDB(查询)· Parquet(存储)                                                         |
 | **回测**     | vectorbt(全项目唯一 pandas 边界)                                                                  |
-| **数据源**   | [TickFlow](https://tickflow.org/auth/register?ref=V3KDKGXPEA) 官方 SDK 、其他数据源后续迭代实装   |
+| **数据源**   | [TickFlow](https://tickflow.org/auth/register?ref=V3KDKGXPEA) 官方 SDK · 其他数据源后续迭代实装   |
 | **AI**(可选) | OpenAI 兼容接口(DeepSeek / 通义 / Ollama 等)                                                      |
 | **前端**     | React 18 · Vite · TypeScript · Tailwind · Tanstack Query · Lightweight Charts · ECharts · dnd-kit |
 | **部署**     | Docker 两阶段构建,前端 dist 拷进后端镜像,**单容器**                                               |
@@ -276,20 +200,25 @@ DATA_DIR=./data       # Parquet / DuckDB 数据存储目录
 
 | Phase  | 内容                                                               | 状态 |
 | :----- | :----------------------------------------------------------------- | :--- |
-| 0-1    | 仓库骨架 · FastAPI 壳 · 能力探测 · K 线同步与分析页                | ✅   |
-| 2-3    | Polars enriched 流水线 · Screener · vectorbt 回测(T+1/手续费/止损) | ✅   |
-| 4-5    | 监控引擎 · 四类监控规则 · 实时 SSE 推送 · 持久化记录               | ✅   |
-| 6      | 个股分析(专用日 K + 9 类关键价位 + AI 四维分析)                    | ✅   |
-| **v2** | Webhook 推送(QMT/掘金下单)· 板块异动 · 早晚报 · 更多扩展           | 🚧   |
+| 0-1    | 仓库骨架 · FastAPI 壳 · 能力探测 · K 线同步与分析页                | ✅    |
+| 2-3    | Polars enriched 流水线 · Screener · vectorbt 回测(T+1/手续费/止损) | ✅    |
+| 4-5    | 监控引擎 · 四类监控规则 · 实时 SSE 推送 · 持久化记录               | ✅    |
+| 6      | 个股分析(专用日 K + 9 类关键价位 + AI 四维分析)                    | ✅    |
+| **v2** | Webhook 推送(QMT/掘金下单)· 板块异动 · 早晚报 · 更多扩展           | 🚧    |
 
 ---
 
-## 📚 文档与贡献
+## 📚 完整文档
 
-- [docs/strategy-guide.md](./docs/strategy-guide.md) —— 策略开发指南(AI 生成与手写规范)
-- [docs/](./docs) —— 策略构建步骤、示例
+| 文档                                                                                               | 内容                                                                 |
+| :------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------- |
+| [docs/deployment.md](./docs/deployment.md)                                                         | 部署方式(Dev / Docker / GH Actions)、老 CPU 兼容、更新代码、访问密码 |
+| [docs/configuration.md](./docs/configuration.md)                                                   | 所有 `.env` 配置项详解(数据源、AI、服务、密码、数据目录)             |
+| [docs/features.md](./docs/features.md)                                                             | 各功能模块详细说明(选股/指标/回测/监控/个股分析/数据扩展)            |
+| [docs/strategy.md](./docs/strategy.md)                                                             | 策略体系(18 内置策略 + 三种扩展方式 + 文件结构)                      |
+| [backend/app/strategy/prompts/strategy-guide.md](./backend/app/strategy/prompts/strategy-guide.md) | 策略开发完整规范(AI 生成与手写)                                      |
 
-欢迎 Issue 和 PR。新增内置策略:在 `backend/app/strategy/builtin/` 参照现有文件实现 `StrategyDef`,引擎自动发现。
+欢迎 Issue 和 PR。
 
 ---
 

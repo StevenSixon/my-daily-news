@@ -17,26 +17,30 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "Claude Code skill，减少 token，属于 AI 辅助开发工具。",
-  "one_liner": "让AI输出token暴降65%，像原始人说话但技术精度丝毫不减的Claude Code技能",
-  "why_worth_it": "为所有编程助手用户省token、加速响应，实测平均节省65%输出，支持30+平台，安装仅一条命令",
+  "classify_reason": "减少token消耗的Claude Code skill，属于AI代理工具",
+  "one_liner": "把AI助手的话压缩成穴居人风格，输出Token直降65%",
+  "why_worth_it": "不牺牲技术准确性，纯靠语言风格裁剪，带来可衡量的Token节省与响应加速，适合所有AI编码代理用户",
   "tags": [
+    "Prompt工程",
     "Token优化",
-    "Claude Code",
-    "多平台",
-    "Prompt工程"
+    "多代理Skill",
+    "Claude Code"
   ],
   "confidence": "high",
-  "info_gaps": [],
+  "info_gaps": [
+    "未列出全部30+种代理的具体名称",
+    "caveman-compress 和 cavecrew-* 的实现细节未详述",
+    "wenyan模式的具体效果范围及非中文语言下的行为未阐明"
+  ],
   "quality_flags": [],
-  "stars_total": 80370,
+  "stars_total": 82662,
   "created_at": "2026-04-04",
-  "pushed_at": "2026-06-12",
-  "latest_release": "v1.9.0",
+  "pushed_at": "2026-07-03",
+  "latest_release": "v1.9.1",
   "first_seen": "2026-07-03",
-  "last_seen": "2026-07-03",
-  "streak_days": 1,
-  "analysis_updated_at": "2026-07-03T02:20:51+0800",
+  "last_seen": "2026-07-04",
+  "streak_days": 2,
+  "analysis_updated_at": "2026-07-04T01:10:10+0800",
   "appearances": [
     {
       "date": "2026-07-03",
@@ -44,6 +48,13 @@
       "stars_total": 80370,
       "stars_gained": 866,
       "release": "v1.9.0"
+    },
+    {
+      "date": "2026-07-04",
+      "reason": "release_update",
+      "stars_total": 82662,
+      "stars_gained": 2851,
+      "release": "v1.9.1"
     }
   ]
 }

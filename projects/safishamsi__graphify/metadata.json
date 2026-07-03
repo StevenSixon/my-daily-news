@@ -1,0 +1,55 @@
+{
+  "full_name": "safishamsi/graphify",
+  "url": "https://github.com/safishamsi/graphify",
+  "description": "AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and more). Turn any folder of code, SQL schemas, R scripts, shell scripts, docs, papers, images, or videos into a queryable knowledge graph. App code + database schema + infrastructure in one graph.",
+  "language": "Python",
+  "topics": [
+    "antigravity",
+    "claude-code",
+    "codex",
+    "gemini",
+    "graphrag",
+    "knowledge-graph",
+    "leiden",
+    "openclaw",
+    "rag",
+    "skills",
+    "tree-sitter"
+  ],
+  "license": "MIT",
+  "category": "AI 应用",
+  "classify_reason": "AI编码助手skill，将代码转为知识图谱",
+  "one_liner": "将任意代码库一键转为可交互知识图谱，集成20+AI编码助手。",
+  "why_worth_it": "用知识图谱替代grep，自动发现跨文件依赖与隐藏结构，对理解和维护大型项目极有价值。",
+  "tags": [
+    "知识图谱",
+    "AI编程助手",
+    "代码理解",
+    "Python"
+  ],
+  "confidence": "high",
+  "info_gaps": [
+    "未提供与其他代码知识图谱工具（如 Sourcegraph、CodeQL）的量化性能对比",
+    "未说明处理超大仓库（>10 万文件）时的内存/时间消耗基准",
+    "视频/图像提取的准确率与可配置性未提及",
+    "解析器对非主流语言（如 Nim、Fortran）的覆盖度和稳定性未量化"
+  ],
+  "quality_flags": [],
+  "stars_total": 76838,
+  "created_at": "2026-04-03",
+  "pushed_at": "2026-07-03",
+  "latest_release": "v0.9.5",
+  "first_seen": "2026-07-04",
+  "last_seen": "2026-07-04",
+  "streak_days": 1,
+  "analysis_updated_at": "2026-07-04T01:06:43+0800",
+  "appearances": [
+    {
+      "date": "2026-07-04",
+      "reason": "new",
+      "stars_total": 76838,
+      "stars_gained": 937,
+      "release": "v0.9.5"
+    }
+  ]
+}

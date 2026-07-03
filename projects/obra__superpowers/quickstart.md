@@ -1,22 +1,31 @@
 ## 安装
-Superpowers 是为编码代理设计的技能包，需在目标代理中安装对应的插件。
+根据你使用的编码代理选择一种安装方式：
 
-以 Claude Code 为例：
-1. 在 Claude Code 会话中运行 `/plugin install superpowers@claude-plugins-official`（来自 Anthropic 官方市场）。
-2. 或使用第三方市场：`/plugin marketplace add obra/superpowers-marketplace` 然后 `/plugin install superpowers@superpowers-marketplace`。
+**Claude Code**（官方市场）：
+```bash
+/plugin install superpowers@claude-plugins-official
+```
 
-其他代理安装方式见 README（如 Codex CLI 输入 `/plugins` 搜索 Superpowers，Cursor 输入 `/add-plugin superpowers`，Gemini CLI：`gemini extensions install https://github.com/obra/superpowers`，等等）。
+**Cursor**：
+在 Agent 聊天中输入 `/add-plugin superpowers`。
+
+**Codex App**：在插件侧边栏搜索 Superpowers 并点击添加。
+
+**GitHub Copilot CLI**：
+```bash
+copilot plugin marketplace add obra/superpowers-marketplace
+copilot plugin install superpowers@superpowers-marketplace
+```
+
+其他工具（Antigravity、Factory Droid、Kimi Code、OpenCode、Pi）参见 [README](https://github.com/obra/superpowers)。
 
 ## 最小可用示例
-1. **启动代理**（安装 Superpowers 后）并描述你要构建的功能，例如：“我想做一个能在 Markdown 中自动修正拼写的 CLI 工具。”
-2. 代理会自动触发**brainstorming**技能，提出一系列问题以明确设计，生成设计文档并等待你批准。
-3. 批准设计后，代理创建 git worktree 分支，运行测试确认基线的干净。
-4. 自动进入**writing-plans**，将设计分解为若干 2-5 分钟任务。
-5. 你说“开始”或“go”，代理启动**subagent-driven-development**：逐个任务由新子代理实现，完成后自动进行两阶段审查，通过则继续下一任务，否则修正。
-6. 所有任务完成后，**finishing-a-development-branch** 技能验证全部测试通过，询问你是否合并分支或创建 PR。
+安装后，在代理中开始一个新对话，描述你要开发的功能，如：
+> 我想给现有的 REST API 添加一个速率限制中间件
+
+代理会自动进入 brainstorming 阶段，不会立即写代码，而是反问你设计细节。确认设计后，会生成规划并询问是否开始实现。回答“go”后，它会创建独立工作分支，逐个任务进行 TDD 开发，并子代理审查。
 
 ## 依赖前提
-- 本地安装目标编码代理（Claude Code、Codex CLI、Cursor 等）。
-- 项目使用 Git 初始化（需要工作树和分支能力）。
-- 可选：项目已有测试套件（遵循 TDD 要求，否则技能会引导你添加）。
-- 无需额外安装 Superpowers 本身（所谓安装即集成到代理中）。
+- 你需要拥有对应编码代理的可用环境（Claude Code、Cursor 等）
+- 项目必须是已有的代码仓库，以便使用 Git worktree 特性（可选但推荐）
+- 无需额外安装语言运行时，技能为纯文本指令

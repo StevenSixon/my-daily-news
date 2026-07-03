@@ -1,47 +1,29 @@
 ## 安装
-### 一键安装（推荐）
 ```bash
 curl -fsSL https://raw.githubusercontent.com/omnigent-ai/omnigent/main/scripts/install_oss.sh | sh
 ```
-### 手动安装
-- 需要 Python 3.12+
-```bash
-uv tool install omnigent    # 或者 pip install omnigent
-```
-或
-```bash
-brew install omnigent-ai/tap/omnigent
-```
+或手动：`uv tool install omnigent`（需 Python 3.12+，以及 uv、git、Node.js 22+、tmux 等）
 
-## 最小可用示例
-启动第一个代理（交互式选择模型）：
+## 最小示例
 ```bash
+# 启动默认代理（交互式选择模型）
 omnigent
-```
-直接使用特定代理运行时：
-```bash
-omnigent claude    # Claude Code
-omnigent codex     # Codex
-omnigent cursor    # Cursor
-omnigent opencode  # OpenCode
-omnigent hermes    # Hermes
-omnigent pi        # Pi
-```
-运行示例项目：
-```bash
-omnigent run examples/polly/   # 多代理编码协调员
-omnigent run examples/debby/   # 双头头脑风暴伙伴
-```
 
-## 依赖前提
-- Python 3.12+
-- Node.js 22 LTS 及 npm（用于安装各代理 CLI）
-- tmux（用于终端原生交互，Windows 无需）
-- Linux 需要 bubblewrap 做沙箱隔离
-- 模型凭证：至少一个 API key 或配置好的 CLI 登录
+# 启动特定代理
+omnigent claude
+omnigent codex
 
-详细配置模型与凭证：
-```bash
-omnigent setup
+# 运行内置多代理示例
+omnigent run examples/polly/
+omnigent run examples/debby/
+
+# 启动服务器和 Web UI
+omnigent server start
+omnigent host  # 另一终端注册本机
 ```
-然后根据指引添加 API key、订阅凭证或网关地址。
+访问 http://localhost:6767 即可从浏览器使用。支持 `/model` 命令切换模型。
+
+## 前提依赖
+- Python 3.12+, uv, git, Node.js 22+ (含 npm)
+- 对于终端封装的各代理，需安装对应的 CLI 并已认证
+- Linux 需 bubblewrap，macOS 无需额外沙箱工具

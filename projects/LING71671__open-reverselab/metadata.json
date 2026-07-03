@@ -27,7 +27,7 @@
   ],
   "license": "GPL-3.0",
   "category": "AI 应用",
-  "classify_reason": "代理原生的开源逆向工程实验室，包含知识库与自动化工具链。",
+  "classify_reason": "包含知识库和MCP工具的逆向工程实验室，面向AI代理",
   "one_liner": "逆向工程Agent实验室：197篇知识库+100+自动化工具，内藏通用AI越狱漏洞",
   "why_worth_it": "让逆向分析像CTF一样自动化：信号驱动匹配攻击链，节省海量查阅时间，自带越狱研究彩蛋",
   "tags": [
@@ -45,13 +45,13 @@
     "无基准测试数据或成功率统计"
   ],
   "quality_flags": [],
-  "stars_total": 292,
+  "stars_total": 314,
   "created_at": "2026-06-17",
-  "pushed_at": "2026-07-02",
+  "pushed_at": "2026-07-03",
   "latest_release": null,
   "first_seen": "2026-07-02",
-  "last_seen": "2026-07-03",
-  "streak_days": 2,
+  "last_seen": "2026-07-04",
+  "streak_days": 3,
   "analysis_updated_at": "2026-07-02T03:17:45+0800",
   "appearances": [
     {
@@ -65,6 +65,13 @@
       "date": "2026-07-03",
       "reason": "lightweight",
       "stars_total": 292,
+      "stars_gained": 0,
+      "release": null
+    },
+    {
+      "date": "2026-07-04",
+      "reason": "lightweight",
+      "stars_total": 314,
       "stars_gained": 0,
       "release": null
     }

@@ -1,0 +1,47 @@
+{
+  "full_name": "modiqo/skillspec",
+  "url": "https://github.com/modiqo/skillspec",
+  "description": "SkillSpec makes agent skills followable, testable, and provable with Doctor risk reports, guided imports, structured contracts, and alignment proof.",
+  "language": "Rust",
+  "topics": [
+    "ai",
+    "ai-agents",
+    "ai-evals",
+    "ai-tool"
+  ],
+  "license": "Apache-2.0",
+  "category": "AI 应用",
+  "classify_reason": "让智能体技能可遵循、可测试、可验证的工具",
+  "one_liner": "给 AI Agent 技能加契约和风险报告，让“完成”不再是黑盒",
+  "why_worth_it": "解决纯文本 SKILL.md 不可靠的痛点，轻量 CLI 即可获得风险评分、结构化契约与运行审计，构建可信 Agent 的必备工具",
+  "tags": [
+    "AI Agents",
+    "技能验证",
+    "可靠性评估",
+    "Rust"
+  ],
+  "confidence": "high",
+  "info_gaps": [
+    "未提供与其他技能验证方法的定量对比基准",
+    "未说明大规模技能库（如 100+ 技能）下的路由/诊断性能",
+    "没有提及对非 GitHub 托管私有仓库的本地化 CI 集成细节"
+  ],
+  "quality_flags": [],
+  "stars_total": 698,
+  "created_at": "2026-06-19",
+  "pushed_at": "2026-07-02",
+  "latest_release": "v0.1.7",
+  "first_seen": "2026-07-04",
+  "last_seen": "2026-07-04",
+  "streak_days": 1,
+  "analysis_updated_at": "2026-07-04T01:08:27+0800",
+  "appearances": [
+    {
+      "date": "2026-07-04",
+      "reason": "new",
+      "stars_total": 698,
+      "stars_gained": 0,
+      "release": "v0.1.7"
+    }
+  ]
+}
