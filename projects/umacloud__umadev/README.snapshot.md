@@ -59,7 +59,7 @@ npm install -g umadev
 
 The npm package is a distribution shim. The actual program is a Rust binary. Prebuilt binaries ship for macOS (Apple Silicon and Intel), Linux (x86_64 and ARM64), and Windows (x86_64).
 
-The install also pulls a small local embedding model (`multilingual-e5-small`, f16, ~224 MB) as an optional dependency and wires it up automatically — it powers the offline vector search with no API key and no runtime network, no manual download step. If your registry or network skips the optional download, umadev still works: retrieval falls back to BM25-only, and re-running `npm install -g umadev` restores the vector channel.
+The binary and the curated knowledge corpus install from npm and work fully offline. The optional local embedding model (`multilingual-e5-small`, f16, ~224 MB) is **not** bundled in the npm package — it is fetched on first run to `~/.umadev/embed-model` (a one-time download), then powers offline vector search locally with no API key and no runtime network. If that first-run download is unavailable (offline install, restricted network), umadev still works: retrieval falls back to BM25-only until the model is present, and it self-heals — a later run re-downloads it (a corrupt cache is re-fetched, not trusted).
 
 Build from source:
 
@@ -200,7 +200,7 @@ flowchart LR
 - **Plans the work and shows it.** A build becomes a dependency plan (`.umadev/plan.json`) rendered as a live checklist you can steer with `/plan`. Steps are driven step by step; the coordinator owns the plan, not the base.
 - **A build in chat is a real build.** A build typed in the chat UI earns the same planning, team scheduling, governance, and delivery proof as `umadev run`.
 - **Ships a delivery proof.** PRD, architecture, and UI/UX docs, a scorecard, and a proof pack — scaled to the task, so a one-page change doesn't get an enterprise dossier.
-- **Carries engineering standards into the base — with a fully-local dual-channel RAG.** 459 curated knowledge files (commercial-grade engineering standards, design rules) plus a map of your existing code are compiled into the binary and retrieved on every working turn by a two-channel hybrid engine: pure-Rust BM25 + a local vector model (`multilingual-e5-small`, f16, via candle) fused with RRF, HyDE query expansion on top. No API key, no network, millisecond recall over your own standards and business docs. Zero config.
+- **Carries engineering standards into the base — with a fully-local dual-channel RAG.** 459 curated knowledge files (commercial-grade engineering standards, design rules) plus a map of your existing code are compiled into the binary and retrieved on every working turn by a two-channel hybrid engine: pure-Rust BM25 + a local vector model (`multilingual-e5-small`, f16, via candle) fused with RRF, HyDE query expansion on top. No API key, no network, millisecond recall over your own standards and business docs. Zero config. Cloud embedding is OFF by default and never triggered by a stray `OPENAI_API_KEY` — it runs only if you explicitly opt in (a dedicated `OPENAI_EMBED_KEY` **plus** `UMADEV_ALLOW_CLOUD_EMBED=1`); the default install never sends your corpus anywhere.
 - **Self-evolving memory — it learns from each run.** Mistakes the base hits are recorded with a frequency signal to a local store; a genuine recurrence triggers a higher-level corrective *reflection*. Both are recalled into later prompts, so the same pitfall isn't repeated — umadev gets better on your codebase the more you use it.
 - **Remembers your project's facts.** Stable facts the base discovers — the JDK path, the real build / test / lint commands, environment constraints — are written to `.umadev/memory/facts.jsonl` and re-injected every turn, so the team never re-discovers what it already knows even after the transcript is trimmed.
 - **Surfaces the base's clarifying questions.** When the base asks a question mid-build (its `AskUserQuestion` tool), umadev renders the prompt and its options inline and relays your answer back into the same session — instead of the question silently auto-cancelling.
@@ -326,7 +326,7 @@ Tool calls, verification runs, and critic verdicts are written to `.umadev/audit
 
 **4. Governance runs on every file write**
 
-~112 rules check for emoji-as-icons, hardcoded colors, leaked secrets, AI-slop UI patterns, and unsafe code constructs. They run as a pre-write hook into Claude Code, as a pre-commit hook in git, and as part of the quality gate. All rules are configurable in `.umadev/rules.toml` and are fail-open — a bug in the governor never blocks your work.
+~112 rules check for emoji-as-icons, hardcoded colors, leaked secrets, AI-slop UI patterns, and unsafe code constructs. They run as a pre-write hook into Claude Code, as a pre-commit hook in git, and as part of the quality gate. At write time only the irreversible floor (leaked secrets / credentials, sensitive-path writes, destructive shell) is hard-blocked; craft and quality findings (emoji, color, AI-slop) are flagged and repaired by the post-write QC loop rather than pinning the base's hands mid-file. All rules are configurable in `.umadev/rules.toml` and are fail-open — a bug in the governor never blocks your work.
 
 ---
 
@@ -342,9 +342,9 @@ Tool calls, verification runs, and critic verdicts are written to `.umadev/audit
 
 ### The base brings its own model — umadev has none
 
-umadev connects to no model API and stores no credentials of its own. The base uses its own configured model — your logged-in subscription, or whatever third-party / local model you routed through the base. By default umadev passes no `--model` flag; the base runs on its own configuration. To override, set `model` in `~/.umadev/config.toml` or pass `umadev run --model <id>`; otherwise change the model in the base's own config. The TUI `/model` command does not switch anything — it just shows where the model lives, because UmaDev never imposes one.
+umadev connects to no model API and stores no credentials of its own. The base uses its own configured model — your logged-in subscription, or whatever third-party / local model you routed through the base. umadev passes no `--model` flag and owns no model of its own: to change the model, change it in the base's own config. There is deliberately **no `/model` command and no `umadev run --model`** — UmaDev never imposes a model.
 
-umadev reads and surfaces the base's current model and reasoning effort in `/status` — it reads `~/.claude/settings.json` for Claude Code, `~/.codex/config.toml` for Codex, and `opencode.json` for OpenCode — but never overrides those values unless you explicitly ask it to.
+umadev reads and surfaces the base's model and reasoning effort where the base exposes them — it reads `~/.claude/settings.json` for Claude Code, `~/.codex/config.toml` for Codex, and `opencode.json` for OpenCode — but never overrides those values. In practice a Claude Code continuous session reports the exact resolved model most reliably (the base emits it on session start); other bases may only show what their config pins. The context-window gauge shows a real model **name** always, but a numeric window only when the base's own config exposes an exact one — UmaDev never guesses a window from a model-name table (it would drift, and a base can route to a third-party / local model whose real window UmaDev can't read).
 
 Wider model coverage means routing the base to a third-party or local model. That is the base's job. umadev does not add new base drivers for that.
 
@@ -487,7 +487,7 @@ flowchart LR
     F --> G["Injected into base system prompt<br/>alongside repo-map slice + recalled pitfalls"]
 ```
 
-**Two-channel hybrid retrieval, fully local.** Lexical BM25 (pure Rust, CJK-aware) and dense vector search run as two channels fused with Reciprocal Rank Fusion, with a HyDE-style query expansion widening recall first. The vector channel runs a small bilingual model (`multilingual-e5-small`, f16) **locally via candle** — bundled with the install, no API key, no network, millisecond recall over your own project standards and business docs. It degrades to BM25-only if the model is ever absent (fail-open). No cloud embedding service is required or used.
+**Two-channel hybrid retrieval, fully local.** Lexical BM25 (pure Rust, CJK-aware) and dense vector search run as two channels fused with Reciprocal Rank Fusion, with a HyDE-style query expansion widening recall first. The vector channel runs a small bilingual model (`multilingual-e5-small`, f16) **locally via candle** — bundled with the install, no API key, no network, millisecond recall over your own project standards and business docs. It degrades to BM25-only if the model is ever absent (fail-open). No cloud embedding service is required, and **none is used unless you explicitly opt in** — a dedicated `OPENAI_EMBED_KEY` **plus** an explicit `UMADEV_ALLOW_CLOUD_EMBED=1` flag. A generic `OPENAI_API_KEY` (set for some other tool) never causes an upload; the default install keeps your corpus fully on-device.
 
 **It learns from each run.** Mistakes the base hits during a build are recorded with a frequency signal to a local store; on a genuine recurrence umadev asks the base for a higher-level corrective strategy (a *reflection*). Both are recalled into later prompts, so the same pitfall isn't repeated — the longer you use it on a codebase, the less it stumbles on the same thing twice.
 
@@ -559,8 +559,7 @@ Typing `/` in the TUI opens a command palette — `Tab` to autocomplete, `↑`/`
 |---|---|
 | `/claude` · `/codex` · `/opencode` | Switch the base being driven (saved to `~/.umadev/config.toml`) |
 | `/offline` | Switch to deterministic offline templates (demo / CI, no network) |
-| `/status` | Active base, its current model, and reasoning effort (read from the base's own config) |
-| `/model [id]` | Show where the model lives — the base owns it; UmaDev imposes none (set `model` in config or `run --model` to override) |
+| `/status` | Active base, its model, and reasoning effort where the base exposes them (read-only; UmaDev never sets a model) |
 | `/sandbox [tier]` | View / change the Codex base's launch sandbox (`read-only` · `workspace-write` · `danger-full-access`) |
 
 **Drive the flow**
@@ -722,9 +721,8 @@ User config:
 # ~/.umadev/config.toml
 backend = "claude-code"
 lang = "en"
-# model is empty by default — the base uses its own configured model.
-# Set it here (or pass `umadev run --model <id>`) only to override.
-# model = "opus"
+# umadev owns no model — the base runs on its own configured model.
+# To change the model, change it in the base's own config (not here).
 ```
 
 Project config:

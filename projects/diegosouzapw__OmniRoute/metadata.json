@@ -27,31 +27,32 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "免费的AI网关，连接各种Coding Agents到多个模型",
-  "one_liner": "免费聚合237+AI的网关，自动失效转移与95%令牌压缩",
-  "why_worth_it": "为AI编码工具提供海量免费Provider和压缩，节省95%令牌成本，适用高强度开发者",
+  "classify_reason": "免费 AI 网关，统一端点接入多家模型，是 AI 工具",
+  "one_liner": "免费 AI 网关，聚合 237 家提供商免费额度，自动回退与 token 压缩",
+  "why_worth_it": "面向想零成本或低成本使用多种大模型的开发者，用一个本地端点聚合 90+ 免费 API 免去多平台配置，15-95% 的 token 压缩和智能路由可大幅降低用量和中断风险，比单独使用各平台更省钱稳定",
   "tags": [
-    "AI网关",
-    "免费聚合",
-    "令牌压缩",
+    "AI 网关",
+    "Token 压缩",
+    "免费 LLM 聚合",
     "TypeScript"
   ],
-  "confidence": "medium",
+  "confidence": "high",
   "info_gaps": [
-    "快速启动命令未经实际验证，基于 npm 包和 Docker 镜像名推断",
-    "RTK/Caveman 压缩的具体技术原理未在片段中详细展开",
-    "部分提供商实际可用性与免费配额准确性未验证",
-    "未给出明确的 API 密钥配置方式与环境变量清单"
+    "README 未提供具体路由策略延迟对比数据",
+    "压缩算法 RTK+Caveman 的技术细节与独立性能基准未在 README 展开，需查阅 docs/compression",
+    "虽然提到 TLS 指纹伪装和隐私，但未说明自托管时数据的存储与审计细节",
+    "与同类项目的定量对比（如 LiteLLM）未在截断部分展示",
+    "免费额度统计的去重与计算逻辑细节仅在外部文档，本报告未核实实际可得性"
   ],
   "quality_flags": [],
-  "stars_total": 10660,
+  "stars_total": 11453,
   "created_at": "2026-02-13",
-  "pushed_at": "2026-07-03",
-  "latest_release": "v3.8.43",
+  "pushed_at": "2026-07-05",
+  "latest_release": "v3.8.44",
   "first_seen": "2026-07-01",
-  "last_seen": "2026-07-04",
-  "streak_days": 4,
-  "analysis_updated_at": "2026-07-03T02:25:02+0800",
+  "last_seen": "2026-07-05",
+  "streak_days": 5,
+  "analysis_updated_at": "2026-07-05T17:51:14+0800",
   "appearances": [
     {
       "date": "2026-07-01",
@@ -80,6 +81,13 @@
       "stars_total": 10660,
       "stars_gained": 3197,
       "release": "v3.8.43"
+    },
+    {
+      "date": "2026-07-05",
+      "reason": "release_update",
+      "stars_total": 11453,
+      "stars_gained": 4133,
+      "release": "v3.8.44"
     }
   ]
 }

@@ -112,12 +112,12 @@ Finding Agent 是 AutoCVE 的核心审计能力，专为 CVE 挖掘场景设计�
 Linux / macOS / Git Bash :
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/larlarua/AutoCVE/v1.0.3/docker-compose.prod.yml \
+curl -fsSL https://raw.githubusercontent.com/larlarua/AutoCVE/v1.0.4/docker-compose.prod.yml \
   | docker compose -f - up -d
 ```
 Windows PowerShell / CMD :
 ```bash
-curl.exe -fsSL https://raw.githubusercontent.com/larlarua/AutoCVE/v1.0.3/docker-compose.prod.yml | docker compose -f - up -d
+curl.exe -fsSL https://raw.githubusercontent.com/larlarua/AutoCVE/v1.0.4/docker-compose.prod.yml | docker compose -f - up -d
 ```
 
 ### 🛠️ 源码部署
@@ -235,6 +235,27 @@ docker compose up -d --build
 >
 > * 📧 **Email：** [359111529@qq.com](mailto:359111529@qq.com)
 > * 🐙 **GitHub：** [@larlarua](https://github.com/larlarua)
+
+---
+
+## 🙏 致谢
+
+> [!NOTE]
+>
+> AutoCVE 项目在开发初期参考并学习了 [DeepAudit](https://github.com/lintsinghua/DeepAudit) 的工程架构，这为本项目的快速起步提供了重要帮助。
+>
+> 谨此向 DeepAudit 项目及其开发者致以诚挚的谢意。
+
+<details>
+<summary><strong>🧩 关于 AutoCVE 的工程设计</strong></summary>
+
+<br>
+
+在参考相关开源项目工程经验的基础上，AutoCVE 针对自动化 CVE 挖掘这一场景，对项目整体 Agent 工程进行了重构与定制化设计，重点实现了审计流程编排、ReAct Loop 工程化重构、状态机调度、循环控制与终止判断、工具编排、报告生成、Skill 机制以及对话交互等能力。
+
+后续，AutoCVE 也将持续迭代优化，进一步提升在漏洞挖掘场景下的自动化水平、审计深度与实战效果。
+
+</details>
 
 ---
 

@@ -14,31 +14,31 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "LLM驱动的多市场股票智能分析系统",
-  "one_liner": "LLM 驱动的多市场股票智能分析仪表盘，零成本定时推送决策报告。",
-  "why_worth_it": "为散户快速生成每日多市场个股决策仪表盘，整合行情、新闻与技术指标，开箱即用，完全基于 GitHub Actions 免费运行。",
+  "classify_reason": "LLM 驱动的多市场股票智能分析系统，是 AI 金融应用",
+  "one_liner": "LLM驱动的多市场股票日报与策略问答，零成本定时推送。",
+  "why_worth_it": "为散户/量化爱好者省去数据聚合与推送脚本的繁琐，开箱即用。",
   "tags": [
     "AI Agent",
     "量化分析",
-    "自托管",
-    "GitHub Actions"
+    "多市场",
+    "自托管"
   ],
   "confidence": "high",
   "info_gaps": [
-    "报告生成质量与 LLM 选择的依赖关系未提供基准测试数据",
-    "多市场数据稳定性与延迟未给出实测指标",
-    "本地 CLI 后端（codex_cli）的具体使用说明未在 README 中展开",
-    "桌面客户端的详细功能与支持平台未在 README 中明确"
+    "未提供不同模型生成报告质量的量化对比或基准测试",
+    "未说明大规模自选股（如数百只）时的分析耗时和API成本",
+    "数据源可靠性（尤其是免费源）在不同市场下的稳定性未量化",
+    "回测功能的详细策略、绩效指标和局限未在README展开"
   ],
   "quality_flags": [],
-  "stars_total": 53042,
+  "stars_total": 54467,
   "created_at": "2026-01-10",
-  "pushed_at": "2026-07-01",
-  "latest_release": "v3.24.1",
+  "pushed_at": "2026-07-05",
+  "latest_release": "v3.25.0",
   "first_seen": "2026-06-21",
-  "last_seen": "2026-07-02",
-  "streak_days": 12,
-  "analysis_updated_at": "2026-06-29T00:46:33+0800",
+  "last_seen": "2026-07-05",
+  "streak_days": 13,
+  "analysis_updated_at": "2026-07-05T17:51:38+0800",
   "appearances": [
     {
       "date": "2026-06-21",
@@ -123,6 +123,13 @@
       "stars_total": 53042,
       "stars_gained": 5806,
       "release": "v3.24.1"
+    },
+    {
+      "date": "2026-07-05",
+      "reason": "release_update",
+      "stars_total": 54467,
+      "stars_gained": 3842,
+      "release": "v3.25.0"
     }
   ]
 }

@@ -16,7 +16,7 @@
   ],
   "license": "Apache-2.0",
   "category": "AI 应用",
-  "classify_reason": "用于构建Agents的框架",
+  "classify_reason": "Vercel 的代理构建框架，是 AI 开发工具",
   "one_liner": "文件系统即代理配置：基于目录约定定义AI代理，可观测、可扩展、TypeScript原生。",
   "why_worth_it": "用文件约定代替代码配置，简化代理创建与维护；Vercel出品，适合全栈TS开发者。",
   "tags": [
@@ -34,13 +34,13 @@
     "未描述生产部署流程（是否需要Vercel账号，自托管选项）"
   ],
   "quality_flags": [],
-  "stars_total": 3141,
+  "stars_total": 3200,
   "created_at": "2026-06-16",
-  "pushed_at": "2026-07-03",
+  "pushed_at": "2026-07-04",
   "latest_release": "eve@0.19.0",
   "first_seen": "2026-06-19",
-  "last_seen": "2026-07-04",
-  "streak_days": 13,
+  "last_seen": "2026-07-05",
+  "streak_days": 14,
   "analysis_updated_at": "2026-07-04T01:14:21+0800",
   "appearances": [
     {
@@ -131,6 +131,13 @@
       "date": "2026-07-04",
       "reason": "release_update",
       "stars_total": 3141,
+      "stars_gained": 0,
+      "release": "eve@0.19.0"
+    },
+    {
+      "date": "2026-07-05",
+      "reason": "lightweight",
+      "stars_total": 3200,
       "stars_gained": 0,
       "release": "eve@0.19.0"
     }

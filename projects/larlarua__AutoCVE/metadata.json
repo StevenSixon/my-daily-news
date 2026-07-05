@@ -21,32 +21,32 @@
   ],
   "license": "AGPL-3.0",
   "category": "AI 应用",
-  "classify_reason": "智能体驱动的自动化CVE发现平台",
-  "one_liner": "一键CVE挖掘：Multi-Agent全流程自动化源码审计与漏洞报告平台",
-  "why_worth_it": "7天产出30个真实CVE验证效率，打通从项目筛选到CVE申报的全流程，安全研究人员的自动化助手。",
+  "classify_reason": "多代理驱动的自动化 CVE 发现平台，是 AI 安全应用",
+  "one_liner": "Multi-Agent 驱动全流程自动挖 CVE，审计源码、验证漏洞、出一键报告",
+  "why_worth_it": "为安全研究员和开发者提供端到端自动化漏洞挖掘流水线，实际挖出30+CVE，弥补传统SAST缺乏深度验证与报告生成的不足",
   "tags": [
-    "Multi-Agent",
-    "CVE自动化",
-    "AI安全",
+    "Multi-Agent 审计",
+    "CVE 挖掘",
+    "AI 安全审计",
     "自托管"
   ],
   "confidence": "high",
   "info_gaps": [
-    "未公开具体使用的 SAST 工具/扫描规则集",
-    "未列出已验证支持的 LLM 模型/提供商列表",
-    "无扫描性能基准数据（如单个仓库平均耗时）",
-    "一键 CVE 的项目筛选规则与优先级未说明",
-    "对主机硬件资源（CPU/内存）的最低详细要求未明确"
+    "未说明具体支持哪些 LLM 模型及所需的环境变量列表",
+    "无与同类 SAST 工具（如 Semgrep、CodeQL）的误报率/漏报率对比基准",
+    "沙箱执行环境的详细配置（如超时、网络隔离、文件系统限制）未在 README 中公开",
+    "多语言审计能力边界未明确（README 仅展示 Java/JS 项目，是否支持 C/Rust/Go 等存疑）",
+    "单次审计所需的 Token 消耗量与成本参考未给出"
   ],
   "quality_flags": [],
-  "stars_total": 913,
+  "stars_total": 951,
   "created_at": "2026-06-15",
-  "pushed_at": "2026-07-03",
-  "latest_release": "v1.0.3",
+  "pushed_at": "2026-07-04",
+  "latest_release": "v1.0.4",
   "first_seen": "2026-06-25",
-  "last_seen": "2026-07-04",
-  "streak_days": 10,
-  "analysis_updated_at": "2026-07-02T03:22:18+0800",
+  "last_seen": "2026-07-05",
+  "streak_days": 11,
+  "analysis_updated_at": "2026-07-05T17:53:36+0800",
   "appearances": [
     {
       "date": "2026-06-25",
@@ -117,6 +117,13 @@
       "stars_total": 913,
       "stars_gained": 0,
       "release": "v1.0.3"
+    },
+    {
+      "date": "2026-07-05",
+      "reason": "release_update",
+      "stars_total": 951,
+      "stars_gained": 0,
+      "release": "v1.0.4"
     }
   ]
 }

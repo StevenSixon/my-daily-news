@@ -17,32 +17,26 @@
   ],
   "license": "Apache-2.0",
   "category": "AI 应用",
-  "classify_reason": "浏览器原生的AI代理运行时，可驱动标签页",
-  "one_liner": "在浏览器内运行完整代理循环：驱动标签页、沙盒计算，无后端、本地优先、P2P。",
-  "why_worth_it": "完全本地化、隐私至上AI代理：用浏览器安全模型替代后端，自动驱动标签、沙盒计算。",
+  "classify_reason": "浏览器原生的 AI 代理支架，在浏览器中运行代理循环，是 AI 应用",
+  "one_liner": "在浏览器中运行完整AI代理循环，无需后端、BYOK、支持P2P共享的扩展。",
+  "why_worth_it": "彻底消除后端依赖，利用浏览器沙箱在本地安全运行代理和控制页面，适合追求隐私和极客体验的开发者。",
   "tags": [
-    "Agent框架",
+    "AI Agent",
     "浏览器扩展",
     "本地优先",
-    "隐私保护"
+    "P2P"
   ],
-  "confidence": "medium",
-  "info_gaps": [
-    "未提供性能基准测试或横向对比数据",
-    "未说明内在 WASM Linux VM 的技术细节（如使用的模拟器版本）",
-    "P2P 网络仍为研究级，无生产环境稳定承诺",
-    "Firefox 的完整功能兼容性仍在打磨中",
-    "未提供具体的应用示例或复杂任务的成功率报告"
-  ],
+  "confidence": "high",
+  "info_gaps": [],
   "quality_flags": [],
-  "stars_total": 291,
+  "stars_total": 303,
   "created_at": "2026-06-22",
-  "pushed_at": "2026-07-03",
-  "latest_release": "v0.2.1",
+  "pushed_at": "2026-07-05",
+  "latest_release": "v0.2.2",
   "first_seen": "2026-06-29",
-  "last_seen": "2026-07-04",
-  "streak_days": 6,
-  "analysis_updated_at": "2026-07-01T02:32:40+0800",
+  "last_seen": "2026-07-05",
+  "streak_days": 7,
+  "analysis_updated_at": "2026-07-05T17:54:54+0800",
   "appearances": [
     {
       "date": "2026-06-29",
@@ -85,6 +79,13 @@
       "stars_total": 291,
       "stars_gained": 0,
       "release": "v0.2.1"
+    },
+    {
+      "date": "2026-07-05",
+      "reason": "release_update",
+      "stars_total": 303,
+      "stars_gained": 0,
+      "release": "v0.2.2"
     }
   ]
 }

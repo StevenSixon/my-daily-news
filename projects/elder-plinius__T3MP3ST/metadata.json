@@ -1,0 +1,50 @@
+{
+  "full_name": "elder-plinius/T3MP3ST",
+  "url": "https://github.com/elder-plinius/T3MP3ST",
+  "description": "autonomous red teaming platform; multi-agent offensive-security meta-harness",
+  "language": "TypeScript",
+  "topics": [
+    "agents",
+    "ai",
+    "multi-agent",
+    "offensive-security",
+    "redteam"
+  ],
+  "license": "AGPL-3.0",
+  "category": "AI 应用",
+  "classify_reason": "自主红队平台，多智能体 offensive-security 元支架，是 AI 安全应用",
+  "one_liner": "无密钥的多智能体自主红队框架，把本地AI编程助手变成零日猎手",
+  "why_worth_it": "让非红队人员也能跑攻击链，利用已有的AI代理不花额外API费用；可重现性承诺强制每项声明的数据可重新计算",
+  "tags": [
+    "多智能体",
+    "攻击安全",
+    "自托管",
+    "可重现"
+  ],
+  "confidence": "high",
+  "info_gaps": [
+    "原始挑战执行转录未公开（仅可验证分级结果），无法独立检查推理过程",
+    "CVE-Zero 样本量仅 10，结论方向性但统计意义有限",
+    "8 智能体蜂群的整体利用基准尚未发布，当前单代理成果不代表蜂群性能",
+    "部分领域（如智能合约）还处于复现已知漏洞阶段，未证明发现新漏洞能力",
+    "机器人/OT 的协同披露管道目前仅产草稿，未实际提交"
+  ],
+  "quality_flags": [],
+  "stars_total": 656,
+  "created_at": "2026-07-02",
+  "pushed_at": "2026-07-05",
+  "latest_release": null,
+  "first_seen": "2026-07-05",
+  "last_seen": "2026-07-05",
+  "streak_days": 1,
+  "analysis_updated_at": "2026-07-05T17:49:33+0800",
+  "appearances": [
+    {
+      "date": "2026-07-05",
+      "reason": "new",
+      "stars_total": 656,
+      "stars_gained": 0,
+      "release": null
+    }
+  ]
+}

@@ -1,5 +1,8 @@
 <p align="center">
+  <br>
   <img src="docs/store/assets/peerd-wordmark.svg" alt="peerd" width="240" height="48">
+  <br>
+  <br>
 </p>
 
 [![CI](https://github.com/NotASithLord/peerd/actions/workflows/package-and-release.yml/badge.svg)](https://github.com/NotASithLord/peerd/actions/workflows/package-and-release.yml)
@@ -11,6 +14,8 @@
 [![types: ts-check coverage](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/NotASithLord/peerd/main/badges/tscheck.json)](packaging/check-tscheck.ts) -->
 [![types: 100% ts-check](https://img.shields.io/badge/types-100%25%20%2F%2F%20%40ts--check-brightgreen.svg)](packaging/check-tscheck.ts)
 [![Security policy](https://img.shields.io/badge/security-policy-blue.svg)](SECURITY.md)
+
+<br>
 
 **peerd is the first AI agent harness native to the browser.** It's a
 Chrome/Firefox extension that runs a full agent loop *inside* the
@@ -39,15 +44,22 @@ on decades of hardened browser platform work (V8 isolates for sandboxing,
 WebCrypto for the vault, WebAuthn passkeys to unlock it, opaque-origin
 iframes, Subresource Integrity) and writes none of its own cryptographic
 or process-isolation code. The agent that holds your keys never operates
-an environment itself: each browser tab, VM, notebook, and app is driven
-by its own keyless actor sub-agent that exclusively holds that
-environment's tools. The main agent acts as an orchestrator. It delegates
-a goal to an actor and gets back a summary fenced as untrusted, so raw
-page text and command output never reach the context that holds your
-keys, and a confused or prompt-injected main agent has no tool to touch
-an environment with in the first place. Every action an actor drives is
-verified against the live page before it counts as done. (More at
-[peerd.ai](https://peerd.ai).)
+an environment itself. Each browser tab, VM, notebook, and app is driven
+by its own actor: a separate agent loop that holds no key and holds only
+that one environment's tools. On Chrome, each actor runs in its own
+worker heap, a separate block of memory, so the untrusted content it
+reads (page text, command output, file contents) stays inside that actor.
+The actor reaches the model, the network, or the page only by asking the
+service worker, which holds the key and re-checks and gates every request
+before running it. The main agent acts as an orchestrator. It delegates a
+goal to an actor and gets back a summary fenced as untrusted, so raw page
+text and command output never reach the context that holds your keys, and
+a confused or prompt-injected main agent has no tool to touch an
+environment in the first place. Every page action reports back what it
+actually changed on the live page (a navigation or a mutation summary),
+so success is judged from observed effect, not from the model's
+assumption. This isolation is the core of peerd's security model, not an
+add-on. (More at [peerd.ai](https://peerd.ai).)
 
 **Status: 0.x, experimental beta.** The initial feature buildout is
 complete and integrated, but the surface is still
@@ -221,18 +233,19 @@ one top-level module, each owning its public API through `index.js`:
 
 The brand IS the architecture: cross-module imports go through each
 module's `index.js`, never deep paths; nothing outside
-`peerd-distributed/` imports it at all. Each module's README and its
-`index.js` are the dependency graph.
+`peerd-distributed/` imports it at all. Each module's `index.js` is its
+public API and the dependency graph.
 
 ## Trust boundaries
 
 peerd's safety is *who is allowed to do what*: small boundaries
 enforced by the browser platform, not by peerd's own crypto. Two
 principles run through all of it: **the agent that holds your keys never
-touches a raw page or runs untrusted code** — the environment-operating
-tools are not even attached to it, they belong to per-environment actor
-sub-agents — and **the agent never gets the final word on correctness;
-every action is verified against the live page before it counts as done.**
+touches a raw page or runs untrusted code** (the environment-operating
+tools are not even attached to it; they belong to per-environment actor
+sub-agents), and **the agent never gets the final word on correctness:
+every page action reports what it actually changed on the live page, and
+success is judged from that observed effect.**
 
 The orchestrator delegates; an actor does the work. Each tab, VM,
 notebook, and app is owned by one actor that holds only that
@@ -245,8 +258,8 @@ asked to, because it never held the tool.
 |---|---|---|
 | **The vault** (`peerd-egress/vault`) | your API keys + secrets, decrypted only after Touch ID / passkey / passphrase unlock; idle auto-lock | leaving the device — keys go only to the provider you chose |
 | **The orchestrator** (`peerd-runtime/loop`) | the conversation, planning, delegating a goal to an actor via `message_actor` | holding any environment's tools, reading raw page bytes, or running untrusted code directly |
-| **An actor** (`peerd-runtime/subagent`) | driving ONE tab / VM / notebook / app — it exclusively holds that environment's tools, keyless | touching another environment, holding keys, or returning anything to the orchestrator except a `wrapUntrusted`-fenced summary |
-| **The disposable runner** (`peerd-runtime/runner`) | driving + reading a page keyless via do/get/check — the lineage a web actor and subagents use | holding keys or its own network; its output returns `wrapUntrusted`-fenced |
+| **A bound actor** (`peerd-runtime/subagent`) | driving ONE tab / VM / notebook / app — it exclusively holds that environment's tools, keyless, in its own worker heap (Chrome) | touching another environment, holding keys, or returning anything to the orchestrator except a `wrapUntrusted`-fenced summary |
+| **A subagent** (`peerd-runtime/subagent`) | a disposable ephemeral actor the orchestrator spawns to decompose a task — keyless, in its own worker heap (Chrome), holding only a narrowed subset of the orchestrator's tools | escalating past its grant, holding keys, or reaching another agent's heap; every tool call is re-checked service-worker-side and its result returns fenced |
 | **The egress chokepoint** (`safeFetch` / `webFetch`) | every outbound byte — provider allowlist + denylist + SSRF guard | being bypassed; a bare `fetch` is lint-forbidden |
 | **The sandboxes** (WebVM · Notebook · App) | running code — V8 isolates + opaque-origin iframes | extension access; their HTTP routes back through egress |
 | **Web content** | nothing by default | being trusted — all of it is fenced as untrusted input |
@@ -258,11 +271,10 @@ happens. Full detail in [`SECURITY.md`](SECURITY.md) and the
 
 ## Documentation
 
-The code is the spec. Read `CLAUDE.md` for orientation, the per-module
-READMEs under `extension/peerd-*/` for how each module works and its
-public API, and the code itself for the rest. `SECURITY.md` covers the
-trust boundaries; `docs/store/` holds the store-listing and compliance
-material.
+The code is the spec. Read `CLAUDE.md` for orientation, each module's
+`index.js` for its public API, and the code itself for the rest.
+`SECURITY.md` covers the trust boundaries; `docs/store/` holds the
+store-listing and compliance material.
 
 ## Repo layout
 
@@ -276,10 +288,10 @@ peerd/
 │   ├── peerd-provider/       # p · cyan    — model adapters (Anthropic, OpenRouter, Ollama; OpenAI later)
 │   ├── peerd-egress/         # e · red     — vault, allowlist, denylist, confirm, audit
 │   ├── peerd-engine/         # e · amber   — execution-instance registries (WebVM, Notebook, App). Tab runtimes in <kind>-tab/; the headless js_run worker in offscreen/.
-│   ├── peerd-runtime/        # r · green   — agent loop, tools + do/get/check runner, sessions, permissions, composer, skills, memory, review, goal mode, cost, transfer, subagent, voice, clock, dom, edit
+│   ├── peerd-runtime/        # r · green   — agent loop, tools + message_actor delegation, actors + subagents, sessions, permissions, composer, skills, memory, review, goal mode, cost, transfer, voice, clock, dom, edit
 │   ├── peerd-distributed/   # d · magenta — the dweb layer between peerd instances (ships ONLY in preview packages)
 │   ├── background/           # chassis: service worker + per-kind tab trackers + clients
-│   ├── offscreen/            # chassis: SW keepalive + voice host
+│   ├── offscreen/            # chassis: the actor/subagent worker heaps, headless js_run, voice, SW keepalive
 │   ├── sidepanel/            # chassis: chat UI (Mithril)
 │   ├── vm-tab/               # chassis: WebVM tab page (CheerpX + bash + xterm)
 │   ├── notebook-tab/         # chassis: Notebook tab page (Web Worker + OPFS)
@@ -322,8 +334,8 @@ orchestrator picks the lightest kind that fits the task, bootstraps the
 instance, and then delegates the work to that instance's actor; the
 tool lists below are the surface an actor drives, not the main agent. One
 main-agent tool spans all of them: **`actor_list`** enumerates every
-addressable actor — WebVMs, Notebooks, Apps, open tabs, and API
-integrations — each tagged with its `type` and the handle to pass to
+addressable actor (WebVMs, Notebooks, Apps, open tabs, and API
+integrations), each tagged with its `type` and the handle to pass to
 `message_actor`, so discovery is one call instead of five.
 
 **WebVM**: CheerpX-emulated Debian (sandboxed Linux). Own disk (IDB

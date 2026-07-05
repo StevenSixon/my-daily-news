@@ -1,18 +1,15 @@
-## 安装
+**安装**
+1. 访问 [onOrca.dev/download](https://onorca.dev/download) 下载对应平台（macOS/Windows/Linux）的桌面安装包。
+2. 移动端：iOS 从 App Store 获取（或 TestFlight 预览），Android 从 [GitHub Release](https://github.com/stablyai/orca/releases/download/mobile-android-v0.0.22/app-release.apk) 下载 APK。
 
-- 桌面端：从 [onorca.dev/download](https://onorca.dev/download) 获取 macOS/Windows/Linux 安装包。
-- 移动端：iOS 从 App Store 或 TestFlight 下载；Android 从 [GitHub Releases 下载 APK](https://github.com/stablyai/orca/releases/download/mobile-android-v0.0.21/app-release.apk)。
+**前提依赖**
+- 系统已安装 git，并配置好 SSH 密钥（如需远程 worktree）。
+- 安装至少一个受支持的 CLI Agent（如 `claude`、`codex`）并配置好 API Key/认证。
 
-## 最小可用示例
-
-1. 打开 Orca，登录你的 GitHub 账户（用来创建工作树）。
-2. 在终端中确保已安装某个 AI 编码代理，例如 `npm install -g @anthropic-ai/claude-code`。
-3. 在 Orca 中创建一个新工作树（关联某个仓库），然后在此工作树的面板中打开终端，直接运行 `claude` 或其他代理命令。
-4. 也可通过 `Cmd+J` 快速搜索并打开已有工作树。
-5. 从 GitHub 或 Linear 任务页面点击“打开工作树”，Orca 自动创建隔离分支并分配代理。
-
-## 依赖前提
-
-- 需要本地安装所选 CLI 代理（Claude Code、Codex 等）并配置好 API 密钥。
-- 使用 Git 仓库才能创建独立的工作树。
-- 移动端配合需要桌面端运行中并关联同一账户。
+**最小示例**
+1. 启动 Orca 桌面端，首次运行可能要求登录账户或配置 Agent 路径。
+2. 在左侧导航栏点击 “Worktrees” → “Create New”，选择一个仓库和一个 Agent 模板。
+3. 输入 Prompt：“在 src/utils 下添加一个日志工具模块”，点击启动。
+4. 如需并行，在同一个仓库下创建多个 worktree 并分配不同 Agent，发送相同 Prompt。
+5. Agent 运行期间可在终端面板观察输出，完成后在 diff 视图对比结果，选择保留的分支合并。
+6. 移动端通过扫码或账户同步连接，接收完成通知并查看终端输出。

@@ -1,7 +1,7 @@
 {
   "full_name": "shy3130/tickflow-stock-panel",
   "url": "https://github.com/shy3130/tickflow-stock-panel",
-  "description": "自托管、零运维的 A 股「选股 + 监控 + 回测」量化工作台 | 基于 TickFlow 数据源  | LLM能力驱使策略定制+个股分析+复盘 | 自由接入第三方个性化扩展数据 | 个人开源 ,不属于tickflow官方项目",
+  "description": "自托管、零运维的 A 股「选股 + 监控 + 回测」量化工作台 | 基于 TickFlow 数据源  | LLM能力驱使策略定制+个股分析+复盘 | 自由接入第三方个性化扩展数据 | 个人开源 ,非TickFlow官方项目",
   "language": "TypeScript",
   "topics": [
     "a-stock",
@@ -26,7 +26,7 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "集成LLM的A股量化分析工作台",
+  "classify_reason": "A 股量化工作台，集成 LLM 能力进行策略定制和个股分析，是 AI 金融应用",
   "one_liner": "自托管A股量化工作台：选股+回测+监控+AI分析，零运维一键部署",
   "why_worth_it": "整合选股/回测/监控/复盘全流程，LLM生成策略与个股分析，Docker单容器部署，对散户极友好",
   "tags": [
@@ -44,13 +44,13 @@
     "桌面客户端的跨平台兼容性细节（如Linux arm64、Windows ARM）缺失"
   ],
   "quality_flags": [],
-  "stars_total": 1358,
+  "stars_total": 1446,
   "created_at": "2026-06-18",
-  "pushed_at": "2026-07-03",
+  "pushed_at": "2026-07-04",
   "latest_release": "v0.1.71-diag",
   "first_seen": "2026-06-25",
-  "last_seen": "2026-07-04",
-  "streak_days": 10,
+  "last_seen": "2026-07-05",
+  "streak_days": 11,
   "analysis_updated_at": "2026-07-04T01:13:21+0800",
   "appearances": [
     {
@@ -122,6 +122,13 @@
       "stars_total": 1358,
       "stars_gained": 0,
       "release": "v0.1.71-diag"
+    },
+    {
+      "date": "2026-07-05",
+      "reason": "lightweight",
+      "stars_total": 1446,
+      "stars_gained": 0,
+      "release": null
     }
   ]
 }

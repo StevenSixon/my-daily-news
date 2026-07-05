@@ -1,2 +1,3 @@
 - 2026-07-03 | 🆕新发现 | ⭐45031(+141) | release=chrome-devtools-mcp-v1.4.0
 - 2026-07-04 | release_update | ⭐45418(+404) | release=chrome-devtools-mcp-v1.5.0
+- 2026-07-05 | lightweight | ⭐45895(+304) | release=chrome-devtools-mcp-v1.5.0

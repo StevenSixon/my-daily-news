@@ -1,0 +1,46 @@
+{
+  "full_name": "agentskills/agentskills",
+  "url": "https://github.com/agentskills/agentskills",
+  "description": "Specification and documentation for Agent Skills",
+  "language": "Python",
+  "topics": [
+    "agent-skills"
+  ],
+  "license": "Apache-2.0",
+  "category": "AI 应用",
+  "classify_reason": "Agent Skills 的规范和文档，尽管是规范，但直接服务于 AI 编码代理的技能体系，可视为 AI 应用生态组件",
+  "one_liner": "为 AI Agent 提供可复用技能的开放标准，轻量、渐进加载、跨工具通用",
+  "why_worth_it": "解决 Agent 缺乏领域知识与可重复流程的痛点，通过标准化技能包实现跨客户端复用，渐进加载不浪费上下文，适合需要扩展 Agent 能力的开发者",
+  "tags": [
+    "Agent 技能格式",
+    "开放标准",
+    "渐进式加载",
+    "跨工具复用"
+  ],
+  "confidence": "medium",
+  "info_gaps": [
+    "README 未给出 SKILL.md 的完整 schema（是否必须使用 YAML front matter、可选字段等），具体需查阅规格文档",
+    "未列出具体已适配的客户端产品列表及各自实现差异",
+    "client-implementation 目录的内容和技术细节未在 README 中说明",
+    "未提供技能执行时的性能数据或上下文占用对比",
+    "缺乏与未使用技能时 Agent 表现的量化对比"
+  ],
+  "quality_flags": [],
+  "stars_total": 22432,
+  "created_at": "2025-12-16",
+  "pushed_at": "2026-07-01",
+  "latest_release": null,
+  "first_seen": "2026-07-05",
+  "last_seen": "2026-07-05",
+  "streak_days": 1,
+  "analysis_updated_at": "2026-07-05T17:49:04+0800",
+  "appearances": [
+    {
+      "date": "2026-07-05",
+      "reason": "new",
+      "stars_total": 22432,
+      "stars_gained": 351,
+      "release": null
+    }
+  ]
+}

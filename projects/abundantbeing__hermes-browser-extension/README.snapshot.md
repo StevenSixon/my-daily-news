@@ -33,6 +33,7 @@ This repo is specifically for the **Hermes Browser Extension**: the Chrome/Edge/
 - Connects to a configurable local or remote Hermes API server. Default: `http://127.0.0.1:8642`.
 - Supports dashboard WebSocket mode when you have a signed-in remote Hermes dashboard tab and no API key.
 - Auto-syncs connected Hermes providers/models, profiles, skills, sessions, and capabilities.
+- Keeps runtime plugins available in the same Hermes session. For example, a connected social or messaging plugin can add account, post, and trend context while the extension supplies browser-page context.
 - Shows a Hermes compatibility panel so older gateways degrade into explicit fallback/manual modes instead of broken route errors.
 - Sends active tab/browser context into a persisted Hermes session, or switches to Chat only when you do not want browser context attached.
 - Adds a composer-header context menu for Chat only, following the active tab, pinning a specific tab, and choosing which open tabs appear in the prompt.
@@ -40,6 +41,8 @@ This repo is specifically for the **Hermes Browser Extension**: the Chrome/Edge/
 - Keeps pinned-tab conversations isolated with per-tab local history and Hermes session bindings.
 - Adds quick commands for common browser-context work, including `/summarize`, `/explain`, `/rewrite`, `/tabs`, and `/action-items`.
 - Adds a collapsible “What Hermes saw” receipt after each sent turn for transparent context/debugging.
+- Shows a live Tool Activity Strip while Hermes streams, so tool calls appear as structured runtime activity instead of raw `[tool]` markdown appended into answers.
+- Classifies upstream Hermes runtime/tool exceptions as connected-with-warning diagnostics when the gateway is reachable, including the known Python `NoneType`/`int()` traceback class.
 - Captures active tab title/URL, open tabs, selected text, readable page text, metadata, headings, forms, links, and buttons where available.
 - Supports voice dictation through Hermes audio transcription when available, with Browser speech fallback when the connected runtime does not expose STT.
 - Wraps webpage text as untrusted context before sending it to Hermes.
@@ -205,14 +208,14 @@ Make sure you loaded `dist/`, not the repo root. The selected folder must contai
 
 ### Chrome still shows an older version after updating
 
-The browser is still using an old unpacked folder or an unpacked extension card that was not reloaded. The shipped v0.1.6 source, built `dist/`, and release archive all contain `manifest.json` version `0.1.6`.
+The browser is still using an old unpacked folder or an unpacked extension card that was not reloaded. For v0.1.8, the source manifest, built `dist/` manifest, and release archive should all contain `manifest.json` version `0.1.8`.
 
 Fix:
 
-1. Extract/download the v0.1.6 release or run `npm run build` locally.
+1. Extract/download the v0.1.8 release or run `npm run build` locally.
 2. Open `chrome://extensions` or `edge://extensions`.
 3. On the Hermes Browser Extension card, click **Reload**.
-4. If it still shows an older version, click **Remove**, then **Load unpacked** again and select the fresh v0.1.6 `dist/` folder.
+4. If it still shows an older version, click **Remove**, then **Load unpacked** again and select the fresh v0.1.8 `dist/` folder.
 5. Click **service worker** / **Inspect views** only for debugging; it is not the version source.
 
 ### The side panel says it cannot connect
@@ -226,6 +229,18 @@ curl http://<trusted-remote-host>:8642/health
 ```
 
 If `/v1/models` fails, check `API_SERVER_KEY`, the extension's stored API key/browser token, and `API_SERVER_CORS_ORIGINS`. For remote mode, the browser extension origin (`chrome-extension://<id>`) must be allowlisted on the Hermes machine.
+
+### The side panel shows a runtime warning but still says connected
+
+v0.1.8 separates gateway reachability from upstream Hermes runtime/tool failures. If `/health` works but Hermes raises a runtime traceback, the Browser stays connected and shows the warning instead of turning the whole connection red.
+
+For tracebacks like `int() argument must be a string, a bytes-like object or a real number, not 'NoneType'`, check the Hermes Agent logs on the machine running the gateway. If the traceback mentions `computer_use` or `cua-driver`, run:
+
+```bash
+hermes computer-use doctor
+```
+
+That diagnostic belongs to the Hermes runtime/tool layer, not to Browser extension packaging or Chrome permissions.
 
 ### Native Hermes computer use is not working
 
@@ -371,6 +386,16 @@ Useful links:
 - Hermes API server docs: <https://hermes-agent.nousresearch.com/docs/user-guide/features/api-server>
 - Hermes upstream repo: <https://github.com/NousResearch/hermes-agent>
 
+## Star History
+
+<a href="https://www.star-history.com/?repos=abundantbeing%2Fhermes-browser-extension&type=timeline&legend=bottom-right">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=abundantbeing/hermes-browser-extension&type=timeline&theme=dark&legend=bottom-right" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=abundantbeing/hermes-browser-extension&type=timeline&legend=bottom-right" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=abundantbeing/hermes-browser-extension&type=timeline&legend=bottom-right" />
+ </picture>
+</a>
+
 ## Author
 
 Built by **Jon Komet** (`@abundantbeing`).
@@ -378,13 +403,3 @@ Built by **Jon Komet** (`@abundantbeing`).
 ## License
 
 MIT. See [`LICENSE`](LICENSE).
-
-## Star History
-
-<a href="https://www.star-history.com/?repos=abundantbeing%2Fhermes-browser-extension&type=date&legend=top-left">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=abundantbeing/hermes-browser-extension&type=date&theme=dark&legend=top-left" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=abundantbeing/hermes-browser-extension&type=date&legend=top-left" />
-   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=abundantbeing/hermes-browser-extension&type=date&legend=top-left" />
- </picture>
-</a>
