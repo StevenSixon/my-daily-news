@@ -23,7 +23,7 @@
   ],
   "license": "AGPL-3.0",
   "category": "AI 应用",
-  "classify_reason": "自托管照片视频管理方案，内置 AI 人脸识别、标签等功能，属于 AI 应用",
+  "classify_reason": "Self-hosted photo/video manager with AI features (face recognition etc).",
   "one_liner": "高性能自托管照片视频管理，替代谷歌相册，带AI搜索与人脸识别",
   "why_worth_it": "摆脱云束缚，完全掌控媒体库，体验不输谷歌相册，适合隐私至上的自托管玩家",
   "tags": [
@@ -41,13 +41,13 @@
     "未提及 PostgreSQL 版本要求及其他中间件依赖"
   ],
   "quality_flags": [],
-  "stars_total": 105792,
+  "stars_total": 106422,
   "created_at": "2022-02-03",
-  "pushed_at": "2026-07-05",
+  "pushed_at": "2026-07-06",
   "latest_release": "v3.0.1",
   "first_seen": "2026-07-05",
-  "last_seen": "2026-07-05",
-  "streak_days": 1,
+  "last_seen": "2026-07-06",
+  "streak_days": 2,
   "analysis_updated_at": "2026-07-05T17:50:16+0800",
   "appearances": [
     {
@@ -55,6 +55,13 @@
       "reason": "new",
       "stars_total": 105792,
       "stars_gained": 201,
+      "release": "v3.0.1"
+    },
+    {
+      "date": "2026-07-06",
+      "reason": "lightweight",
+      "stars_total": 106422,
+      "stars_gained": 1416,
       "release": "v3.0.1"
     }
   ]

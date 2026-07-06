@@ -1,21 +1,11 @@
-### 安装
+README 截断未展示完整安装步骤。依据仓库提供的分发方式，建议步骤如下：
 ```bash
-# 使用 npm 全局安装
+# npm 安装
 npm install -g omniroute
 
-# 或直接用 npx 免安装运行
-npx omniroute
-```
-### 启动并获取端点
-```bash
-# 启动网关（默认端口 20128）
-omniroute start
-```
-打开浏览器访问 `http://localhost:20128` 进入仪表盘，无需配置即可使用 90+ 免费提供商。端点地址为 `http://localhost:20128/v1`。
+# 或 Docker 运行
+docker run -p 20128:20128 diegosouzapw/omniroute
 
-### 配置编码工具
-以 Cursor 为例，在设置中将 API Base URL 改为 `http://localhost:20128/v1`，API Key 留空或填任意值，即可开始使用。支持 Claude Code、Cline、Codex、Copilot 等 24+ 工具，具体配置见文档。
-
-### 前提
-- Node.js >= 18
-- （可选）自有 API 密钥可添加到仪表盘以提升可用性，但不是必需。
+# 然后配置你的 IDE/CLI 指向 http://localhost:20128/v1
+```
+具体配置提供商密钥、路由策略等需查阅文档 `docs/getting-started` 或完整 README。

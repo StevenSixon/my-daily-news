@@ -1,7 +1,7 @@
 {
   "full_name": "altic-dev/FluidVoice",
   "url": "https://github.com/altic-dev/FluidVoice",
-  "description": "Fastest and only macOS Dictation app with on-device STT and custom trained AI enhancement model - Local Wispr Flow alternative. One ⭐ takes us a long way :)) Windows, iOS and Linux coming soon.",
+  "description": "Fastest and only macOS Dictation app with on-device STT and custom trained AI enhancement model. A local Wispr Flow alternative. ⭐ helps a ton :) Windows & iOS waitlist open. Linux soon.",
   "language": "Swift",
   "topics": [
     "ai",
@@ -13,30 +13,31 @@
   ],
   "license": "GPL-3.0",
   "category": "AI 应用",
-  "classify_reason": "macOS语音听写应用，内置AI增强模型",
-  "one_liner": "macOS隐私控救星：最快本地听写+多模型+本地AI增强，开源无云",
-  "why_worth_it": "面向macOS隐私极客，提供零延迟多模型本地语音转文字和可选本地AI修正，无数据上传，开源可控。",
+  "classify_reason": "Dictation app with on-device AI enhancement, AI application.",
+  "one_liner": "macOS全本地语音听写+AI增强，速度最快、模型最多、完全开源。",
+  "why_worth_it": "本地运行保障隐私，支持多种端侧STT模型，且提供可选本地AI格式化，比云端方案更安全、响应更快。",
   "tags": [
-    "macOS原生",
-    "语音转文本",
     "本地优先",
-    "AI增强"
+    "语音听写",
+    "macOS",
+    "Swift"
   ],
   "confidence": "high",
   "info_gaps": [
-    "未提供语音转写速度、延迟等 benchmark 数据",
-    "Fluid Intelligence 具体模型架构、算法细节未公开",
-    "Parakeet 自研实现的内部优化方式未说明"
+    "Fluid Intelligence 的本地模型架构、训练数据和具体推理框架未公开",
+    "未提供与其他听写工具（如 Wispr Flow）在准确率、延迟等方面的定量对比",
+    "iOS/Windows/Linux 版本的具体发布时间未明确",
+    "对 Intel Mac 上 Parakeet 等模型的支持情况未详细说明"
   ],
   "quality_flags": [],
-  "stars_total": 5393,
+  "stars_total": 6280,
   "created_at": "2025-09-21",
-  "pushed_at": "2026-07-01",
-  "latest_release": "v1.6.1",
+  "pushed_at": "2026-07-06",
+  "latest_release": "v1.6.2",
   "first_seen": "2026-06-29",
-  "last_seen": "2026-07-02",
-  "streak_days": 4,
-  "analysis_updated_at": "2026-06-29T00:45:05+0800",
+  "last_seen": "2026-07-06",
+  "streak_days": 5,
+  "analysis_updated_at": "2026-07-06T21:13:54+0800",
   "appearances": [
     {
       "date": "2026-06-29",
@@ -65,6 +66,13 @@
       "stars_total": 5393,
       "stars_gained": 568,
       "release": "v1.6.1"
+    },
+    {
+      "date": "2026-07-06",
+      "reason": "release_update",
+      "stars_total": 6280,
+      "stars_gained": 2760,
+      "release": "v1.6.2"
     }
   ]
 }

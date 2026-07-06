@@ -21,7 +21,7 @@
   ],
   "license": "AGPL-3.0",
   "category": "AI 应用",
-  "classify_reason": "多代理驱动的自动化 CVE 发现平台，是 AI 安全应用",
+  "classify_reason": "Agent-driven CVE discovery platform, AI application.",
   "one_liner": "Multi-Agent 驱动全流程自动挖 CVE，审计源码、验证漏洞、出一键报告",
   "why_worth_it": "为安全研究员和开发者提供端到端自动化漏洞挖掘流水线，实际挖出30+CVE，弥补传统SAST缺乏深度验证与报告生成的不足",
   "tags": [
@@ -39,13 +39,13 @@
     "单次审计所需的 Token 消耗量与成本参考未给出"
   ],
   "quality_flags": [],
-  "stars_total": 951,
+  "stars_total": 1031,
   "created_at": "2026-06-15",
   "pushed_at": "2026-07-04",
   "latest_release": "v1.0.4",
   "first_seen": "2026-06-25",
-  "last_seen": "2026-07-05",
-  "streak_days": 11,
+  "last_seen": "2026-07-06",
+  "streak_days": 12,
   "analysis_updated_at": "2026-07-05T17:53:36+0800",
   "appearances": [
     {
@@ -122,6 +122,13 @@
       "date": "2026-07-05",
       "reason": "release_update",
       "stars_total": 951,
+      "stars_gained": 0,
+      "release": "v1.0.4"
+    },
+    {
+      "date": "2026-07-06",
+      "reason": "lightweight",
+      "stars_total": 1031,
       "stars_gained": 0,
       "release": "v1.0.4"
     }

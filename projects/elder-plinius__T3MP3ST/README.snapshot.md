@@ -22,15 +22,19 @@
 
 </div>
 
-Point T3MP3ST at an authorized target and the kill chain is yours — **recon → exploit → report**, from a web War Room or the CLI, driven by the AI coding agent you're already signed into (Claude Code, Codex, Hermes). No new API keys, no cloud, no second bill. Your agent is the brain; T3MP3ST is the war machine you bolt around it. Self-hosted storm, keyless warfare. ⚡
+**Your AI coding agent is already a hacker — T3MP3ST hands it an arsenal.**
 
-The recon engine is live and tool-backed, and the exploit loop is benchmark-proven: **90.1% pass@1 on XBEN** — XBOW's own 104-challenge suite — every solve graded against a committed flag oracle that `verify-claims` recomputes on demand (reproducible below). Then it went hunting COLD on a **held-out set of 10 real CVEs disclosed in 2026, across 7 languages** — post-cutoff bugs the hardened prompts were never tuned on. A single agent **pinned 8/10 to the exact file, line, and CWE** (verified all-exact, stable under re-scoring), and the full pack surfaced all 10 (`verify-claims` recomputes it from the raw findings; small n, reported honestly as directional). Memorization *and* overfitting, both off the table. The full 8-operator swarm is the architecture it grows into; the [status table](#what-ships-today) is exact about what's live, what's scaffolding, and what's still roadmap. Loud about the mission, honest about where the build is.
+Point it at an authorized target and the kill chain runs itself: **recon → exploit → report**, from a browser War Room or the CLI, driven by the agent you're *already* signed into — Claude Code, Codex, Hermes — or a model you run **fully offline** (Ollama, LM Studio, vLLM). No new API keys, no cloud tenant, no second bill. Your agent is the brain; T3MP3ST is the war machine bolted around it. **Self-hosted storm. Keyless warfare.** ⚡
+
+And it won't ask you to take its word for it. On **XBOW's own 104-challenge suite it scores 90.1% pass@1** — above XBOW's self-reported 85% — alongside hint-free CTF solves and a **cold hunt on real, post-cutoff CVEs the model had never seen**. Every number in this README recomputes from committed data with one command (`npm run verify-claims`). Loud about the mission, honest about the build — the [status table](#what-ships-today) says exactly what's live, what's scaffolding, and what's still roadmap; full receipts in [Benchmarks](#benchmarks).
 
 Three things set it apart:
 
 1. **Reproducible.** Every number in this README recomputes from committed data — `npm run verify-claims` re-derives all of them, 24/24 green. A claim that can't be reproduced doesn't ship. No trust-me numbers, ever.
 2. **Keyless.** The AI coding agent already on your machine is the backbone. No API keys, no second bill, no gatekeeper.
 3. **Honest about scope.** The [status table](#what-ships-today) marks exactly what's stable, experimental, or roadmap — because red-teaming shouldn't be a priesthood, and it damn sure shouldn't run on vibes.
+
+**Jump to** → [Quick start](#quick-start) · [What it hunts](#what-it-hunts) · [What ships today](#what-ships-today) · [Benchmarks](#benchmarks) · [Architecture](#architecture) · [Docs](#documentation)
 
 ## ⚠️ Authorized use only
 
@@ -66,8 +70,20 @@ In the War Room, open **Settings** and connect a local agent (Claude Code / Code
 Prefer to bring a key? Set one and skip the connect step:
 
 ```bash
-export OPENROUTER_API_KEY=...     # or VENICE_API_KEY / ANTHROPIC_API_KEY
+export OPENROUTER_API_KEY=...     # or VENICE_API_KEY / ANTHROPIC_API_KEY / OPENAI_API_KEY
+export XAI_API_KEY=...            # Grok Build (grok-build-0.1) — xAI's coding model, native tool-calling
 ```
+
+Or run it **fully offline** on your own model — no key, no cloud. Defaults to Ollama; point it at any OpenAI-compatible server (LM Studio, vLLM, llama.cpp):
+
+```bash
+ollama serve && ollama pull llama3                          # or an OpenAI-compatible server
+export TEMPEST_LOCAL_BASE_URL=http://localhost:11434/api    # LM Studio: http://localhost:1234/v1
+export TEMPEST_LOCAL_MODEL=llama3
+npx tempest config                                          # → "Change default provider" → local
+```
+
+Tool-calling works on any local model (it's driven over text), so the Arsenal runs even on models without native function-calling.
 
 Check the numbers for yourself:
 
@@ -135,7 +151,7 @@ Headline results. Each recomputes from the committed JSON with `npm run verify-c
 - These ran a **single-agent ReAct loop, not the 8-operator swarm.** The swarm is framework architecture; it is not what scored these numbers.
 - Results are system-vs-system: this harness driving a strong current model, not an isolated-harness claim.
 
-XBOW self-reports 85% on its own suite; T3MP3ST scores **90.1%** on that same suite — mean, with a Wilson-95 floor of 86.2%. But the number isn't the flex — the **receipt** is. Every point recomputes from committed artifacts with one command: `npm run verify-claims`, each solve graded against a committed flag oracle (raw transcripts are stripped for operator privacy, so you re-check the verdict, not the tool output). A keyless, open-source harness that hands you the re-run instead of asking you to trust it. Clone it, run `verify-claims`, and re-check every verdict against its committed oracle yourself (verdicts recompute from committed data; raw transcripts are stripped for privacy).
+The number isn't the flex — the **receipt** is. A keyless, open-source harness that hands you the re-run instead of asking you to trust it: clone it, run `npm run verify-claims`, and every verdict above recomputes from its committed oracle in front of you.
 
 Deeper reading: [WALL_FORENSICS](docs/WALL_FORENSICS.md) (per-challenge misses), [CYBENCH](docs/CYBENCH.md), [INTEGRITY_LEDGER](docs/INTEGRITY_LEDGER.md) (contamination audit and every retraction), [OBSIDIVM](docs/OBSIDIVM.md) (our own live web range).
 

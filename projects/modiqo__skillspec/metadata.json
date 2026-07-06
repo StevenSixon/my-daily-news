@@ -11,30 +11,32 @@
   ],
   "license": "Apache-2.0",
   "category": "AI 应用",
-  "classify_reason": "SkillSpec，使 Agent Skills 可遵循、可测试的工具，是 AI 开发工具",
-  "one_liner": "给 AI Agent 技能加契约和风险报告，让“完成”不再是黑盒",
-  "why_worth_it": "解决纯文本 SKILL.md 不可靠的痛点，轻量 CLI 即可获得风险评分、结构化契约与运行审计，构建可信 Agent 的必备工具",
+  "classify_reason": "SkillSpec, tool for making agent skills testable, AI tool.",
+  "one_liner": "用结构化合同和风险报告让 Agent 技能从“写了”变成“确实执行了”",
+  "why_worth_it": "解决技能描述冗长导致模型忽略关键规则的问题，通过风险评分和运行记录让技能更可靠，轻量级且不锁定平台",
   "tags": [
-    "AI Agents",
-    "技能验证",
-    "可靠性评估",
-    "Rust"
+    "Agent 可靠性",
+    "Rust CLI",
+    "技能合同",
+    "可审计"
   ],
-  "confidence": "high",
+  "confidence": "medium",
   "info_gaps": [
-    "未提供与其他技能验证方法的定量对比基准",
-    "未说明大规模技能库（如 100+ 技能）下的路由/诊断性能",
-    "没有提及对非 GitHub 托管私有仓库的本地化 CI 集成细节"
+    "README 未提供与其他技能管理工具的具体对比基准或数据",
+    "Rote 集成的具体工作流程和示例未展开说明",
+    "skill.spec.yml 的完整结构和规则细节未在 README 中展示（提及有 schema 但未给出）",
+    "未提供大规模技能库的性能测试数据",
+    "对私有仓库或本地技能的 Doctor 分析流程缺少自动化示例"
   ],
   "quality_flags": [],
-  "stars_total": 837,
+  "stars_total": 873,
   "created_at": "2026-06-19",
   "pushed_at": "2026-07-05",
-  "latest_release": "v0.1.7",
+  "latest_release": "v0.1.8",
   "first_seen": "2026-07-04",
-  "last_seen": "2026-07-05",
-  "streak_days": 2,
-  "analysis_updated_at": "2026-07-04T01:08:27+0800",
+  "last_seen": "2026-07-06",
+  "streak_days": 3,
+  "analysis_updated_at": "2026-07-06T21:16:57+0800",
   "appearances": [
     {
       "date": "2026-07-04",
@@ -49,6 +51,13 @@
       "stars_total": 837,
       "stars_gained": 0,
       "release": "v0.1.7"
+    },
+    {
+      "date": "2026-07-06",
+      "reason": "release_update",
+      "stars_total": 873,
+      "stars_gained": 0,
+      "release": "v0.1.8"
     }
   ]
 }

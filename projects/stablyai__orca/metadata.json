@@ -25,32 +25,32 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "管理并行代理的 ADE，支持各种编码代理，是 AI 开发环境",
-  "one_liner": "多Agent并行IDE，以独立worktree运行任意CLI编码Agent并对比结果。",
-  "why_worth_it": "解决并行评估多个AI编码Agent结果的难题，适合需要择优合并的极客，比单Agent工具更灵活。",
+  "classify_reason": "Parallel agent management tool, AI application.",
+  "one_liner": "并行运行多个 AI 编程代理，隔离 git worktree 对比结果，手机也能监控。",
+  "why_worth_it": "一个界面同时跑多个 CLI 智能体，选最优输出，移动端实时掌控进度，重度 AI 辅助开发者的高效工具。",
   "tags": [
     "Agent编排",
-    "IDE",
+    "多Agent IDE",
     "TypeScript",
-    "多Agent协作"
+    "YC支持"
   ],
   "confidence": "high",
   "info_gaps": [
-    "未明确桌面端框架（Electron/Tauri），核心技术栈细节缺失",
-    "无性能基准数据（如并行 worktree 资源占用）",
-    "自托管/离线使用程度未说明，可能依赖云端账户或服务",
-    "CLI 工具具体安装方式与命令文档未在 README 展开",
-    "移动端确切技术栈与实现方式未透露"
+    "没有提供性能基准测试数据",
+    "移动端具体技术栈未公开",
+    "未说明如何开发自定义代理插件",
+    "源码构建步骤和依赖版本未在 README 中明确给出",
+    "远程服务器端是否需要特殊代理守护进程未知"
   ],
   "quality_flags": [],
-  "stars_total": 12156,
+  "stars_total": 12675,
   "created_at": "2026-03-17",
-  "pushed_at": "2026-07-05",
-  "latest_release": "v1.4.123",
+  "pushed_at": "2026-07-06",
+  "latest_release": "v1.4.124",
   "first_seen": "2026-06-24",
-  "last_seen": "2026-07-05",
-  "streak_days": 12,
-  "analysis_updated_at": "2026-07-05T17:52:16+0800",
+  "last_seen": "2026-07-06",
+  "streak_days": 13,
+  "analysis_updated_at": "2026-07-06T21:13:15+0800",
   "appearances": [
     {
       "date": "2026-06-24",
@@ -135,6 +135,13 @@
       "stars_total": 12156,
       "stars_gained": 3790,
       "release": "v1.4.123"
+    },
+    {
+      "date": "2026-07-06",
+      "reason": "release_update",
+      "stars_total": 12675,
+      "stars_gained": 3783,
+      "release": "v1.4.124"
     }
   ]
 }

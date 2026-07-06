@@ -1,42 +1,38 @@
-**安装**
+**安装与初始化**
 ```bash
 npx eve@latest init my-agent
+cd my-agent
 ```
-或添加到现有项目：`cd myapp && npx eve@latest init .`
 
-**修改指令**
-编辑 `agent/instructions.md`：
+**最小可用示例**
+1. 编辑 `agent/instructions.md`：
 ```markdown
-You are a helpful assistant.
+你是一个返回模拟天气的助手，告知数据为模拟。
 ```
-
-**添加工具**
-创建 `agent/tools/get_weather.ts`：
+2. 创建 `agent/tools/get_weather.ts`：
 ```ts
 import { defineTool } from "eve/tools";
 import { z } from "zod";
 
 export default defineTool({
-  description: "Return mock weather data.",
-  inputSchema: z.object({ city: z.string() }),
+  description: "返回指定城市的模拟天气",
+  inputSchema: z.object({ city: z.string().min(1) }),
   async execute({ city }) {
-    return { city, condition: "Sunny", temperatureF: 72 };
+    return { city, condition: "晴", temperatureC: 22 };
   },
 });
 ```
-
-**配置模型**
-编辑 `agent/agent.ts`：
+3. 配置模型 `agent/agent.ts`：
 ```ts
 import { defineAgent } from "eve";
-export default defineAgent({ model: "anthropic/claude-sonnet-5" });
-```
 
-**运行**
+export default defineAgent({
+  model: "anthropic/claude-sonnet-5",
+});
+```
+4. 启动：
 ```bash
 npm run dev
 ```
 
-**依赖前提**
-- Node.js (≥18)
-- 对应模型 API 密钥（需在环境变量中配置）
+**依赖前提**：Node.js 环境、npm，连接相应模型服务（如 Anthropic API）的凭证。

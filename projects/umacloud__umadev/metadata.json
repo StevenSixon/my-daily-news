@@ -23,32 +23,30 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "可能像真实开发团队一样命令编码代理的工具壳，是 AI 开发工具",
-  "one_liner": "用真实开发团队流程驱动 Claude Code 等 CLI，本地 RAG + 治理，生成可交付软件",
-  "why_worth_it": "解决 AI 编码无规划、产出一坨的问题，适合有工程纪律的独立开发者或小团队，比裸用 CLI 多一层结构化的团队协作保障",
+  "classify_reason": "Coding agent that coordinates other agents, AI application.",
+  "one_liner": "一个用Rust打造的AI开发团队代理，将现有编码CLI变为全流程治理的交付引擎。",
+  "why_worth_it": "解决AI编码“跳过规划、不匹配、无交付证明”的痛点，适合想将AI编码治理工程化的团队。",
   "tags": [
-    "Agent团队模拟",
-    "本地RAG",
+    "Agent",
     "Rust",
-    "工程治理"
+    "RAG",
+    "本地优先"
   ],
   "confidence": "high",
   "info_gaps": [
-    "未提供与其他代理框架（GPT Pilot、Aider、OpenHands）的定量对比或基准测试",
-    "实际大规模项目（多文件、复杂依赖）上的成功率和人工干预频次未知",
-    "内置知识库的覆盖范围和行业标准来源未详细列举，仅提及数量",
-    "Windows 平台的二进制稳定性和用户体验尚无明确反馈",
-    "是否支持协作审查或多人团队审核流程无明确说明"
+    "未提供性能基准测试数据（如构建速度、RAG 检索延迟的具体数值）",
+    "知识库文件的具体清单及覆盖领域仅在文档中概述，未详细列出",
+    "与第三方 CLI 交互的接口规范未公开详细实现，可能存在兼容性风险"
   ],
   "quality_flags": [],
-  "stars_total": 223,
+  "stars_total": 226,
   "created_at": "2026-06-19",
-  "pushed_at": "2026-07-05",
-  "latest_release": "v1.0.30",
+  "pushed_at": "2026-07-06",
+  "latest_release": "v1.0.33",
   "first_seen": "2026-07-02",
-  "last_seen": "2026-07-05",
-  "streak_days": 4,
-  "analysis_updated_at": "2026-07-05T17:56:25+0800",
+  "last_seen": "2026-07-06",
+  "streak_days": 5,
+  "analysis_updated_at": "2026-07-06T21:17:53+0800",
   "appearances": [
     {
       "date": "2026-07-02",
@@ -77,6 +75,13 @@
       "stars_total": 223,
       "stars_gained": 0,
       "release": "v1.0.30"
+    },
+    {
+      "date": "2026-07-06",
+      "reason": "release_update",
+      "stars_total": 226,
+      "stars_gained": 0,
+      "release": "v1.0.33"
     }
   ]
 }

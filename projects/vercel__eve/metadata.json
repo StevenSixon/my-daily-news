@@ -16,32 +16,32 @@
   ],
   "license": "Apache-2.0",
   "category": "AI 应用",
-  "classify_reason": "Vercel 的代理构建框架，是 AI 开发工具",
-  "one_liner": "文件系统即代理配置：基于目录约定定义AI代理，可观测、可扩展、TypeScript原生。",
-  "why_worth_it": "用文件约定代替代码配置，简化代理创建与维护；Vercel出品，适合全栈TS开发者。",
+  "classify_reason": "Framework for building agents, AI application tool.",
+  "one_liner": "文件系统优先的持久化AI代理框架，约定目录即代理能力",
+  "why_worth_it": "为追求可维护、可靠代理的开发者而生：文件结构即配置，内置沙箱、审批、持久会话，比LangChain等更轻量直观。",
   "tags": [
     "Agent框架",
-    "文件系统驱动",
+    "文件系统优先",
     "TypeScript",
-    "Vercel"
+    "沙箱"
   ],
-  "confidence": "medium",
+  "confidence": "high",
   "info_gaps": [
-    "未说明持久化机制和代理状态管理细节",
-    "未列出支持的模型提供商及其具体配置方式",
-    "未提供性能基准或与同类框架的对比数据",
-    "未明确沙盒执行技术和隔离级别",
-    "未描述生产部署流程（是否需要Vercel账号，自托管选项）"
+    "沙箱引擎的具体环境需求（Docker/微虚拟机的安装和版本）未详细列出",
+    "未提供性能基准测试数据",
+    "多代理协作的调度细节和上限未说明",
+    "持久化状态的存储后端（内存/文件/数据库）未明确",
+    "完整的支持模型列表仅示例未列出"
   ],
   "quality_flags": [],
-  "stars_total": 3200,
+  "stars_total": 3251,
   "created_at": "2026-06-16",
-  "pushed_at": "2026-07-04",
-  "latest_release": "eve@0.19.0",
+  "pushed_at": "2026-07-06",
+  "latest_release": "eve@0.20.0",
   "first_seen": "2026-06-19",
-  "last_seen": "2026-07-05",
-  "streak_days": 14,
-  "analysis_updated_at": "2026-07-04T01:14:21+0800",
+  "last_seen": "2026-07-06",
+  "streak_days": 15,
+  "analysis_updated_at": "2026-07-06T21:15:56+0800",
   "appearances": [
     {
       "date": "2026-06-19",
@@ -140,6 +140,13 @@
       "stars_total": 3200,
       "stars_gained": 0,
       "release": "eve@0.19.0"
+    },
+    {
+      "date": "2026-07-06",
+      "reason": "release_update",
+      "stars_total": 3251,
+      "stars_gained": 0,
+      "release": "eve@0.20.0"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "full_name": "NotASithLord/peerd",
   "url": "https://github.com/NotASithLord/peerd",
-  "description": "The first AI agent harness native to the browser. A Chrome/Firefox extension that runs the agent loop in your browser — drives your tabs, spins up sandboxed compute (JS notebooks, WASM Linux VMs, client-side apps), and shares what it builds peer-to-peer. BYOK · no backend · no telemetry.",
+  "description": "The first AI agent harness native to the browser. A browser extension that runs a full agent loop where you already work: it drives your tabs, spins up sandboxed compute (JS notebooks, WASM Linux VMs, client-side apps), and shares what it builds peer-to-peer. BYOK, no backend, no telemetry.",
   "language": "JavaScript",
   "topics": [
     "agentic",
@@ -17,26 +17,32 @@
   ],
   "license": "Apache-2.0",
   "category": "AI 应用",
-  "classify_reason": "浏览器原生的 AI 代理支架，在浏览器中运行代理循环，是 AI 应用",
-  "one_liner": "在浏览器中运行完整AI代理循环，无需后端、BYOK、支持P2P共享的扩展。",
-  "why_worth_it": "彻底消除后端依赖，利用浏览器沙箱在本地安全运行代理和控制页面，适合追求隐私和极客体验的开发者。",
+  "classify_reason": "Browser-native AI agent harness, AI application.",
+  "one_liner": "首个浏览器原生AI Agent扩展，驱动标签+沙箱计算，P2P共享，BYOK无后端",
+  "why_worth_it": "完全在浏览器内运行，无遥测，沙箱隔离，适合需要本地隐私与控制、不想暴露API密钥给第三方的极客",
   "tags": [
-    "AI Agent",
+    "Agent框架",
     "浏览器扩展",
     "本地优先",
     "P2P"
   ],
   "confidence": "high",
-  "info_gaps": [],
+  "info_gaps": [
+    "未提供基准测试数据（如Agent任务成功率、延迟对比）",
+    "与同类工具（Open Interpreter、AutoGPT等）的直接对比未给出",
+    "dweb预览通道的稳定性和规模限制未量化",
+    "移动端支持状态未说明",
+    "沙箱计算环境的性能上限（如WebVM可分配内存）未明示"
+  ],
   "quality_flags": [],
-  "stars_total": 303,
+  "stars_total": 315,
   "created_at": "2026-06-22",
-  "pushed_at": "2026-07-05",
-  "latest_release": "v0.2.2",
+  "pushed_at": "2026-07-06",
+  "latest_release": "v0.2.5",
   "first_seen": "2026-06-29",
-  "last_seen": "2026-07-05",
-  "streak_days": 7,
-  "analysis_updated_at": "2026-07-05T17:54:54+0800",
+  "last_seen": "2026-07-06",
+  "streak_days": 8,
+  "analysis_updated_at": "2026-07-06T21:17:27+0800",
   "appearances": [
     {
       "date": "2026-06-29",
@@ -86,6 +92,13 @@
       "stars_total": 303,
       "stars_gained": 0,
       "release": "v0.2.2"
+    },
+    {
+      "date": "2026-07-06",
+      "reason": "release_update",
+      "stars_total": 315,
+      "stars_gained": 0,
+      "release": "v0.2.5"
     }
   ]
 }

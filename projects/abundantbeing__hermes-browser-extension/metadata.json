@@ -15,26 +15,32 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "Hermes Agent 的浏览器扩展侧边栏，是 AI 应用",
-  "one_liner": "网页上下文直接注入本地 Hermes Agent 的浏览器侧栏",
-  "why_worth_it": "让 Hermes Agent 用户零复制粘贴获取网页、标签、选区等上下文，本地优先，可自检代码，适合隐私敏感场景",
+  "classify_reason": "Browser extension side panel for Hermes agent, AI app.",
+  "one_liner": "连接网页上下文到本地Hermes Agent的浏览器侧边面板",
+  "why_worth_it": "无需云端，将网页上下文注入本地Hermes Agent，实现隐私友好的智能浏览辅助",
   "tags": [
+    "ai-agent",
     "browser-extension",
     "local-first",
-    "ai-agent",
-    "self-hosted"
+    "hermes-agent"
   ],
   "confidence": "high",
-  "info_gaps": [],
+  "info_gaps": [
+    "未提供性能基准或延迟数据",
+    "未说明对 Firefox / Safari 的完整支持计划",
+    "依赖 Hermes Agent 本身的安装与配置（需另行查阅），扩展仓库未提供这一部分",
+    "未提供与其他浏览器 AI 扩展的量化对比",
+    "无大规模使用案例或用户反馈数据"
+  ],
   "quality_flags": [],
-  "stars_total": 476,
+  "stars_total": 605,
   "created_at": "2026-06-24",
-  "pushed_at": "2026-07-04",
-  "latest_release": "v0.1.8",
+  "pushed_at": "2026-07-06",
+  "latest_release": "v0.1.9",
   "first_seen": "2026-06-28",
-  "last_seen": "2026-07-05",
-  "streak_days": 8,
-  "analysis_updated_at": "2026-07-05T17:54:11+0800",
+  "last_seen": "2026-07-06",
+  "streak_days": 9,
+  "analysis_updated_at": "2026-07-06T21:15:09+0800",
   "appearances": [
     {
       "date": "2026-06-28",
@@ -91,6 +97,13 @@
       "stars_total": 476,
       "stars_gained": 0,
       "release": "v0.1.8"
+    },
+    {
+      "date": "2026-07-06",
+      "reason": "release_update",
+      "stars_total": 605,
+      "stars_gained": 0,
+      "release": "v0.1.9"
     }
   ]
 }
