@@ -25,7 +25,7 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "Parallel agent management tool, AI application.",
+  "classify_reason": "并行代理管理平台，运行编码代理",
   "one_liner": "并行运行多个 AI 编程代理，隔离 git worktree 对比结果，手机也能监控。",
   "why_worth_it": "一个界面同时跑多个 CLI 智能体，选最优输出，移动端实时掌控进度，重度 AI 辅助开发者的高效工具。",
   "tags": [
@@ -43,13 +43,13 @@
     "远程服务器端是否需要特殊代理守护进程未知"
   ],
   "quality_flags": [],
-  "stars_total": 12675,
+  "stars_total": 12765,
   "created_at": "2026-03-17",
   "pushed_at": "2026-07-06",
   "latest_release": "v1.4.124",
   "first_seen": "2026-06-24",
-  "last_seen": "2026-07-06",
-  "streak_days": 13,
+  "last_seen": "2026-07-07",
+  "streak_days": 14,
   "analysis_updated_at": "2026-07-06T21:13:15+0800",
   "appearances": [
     {
@@ -140,6 +140,13 @@
       "date": "2026-07-06",
       "reason": "release_update",
       "stars_total": 12675,
+      "stars_gained": 3783,
+      "release": "v1.4.124"
+    },
+    {
+      "date": "2026-07-07",
+      "reason": "lightweight",
+      "stars_total": 12765,
       "stars_gained": 3783,
       "release": "v1.4.124"
     }

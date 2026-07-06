@@ -16,7 +16,7 @@
   ],
   "license": "Apache-2.0",
   "category": "AI 应用",
-  "classify_reason": "Framework for building agents, AI application tool.",
+  "classify_reason": "构建代理的框架，面向开发者",
   "one_liner": "文件系统优先的持久化AI代理框架，约定目录即代理能力",
   "why_worth_it": "为追求可维护、可靠代理的开发者而生：文件结构即配置，内置沙箱、审批、持久会话，比LangChain等更轻量直观。",
   "tags": [
@@ -34,13 +34,13 @@
     "完整的支持模型列表仅示例未列出"
   ],
   "quality_flags": [],
-  "stars_total": 3251,
+  "stars_total": 3259,
   "created_at": "2026-06-16",
   "pushed_at": "2026-07-06",
   "latest_release": "eve@0.20.0",
   "first_seen": "2026-06-19",
-  "last_seen": "2026-07-06",
-  "streak_days": 15,
+  "last_seen": "2026-07-07",
+  "streak_days": 16,
   "analysis_updated_at": "2026-07-06T21:15:56+0800",
   "appearances": [
     {
@@ -145,6 +145,13 @@
       "date": "2026-07-06",
       "reason": "release_update",
       "stars_total": 3251,
+      "stars_gained": 0,
+      "release": "eve@0.20.0"
+    },
+    {
+      "date": "2026-07-07",
+      "reason": "lightweight",
+      "stars_total": 3259,
       "stars_gained": 0,
       "release": "eve@0.20.0"
     }

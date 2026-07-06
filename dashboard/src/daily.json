@@ -1,6 +1,724 @@
 {
   "editions": [
     {
+      "date": "2026-07-07",
+      "count": 6,
+      "projects": [
+        {
+          "id": "ruvnet__RuView",
+          "fullName": "ruvnet/RuView",
+          "owner": "ruvnet",
+          "name": "RuView",
+          "url": "https://github.com/ruvnet/RuView",
+          "oneLiner": "用普通WiFi信号实现穿墙人体感知、呼吸心跳监测，完全无摄像头",
+          "description": "π RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without a single pixel of video.",
+          "language": "Rust",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 77208,
+          "starsGained": 471,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2025-06-07",
+          "pushedAt": "2026-07-06",
+          "latestRelease": "v0.8.3-esp32",
+          "firstSeen": "2026-07-07",
+          "topics": [
+            "awesome",
+            "claude",
+            "densepose",
+            "esp32",
+            "firmware",
+            "home-assistant",
+            "home-automation",
+            "iot",
+            "monitoring",
+            "networking",
+            "npm",
+            "pose-estimation",
+            "react",
+            "rf",
+            "self-learning",
+            "skills",
+            "spatial-intelligence",
+            "typescript",
+            "wifi",
+            "wifi-security"
+          ],
+          "appearances": [
+            {
+              "date": "2026-07-07",
+              "reason": "new",
+              "starsTotal": 77208,
+              "starsGained": 471,
+              "release": "v0.8.3-esp32"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "π RuView 是一个开源 WiFi 空间智能平台，利用普通 ESP32 节点捕获信道状态信息 (CSI) 的微小扰动，实时还原室内人体存在、活动、呼吸与心率，甚至穿墙感知——全程没有一帧视频。它能把现有路由器变成雷达，用 $9 的 ESP32-S3 采集射频反射，本地运行轻量模型，直接输出语义状态（如睡眠、跌倒、多人计数），并原生接入 Home Assistant、Apple Home、Matter 等智能家居系统。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "极客圈看中三点：① 绝对隐私（无摄像头、无云、无需用户携带设备）；② 硬件成本极低（ESP32 节点不到一杯咖啡钱）；③ 边缘智能与自托管（SNN 本地适应、105 个边缘模块、可选的加密见证链）。Star 数破 7.7 万，说明社区对“用射频理解空间”的需求强烈。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "固件：Rust (ESP-IDF v5.4) 编写，运行在 ESP32-S3/C6 上，支持 HT20/HT40 的 CSI 采集。",
+                "后端：Rust (wifi-densepose-ruvector), Candle 推理引擎，加载 4-bit 量化编码器（8 KB）。",
+                "前端：React + TypeScript 的 3D/Three.js 可视化。",
+                "模型：自监督对比学习，Hugging Face 发布 [ruvnet/wifi-densepose-pretrained](https://huggingface.co/ruvnet/wifi-densepose-pretrained)，支持相机监督微调。",
+                "集成：HA-DISCO MQTT 发布器、HAP-1.1 Bridge、Matter 桥接，一键对接四大智能家居生态。",
+                "可选：Cognitum Seed（$140 BOM）提供持久向量存储、kNN 与 Ed25519 见证链。"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "生命体征：呼吸率 (0.1–0.5 Hz 带通) 和心率 (0.8–2.0 Hz)，非接触实时监测。",
+                "姿态估计：17 关键点 3D 姿态，模型在 MM-Fi 上达到 82.69% torso-PCK@20，超越 MultiFormer。",
+                "多人计数：自适应归一化 + 去重因子，六个专业计数器（区域、电梯、队列等）。",
+                "世界模型：OccWorld TransVQVAE 预测未来 15 帧空间占用，可本地微调。",
+                "边缘模块：105 个预置 Cog，涵盖健康、安防、零售、工业等，开箱即用。",
+                "穿墙感知：基于菲涅尔区与多径建模，有效范围约 5 米。"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "智能家居：有人/无人、睡眠监测、老人跌倒检测，全屋覆盖，无需摄像头。",
+                "健康看护：夜间无扰监测呼吸与心率，筛查睡眠呼吸暂停。",
+                "商业&工业：会议室占用、电梯人数、零售客流分析，边缘处理保护顾客隐私。",
+                "研究：WiFi 信道建模、射频指纹识别、跨模态学习。"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "bullets": [
+                "传统 CW 雷达方案：成本高、分辨率有限；RuView 复用现有 WiFi，覆盖多信道，细节更丰富。",
+                "摄像头方案：侵犯隐私，依赖光照；RuView 无视觉数据，天然合规。",
+                "穿戴式设备：需要用户配合；RuView 完全被動感知。",
+                "其他 WiFi CSI 项目：多数停留在学术原型；RuView 提供端到端的快速部署（Docker + ESP32）、生产级固件和丰富的集成。"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "最近发布 v0.8.3-esp32，修复了多静态融合的维度错误、CSI 帧率暴增 40–840 倍的问题，以及弱链路上控制包饿死等缺陷，并新增固件发布保护脚本，两个硬件变体均通过硬件冒烟测试。活跃维护，测试通过率 100%（501 + 677 项）。 ---"
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：ESP32-S3 具体型号（如 Flash 大小、PSRAM 需求）在 README 截断部分未完全展示，需查阅固件文档。；105 个边缘模块的完整目录与功能描述仅在外部链接 seed.cognitum.one/store 中，文档内仅列出数量。；Cognitum Seed 硬件的详细规格和购买方式未在本文提供。"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "karakeep-app__karakeep",
+          "fullName": "karakeep-app/karakeep",
+          "owner": "karakeep-app",
+          "name": "karakeep",
+          "url": "https://github.com/karakeep-app/karakeep",
+          "oneLiner": "自托管书签+AI标签+全文搜索，Pocket的完美替代品。",
+          "description": "A self-hostable bookmark-everything app (links, notes and images) with AI-based automatic tagging and full text search",
+          "language": "TypeScript",
+          "category": "AI 应用",
+          "license": "AGPL-3.0",
+          "starsTotal": 26765,
+          "starsGained": 178,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2024-02-06",
+          "pushedAt": "2026-07-06",
+          "latestRelease": "v0.32.0",
+          "firstSeen": "2026-07-07",
+          "topics": [
+            "bookmark-manager",
+            "bookmarks",
+            "bookmarks-manager",
+            "nextjs",
+            "react-native",
+            "read-it-later",
+            "self-hosted"
+          ],
+          "appearances": [
+            {
+              "date": "2026-07-07",
+              "reason": "new",
+              "starsTotal": 26765,
+              "starsGained": 178,
+              "release": "v0.32.0"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "Karakeep（原Hoarder）是一个“万物书签”应用，可保存链接、笔记、图片和PDF，内置AI自动标签和全文搜索，专为数据囤积者打造。"
+            },
+            {
+              "heading": "为什么火",
+              "bullets": [
+                "仅一年半获26k+ stars，填补了Pocket关闭后的市场缺口。",
+                "开源自托管，AI标签支持本地模型（ollama），保护隐私又智能。",
+                "拥有Chrome/Firefox/Safari扩展和iOS/Android应用，多端体验统一。",
+                "活跃的社区和商业化云服务，确保长期维护。"
+              ]
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "前端: Next.js (app router)、React Native（移动端）",
+                "后端: tRPC + Next.js API",
+                "ORM: Drizzle（推测底层为PostgreSQL）",
+                "搜索: Meilisearch",
+                "爬虫: Puppeteer + SingleFile",
+                "AI: OpenAI 或通过 Ollama 运行本地模型",
+                "认证: NextAuth（支持SSO）",
+                "其他: REST API、RSS抓取、monolith/web存档"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "自动抓取链接预览、标题和图片。",
+                "AI自动标签和摘要，可结合规则引擎精细管理。",
+                "全文搜索与OCR图片文字提取。",
+                "协作列表，与他人共享书签。",
+                "导入支持Pocket、Linkwarden、Omnivore、Chrome书签等，可同步浏览器书签。",
+                "全页存档防链接失效，视频自动归档（yt-dlp）。",
+                "AI Agent友好的CLI和官方技能，容易集成到自动化工作流。"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "个人知识库：收藏文章、推文、工具链接并智能分类。",
+                "团队共享书签：协作列表搭配标签过滤快速检索。",
+                "自托管爱好者替代Pocket，追求数据主权。",
+                "与LLM工具链（如OpenClaw）结合，作为外部记忆或数据源。"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "bullets": [
+                "Pocket：已死，Karakeep开源且功能持续迭代。",
+                "Linkwarden：专注链接协作，Karakeep多格式支持和AI能力更强。",
+                "Wallabag：PHP成熟项目，但Karakeep技术栈更现代，移动端体验更好。",
+                "memos：轻量笔记，Karakeep是带预览和自动归类的完整书签系统。",
+                "mymind：商业闭源，Karakeep提供完全开源替代。"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "---",
+              "bullets": [
+                "v0.32.0（2026-05-08）核心更新：移动端大改版，Safari扩展正式上线，增强AI Agent集成（CLI、技能）、细粒度API密钥，SingleFile内建提升认证页面抓取，键盘快捷键等。",
+                "路线图包含离线阅读、语义搜索，社区贡献活跃。"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：README 未明确指定数据库类型（推测为 PostgreSQL），也未提供 docker-compose 示例文件；缺少性能基准测试数据（如大规模书签下的搜索响应时间、资源占用）；移动端离线阅读等功能仍为计划中，未给出实现时间表；与 LLM Agent 集成的详细配置教程在 README 中缺失，需查阅文档"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "synthetic-sciences__openscience",
+          "fullName": "synthetic-sciences/openscience",
+          "owner": "synthetic-sciences",
+          "name": "openscience",
+          "url": "https://github.com/synthetic-sciences/openscience",
+          "oneLiner": "给研究目标，自动完成文献、代码、实验、写报告的AI科研工作台。",
+          "description": "The open-source AI workbench for scientific research",
+          "language": "TypeScript",
+          "category": "AI 应用",
+          "license": "Apache-2.0",
+          "starsTotal": 630,
+          "starsGained": 0,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-07-03",
+          "pushedAt": "2026-07-06",
+          "latestRelease": "v1.2.10",
+          "firstSeen": "2026-07-07",
+          "topics": [
+            "agent",
+            "ai",
+            "ai-agent",
+            "bun",
+            "cli",
+            "co-scientist",
+            "llm",
+            "ml",
+            "ml-engineering",
+            "open-source",
+            "research",
+            "research-tools",
+            "science",
+            "scientific-computing",
+            "typescript"
+          ],
+          "appearances": [
+            {
+              "date": "2026-07-07",
+              "reason": "new",
+              "starsTotal": 630,
+              "starsGained": 0,
+              "release": "v1.2.10"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "OpenScience 是一个面向科学研究的开源 AI 工作台。用户只需设定一个研究目标，Agent 就能自主完成整个科研循环：检索并阅读相关论文，提出假说，编写并运行代码，执行实验，分析结果，最后撰写研究报告。它通过浏览器界面提供完整的 IDE 体验，支持文件树、编辑器、终端以及分子/基因组等科学数据的可视化渲染。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "近期 AI for Science 领域爆火，但多数工具仅覆盖科研链条的单一环节（如文献总结或代码补全）。OpenScience 是首个将文献调研、实验计算、论文撰写全流程打通的本地化开源方案，赋予科学家完全的控制权和数据隐私。其模型无关的设计允许接入任何前沿或开源模型，不锁定厂商，契合极客追求开放生态的心态。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "运行时: Bun，包管理采用 npm",
+                "语言: TypeScript 全栈",
+                "架构: 本地服务器 + 浏览器工作区 UI",
+                "前端: 自研工作台界面，集成 LSP、MCP 服务器",
+                "后端 CLI: 提供 CLI、服务器、提供者集成、会话与技能管理",
+                "工具层: 290+ 科研技能，30+ 科学数据库（UniProt, PDB, arXiv 等），支持 MCP 插件扩展",
+                "分发: npm 全局包、平台二进制（GitHub Releases）"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "body": "1. 全循环研究代理：单一会话中完成文献综述、假说、编码、实验、分析、撰写。 2. 多专业代理：内置 research、biology、physics、ml 等专家代理，支持代码审查、文献综述子代理。 3. 海量技能：覆盖 DeepSpeed/PEFT 训练、评估、数据集处理、分子/临床生物学、化学信息学、论文 LaTeX、图形绘制、云算力（Modal、Tinker 等）。 4. 科学数据库互联：直接查询 UniProt、PDB、Ensembl、ChEMBL、PubChem、arXiv、Semantic Scholar 等，代理可直接操作。 5. 可扩展性：支持 LSP 集成、MCP 服务器、插件、自定义代理和命令，并提供 TypeScript SDK。 6. 隐私与自由：API 密钥存储在本地，请求直连提供商，无账号要求，可与 Atlas 托管平台按需结合。"
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "计算科学家（ML/生物/物理/化学）需要快速验证一个想法，从文献调研到初步实验代码一气呵成。",
+                "团队希望有一个自托管的 AI 助手，处理科研项目的日常工作，同时保证数据不上传第三方。",
+                "探索“AI 科学家”概念的研究者，利用其模块化设计自定义代理、添加专业工具。"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "bullets": [
+                "谷歌 AI co-scientist：封闭，需要邀请制，不能本地化部署。OpenScience 开源且可自托管，更灵活。",
+                "Elicit、Consensus：聚焦文献检索和总结，不生成代码、不运行实验。OpenScience 是端到端的解决方案。",
+                "Copilot / Cody：代码补全为主，缺乏实验设计与科学数据库集成。OpenScience 内置科研上下文。"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "---",
+              "bullets": [
+                "最新版本 v1.2.10（2026-07-06），标记为 Initial release 但实际可能已经迭代多次。",
+                "Star 630，社区刚刚起步，保持 Apache 2.0 许可，无商业限制。",
+                "提供 Changelog、Architecture 文档和贡献指南，项目透明度高。"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：Atlas 托管平台的收费细节、免费额度未明确；未提供具体的科研任务 Benchmark 或成功率数据；代理运行时的沙箱安全性未详细说明，README 仅警告非隔离；无实际案例展示或性能指标（如实验运行时间）；技能和数据库工具的具体能力范围未逐一列举"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "jmerelnyc__Talos",
+          "fullName": "jmerelnyc/Talos",
+          "owner": "jmerelnyc",
+          "name": "Talos",
+          "url": "https://github.com/jmerelnyc/Talos",
+          "oneLiner": "让你的空闲 GPU 通过 Ollama 跑推理赚钱",
+          "description": "GPU worker client for the Talos network. Pairs with your Talos account, serves open-model inference jobs over a WebSocket, and reports uptime for payouts.",
+          "language": "Python",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 720,
+          "starsGained": 0,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-07-02",
+          "pushedAt": "2026-07-03",
+          "latestRelease": "",
+          "firstSeen": "2026-07-07",
+          "topics": [
+            "ai",
+            "distributed-computing",
+            "gpu",
+            "llm",
+            "ollama",
+            "python",
+            "websocket",
+            "worker"
+          ],
+          "appearances": [
+            {
+              "date": "2026-07-07",
+              "reason": "new",
+              "starsTotal": 720,
+              "starsGained": 0,
+              "release": ""
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "Talos 是一个去中心化的推理网络，你将自己的 GPU 贡献出来运行开源模型（通过 Ollama），完成网络中分发来的推理任务，并根据贡献量获取收益。这个仓库是 worker 客户端，安装后配对账户即可接入网络。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "项目刚发布即获 720 星，因为抓住了两个需求：有 GPU 但利用率不高的个人/小团队想赚点外快；以及需要灵活、低成本推理服务的开发者。它把“共享闲置算力”的概念从带宽扩展到了 AI 推理，且直接集成 Ollama，模型生态现成可用。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "Python 3.9+ 客户端",
+                "Ollama 作为模型推理后端",
+                "WebSocket 与服务器通信（任务下发、心跳上报）",
+                "本地仪表板（127.0.0.1:8674）用于监控",
+                "账户配对采用设备码机制"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "与 Talos 账户配对，无需暴露敏感信息",
+                "可调节分配比例（--allocation 0.5），控制推理并发/占空比",
+                "本地 Web 仪表板实时显示状态与调整滑块",
+                "支持 NVIDIA GPU 检测，也能回退到 CPU",
+                "底层 WebSocket 长连接，确保低延迟任务接收"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "拥有 NVIDIA GPU 的个人开发者，闲置时投入推理网络赚取收入",
+                "小型渲染/计算农场，将部分算力租借给推理任务",
+                "对 AI 有好奇的极客，验证“共享推理”模式的可行性"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "body": "与 Grass（分享带宽）不同，它分享的是 GPU 算力；与 Salad 等项目相比，它直接使用 Ollama，无需定制容器镜像，模型选择更自由（任何 Ollama 支持的模型）。与 Vast.ai 等算力市场相比，它更偏向被动、零运维的“贡献并赚取”模式。"
+            },
+            {
+              "heading": "版本动态",
+              "body": "仓库创建于 2026-07-02，一天内即更新，处于早期活跃开发阶段。已提供多编辑器集成 SDK 示例（Cursor、VS Code、JetBrains 等），展示团队意图将推理 API 方便地嵌入开发工具。 ---"
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：medium",
+                "信息盲区：收益计算规则（每任务价格、结算周期、支付方式）未在 README 说明；worker 与服务器通信的安全审计细节未公开；支持的模型范围虽基于 Ollama，但可能有限制（例如仅限开源部分），README 未澄清；网络故障或恶意任务对本地 GPU 的防护措施未提及；长期运行稳定性与资源占用无基准数据"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "SuperJJ007__CSSwitch",
+          "fullName": "SuperJJ007/CSSwitch",
+          "owner": "SuperJJ007",
+          "name": "CSSwitch",
+          "url": "https://github.com/SuperJJ007/CSSwitch",
+          "oneLiner": "一键为 Claude Science 接入 DeepSeek/Qwen/Kimi 等第三方 API，本地代理零侵入。",
+          "description": "帮你的 Claude Science 一键接入你自己的 API：DeepSeek / 通义千问 / 智谱 GLM / Kimi / MiniMax / 小米 MiMo / 硅基流动 / OpenRouter / 任意 OpenAI·Anthropic 兼容端点",
+          "language": "Rust",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 283,
+          "starsGained": 0,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-07-02",
+          "pushedAt": "2026-07-06",
+          "latestRelease": "v0.3.6",
+          "firstSeen": "2026-07-07",
+          "topics": [
+            "anthropic",
+            "claude",
+            "claude-science",
+            "dashscope",
+            "deepseek",
+            "llm",
+            "macos",
+            "mcp",
+            "menubar",
+            "openai-compatible",
+            "proxy",
+            "qwen",
+            "tauri"
+          ],
+          "appearances": [
+            {
+              "date": "2026-07-07",
+              "reason": "new",
+              "starsTotal": 283,
+              "starsGained": 0,
+              "release": "v0.3.6"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "CSSwitch 是一个运行在本地的模型切换器与启动器，专门给 Claude Science 使用。它把 Science 的推理请求转发到你自己的第三方 API（DeepSeek、通义千问、Kimi、MiniMax、GLM、OpenRouter 等），并用隔离环境生成临时启动门票，不侵入真实的 Claude 账号。桌面面板由 Tauri 2 构建，在 macOS 菜单栏一键切换模型配置。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "Claude Science 作为 Anthropic 推出的科研 Agent，功能强大但依赖付费订阅。很多研究人员、开发者想用自己已有的 API Key 或更便宜的国产模型，却受限于 Science 封闭的模型路由。CSSwitch 正好解决了这个痛点，并且把复杂的沙箱隔离、协议转换、Key 管理封装成一个简单桌面应用，降低了使用门槛。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "桌面端：Tauri 2（Rust + Web 技术），macOS Apple Silicon 专用",
+                "代理：当前使用 Python3 实现 HTTP 代理，计划迁移至纯 Rust",
+                "协议转换：支持 Anthropic Messages ↔ OpenAI Chat Completions / Responses，流式响应通过非流式请求+本地 SSE 重放实现",
+                "隔离：独立的 HOME、端口、数据目录，使用本地生成的启动门票，不读取真实 ~/.claude-science",
+                "安全：API Key 保存在 ~/.csswitch/config.json（权限 0600），通过环境变量传递，代理仅监听 127.0.0.1 并使用路径 secret 校验"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "面板管理数十套模型配置，一键设为当前并验证 Key",
+                "启动隔离的 Claude Science，模型选择器显示真实模型名",
+                "一键切回“官方 Claude”模式，保留原始订阅体验",
+                "支持 Anthropic 原生端点、OpenAI Chat/Responses 兼容端点、自定义中转站",
+                "自动移除上游请求的认证头，注入用户配置的第三方 Key",
+                "提供流式输出兼容（对 DashScope 等受限 provider 模拟流式）",
+                "所有数据和日志保存在本机，便于自查"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "无 Anthropic 订阅但需要用 Claude Science 做文献分析、代码执行、论文写作的研究员",
+                "内网有私有模型部署，想通过自定义端点接入 Science 的团队",
+                "想对比不同模型在同一科研任务中表现的开发者",
+                "希望隔离账号、避免污染的测试/演示环境"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "bullets": [
+                "CC Switch（为 Claude Code 设计的工具）：面向命令行，CSSwitch 更偏桌面科研场景，多了登录门票和沙箱隔离，且提供图形化配置面板。",
+                "官方 Claude Science：模型锁定为 Claude，无法切换，且需付费订阅。",
+                "LiteLLM 等通用 API 网关：功能更全，但需自行处理 Science 的认证逻辑、门票生成与沙箱隔离，CSSwitch 将这些复杂度封装为开箱即用的桌面应用。"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "最新 v0.3.6（2026-07-06）新增 Custom OpenAI Responses 提供者，并改进了 DashScope 的工具调用兼容性（保守 tool-choice、移除不被接受的工具定义）。流式响应目前通过上游非流式请求+本地模拟 SSE 实现。代理仍依赖 Python3，后续将移入 Rust 单二进制。macOS 包尚未公证，首次启动需手动放行。当前不支持 Anthropic 托管的远程 MCP 服务，官网标注了已知限制。 ---"
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：未提供代理吞吐量、延迟等基准测试数据；Python代理的具体库依赖（如 httpx、fastapi）未在README中说明；应用UI尚未完成多语言，未给出具体计划；未说明与Claude官方订阅同时使用时的详细行为（如配置冲突检测）；未提供非macOS平台（Linux/Windows）的支持时间表"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "umacloud__umadev",
+          "fullName": "umacloud/umadev",
+          "owner": "umacloud",
+          "name": "umadev",
+          "url": "https://github.com/umacloud/umadev",
+          "oneLiner": "Rust编写的AI编码代理，像真实团队一样驱动Claude Code等CLI，内置本地RAG与治理流程。",
+          "description": "UmaDev: A coding agent that works like a real dev team, commanding the Claude Code / Codex / OpenCode you already use.",
+          "language": "Rust",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 226,
+          "starsGained": 0,
+          "streakDays": 6,
+          "isNew": false,
+          "createdAt": "2026-06-19",
+          "pushedAt": "2026-07-06",
+          "latestRelease": "v1.0.34",
+          "firstSeen": "2026-07-02",
+          "topics": [
+            "agents",
+            "ai",
+            "ai-agents",
+            "ai-coding",
+            "claude-code",
+            "codex-cli",
+            "coding",
+            "coding-agent",
+            "coding-agents",
+            "open-code",
+            "rag",
+            "rust",
+            "rust-agent",
+            "rust-lang",
+            "tui",
+            "vibe-coding"
+          ],
+          "appearances": [
+            {
+              "date": "2026-07-02",
+              "reason": "new",
+              "starsTotal": 211,
+              "starsGained": 0,
+              "release": "v1.0.21"
+            },
+            {
+              "date": "2026-07-03",
+              "reason": "release_update",
+              "starsTotal": 216,
+              "starsGained": 0,
+              "release": "v1.0.25"
+            },
+            {
+              "date": "2026-07-04",
+              "reason": "release_update",
+              "starsTotal": 218,
+              "starsGained": 0,
+              "release": "v1.0.29"
+            },
+            {
+              "date": "2026-07-05",
+              "reason": "release_update",
+              "starsTotal": 223,
+              "starsGained": 0,
+              "release": "v1.0.30"
+            },
+            {
+              "date": "2026-07-06",
+              "reason": "release_update",
+              "starsTotal": 226,
+              "starsGained": 0,
+              "release": "v1.0.33"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "release_update",
+              "starsTotal": 226,
+              "starsGained": 0,
+              "release": "v1.0.34"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "Umadev 是一个使用 Rust 编写的编码代理，模拟一个完整的开发团队（产品经理、架构师、UI/UX、前后端工程师、QA、安全、DevOps 及协调者），驱动你已经登录并使用的 AI 编程 CLI（Claude Code、Codex、OpenCode）在一个持续会话中完成从需求到交付的全流程。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "上线不足一个月即获 226 Star，因其独特的定位：将现有的 AI CLI 视为“大脑”和“双手”，自身充当团队级指挥官，提供规划、研究、文档生成、质量门禁和交付证明，并内置离线本地 RAG，解决了直接使用 AI 编码时缺乏结构、前后端脱节、无验收标准等常见痛点。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "核心：Rust（单二进制）",
+                "分发：npm 包装壳，预编译二进制支持 macOS/Linux/Windows",
+                "检索：双通道混合 RAG（纯 Rust BM25 + 本地向量模型 multilingual-e5-small，通过 candle 运行），融合 RRF，支持 HyDE 查询扩展",
+                "交互：TUI",
+                "依赖：外部 AI CLI（Claude Code / Codex / OpenCode）作为基座，不持有自有模型"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "团队模拟：8个专家角色分别负责需求、架构、设计、前后端、测试、安全、部署，由协调者统筹调度",
+                "全流程交付：需求路由 → 澄清 → 研究 → PRD/架构/UI文档 → 执行计划 → 前端 → 预览 → 后端 → 质量门禁 → 交付证明",
+                "本地知识库：459 个精选工程标准文件，支持离线向量检索，无需 API 密钥",
+                "治理与审计：内置 112+ 条治理规则，每次构建生成合规映射和交付证据包",
+                "自演化记忆：从每次运行中学习，改进后续输出（具体机制不详）",
+                "安全隔离：在独立的 umadev/<slug> 分支工作，不污染当前分支"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "希望用一句话从零生成完整、可交付的 Web 应用（含规划文档与质量报告）",
+                "现有团队成员用 AI CLI 编程，但需要引入统一的工程标准、设计约束和上下文持续会话",
+                "对数据隐私敏感、要求完全离线本地检索的企业环境",
+                "需要向客户或领导提供可审计交付物的外包或产品团队"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "body": "README 未提供直接竞品对比。与全能型自主代理（如 Devin）不同，Umadev 不直接生成代码，而是协调第三方 CLI 执行；与终端辅助工具（如 Aider）相比，它强调团队流程和治理，弱化实时结对编程。由于缺乏量化基准，优势多体现在流程设计和离线能力上。"
+            },
+            {
+              "heading": "版本动态",
+              "body": "---",
+              "bullets": [
+                "项目创建于 2026-06-19，最新 v1.0.34 发布于 2026-07-06，更新频繁",
+                "保持小版本滚动，目前处于活跃开发阶段，未标注稳定承诺"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：medium",
+                "信息盲区：未提供与同类工具（如 Devin、Aider）的量化对比或基准数据；自演化记忆的具体实现原理和工作范围未详述；未明确支持的语言/框架范围（示例聚焦 Web，未提及移动或脚本）；无实际运行录屏、截图或用户案例研究；459 个知识文件的内容覆盖领域未详尽列出"
+              ]
+            }
+          ]
+        }
+      ],
+      "news": [
+        {
+          "title": "Anthropic's Method to Losing Goodwill in a Few Easy Steps",
+          "url": "https://raheeljunaid.com/blog/anthropics-method-to-losing-goodwill-in-a-few-easy-steps/",
+          "source": "Hacker News",
+          "sourceType": "community",
+          "published": "2026-07-06",
+          "summary": "文章批评Anthropic一系列行为导致社区好感下降",
+          "category": "观点"
+        },
+        {
+          "title": "PRX Part 4: Our Data Strategy",
+          "url": "https://huggingface.co/blog/Photoroom/prx-part4-data",
+          "source": "HF Blog",
+          "sourceType": "hf",
+          "published": "2026-07-06",
+          "summary": "Hugging Face博客介绍PRX项目的数据策略",
+          "category": "研究"
+        },
+        {
+          "title": "New AI tutor achieves 0.71-1.30 SD effect size in Dartmouth course [pdf]",
+          "url": "https://intextbooks.science.uu.nl/workshop2026/files/itb26_s1s2.pdf",
+          "source": "Hacker News",
+          "sourceType": "community",
+          "published": "2026-07-05",
+          "summary": "新AI导师在达特茅斯课程中实现0.71-1.30标准差效应量",
+          "category": "研究"
+        },
+        {
+          "title": "ggml-cpu: use UE4M3 LUT in ARM NVFP4 dot product by ragz4125 · Pull Request #25331 · ggml-org/llama.cpp",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uoxdp8/ggmlcpu_use_ue4m3_lut_in_arm_nvfp4_dot_product_by/",
+          "source": "r/LocalLLaMA",
+          "sourceType": "community",
+          "published": "2026-07-06",
+          "summary": "llama.cpp为ARM NVFP4点积引入UE4M3查找表优化",
+          "category": "工程"
+        },
+        {
+          "title": "GitHub - kallewoof/tftf: Transforming Transformers -- ultra light-weight pipeline for enormous transformer model manipulation with minimal overhead",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1uow9wf/github_kallewooftftf_transforming_transformers/",
+          "source": "r/LocalLLaMA",
+          "sourceType": "community",
+          "published": "2026-07-06",
+          "summary": "tftf工具提供轻量级transformer模型操作管道",
+          "category": "工程"
+        }
+      ]
+    },
+    {
       "date": "2026-07-06",
       "count": 14,
       "projects": [
@@ -127,6 +845,13 @@
               "starsTotal": 16569,
               "starsGained": 598,
               "release": "v0.40.0"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 16644,
+              "starsGained": 598,
+              "release": "v0.40.0"
             }
           ],
           "analysis": [
@@ -231,6 +956,13 @@
               "starsTotal": 5421,
               "starsGained": 502,
               "release": "v0.2.10"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 5442,
+              "starsGained": 502,
+              "release": "v0.2.10"
             }
           ],
           "analysis": [
@@ -322,6 +1054,13 @@
               "reason": "new",
               "starsTotal": 3820,
               "starsGained": 368,
+              "release": "v0.2.0"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 4005,
+              "starsGained": 539,
               "release": "v0.2.0"
             }
           ],
@@ -419,6 +1158,13 @@
               "date": "2026-07-06",
               "reason": "new",
               "starsTotal": 16546,
+              "starsGained": 293,
+              "release": "v1.2.1"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 16598,
               "starsGained": 293,
               "release": "v1.2.1"
             }
@@ -573,6 +1319,13 @@
               "date": "2026-07-06",
               "reason": "release_update",
               "starsTotal": 12275,
+              "starsGained": 4411,
+              "release": "v3.8.45"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 12401,
               "starsGained": 4411,
               "release": "v3.8.45"
             }
@@ -780,6 +1533,13 @@
               "starsTotal": 12675,
               "starsGained": 3783,
               "release": "v1.4.124"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 12765,
+              "starsGained": 3783,
+              "release": "v1.4.124"
             }
           ],
           "analysis": [
@@ -907,6 +1667,13 @@
               "starsTotal": 6280,
               "starsGained": 2760,
               "release": "v1.6.2"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 6304,
+              "starsGained": 2760,
+              "release": "v1.6.2"
             }
           ],
           "analysis": [
@@ -996,7 +1763,7 @@
           "streakDays": 2,
           "isNew": false,
           "createdAt": "2026-07-02",
-          "pushedAt": "2026-07-05",
+          "pushedAt": "2026-07-06",
           "latestRelease": "",
           "firstSeen": "2026-07-05",
           "topics": [
@@ -1018,6 +1785,13 @@
               "date": "2026-07-06",
               "reason": "star_jump",
               "starsTotal": 2232,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 2393,
               "starsGained": 0,
               "release": ""
             }
@@ -1182,6 +1956,13 @@
               "date": "2026-07-06",
               "reason": "release_update",
               "starsTotal": 605,
+              "starsGained": 0,
+              "release": "v0.1.9"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 631,
               "starsGained": 0,
               "release": "v0.1.9"
             }
@@ -1394,6 +2175,13 @@
               "starsTotal": 3251,
               "starsGained": 0,
               "release": "eve@0.20.0"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 3259,
+              "starsGained": 0,
+              "release": "eve@0.20.0"
             }
           ],
           "analysis": [
@@ -1489,6 +2277,13 @@
               "date": "2026-07-06",
               "reason": "release_update",
               "starsTotal": 873,
+              "starsGained": 0,
+              "release": "v0.1.8"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 879,
               "starsGained": 0,
               "release": "v0.1.8"
             }
@@ -1640,6 +2435,13 @@
               "starsTotal": 315,
               "starsGained": 0,
               "release": "v0.2.5"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 317,
+              "starsGained": 0,
+              "release": "v0.2.5"
             }
           ],
           "analysis": [
@@ -1727,7 +2529,7 @@
           "isNew": false,
           "createdAt": "2026-06-19",
           "pushedAt": "2026-07-06",
-          "latestRelease": "v1.0.33",
+          "latestRelease": "v1.0.34",
           "firstSeen": "2026-07-02",
           "topics": [
             "agents",
@@ -1782,60 +2584,71 @@
               "starsTotal": 226,
               "starsGained": 0,
               "release": "v1.0.33"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "release_update",
+              "starsTotal": 226,
+              "starsGained": 0,
+              "release": "v1.0.34"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "umaDev 是一个 Rust 编写的“编码团队代理”，它本身不拥有模型，而是驱动你已经安装并登录的 AI 编码 CLI（Claude Code、Codex 或 OpenCode）像一个真正的开发团队那样工作。它内置了八个专家角色（产品经理、架构师、UI/UX 设计师、前后端工程师、QA、安全工程师、DevOps），外加一个协调者，共同完成从需求分析到交付证明的全流程。"
+              "body": "Umadev 是一个使用 Rust 编写的编码代理，模拟一个完整的开发团队（产品经理、架构师、UI/UX、前后端工程师、QA、安全、DevOps 及协调者），驱动你已经登录并使用的 AI 编程 CLI（Claude Code、Codex、OpenCode）在一个持续会话中完成从需求到交付的全流程。"
             },
             {
               "heading": "为什么火",
-              "body": "当前 AI 编码工具普遍存在“一上来就写代码、缺乏架构设计、前后端不匹配、生成结果不可审计”等问题。umaDev 通过强流程治理和团队角色分配，将一次性编码转化为可重复、可审计、带交付证明的软件工程过程。它利用了用户已有的 CLI 工具和模型配置，不引入额外 API 依赖，且知识库完全本地化，无需联网，这在注重隐私和治理的工程团队中极具吸引力。"
+              "body": "上线不足一个月即获 226 Star，因其独特的定位：将现有的 AI CLI 视为“大脑”和“双手”，自身充当团队级指挥官，提供规划、研究、文档生成、质量门禁和交付证明，并内置离线本地 RAG，解决了直接使用 AI 编码时缺乏结构、前后端脱节、无验收标准等常见痛点。"
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "语言：Rust（编译为单二进制）",
-                "分发：npm 作为安装壳，预编译二进制支持 macOS (Apple Silicon/Intel)、Linux (x86_64/ARM64)、Windows (x86_64)",
-                "知识检索：纯 Rust BM25 + 本地向量模型（multilingual-e5-small，通过 candle 推理），混合检索，支持 HyDE 查询扩展，完全离线",
-                "嵌入式模型：首次运行时自动下载到 ~/.umadev/embed-model，无网络时回退到 BM25",
-                "工程文档：遵循 UMADEV_HOST_SPEC_V1 规范，含约 459 个知识文件"
+                "核心：Rust（单二进制）",
+                "分发：npm 包装壳，预编译二进制支持 macOS/Linux/Windows",
+                "检索：双通道混合 RAG（纯 Rust BM25 + 本地向量模型 multilingual-e5-small，通过 candle 运行），融合 RRF，支持 HyDE 查询扩展",
+                "交互：TUI",
+                "依赖：外部 AI CLI（Claude Code / Codex / OpenCode）作为基座，不持有自有模型"
               ]
             },
             {
               "heading": "核心能力",
               "bullets": [
-                "团队式工作流：根据任务复杂度自动路由，调度八角色协同，每个角色有出产物和签字机制",
-                "规划与 Checklist：生成依赖计划（plan.json）并可视化为实时清单，可手动操控",
-                "质量门与交付证明：包括构建、测试、lint、契约检查、运行时探测、治理扫描，最终产出评分卡和证明包",
-                "本地优先 RAG：自带工程标准知识库，结合用户代码地图，为每一步提供注入的上下文",
-                "无模型锁定：驱动已有的 CLI，用户可自由选择底层模型和配置",
-                "聊天即构建：在 TUI 中发出的构建请求享受与命令行 umadev run 同等的完整治理过程"
+                "团队模拟：8个专家角色分别负责需求、架构、设计、前后端、测试、安全、部署，由协调者统筹调度",
+                "全流程交付：需求路由 → 澄清 → 研究 → PRD/架构/UI文档 → 执行计划 → 前端 → 预览 → 后端 → 质量门禁 → 交付证明",
+                "本地知识库：459 个精选工程标准文件，支持离线向量检索，无需 API 密钥",
+                "治理与审计：内置 112+ 条治理规则，每次构建生成合规映射和交付证据包",
+                "自演化记忆：从每次运行中学习，改进后续输出（具体机制不详）",
+                "安全隔离：在独立的 umadev/<slug> 分支工作，不污染当前分支"
               ]
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "单人开发者希望用 AI 生成可交付的完整项目，而非零散的代码片段",
-                "团队需要规范化 AI 编码流程，确保产出符合内部工程标准",
-                "对数据隐私敏感的环境，要求所有处理本地完成",
-                "已有 Claude Code / Codex / OpenCode 的使用者，希望升级为“团队级”交付体验"
+                "希望用一句话从零生成完整、可交付的 Web 应用（含规划文档与质量报告）",
+                "现有团队成员用 AI CLI 编程，但需要引入统一的工程标准、设计约束和上下文持续会话",
+                "对数据隐私敏感、要求完全离线本地检索的企业环境",
+                "需要向客户或领导提供可审计交付物的外包或产品团队"
               ]
             },
             {
               "heading": "同类对比",
-              "body": "与直接使用 Claude Code、Codex 等 CLI 相比，umaDev 提供了流程化治理、多角色协作和交付证明。与类似的全自动编程代理（如 GPT-Engineer、MetaGPT）相比，umaDev 不重新实现模型调用，而是利用用户已有的工具和认证，更轻量且易于集成；其本地双通道 RAG 和严格的工程化治理也是差异化亮点。但 umaDev 目前主要依赖用户已有 CLI，灵活性可能受限于这些工具的接口。"
+              "body": "README 未提供直接竞品对比。与全能型自主代理（如 Devin）不同，Umadev 不直接生成代码，而是协调第三方 CLI 执行；与终端辅助工具（如 Aider）相比，它强调团队流程和治理，弱化实时结对编程。由于缺乏量化基准，优势多体现在流程设计和离线能力上。"
             },
             {
               "heading": "版本动态",
-              "body": "最新 Release v1.0.33 (2026-07-06)，仓库活跃度中等（创建于 2026-06-19，近期有推送）。项目源自 shangyankeji/super-dev，经过了 Rust 重写和架构升级。 ---"
+              "body": "---",
+              "bullets": [
+                "项目创建于 2026-06-19，最新 v1.0.34 发布于 2026-07-06，更新频繁",
+                "保持小版本滚动，目前处于活跃开发阶段，未标注稳定承诺"
+              ]
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
-                "置信度：high",
-                "信息盲区：未提供性能基准测试数据（如构建速度、RAG 检索延迟的具体数值）；知识库文件的具体清单及覆盖领域仅在文档中概述，未详细列出；与第三方 CLI 交互的接口规范未公开详细实现，可能存在兼容性风险"
+                "置信度：medium",
+                "信息盲区：未提供与同类工具（如 Devin、Aider）的量化对比或基准数据；自演化记忆的具体实现原理和工作范围未详述；未明确支持的语言/框架范围（示例聚焦 Web，未提及移动或脚本）；无实际运行录屏、截图或用户案例研究；459 个知识文件的内容覆盖领域未详尽列出"
               ]
             }
           ]
@@ -1966,6 +2779,13 @@
               "starsTotal": 18397,
               "starsGained": 2972,
               "release": "v0.4.0"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 18843,
+              "starsGained": 2972,
+              "release": "v0.4.0"
             }
           ],
           "analysis": [
@@ -2061,6 +2881,13 @@
               "date": "2026-07-06",
               "reason": "lightweight",
               "starsTotal": 1856,
+              "starsGained": 532,
+              "release": "0.1.0"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 1870,
               "starsGained": 532,
               "release": "0.1.0"
             }
@@ -2229,7 +3056,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-07-02",
-          "pushedAt": "2026-07-05",
+          "pushedAt": "2026-07-06",
           "latestRelease": "",
           "firstSeen": "2026-07-05",
           "topics": [
@@ -2251,6 +3078,13 @@
               "date": "2026-07-06",
               "reason": "star_jump",
               "starsTotal": 2232,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 2393,
               "starsGained": 0,
               "release": ""
             }
@@ -2529,6 +3363,13 @@
               "date": "2026-07-06",
               "reason": "release_update",
               "starsTotal": 12275,
+              "starsGained": 4411,
+              "release": "v3.8.45"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 12401,
               "starsGained": 4411,
               "release": "v3.8.45"
             }
@@ -2902,6 +3743,13 @@
               "starsTotal": 12675,
               "starsGained": 3783,
               "release": "v1.4.124"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 12765,
+              "starsGained": 3783,
+              "release": "v1.4.124"
             }
           ],
           "analysis": [
@@ -3015,6 +3863,13 @@
               "date": "2026-07-06",
               "reason": "lightweight",
               "starsTotal": 641,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 646,
               "starsGained": 0,
               "release": ""
             }
@@ -3194,6 +4049,13 @@
               "starsTotal": 1031,
               "starsGained": 0,
               "release": "v1.0.4"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 1033,
+              "starsGained": 0,
+              "release": "v1.0.4"
             }
           ],
           "analysis": [
@@ -3341,6 +4203,13 @@
               "date": "2026-07-06",
               "reason": "release_update",
               "starsTotal": 605,
+              "starsGained": 0,
+              "release": "v0.1.9"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 631,
               "starsGained": 0,
               "release": "v0.1.9"
             }
@@ -3503,6 +4372,13 @@
               "date": "2026-07-06",
               "reason": "release_update",
               "starsTotal": 315,
+              "starsGained": 0,
+              "release": "v0.2.5"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 317,
               "starsGained": 0,
               "release": "v0.2.5"
             }
@@ -3746,6 +4622,13 @@
               "starsTotal": 892,
               "starsGained": 0,
               "release": "v2.6.0"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 894,
+              "starsGained": 0,
+              "release": "v2.6.0"
             }
           ],
           "analysis": [
@@ -3833,7 +4716,7 @@
           "isNew": false,
           "createdAt": "2026-06-19",
           "pushedAt": "2026-07-06",
-          "latestRelease": "v1.0.33",
+          "latestRelease": "v1.0.34",
           "firstSeen": "2026-07-02",
           "topics": [
             "agents",
@@ -3888,60 +4771,71 @@
               "starsTotal": 226,
               "starsGained": 0,
               "release": "v1.0.33"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "release_update",
+              "starsTotal": 226,
+              "starsGained": 0,
+              "release": "v1.0.34"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "umaDev 是一个 Rust 编写的“编码团队代理”，它本身不拥有模型，而是驱动你已经安装并登录的 AI 编码 CLI（Claude Code、Codex 或 OpenCode）像一个真正的开发团队那样工作。它内置了八个专家角色（产品经理、架构师、UI/UX 设计师、前后端工程师、QA、安全工程师、DevOps），外加一个协调者，共同完成从需求分析到交付证明的全流程。"
+              "body": "Umadev 是一个使用 Rust 编写的编码代理，模拟一个完整的开发团队（产品经理、架构师、UI/UX、前后端工程师、QA、安全、DevOps 及协调者），驱动你已经登录并使用的 AI 编程 CLI（Claude Code、Codex、OpenCode）在一个持续会话中完成从需求到交付的全流程。"
             },
             {
               "heading": "为什么火",
-              "body": "当前 AI 编码工具普遍存在“一上来就写代码、缺乏架构设计、前后端不匹配、生成结果不可审计”等问题。umaDev 通过强流程治理和团队角色分配，将一次性编码转化为可重复、可审计、带交付证明的软件工程过程。它利用了用户已有的 CLI 工具和模型配置，不引入额外 API 依赖，且知识库完全本地化，无需联网，这在注重隐私和治理的工程团队中极具吸引力。"
+              "body": "上线不足一个月即获 226 Star，因其独特的定位：将现有的 AI CLI 视为“大脑”和“双手”，自身充当团队级指挥官，提供规划、研究、文档生成、质量门禁和交付证明，并内置离线本地 RAG，解决了直接使用 AI 编码时缺乏结构、前后端脱节、无验收标准等常见痛点。"
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "语言：Rust（编译为单二进制）",
-                "分发：npm 作为安装壳，预编译二进制支持 macOS (Apple Silicon/Intel)、Linux (x86_64/ARM64)、Windows (x86_64)",
-                "知识检索：纯 Rust BM25 + 本地向量模型（multilingual-e5-small，通过 candle 推理），混合检索，支持 HyDE 查询扩展，完全离线",
-                "嵌入式模型：首次运行时自动下载到 ~/.umadev/embed-model，无网络时回退到 BM25",
-                "工程文档：遵循 UMADEV_HOST_SPEC_V1 规范，含约 459 个知识文件"
+                "核心：Rust（单二进制）",
+                "分发：npm 包装壳，预编译二进制支持 macOS/Linux/Windows",
+                "检索：双通道混合 RAG（纯 Rust BM25 + 本地向量模型 multilingual-e5-small，通过 candle 运行），融合 RRF，支持 HyDE 查询扩展",
+                "交互：TUI",
+                "依赖：外部 AI CLI（Claude Code / Codex / OpenCode）作为基座，不持有自有模型"
               ]
             },
             {
               "heading": "核心能力",
               "bullets": [
-                "团队式工作流：根据任务复杂度自动路由，调度八角色协同，每个角色有出产物和签字机制",
-                "规划与 Checklist：生成依赖计划（plan.json）并可视化为实时清单，可手动操控",
-                "质量门与交付证明：包括构建、测试、lint、契约检查、运行时探测、治理扫描，最终产出评分卡和证明包",
-                "本地优先 RAG：自带工程标准知识库，结合用户代码地图，为每一步提供注入的上下文",
-                "无模型锁定：驱动已有的 CLI，用户可自由选择底层模型和配置",
-                "聊天即构建：在 TUI 中发出的构建请求享受与命令行 umadev run 同等的完整治理过程"
+                "团队模拟：8个专家角色分别负责需求、架构、设计、前后端、测试、安全、部署，由协调者统筹调度",
+                "全流程交付：需求路由 → 澄清 → 研究 → PRD/架构/UI文档 → 执行计划 → 前端 → 预览 → 后端 → 质量门禁 → 交付证明",
+                "本地知识库：459 个精选工程标准文件，支持离线向量检索，无需 API 密钥",
+                "治理与审计：内置 112+ 条治理规则，每次构建生成合规映射和交付证据包",
+                "自演化记忆：从每次运行中学习，改进后续输出（具体机制不详）",
+                "安全隔离：在独立的 umadev/<slug> 分支工作，不污染当前分支"
               ]
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "单人开发者希望用 AI 生成可交付的完整项目，而非零散的代码片段",
-                "团队需要规范化 AI 编码流程，确保产出符合内部工程标准",
-                "对数据隐私敏感的环境，要求所有处理本地完成",
-                "已有 Claude Code / Codex / OpenCode 的使用者，希望升级为“团队级”交付体验"
+                "希望用一句话从零生成完整、可交付的 Web 应用（含规划文档与质量报告）",
+                "现有团队成员用 AI CLI 编程，但需要引入统一的工程标准、设计约束和上下文持续会话",
+                "对数据隐私敏感、要求完全离线本地检索的企业环境",
+                "需要向客户或领导提供可审计交付物的外包或产品团队"
               ]
             },
             {
               "heading": "同类对比",
-              "body": "与直接使用 Claude Code、Codex 等 CLI 相比，umaDev 提供了流程化治理、多角色协作和交付证明。与类似的全自动编程代理（如 GPT-Engineer、MetaGPT）相比，umaDev 不重新实现模型调用，而是利用用户已有的工具和认证，更轻量且易于集成；其本地双通道 RAG 和严格的工程化治理也是差异化亮点。但 umaDev 目前主要依赖用户已有 CLI，灵活性可能受限于这些工具的接口。"
+              "body": "README 未提供直接竞品对比。与全能型自主代理（如 Devin）不同，Umadev 不直接生成代码，而是协调第三方 CLI 执行；与终端辅助工具（如 Aider）相比，它强调团队流程和治理，弱化实时结对编程。由于缺乏量化基准，优势多体现在流程设计和离线能力上。"
             },
             {
               "heading": "版本动态",
-              "body": "最新 Release v1.0.33 (2026-07-06)，仓库活跃度中等（创建于 2026-06-19，近期有推送）。项目源自 shangyankeji/super-dev，经过了 Rust 重写和架构升级。 ---"
+              "body": "---",
+              "bullets": [
+                "项目创建于 2026-06-19，最新 v1.0.34 发布于 2026-07-06，更新频繁",
+                "保持小版本滚动，目前处于活跃开发阶段，未标注稳定承诺"
+              ]
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
-                "置信度：high",
-                "信息盲区：未提供性能基准测试数据（如构建速度、RAG 检索延迟的具体数值）；知识库文件的具体清单及覆盖领域仅在文档中概述，未详细列出；与第三方 CLI 交互的接口规范未公开详细实现，可能存在兼容性风险"
+                "置信度：medium",
+                "信息盲区：未提供与同类工具（如 Devin、Aider）的量化对比或基准数据；自演化记忆的具体实现原理和工作范围未详述；未明确支持的语言/框架范围（示例聚焦 Web，未提及移动或脚本）；无实际运行录屏、截图或用户案例研究；459 个知识文件的内容覆盖领域未详尽列出"
               ]
             }
           ]
@@ -4242,6 +5136,13 @@
               "starsTotal": 641,
               "starsGained": 0,
               "release": ""
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 646,
+              "starsGained": 0,
+              "release": ""
             }
           ],
           "analysis": [
@@ -4344,6 +5245,13 @@
               "date": "2026-07-06",
               "reason": "release_update",
               "starsTotal": 873,
+              "starsGained": 0,
+              "release": "v0.1.8"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 879,
               "starsGained": 0,
               "release": "v0.1.8"
             }
@@ -4462,6 +5370,13 @@
             },
             {
               "date": "2026-07-06",
+              "reason": "lightweight",
+              "starsTotal": 312,
+              "starsGained": 0,
+              "release": "release"
+            },
+            {
+              "date": "2026-07-07",
               "reason": "lightweight",
               "starsTotal": 312,
               "starsGained": 0,
@@ -4649,6 +5564,13 @@
               "date": "2026-07-06",
               "reason": "release_update",
               "starsTotal": 12675,
+              "starsGained": 3783,
+              "release": "v1.4.124"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 12765,
               "starsGained": 3783,
               "release": "v1.4.124"
             }
@@ -4948,6 +5870,13 @@
               "starsTotal": 24447,
               "starsGained": 3151,
               "release": "v1.11.0"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 24522,
+              "starsGained": 3151,
+              "release": "v1.11.0"
             }
           ],
           "analysis": [
@@ -5207,6 +6136,13 @@
               "starsTotal": 46024,
               "starsGained": 1375,
               "release": "chrome-devtools-mcp-v1.5.0"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 46039,
+              "starsGained": 1375,
+              "release": "chrome-devtools-mcp-v1.5.0"
             }
           ],
           "analysis": [
@@ -5396,6 +6332,13 @@
               "date": "2026-07-06",
               "reason": "lightweight",
               "starsTotal": 1631,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 1676,
               "starsGained": 0,
               "release": ""
             }
@@ -5606,6 +6549,13 @@
               "date": "2026-07-06",
               "reason": "release_update",
               "starsTotal": 3251,
+              "starsGained": 0,
+              "release": "eve@0.20.0"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 3259,
               "starsGained": 0,
               "release": "eve@0.20.0"
             }
@@ -5822,6 +6772,13 @@
               "starsTotal": 6358,
               "starsGained": 0,
               "release": "v0.4.0"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 6382,
+              "starsGained": 0,
+              "release": "v0.4.0"
             }
           ],
           "analysis": [
@@ -6011,7 +6968,7 @@
           "isNew": false,
           "createdAt": "2026-06-19",
           "pushedAt": "2026-07-06",
-          "latestRelease": "v1.0.33",
+          "latestRelease": "v1.0.34",
           "firstSeen": "2026-07-02",
           "topics": [
             "agents",
@@ -6066,60 +7023,71 @@
               "starsTotal": 226,
               "starsGained": 0,
               "release": "v1.0.33"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "release_update",
+              "starsTotal": 226,
+              "starsGained": 0,
+              "release": "v1.0.34"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "umaDev 是一个 Rust 编写的“编码团队代理”，它本身不拥有模型，而是驱动你已经安装并登录的 AI 编码 CLI（Claude Code、Codex 或 OpenCode）像一个真正的开发团队那样工作。它内置了八个专家角色（产品经理、架构师、UI/UX 设计师、前后端工程师、QA、安全工程师、DevOps），外加一个协调者，共同完成从需求分析到交付证明的全流程。"
+              "body": "Umadev 是一个使用 Rust 编写的编码代理，模拟一个完整的开发团队（产品经理、架构师、UI/UX、前后端工程师、QA、安全、DevOps 及协调者），驱动你已经登录并使用的 AI 编程 CLI（Claude Code、Codex、OpenCode）在一个持续会话中完成从需求到交付的全流程。"
             },
             {
               "heading": "为什么火",
-              "body": "当前 AI 编码工具普遍存在“一上来就写代码、缺乏架构设计、前后端不匹配、生成结果不可审计”等问题。umaDev 通过强流程治理和团队角色分配，将一次性编码转化为可重复、可审计、带交付证明的软件工程过程。它利用了用户已有的 CLI 工具和模型配置，不引入额外 API 依赖，且知识库完全本地化，无需联网，这在注重隐私和治理的工程团队中极具吸引力。"
+              "body": "上线不足一个月即获 226 Star，因其独特的定位：将现有的 AI CLI 视为“大脑”和“双手”，自身充当团队级指挥官，提供规划、研究、文档生成、质量门禁和交付证明，并内置离线本地 RAG，解决了直接使用 AI 编码时缺乏结构、前后端脱节、无验收标准等常见痛点。"
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "语言：Rust（编译为单二进制）",
-                "分发：npm 作为安装壳，预编译二进制支持 macOS (Apple Silicon/Intel)、Linux (x86_64/ARM64)、Windows (x86_64)",
-                "知识检索：纯 Rust BM25 + 本地向量模型（multilingual-e5-small，通过 candle 推理），混合检索，支持 HyDE 查询扩展，完全离线",
-                "嵌入式模型：首次运行时自动下载到 ~/.umadev/embed-model，无网络时回退到 BM25",
-                "工程文档：遵循 UMADEV_HOST_SPEC_V1 规范，含约 459 个知识文件"
+                "核心：Rust（单二进制）",
+                "分发：npm 包装壳，预编译二进制支持 macOS/Linux/Windows",
+                "检索：双通道混合 RAG（纯 Rust BM25 + 本地向量模型 multilingual-e5-small，通过 candle 运行），融合 RRF，支持 HyDE 查询扩展",
+                "交互：TUI",
+                "依赖：外部 AI CLI（Claude Code / Codex / OpenCode）作为基座，不持有自有模型"
               ]
             },
             {
               "heading": "核心能力",
               "bullets": [
-                "团队式工作流：根据任务复杂度自动路由，调度八角色协同，每个角色有出产物和签字机制",
-                "规划与 Checklist：生成依赖计划（plan.json）并可视化为实时清单，可手动操控",
-                "质量门与交付证明：包括构建、测试、lint、契约检查、运行时探测、治理扫描，最终产出评分卡和证明包",
-                "本地优先 RAG：自带工程标准知识库，结合用户代码地图，为每一步提供注入的上下文",
-                "无模型锁定：驱动已有的 CLI，用户可自由选择底层模型和配置",
-                "聊天即构建：在 TUI 中发出的构建请求享受与命令行 umadev run 同等的完整治理过程"
+                "团队模拟：8个专家角色分别负责需求、架构、设计、前后端、测试、安全、部署，由协调者统筹调度",
+                "全流程交付：需求路由 → 澄清 → 研究 → PRD/架构/UI文档 → 执行计划 → 前端 → 预览 → 后端 → 质量门禁 → 交付证明",
+                "本地知识库：459 个精选工程标准文件，支持离线向量检索，无需 API 密钥",
+                "治理与审计：内置 112+ 条治理规则，每次构建生成合规映射和交付证据包",
+                "自演化记忆：从每次运行中学习，改进后续输出（具体机制不详）",
+                "安全隔离：在独立的 umadev/<slug> 分支工作，不污染当前分支"
               ]
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "单人开发者希望用 AI 生成可交付的完整项目，而非零散的代码片段",
-                "团队需要规范化 AI 编码流程，确保产出符合内部工程标准",
-                "对数据隐私敏感的环境，要求所有处理本地完成",
-                "已有 Claude Code / Codex / OpenCode 的使用者，希望升级为“团队级”交付体验"
+                "希望用一句话从零生成完整、可交付的 Web 应用（含规划文档与质量报告）",
+                "现有团队成员用 AI CLI 编程，但需要引入统一的工程标准、设计约束和上下文持续会话",
+                "对数据隐私敏感、要求完全离线本地检索的企业环境",
+                "需要向客户或领导提供可审计交付物的外包或产品团队"
               ]
             },
             {
               "heading": "同类对比",
-              "body": "与直接使用 Claude Code、Codex 等 CLI 相比，umaDev 提供了流程化治理、多角色协作和交付证明。与类似的全自动编程代理（如 GPT-Engineer、MetaGPT）相比，umaDev 不重新实现模型调用，而是利用用户已有的工具和认证，更轻量且易于集成；其本地双通道 RAG 和严格的工程化治理也是差异化亮点。但 umaDev 目前主要依赖用户已有 CLI，灵活性可能受限于这些工具的接口。"
+              "body": "README 未提供直接竞品对比。与全能型自主代理（如 Devin）不同，Umadev 不直接生成代码，而是协调第三方 CLI 执行；与终端辅助工具（如 Aider）相比，它强调团队流程和治理，弱化实时结对编程。由于缺乏量化基准，优势多体现在流程设计和离线能力上。"
             },
             {
               "heading": "版本动态",
-              "body": "最新 Release v1.0.33 (2026-07-06)，仓库活跃度中等（创建于 2026-06-19，近期有推送）。项目源自 shangyankeji/super-dev，经过了 Rust 重写和架构升级。 ---"
+              "body": "---",
+              "bullets": [
+                "项目创建于 2026-06-19，最新 v1.0.34 发布于 2026-07-06，更新频繁",
+                "保持小版本滚动，目前处于活跃开发阶段，未标注稳定承诺"
+              ]
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
-                "置信度：high",
-                "信息盲区：未提供性能基准测试数据（如构建速度、RAG 检索延迟的具体数值）；知识库文件的具体清单及覆盖领域仅在文档中概述，未详细列出；与第三方 CLI 交互的接口规范未公开详细实现，可能存在兼容性风险"
+                "置信度：medium",
+                "信息盲区：未提供与同类工具（如 Devin、Aider）的量化对比或基准数据；自演化记忆的具体实现原理和工作范围未详述；未明确支持的语言/框架范围（示例聚焦 Web，未提及移动或脚本）；无实际运行录屏、截图或用户案例研究；459 个知识文件的内容覆盖领域未详尽列出"
               ]
             }
           ]
@@ -6419,6 +7387,13 @@
               "date": "2026-07-06",
               "reason": "lightweight",
               "starsTotal": 26038,
+              "starsGained": 3405,
+              "release": "v1.0.5"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 26146,
               "starsGained": 3405,
               "release": "v1.0.5"
             }
@@ -6746,6 +7721,13 @@
               "starsTotal": 46024,
               "starsGained": 1375,
               "release": "chrome-devtools-mcp-v1.5.0"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 46039,
+              "starsGained": 1375,
+              "release": "chrome-devtools-mcp-v1.5.0"
             }
           ],
           "analysis": [
@@ -6943,6 +7925,13 @@
               "starsTotal": 12675,
               "starsGained": 3783,
               "release": "v1.4.124"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 12765,
+              "starsGained": 3783,
+              "release": "v1.4.124"
             }
           ],
           "analysis": [
@@ -7089,6 +8078,13 @@
               "date": "2026-07-06",
               "reason": "release_update",
               "starsTotal": 12275,
+              "starsGained": 4411,
+              "release": "v3.8.45"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 12401,
               "starsGained": 4411,
               "release": "v3.8.45"
             }
@@ -7493,6 +8489,13 @@
               "starsTotal": 892,
               "starsGained": 0,
               "release": "v2.6.0"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 894,
+              "starsGained": 0,
+              "release": "v2.6.0"
             }
           ],
           "analysis": [
@@ -7580,7 +8583,7 @@
           "isNew": false,
           "createdAt": "2026-06-19",
           "pushedAt": "2026-07-06",
-          "latestRelease": "v1.0.33",
+          "latestRelease": "v1.0.34",
           "firstSeen": "2026-07-02",
           "topics": [
             "agents",
@@ -7635,60 +8638,71 @@
               "starsTotal": 226,
               "starsGained": 0,
               "release": "v1.0.33"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "release_update",
+              "starsTotal": 226,
+              "starsGained": 0,
+              "release": "v1.0.34"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "umaDev 是一个 Rust 编写的“编码团队代理”，它本身不拥有模型，而是驱动你已经安装并登录的 AI 编码 CLI（Claude Code、Codex 或 OpenCode）像一个真正的开发团队那样工作。它内置了八个专家角色（产品经理、架构师、UI/UX 设计师、前后端工程师、QA、安全工程师、DevOps），外加一个协调者，共同完成从需求分析到交付证明的全流程。"
+              "body": "Umadev 是一个使用 Rust 编写的编码代理，模拟一个完整的开发团队（产品经理、架构师、UI/UX、前后端工程师、QA、安全、DevOps 及协调者），驱动你已经登录并使用的 AI 编程 CLI（Claude Code、Codex、OpenCode）在一个持续会话中完成从需求到交付的全流程。"
             },
             {
               "heading": "为什么火",
-              "body": "当前 AI 编码工具普遍存在“一上来就写代码、缺乏架构设计、前后端不匹配、生成结果不可审计”等问题。umaDev 通过强流程治理和团队角色分配，将一次性编码转化为可重复、可审计、带交付证明的软件工程过程。它利用了用户已有的 CLI 工具和模型配置，不引入额外 API 依赖，且知识库完全本地化，无需联网，这在注重隐私和治理的工程团队中极具吸引力。"
+              "body": "上线不足一个月即获 226 Star，因其独特的定位：将现有的 AI CLI 视为“大脑”和“双手”，自身充当团队级指挥官，提供规划、研究、文档生成、质量门禁和交付证明，并内置离线本地 RAG，解决了直接使用 AI 编码时缺乏结构、前后端脱节、无验收标准等常见痛点。"
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "语言：Rust（编译为单二进制）",
-                "分发：npm 作为安装壳，预编译二进制支持 macOS (Apple Silicon/Intel)、Linux (x86_64/ARM64)、Windows (x86_64)",
-                "知识检索：纯 Rust BM25 + 本地向量模型（multilingual-e5-small，通过 candle 推理），混合检索，支持 HyDE 查询扩展，完全离线",
-                "嵌入式模型：首次运行时自动下载到 ~/.umadev/embed-model，无网络时回退到 BM25",
-                "工程文档：遵循 UMADEV_HOST_SPEC_V1 规范，含约 459 个知识文件"
+                "核心：Rust（单二进制）",
+                "分发：npm 包装壳，预编译二进制支持 macOS/Linux/Windows",
+                "检索：双通道混合 RAG（纯 Rust BM25 + 本地向量模型 multilingual-e5-small，通过 candle 运行），融合 RRF，支持 HyDE 查询扩展",
+                "交互：TUI",
+                "依赖：外部 AI CLI（Claude Code / Codex / OpenCode）作为基座，不持有自有模型"
               ]
             },
             {
               "heading": "核心能力",
               "bullets": [
-                "团队式工作流：根据任务复杂度自动路由，调度八角色协同，每个角色有出产物和签字机制",
-                "规划与 Checklist：生成依赖计划（plan.json）并可视化为实时清单，可手动操控",
-                "质量门与交付证明：包括构建、测试、lint、契约检查、运行时探测、治理扫描，最终产出评分卡和证明包",
-                "本地优先 RAG：自带工程标准知识库，结合用户代码地图，为每一步提供注入的上下文",
-                "无模型锁定：驱动已有的 CLI，用户可自由选择底层模型和配置",
-                "聊天即构建：在 TUI 中发出的构建请求享受与命令行 umadev run 同等的完整治理过程"
+                "团队模拟：8个专家角色分别负责需求、架构、设计、前后端、测试、安全、部署，由协调者统筹调度",
+                "全流程交付：需求路由 → 澄清 → 研究 → PRD/架构/UI文档 → 执行计划 → 前端 → 预览 → 后端 → 质量门禁 → 交付证明",
+                "本地知识库：459 个精选工程标准文件，支持离线向量检索，无需 API 密钥",
+                "治理与审计：内置 112+ 条治理规则，每次构建生成合规映射和交付证据包",
+                "自演化记忆：从每次运行中学习，改进后续输出（具体机制不详）",
+                "安全隔离：在独立的 umadev/<slug> 分支工作，不污染当前分支"
               ]
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "单人开发者希望用 AI 生成可交付的完整项目，而非零散的代码片段",
-                "团队需要规范化 AI 编码流程，确保产出符合内部工程标准",
-                "对数据隐私敏感的环境，要求所有处理本地完成",
-                "已有 Claude Code / Codex / OpenCode 的使用者，希望升级为“团队级”交付体验"
+                "希望用一句话从零生成完整、可交付的 Web 应用（含规划文档与质量报告）",
+                "现有团队成员用 AI CLI 编程，但需要引入统一的工程标准、设计约束和上下文持续会话",
+                "对数据隐私敏感、要求完全离线本地检索的企业环境",
+                "需要向客户或领导提供可审计交付物的外包或产品团队"
               ]
             },
             {
               "heading": "同类对比",
-              "body": "与直接使用 Claude Code、Codex 等 CLI 相比，umaDev 提供了流程化治理、多角色协作和交付证明。与类似的全自动编程代理（如 GPT-Engineer、MetaGPT）相比，umaDev 不重新实现模型调用，而是利用用户已有的工具和认证，更轻量且易于集成；其本地双通道 RAG 和严格的工程化治理也是差异化亮点。但 umaDev 目前主要依赖用户已有 CLI，灵活性可能受限于这些工具的接口。"
+              "body": "README 未提供直接竞品对比。与全能型自主代理（如 Devin）不同，Umadev 不直接生成代码，而是协调第三方 CLI 执行；与终端辅助工具（如 Aider）相比，它强调团队流程和治理，弱化实时结对编程。由于缺乏量化基准，优势多体现在流程设计和离线能力上。"
             },
             {
               "heading": "版本动态",
-              "body": "最新 Release v1.0.33 (2026-07-06)，仓库活跃度中等（创建于 2026-06-19，近期有推送）。项目源自 shangyankeji/super-dev，经过了 Rust 重写和架构升级。 ---"
+              "body": "---",
+              "bullets": [
+                "项目创建于 2026-06-19，最新 v1.0.34 发布于 2026-07-06，更新频繁",
+                "保持小版本滚动，目前处于活跃开发阶段，未标注稳定承诺"
+              ]
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
-                "置信度：high",
-                "信息盲区：未提供性能基准测试数据（如构建速度、RAG 检索延迟的具体数值）；知识库文件的具体清单及覆盖领域仅在文档中概述，未详细列出；与第三方 CLI 交互的接口规范未公开详细实现，可能存在兼容性风险"
+                "置信度：medium",
+                "信息盲区：未提供与同类工具（如 Devin、Aider）的量化对比或基准数据；自演化记忆的具体实现原理和工作范围未详述；未明确支持的语言/框架范围（示例聚焦 Web，未提及移动或脚本）；无实际运行录屏、截图或用户案例研究；459 个知识文件的内容覆盖领域未详尽列出"
               ]
             }
           ]
@@ -7849,6 +8863,13 @@
             },
             {
               "date": "2026-07-06",
+              "reason": "lightweight",
+              "starsTotal": 616,
+              "starsGained": 0,
+              "release": "v0.5.5"
+            },
+            {
+              "date": "2026-07-07",
               "reason": "lightweight",
               "starsTotal": 616,
               "starsGained": 0,
@@ -8227,6 +9248,13 @@
               "starsTotal": 399,
               "starsGained": 0,
               "release": ""
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 402,
+              "starsGained": 0,
+              "release": ""
             }
           ],
           "analysis": [
@@ -8432,7 +9460,7 @@
           "isNew": true,
           "createdAt": "2026-06-19",
           "pushedAt": "2026-07-06",
-          "latestRelease": "v1.0.33",
+          "latestRelease": "v1.0.34",
           "firstSeen": "2026-07-02",
           "topics": [
             "agents",
@@ -8487,60 +9515,71 @@
               "starsTotal": 226,
               "starsGained": 0,
               "release": "v1.0.33"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "release_update",
+              "starsTotal": 226,
+              "starsGained": 0,
+              "release": "v1.0.34"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "umaDev 是一个 Rust 编写的“编码团队代理”，它本身不拥有模型，而是驱动你已经安装并登录的 AI 编码 CLI（Claude Code、Codex 或 OpenCode）像一个真正的开发团队那样工作。它内置了八个专家角色（产品经理、架构师、UI/UX 设计师、前后端工程师、QA、安全工程师、DevOps），外加一个协调者，共同完成从需求分析到交付证明的全流程。"
+              "body": "Umadev 是一个使用 Rust 编写的编码代理，模拟一个完整的开发团队（产品经理、架构师、UI/UX、前后端工程师、QA、安全、DevOps 及协调者），驱动你已经登录并使用的 AI 编程 CLI（Claude Code、Codex、OpenCode）在一个持续会话中完成从需求到交付的全流程。"
             },
             {
               "heading": "为什么火",
-              "body": "当前 AI 编码工具普遍存在“一上来就写代码、缺乏架构设计、前后端不匹配、生成结果不可审计”等问题。umaDev 通过强流程治理和团队角色分配，将一次性编码转化为可重复、可审计、带交付证明的软件工程过程。它利用了用户已有的 CLI 工具和模型配置，不引入额外 API 依赖，且知识库完全本地化，无需联网，这在注重隐私和治理的工程团队中极具吸引力。"
+              "body": "上线不足一个月即获 226 Star，因其独特的定位：将现有的 AI CLI 视为“大脑”和“双手”，自身充当团队级指挥官，提供规划、研究、文档生成、质量门禁和交付证明，并内置离线本地 RAG，解决了直接使用 AI 编码时缺乏结构、前后端脱节、无验收标准等常见痛点。"
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "语言：Rust（编译为单二进制）",
-                "分发：npm 作为安装壳，预编译二进制支持 macOS (Apple Silicon/Intel)、Linux (x86_64/ARM64)、Windows (x86_64)",
-                "知识检索：纯 Rust BM25 + 本地向量模型（multilingual-e5-small，通过 candle 推理），混合检索，支持 HyDE 查询扩展，完全离线",
-                "嵌入式模型：首次运行时自动下载到 ~/.umadev/embed-model，无网络时回退到 BM25",
-                "工程文档：遵循 UMADEV_HOST_SPEC_V1 规范，含约 459 个知识文件"
+                "核心：Rust（单二进制）",
+                "分发：npm 包装壳，预编译二进制支持 macOS/Linux/Windows",
+                "检索：双通道混合 RAG（纯 Rust BM25 + 本地向量模型 multilingual-e5-small，通过 candle 运行），融合 RRF，支持 HyDE 查询扩展",
+                "交互：TUI",
+                "依赖：外部 AI CLI（Claude Code / Codex / OpenCode）作为基座，不持有自有模型"
               ]
             },
             {
               "heading": "核心能力",
               "bullets": [
-                "团队式工作流：根据任务复杂度自动路由，调度八角色协同，每个角色有出产物和签字机制",
-                "规划与 Checklist：生成依赖计划（plan.json）并可视化为实时清单，可手动操控",
-                "质量门与交付证明：包括构建、测试、lint、契约检查、运行时探测、治理扫描，最终产出评分卡和证明包",
-                "本地优先 RAG：自带工程标准知识库，结合用户代码地图，为每一步提供注入的上下文",
-                "无模型锁定：驱动已有的 CLI，用户可自由选择底层模型和配置",
-                "聊天即构建：在 TUI 中发出的构建请求享受与命令行 umadev run 同等的完整治理过程"
+                "团队模拟：8个专家角色分别负责需求、架构、设计、前后端、测试、安全、部署，由协调者统筹调度",
+                "全流程交付：需求路由 → 澄清 → 研究 → PRD/架构/UI文档 → 执行计划 → 前端 → 预览 → 后端 → 质量门禁 → 交付证明",
+                "本地知识库：459 个精选工程标准文件，支持离线向量检索，无需 API 密钥",
+                "治理与审计：内置 112+ 条治理规则，每次构建生成合规映射和交付证据包",
+                "自演化记忆：从每次运行中学习，改进后续输出（具体机制不详）",
+                "安全隔离：在独立的 umadev/<slug> 分支工作，不污染当前分支"
               ]
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "单人开发者希望用 AI 生成可交付的完整项目，而非零散的代码片段",
-                "团队需要规范化 AI 编码流程，确保产出符合内部工程标准",
-                "对数据隐私敏感的环境，要求所有处理本地完成",
-                "已有 Claude Code / Codex / OpenCode 的使用者，希望升级为“团队级”交付体验"
+                "希望用一句话从零生成完整、可交付的 Web 应用（含规划文档与质量报告）",
+                "现有团队成员用 AI CLI 编程，但需要引入统一的工程标准、设计约束和上下文持续会话",
+                "对数据隐私敏感、要求完全离线本地检索的企业环境",
+                "需要向客户或领导提供可审计交付物的外包或产品团队"
               ]
             },
             {
               "heading": "同类对比",
-              "body": "与直接使用 Claude Code、Codex 等 CLI 相比，umaDev 提供了流程化治理、多角色协作和交付证明。与类似的全自动编程代理（如 GPT-Engineer、MetaGPT）相比，umaDev 不重新实现模型调用，而是利用用户已有的工具和认证，更轻量且易于集成；其本地双通道 RAG 和严格的工程化治理也是差异化亮点。但 umaDev 目前主要依赖用户已有 CLI，灵活性可能受限于这些工具的接口。"
+              "body": "README 未提供直接竞品对比。与全能型自主代理（如 Devin）不同，Umadev 不直接生成代码，而是协调第三方 CLI 执行；与终端辅助工具（如 Aider）相比，它强调团队流程和治理，弱化实时结对编程。由于缺乏量化基准，优势多体现在流程设计和离线能力上。"
             },
             {
               "heading": "版本动态",
-              "body": "最新 Release v1.0.33 (2026-07-06)，仓库活跃度中等（创建于 2026-06-19，近期有推送）。项目源自 shangyankeji/super-dev，经过了 Rust 重写和架构升级。 ---"
+              "body": "---",
+              "bullets": [
+                "项目创建于 2026-06-19，最新 v1.0.34 发布于 2026-07-06，更新频繁",
+                "保持小版本滚动，目前处于活跃开发阶段，未标注稳定承诺"
+              ]
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
-                "置信度：high",
-                "信息盲区：未提供性能基准测试数据（如构建速度、RAG 检索延迟的具体数值）；知识库文件的具体清单及覆盖领域仅在文档中概述，未详细列出；与第三方 CLI 交互的接口规范未公开详细实现，可能存在兼容性风险"
+                "置信度：medium",
+                "信息盲区：未提供与同类工具（如 Devin、Aider）的量化对比或基准数据；自演化记忆的具体实现原理和工作范围未详述；未明确支持的语言/框架范围（示例聚焦 Web，未提及移动或脚本）；无实际运行录屏、截图或用户案例研究；459 个知识文件的内容覆盖领域未详尽列出"
               ]
             }
           ]
@@ -8803,6 +9842,13 @@
               "date": "2026-07-06",
               "reason": "release_update",
               "starsTotal": 12675,
+              "starsGained": 3783,
+              "release": "v1.4.124"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 12765,
               "starsGained": 3783,
               "release": "v1.4.124"
             }
@@ -9077,6 +10123,13 @@
               "starsTotal": 1608,
               "starsGained": 0,
               "release": "v0.4.0"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 1608,
+              "starsGained": 0,
+              "release": "v0.4.0"
             }
           ],
           "analysis": [
@@ -9258,6 +10311,13 @@
               "date": "2026-07-06",
               "reason": "lightweight",
               "starsTotal": 1031,
+              "starsGained": 0,
+              "release": "v1.0.4"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 1033,
               "starsGained": 0,
               "release": "v1.0.4"
             }
@@ -9764,6 +10824,13 @@
               "starsTotal": 525,
               "starsGained": 0,
               "release": "v0.4.1"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 525,
+              "starsGained": 0,
+              "release": "v0.4.1"
             }
           ],
           "analysis": [
@@ -9904,6 +10971,13 @@
               "date": "2026-07-06",
               "reason": "lightweight",
               "starsTotal": 12543,
+              "starsGained": 3937,
+              "release": "v0.7.1"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 12674,
               "starsGained": 3937,
               "release": "v0.7.1"
             }
@@ -10052,6 +11126,13 @@
               "date": "2026-07-06",
               "reason": "release_update",
               "starsTotal": 12275,
+              "starsGained": 4411,
+              "release": "v3.8.45"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 12401,
               "starsGained": 4411,
               "release": "v3.8.45"
             }
@@ -10458,6 +11539,13 @@
               "starsTotal": 12675,
               "starsGained": 3783,
               "release": "v1.4.124"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 12765,
+              "starsGained": 3783,
+              "release": "v1.4.124"
             }
           ],
           "analysis": [
@@ -10669,7 +11757,7 @@
           "streakDays": 10,
           "isNew": false,
           "createdAt": "2026-06-09",
-          "pushedAt": "2026-07-04",
+          "pushedAt": "2026-07-06",
           "latestRelease": "v1.5.0",
           "firstSeen": "2026-06-21",
           "topics": [
@@ -10787,6 +11875,13 @@
               "date": "2026-07-05",
               "reason": "lightweight",
               "starsTotal": 5737,
+              "starsGained": 0,
+              "release": "v1.5.0"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 6165,
               "starsGained": 0,
               "release": "v1.5.0"
             }
@@ -10960,6 +12055,13 @@
               "date": "2026-07-06",
               "reason": "lightweight",
               "starsTotal": 1031,
+              "starsGained": 0,
+              "release": "v1.0.4"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 1033,
               "starsGained": 0,
               "release": "v1.0.4"
             }
@@ -11152,6 +12254,13 @@
               "date": "2026-07-06",
               "reason": "release_update",
               "starsTotal": 3251,
+              "starsGained": 0,
+              "release": "eve@0.20.0"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 3259,
               "starsGained": 0,
               "release": "eve@0.20.0"
             }
@@ -11448,6 +12557,13 @@
               "starsTotal": 315,
               "starsGained": 0,
               "release": "v0.2.5"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 317,
+              "starsGained": 0,
+              "release": "v0.2.5"
             }
           ],
           "analysis": [
@@ -11608,6 +12724,13 @@
               "date": "2026-07-06",
               "reason": "release_update",
               "starsTotal": 605,
+              "starsGained": 0,
+              "release": "v0.1.9"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 631,
               "starsGained": 0,
               "release": "v0.1.9"
             }
@@ -11841,6 +12964,13 @@
             },
             {
               "date": "2026-07-06",
+              "reason": "lightweight",
+              "starsTotal": 616,
+              "starsGained": 0,
+              "release": "v0.5.5"
+            },
+            {
+              "date": "2026-07-07",
               "reason": "lightweight",
               "starsTotal": 616,
               "starsGained": 0,
@@ -12467,6 +13597,13 @@
               "starsTotal": 280,
               "starsGained": 0,
               "release": "Godcoder"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 280,
+              "starsGained": 0,
+              "release": "Godcoder"
             }
           ],
           "analysis": [
@@ -12989,6 +14126,13 @@
               "starsTotal": 12675,
               "starsGained": 3783,
               "release": "v1.4.124"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 12765,
+              "starsGained": 3783,
+              "release": "v1.4.124"
             }
           ],
           "analysis": [
@@ -13390,6 +14534,13 @@
               "starsTotal": 11511,
               "starsGained": 0,
               "release": "v0.1.4"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 11521,
+              "starsGained": 0,
+              "release": "v0.1.4"
             }
           ],
           "analysis": [
@@ -13560,6 +14711,13 @@
             },
             {
               "date": "2026-07-06",
+              "reason": "lightweight",
+              "starsTotal": 1608,
+              "starsGained": 0,
+              "release": "v0.4.0"
+            },
+            {
+              "date": "2026-07-07",
               "reason": "lightweight",
               "starsTotal": 1608,
               "starsGained": 0,
@@ -13907,6 +15065,13 @@
               "starsTotal": 15293,
               "starsGained": 4288,
               "release": ""
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 15369,
+              "starsGained": 4288,
+              "release": ""
             }
           ],
           "analysis": [
@@ -14026,6 +15191,13 @@
               "date": "2026-07-06",
               "reason": "release_update",
               "starsTotal": 6280,
+              "starsGained": 2760,
+              "release": "v1.6.2"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 6304,
               "starsGained": 2760,
               "release": "v1.6.2"
             }
@@ -14191,6 +15363,13 @@
               "starsTotal": 37721,
               "starsGained": 10338,
               "release": "v1.0.4"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 37831,
+              "starsGained": 10338,
+              "release": "v1.0.4"
             }
           ],
           "analysis": [
@@ -14351,6 +15530,13 @@
               "date": "2026-07-06",
               "reason": "release_update",
               "starsTotal": 315,
+              "starsGained": 0,
+              "release": "v0.2.5"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 317,
               "starsGained": 0,
               "release": "v0.2.5"
             }
@@ -14850,6 +16036,13 @@
               "date": "2026-07-06",
               "reason": "release_update",
               "starsTotal": 605,
+              "starsGained": 0,
+              "release": "v0.1.9"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 631,
               "starsGained": 0,
               "release": "v0.1.9"
             }
@@ -15721,6 +16914,13 @@
               "starsTotal": 605,
               "starsGained": 0,
               "release": "v0.1.9"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 631,
+              "starsGained": 0,
+              "release": "v0.1.9"
             }
           ],
           "analysis": [
@@ -16099,6 +17299,13 @@
               "starsTotal": 12675,
               "starsGained": 3783,
               "release": "v1.4.124"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 12765,
+              "starsGained": 3783,
+              "release": "v1.4.124"
             }
           ],
           "analysis": [
@@ -16310,7 +17517,7 @@
           "streakDays": 7,
           "isNew": false,
           "createdAt": "2026-06-09",
-          "pushedAt": "2026-07-04",
+          "pushedAt": "2026-07-06",
           "latestRelease": "v1.5.0",
           "firstSeen": "2026-06-21",
           "topics": [
@@ -16428,6 +17635,13 @@
               "date": "2026-07-05",
               "reason": "lightweight",
               "starsTotal": 5737,
+              "starsGained": 0,
+              "release": "v1.5.0"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 6165,
               "starsGained": 0,
               "release": "v1.5.0"
             }
@@ -16600,6 +17814,13 @@
               "date": "2026-07-06",
               "reason": "lightweight",
               "starsTotal": 10941,
+              "starsGained": 5038,
+              "release": "v1.0.0"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 11046,
               "starsGained": 5038,
               "release": "v1.0.0"
             }
@@ -16979,6 +18200,13 @@
               "starsTotal": 6358,
               "starsGained": 0,
               "release": "v0.4.0"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 6382,
+              "starsGained": 0,
+              "release": "v0.4.0"
             }
           ],
           "analysis": [
@@ -17177,6 +18405,13 @@
               "starsTotal": 3251,
               "starsGained": 0,
               "release": "eve@0.20.0"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 3259,
+              "starsGained": 0,
+              "release": "eve@0.20.0"
             }
           ],
           "analysis": [
@@ -17322,6 +18557,13 @@
             },
             {
               "date": "2026-07-06",
+              "reason": "lightweight",
+              "starsTotal": 1608,
+              "starsGained": 0,
+              "release": "v0.4.0"
+            },
+            {
+              "date": "2026-07-07",
               "reason": "lightweight",
               "starsTotal": 1608,
               "starsGained": 0,
@@ -17512,6 +18754,13 @@
               "date": "2026-07-06",
               "reason": "lightweight",
               "starsTotal": 1631,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 1676,
               "starsGained": 0,
               "release": ""
             }
@@ -17706,6 +18955,13 @@
               "date": "2026-07-06",
               "reason": "lightweight",
               "starsTotal": 1031,
+              "starsGained": 0,
+              "release": "v1.0.4"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 1033,
               "starsGained": 0,
               "release": "v1.0.4"
             }
@@ -17921,6 +19177,13 @@
             },
             {
               "date": "2026-07-06",
+              "reason": "lightweight",
+              "starsTotal": 616,
+              "starsGained": 0,
+              "release": "v0.5.5"
+            },
+            {
+              "date": "2026-07-07",
               "reason": "lightweight",
               "starsTotal": 616,
               "starsGained": 0,
@@ -18167,6 +19430,13 @@
               "date": "2026-07-06",
               "reason": "lightweight",
               "starsTotal": 892,
+              "starsGained": 0,
+              "release": "v2.6.0"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 894,
               "starsGained": 0,
               "release": "v2.6.0"
             }
@@ -18900,6 +20170,13 @@
               "starsTotal": 1608,
               "starsGained": 0,
               "release": "v0.4.0"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 1608,
+              "starsGained": 0,
+              "release": "v0.4.0"
             }
           ],
           "analysis": [
@@ -19094,6 +20371,13 @@
               "starsTotal": 12675,
               "starsGained": 3783,
               "release": "v1.4.124"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 12765,
+              "starsGained": 3783,
+              "release": "v1.4.124"
             }
           ],
           "analysis": [
@@ -19175,7 +20459,7 @@
           "streakDays": 6,
           "isNew": false,
           "createdAt": "2026-06-09",
-          "pushedAt": "2026-07-04",
+          "pushedAt": "2026-07-06",
           "latestRelease": "v1.5.0",
           "firstSeen": "2026-06-21",
           "topics": [
@@ -19293,6 +20577,13 @@
               "date": "2026-07-05",
               "reason": "lightweight",
               "starsTotal": 5737,
+              "starsGained": 0,
+              "release": "v1.5.0"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 6165,
               "starsGained": 0,
               "release": "v1.5.0"
             }
@@ -19597,6 +20888,13 @@
               "starsTotal": 10941,
               "starsGained": 5038,
               "release": "v1.0.0"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 11046,
+              "starsGained": 5038,
+              "release": "v1.0.0"
             }
           ],
           "analysis": [
@@ -19790,6 +21088,13 @@
               "starsTotal": 3251,
               "starsGained": 0,
               "release": "eve@0.20.0"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 3259,
+              "starsGained": 0,
+              "release": "eve@0.20.0"
             }
           ],
           "analysis": [
@@ -19976,6 +21281,13 @@
               "date": "2026-07-06",
               "reason": "lightweight",
               "starsTotal": 678,
+              "starsGained": 0,
+              "release": "v0.3.6"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 680,
               "starsGained": 0,
               "release": "v0.3.6"
             }
@@ -20212,6 +21524,13 @@
               "date": "2026-07-06",
               "reason": "lightweight",
               "starsTotal": 892,
+              "starsGained": 0,
+              "release": "v2.6.0"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 894,
               "starsGained": 0,
               "release": "v2.6.0"
             }
@@ -20633,6 +21952,13 @@
               "starsTotal": 10941,
               "starsGained": 5038,
               "release": "v1.0.0"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 11046,
+              "starsGained": 5038,
+              "release": "v1.0.0"
             }
           ],
           "analysis": [
@@ -20788,6 +22114,13 @@
               "date": "2026-07-06",
               "reason": "lightweight",
               "starsTotal": 24447,
+              "starsGained": 3151,
+              "release": "v1.11.0"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 24522,
               "starsGained": 3151,
               "release": "v1.11.0"
             }
@@ -21514,6 +22847,13 @@
               "starsTotal": 12675,
               "starsGained": 3783,
               "release": "v1.4.124"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 12765,
+              "starsGained": 3783,
+              "release": "v1.4.124"
             }
           ],
           "analysis": [
@@ -22150,7 +23490,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-06-08",
-          "pushedAt": "2026-07-02",
+          "pushedAt": "2026-07-06",
           "latestRelease": "",
           "firstSeen": "2026-06-25",
           "topics": [
@@ -22247,6 +23587,13 @@
             },
             {
               "date": "2026-07-06",
+              "reason": "lightweight",
+              "starsTotal": 572,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-07-07",
               "reason": "lightweight",
               "starsTotal": 572,
               "starsGained": 0,
@@ -22431,6 +23778,13 @@
               "date": "2026-07-06",
               "reason": "lightweight",
               "starsTotal": 1631,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 1676,
               "starsGained": 0,
               "release": ""
             }
@@ -22625,6 +23979,13 @@
               "date": "2026-07-06",
               "reason": "lightweight",
               "starsTotal": 1031,
+              "starsGained": 0,
+              "release": "v1.0.4"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 1033,
               "starsGained": 0,
               "release": "v1.0.4"
             }
@@ -23005,6 +24366,13 @@
               "starsTotal": 3251,
               "starsGained": 0,
               "release": "eve@0.20.0"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 3259,
+              "starsGained": 0,
+              "release": "eve@0.20.0"
             }
           ],
           "analysis": [
@@ -23234,6 +24602,13 @@
               "date": "2026-07-06",
               "reason": "lightweight",
               "starsTotal": 11511,
+              "starsGained": 0,
+              "release": "v0.1.4"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 11521,
               "starsGained": 0,
               "release": "v0.1.4"
             }
@@ -23556,6 +24931,13 @@
               "date": "2026-07-06",
               "reason": "release_update",
               "starsTotal": 12675,
+              "starsGained": 3783,
+              "release": "v1.4.124"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 12765,
               "starsGained": 3783,
               "release": "v1.4.124"
             }
@@ -24481,6 +25863,13 @@
               "starsTotal": 27128,
               "starsGained": 7945,
               "release": "v0.8.1"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 27228,
+              "starsGained": 7945,
+              "release": "v0.8.1"
             }
           ],
           "analysis": [
@@ -25006,6 +26395,13 @@
               "starsTotal": 3251,
               "starsGained": 0,
               "release": "eve@0.20.0"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 3259,
+              "starsGained": 0,
+              "release": "eve@0.20.0"
             }
           ],
           "analysis": [
@@ -25176,6 +26572,13 @@
               "starsTotal": 1051,
               "starsGained": 0,
               "release": ""
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 1052,
+              "starsGained": 0,
+              "release": ""
             }
           ],
           "analysis": [
@@ -25256,7 +26659,7 @@
           "streakDays": 4,
           "isNew": false,
           "createdAt": "2026-06-09",
-          "pushedAt": "2026-07-04",
+          "pushedAt": "2026-07-06",
           "latestRelease": "v1.5.0",
           "firstSeen": "2026-06-21",
           "topics": [
@@ -25374,6 +26777,13 @@
               "date": "2026-07-05",
               "reason": "lightweight",
               "starsTotal": 5737,
+              "starsGained": 0,
+              "release": "v1.5.0"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 6165,
               "starsGained": 0,
               "release": "v1.5.0"
             }
@@ -25610,6 +27020,13 @@
               "starsTotal": 11511,
               "starsGained": 0,
               "release": "v0.1.4"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 11521,
+              "starsGained": 0,
+              "release": "v0.1.4"
             }
           ],
           "analysis": [
@@ -25821,6 +27238,13 @@
               "date": "2026-07-06",
               "reason": "lightweight",
               "starsTotal": 678,
+              "starsGained": 0,
+              "release": "v0.3.6"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 680,
               "starsGained": 0,
               "release": "v0.3.6"
             }
@@ -26704,6 +28128,13 @@
               "starsTotal": 26075,
               "starsGained": 3246,
               "release": "v0.3.1"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 26142,
+              "starsGained": 3246,
+              "release": "v0.3.1"
             }
           ],
           "analysis": [
@@ -26879,6 +28310,13 @@
               "date": "2026-07-06",
               "reason": "lightweight",
               "starsTotal": 1051,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 1052,
               "starsGained": 0,
               "release": ""
             }
@@ -27080,6 +28518,13 @@
               "date": "2026-07-06",
               "reason": "lightweight",
               "starsTotal": 678,
+              "starsGained": 0,
+              "release": "v0.3.6"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 680,
               "starsGained": 0,
               "release": "v0.3.6"
             }
@@ -28609,6 +30054,13 @@
               "starsTotal": 457,
               "starsGained": 0,
               "release": "v0.1.4"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 457,
+              "starsGained": 0,
+              "release": "v0.1.4"
             }
           ],
           "analysis": [
@@ -29327,6 +30779,13 @@
               "date": "2026-07-06",
               "reason": "release_update",
               "starsTotal": 3251,
+              "starsGained": 0,
+              "release": "eve@0.20.0"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 3259,
               "starsGained": 0,
               "release": "eve@0.20.0"
             }
@@ -30724,6 +32183,13 @@
               "starsTotal": 616,
               "starsGained": 0,
               "release": "v0.5.5"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 616,
+              "starsGained": 0,
+              "release": "v0.5.5"
             }
           ],
           "analysis": [
@@ -32003,6 +33469,13 @@
               "starsTotal": 3251,
               "starsGained": 0,
               "release": "eve@0.20.0"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 3259,
+              "starsGained": 0,
+              "release": "eve@0.20.0"
             }
           ],
           "analysis": [
@@ -32215,6 +33688,13 @@
               "date": "2026-07-06",
               "reason": "lightweight",
               "starsTotal": 6358,
+              "starsGained": 0,
+              "release": "v0.4.0"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 6382,
               "starsGained": 0,
               "release": "v0.4.0"
             }

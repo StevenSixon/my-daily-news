@@ -11,7 +11,7 @@
   ],
   "license": "Apache-2.0",
   "category": "AI 应用",
-  "classify_reason": "SkillSpec, tool for making agent skills testable, AI tool.",
+  "classify_reason": "AI代理技能可测性与对齐工具",
   "one_liner": "用结构化合同和风险报告让 Agent 技能从“写了”变成“确实执行了”",
   "why_worth_it": "解决技能描述冗长导致模型忽略关键规则的问题，通过风险评分和运行记录让技能更可靠，轻量级且不锁定平台",
   "tags": [
@@ -29,13 +29,13 @@
     "对私有仓库或本地技能的 Doctor 分析流程缺少自动化示例"
   ],
   "quality_flags": [],
-  "stars_total": 873,
+  "stars_total": 879,
   "created_at": "2026-06-19",
   "pushed_at": "2026-07-05",
   "latest_release": "v0.1.8",
   "first_seen": "2026-07-04",
-  "last_seen": "2026-07-06",
-  "streak_days": 3,
+  "last_seen": "2026-07-07",
+  "streak_days": 4,
   "analysis_updated_at": "2026-07-06T21:16:57+0800",
   "appearances": [
     {
@@ -56,6 +56,13 @@
       "date": "2026-07-06",
       "reason": "release_update",
       "stars_total": 873,
+      "stars_gained": 0,
+      "release": "v0.1.8"
+    },
+    {
+      "date": "2026-07-07",
+      "reason": "lightweight",
+      "stars_total": 879,
       "stars_gained": 0,
       "release": "v0.1.8"
     }

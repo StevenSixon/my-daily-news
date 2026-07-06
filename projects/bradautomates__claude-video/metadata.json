@@ -6,7 +6,7 @@
   "topics": [],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "Tool giving Claude ability to watch videos, AI application.",
+  "classify_reason": "让Claude观看视频的工具，AI能力扩展",
   "one_liner": "让 Claude 真正“观看”视频：自动提取帧、字幕，基于画面和语音回答任何问题",
   "why_worth_it": "将视频变成 AI 可读的数据源，省去手动看视频的时间，对开发者、内容分析师、运维都极其实用，无缝集成 Claude Code 及 50+ agent 宿主",
   "tags": [
@@ -22,13 +22,13 @@
     "未提供不同视频类型（运动激烈、纯静态）下的去重阈值调整经验数据"
   ],
   "quality_flags": [],
-  "stars_total": 3820,
+  "stars_total": 4005,
   "created_at": "2026-04-24",
   "pushed_at": "2026-07-01",
   "latest_release": "v0.2.0",
   "first_seen": "2026-07-06",
-  "last_seen": "2026-07-06",
-  "streak_days": 1,
+  "last_seen": "2026-07-07",
+  "streak_days": 2,
   "analysis_updated_at": "2026-07-06T21:10:42+0800",
   "appearances": [
     {
@@ -36,6 +36,13 @@
       "reason": "new",
       "stars_total": 3820,
       "stars_gained": 368,
+      "release": "v0.2.0"
+    },
+    {
+      "date": "2026-07-07",
+      "reason": "lightweight",
+      "stars_total": 4005,
+      "stars_gained": 539,
       "release": "v0.2.0"
     }
   ]

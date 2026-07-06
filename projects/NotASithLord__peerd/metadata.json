@@ -17,7 +17,7 @@
   ],
   "license": "Apache-2.0",
   "category": "AI 应用",
-  "classify_reason": "Browser-native AI agent harness, AI application.",
+  "classify_reason": "浏览器原生AI代理扩展",
   "one_liner": "首个浏览器原生AI Agent扩展，驱动标签+沙箱计算，P2P共享，BYOK无后端",
   "why_worth_it": "完全在浏览器内运行，无遥测，沙箱隔离，适合需要本地隐私与控制、不想暴露API密钥给第三方的极客",
   "tags": [
@@ -35,13 +35,13 @@
     "沙箱计算环境的性能上限（如WebVM可分配内存）未明示"
   ],
   "quality_flags": [],
-  "stars_total": 315,
+  "stars_total": 317,
   "created_at": "2026-06-22",
   "pushed_at": "2026-07-06",
   "latest_release": "v0.2.5",
   "first_seen": "2026-06-29",
-  "last_seen": "2026-07-06",
-  "streak_days": 8,
+  "last_seen": "2026-07-07",
+  "streak_days": 9,
   "analysis_updated_at": "2026-07-06T21:17:27+0800",
   "appearances": [
     {
@@ -97,6 +97,13 @@
       "date": "2026-07-06",
       "reason": "release_update",
       "stars_total": 315,
+      "stars_gained": 0,
+      "release": "v0.2.5"
+    },
+    {
+      "date": "2026-07-07",
+      "reason": "lightweight",
+      "stars_total": 317,
       "stars_gained": 0,
       "release": "v0.2.5"
     }

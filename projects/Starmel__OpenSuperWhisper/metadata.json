@@ -11,7 +11,7 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "macOS dictation app, AI application.",
+  "classify_reason": "macOS听写应用，直接面向用户",
   "one_liner": "macOS 原生语音听写，双引擎（Whisper/Parakeet）本地运行，全局快捷键即按即说。",
   "why_worth_it": "解决 macOS 上离线、低延迟语音转文字的痛点，原生极简+全本地模型，比 SuperWhisper 更透明可控。",
   "tags": [
@@ -28,13 +28,13 @@
     "未提及是否完全离线运行或是否需要首次联网下载模型"
   ],
   "quality_flags": [],
-  "stars_total": 1856,
+  "stars_total": 1870,
   "created_at": "2025-02-06",
   "pushed_at": "2026-07-05",
   "latest_release": "0.1.0",
   "first_seen": "2026-07-05",
-  "last_seen": "2026-07-06",
-  "streak_days": 2,
+  "last_seen": "2026-07-07",
+  "streak_days": 3,
   "analysis_updated_at": "2026-07-05T17:48:23+0800",
   "appearances": [
     {
@@ -48,6 +48,13 @@
       "date": "2026-07-06",
       "reason": "lightweight",
       "stars_total": 1856,
+      "stars_gained": 532,
+      "release": "0.1.0"
+    },
+    {
+      "date": "2026-07-07",
+      "reason": "lightweight",
+      "stars_total": 1870,
       "stars_gained": 532,
       "release": "0.1.0"
     }

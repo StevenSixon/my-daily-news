@@ -6,7 +6,7 @@
   "topics": [],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "Multi-agent workspace manager, AI application.",
+  "classify_reason": "多代理工作区管理器，AI代理管理平台",
   "one_liner": "AI多智能体协作管理器，用Git hooks持久化代理工作状态",
   "why_worth_it": "为Claude Code/Copilot等代理提供可靠多任务协调，避免上下文丢失，适合重度AI编码团队",
   "tags": [
@@ -24,19 +24,26 @@
     "Gemini 等非主要运行时支持的集成完成度未明确"
   ],
   "quality_flags": [],
-  "stars_total": 16546,
+  "stars_total": 16598,
   "created_at": "2025-12-16",
   "pushed_at": "2026-07-06",
   "latest_release": "v1.2.1",
   "first_seen": "2026-07-06",
-  "last_seen": "2026-07-06",
-  "streak_days": 1,
+  "last_seen": "2026-07-07",
+  "streak_days": 2,
   "analysis_updated_at": "2026-07-06T21:11:29+0800",
   "appearances": [
     {
       "date": "2026-07-06",
       "reason": "new",
       "stars_total": 16546,
+      "stars_gained": 293,
+      "release": "v1.2.1"
+    },
+    {
+      "date": "2026-07-07",
+      "reason": "lightweight",
+      "stars_total": 16598,
       "stars_gained": 293,
       "release": "v1.2.1"
     }
