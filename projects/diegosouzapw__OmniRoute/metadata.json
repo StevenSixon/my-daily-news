@@ -27,32 +27,32 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "免费AI网关，聚合多种AI代理和服务",
-  "one_liner": "一端口聚合231+免费/廉价大模型，RTK压缩节省95% token，开发者零成本接入Claude Code等工具",
-  "why_worth_it": "破解多AI工具配额焦虑：自动故障转移、token压缩省15-95%、90+免费提供商，单端点透明路由，适合重度编码和成本敏感型极客",
+  "classify_reason": "In-page GUI agent for natural language web control.",
+  "one_liner": "一站式免费 AI 网关，聚合237个模型及90+免费额度，自动回退+Token压缩",
+  "why_worth_it": "解决多工具切换、配额浪费、Token消耗痛点，为开发者提供零成本高可用的AI编码基础设施",
   "tags": [
-    "AI网关",
-    "免费LLM",
-    "Token压缩",
-    "MCP/A2A"
+    "free-ai",
+    "llm-gateway",
+    "token-saver",
+    "ai-agents"
   ],
   "confidence": "medium",
   "info_gaps": [
-    "README 截断，缺少最简示例和完整 provider 列表入口",
-    "未提供 RTK + Caveman 压缩的技术细节和白皮书链接",
-    "未说明桌面应用的安装方式及最低系统要求",
-    "缺少基准性能测试数据（吞吐量、延迟）",
-    "快速开始的具体 CLI 交互流程未展示"
+    "快速入门的具体命令和配置步骤未在提供的 README 片段中展示，需查阅 getting-started 文档",
+    "RTK 和 Caveman 压缩技术的详细原理说明缺失",
+    "与其他网关（如 LiteLLM）的性能、延迟对比数据缺失",
+    "桌面应用/PWA 的安装方式及系统要求未明确说明",
+    "免费 Token 计数的方法论细节和实际测试截图未完全公开"
   ],
   "quality_flags": [],
-  "stars_total": 12401,
+  "stars_total": 13060,
   "created_at": "2026-02-13",
-  "pushed_at": "2026-07-06",
-  "latest_release": "v3.8.45",
+  "pushed_at": "2026-07-07",
+  "latest_release": "v3.8.46",
   "first_seen": "2026-07-01",
-  "last_seen": "2026-07-07",
-  "streak_days": 7,
-  "analysis_updated_at": "2026-07-06T21:12:00+0800",
+  "last_seen": "2026-07-08",
+  "streak_days": 8,
+  "analysis_updated_at": "2026-07-08T03:24:20+0800",
   "appearances": [
     {
       "date": "2026-07-01",
@@ -102,6 +102,13 @@
       "stars_total": 12401,
       "stars_gained": 4411,
       "release": "v3.8.45"
+    },
+    {
+      "date": "2026-07-08",
+      "reason": "release_update",
+      "stars_total": 13060,
+      "stars_gained": 4594,
+      "release": "v3.8.46"
     }
   ]
 }

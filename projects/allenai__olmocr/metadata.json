@@ -1,0 +1,42 @@
+{
+  "full_name": "allenai/olmocr",
+  "url": "https://github.com/allenai/olmocr",
+  "description": "Toolkit for linearizing PDFs for LLM datasets/training",
+  "language": "Python",
+  "topics": [],
+  "license": "Apache-2.0",
+  "category": "AI 应用",
+  "classify_reason": "Video editing with coding agents.",
+  "one_liner": "将PDF/图片转为干净Markdown，支持复杂排版，成本低于$200/百万页",
+  "why_worth_it": "为LLM训练从PDF提取线性文本，Benchmark领先同类开源方案，AllenAI出品可自托管",
+  "tags": [
+    "OCR",
+    "数据集工具",
+    "VLM",
+    "自托管"
+  ],
+  "confidence": "high",
+  "info_gaps": [
+    "由于 README 截断，未展示 Docker 使用的完整命令与配置细节",
+    "训练模型所需的具体计算资源与步骤未在截断部分展开",
+    "Benchmark 中带星号 (*) 的工具说明可能包含额外限制条件，但未显示"
+  ],
+  "quality_flags": [],
+  "stars_total": 18944,
+  "created_at": "2024-09-17",
+  "pushed_at": "2026-03-25",
+  "latest_release": "v0.4.27",
+  "first_seen": "2026-07-08",
+  "last_seen": "2026-07-08",
+  "streak_days": 1,
+  "analysis_updated_at": "2026-07-08T03:20:45+0800",
+  "appearances": [
+    {
+      "date": "2026-07-08",
+      "reason": "new",
+      "stars_total": 18944,
+      "stars_gained": 1243,
+      "release": "v0.4.27"
+    }
+  ]
+}

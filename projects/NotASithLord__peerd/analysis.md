@@ -1,45 +1,43 @@
 ## 它是什么
-peerd是一个浏览器扩展（Chrome/Firefox），将完整的AI Agent循环直接运行在浏览器运行时中。它可以读取和操控标签页，在WebAssembly沙箱中启动JS笔记本或Linux虚拟机，并通过WebRTC实现Agent间P2P通信。所有数据路径无后端、无遥测，用户自带模型密钥（Anthropic/OpenRouter/Ollama等），安全性建立在浏览器原生隔离机制（V8 isolate、WebCrypto、iframe沙箱）之上。
+peerd 是一个直接在浏览器中运行的 AI 代理框架。它以 Manifest V3 浏览器扩展形态存在，能将你现有的标签页、会话变成可被 AI 驱动的环境。它自己不带后端，所有计算与数据完全留在你的设备上，模型调用通过你提供的 API Key（Anthropic、OpenRouter 或本地 Ollama）完成，全程无遥测。
 
 ## 为什么火
-当前大多数AI Agent方案需要云端服务器处理用户数据和API密钥，存在隐私和延迟问题。peerd完全运行在用户机器上，密钥加密存储于本地vault，Agent循环在Service Worker中编排，实际环境操作由隔离的Actor执行，原始页面内容不会进入持有密钥的上下文。这种**安全边界由浏览器平台强制**的设计吸引了注重隐私和自主控制的开发者。同时，它在浏览器内提供完整的沙箱计算（Linux VM、笔记本、客户端应用），填补了浏览器Agent能力的空白。
+在隐私与数据主权越来越被关注的当下，peerd 把 AI 代理的生命周期完整放进了浏览器的安全边界里。它不依赖云服务，数据不离开设备，却依然能实现读取页面、操作 DOM、运行代码沙箱、甚至 P2P 共享构建物等复杂任务。对想要个人自动化又不想把钥匙交给第三方的极客来说，这是一个新鲜且务实的选择。
 
 ## 技术栈
-- **前端运行时**：纯Vanilla JS (ES2024+)，ES模块，无TypeScript、无构建步骤、无npm依赖
-- **浏览器平台**：Manifest V3，Service Worker作为编排器，V8 isolate for Workers
-- **安全模型**：WebCrypto、WebAuthn passkeys、Subresource Integrity、opaque-origin iframes
-- **沙箱**：WebAssembly (WASM) Linux VM、JS notebooks、客户端app
-- **对等网络**：WebRTC、P2P agent-to-agent通信（预览通道）
-- **可扩展性**：模型适配器（Anthropic, OpenRouter, Ollama），安全出口网关（egress allowlist），审计日志
+- **纯 JavaScript（ES2024+）**，无 TypeScript，无 JSX，无 bundler，零构建步骤
+- 浏览器扩展（Chrome/Firefox）使用 Manifest V3
+- 沙箱技术：V8 隔离区（JS Notebooks）、WebAssembly（Linux VM）、客户端应用
+- P2P 使用 WebRTC
+- 安全模型：服务 Worker 持有密钥并审核所有请求；每个环境由独立 Actor 驱动，内存隔离
+- 加密：WebCrypto 实现本地 vault，WebAuthn 解锁
 
 ## 核心能力
-- **Agent循环**：驱动标签页，执行click、输入、导航，并观察页面实际变化判定成功
-- **沙箱执行环境**：创建JS笔记本、WebVM、客户端应用，每个环境由独立Actor隔离
-- **P2P共享**：通过WebRTC mesh进行agent间对话，支持线程化对话和回复授权
-- **安全守护**：密钥仅存于vault（加密），所有外发请求经安全网关卡点，审计日志带哈希链防篡改
-- **模型灵活**：支持闭源/开源/本地模型，一键切换，每会话选模型
-- **语音输入**（Goal mode）、技能系统、记忆Review等高级功能
+1. **标签页驱动**：读取和操作当前已登录的网页，让 AI 直接在你的会话中工作
+2. **沙箱计算**：启动 JS 笔记本、编译好的 WASM Linux VM、运行客户端应用
+3. **代理循环**：内置 orchestrator 将任务委派给专用 Actor，每个 Actor 拥有受限的工具集
+4. **记忆与技能**：支持会话记忆、自定义技能、目标模式与审查
+5. **P2P 网络**（预览版）：代理之间可直接通过 WebRTC 共享构建成果
+6. **隐私保护**：BYOK，密钥加密存储在本地 vault，所有请求经过审核，无任何遥测
 
 ## 适用场景
-- 自动化网页操作（如填表、数据抓取）且不希望数据离开本机
-- 本地开发环境中的辅助编程与探索，利用浏览器内置沙箱运行不安全代码
-- 学术/安全研究中的可控浏览器代理实验
-- 去中心化应用（dweb）的早期试验，构建Agent-to-Agent的P2P协作
+- **个人自动化**：自动填写表单、监控页面变化、批量处理网页数据
+- **轻量级开发**：在浏览器内快速构建并分享小型工具或 Notebook
+- **隐私优先的探索**：希望体验 AI 代理但不愿将浏览数据上传至云端的用户
+- **研究与实验**：分析浏览器安全模型如何支撑代理系统，或测试 P2P 代理通信
 
 ## 同类对比
-- **Open Interpreter / TaskWeaver**：通常依赖Python后端和云端模型，peerd完全在浏览器内运行，无安装负担
-- **ChatGPT插件/Claude desktop agent**：绑定特定模型，存在遥测，peerd是BYOK且代码开源可审计
-- **其他浏览器自动化扩展**：多仅支持简单脚本，peerd提供了完整Agent循环和隔离安全模型
-- **Khoj**：本地个人搜索Agent，但peerd更侧重浏览器驱动和P2P计算共享
+相比云端代理（如 AutoGPT、AgentGPT），peerd 完全脱离服务端依赖，无需托管，隐私性更强但功能受浏览器自身限制。与浏览器自动化工具（如 Selenium、Playwright）相比，它融入了 AI 推理回路，可自主决策，而不仅仅是执行预设脚本。不过目前项目仍处于 0.x 实验阶段，生态与成熟度远不及后者。
 
 ## 版本动态
-- 当前0.x实验beta，v0.2.5于2026-07-06发布
-- 安全加固：审计日志完整性、会话授权Origin限制、传输导入门控
-- 新增P2P mesh中的持久线程对话（预览），per-conversation回复授权
-- 破坏性变更可能，存储格式未冻结，无V1承诺
+- 当前版本 `v0.2.6`（2026-07-07 发布），修复了 Actor 权限误判、搜索指令重定向错误等问题
+- 项目整体处于 **0.x 实验 beta**，API 和存储格式仍可能发生破坏性变更
+- 商店包（Chrome/Firefox）待上架，目前主流安装方式为加载源文件夹的开发者预览版
+- P2P 功能只在预览通道提供，标为研究级
+- 更新节奏积极，CI 流程完善，代码仓库结构清晰
 ---
 
 ## ℹ️ 置信度与信息盲区
 
 - 置信度：**high**
-- 信息盲区：未提供基准测试数据（如Agent任务成功率、延迟对比）；与同类工具（Open Interpreter、AutoGPT等）的直接对比未给出；dweb预览通道的稳定性和规模限制未量化；移动端支持状态未说明；沙箱计算环境的性能上限（如WebVM可分配内存）未明示
+- 信息盲区：P2P 功能仍为预览版，稳定性和完整度未验证；无性能基准或任务成功率数据；Chrome/Firefox 商店包尚未正式发布，大规模分发路径待定；语音交互的具体实现细节未在 README 中展开；与其他代理框架的横向对比仅供参考，非官方数据

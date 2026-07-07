@@ -27,7 +27,7 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "本地AI会议助手，面向终端用户",
+  "classify_reason": "AI meeting assistant with live transcription, speaker diarization, and summarization.",
   "one_liner": "完全本地运行的AI会议助手，实时转录与摘要，隐私至上",
   "why_worth_it": "彻底杜绝云端会议数据泄露风险，全离线转录+摘要，适合注重合规与数据主权的极客和企业",
   "tags": [
@@ -41,13 +41,13 @@
     "社区版说话人分离的实际完成度未明确（README 描述包含但 PRO 标注“计划中”）；无转录准确度的基准测试数据；未提供支持的语言列表和最低硬件配置要求"
   ],
   "quality_flags": [],
-  "stars_total": 18843,
+  "stars_total": 20482,
   "created_at": "2024-12-26",
   "pushed_at": "2026-06-05",
   "latest_release": "v0.4.0",
   "first_seen": "2026-07-05",
-  "last_seen": "2026-07-07",
-  "streak_days": 3,
+  "last_seen": "2026-07-08",
+  "streak_days": 4,
   "analysis_updated_at": "2026-07-05T17:47:52+0800",
   "appearances": [
     {
@@ -69,6 +69,13 @@
       "reason": "lightweight",
       "stars_total": 18843,
       "stars_gained": 2972,
+      "release": "v0.4.0"
+    },
+    {
+      "date": "2026-07-08",
+      "reason": "lightweight",
+      "stars_total": 20482,
+      "stars_gained": 5769,
       "release": "v0.4.0"
     }
   ]

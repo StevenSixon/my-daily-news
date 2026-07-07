@@ -1,6 +1,1422 @@
 {
   "editions": [
     {
+      "date": "2026-07-08",
+      "count": 10,
+      "projects": [
+        {
+          "id": "allenai__olmocr",
+          "fullName": "allenai/olmocr",
+          "owner": "allenai",
+          "name": "olmocr",
+          "url": "https://github.com/allenai/olmocr",
+          "oneLiner": "将PDF/图片转为干净Markdown，支持复杂排版，成本低于$200/百万页",
+          "description": "Toolkit for linearizing PDFs for LLM datasets/training",
+          "language": "Python",
+          "category": "AI 应用",
+          "license": "Apache-2.0",
+          "starsTotal": 18944,
+          "starsGained": 1243,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2024-09-17",
+          "pushedAt": "2026-03-25",
+          "latestRelease": "v0.4.27",
+          "firstSeen": "2026-07-08",
+          "topics": [],
+          "appearances": [
+            {
+              "date": "2026-07-08",
+              "reason": "new",
+              "starsTotal": 18944,
+              "starsGained": 1243,
+              "release": "v0.4.27"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "olmOCR 是一个将 PDF 及图片文档转换为干净 Markdown 文本的工具包，服务于 LLM 预训练数据集的制作。它基于 7B 参数的视觉语言模型（VLM），通过页面截图推理生成线性化文本，输出自然阅读顺序的内容，并自动剔除页眉页脚。"
+            },
+            {
+              "heading": "为什么火",
+              "bullets": [
+                "精准的行业痛点：LLM 训练需要从海量 PDF 中提取高质量文本，传统 OCR 难以处理多栏、表格、公式和手写体。",
+                "标杆级 Benchmark：开源了自己的评测套件 olmOCR-Bench（1400+ 文档，7000+ 测试用例），并在与 Mistral OCR、Marker、MinerU 等 8 款工具的对比中取得 82.4 的总分，处于一梯队。",
+                "成本极低：每百万页转换成本不到 200 美元，适合大规模工业化处理。",
+                "实用生态：提供在线演示、Docker 镜像、远程推理支持和训练代码，降低了使用和定制门槛。"
+              ]
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "语言：Python",
+                "推理引擎：vLLM（曾用 sglang，后迁移）",
+                "模型：基于 VLM（7B 参数），默认使用 FP8 量化以提升速度",
+                "系统依赖：poppler-utils、微软字体包等",
+                "部署：支持本地 GPU（12GB 显存起步）、远程 OpenAI 兼容 API、Beaker 集群和 Docker"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "多格式输入：PDF、PNG、JPEG",
+                "复杂版面还原：公式、表格、手写体、多栏布局、插图旁文字",
+                "智能清理：自动去除页眉页脚，输出自然阅读顺序的纯文本",
+                "高性能：基准测试覆盖学术论文、老旧扫描件、多栏文档等场景，整体准确率领先于多数开源工具",
+                "可扩展：提供完整的训练流水线和基准测试套件，方便二次开发"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "LLM 训练数据预处理（如从论文、报告、古籍中提取文本）",
+                "企业文档数字化、知识库构建",
+                "需要将非结构化 PDF 转为结构化 Markdown 的自动化流程"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "body": "| 工具 | 特点 | 整体得分 (olmOCR-Bench) | |------|------|------------------------| | Mistral OCR API | 云端 API，商业方案 | 72.0 | | Marker | 开源，本地运行 | 76.1 | | MinerU | 开源，表格识别强 | 75.2 | | DeepSeek-OCR | 开源 VLM 方案 | 75.7 | | Infinity-Parser 7B | 最强开源之一 | 82.5 | | Chandra OCR 0.1.0 | 当前榜首（带 * 标注，细节未完全公开） | 83.1 | | olmOCR v0.4.0 | 开源、完整管线、AllenAI 维护 | 82.4 ±1.1 | 结论：olmOCR 是同体量开源方案中的 SOTA 有力竞争者，且生态比部分榜单靠前的方案更透明。"
+            },
+            {
+              "heading": "版本动态",
+              "body": "项目迭代频繁，核心团队持续优化模型精度和工程效率。 ---",
+              "bullets": [
+                "2026-03-12：v0.4.27（小幅版本号推进，无重大功能说明）",
+                "2025-10-21：v0.4.0 发布，推出新模型 olmOCR-2-7B-1025-FP8，引入合成数据和 RL 训练，Benchmark 得分提升约 4 点",
+                "2025-08-13：v0.3.0 修复自动旋转检测与空白文档幻觉",
+                "2025-07-24：v0.2.1 模型切换为 FP8，速度提升，减少重试次数",
+                "2025-06-17：推理引擎从 sglang 切换至 vLLM，Docker 镜像 CUDA 版本升级至 12.8",
+                "2025-05-23：v0.1.70 正式提供 Docker 支持",
+                "2025-02-25：v0.1.58 首次公开发布"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：由于 README 截断，未展示 Docker 使用的完整命令与配置细节；训练模型所需的具体计算资源与步骤未在截断部分展开；Benchmark 中带星号 (*) 的工具说明可能包含额外限制条件，但未显示"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "iOfficeAI__OfficeCLI",
+          "fullName": "iOfficeAI/OfficeCLI",
+          "owner": "iOfficeAI",
+          "name": "OfficeCLI",
+          "url": "https://github.com/iOfficeAI/OfficeCLI",
+          "oneLiner": "为AI agent打造的Office CLI，无需安装Office，单二进制读写Word/Excel/PPT。",
+          "description": "OfficeCLI is the first and best Office suite  purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files. Free, open-source, single binary, no Office installation required.",
+          "language": "C#",
+          "category": "AI 应用",
+          "license": "Apache-2.0",
+          "starsTotal": 9713,
+          "starsGained": 802,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-03-15",
+          "pushedAt": "2026-07-07",
+          "latestRelease": "v1.0.129",
+          "firstSeen": "2026-07-08",
+          "topics": [
+            "agent",
+            "ai",
+            "claude-code",
+            "cli",
+            "codex",
+            "docx",
+            "excel",
+            "office",
+            "openclaw",
+            "pptx",
+            "presentation",
+            "skills",
+            "word",
+            "xlsx"
+          ],
+          "appearances": [
+            {
+              "date": "2026-07-08",
+              "reason": "new",
+              "starsTotal": 9713,
+              "starsGained": 802,
+              "release": "v1.0.129"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "OfficeCLI 是一款专为 AI 代理设计的命令行 Office 套件，通过单个二进制文件即可创建、读取、编辑和自动化 Word（.docx）、Excel（.xlsx）和 PowerPoint（.pptx）文档。它无需安装 Microsoft Office 或任何外部运行时，跨平台运行。其内置的 HTML 渲染引擎可将文档转换为 HTML 或 PNG，让 AI 能够“看到”文档并实现渲染-审查-修正的闭环。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "在 AI 代理日益流行的今天，与 Office 文档交互是高频需求——报告生成、数据分析、格式转换。传统方式依赖多个 Python 库，代码冗长且无法提供视觉反馈。OfficeCLI 以极简命令完成复杂操作，并提供实时预览（watch 模式），大幅降低 AI 与文档集成的门槛。其单二进制、无依赖的设计尤其适合容器化和边缘环境，且已获得近万星标，说明社区对这一方案的强烈认可。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "语言：C#",
+                "分发：单二进制文件（支持 Windows/macOS/Linux）",
+                "依赖：无（无需 .NET Runtime，无需 Office）",
+                "核心特性：内建 HTML 渲染引擎、实时文件预览服务器、Watch 模式、JSON 输出接口",
+                "集成：支持通过 skill 文件自动集成到 Claude Code、Cursor、Windsurf 等常见 AI 编码工具"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "全格式读写：无遗漏地支持 Word、Excel、PPT 的创建、读取、编辑、重排。",
+                "Word 深度支持：段落、运行、表格、样式、页眉页脚、图片、公式（LaTeX 输入）、注释、脚注、水印、书签、目录、图表、超链接、节、表单域、内容控件、域代码、修订追踪等。",
+                "Excel 深度支持：单元格公式（350+ 内置函数动态求值）、表格、透视表（含日期分组、计算字段）、切片器、条件格式、图表、数据验证、命名范围、迷你图、CSV/TSV 导入等。",
+                "PPT 深度支持：幻灯片、形状（图案填充、超链接、背景等）、幻灯片母版、版式操控。",
+                "AI 友好接口：所有命令输出可结构化（JSON），支持路径选择器（XPath 风格），专用 watch 命令启动本地服务器实现浏览器实时预览，便于 AI 代理观察更改结果。",
+                "一键集成：officecli install 自动将 skill 注入到多个 AI 编码工具。"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "AI 驱动的文档生成：聊天机器人根据对话生成 PPT 报告或 Word 方案。",
+                "批量文档处理：批量修改 Excel 公式、替换 Word 文本、统一 PPT 风格。",
+                "数据提取与分析：从 Excel 读取数据并处理，或从 Word 提取结构化信息。",
+                "自动化测试：验证 Office 文档生成结果，无需启动 Office 应用。",
+                "无头环境：服务器或 CI/CD 中生成、检查 Office 文档。"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "body": "| 方案 | 语言门槛 | 视觉反馈 | 文档格式覆盖 | 依赖 | |------|----------|----------|--------------|------| | OfficeCLI | 命令行，无代码 | 内置 HTML 渲染 + 浏览器预览 | .docx/.xlsx/.pptx 全量 | 无 | | python-pptx + python-docx + openpyxl | Python 代码 | 无（需另外打开） | 各自独立，部分功能不全 | Python + 库 | | LibreOffice 命令行 | 命令行 | 可转 PDF/HTML 但笨重 | 几乎全部 | LibreOffice 安装 | | Microsoft Graph API | HTTP 请求/代码 | 依赖 Office 365 云渲染 | 高级功能受限 | 网络 + Azure AD | OfficeCLI 的优势在于与 AI 代理工作流的深度绑定、极简安装、优秀的 Watch + HTML 视觉闭环，非常适合现代 AI 自动化场景。"
+            },
+            {
+              "heading": "版本动态",
+              "body": "最新版本 v1.0.129（2026年7月6日）修复了 PPT/XLSX/DOCX 在常驻批处理后未通知 SSE 的问题。项目开发活跃，持续对三大格式增加细粒度特性（如 Word 的复杂脚本支持、Excel 的公式适配等）。 ---"
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：无正式的 Office 兼容性基准测试或保真度报告（仅声称高保真）；大文件（>100MB）处理的性能数据未公开；HTML 渲染引擎的具体实现细节（是不是基于浏览器引擎）没有说明"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hesreallyhim__awesome-claude-code",
+          "fullName": "hesreallyhim/awesome-claude-code",
+          "owner": "hesreallyhim",
+          "name": "awesome-claude-code",
+          "url": "https://github.com/hesreallyhim/awesome-claude-code",
+          "oneLiner": "Claude Code 生态顶级资源清单，极客即查即用的工具与指南合集",
+          "description": "A hand-picked collection of the finest of resources for the most awesome of agents, Claude Code, the undisputed champion of coding companions, from the unstoppable team at Anthropic PBC. A delectable showcase of top tier skills, ambidextrous agents, scintillating status lines, top notch developer tooling, and also we have plugins",
+          "language": "Python",
+          "category": "AI 应用",
+          "license": "NOASSERTION",
+          "starsTotal": 48991,
+          "starsGained": 227,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2025-04-19",
+          "pushedAt": "2026-07-07",
+          "latestRelease": "",
+          "firstSeen": "2026-07-08",
+          "topics": [
+            "agent-skills",
+            "agentic-code",
+            "agentic-coding",
+            "ai-workflow-optimization",
+            "ai-workflows",
+            "anthropic",
+            "anthropic-claude",
+            "awesome",
+            "awesome-claude-code",
+            "awesome-list",
+            "awesome-lists",
+            "awesome-resources",
+            "claude",
+            "claude-code",
+            "coding-agent",
+            "coding-agents",
+            "coding-assistant",
+            "coding-assistants",
+            "llm"
+          ],
+          "appearances": [
+            {
+              "date": "2026-07-08",
+              "reason": "new",
+              "starsTotal": 48991,
+              "starsGained": 227,
+              "release": ""
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "一个手工维护的 awesome 列表，专门收集 Claude Code（Anthropic 出品的命令行编程助手）相关的技能、插件、状态行、开发工具、学习指南与多代理编排资源，面向初学者与资深用户。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "Claude Code 作为目前统治级的 AI 编码伴侣，社区产出爆发式增长；该列表以“质量、安全、原创性”为筛选标准，提供分类清晰、持续更新的入口，减少信息过载。5 万星见证其社区认可度。"
+            },
+            {
+              "heading": "技术栈",
+              "body": "本仓库仅为 Markdown 组织的精选列表，非可执行代码。列表内资源覆盖 Python/Node/Shell 等，涉及 Claude Code 插件机制、MCP 协议、Hook 系统、Agent 模式等。"
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "快速上手：提供 Claude Code 思维模型、CLAUDE.md 写法、hooks 等核心概念的单页指南与交互教程。",
+                "官方资源直达：直接关联 Anthropic 官方 skills 仓库、最佳实践、安全审查 Action 等。",
+                "生态扩展：收录状态行、远程控制、语音 I/O、替代客户端、设计/写作/创意媒体等垂直领域工具。",
+                "深度工具链：覆盖多代理编排、技能库、记忆与上下文持久化、用量监控、可观测性与代码检查。"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "刚开始使用 Claude Code 的开发者寻找最佳实践和配置模板。",
+                "资深用户探索高级用法（hooks、技能、多代理、CI 集成）。",
+                "团队负责人评估如何在项目或 CI/CD 中标准化 Claude Code 使用。"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "body": "与通用 AI 工具列表（如 awesome-chatgpt）不同，本列表专精 Claude Code 生态，且刻意强调“代码质量与安全”，避免低价值资源泛滥。其“当前迭代”侧重新资源，对旧资源有保留策略。"
+            },
+            {
+              "heading": "版本动态",
+              "body": "当前列表以高亮非“旧版”资源为目标，宣布后续将陆续补回仍维护的“遗留资源”；仓库近期仍在活跃更新（最后推送 2026-07），保持高时效。 ---"
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：README 因字符限制被截断，仅展示至 'From Anthropic' 章节开头；后续如 Skills、Multi-Agent Orchestration、Memory 等大量分类的实际资源列表未完整呈现，无法评估该部分内容的覆盖率和质量；列表中各工具的具体效果未提供评测数据或对比实验；未说明收录标准细节（仅提及‘代码质量、安全、原创性’）"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "benchflow-ai__awesome-evals",
+          "fullName": "benchflow-ai/awesome-evals",
+          "owner": "benchflow-ai",
+          "name": "awesome-evals",
+          "url": "https://github.com/benchflow-ai/awesome-evals",
+          "oneLiner": "高信噪比 AI Agent 评估资源库，拒绝水货，附带深度笔记和可运行代码",
+          "description": "A curated, non-BS library of the best resources for building and evaluating AI agents — papers, blogs, talks, tools, benchmarks. Maintained by BenchFlow.",
+          "language": "",
+          "category": "AI 应用",
+          "license": "NOASSERTION",
+          "starsTotal": 688,
+          "starsGained": 0,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-06-24",
+          "pushedAt": "2026-07-01",
+          "latestRelease": "",
+          "firstSeen": "2026-07-08",
+          "topics": [
+            "agent-evaluation",
+            "ai-agents",
+            "awesome",
+            "awesome-list",
+            "benchmarks",
+            "evals",
+            "llm",
+            "llm-evaluation",
+            "rl-environments"
+          ],
+          "appearances": [
+            {
+              "date": "2026-07-08",
+              "reason": "new",
+              "starsTotal": 688,
+              "starsGained": 0,
+              "release": ""
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "由 BenchFlow 维护的精选、重注释的 AI Agent 评估资源列表。涵盖论文、博客、演讲、课程、工具和基准，所有条目都说明了为什么值得收录，且经过了 URL 验证和死链接修剪。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "Agent 评估已成为 AI 工程的核心瓶颈，但多数 “awesome” 列表只是链接堆砌。这个列表通过引文爬虫、实践者对话、47 场演讲转录和分节间隙审计，提供了 443+ 条精选链接和 146 条深度阅读笔记，信息密度远超同类。"
+            },
+            {
+              "heading": "技术栈",
+              "body": "维护方式：Markdown 文档 + GitHub 协作。核心资产是 README.md、PATTERNS.md（可运行代码示例）和 notes/ 目录的深度笔记。社区讨论在 Discord 进行。"
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "星级必读：11 篇必读文章，快速入门评估体系",
+                "深度笔记：对关键资源做了 146 条详细注释，标注更新状态和注意事项",
+                "可运行代码：PATTERNS.md 提供 LLM-as-judge、pass@k、错误分析等可实操案例",
+                "分类覆盖：从评估为什么需要，到具体基础设施、LLM-as-judge、Agent 特有评估、安全评估等 10+ 个主题",
+                "质量保证：链接验证、死链清除、争议内容标注"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "想系统学习 Agent 评估的 AI 工程师和研究人员",
+                "需要快速查找可靠基准/工具/论文的产品或技术负责人",
+                "评估系统设计者寻找架构参考和实操模式"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "body": "相比其他 “awesome-evals” 或 “awesome-llm” 列表，本项目不做链接垃圾场，所有条目都经过人工验证和注释，并提供了可直接使用的代码示例，弥补了学术与实践之间的鸿沟。"
+            },
+            {
+              "heading": "版本动态",
+              "body": "2026 年 6 月创建，2026 年 7 月 1 日最近推送。Star 688。持续更新中，配有 Playbook 和贡献指南。 ---"
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：无实际可执行软件，本质为文档型资源列表"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "modiqo__cliare",
+          "fullName": "modiqo/cliare",
+          "owner": "modiqo",
+          "name": "cliare",
+          "url": "https://github.com/modiqo/cliare",
+          "oneLiner": "像 OpenAPI/Swagger 一样的 CLI 代理就绪性测量工具，基于运行时证据推断命令表面与副作用。",
+          "description": "CLI agent-readiness measurement, command-shape inference, and CI scorecards",
+          "language": "Rust",
+          "category": "AI 应用",
+          "license": "Apache-2.0",
+          "starsTotal": 713,
+          "starsGained": 0,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-06-13",
+          "pushedAt": "2026-07-05",
+          "latestRelease": "v0.1.9",
+          "firstSeen": "2026-07-08",
+          "topics": [
+            "ai",
+            "ai-agents",
+            "cli"
+          ],
+          "appearances": [
+            {
+              "date": "2026-07-08",
+              "reason": "new",
+              "starsTotal": 713,
+              "starsGained": 0,
+              "release": "v0.1.9"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "CLIARE（CLI Agent Readiness Evaluation）是一个黑盒式的 CLI 测量工具，像对待 AI 代理一样去执行被测命令行程序，记录运行时行为、推断命令表面、检测副作用，并生成命令索引、记分卡、问题清单和多种角色的报告。它的理念是将 CLI 的命令表面和运行时行为客观化，为 CLI 的维护者、安全审核者和下游的 AI 代理框架提供可版本化的契约。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "随着 AI 代理越来越多地以终端作为操作界面，传统面向人类的 CLI 在命令发现、输出解析、前置条件和副作用方面对代理极不友好。CLIARE 填补了这一空缺：它不依赖手写文档，而是通过实际运行 CLI 来测量“代理就绪度”，将模糊的反馈转化为可量化的修复项和可用于代理路由的命令索引。这对于希望保持 CLI 生态对 AI 代理友好的开源项目和平台非常关键。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "语言: Rust",
+                "安装方式: cargo install cliare 或预编译二进制（支持 macOS/Linux x86_64 与 aarch64）",
+                "输出格式: JSON、Markdown、JUnit XML、SARIF 等",
+                "核心依赖: 自主实现的进程启动、文件系统快照、上下文探测等（未列出具体库）"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "黑盒探测与证据记录：支持干净环境、仓库环境、认证环境、宿主机环境等多种运行时上下文，记录 stdout/stderr、文件系统变更等证据。",
+                "命令表面推断：通过执行 --help、试探性参数等，推断出命令路径、标志、位置参数和输出格式，生成 shape.json 和 command-index.json。",
+                "代理就绪评分与问题清单：生成总分与细项分数（帮助覆盖率、诊断信息、可解析输出、不安全行为等），并提供每个发现的含义、关联命令、证据摘录和修复建议。",
+                "角色化报告：内置 maintainer（维护者实现队列）、harness（代理框架集成包）、security（安全审计包）三种透视。",
+                "代理技能与命令索引分离：明确区分“教代理如何判断”的技能和“命令实际支持什么”的索引，前者由CLIARE生成 AGENT_SKILL.md，后者由 command-index.json 提供可查询的路由支持。"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "body": "1.  CLI 维护者：在 CI 中把 CLIs 的代理就绪度作为发布关卡，提前发现帮助文档缺失、无声的副作用、输出契约不足等问题。 2.  代理框架构建者：利用命令索引和路由查询命令（surface query, surface explain）避免代理反复猜测命令语法，降低 token 浪费和故障率。 3.  安全审计团队：检测看似“安全”的命令（如 --help, --version, --invalid-flag）是否偷偷写入了文件，或者需要非预期的认证/网络权限。"
+            },
+            {
+              "heading": "同类对比",
+              "bullets": [
+                "传统 CLI 测试工具（如 bats, assert_cmd）：侧重功能正确性，不关注命令表面的完整性和代理就绪性，不产生可供下游消费的规范化索引。",
+                "OpenAPI/Swagger 文档：用于 HTTP API，而 CLIARE 是第一个从运行时证据自动生成 CLI 命令表面描述的工具，类似“CLI 的 Swagger”。",
+                "手工编写代理技能：多数代理框架依赖手工编写工具使用说明，CLIARE 将这部分工作自动化，并使得技能说明与真实 CLI 行为保持一致。"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "---",
+              "bullets": [
+                "最新 Release: v0.1.9 (2026-07-02)，项目处于早期快速迭代阶段。",
+                "发布说明仅提供 changelog 链接，该版本的具体改动细节未知。",
+                "仓库创建于 2026-06-13，一个月内获得 713 Star，社区关注度较高。",
+                "文档结构丰富，包含架构、指南、参考论文等，显示项目目标长远。"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：未提供大规模 CLI（如包含数百个子命令）下的探测性能基准；未说明对动态生成的命令（如插件系统）或交互式 CLI 的处理能力；0.1.9 版本的具体更新内容未在 README 正文中描述"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "diegosouzapw__OmniRoute",
+          "fullName": "diegosouzapw/OmniRoute",
+          "owner": "diegosouzapw",
+          "name": "OmniRoute",
+          "url": "https://github.com/diegosouzapw/OmniRoute",
+          "oneLiner": "一站式免费 AI 网关，聚合237个模型及90+免费额度，自动回退+Token压缩",
+          "description": "Never stop coding. Free AI gateway: one endpoint, 231+ providers (50+ free), connect Claude Code, Codex, Cursor, Cline & Copilot to FREE Claude/GPT/Gemini. RTK+Caveman stacked compression saves 15-95% tokens, smart auto-fallback, MCP/A2A, multimodal APIs, Desktop/PWA.",
+          "language": "TypeScript",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 13060,
+          "starsGained": 4594,
+          "streakDays": 8,
+          "isNew": false,
+          "createdAt": "2026-02-13",
+          "pushedAt": "2026-07-07",
+          "latestRelease": "v3.8.46",
+          "firstSeen": "2026-07-01",
+          "topics": [
+            "a2a",
+            "ai-agents",
+            "ai-gateway",
+            "anthropic",
+            "claude",
+            "claude-code",
+            "cline",
+            "codex",
+            "copilot",
+            "cursor",
+            "deepseek",
+            "free-ai",
+            "gemini",
+            "gemini-cli",
+            "llm-gateway",
+            "mcp",
+            "openai",
+            "openai-proxy",
+            "qwen",
+            "token-saver"
+          ],
+          "appearances": [
+            {
+              "date": "2026-07-01",
+              "reason": "new",
+              "starsTotal": 8345,
+              "starsGained": 459,
+              "release": "v3.8.42"
+            },
+            {
+              "date": "2026-07-02",
+              "reason": "lightweight",
+              "starsTotal": 9390,
+              "starsGained": 1012,
+              "release": "v3.8.42"
+            },
+            {
+              "date": "2026-07-03",
+              "reason": "release_update",
+              "starsTotal": 10162,
+              "starsGained": 2497,
+              "release": "v3.8.43"
+            },
+            {
+              "date": "2026-07-04",
+              "reason": "lightweight",
+              "starsTotal": 10660,
+              "starsGained": 3197,
+              "release": "v3.8.43"
+            },
+            {
+              "date": "2026-07-05",
+              "reason": "release_update",
+              "starsTotal": 11453,
+              "starsGained": 4133,
+              "release": "v3.8.44"
+            },
+            {
+              "date": "2026-07-06",
+              "reason": "release_update",
+              "starsTotal": 12275,
+              "starsGained": 4411,
+              "release": "v3.8.45"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 12401,
+              "starsGained": 4411,
+              "release": "v3.8.45"
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "release_update",
+              "starsTotal": 13060,
+              "starsGained": 4594,
+              "release": "v3.8.46"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "OmniRoute 是一个开源免费 AI 网关（MIT 协议），通过单一 OpenAI 兼容端点（/v1）聚合 237 个 AI 供应商（含 90+ 免费层），并内置自动故障转移和 Token 压缩引擎。它能无缝对接 Claude Code、Cursor、Cline 等主流编码工具，让用户用上免费的 Claude/GPT/Gemini 等模型。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "截至分析时 Star 数超 13k，社区活跃。核心吸引力在于：",
+              "bullets": [
+                "零成本起步：聚合 90+ 免费供应商，每月稳定提供约 16 亿 free token，首月可达 21 亿；",
+                "免配额焦虑：多层自动回退（订阅→API→廉价→免费），消除限流中断；",
+                "Token 节省：RTK + Caveman 堆叠压缩技术可减少 15–95% 的 token（工具输出多的场景平均省 89%）；",
+                "一站式集成：一个配置让所有 IDE/CLI 连接所有模型，大幅降低切换成本。"
+              ]
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "语言：TypeScript",
+                "核心机制：RTK/Caveman 文本压缩、17 种路由策略（auto/* 组合）、智能故障转移",
+                "协议支持：OpenAI API 翻译、MCP（95 个工具）、A2A(Agent-to-Agent)、多模态 API",
+                "部署形态：Docker 镜像 / npm 包 / 桌面应用 (Electron) / PWA",
+                "质量保障：21,000+ 测试用例"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "一端点聚合：openai、anthropic、gemini 协议互译，统一 /v1 接口",
+                "自动回退：订阅额度耗尽自动切到免费或廉价供应商，无感知",
+                "Token 优化：对 git diff、grep 等工具输出进行高比例压缩",
+                "桌面/PWA 应用：提供可视化仪表盘管理提供商和使用量",
+                "免费额度仪表板：实时显示各供应商的文档化免费 token 额度及当月使用情况",
+                "MCP/A2A：内置工具协议，可直接作为 Agent 后端",
+                "生产级特性：断路保护、TLS 伪装、多种代理设置"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "个人开发者想免费使用高级大模型编码，不希望充多份 API 订阅；",
+                "团队需要稳定的 AI 编码助手基础设施，避免单一供应商故障；",
+                "重度 agent 用户（大量工具调用）需要降低 token 消耗成本；",
+                "网络受限地区通过内置代理访问 AI。"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "body": "与 LiteLLM 等开源网关相比，OmniRoute 在聚合大量免费供应商和 Token 压缩方面具有独特性，并原生支持桌面应用和丰富的 IDE 集成配置。但 README 未提供详细的性能基准、延迟对比或兼容性矩阵，无法量化其网关效率优势。"
+            },
+            {
+              "heading": "版本动态",
+              "body": "最新 v3.8.46（2026-07-07）主要更新： ---",
+              "bullets": [
+                "新增 hidePaidModels 开关下隐藏付费模型的 auto 路由逻辑；",
+                "提供 auto/glm、auto/gemini 等提供者家族虚拟组合路由，支持动态候选池。"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：medium",
+                "信息盲区：快速入门的具体命令和配置步骤未在提供的 README 片段中展示，需查阅 getting-started 文档；RTK 和 Caveman 压缩技术的详细原理说明缺失；与其他网关（如 LiteLLM）的性能、延迟对比数据缺失；桌面应用/PWA 的安装方式及系统要求未明确说明；免费 Token 计数的方法论细节和实际测试截图未完全公开"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "elder-plinius__T3MP3ST",
+          "fullName": "elder-plinius/T3MP3ST",
+          "owner": "elder-plinius",
+          "name": "T3MP3ST",
+          "url": "https://github.com/elder-plinius/T3MP3ST",
+          "oneLiner": "将你本机的 AI 编码代理直接变成零日猎手的多智能体红队框架",
+          "description": "autonomous red teaming platform; multi-agent offensive-security meta-harness",
+          "language": "TypeScript",
+          "category": "AI 应用",
+          "license": "AGPL-3.0",
+          "starsTotal": 3182,
+          "starsGained": 0,
+          "streakDays": 4,
+          "isNew": false,
+          "createdAt": "2026-07-02",
+          "pushedAt": "2026-07-07",
+          "latestRelease": "",
+          "firstSeen": "2026-07-05",
+          "topics": [
+            "agents",
+            "ai",
+            "multi-agent",
+            "offensive-security",
+            "redteam"
+          ],
+          "appearances": [
+            {
+              "date": "2026-07-05",
+              "reason": "new",
+              "starsTotal": 656,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-07-06",
+              "reason": "star_jump",
+              "starsTotal": 2232,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 2393,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "star_jump",
+              "starsTotal": 3182,
+              "starsGained": 0,
+              "release": ""
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "T3MP3ST 是一个开源的多智能体攻击安全元框架，把你已经登录的 AI 编码代理（Claude Code、Codex、Hermes 或本地模型）变成自主漏洞猎手。它把杀伤链自动化：侦察 → 利用 → 报告，全程通过浏览器 War Room 或 CLI 操作，不依赖额外的 API 密钥或云账单。"
+            },
+            {
+              "heading": "为什么火",
+              "bullets": [
+                "可重现的基准：在 XBOW 的 104 项挑战套件上达到 pass@1 均值 90.1%（Wilson 95% 置信区间 86.2–92.9），高于 XBOW 自报的 85%，所有数字可通过 npm run verify-claims 从提交的 JSON 数据重新推导，杜绝虚假宣传。",
+                "无密钥架构：直接复用本机已有的 AI 编码代理作为决策大脑，无需注册任何云服务，甚至支持 Ollama/LM Studio 完全离线运行。",
+                "透明状态：明确标注各个模块的成熟度（稳定/实验/规划），不自夸未经验证的功能。",
+                "多域覆盖：Web 应用、CTF、智能合约、源代码审计、嵌入式/OT 等领域均有不同程度的支持，且新领域采用可组合的“类/小队”架构。",
+                "安全约束：内置出口范围遏制，防止侦察工具访问无关公网主机。"
+              ]
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "核心语言：TypeScript",
+                "架构：8 操作员的杀伤链（Recon/Exploit/Infiltrate/Exfiltrate/Ghost 等），每个操作员共享同一个基于真实工具的 ReAct 循环",
+                "工具库：默认 35 个内置工具，可选扩展至 83 个（通过 T3MP3ST_FULL_ARSENAL 开启危险组件，需人工审批）",
+                "接口：War Room Web UI、CLI、HTTP API、MCP 服务器",
+                "支持模型：可通过本机 AI 代理（Claude Code/Codex/Hermes）或 OpenAI 兼容 API（包括 Ollama、LM Studio、vLLM）驱动，工具调用通过文本实现，不强制要求原生函数调用",
+                "测试与验证：所有声称指标均可通过 npm run verify-claims 从 bench/ 中的 JSON 重新计算"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "侦察引擎（稳定）：实时驱动 nmap、DNS、HTTP 指纹等工具，每个发现可追溯至原始输出。",
+                "漏洞利用（实验性）：下游操作员运行与侦察相同的工具驱动循环，但 swarm 协同下的端到端利用尚未基准化，单代理模式有 90.1% 的 XBEN 成绩。",
+                "协调披露管道：针对嵌入式/OT 开源软件的漏洞探测，包含 OSV 新漏洞检查、实时 PoC 生成、独立重复验证和 CVSS 评分（目前停留在草稿，由人工发送）。",
+                "源码分析（实验性）：Python 正则引擎摄取，支持多模型分解（实际 token 成本更高）。",
+                "CTF 解决：Cybench 无提示模式下解决 23/40 挑战。",
+                "零密钥集成：直接劫持本地已登录的 AI 编码代理，实现“无密钥战争”。",
+                "自验证机制：运行一条命令即可重算所有 headline，保证数据不掺假。"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "授权渗透测试与红队演练",
+                "安全研究中的自动化漏洞发现与验证",
+                "CTF 训练与解题辅助",
+                "开源供应链及物联网固件的协调披露",
+                "安全教学，展示 AI 驱动的攻击路径"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "bullets": [
+                "传统红队框架（Metasploit、Cobalt Strike）：T3MP3ST 由 AI 代理自主规划攻击链，无需手动编写利用模块，但其 swarm 协同利用的稳定性远不及成熟商业工具。",
+                "AI 安全基准项目（如 XBOW）：T3MP3ST 不仅开源、支持离线，还将控制权交给本机已有的编程代理，并公开完整的验证方法，透明性更高。",
+                "其他 LLM 安全工具：多为提示词插件或静态扫描，缺少完整的工具链和行动循环。"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "---",
+              "bullets": [
+                "仓库创建于 2026-07-02，最近推送 2026-07-07，星数 3182，开发极新且活跃。",
+                "侦察引擎、War Room、Mission 引擎、协调披露管道均为稳定态。",
+                "Exploiter/Infiltrator/Exfiltrator/Ghost 等操作员已实现工具 ReAct 循环，但 swarm 协同利用未经基准化，标记为实验。",
+                "云、移动、二进制等模块仅有存根代码，处于规划阶段。",
+                "单代理 XBEN 测试使用了被称为 gpt-5.5 的模型（可能为内部代号或定制版本），真实模型信息未公开。"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：未说明硬件最低要求或推荐配置；未声明操作系统兼容性（是否支持 Windows）；基准成绩依赖的模型 'gpt-5.5' 非公开已知模型，可能为内部代号或研发版本，其具体性能与可复现性存疑；协调披露管道提及的厂商通报草稿未公开，无法核实实际漏洞价值；Swarm 多智能体协同利用的可靠性未经过基准测试，目前仅单代理成绩有效"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "vercel__eve",
+          "fullName": "vercel/eve",
+          "owner": "vercel",
+          "name": "eve",
+          "url": "https://github.com/vercel/eve",
+          "oneLiner": "文件系统优先的 AI 代理框架，用目录结构定义代理行为",
+          "description": "The Framework for Building Agents",
+          "language": "TypeScript",
+          "category": "AI 应用",
+          "license": "Apache-2.0",
+          "starsTotal": 3297,
+          "starsGained": 0,
+          "streakDays": 17,
+          "isNew": false,
+          "createdAt": "2026-06-16",
+          "pushedAt": "2026-07-07",
+          "latestRelease": "eve@0.21.1",
+          "firstSeen": "2026-06-19",
+          "topics": [
+            "agent",
+            "framework",
+            "harness",
+            "javascript",
+            "markdown",
+            "sandbox",
+            "typescript",
+            "vercel",
+            "workflows"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-19",
+              "reason": "new",
+              "starsTotal": 1561,
+              "starsGained": 0,
+              "release": "eve@0.11.7"
+            },
+            {
+              "date": "2026-06-20",
+              "reason": "lightweight",
+              "starsTotal": 1572,
+              "starsGained": 0,
+              "release": "eve@0.11.7"
+            },
+            {
+              "date": "2026-06-20",
+              "reason": "lightweight",
+              "starsTotal": 1734,
+              "starsGained": 0,
+              "release": "eve@0.11.7"
+            },
+            {
+              "date": "2026-06-20",
+              "reason": "release_update",
+              "starsTotal": 1782,
+              "starsGained": 0,
+              "release": "eve@0.11.8"
+            },
+            {
+              "date": "2026-06-21",
+              "reason": "release_update",
+              "starsTotal": 1853,
+              "starsGained": 0,
+              "release": "eve@0.11.10"
+            },
+            {
+              "date": "2026-06-21",
+              "reason": "lightweight",
+              "starsTotal": 1930,
+              "starsGained": 0,
+              "release": "eve@0.11.10"
+            },
+            {
+              "date": "2026-06-22",
+              "reason": "release_update",
+              "starsTotal": 2075,
+              "starsGained": 0,
+              "release": "eve@0.12.0"
+            },
+            {
+              "date": "2026-06-24",
+              "reason": "release_update",
+              "starsTotal": 2473,
+              "starsGained": 0,
+              "release": "eve@0.13.3"
+            },
+            {
+              "date": "2026-06-25",
+              "reason": "release_update",
+              "starsTotal": 2522,
+              "starsGained": 0,
+              "release": "eve@0.13.4"
+            },
+            {
+              "date": "2026-06-27",
+              "reason": "release_update",
+              "starsTotal": 2661,
+              "starsGained": 0,
+              "release": "eve@0.15.4"
+            },
+            {
+              "date": "2026-06-28",
+              "reason": "release_update",
+              "starsTotal": 2831,
+              "starsGained": 0,
+              "release": "eve@0.16.2"
+            },
+            {
+              "date": "2026-07-01",
+              "reason": "release_update",
+              "starsTotal": 2981,
+              "starsGained": 0,
+              "release": "eve@0.17.1"
+            },
+            {
+              "date": "2026-07-04",
+              "reason": "release_update",
+              "starsTotal": 3141,
+              "starsGained": 0,
+              "release": "eve@0.19.0"
+            },
+            {
+              "date": "2026-07-05",
+              "reason": "lightweight",
+              "starsTotal": 3200,
+              "starsGained": 0,
+              "release": "eve@0.19.0"
+            },
+            {
+              "date": "2026-07-06",
+              "reason": "release_update",
+              "starsTotal": 3251,
+              "starsGained": 0,
+              "release": "eve@0.20.0"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 3259,
+              "starsGained": 0,
+              "release": "eve@0.20.0"
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "release_update",
+              "starsTotal": 3297,
+              "starsGained": 0,
+              "release": "eve@0.21.1"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "eve 是 Vercel 开源的“文件系统优先”AI 代理框架。它不要求你写冗长的编排代码，而是通过约定的目录结构（agent/instructions.md、agent/tools/、agent/skills/ 等）来定义代理的行为。代理的能力直接映射到文件系统，方便审查、扩展和团队协作。"
+            },
+            {
+              "heading": "为什么火",
+              "bullets": [
+                "由 Vercel 官方推出，自带生态光环，发布两个多月即获 3.3k+ star。",
+                "解决了“代理项目逻辑散落、难以维护”的痛点，把提示词、工具、调度等配置实体化为文件，降低了认知负担。",
+                "内置 TUI (npx eve init 后的交互终端) 和本地沙箱，开箱即用，开发体验友好。"
+              ]
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "语言：TypeScript",
+                "运行时：Node.js",
+                "依赖：Zod 用于工具输入校验，支持主流模型（如 Anthropic Claude，示例中为 claude-sonnet-5）。",
+                "部署：可本地运行，推测可部署至 Vercel 或其他 Node 环境。",
+                "沙箱：eve eval 涉及本地沙箱（microsandbox），用于安全执行。"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "约定式项目结构：agent/ 目录下分 instructions.md（系统提示）、tools/（类型化函数）、skills/（按需加载的过程）、channels/（消息通道，如 Slack、Discord）、schedules/（cron 定时任务）、subagents/ 和 agent.ts（模型与运行时配置）。",
+                "工具系统：通过 defineTool 用 Zod Schema 声明工具，自动提供类型安全的执行环境。",
+                "技能与子代理：支持按需加载的 Markdown 过程（skills）和嵌套子代理（subagents），适合复杂工作流。",
+                "多渠道接入：原生支持 HTTP、Slack、Discord 等通道，可一键接入消息服务。",
+                "评估与清理：eve eval 可本地运行一次性评估，并在退出时清理沙箱计算资源。",
+                "完整文档内置：npm 包中包含全部文档，方便编写代理的 AI 助手直接读取 node_modules/eve/docs。"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "需要长期维护、多人协作的 AI 代理（文件结构天然适合版本控制）。",
+                "内部工具自动化，如定时周报生成、Slack 机器人、客服应答。",
+                "原型快速验证：通过 init 一条命令即可搭建可交互的代理。",
+                "对安全有要求的评估环境（沙箱隔离）。"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "bullets": [
+                "vs LangChain：LangChain 以代码为中心，eve 以文件约定为中心，结构更清晰，但灵活性不如 LangChain 的链式抽象。",
+                "vs CrewAI：CrewAI 侧重多智能体协作，eve 当前更偏向单代理的模块化，子代理功能可作为扩展。",
+                "vs Vercel 自家 AI SDK：AI SDK 更底层，提供模型统一接口；eve 在其上封装了代理生命周期、工具、调度等全栈功能。"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "---",
+              "bullets": [
+                "当前版本 eve@0.21.1（2026-07-07）。",
+                "最近修复：eve eval 在运行后能清理本地沙箱句柄，防止 eval 进程结束后资源残留。",
+                "项目处于 Beta 阶段，API 与行为可能随 GA 变化，但更新频率和问题响应积极。"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：未说明具体支持的全部模型提供商（示例仅出现 Anthropic）；未提供沙箱（microsandbox）的实现细节与隔离级别；无性能基准或资源占用数据；未明确生产环境部署方式（如是否强依赖 Vercel 平台）；Node.js 最低版本要求缺失"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "NotASithLord__peerd",
+          "fullName": "NotASithLord/peerd",
+          "owner": "NotASithLord",
+          "name": "peerd",
+          "url": "https://github.com/NotASithLord/peerd",
+          "oneLiner": "首个浏览器原生的AI代理框架，无后端、本地优先、BYOK、P2P共享。",
+          "description": "The first AI agent harness native to the browser. A browser extension that runs a full agent loop where you already work: it drives your tabs, spins up sandboxed compute (JS notebooks, WASM Linux VMs, client-side apps), and shares what it builds peer-to-peer. BYOK, no backend, no telemetry.",
+          "language": "JavaScript",
+          "category": "AI 应用",
+          "license": "Apache-2.0",
+          "starsTotal": 325,
+          "starsGained": 0,
+          "streakDays": 10,
+          "isNew": false,
+          "createdAt": "2026-06-22",
+          "pushedAt": "2026-07-07",
+          "latestRelease": "v0.2.6",
+          "firstSeen": "2026-06-29",
+          "topics": [
+            "agentic",
+            "ai-agent",
+            "browser-extension",
+            "chrome-extension",
+            "firefox-extension",
+            "llm",
+            "manifest-v3",
+            "p2p",
+            "webassembly",
+            "webrtc"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-29",
+              "reason": "new",
+              "starsTotal": 213,
+              "starsGained": 0,
+              "release": "v0.1.5"
+            },
+            {
+              "date": "2026-06-30",
+              "reason": "lightweight",
+              "starsTotal": 235,
+              "starsGained": 0,
+              "release": "v0.1.5"
+            },
+            {
+              "date": "2026-07-01",
+              "reason": "release_update",
+              "starsTotal": 255,
+              "starsGained": 0,
+              "release": "v0.2.1"
+            },
+            {
+              "date": "2026-07-02",
+              "reason": "lightweight",
+              "starsTotal": 272,
+              "starsGained": 0,
+              "release": "v0.2.1"
+            },
+            {
+              "date": "2026-07-03",
+              "reason": "lightweight",
+              "starsTotal": 285,
+              "starsGained": 0,
+              "release": "v0.2.1"
+            },
+            {
+              "date": "2026-07-04",
+              "reason": "lightweight",
+              "starsTotal": 291,
+              "starsGained": 0,
+              "release": "v0.2.1"
+            },
+            {
+              "date": "2026-07-05",
+              "reason": "release_update",
+              "starsTotal": 303,
+              "starsGained": 0,
+              "release": "v0.2.2"
+            },
+            {
+              "date": "2026-07-06",
+              "reason": "release_update",
+              "starsTotal": 315,
+              "starsGained": 0,
+              "release": "v0.2.5"
+            },
+            {
+              "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 317,
+              "starsGained": 0,
+              "release": "v0.2.5"
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "release_update",
+              "starsTotal": 325,
+              "starsGained": 0,
+              "release": "v0.2.6"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "peerd 是一个直接在浏览器中运行的 AI 代理框架。它以 Manifest V3 浏览器扩展形态存在，能将你现有的标签页、会话变成可被 AI 驱动的环境。它自己不带后端，所有计算与数据完全留在你的设备上，模型调用通过你提供的 API Key（Anthropic、OpenRouter 或本地 Ollama）完成，全程无遥测。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "在隐私与数据主权越来越被关注的当下，peerd 把 AI 代理的生命周期完整放进了浏览器的安全边界里。它不依赖云服务，数据不离开设备，却依然能实现读取页面、操作 DOM、运行代码沙箱、甚至 P2P 共享构建物等复杂任务。对想要个人自动化又不想把钥匙交给第三方的极客来说，这是一个新鲜且务实的选择。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "纯 JavaScript（ES2024+），无 TypeScript，无 JSX，无 bundler，零构建步骤",
+                "浏览器扩展（Chrome/Firefox）使用 Manifest V3",
+                "沙箱技术：V8 隔离区（JS Notebooks）、WebAssembly（Linux VM）、客户端应用",
+                "P2P 使用 WebRTC",
+                "安全模型：服务 Worker 持有密钥并审核所有请求；每个环境由独立 Actor 驱动，内存隔离",
+                "加密：WebCrypto 实现本地 vault，WebAuthn 解锁"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "body": "1. 标签页驱动：读取和操作当前已登录的网页，让 AI 直接在你的会话中工作 2. 沙箱计算：启动 JS 笔记本、编译好的 WASM Linux VM、运行客户端应用 3. 代理循环：内置 orchestrator 将任务委派给专用 Actor，每个 Actor 拥有受限的工具集 4. 记忆与技能：支持会话记忆、自定义技能、目标模式与审查 5. P2P 网络（预览版）：代理之间可直接通过 WebRTC 共享构建成果 6. 隐私保护：BYOK，密钥加密存储在本地 vault，所有请求经过审核，无任何遥测"
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "个人自动化：自动填写表单、监控页面变化、批量处理网页数据",
+                "轻量级开发：在浏览器内快速构建并分享小型工具或 Notebook",
+                "隐私优先的探索：希望体验 AI 代理但不愿将浏览数据上传至云端的用户",
+                "研究与实验：分析浏览器安全模型如何支撑代理系统，或测试 P2P 代理通信"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "body": "相比云端代理（如 AutoGPT、AgentGPT），peerd 完全脱离服务端依赖，无需托管，隐私性更强但功能受浏览器自身限制。与浏览器自动化工具（如 Selenium、Playwright）相比，它融入了 AI 推理回路，可自主决策，而不仅仅是执行预设脚本。不过目前项目仍处于 0.x 实验阶段，生态与成熟度远不及后者。"
+            },
+            {
+              "heading": "版本动态",
+              "body": "---",
+              "bullets": [
+                "当前版本 v0.2.6（2026-07-07 发布），修复了 Actor 权限误判、搜索指令重定向错误等问题",
+                "项目整体处于 0.x 实验 beta，API 和存储格式仍可能发生破坏性变更",
+                "商店包（Chrome/Firefox）待上架，目前主流安装方式为加载源文件夹的开发者预览版",
+                "P2P 功能只在预览通道提供，标为研究级",
+                "更新节奏积极，CI 流程完善，代码仓库结构清晰"
+              ]
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：P2P 功能仍为预览版，稳定性和完整度未验证；无性能基准或任务成功率数据；Chrome/Firefox 商店包尚未正式发布，大规模分发路径待定；语音交互的具体实现细节未在 README 中展开；与其他代理框架的横向对比仅供参考，非官方数据"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Johell1NS__browser-search",
+          "fullName": "Johell1NS/browser-search",
+          "owner": "Johell1NS",
+          "name": "browser-search",
+          "url": "https://github.com/Johell1NS/browser-search",
+          "oneLiner": "让AI代理自由搜网浏览，自托管、反封锁、抗幻觉实战技能包。",
+          "description": "A skill for AI agents: search the web with SearXNG, browse with Camofox, bypass protections with CloakBrowser. Anti-hallucination by design. Self-hosted, free, unlimited.",
+          "language": "JavaScript",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 319,
+          "starsGained": 0,
+          "streakDays": 8,
+          "isNew": false,
+          "createdAt": "2026-06-22",
+          "pushedAt": "2026-07-07",
+          "latestRelease": "v1.2.0",
+          "firstSeen": "2026-06-30",
+          "topics": [
+            "agent-skills",
+            "ai-agent",
+            "ai-tools",
+            "browser-automation",
+            "camoufox",
+            "cloakbrowser",
+            "deep-research",
+            "opencode",
+            "searxng",
+            "web-scraping",
+            "web-search"
+          ],
+          "appearances": [
+            {
+              "date": "2026-06-30",
+              "reason": "new",
+              "starsTotal": 222,
+              "starsGained": 0,
+              "release": "v1.1.0"
+            },
+            {
+              "date": "2026-07-01",
+              "reason": "lightweight",
+              "starsTotal": 255,
+              "starsGained": 0,
+              "release": "v1.1.0"
+            },
+            {
+              "date": "2026-07-02",
+              "reason": "lightweight",
+              "starsTotal": 272,
+              "starsGained": 0,
+              "release": "v1.1.0"
+            },
+            {
+              "date": "2026-07-03",
+              "reason": "lightweight",
+              "starsTotal": 282,
+              "starsGained": 0,
+              "release": "v1.1.0"
+            },
+            {
+              "date": "2026-07-04",
+              "reason": "lightweight",
+              "starsTotal": 287,
+              "starsGained": 0,
+              "release": "v1.1.0"
+            },
+            {
+              "date": "2026-07-05",
+              "reason": "lightweight",
+              "starsTotal": 302,
+              "starsGained": 0,
+              "release": "v1.1.0"
+            },
+            {
+              "date": "2026-07-06",
+              "reason": "lightweight",
+              "starsTotal": 312,
+              "starsGained": 0,
+              "release": "v1.1.0"
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "release_update",
+              "starsTotal": 319,
+              "starsGained": 0,
+              "release": "v1.2.0"
+            }
+          ],
+          "analysis": [
+            {
+              "heading": "它是什么",
+              "body": "browser-search 是一份写给 AI 代理（OpenCode/Claude Code 等）的技能文件，指导代理通过三个开源工具完成网络搜索与浏览：SearXNG（元搜索）、Camofox（Firefox REST API 浏览器）、CloakBrowser（隐身 Playwright 浏览器）。代理能自动选择工具，遇到反爬站点自动升级到隐蔽浏览器，所有组件免费自托管，无 API 限流。"
+            },
+            {
+              "heading": "为什么火",
+              "body": "1. 终结代理幻觉：强制“先搜再答”工作流，每个事实需多角度交叉验证，绝不编造。 2. 零成本反封锁：Cloudflare、Akamai 等反爬不再是障碍，CloakBrowser 58 条 C++ 底层补丁 + 类人指纹通过几乎所有测试，彻底告别付费反反爬服务。 3. 极简集成：一行 npx skills add 后 AI 代理自动读取文档并适配环境，无需手写胶水代码。 4. 全本地无限量：完全在本地运行，无 API 密钥、无订阅、无速率限制，树莓派都跑得动。"
+            },
+            {
+              "heading": "技术栈",
+              "bullets": [
+                "语言/运行时：Node.js (ESM 模块)",
+                "搜索层：SearXNG (Docker) → 多引擎聚合，返回 JSON",
+                "常规浏览：Camofox (Docker) → Firefox 内核 + REST API，内置 Readability.js 清洗正文",
+                "隐身浏览：CloakBrowser (npm) → Playwright + Chromium，自动检测并绕过反爬挑战",
+                "技能定义：SKILL.md (纯文本)，跨代理通用"
+              ]
+            },
+            {
+              "heading": "核心能力",
+              "bullets": [
+                "智能编排：代理自主决策使用 SearXNG 搜索、Camofox 浏览、CloakBrowser 突破封锁",
+                "自动逃生：Camofox 被 Cloudflare 阻断时自动升级到 CloakBrowser，覆盖 ~90% 普通站点 + ~10% 防护站点",
+                "反幻觉模式：深度研究工作流强制事实核查，对抗大模型幻觉",
+                "隐身引擎：CloakBrowser 实现 0.9 reCAPTCHA v3 人类级评分，通过 Cloudflare Turnstile",
+                "轻量持久：Camofox 常驻热容器，首次冷启动后所有请求近乎实时；CloakBrowser 按需启动"
+              ]
+            },
+            {
+              "heading": "适用场景",
+              "bullets": [
+                "AI 编码助手需要查阅最新文档或社区讨论",
+                "自主代理执行深度研究（如市场分析、竞品情报）",
+                "低资源设备（树莓派）上搭建个人 RSS/爬虫代理",
+                "绕过严格反爬的网站抓取原型验证"
+              ]
+            },
+            {
+              "heading": "同类对比",
+              "bullets": [
+                "vs. 付费搜索 API（Tavily/SerpAPI）：完全本地、零成本、无限量，但需自己维护基础设施。",
+                "vs. 单独使用 Playwright Stealth：本技能提供快速浏览（Camofox）与高隐身（CloakBrowser）的自动切换，避免所有请求都用重量级隐身代理造成的延迟。",
+                "vs. Perplexity 等闭源产品：开源、可审计、可自定义规则，敏感数据不离开自己机器。"
+              ]
+            },
+            {
+              "heading": "版本动态",
+              "body": "v1.2.0 (2026-07-07) 主要优化健康检查、修正默认输出格式、更新 Camofox 官方镜像引用、依赖升级 cloakbrowser 0.4.8，并重写中英文等多语言文档与安全说明。项目处于活跃迭代期。 ---"
+            },
+            {
+              "heading": "ℹ️ 置信度与信息盲区",
+              "bullets": [
+                "置信度：high",
+                "信息盲区：未提供 Docker Compose 或一键部署脚本，需用户自行配置 SearXNG 和 Camofox 容器；CloakBrowser 的实际反爬成功率缺乏独立第三方验证；未展示与其他 AI 搜索工具（如 Tavily、Exa）的直接性能/成本对比；FAQ 文档仅修复链接但未展示全文，其问题解答细节不明；缺少针对不同操作系统（Windows/macOS）的具体部署注意事项"
+              ]
+            }
+          ]
+        }
+      ],
+      "news": [
+        {
+          "title": "Get started with Claude Cowork",
+          "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPOElnMFRSS0I5bUtVV1lVdkM3QXRFRVloNnplb3Z2a2JNZk1WaGNZam81YkwzS1ZmRHc3a2R0d0ZpbF9WdTdqdVNmekJud0tCQVNuZWVId0RfWGhMdEZFZDdxSHlWWEtsV1NMQ3N0UHc0Z295eUNGZTRDdWYtSlYtUXZPaUc?oc=5",
+          "source": "Claude",
+          "sourceType": "official",
+          "published": "2026-07-07",
+          "summary": "介绍如何开始使用Claude Cowork功能。",
+          "category": "产品"
+        },
+        {
+          "title": "Expanding Managed Agents in Gemini API: background tasks, remote MCP and more",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api/",
+          "source": "Google AI",
+          "sourceType": "official",
+          "published": "2026-07-07",
+          "summary": "Gemini API托管代理扩展，新增后台任务和远程MCP支持。",
+          "category": "产品"
+        },
+        {
+          "title": "Australian Payments Plus moves faster with ChatGPT and Codex",
+          "url": "https://openai.com/index/australian-payments-plus",
+          "source": "OpenAI",
+          "sourceType": "official",
+          "published": "2026-07-07",
+          "summary": "Australian Payments Plus利用ChatGPT Enterprise和Codex提升支付处理效率。",
+          "category": "产品"
+        },
+        {
+          "title": "The Making of Claude Code",
+          "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5jM05EV3d2d3ZVQzVLcmJFbDJVa19sQXVTV2swWEZ3YUdMQ2VjM1k5VGQ5TDZIaXNhdEQ0YXFIQWI4VjRyZkp4TU9OU2toMG8xZF9JYk5YM1pEcU5lcWlkaG9QeDJCa0U?oc=5",
+          "source": "Anthropic",
+          "sourceType": "official",
+          "published": "2026-07-06",
+          "summary": "Anthropic揭示Claude Code的开发过程和技术细节。",
+          "category": "工程"
+        },
+        {
+          "title": "Government of Alberta uses Claude to find and fix cybersecurity vulnerabilities across government systems",
+          "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE10OWxIVTI4ckF3STdtUTIzSW9CdFRYZFRPUElzYW10ckxOZ3VPMWNGWjM4Vk9PMHllYjc1dkNuY1Y2OW5jSHI1eENJek9tcGk4UFhkR1NCSjU3X0lROXREZzhCVUVrTExkTmdCYnBRZHBpS044UXF5RUpn?oc=5",
+          "source": "Anthropic",
+          "sourceType": "official",
+          "published": "2026-07-06",
+          "summary": "阿尔伯塔省政府使用Claude检测和修复跨系统网络安全漏洞。",
+          "category": "产品"
+        },
+        {
+          "title": "Hugging Face Models on Foundry Managed Compute",
+          "url": "https://huggingface.co/blog/microsoft/foundry-managed-compute",
+          "source": "HF Blog",
+          "sourceType": "hf",
+          "published": "2026-07-07",
+          "summary": "Hugging Face模型可在Foundry托管计算上运行。",
+          "category": "产品"
+        },
+        {
+          "title": "Small AI Models Gain Traction In places with unreliable networks",
+          "url": "https://spectrum.ieee.org/small-language-models-ai-pharmaceuticals",
+          "source": "Hacker News",
+          "sourceType": "community",
+          "published": "2026-07-06",
+          "summary": "小型AI模型在不可靠网络地区受到青睐。",
+          "category": "观点"
+        },
+        {
+          "title": "Ternlight – 7 MB embedding model that runs in browser (WASM)",
+          "url": "https://ternlight-demo.vercel.app/",
+          "source": "Hacker News",
+          "sourceType": "community",
+          "published": "2026-07-06",
+          "summary": "Ternlight发布7MB嵌入模型，可在浏览器WASM中运行。",
+          "category": "模型发布"
+        },
+        {
+          "title": "iFLYTEK-Embodied-Omni Technical Report",
+          "url": "https://arxiv.org/abs/2607.02542",
+          "source": "arXiv cs.AI",
+          "sourceType": "paper",
+          "published": "2026-07-07",
+          "summary": "科大讯飞发布具身全模态模型Embodied-Omni技术报告。",
+          "category": "模型发布"
+        },
+        {
+          "title": "Internal Pluralism and the Limits of Pairwise Comparisons",
+          "url": "https://arxiv.org/abs/2607.02672",
+          "source": "arXiv cs.AI",
+          "sourceType": "paper",
+          "published": "2026-07-07",
+          "summary": "研究揭示内部多元性对成对比较学习的局限性。",
+          "category": "研究"
+        },
+        {
+          "title": "Improving LLMs via Validator-to-Generator Alignment",
+          "url": "https://arxiv.org/abs/2607.02668",
+          "source": "arXiv cs.CL",
+          "sourceType": "paper",
+          "published": "2026-07-07",
+          "summary": "提出通过验证器与生成器对齐改进大模型一致性的方法。",
+          "category": "研究"
+        },
+        {
+          "title": "Reinforcement Learning for Data-Efficient Code-Switched ASR",
+          "url": "https://arxiv.org/abs/2607.02757",
+          "source": "arXiv cs.CL",
+          "sourceType": "paper",
+          "published": "2026-07-07",
+          "summary": "强化学习实现数据高效的语码转换语音识别。",
+          "category": "研究"
+        }
+      ]
+    },
+    {
       "date": "2026-07-07",
       "count": 6,
       "projects": [
@@ -1062,6 +2478,13 @@
               "starsTotal": 4005,
               "starsGained": 539,
               "release": "v0.2.0"
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "lightweight",
+              "starsTotal": 5021,
+              "starsGained": 953,
+              "release": "v0.2.0"
             }
           ],
           "analysis": [
@@ -1254,8 +2677,8 @@
           "streakDays": 6,
           "isNew": false,
           "createdAt": "2026-02-13",
-          "pushedAt": "2026-07-06",
-          "latestRelease": "v3.8.45",
+          "pushedAt": "2026-07-07",
+          "latestRelease": "v3.8.46",
           "firstSeen": "2026-07-01",
           "topics": [
             "a2a",
@@ -1328,77 +2751,78 @@
               "starsTotal": 12401,
               "starsGained": 4411,
               "release": "v3.8.45"
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "release_update",
+              "starsTotal": 13060,
+              "starsGained": 4594,
+              "release": "v3.8.46"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "OmniRoute 是一个本地优先的开源 AI 网关，提供单一 /v1 端点接入 231+ 个大模型提供商（含 90+ 免费层），并自动完成故障转移、成本优化和 token 压缩。它可以把 Claude Code、Codex、Cursor、Cline 等工具无缝对接到免费/廉价的 Claude、GPT、Gemini 等模型，而无需为每个工具单独配置 API 密钥。"
+              "body": "OmniRoute 是一个开源免费 AI 网关（MIT 协议），通过单一 OpenAI 兼容端点（/v1）聚合 237 个 AI 供应商（含 90+ 免费层），并内置自动故障转移和 Token 压缩引擎。它能无缝对接 Claude Code、Cursor、Cline 等主流编码工具，让用户用上免费的 Claude/GPT/Gemini 等模型。"
             },
             {
               "heading": "为什么火",
+              "body": "截至分析时 Star 数超 13k，社区活跃。核心吸引力在于：",
               "bullets": [
-                "免费聚合：声称每月提供约 16 亿免费 token，去重统计免费池，不夸大。",
-                "极致压缩：RTK + Caveman 堆叠压缩技术，在工具调用密集场景可节省 15–95% token（平均约 89%），大幅延缓限额触发。",
-                "实用兼容：直接模拟 OpenAI、Claude、Gemini 消息格式，支持 MCP（95 个工具）、A2A，21,000+ 测试保障稳定性。",
-                "零成本起步：无需信用卡，11 个永久免费提供商，适合学生、个人开发者和低预算团队。"
+                "零成本起步：聚合 90+ 免费供应商，每月稳定提供约 16 亿 free token，首月可达 21 亿；",
+                "免配额焦虑：多层自动回退（订阅→API→廉价→免费），消除限流中断；",
+                "Token 节省：RTK + Caveman 堆叠压缩技术可减少 15–95% 的 token（工具输出多的场景平均省 89%）；",
+                "一站式集成：一个配置让所有 IDE/CLI 连接所有模型，大幅降低切换成本。"
               ]
             },
             {
               "heading": "技术栈",
               "bullets": [
                 "语言：TypeScript",
-                "分发：npm 包、Docker 镜像、Electron 桌面应用",
-                "核心机制：OpenAI 兼容代理、多策略路由（17 种）、TLS 指纹伪装、电路熔断器",
-                "集成：MCP、A2A、多语言 i18n（42+ 语言）",
-                "许可证：MIT"
+                "核心机制：RTK/Caveman 文本压缩、17 种路由策略（auto/* 组合）、智能故障转移",
+                "协议支持：OpenAI API 翻译、MCP（95 个工具）、A2A(Agent-to-Agent)、多模态 API",
+                "部署形态：Docker 镜像 / npm 包 / 桌面应用 (Electron) / PWA",
+                "质量保障：21,000+ 测试用例"
               ]
             },
             {
               "heading": "核心能力",
               "bullets": [
-                "单端点多协议转换：将请求翻译为 OpenAI、Claude、Gemini 等格式，任何客户端即插即用。",
-                "智能路由与回退：订阅 → API → 廉价 → 免费四级自动切换，保障不间断运行。",
-                "Token 压缩：RTK + Caveman 压缩会在请求前减少冗余文本（如 git diff、日志），大幅降低消耗。",
-                "丰富的提供商支持：内置 231+ 提供商，包含 Yuanbao、Cloudflare Workers AI 等新成员，支持 cookie-session 认证。",
-                "多代理与 CLI 兼容：直接搭配 Claude Code、Codex、Cline、Copilot 等 24+ 编码代理。",
-                "本地或自托管：可本地运行，保护隐私；也提供 Docker 部署。"
+                "一端点聚合：openai、anthropic、gemini 协议互译，统一 /v1 接口",
+                "自动回退：订阅额度耗尽自动切到免费或廉价供应商，无感知",
+                "Token 优化：对 git diff、grep 等工具输出进行高比例压缩",
+                "桌面/PWA 应用：提供可视化仪表盘管理提供商和使用量",
+                "免费额度仪表板：实时显示各供应商的文档化免费 token 额度及当月使用情况",
+                "MCP/A2A：内置工具协议，可直接作为 Agent 后端",
+                "生产级特性：断路保护、TLS 伪装、多种代理设置"
               ]
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "个人开发者：在 Claude Code/Cursor 中零成本使用多个大模型，避免每月付费。",
-                "小团队：统一管理多工具的 AI 配额，防止单点限流导致开发中断。",
-                "受限地区访问：通过 3 级代理和 TLS 指纹伪装绕过封锁。",
-                "Token 消耗敏感应用：如自动化代码审查、CI 流水线中的大模型调用，利用压缩节省成本。"
+                "个人开发者想免费使用高级大模型编码，不希望充多份 API 订阅；",
+                "团队需要稳定的 AI 编码助手基础设施，避免单一供应商故障；",
+                "重度 agent 用户（大量工具调用）需要降低 token 消耗成本；",
+                "网络受限地区通过内置代理访问 AI。"
               ]
             },
             {
               "heading": "同类对比",
-              "body": "与同类网关（如 LiteLLM、Portkey、One API）相比，差异点：",
-              "bullets": [
-                "极致免费聚合：专门扫描并维护大量无付费门槛的免费提供商，而非仅集成付费 API。",
-                "工具原生兼容：内置对 Claude Code、Codex 等具体工具的 wire-image 支持（如 v3.8.45 的 agentrouter 动态适配）。",
-                "深度压缩：独有的 RTK + Caveman 算法是其他网关未提供的。",
-                "全栈交付：除 HTTP 网关外，还提供 CLI、MCP、A2A 和桌面应用，生态更完整。"
-              ]
+              "body": "与 LiteLLM 等开源网关相比，OmniRoute 在聚合大量免费供应商和 Token 压缩方面具有独特性，并原生支持桌面应用和丰富的 IDE 集成配置。但 README 未提供详细的性能基准、延迟对比或兼容性矩阵，无法量化其网关效率优势。"
             },
             {
               "heading": "版本动态",
-              "body": "根据 v3.8.45 发布说明，近期更新包括： ---",
+              "body": "最新 v3.8.46（2026-07-07）主要更新： ---",
               "bullets": [
-                "新增 Yuanbao (腾讯元宝) 作为 cookie-session 提供商，支持 DeepSeek、Hunyuan 等模型。",
-                "agentrouter 获得动态 Claude-Code wire image 支持，保证与 Claude Code 工具链身份认证兼容。",
-                "Cloudflare Workers AI 批量密钥导入支持，修复账户 ID 隔离问题。",
-                "整体持续迭代，社区活跃（Discord、Telegram、WhatsApp）。"
+                "新增 hidePaidModels 开关下隐藏付费模型的 auto 路由逻辑；",
+                "提供 auto/glm、auto/gemini 等提供者家族虚拟组合路由，支持动态候选池。"
               ]
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
                 "置信度：medium",
-                "信息盲区：README 截断，缺少最简示例和完整 provider 列表入口；未提供 RTK + Caveman 压缩的技术细节和白皮书链接；未说明桌面应用的安装方式及最低系统要求；缺少基准性能测试数据（吞吐量、延迟）；快速开始的具体 CLI 交互流程未展示"
+                "信息盲区：快速入门的具体命令和配置步骤未在提供的 README 片段中展示，需查阅 getting-started 文档；RTK 和 Caveman 压缩技术的详细原理说明缺失；与其他网关（如 LiteLLM）的性能、延迟对比数据缺失；桌面应用/PWA 的安装方式及系统要求未明确说明；免费 Token 计数的方法论细节和实际测试截图未完全公开"
               ]
             }
           ]
@@ -1621,7 +3045,7 @@
           "streakDays": 5,
           "isNew": false,
           "createdAt": "2025-09-21",
-          "pushedAt": "2026-07-06",
+          "pushedAt": "2026-07-07",
           "latestRelease": "v1.6.2",
           "firstSeen": "2026-06-29",
           "topics": [
@@ -1673,6 +3097,13 @@
               "reason": "lightweight",
               "starsTotal": 6304,
               "starsGained": 2760,
+              "release": "v1.6.2"
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "lightweight",
+              "starsTotal": 6656,
+              "starsGained": 2127,
               "release": "v1.6.2"
             }
           ],
@@ -1763,7 +3194,7 @@
           "streakDays": 2,
           "isNew": false,
           "createdAt": "2026-07-02",
-          "pushedAt": "2026-07-06",
+          "pushedAt": "2026-07-07",
           "latestRelease": "",
           "firstSeen": "2026-07-05",
           "topics": [
@@ -1794,74 +3225,87 @@
               "starsTotal": 2393,
               "starsGained": 0,
               "release": ""
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "star_jump",
+              "starsTotal": 3182,
+              "starsGained": 0,
+              "release": ""
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "T3MP3ST 是一个多智能体进攻性安全元框架，用 TypeScript 打造，AGPL-3.0 许可。它把用户已有的 AI 编程代理（Claude Code、Codex、Hermes）或本地模型武装为自主红队，执行“侦察→利用→报告”完整杀伤链。通过浏览器 War Room 或 CLI 操作，无需额外 API 密钥、无需云账户，完全自托管。"
+              "body": "T3MP3ST 是一个开源的多智能体攻击安全元框架，把你已经登录的 AI 编码代理（Claude Code、Codex、Hermes 或本地模型）变成自主漏洞猎手。它把杀伤链自动化：侦察 → 利用 → 报告，全程通过浏览器 War Room 或 CLI 操作，不依赖额外的 API 密钥或云账单。"
             },
             {
               "heading": "为什么火",
               "bullets": [
-                "免信任的基准：在 XBOW 的 104 题黑箱基准上取得 90.1% pass@1（高于 XBOW 自报的 85%），且所有数字可通过 npm run verify-claims 从提交数据重新推导，零信任话语。",
-                "零密钥、全离线：后台驱动是本地已装的 AI 代理，或基于 Ollama/LM Studio 的本地模型，彻底消除外部 API 依赖。",
-                "极致透明：现状态表明确标注稳定/实验/计划功能，Swarm 等高级能力虽然引擎真实但仍不可靠，不吹嘘。",
-                "社区热度：创建仅 3 天即获 2232 Star，迅速吸引安全与 AI 社区眼球。"
+                "可重现的基准：在 XBOW 的 104 项挑战套件上达到 pass@1 均值 90.1%（Wilson 95% 置信区间 86.2–92.9），高于 XBOW 自报的 85%，所有数字可通过 npm run verify-claims 从提交的 JSON 数据重新推导，杜绝虚假宣传。",
+                "无密钥架构：直接复用本机已有的 AI 编码代理作为决策大脑，无需注册任何云服务，甚至支持 Ollama/LM Studio 完全离线运行。",
+                "透明状态：明确标注各个模块的成熟度（稳定/实验/规划），不自夸未经验证的功能。",
+                "多域覆盖：Web 应用、CTF、智能合约、源代码审计、嵌入式/OT 等领域均有不同程度的支持，且新领域采用可组合的“类/小队”架构。",
+                "安全约束：内置出口范围遏制，防止侦察工具访问无关公网主机。"
               ]
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "语言：TypeScript（运行时 Node.js）",
-                "多智能体架构：8 操作员杀伤链（Op Admiral 指挥，Recon、Exploiter、Infiltrator、Exfiltrator、Ghost 等），每个运行真实工具驱动的 ReAct 循环。",
-                "后端支持：Claude Code、Codex、Hermes 等编码代理；API 密钥模式（OpenRouter、Anthropic、OpenAI、xAI Grok）；完全离线模式（Ollama、LM Studio、vLLM 等 OpenAI 兼容服务）。",
-                "工具箱：默认 35 个工具（nmap、DNS、HTTP 等），可切换到完整兵工厂 83 个工具（含 Metasploit、Hydra 等需人工审批的后渗透工具）。",
-                "集成接口：MCP 服务器、HTTP API，War Room Web UI。"
+                "核心语言：TypeScript",
+                "架构：8 操作员的杀伤链（Recon/Exploit/Infiltrate/Exfiltrate/Ghost 等），每个操作员共享同一个基于真实工具的 ReAct 循环",
+                "工具库：默认 35 个内置工具，可选扩展至 83 个（通过 T3MP3ST_FULL_ARSENAL 开启危险组件，需人工审批）",
+                "接口：War Room Web UI、CLI、HTTP API、MCP 服务器",
+                "支持模型：可通过本机 AI 代理（Claude Code/Codex/Hermes）或 OpenAI 兼容 API（包括 Ollama、LM Studio、vLLM）驱动，工具调用通过文本实现，不强制要求原生函数调用",
+                "测试与验证：所有声称指标均可通过 npm run verify-claims 从 bench/ 中的 JSON 重新计算"
               ]
             },
             {
               "heading": "核心能力",
               "bullets": [
-                "侦察引擎（稳定）：真实驱动 nmap/DNS/HTTP 指纹，所有发现可溯源至工具输出。",
-                "协调披露管道（稳定）：OSV 新颖性检测 + 实时 PoC + 反驳面板 + CVSS，自动生成草稿，人工发送。",
-                "基线验证：run verify-claims 即可从原始数据重算所有基准数字，确保可复现性。",
-                "出口范围封锁（稳定默认开启）：锁定目标后，内置网络工具禁止访问目标范围外的公共主机，防止越界扫描。",
-                "白盒代码分析（实验）：目前仅支持 Python 正则提取，多模型分解成本较高。",
-                "Swarm 协同（实验）：各操作员均可独立使用工具循环，但端到端的 8 智能体协作仍未基准化，实际不够可靠。"
+                "侦察引擎（稳定）：实时驱动 nmap、DNS、HTTP 指纹等工具，每个发现可追溯至原始输出。",
+                "漏洞利用（实验性）：下游操作员运行与侦察相同的工具驱动循环，但 swarm 协同下的端到端利用尚未基准化，单代理模式有 90.1% 的 XBEN 成绩。",
+                "协调披露管道：针对嵌入式/OT 开源软件的漏洞探测，包含 OSV 新漏洞检查、实时 PoC 生成、独立重复验证和 CVSS 评分（目前停留在草稿，由人工发送）。",
+                "源码分析（实验性）：Python 正则引擎摄取，支持多模型分解（实际 token 成本更高）。",
+                "CTF 解决：Cybench 无提示模式下解决 23/40 挑战。",
+                "零密钥集成：直接劫持本地已登录的 AI 编码代理，实现“无密钥战争”。",
+                "自验证机制：运行一条命令即可重算所有 headline，保证数据不掺假。"
               ]
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "授权渗透测试人员快速自动化侦察与常见漏洞利用",
-                "CTF 选手练习或参加无提示挑战（Cybench 23/40）",
-                "嵌入式/机器人/工控等开源软件的漏洞挖掘与协调披露",
-                "企业内网自测，利用本地代理避免数据外泄",
-                "安全研究人员探索多智能体攻防框架"
+                "授权渗透测试与红队演练",
+                "安全研究中的自动化漏洞发现与验证",
+                "CTF 训练与解题辅助",
+                "开源供应链及物联网固件的协调披露",
+                "安全教学，展示 AI 驱动的攻击路径"
               ]
             },
             {
               "heading": "同类对比",
               "bullets": [
-                "vs XBOW：在相同基准上自称超越 XBOW 5 个百分点，且强调可复现；相对 XBOW 闭源商业平台，T3MP3ST 完全开源、本地可跑。",
-                "vs 传统红队工具（如 Metasploit、Cobalt Strike）：自动化程度更高，借助 AI 代理自主决策，但仍依赖成熟利用脚本。",
-                "vs 其他 AI 安全代理：独特之处在于零密钥、离线、强化可复现性验证，以及不带节奏的状态标注。"
+                "传统红队框架（Metasploit、Cobalt Strike）：T3MP3ST 由 AI 代理自主规划攻击链，无需手动编写利用模块，但其 swarm 协同利用的稳定性远不及成熟商业工具。",
+                "AI 安全基准项目（如 XBOW）：T3MP3ST 不仅开源、支持离线，还将控制权交给本机已有的编程代理，并公开完整的验证方法，透明性更高。",
+                "其他 LLM 安全工具：多为提示词插件或静态扫描，缺少完整的工具链和行动循环。"
               ]
             },
             {
               "heading": "版本动态",
               "body": "---",
               "bullets": [
-                "时间线：2026-07-02 创建，3 天内更新至 2026-07-05，迅猛迭代。",
-                "当前状况：侦察、War Room、MCP、披露管道等已稳定；Swarm、渗透利用、高级模块处于实验或规划早期。",
-                "路线承诺：新领域（云、移动、身份、二进制）以“类+工具包”方式组合，等待基准数字后再点亮状态。"
+                "仓库创建于 2026-07-02，最近推送 2026-07-07，星数 3182，开发极新且活跃。",
+                "侦察引擎、War Room、Mission 引擎、协调披露管道均为稳定态。",
+                "Exploiter/Infiltrator/Exfiltrator/Ghost 等操作员已实现工具 ReAct 循环，但 swarm 协同利用未经基准化，标记为实验。",
+                "云、移动、二进制等模块仅有存根代码，处于规划阶段。",
+                "单代理 XBEN 测试使用了被称为 gpt-5.5 的模型（可能为内部代号或定制版本），真实模型信息未公开。"
               ]
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
-                "置信度：high"
+                "置信度：high",
+                "信息盲区：未说明硬件最低要求或推荐配置；未声明操作系统兼容性（是否支持 Windows）；基准成绩依赖的模型 'gpt-5.5' 非公开已知模型，可能为内部代号或研发版本，其具体性能与可复现性存疑；协调披露管道提及的厂商通报草稿未公开，无法核实实际漏洞价值；Swarm 多智能体协同利用的可靠性未经过基准测试，目前仅单代理成绩有效"
               ]
             }
           ]
@@ -2056,8 +3500,8 @@
           "streakDays": 15,
           "isNew": false,
           "createdAt": "2026-06-16",
-          "pushedAt": "2026-07-06",
-          "latestRelease": "eve@0.20.0",
+          "pushedAt": "2026-07-07",
+          "latestRelease": "eve@0.21.1",
           "firstSeen": "2026-06-19",
           "topics": [
             "agent",
@@ -2182,53 +3626,80 @@
               "starsTotal": 3259,
               "starsGained": 0,
               "release": "eve@0.20.0"
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "release_update",
+              "starsTotal": 3297,
+              "starsGained": 0,
+              "release": "eve@0.21.1"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "eve 是 Vercel 推出的面向 AI 代理的框架，以文件系统为核心，将代理的指令、工具、技能、通道、调度等能力映射到约定的目录结构上，实现声明式开发。采用 TypeScript 编写，Apache-2.0 许可，强调持久化和沙箱安全，适合生产级自主代理。"
+              "body": "eve 是 Vercel 开源的“文件系统优先”AI 代理框架。它不要求你写冗长的编排代码，而是通过约定的目录结构（agent/instructions.md、agent/tools/、agent/skills/ 等）来定义代理的行为。代理的能力直接映射到文件系统，方便审查、扩展和团队协作。"
             },
             {
               "heading": "为什么火",
-              "body": "Vercel 的品牌加持、AI 代理开发热浪、内置沙箱和持久会话等生产特性，使其在两周内斩获 3k+ 星。社区活跃，文档完善，且框架文档随包发布，方便 AI 编码工具本地查阅。对厌倦了繁琐配置的开发者而言，约定大于配置的思路非常解渴。"
+              "bullets": [
+                "由 Vercel 官方推出，自带生态光环，发布两个多月即获 3.3k+ star。",
+                "解决了“代理项目逻辑散落、难以维护”的痛点，把提示词、工具、调度等配置实体化为文件，降低了认知负担。",
+                "内置 TUI (npx eve init 后的交互终端) 和本地沙箱，开箱即用，开发体验友好。"
+              ]
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "语言：TypeScript，运行于 Node.js",
-                "模型接入：基于 Vercel AI SDK（推测），示例使用 Claude Sonnet，支持多种模型",
-                "沙箱引擎：微虚拟机（microsandbox VMs）、Docker、Vercel 沙箱、just-bash 解释器",
-                "工具定义：Zod 模式，内置工具审批、子代理、调度、多通道（HTTP、Slack、Discord）",
-                "持久化：会话状态自动持久化，重启后恢复，文件附件缺失可降级"
+                "语言：TypeScript",
+                "运行时：Node.js",
+                "依赖：Zod 用于工具输入校验，支持主流模型（如 Anthropic Claude，示例中为 claude-sonnet-5）。",
+                "部署：可本地运行，推测可部署至 Vercel 或其他 Node 环境。",
+                "沙箱：eve eval 涉及本地沙箱（microsandbox），用于安全执行。"
               ]
             },
             {
               "heading": "核心能力",
-              "body": "1. 文件即代理：agent/ 目录下按约定放置 instructions.md、tools/、skills/、channels/、schedules/，零额外配置即可运行 2. 持久化会话：会话状态自动保存，服务重启或沙箱重建后能无缝恢复，文件缺失时用文本提示降级 3. 沙箱隔离：代码执行、命令运行均在可配置的沙箱环境，服务关闭时统一清理 4. 工具审批：允许工具调用携带 callId，实现全生命周期的审批门控 5. 协作取消：底层已支持 AbortSignal 全链路传播（模型、工具、沙箱），未来可直接触发取消 6. 子代理与技能：技能按需加载，子代理单独管理，支持复杂任务分解 7. 调度与通道：自带 cron 调度和 HTTP/Slack/Discord 通道扩展，开箱即用"
+              "bullets": [
+                "约定式项目结构：agent/ 目录下分 instructions.md（系统提示）、tools/（类型化函数）、skills/（按需加载的过程）、channels/（消息通道，如 Slack、Discord）、schedules/（cron 定时任务）、subagents/ 和 agent.ts（模型与运行时配置）。",
+                "工具系统：通过 defineTool 用 Zod Schema 声明工具，自动提供类型安全的执行环境。",
+                "技能与子代理：支持按需加载的 Markdown 过程（skills）和嵌套子代理（subagents），适合复杂工作流。",
+                "多渠道接入：原生支持 HTTP、Slack、Discord 等通道，可一键接入消息服务。",
+                "评估与清理：eve eval 可本地运行一次性评估，并在退出时清理沙箱计算资源。",
+                "完整文档内置：npm 包中包含全部文档，方便编写代理的 AI 助手直接读取 node_modules/eve/docs。"
+              ]
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "需要长期运行的自主代理：客服机器人、运维助手、数据管道",
-                "多步骤、有状态对话式应用：旅行规划、研究助手",
-                "安全执行代码的 AI 工具：在线编码助手、数据分析脚本",
-                "团队希望以低认知负荷组织代理项目，便于审查和扩展"
+                "需要长期维护、多人协作的 AI 代理（文件结构天然适合版本控制）。",
+                "内部工具自动化，如定时周报生成、Slack 机器人、客服应答。",
+                "原型快速验证：通过 init 一条命令即可搭建可交互的代理。",
+                "对安全有要求的评估环境（沙箱隔离）。"
               ]
             },
             {
               "heading": "同类对比",
-              "body": "与 LangChain、AutoGPT、CrewAI 相比，eve 更强调文件系统即接口，而非代码即接口。LangChain 灵活但抽象层多，AutoGPT 偏自助智能体，CrewAI 面向多角色协作；eve 更底层且内置沙箱，与 Vercel 平台天然集成，适合偏好简洁约定、需安全执行环境的 TypeScript 开发者。"
+              "bullets": [
+                "vs LangChain：LangChain 以代码为中心，eve 以文件约定为中心，结构更清晰，但灵活性不如 LangChain 的链式抽象。",
+                "vs CrewAI：CrewAI 侧重多智能体协作，eve 当前更偏向单代理的模块化，子代理功能可作为扩展。",
+                "vs Vercel 自家 AI SDK：AI SDK 更底层，提供模型统一接口；eve 在其上封装了代理生命周期、工具、调度等全栈功能。"
+              ]
             },
             {
               "heading": "版本动态",
-              "body": "当前 v0.20.0（2026-07-05）主要改进：沙箱在服务关闭时自动停止（含自定义后端破坏性变更）、评估提示更友好、工具上下文暴露 callId、会话恢复处理缺失附件不失败、全链路 AbortSignal 基础（尚无触发入口）。可见重心在安全清理、可观测性和鲁棒性，正迈向生产稳定。 ---"
+              "body": "---",
+              "bullets": [
+                "当前版本 eve@0.21.1（2026-07-07）。",
+                "最近修复：eve eval 在运行后能清理本地沙箱句柄，防止 eval 进程结束后资源残留。",
+                "项目处于 Beta 阶段，API 与行为可能随 GA 变化，但更新频率和问题响应积极。"
+              ]
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
                 "置信度：high",
-                "信息盲区：沙箱引擎的具体环境需求（Docker/微虚拟机的安装和版本）未详细列出；未提供性能基准测试数据；多代理协作的调度细节和上限未说明；持久化状态的存储后端（内存/文件/数据库）未明确；完整的支持模型列表仅示例未列出"
+                "信息盲区：未说明具体支持的全部模型提供商（示例仅出现 Anthropic）；未提供沙箱（microsandbox）的实现细节与隔离级别；无性能基准或资源占用数据；未明确生产环境部署方式（如是否强依赖 Vercel 平台）；Node.js 最低版本要求缺失"
               ]
             }
           ]
@@ -2284,6 +3755,13 @@
               "date": "2026-07-07",
               "reason": "lightweight",
               "starsTotal": 879,
+              "starsGained": 0,
+              "release": "v0.1.8"
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "lightweight",
+              "starsTotal": 903,
               "starsGained": 0,
               "release": "v0.1.8"
             }
@@ -2364,8 +3842,8 @@
           "streakDays": 8,
           "isNew": false,
           "createdAt": "2026-06-22",
-          "pushedAt": "2026-07-06",
-          "latestRelease": "v0.2.5",
+          "pushedAt": "2026-07-07",
+          "latestRelease": "v0.2.6",
           "firstSeen": "2026-06-29",
           "topics": [
             "agentic",
@@ -2442,72 +3920,68 @@
               "starsTotal": 317,
               "starsGained": 0,
               "release": "v0.2.5"
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "release_update",
+              "starsTotal": 325,
+              "starsGained": 0,
+              "release": "v0.2.6"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "peerd是一个浏览器扩展（Chrome/Firefox），将完整的AI Agent循环直接运行在浏览器运行时中。它可以读取和操控标签页，在WebAssembly沙箱中启动JS笔记本或Linux虚拟机，并通过WebRTC实现Agent间P2P通信。所有数据路径无后端、无遥测，用户自带模型密钥（Anthropic/OpenRouter/Ollama等），安全性建立在浏览器原生隔离机制（V8 isolate、WebCrypto、iframe沙箱）之上。"
+              "body": "peerd 是一个直接在浏览器中运行的 AI 代理框架。它以 Manifest V3 浏览器扩展形态存在，能将你现有的标签页、会话变成可被 AI 驱动的环境。它自己不带后端，所有计算与数据完全留在你的设备上，模型调用通过你提供的 API Key（Anthropic、OpenRouter 或本地 Ollama）完成，全程无遥测。"
             },
             {
               "heading": "为什么火",
-              "body": "当前大多数AI Agent方案需要云端服务器处理用户数据和API密钥，存在隐私和延迟问题。peerd完全运行在用户机器上，密钥加密存储于本地vault，Agent循环在Service Worker中编排，实际环境操作由隔离的Actor执行，原始页面内容不会进入持有密钥的上下文。这种安全边界由浏览器平台强制的设计吸引了注重隐私和自主控制的开发者。同时，它在浏览器内提供完整的沙箱计算（Linux VM、笔记本、客户端应用），填补了浏览器Agent能力的空白。"
+              "body": "在隐私与数据主权越来越被关注的当下，peerd 把 AI 代理的生命周期完整放进了浏览器的安全边界里。它不依赖云服务，数据不离开设备，却依然能实现读取页面、操作 DOM、运行代码沙箱、甚至 P2P 共享构建物等复杂任务。对想要个人自动化又不想把钥匙交给第三方的极客来说，这是一个新鲜且务实的选择。"
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "前端运行时：纯Vanilla JS (ES2024+)，ES模块，无TypeScript、无构建步骤、无npm依赖",
-                "浏览器平台：Manifest V3，Service Worker作为编排器，V8 isolate for Workers",
-                "安全模型：WebCrypto、WebAuthn passkeys、Subresource Integrity、opaque-origin iframes",
-                "沙箱：WebAssembly (WASM) Linux VM、JS notebooks、客户端app",
-                "对等网络：WebRTC、P2P agent-to-agent通信（预览通道）",
-                "可扩展性：模型适配器（Anthropic, OpenRouter, Ollama），安全出口网关（egress allowlist），审计日志"
+                "纯 JavaScript（ES2024+），无 TypeScript，无 JSX，无 bundler，零构建步骤",
+                "浏览器扩展（Chrome/Firefox）使用 Manifest V3",
+                "沙箱技术：V8 隔离区（JS Notebooks）、WebAssembly（Linux VM）、客户端应用",
+                "P2P 使用 WebRTC",
+                "安全模型：服务 Worker 持有密钥并审核所有请求；每个环境由独立 Actor 驱动，内存隔离",
+                "加密：WebCrypto 实现本地 vault，WebAuthn 解锁"
               ]
             },
             {
               "heading": "核心能力",
-              "bullets": [
-                "Agent循环：驱动标签页，执行click、输入、导航，并观察页面实际变化判定成功",
-                "沙箱执行环境：创建JS笔记本、WebVM、客户端应用，每个环境由独立Actor隔离",
-                "P2P共享：通过WebRTC mesh进行agent间对话，支持线程化对话和回复授权",
-                "安全守护：密钥仅存于vault（加密），所有外发请求经安全网关卡点，审计日志带哈希链防篡改",
-                "模型灵活：支持闭源/开源/本地模型，一键切换，每会话选模型",
-                "语音输入（Goal mode）、技能系统、记忆Review等高级功能"
-              ]
+              "body": "1. 标签页驱动：读取和操作当前已登录的网页，让 AI 直接在你的会话中工作 2. 沙箱计算：启动 JS 笔记本、编译好的 WASM Linux VM、运行客户端应用 3. 代理循环：内置 orchestrator 将任务委派给专用 Actor，每个 Actor 拥有受限的工具集 4. 记忆与技能：支持会话记忆、自定义技能、目标模式与审查 5. P2P 网络（预览版）：代理之间可直接通过 WebRTC 共享构建成果 6. 隐私保护：BYOK，密钥加密存储在本地 vault，所有请求经过审核，无任何遥测"
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "自动化网页操作（如填表、数据抓取）且不希望数据离开本机",
-                "本地开发环境中的辅助编程与探索，利用浏览器内置沙箱运行不安全代码",
-                "学术/安全研究中的可控浏览器代理实验",
-                "去中心化应用（dweb）的早期试验，构建Agent-to-Agent的P2P协作"
+                "个人自动化：自动填写表单、监控页面变化、批量处理网页数据",
+                "轻量级开发：在浏览器内快速构建并分享小型工具或 Notebook",
+                "隐私优先的探索：希望体验 AI 代理但不愿将浏览数据上传至云端的用户",
+                "研究与实验：分析浏览器安全模型如何支撑代理系统，或测试 P2P 代理通信"
               ]
             },
             {
               "heading": "同类对比",
-              "bullets": [
-                "Open Interpreter / TaskWeaver：通常依赖Python后端和云端模型，peerd完全在浏览器内运行，无安装负担",
-                "ChatGPT插件/Claude desktop agent：绑定特定模型，存在遥测，peerd是BYOK且代码开源可审计",
-                "其他浏览器自动化扩展：多仅支持简单脚本，peerd提供了完整Agent循环和隔离安全模型",
-                "Khoj：本地个人搜索Agent，但peerd更侧重浏览器驱动和P2P计算共享"
-              ]
+              "body": "相比云端代理（如 AutoGPT、AgentGPT），peerd 完全脱离服务端依赖，无需托管，隐私性更强但功能受浏览器自身限制。与浏览器自动化工具（如 Selenium、Playwright）相比，它融入了 AI 推理回路，可自主决策，而不仅仅是执行预设脚本。不过目前项目仍处于 0.x 实验阶段，生态与成熟度远不及后者。"
             },
             {
               "heading": "版本动态",
               "body": "---",
               "bullets": [
-                "当前0.x实验beta，v0.2.5于2026-07-06发布",
-                "安全加固：审计日志完整性、会话授权Origin限制、传输导入门控",
-                "新增P2P mesh中的持久线程对话（预览），per-conversation回复授权",
-                "破坏性变更可能，存储格式未冻结，无V1承诺"
+                "当前版本 v0.2.6（2026-07-07 发布），修复了 Actor 权限误判、搜索指令重定向错误等问题",
+                "项目整体处于 0.x 实验 beta，API 和存储格式仍可能发生破坏性变更",
+                "商店包（Chrome/Firefox）待上架，目前主流安装方式为加载源文件夹的开发者预览版",
+                "P2P 功能只在预览通道提供，标为研究级",
+                "更新节奏积极，CI 流程完善，代码仓库结构清晰"
               ]
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
                 "置信度：high",
-                "信息盲区：未提供基准测试数据（如Agent任务成功率、延迟对比）；与同类工具（Open Interpreter、AutoGPT等）的直接对比未给出；dweb预览通道的稳定性和规模限制未量化；移动端支持状态未说明；沙箱计算环境的性能上限（如WebVM可分配内存）未明示"
+                "信息盲区：P2P 功能仍为预览版，稳定性和完整度未验证；无性能基准或任务成功率数据；Chrome/Firefox 商店包尚未正式发布，大规模分发路径待定；语音交互的具体实现细节未在 README 中展开；与其他代理框架的横向对比仅供参考，非官方数据"
               ]
             }
           ]
@@ -2786,6 +4260,13 @@
               "starsTotal": 18843,
               "starsGained": 2972,
               "release": "v0.4.0"
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "lightweight",
+              "starsTotal": 20482,
+              "starsGained": 5769,
+              "release": "v0.4.0"
             }
           ],
           "analysis": [
@@ -3056,7 +4537,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-07-02",
-          "pushedAt": "2026-07-06",
+          "pushedAt": "2026-07-07",
           "latestRelease": "",
           "firstSeen": "2026-07-05",
           "topics": [
@@ -3087,74 +4568,87 @@
               "starsTotal": 2393,
               "starsGained": 0,
               "release": ""
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "star_jump",
+              "starsTotal": 3182,
+              "starsGained": 0,
+              "release": ""
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "T3MP3ST 是一个多智能体进攻性安全元框架，用 TypeScript 打造，AGPL-3.0 许可。它把用户已有的 AI 编程代理（Claude Code、Codex、Hermes）或本地模型武装为自主红队，执行“侦察→利用→报告”完整杀伤链。通过浏览器 War Room 或 CLI 操作，无需额外 API 密钥、无需云账户，完全自托管。"
+              "body": "T3MP3ST 是一个开源的多智能体攻击安全元框架，把你已经登录的 AI 编码代理（Claude Code、Codex、Hermes 或本地模型）变成自主漏洞猎手。它把杀伤链自动化：侦察 → 利用 → 报告，全程通过浏览器 War Room 或 CLI 操作，不依赖额外的 API 密钥或云账单。"
             },
             {
               "heading": "为什么火",
               "bullets": [
-                "免信任的基准：在 XBOW 的 104 题黑箱基准上取得 90.1% pass@1（高于 XBOW 自报的 85%），且所有数字可通过 npm run verify-claims 从提交数据重新推导，零信任话语。",
-                "零密钥、全离线：后台驱动是本地已装的 AI 代理，或基于 Ollama/LM Studio 的本地模型，彻底消除外部 API 依赖。",
-                "极致透明：现状态表明确标注稳定/实验/计划功能，Swarm 等高级能力虽然引擎真实但仍不可靠，不吹嘘。",
-                "社区热度：创建仅 3 天即获 2232 Star，迅速吸引安全与 AI 社区眼球。"
+                "可重现的基准：在 XBOW 的 104 项挑战套件上达到 pass@1 均值 90.1%（Wilson 95% 置信区间 86.2–92.9），高于 XBOW 自报的 85%，所有数字可通过 npm run verify-claims 从提交的 JSON 数据重新推导，杜绝虚假宣传。",
+                "无密钥架构：直接复用本机已有的 AI 编码代理作为决策大脑，无需注册任何云服务，甚至支持 Ollama/LM Studio 完全离线运行。",
+                "透明状态：明确标注各个模块的成熟度（稳定/实验/规划），不自夸未经验证的功能。",
+                "多域覆盖：Web 应用、CTF、智能合约、源代码审计、嵌入式/OT 等领域均有不同程度的支持，且新领域采用可组合的“类/小队”架构。",
+                "安全约束：内置出口范围遏制，防止侦察工具访问无关公网主机。"
               ]
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "语言：TypeScript（运行时 Node.js）",
-                "多智能体架构：8 操作员杀伤链（Op Admiral 指挥，Recon、Exploiter、Infiltrator、Exfiltrator、Ghost 等），每个运行真实工具驱动的 ReAct 循环。",
-                "后端支持：Claude Code、Codex、Hermes 等编码代理；API 密钥模式（OpenRouter、Anthropic、OpenAI、xAI Grok）；完全离线模式（Ollama、LM Studio、vLLM 等 OpenAI 兼容服务）。",
-                "工具箱：默认 35 个工具（nmap、DNS、HTTP 等），可切换到完整兵工厂 83 个工具（含 Metasploit、Hydra 等需人工审批的后渗透工具）。",
-                "集成接口：MCP 服务器、HTTP API，War Room Web UI。"
+                "核心语言：TypeScript",
+                "架构：8 操作员的杀伤链（Recon/Exploit/Infiltrate/Exfiltrate/Ghost 等），每个操作员共享同一个基于真实工具的 ReAct 循环",
+                "工具库：默认 35 个内置工具，可选扩展至 83 个（通过 T3MP3ST_FULL_ARSENAL 开启危险组件，需人工审批）",
+                "接口：War Room Web UI、CLI、HTTP API、MCP 服务器",
+                "支持模型：可通过本机 AI 代理（Claude Code/Codex/Hermes）或 OpenAI 兼容 API（包括 Ollama、LM Studio、vLLM）驱动，工具调用通过文本实现，不强制要求原生函数调用",
+                "测试与验证：所有声称指标均可通过 npm run verify-claims 从 bench/ 中的 JSON 重新计算"
               ]
             },
             {
               "heading": "核心能力",
               "bullets": [
-                "侦察引擎（稳定）：真实驱动 nmap/DNS/HTTP 指纹，所有发现可溯源至工具输出。",
-                "协调披露管道（稳定）：OSV 新颖性检测 + 实时 PoC + 反驳面板 + CVSS，自动生成草稿，人工发送。",
-                "基线验证：run verify-claims 即可从原始数据重算所有基准数字，确保可复现性。",
-                "出口范围封锁（稳定默认开启）：锁定目标后，内置网络工具禁止访问目标范围外的公共主机，防止越界扫描。",
-                "白盒代码分析（实验）：目前仅支持 Python 正则提取，多模型分解成本较高。",
-                "Swarm 协同（实验）：各操作员均可独立使用工具循环，但端到端的 8 智能体协作仍未基准化，实际不够可靠。"
+                "侦察引擎（稳定）：实时驱动 nmap、DNS、HTTP 指纹等工具，每个发现可追溯至原始输出。",
+                "漏洞利用（实验性）：下游操作员运行与侦察相同的工具驱动循环，但 swarm 协同下的端到端利用尚未基准化，单代理模式有 90.1% 的 XBEN 成绩。",
+                "协调披露管道：针对嵌入式/OT 开源软件的漏洞探测，包含 OSV 新漏洞检查、实时 PoC 生成、独立重复验证和 CVSS 评分（目前停留在草稿，由人工发送）。",
+                "源码分析（实验性）：Python 正则引擎摄取，支持多模型分解（实际 token 成本更高）。",
+                "CTF 解决：Cybench 无提示模式下解决 23/40 挑战。",
+                "零密钥集成：直接劫持本地已登录的 AI 编码代理，实现“无密钥战争”。",
+                "自验证机制：运行一条命令即可重算所有 headline，保证数据不掺假。"
               ]
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "授权渗透测试人员快速自动化侦察与常见漏洞利用",
-                "CTF 选手练习或参加无提示挑战（Cybench 23/40）",
-                "嵌入式/机器人/工控等开源软件的漏洞挖掘与协调披露",
-                "企业内网自测，利用本地代理避免数据外泄",
-                "安全研究人员探索多智能体攻防框架"
+                "授权渗透测试与红队演练",
+                "安全研究中的自动化漏洞发现与验证",
+                "CTF 训练与解题辅助",
+                "开源供应链及物联网固件的协调披露",
+                "安全教学，展示 AI 驱动的攻击路径"
               ]
             },
             {
               "heading": "同类对比",
               "bullets": [
-                "vs XBOW：在相同基准上自称超越 XBOW 5 个百分点，且强调可复现；相对 XBOW 闭源商业平台，T3MP3ST 完全开源、本地可跑。",
-                "vs 传统红队工具（如 Metasploit、Cobalt Strike）：自动化程度更高，借助 AI 代理自主决策，但仍依赖成熟利用脚本。",
-                "vs 其他 AI 安全代理：独特之处在于零密钥、离线、强化可复现性验证，以及不带节奏的状态标注。"
+                "传统红队框架（Metasploit、Cobalt Strike）：T3MP3ST 由 AI 代理自主规划攻击链，无需手动编写利用模块，但其 swarm 协同利用的稳定性远不及成熟商业工具。",
+                "AI 安全基准项目（如 XBOW）：T3MP3ST 不仅开源、支持离线，还将控制权交给本机已有的编程代理，并公开完整的验证方法，透明性更高。",
+                "其他 LLM 安全工具：多为提示词插件或静态扫描，缺少完整的工具链和行动循环。"
               ]
             },
             {
               "heading": "版本动态",
               "body": "---",
               "bullets": [
-                "时间线：2026-07-02 创建，3 天内更新至 2026-07-05，迅猛迭代。",
-                "当前状况：侦察、War Room、MCP、披露管道等已稳定；Swarm、渗透利用、高级模块处于实验或规划早期。",
-                "路线承诺：新领域（云、移动、身份、二进制）以“类+工具包”方式组合，等待基准数字后再点亮状态。"
+                "仓库创建于 2026-07-02，最近推送 2026-07-07，星数 3182，开发极新且活跃。",
+                "侦察引擎、War Room、Mission 引擎、协调披露管道均为稳定态。",
+                "Exploiter/Infiltrator/Exfiltrator/Ghost 等操作员已实现工具 ReAct 循环，但 swarm 协同利用未经基准化，标记为实验。",
+                "云、移动、二进制等模块仅有存根代码，处于规划阶段。",
+                "单代理 XBEN 测试使用了被称为 gpt-5.5 的模型（可能为内部代号或定制版本），真实模型信息未公开。"
               ]
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
-                "置信度：high"
+                "置信度：high",
+                "信息盲区：未说明硬件最低要求或推荐配置；未声明操作系统兼容性（是否支持 Windows）；基准成绩依赖的模型 'gpt-5.5' 非公开已知模型，可能为内部代号或研发版本，其具体性能与可复现性存疑；协调披露管道提及的厂商通报草稿未公开，无法核实实际漏洞价值；Swarm 多智能体协同利用的可靠性未经过基准测试，目前仅单代理成绩有效"
               ]
             }
           ]
@@ -3175,7 +4669,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2022-02-03",
-          "pushedAt": "2026-07-06",
+          "pushedAt": "2026-07-07",
           "latestRelease": "v3.0.1",
           "firstSeen": "2026-07-05",
           "topics": [
@@ -3209,6 +4703,13 @@
               "reason": "lightweight",
               "starsTotal": 106422,
               "starsGained": 1416,
+              "release": "v3.0.1"
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "lightweight",
+              "starsTotal": 106690,
+              "starsGained": 1848,
               "release": "v3.0.1"
             }
           ],
@@ -3298,8 +4799,8 @@
           "streakDays": 5,
           "isNew": false,
           "createdAt": "2026-02-13",
-          "pushedAt": "2026-07-06",
-          "latestRelease": "v3.8.45",
+          "pushedAt": "2026-07-07",
+          "latestRelease": "v3.8.46",
           "firstSeen": "2026-07-01",
           "topics": [
             "a2a",
@@ -3372,77 +4873,78 @@
               "starsTotal": 12401,
               "starsGained": 4411,
               "release": "v3.8.45"
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "release_update",
+              "starsTotal": 13060,
+              "starsGained": 4594,
+              "release": "v3.8.46"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "OmniRoute 是一个本地优先的开源 AI 网关，提供单一 /v1 端点接入 231+ 个大模型提供商（含 90+ 免费层），并自动完成故障转移、成本优化和 token 压缩。它可以把 Claude Code、Codex、Cursor、Cline 等工具无缝对接到免费/廉价的 Claude、GPT、Gemini 等模型，而无需为每个工具单独配置 API 密钥。"
+              "body": "OmniRoute 是一个开源免费 AI 网关（MIT 协议），通过单一 OpenAI 兼容端点（/v1）聚合 237 个 AI 供应商（含 90+ 免费层），并内置自动故障转移和 Token 压缩引擎。它能无缝对接 Claude Code、Cursor、Cline 等主流编码工具，让用户用上免费的 Claude/GPT/Gemini 等模型。"
             },
             {
               "heading": "为什么火",
+              "body": "截至分析时 Star 数超 13k，社区活跃。核心吸引力在于：",
               "bullets": [
-                "免费聚合：声称每月提供约 16 亿免费 token，去重统计免费池，不夸大。",
-                "极致压缩：RTK + Caveman 堆叠压缩技术，在工具调用密集场景可节省 15–95% token（平均约 89%），大幅延缓限额触发。",
-                "实用兼容：直接模拟 OpenAI、Claude、Gemini 消息格式，支持 MCP（95 个工具）、A2A，21,000+ 测试保障稳定性。",
-                "零成本起步：无需信用卡，11 个永久免费提供商，适合学生、个人开发者和低预算团队。"
+                "零成本起步：聚合 90+ 免费供应商，每月稳定提供约 16 亿 free token，首月可达 21 亿；",
+                "免配额焦虑：多层自动回退（订阅→API→廉价→免费），消除限流中断；",
+                "Token 节省：RTK + Caveman 堆叠压缩技术可减少 15–95% 的 token（工具输出多的场景平均省 89%）；",
+                "一站式集成：一个配置让所有 IDE/CLI 连接所有模型，大幅降低切换成本。"
               ]
             },
             {
               "heading": "技术栈",
               "bullets": [
                 "语言：TypeScript",
-                "分发：npm 包、Docker 镜像、Electron 桌面应用",
-                "核心机制：OpenAI 兼容代理、多策略路由（17 种）、TLS 指纹伪装、电路熔断器",
-                "集成：MCP、A2A、多语言 i18n（42+ 语言）",
-                "许可证：MIT"
+                "核心机制：RTK/Caveman 文本压缩、17 种路由策略（auto/* 组合）、智能故障转移",
+                "协议支持：OpenAI API 翻译、MCP（95 个工具）、A2A(Agent-to-Agent)、多模态 API",
+                "部署形态：Docker 镜像 / npm 包 / 桌面应用 (Electron) / PWA",
+                "质量保障：21,000+ 测试用例"
               ]
             },
             {
               "heading": "核心能力",
               "bullets": [
-                "单端点多协议转换：将请求翻译为 OpenAI、Claude、Gemini 等格式，任何客户端即插即用。",
-                "智能路由与回退：订阅 → API → 廉价 → 免费四级自动切换，保障不间断运行。",
-                "Token 压缩：RTK + Caveman 压缩会在请求前减少冗余文本（如 git diff、日志），大幅降低消耗。",
-                "丰富的提供商支持：内置 231+ 提供商，包含 Yuanbao、Cloudflare Workers AI 等新成员，支持 cookie-session 认证。",
-                "多代理与 CLI 兼容：直接搭配 Claude Code、Codex、Cline、Copilot 等 24+ 编码代理。",
-                "本地或自托管：可本地运行，保护隐私；也提供 Docker 部署。"
+                "一端点聚合：openai、anthropic、gemini 协议互译，统一 /v1 接口",
+                "自动回退：订阅额度耗尽自动切到免费或廉价供应商，无感知",
+                "Token 优化：对 git diff、grep 等工具输出进行高比例压缩",
+                "桌面/PWA 应用：提供可视化仪表盘管理提供商和使用量",
+                "免费额度仪表板：实时显示各供应商的文档化免费 token 额度及当月使用情况",
+                "MCP/A2A：内置工具协议，可直接作为 Agent 后端",
+                "生产级特性：断路保护、TLS 伪装、多种代理设置"
               ]
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "个人开发者：在 Claude Code/Cursor 中零成本使用多个大模型，避免每月付费。",
-                "小团队：统一管理多工具的 AI 配额，防止单点限流导致开发中断。",
-                "受限地区访问：通过 3 级代理和 TLS 指纹伪装绕过封锁。",
-                "Token 消耗敏感应用：如自动化代码审查、CI 流水线中的大模型调用，利用压缩节省成本。"
+                "个人开发者想免费使用高级大模型编码，不希望充多份 API 订阅；",
+                "团队需要稳定的 AI 编码助手基础设施，避免单一供应商故障；",
+                "重度 agent 用户（大量工具调用）需要降低 token 消耗成本；",
+                "网络受限地区通过内置代理访问 AI。"
               ]
             },
             {
               "heading": "同类对比",
-              "body": "与同类网关（如 LiteLLM、Portkey、One API）相比，差异点：",
-              "bullets": [
-                "极致免费聚合：专门扫描并维护大量无付费门槛的免费提供商，而非仅集成付费 API。",
-                "工具原生兼容：内置对 Claude Code、Codex 等具体工具的 wire-image 支持（如 v3.8.45 的 agentrouter 动态适配）。",
-                "深度压缩：独有的 RTK + Caveman 算法是其他网关未提供的。",
-                "全栈交付：除 HTTP 网关外，还提供 CLI、MCP、A2A 和桌面应用，生态更完整。"
-              ]
+              "body": "与 LiteLLM 等开源网关相比，OmniRoute 在聚合大量免费供应商和 Token 压缩方面具有独特性，并原生支持桌面应用和丰富的 IDE 集成配置。但 README 未提供详细的性能基准、延迟对比或兼容性矩阵，无法量化其网关效率优势。"
             },
             {
               "heading": "版本动态",
-              "body": "根据 v3.8.45 发布说明，近期更新包括： ---",
+              "body": "最新 v3.8.46（2026-07-07）主要更新： ---",
               "bullets": [
-                "新增 Yuanbao (腾讯元宝) 作为 cookie-session 提供商，支持 DeepSeek、Hunyuan 等模型。",
-                "agentrouter 获得动态 Claude-Code wire image 支持，保证与 Claude Code 工具链身份认证兼容。",
-                "Cloudflare Workers AI 批量密钥导入支持，修复账户 ID 隔离问题。",
-                "整体持续迭代，社区活跃（Discord、Telegram、WhatsApp）。"
+                "新增 hidePaidModels 开关下隐藏付费模型的 auto 路由逻辑；",
+                "提供 auto/glm、auto/gemini 等提供者家族虚拟组合路由，支持动态候选池。"
               ]
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
                 "置信度：medium",
-                "信息盲区：README 截断，缺少最简示例和完整 provider 列表入口；未提供 RTK + Caveman 压缩的技术细节和白皮书链接；未说明桌面应用的安装方式及最低系统要求；缺少基准性能测试数据（吞吐量、延迟）；快速开始的具体 CLI 交互流程未展示"
+                "信息盲区：快速入门的具体命令和配置步骤未在提供的 README 片段中展示，需查阅 getting-started 文档；RTK 和 Caveman 压缩技术的详细原理说明缺失；与其他网关（如 LiteLLM）的性能、延迟对比数据缺失；桌面应用/PWA 的安装方式及系统要求未明确说明；免费 Token 计数的方法论细节和实际测试截图未完全公开"
               ]
             }
           ]
@@ -4303,8 +5805,8 @@
           "streakDays": 7,
           "isNew": false,
           "createdAt": "2026-06-22",
-          "pushedAt": "2026-07-06",
-          "latestRelease": "v0.2.5",
+          "pushedAt": "2026-07-07",
+          "latestRelease": "v0.2.6",
           "firstSeen": "2026-06-29",
           "topics": [
             "agentic",
@@ -4381,72 +5883,68 @@
               "starsTotal": 317,
               "starsGained": 0,
               "release": "v0.2.5"
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "release_update",
+              "starsTotal": 325,
+              "starsGained": 0,
+              "release": "v0.2.6"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "peerd是一个浏览器扩展（Chrome/Firefox），将完整的AI Agent循环直接运行在浏览器运行时中。它可以读取和操控标签页，在WebAssembly沙箱中启动JS笔记本或Linux虚拟机，并通过WebRTC实现Agent间P2P通信。所有数据路径无后端、无遥测，用户自带模型密钥（Anthropic/OpenRouter/Ollama等），安全性建立在浏览器原生隔离机制（V8 isolate、WebCrypto、iframe沙箱）之上。"
+              "body": "peerd 是一个直接在浏览器中运行的 AI 代理框架。它以 Manifest V3 浏览器扩展形态存在，能将你现有的标签页、会话变成可被 AI 驱动的环境。它自己不带后端，所有计算与数据完全留在你的设备上，模型调用通过你提供的 API Key（Anthropic、OpenRouter 或本地 Ollama）完成，全程无遥测。"
             },
             {
               "heading": "为什么火",
-              "body": "当前大多数AI Agent方案需要云端服务器处理用户数据和API密钥，存在隐私和延迟问题。peerd完全运行在用户机器上，密钥加密存储于本地vault，Agent循环在Service Worker中编排，实际环境操作由隔离的Actor执行，原始页面内容不会进入持有密钥的上下文。这种安全边界由浏览器平台强制的设计吸引了注重隐私和自主控制的开发者。同时，它在浏览器内提供完整的沙箱计算（Linux VM、笔记本、客户端应用），填补了浏览器Agent能力的空白。"
+              "body": "在隐私与数据主权越来越被关注的当下，peerd 把 AI 代理的生命周期完整放进了浏览器的安全边界里。它不依赖云服务，数据不离开设备，却依然能实现读取页面、操作 DOM、运行代码沙箱、甚至 P2P 共享构建物等复杂任务。对想要个人自动化又不想把钥匙交给第三方的极客来说，这是一个新鲜且务实的选择。"
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "前端运行时：纯Vanilla JS (ES2024+)，ES模块，无TypeScript、无构建步骤、无npm依赖",
-                "浏览器平台：Manifest V3，Service Worker作为编排器，V8 isolate for Workers",
-                "安全模型：WebCrypto、WebAuthn passkeys、Subresource Integrity、opaque-origin iframes",
-                "沙箱：WebAssembly (WASM) Linux VM、JS notebooks、客户端app",
-                "对等网络：WebRTC、P2P agent-to-agent通信（预览通道）",
-                "可扩展性：模型适配器（Anthropic, OpenRouter, Ollama），安全出口网关（egress allowlist），审计日志"
+                "纯 JavaScript（ES2024+），无 TypeScript，无 JSX，无 bundler，零构建步骤",
+                "浏览器扩展（Chrome/Firefox）使用 Manifest V3",
+                "沙箱技术：V8 隔离区（JS Notebooks）、WebAssembly（Linux VM）、客户端应用",
+                "P2P 使用 WebRTC",
+                "安全模型：服务 Worker 持有密钥并审核所有请求；每个环境由独立 Actor 驱动，内存隔离",
+                "加密：WebCrypto 实现本地 vault，WebAuthn 解锁"
               ]
             },
             {
               "heading": "核心能力",
-              "bullets": [
-                "Agent循环：驱动标签页，执行click、输入、导航，并观察页面实际变化判定成功",
-                "沙箱执行环境：创建JS笔记本、WebVM、客户端应用，每个环境由独立Actor隔离",
-                "P2P共享：通过WebRTC mesh进行agent间对话，支持线程化对话和回复授权",
-                "安全守护：密钥仅存于vault（加密），所有外发请求经安全网关卡点，审计日志带哈希链防篡改",
-                "模型灵活：支持闭源/开源/本地模型，一键切换，每会话选模型",
-                "语音输入（Goal mode）、技能系统、记忆Review等高级功能"
-              ]
+              "body": "1. 标签页驱动：读取和操作当前已登录的网页，让 AI 直接在你的会话中工作 2. 沙箱计算：启动 JS 笔记本、编译好的 WASM Linux VM、运行客户端应用 3. 代理循环：内置 orchestrator 将任务委派给专用 Actor，每个 Actor 拥有受限的工具集 4. 记忆与技能：支持会话记忆、自定义技能、目标模式与审查 5. P2P 网络（预览版）：代理之间可直接通过 WebRTC 共享构建成果 6. 隐私保护：BYOK，密钥加密存储在本地 vault，所有请求经过审核，无任何遥测"
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "自动化网页操作（如填表、数据抓取）且不希望数据离开本机",
-                "本地开发环境中的辅助编程与探索，利用浏览器内置沙箱运行不安全代码",
-                "学术/安全研究中的可控浏览器代理实验",
-                "去中心化应用（dweb）的早期试验，构建Agent-to-Agent的P2P协作"
+                "个人自动化：自动填写表单、监控页面变化、批量处理网页数据",
+                "轻量级开发：在浏览器内快速构建并分享小型工具或 Notebook",
+                "隐私优先的探索：希望体验 AI 代理但不愿将浏览数据上传至云端的用户",
+                "研究与实验：分析浏览器安全模型如何支撑代理系统，或测试 P2P 代理通信"
               ]
             },
             {
               "heading": "同类对比",
-              "bullets": [
-                "Open Interpreter / TaskWeaver：通常依赖Python后端和云端模型，peerd完全在浏览器内运行，无安装负担",
-                "ChatGPT插件/Claude desktop agent：绑定特定模型，存在遥测，peerd是BYOK且代码开源可审计",
-                "其他浏览器自动化扩展：多仅支持简单脚本，peerd提供了完整Agent循环和隔离安全模型",
-                "Khoj：本地个人搜索Agent，但peerd更侧重浏览器驱动和P2P计算共享"
-              ]
+              "body": "相比云端代理（如 AutoGPT、AgentGPT），peerd 完全脱离服务端依赖，无需托管，隐私性更强但功能受浏览器自身限制。与浏览器自动化工具（如 Selenium、Playwright）相比，它融入了 AI 推理回路，可自主决策，而不仅仅是执行预设脚本。不过目前项目仍处于 0.x 实验阶段，生态与成熟度远不及后者。"
             },
             {
               "heading": "版本动态",
               "body": "---",
               "bullets": [
-                "当前0.x实验beta，v0.2.5于2026-07-06发布",
-                "安全加固：审计日志完整性、会话授权Origin限制、传输导入门控",
-                "新增P2P mesh中的持久线程对话（预览），per-conversation回复授权",
-                "破坏性变更可能，存储格式未冻结，无V1承诺"
+                "当前版本 v0.2.6（2026-07-07 发布），修复了 Actor 权限误判、搜索指令重定向错误等问题",
+                "项目整体处于 0.x 实验 beta，API 和存储格式仍可能发生破坏性变更",
+                "商店包（Chrome/Firefox）待上架，目前主流安装方式为加载源文件夹的开发者预览版",
+                "P2P 功能只在预览通道提供，标为研究级",
+                "更新节奏积极，CI 流程完善，代码仓库结构清晰"
               ]
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
                 "置信度：high",
-                "信息盲区：未提供基准测试数据（如Agent任务成功率、延迟对比）；与同类工具（Open Interpreter、AutoGPT等）的直接对比未给出；dweb预览通道的稳定性和规模限制未量化；移动端支持状态未说明；沙箱计算环境的性能上限（如WebVM可分配内存）未明示"
+                "信息盲区：P2P 功能仍为预览版，稳定性和完整度未验证；无性能基准或任务成功率数据；Chrome/Firefox 商店包尚未正式发布，大规模分发路径待定；语音交互的具体实现细节未在 README 中展开；与其他代理框架的横向对比仅供参考，非官方数据"
               ]
             }
           ]
@@ -5254,6 +6752,13 @@
               "starsTotal": 879,
               "starsGained": 0,
               "release": "v0.1.8"
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "lightweight",
+              "starsTotal": 903,
+              "starsGained": 0,
+              "release": "v0.1.8"
             }
           ],
           "analysis": [
@@ -5377,6 +6882,13 @@
             },
             {
               "date": "2026-07-07",
+              "reason": "lightweight",
+              "starsTotal": 312,
+              "starsGained": 0,
+              "release": "release"
+            },
+            {
+              "date": "2026-07-08",
               "reason": "lightweight",
               "starsTotal": 312,
               "starsGained": 0,
@@ -5696,6 +7208,13 @@
               "reason": "lightweight",
               "starsTotal": 85452,
               "starsGained": 7326,
+              "release": "v1.9.1"
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "lightweight",
+              "starsTotal": 86180,
+              "starsGained": 7780,
               "release": "v1.9.1"
             }
           ],
@@ -6226,7 +7745,7 @@
           "streakDays": 10,
           "isNew": false,
           "createdAt": "2026-06-18",
-          "pushedAt": "2026-07-06",
+          "pushedAt": "2026-07-07",
           "latestRelease": "v0.1.71-diag",
           "firstSeen": "2026-06-25",
           "topics": [
@@ -6341,6 +7860,13 @@
               "starsTotal": 1676,
               "starsGained": 0,
               "release": ""
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "lightweight",
+              "starsTotal": 1862,
+              "starsGained": 0,
+              "release": ""
             }
           ],
           "analysis": [
@@ -6432,8 +7958,8 @@
           "streakDays": 13,
           "isNew": false,
           "createdAt": "2026-06-16",
-          "pushedAt": "2026-07-06",
-          "latestRelease": "eve@0.20.0",
+          "pushedAt": "2026-07-07",
+          "latestRelease": "eve@0.21.1",
           "firstSeen": "2026-06-19",
           "topics": [
             "agent",
@@ -6558,53 +8084,80 @@
               "starsTotal": 3259,
               "starsGained": 0,
               "release": "eve@0.20.0"
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "release_update",
+              "starsTotal": 3297,
+              "starsGained": 0,
+              "release": "eve@0.21.1"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "eve 是 Vercel 推出的面向 AI 代理的框架，以文件系统为核心，将代理的指令、工具、技能、通道、调度等能力映射到约定的目录结构上，实现声明式开发。采用 TypeScript 编写，Apache-2.0 许可，强调持久化和沙箱安全，适合生产级自主代理。"
+              "body": "eve 是 Vercel 开源的“文件系统优先”AI 代理框架。它不要求你写冗长的编排代码，而是通过约定的目录结构（agent/instructions.md、agent/tools/、agent/skills/ 等）来定义代理的行为。代理的能力直接映射到文件系统，方便审查、扩展和团队协作。"
             },
             {
               "heading": "为什么火",
-              "body": "Vercel 的品牌加持、AI 代理开发热浪、内置沙箱和持久会话等生产特性，使其在两周内斩获 3k+ 星。社区活跃，文档完善，且框架文档随包发布，方便 AI 编码工具本地查阅。对厌倦了繁琐配置的开发者而言，约定大于配置的思路非常解渴。"
+              "bullets": [
+                "由 Vercel 官方推出，自带生态光环，发布两个多月即获 3.3k+ star。",
+                "解决了“代理项目逻辑散落、难以维护”的痛点，把提示词、工具、调度等配置实体化为文件，降低了认知负担。",
+                "内置 TUI (npx eve init 后的交互终端) 和本地沙箱，开箱即用，开发体验友好。"
+              ]
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "语言：TypeScript，运行于 Node.js",
-                "模型接入：基于 Vercel AI SDK（推测），示例使用 Claude Sonnet，支持多种模型",
-                "沙箱引擎：微虚拟机（microsandbox VMs）、Docker、Vercel 沙箱、just-bash 解释器",
-                "工具定义：Zod 模式，内置工具审批、子代理、调度、多通道（HTTP、Slack、Discord）",
-                "持久化：会话状态自动持久化，重启后恢复，文件附件缺失可降级"
+                "语言：TypeScript",
+                "运行时：Node.js",
+                "依赖：Zod 用于工具输入校验，支持主流模型（如 Anthropic Claude，示例中为 claude-sonnet-5）。",
+                "部署：可本地运行，推测可部署至 Vercel 或其他 Node 环境。",
+                "沙箱：eve eval 涉及本地沙箱（microsandbox），用于安全执行。"
               ]
             },
             {
               "heading": "核心能力",
-              "body": "1. 文件即代理：agent/ 目录下按约定放置 instructions.md、tools/、skills/、channels/、schedules/，零额外配置即可运行 2. 持久化会话：会话状态自动保存，服务重启或沙箱重建后能无缝恢复，文件缺失时用文本提示降级 3. 沙箱隔离：代码执行、命令运行均在可配置的沙箱环境，服务关闭时统一清理 4. 工具审批：允许工具调用携带 callId，实现全生命周期的审批门控 5. 协作取消：底层已支持 AbortSignal 全链路传播（模型、工具、沙箱），未来可直接触发取消 6. 子代理与技能：技能按需加载，子代理单独管理，支持复杂任务分解 7. 调度与通道：自带 cron 调度和 HTTP/Slack/Discord 通道扩展，开箱即用"
+              "bullets": [
+                "约定式项目结构：agent/ 目录下分 instructions.md（系统提示）、tools/（类型化函数）、skills/（按需加载的过程）、channels/（消息通道，如 Slack、Discord）、schedules/（cron 定时任务）、subagents/ 和 agent.ts（模型与运行时配置）。",
+                "工具系统：通过 defineTool 用 Zod Schema 声明工具，自动提供类型安全的执行环境。",
+                "技能与子代理：支持按需加载的 Markdown 过程（skills）和嵌套子代理（subagents），适合复杂工作流。",
+                "多渠道接入：原生支持 HTTP、Slack、Discord 等通道，可一键接入消息服务。",
+                "评估与清理：eve eval 可本地运行一次性评估，并在退出时清理沙箱计算资源。",
+                "完整文档内置：npm 包中包含全部文档，方便编写代理的 AI 助手直接读取 node_modules/eve/docs。"
+              ]
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "需要长期运行的自主代理：客服机器人、运维助手、数据管道",
-                "多步骤、有状态对话式应用：旅行规划、研究助手",
-                "安全执行代码的 AI 工具：在线编码助手、数据分析脚本",
-                "团队希望以低认知负荷组织代理项目，便于审查和扩展"
+                "需要长期维护、多人协作的 AI 代理（文件结构天然适合版本控制）。",
+                "内部工具自动化，如定时周报生成、Slack 机器人、客服应答。",
+                "原型快速验证：通过 init 一条命令即可搭建可交互的代理。",
+                "对安全有要求的评估环境（沙箱隔离）。"
               ]
             },
             {
               "heading": "同类对比",
-              "body": "与 LangChain、AutoGPT、CrewAI 相比，eve 更强调文件系统即接口，而非代码即接口。LangChain 灵活但抽象层多，AutoGPT 偏自助智能体，CrewAI 面向多角色协作；eve 更底层且内置沙箱，与 Vercel 平台天然集成，适合偏好简洁约定、需安全执行环境的 TypeScript 开发者。"
+              "bullets": [
+                "vs LangChain：LangChain 以代码为中心，eve 以文件约定为中心，结构更清晰，但灵活性不如 LangChain 的链式抽象。",
+                "vs CrewAI：CrewAI 侧重多智能体协作，eve 当前更偏向单代理的模块化，子代理功能可作为扩展。",
+                "vs Vercel 自家 AI SDK：AI SDK 更底层，提供模型统一接口；eve 在其上封装了代理生命周期、工具、调度等全栈功能。"
+              ]
             },
             {
               "heading": "版本动态",
-              "body": "当前 v0.20.0（2026-07-05）主要改进：沙箱在服务关闭时自动停止（含自定义后端破坏性变更）、评估提示更友好、工具上下文暴露 callId、会话恢复处理缺失附件不失败、全链路 AbortSignal 基础（尚无触发入口）。可见重心在安全清理、可观测性和鲁棒性，正迈向生产稳定。 ---"
+              "body": "---",
+              "bullets": [
+                "当前版本 eve@0.21.1（2026-07-07）。",
+                "最近修复：eve eval 在运行后能清理本地沙箱句柄，防止 eval 进程结束后资源残留。",
+                "项目处于 Beta 阶段，API 与行为可能随 GA 变化，但更新频率和问题响应积极。"
+              ]
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
                 "置信度：high",
-                "信息盲区：沙箱引擎的具体环境需求（Docker/微虚拟机的安装和版本）未详细列出；未提供性能基准测试数据；多代理协作的调度细节和上限未说明；持久化状态的存储后端（内存/文件/数据库）未明确；完整的支持模型列表仅示例未列出"
+                "信息盲区：未说明具体支持的全部模型提供商（示例仅出现 Anthropic）；未提供沙箱（microsandbox）的实现细节与隔离级别；无性能基准或资源占用数据；未明确生产环境部署方式（如是否强依赖 Vercel 平台）；Node.js 最低版本要求缺失"
               ]
             }
           ]
@@ -6625,7 +8178,7 @@
           "streakDays": 16,
           "isNew": false,
           "createdAt": "2026-06-11",
-          "pushedAt": "2026-07-06",
+          "pushedAt": "2026-07-07",
           "latestRelease": "v0.4.0",
           "firstSeen": "2026-06-19",
           "topics": [
@@ -6777,6 +8330,13 @@
               "date": "2026-07-07",
               "reason": "lightweight",
               "starsTotal": 6382,
+              "starsGained": 0,
+              "release": "v0.4.0"
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "lightweight",
+              "starsTotal": 6604,
               "starsGained": 0,
               "release": "v0.4.0"
             }
@@ -7267,6 +8827,13 @@
               "starsTotal": 85452,
               "starsGained": 7326,
               "release": "v1.9.1"
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "lightweight",
+              "starsTotal": 86180,
+              "starsGained": 7780,
+              "release": "v1.9.1"
             }
           ],
           "analysis": [
@@ -7395,6 +8962,13 @@
               "reason": "lightweight",
               "starsTotal": 26146,
               "starsGained": 3405,
+              "release": "v1.0.5"
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "lightweight",
+              "starsTotal": 26579,
+              "starsGained": 4329,
               "release": "v1.0.5"
             }
           ],
@@ -8013,8 +9587,8 @@
           "streakDays": 3,
           "isNew": false,
           "createdAt": "2026-02-13",
-          "pushedAt": "2026-07-06",
-          "latestRelease": "v3.8.45",
+          "pushedAt": "2026-07-07",
+          "latestRelease": "v3.8.46",
           "firstSeen": "2026-07-01",
           "topics": [
             "a2a",
@@ -8087,77 +9661,78 @@
               "starsTotal": 12401,
               "starsGained": 4411,
               "release": "v3.8.45"
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "release_update",
+              "starsTotal": 13060,
+              "starsGained": 4594,
+              "release": "v3.8.46"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "OmniRoute 是一个本地优先的开源 AI 网关，提供单一 /v1 端点接入 231+ 个大模型提供商（含 90+ 免费层），并自动完成故障转移、成本优化和 token 压缩。它可以把 Claude Code、Codex、Cursor、Cline 等工具无缝对接到免费/廉价的 Claude、GPT、Gemini 等模型，而无需为每个工具单独配置 API 密钥。"
+              "body": "OmniRoute 是一个开源免费 AI 网关（MIT 协议），通过单一 OpenAI 兼容端点（/v1）聚合 237 个 AI 供应商（含 90+ 免费层），并内置自动故障转移和 Token 压缩引擎。它能无缝对接 Claude Code、Cursor、Cline 等主流编码工具，让用户用上免费的 Claude/GPT/Gemini 等模型。"
             },
             {
               "heading": "为什么火",
+              "body": "截至分析时 Star 数超 13k，社区活跃。核心吸引力在于：",
               "bullets": [
-                "免费聚合：声称每月提供约 16 亿免费 token，去重统计免费池，不夸大。",
-                "极致压缩：RTK + Caveman 堆叠压缩技术，在工具调用密集场景可节省 15–95% token（平均约 89%），大幅延缓限额触发。",
-                "实用兼容：直接模拟 OpenAI、Claude、Gemini 消息格式，支持 MCP（95 个工具）、A2A，21,000+ 测试保障稳定性。",
-                "零成本起步：无需信用卡，11 个永久免费提供商，适合学生、个人开发者和低预算团队。"
+                "零成本起步：聚合 90+ 免费供应商，每月稳定提供约 16 亿 free token，首月可达 21 亿；",
+                "免配额焦虑：多层自动回退（订阅→API→廉价→免费），消除限流中断；",
+                "Token 节省：RTK + Caveman 堆叠压缩技术可减少 15–95% 的 token（工具输出多的场景平均省 89%）；",
+                "一站式集成：一个配置让所有 IDE/CLI 连接所有模型，大幅降低切换成本。"
               ]
             },
             {
               "heading": "技术栈",
               "bullets": [
                 "语言：TypeScript",
-                "分发：npm 包、Docker 镜像、Electron 桌面应用",
-                "核心机制：OpenAI 兼容代理、多策略路由（17 种）、TLS 指纹伪装、电路熔断器",
-                "集成：MCP、A2A、多语言 i18n（42+ 语言）",
-                "许可证：MIT"
+                "核心机制：RTK/Caveman 文本压缩、17 种路由策略（auto/* 组合）、智能故障转移",
+                "协议支持：OpenAI API 翻译、MCP（95 个工具）、A2A(Agent-to-Agent)、多模态 API",
+                "部署形态：Docker 镜像 / npm 包 / 桌面应用 (Electron) / PWA",
+                "质量保障：21,000+ 测试用例"
               ]
             },
             {
               "heading": "核心能力",
               "bullets": [
-                "单端点多协议转换：将请求翻译为 OpenAI、Claude、Gemini 等格式，任何客户端即插即用。",
-                "智能路由与回退：订阅 → API → 廉价 → 免费四级自动切换，保障不间断运行。",
-                "Token 压缩：RTK + Caveman 压缩会在请求前减少冗余文本（如 git diff、日志），大幅降低消耗。",
-                "丰富的提供商支持：内置 231+ 提供商，包含 Yuanbao、Cloudflare Workers AI 等新成员，支持 cookie-session 认证。",
-                "多代理与 CLI 兼容：直接搭配 Claude Code、Codex、Cline、Copilot 等 24+ 编码代理。",
-                "本地或自托管：可本地运行，保护隐私；也提供 Docker 部署。"
+                "一端点聚合：openai、anthropic、gemini 协议互译，统一 /v1 接口",
+                "自动回退：订阅额度耗尽自动切到免费或廉价供应商，无感知",
+                "Token 优化：对 git diff、grep 等工具输出进行高比例压缩",
+                "桌面/PWA 应用：提供可视化仪表盘管理提供商和使用量",
+                "免费额度仪表板：实时显示各供应商的文档化免费 token 额度及当月使用情况",
+                "MCP/A2A：内置工具协议，可直接作为 Agent 后端",
+                "生产级特性：断路保护、TLS 伪装、多种代理设置"
               ]
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "个人开发者：在 Claude Code/Cursor 中零成本使用多个大模型，避免每月付费。",
-                "小团队：统一管理多工具的 AI 配额，防止单点限流导致开发中断。",
-                "受限地区访问：通过 3 级代理和 TLS 指纹伪装绕过封锁。",
-                "Token 消耗敏感应用：如自动化代码审查、CI 流水线中的大模型调用，利用压缩节省成本。"
+                "个人开发者想免费使用高级大模型编码，不希望充多份 API 订阅；",
+                "团队需要稳定的 AI 编码助手基础设施，避免单一供应商故障；",
+                "重度 agent 用户（大量工具调用）需要降低 token 消耗成本；",
+                "网络受限地区通过内置代理访问 AI。"
               ]
             },
             {
               "heading": "同类对比",
-              "body": "与同类网关（如 LiteLLM、Portkey、One API）相比，差异点：",
-              "bullets": [
-                "极致免费聚合：专门扫描并维护大量无付费门槛的免费提供商，而非仅集成付费 API。",
-                "工具原生兼容：内置对 Claude Code、Codex 等具体工具的 wire-image 支持（如 v3.8.45 的 agentrouter 动态适配）。",
-                "深度压缩：独有的 RTK + Caveman 算法是其他网关未提供的。",
-                "全栈交付：除 HTTP 网关外，还提供 CLI、MCP、A2A 和桌面应用，生态更完整。"
-              ]
+              "body": "与 LiteLLM 等开源网关相比，OmniRoute 在聚合大量免费供应商和 Token 压缩方面具有独特性，并原生支持桌面应用和丰富的 IDE 集成配置。但 README 未提供详细的性能基准、延迟对比或兼容性矩阵，无法量化其网关效率优势。"
             },
             {
               "heading": "版本动态",
-              "body": "根据 v3.8.45 发布说明，近期更新包括： ---",
+              "body": "最新 v3.8.46（2026-07-07）主要更新： ---",
               "bullets": [
-                "新增 Yuanbao (腾讯元宝) 作为 cookie-session 提供商，支持 DeepSeek、Hunyuan 等模型。",
-                "agentrouter 获得动态 Claude-Code wire image 支持，保证与 Claude Code 工具链身份认证兼容。",
-                "Cloudflare Workers AI 批量密钥导入支持，修复账户 ID 隔离问题。",
-                "整体持续迭代，社区活跃（Discord、Telegram、WhatsApp）。"
+                "新增 hidePaidModels 开关下隐藏付费模型的 auto 路由逻辑；",
+                "提供 auto/glm、auto/gemini 等提供者家族虚拟组合路由，支持动态候选池。"
               ]
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
                 "置信度：medium",
-                "信息盲区：README 截断，缺少最简示例和完整 provider 列表入口；未提供 RTK + Caveman 压缩的技术细节和白皮书链接；未说明桌面应用的安装方式及最低系统要求；缺少基准性能测试数据（吞吐量、延迟）；快速开始的具体 CLI 交互流程未展示"
+                "信息盲区：快速入门的具体命令和配置步骤未在提供的 README 片段中展示，需查阅 getting-started 文档；RTK 和 Caveman 压缩技术的详细原理说明缺失；与其他网关（如 LiteLLM）的性能、延迟对比数据缺失；桌面应用/PWA 的安装方式及系统要求未明确说明；免费 Token 计数的方法论细节和实际测试截图未完全公开"
               ]
             }
           ]
@@ -8872,6 +10447,13 @@
               "date": "2026-07-07",
               "reason": "lightweight",
               "starsTotal": 616,
+              "starsGained": 0,
+              "release": "v0.5.5"
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "lightweight",
+              "starsTotal": 618,
               "starsGained": 0,
               "release": "v0.5.5"
             }
@@ -11061,8 +12643,8 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-02-13",
-          "pushedAt": "2026-07-06",
-          "latestRelease": "v3.8.45",
+          "pushedAt": "2026-07-07",
+          "latestRelease": "v3.8.46",
           "firstSeen": "2026-07-01",
           "topics": [
             "a2a",
@@ -11135,77 +12717,78 @@
               "starsTotal": 12401,
               "starsGained": 4411,
               "release": "v3.8.45"
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "release_update",
+              "starsTotal": 13060,
+              "starsGained": 4594,
+              "release": "v3.8.46"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "OmniRoute 是一个本地优先的开源 AI 网关，提供单一 /v1 端点接入 231+ 个大模型提供商（含 90+ 免费层），并自动完成故障转移、成本优化和 token 压缩。它可以把 Claude Code、Codex、Cursor、Cline 等工具无缝对接到免费/廉价的 Claude、GPT、Gemini 等模型，而无需为每个工具单独配置 API 密钥。"
+              "body": "OmniRoute 是一个开源免费 AI 网关（MIT 协议），通过单一 OpenAI 兼容端点（/v1）聚合 237 个 AI 供应商（含 90+ 免费层），并内置自动故障转移和 Token 压缩引擎。它能无缝对接 Claude Code、Cursor、Cline 等主流编码工具，让用户用上免费的 Claude/GPT/Gemini 等模型。"
             },
             {
               "heading": "为什么火",
+              "body": "截至分析时 Star 数超 13k，社区活跃。核心吸引力在于：",
               "bullets": [
-                "免费聚合：声称每月提供约 16 亿免费 token，去重统计免费池，不夸大。",
-                "极致压缩：RTK + Caveman 堆叠压缩技术，在工具调用密集场景可节省 15–95% token（平均约 89%），大幅延缓限额触发。",
-                "实用兼容：直接模拟 OpenAI、Claude、Gemini 消息格式，支持 MCP（95 个工具）、A2A，21,000+ 测试保障稳定性。",
-                "零成本起步：无需信用卡，11 个永久免费提供商，适合学生、个人开发者和低预算团队。"
+                "零成本起步：聚合 90+ 免费供应商，每月稳定提供约 16 亿 free token，首月可达 21 亿；",
+                "免配额焦虑：多层自动回退（订阅→API→廉价→免费），消除限流中断；",
+                "Token 节省：RTK + Caveman 堆叠压缩技术可减少 15–95% 的 token（工具输出多的场景平均省 89%）；",
+                "一站式集成：一个配置让所有 IDE/CLI 连接所有模型，大幅降低切换成本。"
               ]
             },
             {
               "heading": "技术栈",
               "bullets": [
                 "语言：TypeScript",
-                "分发：npm 包、Docker 镜像、Electron 桌面应用",
-                "核心机制：OpenAI 兼容代理、多策略路由（17 种）、TLS 指纹伪装、电路熔断器",
-                "集成：MCP、A2A、多语言 i18n（42+ 语言）",
-                "许可证：MIT"
+                "核心机制：RTK/Caveman 文本压缩、17 种路由策略（auto/* 组合）、智能故障转移",
+                "协议支持：OpenAI API 翻译、MCP（95 个工具）、A2A(Agent-to-Agent)、多模态 API",
+                "部署形态：Docker 镜像 / npm 包 / 桌面应用 (Electron) / PWA",
+                "质量保障：21,000+ 测试用例"
               ]
             },
             {
               "heading": "核心能力",
               "bullets": [
-                "单端点多协议转换：将请求翻译为 OpenAI、Claude、Gemini 等格式，任何客户端即插即用。",
-                "智能路由与回退：订阅 → API → 廉价 → 免费四级自动切换，保障不间断运行。",
-                "Token 压缩：RTK + Caveman 压缩会在请求前减少冗余文本（如 git diff、日志），大幅降低消耗。",
-                "丰富的提供商支持：内置 231+ 提供商，包含 Yuanbao、Cloudflare Workers AI 等新成员，支持 cookie-session 认证。",
-                "多代理与 CLI 兼容：直接搭配 Claude Code、Codex、Cline、Copilot 等 24+ 编码代理。",
-                "本地或自托管：可本地运行，保护隐私；也提供 Docker 部署。"
+                "一端点聚合：openai、anthropic、gemini 协议互译，统一 /v1 接口",
+                "自动回退：订阅额度耗尽自动切到免费或廉价供应商，无感知",
+                "Token 优化：对 git diff、grep 等工具输出进行高比例压缩",
+                "桌面/PWA 应用：提供可视化仪表盘管理提供商和使用量",
+                "免费额度仪表板：实时显示各供应商的文档化免费 token 额度及当月使用情况",
+                "MCP/A2A：内置工具协议，可直接作为 Agent 后端",
+                "生产级特性：断路保护、TLS 伪装、多种代理设置"
               ]
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "个人开发者：在 Claude Code/Cursor 中零成本使用多个大模型，避免每月付费。",
-                "小团队：统一管理多工具的 AI 配额，防止单点限流导致开发中断。",
-                "受限地区访问：通过 3 级代理和 TLS 指纹伪装绕过封锁。",
-                "Token 消耗敏感应用：如自动化代码审查、CI 流水线中的大模型调用，利用压缩节省成本。"
+                "个人开发者想免费使用高级大模型编码，不希望充多份 API 订阅；",
+                "团队需要稳定的 AI 编码助手基础设施，避免单一供应商故障；",
+                "重度 agent 用户（大量工具调用）需要降低 token 消耗成本；",
+                "网络受限地区通过内置代理访问 AI。"
               ]
             },
             {
               "heading": "同类对比",
-              "body": "与同类网关（如 LiteLLM、Portkey、One API）相比，差异点：",
-              "bullets": [
-                "极致免费聚合：专门扫描并维护大量无付费门槛的免费提供商，而非仅集成付费 API。",
-                "工具原生兼容：内置对 Claude Code、Codex 等具体工具的 wire-image 支持（如 v3.8.45 的 agentrouter 动态适配）。",
-                "深度压缩：独有的 RTK + Caveman 算法是其他网关未提供的。",
-                "全栈交付：除 HTTP 网关外，还提供 CLI、MCP、A2A 和桌面应用，生态更完整。"
-              ]
+              "body": "与 LiteLLM 等开源网关相比，OmniRoute 在聚合大量免费供应商和 Token 压缩方面具有独特性，并原生支持桌面应用和丰富的 IDE 集成配置。但 README 未提供详细的性能基准、延迟对比或兼容性矩阵，无法量化其网关效率优势。"
             },
             {
               "heading": "版本动态",
-              "body": "根据 v3.8.45 发布说明，近期更新包括： ---",
+              "body": "最新 v3.8.46（2026-07-07）主要更新： ---",
               "bullets": [
-                "新增 Yuanbao (腾讯元宝) 作为 cookie-session 提供商，支持 DeepSeek、Hunyuan 等模型。",
-                "agentrouter 获得动态 Claude-Code wire image 支持，保证与 Claude Code 工具链身份认证兼容。",
-                "Cloudflare Workers AI 批量密钥导入支持，修复账户 ID 隔离问题。",
-                "整体持续迭代，社区活跃（Discord、Telegram、WhatsApp）。"
+                "新增 hidePaidModels 开关下隐藏付费模型的 auto 路由逻辑；",
+                "提供 auto/glm、auto/gemini 等提供者家族虚拟组合路由，支持动态候选池。"
               ]
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
                 "置信度：medium",
-                "信息盲区：README 截断，缺少最简示例和完整 provider 列表入口；未提供 RTK + Caveman 压缩的技术细节和白皮书链接；未说明桌面应用的安装方式及最低系统要求；缺少基准性能测试数据（吞吐量、延迟）；快速开始的具体 CLI 交互流程未展示"
+                "信息盲区：快速入门的具体命令和配置步骤未在提供的 README 片段中展示，需查阅 getting-started 文档；RTK 和 Caveman 压缩技术的详细原理说明缺失；与其他网关（如 LiteLLM）的性能、延迟对比数据缺失；桌面应用/PWA 的安装方式及系统要求未明确说明；免费 Token 计数的方法论细节和实际测试截图未完全公开"
               ]
             }
           ]
@@ -11757,7 +13340,7 @@
           "streakDays": 10,
           "isNew": false,
           "createdAt": "2026-06-09",
-          "pushedAt": "2026-07-06",
+          "pushedAt": "2026-07-07",
           "latestRelease": "v1.5.0",
           "firstSeen": "2026-06-21",
           "topics": [
@@ -11882,6 +13465,13 @@
               "date": "2026-07-07",
               "reason": "lightweight",
               "starsTotal": 6165,
+              "starsGained": 0,
+              "release": "v1.5.0"
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "lightweight",
+              "starsTotal": 6392,
               "starsGained": 0,
               "release": "v1.5.0"
             }
@@ -12137,8 +13727,8 @@
           "streakDays": 12,
           "isNew": false,
           "createdAt": "2026-06-16",
-          "pushedAt": "2026-07-06",
-          "latestRelease": "eve@0.20.0",
+          "pushedAt": "2026-07-07",
+          "latestRelease": "eve@0.21.1",
           "firstSeen": "2026-06-19",
           "topics": [
             "agent",
@@ -12263,53 +13853,80 @@
               "starsTotal": 3259,
               "starsGained": 0,
               "release": "eve@0.20.0"
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "release_update",
+              "starsTotal": 3297,
+              "starsGained": 0,
+              "release": "eve@0.21.1"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "eve 是 Vercel 推出的面向 AI 代理的框架，以文件系统为核心，将代理的指令、工具、技能、通道、调度等能力映射到约定的目录结构上，实现声明式开发。采用 TypeScript 编写，Apache-2.0 许可，强调持久化和沙箱安全，适合生产级自主代理。"
+              "body": "eve 是 Vercel 开源的“文件系统优先”AI 代理框架。它不要求你写冗长的编排代码，而是通过约定的目录结构（agent/instructions.md、agent/tools/、agent/skills/ 等）来定义代理的行为。代理的能力直接映射到文件系统，方便审查、扩展和团队协作。"
             },
             {
               "heading": "为什么火",
-              "body": "Vercel 的品牌加持、AI 代理开发热浪、内置沙箱和持久会话等生产特性，使其在两周内斩获 3k+ 星。社区活跃，文档完善，且框架文档随包发布，方便 AI 编码工具本地查阅。对厌倦了繁琐配置的开发者而言，约定大于配置的思路非常解渴。"
+              "bullets": [
+                "由 Vercel 官方推出，自带生态光环，发布两个多月即获 3.3k+ star。",
+                "解决了“代理项目逻辑散落、难以维护”的痛点，把提示词、工具、调度等配置实体化为文件，降低了认知负担。",
+                "内置 TUI (npx eve init 后的交互终端) 和本地沙箱，开箱即用，开发体验友好。"
+              ]
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "语言：TypeScript，运行于 Node.js",
-                "模型接入：基于 Vercel AI SDK（推测），示例使用 Claude Sonnet，支持多种模型",
-                "沙箱引擎：微虚拟机（microsandbox VMs）、Docker、Vercel 沙箱、just-bash 解释器",
-                "工具定义：Zod 模式，内置工具审批、子代理、调度、多通道（HTTP、Slack、Discord）",
-                "持久化：会话状态自动持久化，重启后恢复，文件附件缺失可降级"
+                "语言：TypeScript",
+                "运行时：Node.js",
+                "依赖：Zod 用于工具输入校验，支持主流模型（如 Anthropic Claude，示例中为 claude-sonnet-5）。",
+                "部署：可本地运行，推测可部署至 Vercel 或其他 Node 环境。",
+                "沙箱：eve eval 涉及本地沙箱（microsandbox），用于安全执行。"
               ]
             },
             {
               "heading": "核心能力",
-              "body": "1. 文件即代理：agent/ 目录下按约定放置 instructions.md、tools/、skills/、channels/、schedules/，零额外配置即可运行 2. 持久化会话：会话状态自动保存，服务重启或沙箱重建后能无缝恢复，文件缺失时用文本提示降级 3. 沙箱隔离：代码执行、命令运行均在可配置的沙箱环境，服务关闭时统一清理 4. 工具审批：允许工具调用携带 callId，实现全生命周期的审批门控 5. 协作取消：底层已支持 AbortSignal 全链路传播（模型、工具、沙箱），未来可直接触发取消 6. 子代理与技能：技能按需加载，子代理单独管理，支持复杂任务分解 7. 调度与通道：自带 cron 调度和 HTTP/Slack/Discord 通道扩展，开箱即用"
+              "bullets": [
+                "约定式项目结构：agent/ 目录下分 instructions.md（系统提示）、tools/（类型化函数）、skills/（按需加载的过程）、channels/（消息通道，如 Slack、Discord）、schedules/（cron 定时任务）、subagents/ 和 agent.ts（模型与运行时配置）。",
+                "工具系统：通过 defineTool 用 Zod Schema 声明工具，自动提供类型安全的执行环境。",
+                "技能与子代理：支持按需加载的 Markdown 过程（skills）和嵌套子代理（subagents），适合复杂工作流。",
+                "多渠道接入：原生支持 HTTP、Slack、Discord 等通道，可一键接入消息服务。",
+                "评估与清理：eve eval 可本地运行一次性评估，并在退出时清理沙箱计算资源。",
+                "完整文档内置：npm 包中包含全部文档，方便编写代理的 AI 助手直接读取 node_modules/eve/docs。"
+              ]
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "需要长期运行的自主代理：客服机器人、运维助手、数据管道",
-                "多步骤、有状态对话式应用：旅行规划、研究助手",
-                "安全执行代码的 AI 工具：在线编码助手、数据分析脚本",
-                "团队希望以低认知负荷组织代理项目，便于审查和扩展"
+                "需要长期维护、多人协作的 AI 代理（文件结构天然适合版本控制）。",
+                "内部工具自动化，如定时周报生成、Slack 机器人、客服应答。",
+                "原型快速验证：通过 init 一条命令即可搭建可交互的代理。",
+                "对安全有要求的评估环境（沙箱隔离）。"
               ]
             },
             {
               "heading": "同类对比",
-              "body": "与 LangChain、AutoGPT、CrewAI 相比，eve 更强调文件系统即接口，而非代码即接口。LangChain 灵活但抽象层多，AutoGPT 偏自助智能体，CrewAI 面向多角色协作；eve 更底层且内置沙箱，与 Vercel 平台天然集成，适合偏好简洁约定、需安全执行环境的 TypeScript 开发者。"
+              "bullets": [
+                "vs LangChain：LangChain 以代码为中心，eve 以文件约定为中心，结构更清晰，但灵活性不如 LangChain 的链式抽象。",
+                "vs CrewAI：CrewAI 侧重多智能体协作，eve 当前更偏向单代理的模块化，子代理功能可作为扩展。",
+                "vs Vercel 自家 AI SDK：AI SDK 更底层，提供模型统一接口；eve 在其上封装了代理生命周期、工具、调度等全栈功能。"
+              ]
             },
             {
               "heading": "版本动态",
-              "body": "当前 v0.20.0（2026-07-05）主要改进：沙箱在服务关闭时自动停止（含自定义后端破坏性变更）、评估提示更友好、工具上下文暴露 callId、会话恢复处理缺失附件不失败、全链路 AbortSignal 基础（尚无触发入口）。可见重心在安全清理、可观测性和鲁棒性，正迈向生产稳定。 ---"
+              "body": "---",
+              "bullets": [
+                "当前版本 eve@0.21.1（2026-07-07）。",
+                "最近修复：eve eval 在运行后能清理本地沙箱句柄，防止 eval 进程结束后资源残留。",
+                "项目处于 Beta 阶段，API 与行为可能随 GA 变化，但更新频率和问题响应积极。"
+              ]
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
                 "置信度：high",
-                "信息盲区：沙箱引擎的具体环境需求（Docker/微虚拟机的安装和版本）未详细列出；未提供性能基准测试数据；多代理协作的调度细节和上限未说明；持久化状态的存储后端（内存/文件/数据库）未明确；完整的支持模型列表仅示例未列出"
+                "信息盲区：未说明具体支持的全部模型提供商（示例仅出现 Anthropic）；未提供沙箱（microsandbox）的实现细节与隔离级别；无性能基准或资源占用数据；未明确生产环境部署方式（如是否强依赖 Vercel 平台）；Node.js 最低版本要求缺失"
               ]
             }
           ]
@@ -12486,8 +14103,8 @@
           "streakDays": 3,
           "isNew": false,
           "createdAt": "2026-06-22",
-          "pushedAt": "2026-07-06",
-          "latestRelease": "v0.2.5",
+          "pushedAt": "2026-07-07",
+          "latestRelease": "v0.2.6",
           "firstSeen": "2026-06-29",
           "topics": [
             "agentic",
@@ -12564,72 +14181,68 @@
               "starsTotal": 317,
               "starsGained": 0,
               "release": "v0.2.5"
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "release_update",
+              "starsTotal": 325,
+              "starsGained": 0,
+              "release": "v0.2.6"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "peerd是一个浏览器扩展（Chrome/Firefox），将完整的AI Agent循环直接运行在浏览器运行时中。它可以读取和操控标签页，在WebAssembly沙箱中启动JS笔记本或Linux虚拟机，并通过WebRTC实现Agent间P2P通信。所有数据路径无后端、无遥测，用户自带模型密钥（Anthropic/OpenRouter/Ollama等），安全性建立在浏览器原生隔离机制（V8 isolate、WebCrypto、iframe沙箱）之上。"
+              "body": "peerd 是一个直接在浏览器中运行的 AI 代理框架。它以 Manifest V3 浏览器扩展形态存在，能将你现有的标签页、会话变成可被 AI 驱动的环境。它自己不带后端，所有计算与数据完全留在你的设备上，模型调用通过你提供的 API Key（Anthropic、OpenRouter 或本地 Ollama）完成，全程无遥测。"
             },
             {
               "heading": "为什么火",
-              "body": "当前大多数AI Agent方案需要云端服务器处理用户数据和API密钥，存在隐私和延迟问题。peerd完全运行在用户机器上，密钥加密存储于本地vault，Agent循环在Service Worker中编排，实际环境操作由隔离的Actor执行，原始页面内容不会进入持有密钥的上下文。这种安全边界由浏览器平台强制的设计吸引了注重隐私和自主控制的开发者。同时，它在浏览器内提供完整的沙箱计算（Linux VM、笔记本、客户端应用），填补了浏览器Agent能力的空白。"
+              "body": "在隐私与数据主权越来越被关注的当下，peerd 把 AI 代理的生命周期完整放进了浏览器的安全边界里。它不依赖云服务，数据不离开设备，却依然能实现读取页面、操作 DOM、运行代码沙箱、甚至 P2P 共享构建物等复杂任务。对想要个人自动化又不想把钥匙交给第三方的极客来说，这是一个新鲜且务实的选择。"
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "前端运行时：纯Vanilla JS (ES2024+)，ES模块，无TypeScript、无构建步骤、无npm依赖",
-                "浏览器平台：Manifest V3，Service Worker作为编排器，V8 isolate for Workers",
-                "安全模型：WebCrypto、WebAuthn passkeys、Subresource Integrity、opaque-origin iframes",
-                "沙箱：WebAssembly (WASM) Linux VM、JS notebooks、客户端app",
-                "对等网络：WebRTC、P2P agent-to-agent通信（预览通道）",
-                "可扩展性：模型适配器（Anthropic, OpenRouter, Ollama），安全出口网关（egress allowlist），审计日志"
+                "纯 JavaScript（ES2024+），无 TypeScript，无 JSX，无 bundler，零构建步骤",
+                "浏览器扩展（Chrome/Firefox）使用 Manifest V3",
+                "沙箱技术：V8 隔离区（JS Notebooks）、WebAssembly（Linux VM）、客户端应用",
+                "P2P 使用 WebRTC",
+                "安全模型：服务 Worker 持有密钥并审核所有请求；每个环境由独立 Actor 驱动，内存隔离",
+                "加密：WebCrypto 实现本地 vault，WebAuthn 解锁"
               ]
             },
             {
               "heading": "核心能力",
-              "bullets": [
-                "Agent循环：驱动标签页，执行click、输入、导航，并观察页面实际变化判定成功",
-                "沙箱执行环境：创建JS笔记本、WebVM、客户端应用，每个环境由独立Actor隔离",
-                "P2P共享：通过WebRTC mesh进行agent间对话，支持线程化对话和回复授权",
-                "安全守护：密钥仅存于vault（加密），所有外发请求经安全网关卡点，审计日志带哈希链防篡改",
-                "模型灵活：支持闭源/开源/本地模型，一键切换，每会话选模型",
-                "语音输入（Goal mode）、技能系统、记忆Review等高级功能"
-              ]
+              "body": "1. 标签页驱动：读取和操作当前已登录的网页，让 AI 直接在你的会话中工作 2. 沙箱计算：启动 JS 笔记本、编译好的 WASM Linux VM、运行客户端应用 3. 代理循环：内置 orchestrator 将任务委派给专用 Actor，每个 Actor 拥有受限的工具集 4. 记忆与技能：支持会话记忆、自定义技能、目标模式与审查 5. P2P 网络（预览版）：代理之间可直接通过 WebRTC 共享构建成果 6. 隐私保护：BYOK，密钥加密存储在本地 vault，所有请求经过审核，无任何遥测"
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "自动化网页操作（如填表、数据抓取）且不希望数据离开本机",
-                "本地开发环境中的辅助编程与探索，利用浏览器内置沙箱运行不安全代码",
-                "学术/安全研究中的可控浏览器代理实验",
-                "去中心化应用（dweb）的早期试验，构建Agent-to-Agent的P2P协作"
+                "个人自动化：自动填写表单、监控页面变化、批量处理网页数据",
+                "轻量级开发：在浏览器内快速构建并分享小型工具或 Notebook",
+                "隐私优先的探索：希望体验 AI 代理但不愿将浏览数据上传至云端的用户",
+                "研究与实验：分析浏览器安全模型如何支撑代理系统，或测试 P2P 代理通信"
               ]
             },
             {
               "heading": "同类对比",
-              "bullets": [
-                "Open Interpreter / TaskWeaver：通常依赖Python后端和云端模型，peerd完全在浏览器内运行，无安装负担",
-                "ChatGPT插件/Claude desktop agent：绑定特定模型，存在遥测，peerd是BYOK且代码开源可审计",
-                "其他浏览器自动化扩展：多仅支持简单脚本，peerd提供了完整Agent循环和隔离安全模型",
-                "Khoj：本地个人搜索Agent，但peerd更侧重浏览器驱动和P2P计算共享"
-              ]
+              "body": "相比云端代理（如 AutoGPT、AgentGPT），peerd 完全脱离服务端依赖，无需托管，隐私性更强但功能受浏览器自身限制。与浏览器自动化工具（如 Selenium、Playwright）相比，它融入了 AI 推理回路，可自主决策，而不仅仅是执行预设脚本。不过目前项目仍处于 0.x 实验阶段，生态与成熟度远不及后者。"
             },
             {
               "heading": "版本动态",
               "body": "---",
               "bullets": [
-                "当前0.x实验beta，v0.2.5于2026-07-06发布",
-                "安全加固：审计日志完整性、会话授权Origin限制、传输导入门控",
-                "新增P2P mesh中的持久线程对话（预览），per-conversation回复授权",
-                "破坏性变更可能，存储格式未冻结，无V1承诺"
+                "当前版本 v0.2.6（2026-07-07 发布），修复了 Actor 权限误判、搜索指令重定向错误等问题",
+                "项目整体处于 0.x 实验 beta，API 和存储格式仍可能发生破坏性变更",
+                "商店包（Chrome/Firefox）待上架，目前主流安装方式为加载源文件夹的开发者预览版",
+                "P2P 功能只在预览通道提供，标为研究级",
+                "更新节奏积极，CI 流程完善，代码仓库结构清晰"
               ]
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
                 "置信度：high",
-                "信息盲区：未提供基准测试数据（如Agent任务成功率、延迟对比）；与同类工具（Open Interpreter、AutoGPT等）的直接对比未给出；dweb预览通道的稳定性和规模限制未量化；移动端支持状态未说明；沙箱计算环境的性能上限（如WebVM可分配内存）未明示"
+                "信息盲区：P2P 功能仍为预览版，稳定性和完整度未验证；无性能基准或任务成功率数据；Chrome/Firefox 商店包尚未正式发布，大规模分发路径待定；语音交互的具体实现细节未在 README 中展开；与其他代理框架的横向对比仅供参考，非官方数据"
               ]
             }
           ]
@@ -12973,6 +14586,13 @@
               "date": "2026-07-07",
               "reason": "lightweight",
               "starsTotal": 616,
+              "starsGained": 0,
+              "release": "v0.5.5"
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "lightweight",
+              "starsTotal": 618,
               "starsGained": 0,
               "release": "v0.5.5"
             }
@@ -13604,6 +15224,13 @@
               "starsTotal": 280,
               "starsGained": 0,
               "release": "Godcoder"
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "lightweight",
+              "starsTotal": 281,
+              "starsGained": 0,
+              "release": "Godcoder"
             }
           ],
           "analysis": [
@@ -13685,8 +15312,8 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-06-22",
-          "pushedAt": "2026-06-30",
-          "latestRelease": "v1.1.0",
+          "pushedAt": "2026-07-07",
+          "latestRelease": "v1.2.0",
           "firstSeen": "2026-06-30",
           "topics": [
             "agent-skills",
@@ -13750,62 +15377,70 @@
               "starsTotal": 312,
               "starsGained": 0,
               "release": "v1.1.0"
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "release_update",
+              "starsTotal": 319,
+              "starsGained": 0,
+              "release": "v1.2.0"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "browser-search 是一个为 AI 代理（如 OpenCode、Claude Code 等）设计的网络搜索与浏览技能。它整合了三个开源工具：SearXNG（元搜索引擎）、Camofox（Firefox 浏览器 REST API）和 CloakBrowser（隐身浏览器），通过自动升级策略绕过 Cloudflare 等反爬系统。整个系统自托管、免费且不限量，强调“先搜索后回答”以消除 AI 幻觉。"
+              "body": "browser-search 是一份写给 AI 代理（OpenCode/Claude Code 等）的技能文件，指导代理通过三个开源工具完成网络搜索与浏览：SearXNG（元搜索）、Camofox（Firefox REST API 浏览器）、CloakBrowser（隐身 Playwright 浏览器）。代理能自动选择工具，遇到反爬站点自动升级到隐蔽浏览器，所有组件免费自托管，无 API 限流。"
             },
             {
               "heading": "为什么火",
-              "body": "AI 代理越来越依赖实时网络信息，但普通请求常被反爬机制阻挡。该项目提供一站式、零成本的解决方案，并强制事实核查工作流，直击 AI 生成虚假信息的痛点。近期经安全审计修复 22 个漏洞，获得社区信任。"
+              "body": "1. 终结代理幻觉：强制“先搜再答”工作流，每个事实需多角度交叉验证，绝不编造。 2. 零成本反封锁：Cloudflare、Akamai 等反爬不再是障碍，CloakBrowser 58 条 C++ 底层补丁 + 类人指纹通过几乎所有测试，彻底告别付费反反爬服务。 3. 极简集成：一行 npx skills add 后 AI 代理自动读取文档并适配环境，无需手写胶水代码。 4. 全本地无限量：完全在本地运行，无 API 密钥、无订阅、无速率限制，树莓派都跑得动。"
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "SearXNG：Docker 部署，元搜索引擎，JSON 输出。",
-                "Camofox：基于 Camoufox（Firefox C++ 分支）的 Docker 容器，通过 REST API 驱动浏览器，内置 Readability.js 提取正文。",
-                "CloakBrowser：基于 Playwright 的 npm 包，带 58 个 C++ 级补丁的隐身 Chromium，自动检测并等待 Cloudflare、DataDome 等挑战。",
-                "编排：SKILL.md 定义指令集，AI 代理根据站点类型自动选择工具。",
-                "语言：JavaScript（Node.js），配置文件为 YAML/JSON。"
+                "语言/运行时：Node.js (ESM 模块)",
+                "搜索层：SearXNG (Docker) → 多引擎聚合，返回 JSON",
+                "常规浏览：Camofox (Docker) → Firefox 内核 + REST API，内置 Readability.js 清洗正文",
+                "隐身浏览：CloakBrowser (npm) → Playwright + Chromium，自动检测并绕过反爬挑战",
+                "技能定义：SKILL.md (纯文本)，跨代理通用"
               ]
             },
             {
               "heading": "核心能力",
-              "body": "1. 搜索与浏览一体化：一次调用即可完成从搜索到浏览的完整流程。 2. 自动反爬升级：Camofox 被拦截时自动切换到 CloakBrowser，覆盖约 90% 普通站点和 10% 高防护站点。 3. 防幻觉设计：Deep Research 模式强制代理先搜索、交叉验证多个来源后才作答。 4. 轻量高效：在树莓派上测试通过，资源占用低，可 24/7 运行。 5. 安全加固：最新版本修复了 SSRF、路径遍历等严重漏洞，增加沙箱、限流机制。 6. 跨代理兼容：SKILL.md 为 OpenCode 编写，但可转换为其他 AI 代理格式。"
+              "bullets": [
+                "智能编排：代理自主决策使用 SearXNG 搜索、Camofox 浏览、CloakBrowser 突破封锁",
+                "自动逃生：Camofox 被 Cloudflare 阻断时自动升级到 CloakBrowser，覆盖 ~90% 普通站点 + ~10% 防护站点",
+                "反幻觉模式：深度研究工作流强制事实核查，对抗大模型幻觉",
+                "隐身引擎：CloakBrowser 实现 0.9 reCAPTCHA v3 人类级评分，通过 Cloudflare Turnstile",
+                "轻量持久：Camofox 常驻热容器，首次冷启动后所有请求近乎实时；CloakBrowser 按需启动"
+              ]
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "需要实时网络信息的 AI 代理，如自动研究、事实核查、新闻聚合。",
-                "开发者在受限环境中（如内网、边缘设备）需要自托管的搜索工具。",
-                "希望避免 API 费用和限流的个人或小团队。",
-                "对抗强反爬网站的场景，如舆情监控、竞品分析。"
+                "AI 编码助手需要查阅最新文档或社区讨论",
+                "自主代理执行深度研究（如市场分析、竞品情报）",
+                "低资源设备（树莓派）上搭建个人 RSS/爬虫代理",
+                "绕过严格反爬的网站抓取原型验证"
               ]
             },
             {
               "heading": "同类对比",
               "bullets": [
-                "与单独使用 SearXNG 或 Playwright stealth 相比，该项目提供了开箱即用的组合，且自动应对反爬。",
-                "对比商业 API（如 SerpApi、ScrapingBee），它完全免费且无调用限制，但需要自行部署维护。",
-                "与类似技能项目（如 auto-gpt-search）相比，其防幻觉工作流和多重工具协作是独特优势。"
+                "vs. 付费搜索 API（Tavily/SerpAPI）：完全本地、零成本、无限量，但需自己维护基础设施。",
+                "vs. 单独使用 Playwright Stealth：本技能提供快速浏览（Camofox）与高隐身（CloakBrowser）的自动切换，避免所有请求都用重量级隐身代理造成的延迟。",
+                "vs. Perplexity 等闭源产品：开源、可审计、可自定义规则，敏感数据不离开自己机器。"
               ]
             },
             {
               "heading": "版本动态",
-              "body": "---",
-              "bullets": [
-                "v1.1.0（2026-06-29）：主要修复 22 个安全漏洞，增加 SSRF 防护、Playwright 沙箱、限流等；新增 40 个测试用例和安全审计脚本。",
-                "社区贡献者 @HeDo88TH 参与了安全审计。",
-                "项目积极维护，README 承诺随新工具出现持续更新。"
-              ]
+              "body": "v1.2.0 (2026-07-07) 主要优化健康检查、修正默认输出格式、更新 Camofox 官方镜像引用、依赖升级 cloakbrowser 0.4.8，并重写中英文等多语言文档与安全说明。项目处于活跃迭代期。 ---"
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
                 "置信度：high",
-                "信息盲区：未提供独立的安全审计报告，CloakBrowser 的反爬成功率数据来自项目方自身，未经第三方验证；缺少与其他 AI 搜索技能（如 AutoGPT 的搜索插件）的基准对比；项目主页缺失（仓库描述中主页为空）；未说明大规模并发下的性能表现"
+                "信息盲区：未提供 Docker Compose 或一键部署脚本，需用户自行配置 SearXNG 和 Camofox 容器；CloakBrowser 的实际反爬成功率缺乏独立第三方验证；未展示与其他 AI 搜索工具（如 Tavily、Exa）的直接性能/成本对比；FAQ 文档仅修复链接但未展示全文，其问题解答细节不明；缺少针对不同操作系统（Windows/macOS）的具体部署注意事项"
               ]
             }
           ]
@@ -15147,7 +16782,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2025-09-21",
-          "pushedAt": "2026-07-06",
+          "pushedAt": "2026-07-07",
           "latestRelease": "v1.6.2",
           "firstSeen": "2026-06-29",
           "topics": [
@@ -15199,6 +16834,13 @@
               "reason": "lightweight",
               "starsTotal": 6304,
               "starsGained": 2760,
+              "release": "v1.6.2"
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "lightweight",
+              "starsTotal": 6656,
+              "starsGained": 2127,
               "release": "v1.6.2"
             }
           ],
@@ -15461,8 +17103,8 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-06-22",
-          "pushedAt": "2026-07-06",
-          "latestRelease": "v0.2.5",
+          "pushedAt": "2026-07-07",
+          "latestRelease": "v0.2.6",
           "firstSeen": "2026-06-29",
           "topics": [
             "agentic",
@@ -15539,72 +17181,68 @@
               "starsTotal": 317,
               "starsGained": 0,
               "release": "v0.2.5"
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "release_update",
+              "starsTotal": 325,
+              "starsGained": 0,
+              "release": "v0.2.6"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "peerd是一个浏览器扩展（Chrome/Firefox），将完整的AI Agent循环直接运行在浏览器运行时中。它可以读取和操控标签页，在WebAssembly沙箱中启动JS笔记本或Linux虚拟机，并通过WebRTC实现Agent间P2P通信。所有数据路径无后端、无遥测，用户自带模型密钥（Anthropic/OpenRouter/Ollama等），安全性建立在浏览器原生隔离机制（V8 isolate、WebCrypto、iframe沙箱）之上。"
+              "body": "peerd 是一个直接在浏览器中运行的 AI 代理框架。它以 Manifest V3 浏览器扩展形态存在，能将你现有的标签页、会话变成可被 AI 驱动的环境。它自己不带后端，所有计算与数据完全留在你的设备上，模型调用通过你提供的 API Key（Anthropic、OpenRouter 或本地 Ollama）完成，全程无遥测。"
             },
             {
               "heading": "为什么火",
-              "body": "当前大多数AI Agent方案需要云端服务器处理用户数据和API密钥，存在隐私和延迟问题。peerd完全运行在用户机器上，密钥加密存储于本地vault，Agent循环在Service Worker中编排，实际环境操作由隔离的Actor执行，原始页面内容不会进入持有密钥的上下文。这种安全边界由浏览器平台强制的设计吸引了注重隐私和自主控制的开发者。同时，它在浏览器内提供完整的沙箱计算（Linux VM、笔记本、客户端应用），填补了浏览器Agent能力的空白。"
+              "body": "在隐私与数据主权越来越被关注的当下，peerd 把 AI 代理的生命周期完整放进了浏览器的安全边界里。它不依赖云服务，数据不离开设备，却依然能实现读取页面、操作 DOM、运行代码沙箱、甚至 P2P 共享构建物等复杂任务。对想要个人自动化又不想把钥匙交给第三方的极客来说，这是一个新鲜且务实的选择。"
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "前端运行时：纯Vanilla JS (ES2024+)，ES模块，无TypeScript、无构建步骤、无npm依赖",
-                "浏览器平台：Manifest V3，Service Worker作为编排器，V8 isolate for Workers",
-                "安全模型：WebCrypto、WebAuthn passkeys、Subresource Integrity、opaque-origin iframes",
-                "沙箱：WebAssembly (WASM) Linux VM、JS notebooks、客户端app",
-                "对等网络：WebRTC、P2P agent-to-agent通信（预览通道）",
-                "可扩展性：模型适配器（Anthropic, OpenRouter, Ollama），安全出口网关（egress allowlist），审计日志"
+                "纯 JavaScript（ES2024+），无 TypeScript，无 JSX，无 bundler，零构建步骤",
+                "浏览器扩展（Chrome/Firefox）使用 Manifest V3",
+                "沙箱技术：V8 隔离区（JS Notebooks）、WebAssembly（Linux VM）、客户端应用",
+                "P2P 使用 WebRTC",
+                "安全模型：服务 Worker 持有密钥并审核所有请求；每个环境由独立 Actor 驱动，内存隔离",
+                "加密：WebCrypto 实现本地 vault，WebAuthn 解锁"
               ]
             },
             {
               "heading": "核心能力",
-              "bullets": [
-                "Agent循环：驱动标签页，执行click、输入、导航，并观察页面实际变化判定成功",
-                "沙箱执行环境：创建JS笔记本、WebVM、客户端应用，每个环境由独立Actor隔离",
-                "P2P共享：通过WebRTC mesh进行agent间对话，支持线程化对话和回复授权",
-                "安全守护：密钥仅存于vault（加密），所有外发请求经安全网关卡点，审计日志带哈希链防篡改",
-                "模型灵活：支持闭源/开源/本地模型，一键切换，每会话选模型",
-                "语音输入（Goal mode）、技能系统、记忆Review等高级功能"
-              ]
+              "body": "1. 标签页驱动：读取和操作当前已登录的网页，让 AI 直接在你的会话中工作 2. 沙箱计算：启动 JS 笔记本、编译好的 WASM Linux VM、运行客户端应用 3. 代理循环：内置 orchestrator 将任务委派给专用 Actor，每个 Actor 拥有受限的工具集 4. 记忆与技能：支持会话记忆、自定义技能、目标模式与审查 5. P2P 网络（预览版）：代理之间可直接通过 WebRTC 共享构建成果 6. 隐私保护：BYOK，密钥加密存储在本地 vault，所有请求经过审核，无任何遥测"
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "自动化网页操作（如填表、数据抓取）且不希望数据离开本机",
-                "本地开发环境中的辅助编程与探索，利用浏览器内置沙箱运行不安全代码",
-                "学术/安全研究中的可控浏览器代理实验",
-                "去中心化应用（dweb）的早期试验，构建Agent-to-Agent的P2P协作"
+                "个人自动化：自动填写表单、监控页面变化、批量处理网页数据",
+                "轻量级开发：在浏览器内快速构建并分享小型工具或 Notebook",
+                "隐私优先的探索：希望体验 AI 代理但不愿将浏览数据上传至云端的用户",
+                "研究与实验：分析浏览器安全模型如何支撑代理系统，或测试 P2P 代理通信"
               ]
             },
             {
               "heading": "同类对比",
-              "bullets": [
-                "Open Interpreter / TaskWeaver：通常依赖Python后端和云端模型，peerd完全在浏览器内运行，无安装负担",
-                "ChatGPT插件/Claude desktop agent：绑定特定模型，存在遥测，peerd是BYOK且代码开源可审计",
-                "其他浏览器自动化扩展：多仅支持简单脚本，peerd提供了完整Agent循环和隔离安全模型",
-                "Khoj：本地个人搜索Agent，但peerd更侧重浏览器驱动和P2P计算共享"
-              ]
+              "body": "相比云端代理（如 AutoGPT、AgentGPT），peerd 完全脱离服务端依赖，无需托管，隐私性更强但功能受浏览器自身限制。与浏览器自动化工具（如 Selenium、Playwright）相比，它融入了 AI 推理回路，可自主决策，而不仅仅是执行预设脚本。不过目前项目仍处于 0.x 实验阶段，生态与成熟度远不及后者。"
             },
             {
               "heading": "版本动态",
               "body": "---",
               "bullets": [
-                "当前0.x实验beta，v0.2.5于2026-07-06发布",
-                "安全加固：审计日志完整性、会话授权Origin限制、传输导入门控",
-                "新增P2P mesh中的持久线程对话（预览），per-conversation回复授权",
-                "破坏性变更可能，存储格式未冻结，无V1承诺"
+                "当前版本 v0.2.6（2026-07-07 发布），修复了 Actor 权限误判、搜索指令重定向错误等问题",
+                "项目整体处于 0.x 实验 beta，API 和存储格式仍可能发生破坏性变更",
+                "商店包（Chrome/Firefox）待上架，目前主流安装方式为加载源文件夹的开发者预览版",
+                "P2P 功能只在预览通道提供，标为研究级",
+                "更新节奏积极，CI 流程完善，代码仓库结构清晰"
               ]
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
                 "置信度：high",
-                "信息盲区：未提供基准测试数据（如Agent任务成功率、延迟对比）；与同类工具（Open Interpreter、AutoGPT等）的直接对比未给出；dweb预览通道的稳定性和规模限制未量化；移动端支持状态未说明；沙箱计算环境的性能上限（如WebVM可分配内存）未明示"
+                "信息盲区：P2P 功能仍为预览版，稳定性和完整度未验证；无性能基准或任务成功率数据；Chrome/Firefox 商店包尚未正式发布，大规模分发路径待定；语音交互的具体实现细节未在 README 中展开；与其他代理框架的横向对比仅供参考，非官方数据"
               ]
             }
           ]
@@ -17517,7 +19155,7 @@
           "streakDays": 7,
           "isNew": false,
           "createdAt": "2026-06-09",
-          "pushedAt": "2026-07-06",
+          "pushedAt": "2026-07-07",
           "latestRelease": "v1.5.0",
           "firstSeen": "2026-06-21",
           "topics": [
@@ -17642,6 +19280,13 @@
               "date": "2026-07-07",
               "reason": "lightweight",
               "starsTotal": 6165,
+              "starsGained": 0,
+              "release": "v1.5.0"
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "lightweight",
+              "starsTotal": 6392,
               "starsGained": 0,
               "release": "v1.5.0"
             }
@@ -18053,7 +19698,7 @@
           "streakDays": 12,
           "isNew": false,
           "createdAt": "2026-06-11",
-          "pushedAt": "2026-07-06",
+          "pushedAt": "2026-07-07",
           "latestRelease": "v0.4.0",
           "firstSeen": "2026-06-19",
           "topics": [
@@ -18207,6 +19852,13 @@
               "starsTotal": 6382,
               "starsGained": 0,
               "release": "v0.4.0"
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "lightweight",
+              "starsTotal": 6604,
+              "starsGained": 0,
+              "release": "v0.4.0"
             }
           ],
           "analysis": [
@@ -18286,8 +19938,8 @@
           "streakDays": 11,
           "isNew": false,
           "createdAt": "2026-06-16",
-          "pushedAt": "2026-07-06",
-          "latestRelease": "eve@0.20.0",
+          "pushedAt": "2026-07-07",
+          "latestRelease": "eve@0.21.1",
           "firstSeen": "2026-06-19",
           "topics": [
             "agent",
@@ -18412,53 +20064,80 @@
               "starsTotal": 3259,
               "starsGained": 0,
               "release": "eve@0.20.0"
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "release_update",
+              "starsTotal": 3297,
+              "starsGained": 0,
+              "release": "eve@0.21.1"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "eve 是 Vercel 推出的面向 AI 代理的框架，以文件系统为核心，将代理的指令、工具、技能、通道、调度等能力映射到约定的目录结构上，实现声明式开发。采用 TypeScript 编写，Apache-2.0 许可，强调持久化和沙箱安全，适合生产级自主代理。"
+              "body": "eve 是 Vercel 开源的“文件系统优先”AI 代理框架。它不要求你写冗长的编排代码，而是通过约定的目录结构（agent/instructions.md、agent/tools/、agent/skills/ 等）来定义代理的行为。代理的能力直接映射到文件系统，方便审查、扩展和团队协作。"
             },
             {
               "heading": "为什么火",
-              "body": "Vercel 的品牌加持、AI 代理开发热浪、内置沙箱和持久会话等生产特性，使其在两周内斩获 3k+ 星。社区活跃，文档完善，且框架文档随包发布，方便 AI 编码工具本地查阅。对厌倦了繁琐配置的开发者而言，约定大于配置的思路非常解渴。"
+              "bullets": [
+                "由 Vercel 官方推出，自带生态光环，发布两个多月即获 3.3k+ star。",
+                "解决了“代理项目逻辑散落、难以维护”的痛点，把提示词、工具、调度等配置实体化为文件，降低了认知负担。",
+                "内置 TUI (npx eve init 后的交互终端) 和本地沙箱，开箱即用，开发体验友好。"
+              ]
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "语言：TypeScript，运行于 Node.js",
-                "模型接入：基于 Vercel AI SDK（推测），示例使用 Claude Sonnet，支持多种模型",
-                "沙箱引擎：微虚拟机（microsandbox VMs）、Docker、Vercel 沙箱、just-bash 解释器",
-                "工具定义：Zod 模式，内置工具审批、子代理、调度、多通道（HTTP、Slack、Discord）",
-                "持久化：会话状态自动持久化，重启后恢复，文件附件缺失可降级"
+                "语言：TypeScript",
+                "运行时：Node.js",
+                "依赖：Zod 用于工具输入校验，支持主流模型（如 Anthropic Claude，示例中为 claude-sonnet-5）。",
+                "部署：可本地运行，推测可部署至 Vercel 或其他 Node 环境。",
+                "沙箱：eve eval 涉及本地沙箱（microsandbox），用于安全执行。"
               ]
             },
             {
               "heading": "核心能力",
-              "body": "1. 文件即代理：agent/ 目录下按约定放置 instructions.md、tools/、skills/、channels/、schedules/，零额外配置即可运行 2. 持久化会话：会话状态自动保存，服务重启或沙箱重建后能无缝恢复，文件缺失时用文本提示降级 3. 沙箱隔离：代码执行、命令运行均在可配置的沙箱环境，服务关闭时统一清理 4. 工具审批：允许工具调用携带 callId，实现全生命周期的审批门控 5. 协作取消：底层已支持 AbortSignal 全链路传播（模型、工具、沙箱），未来可直接触发取消 6. 子代理与技能：技能按需加载，子代理单独管理，支持复杂任务分解 7. 调度与通道：自带 cron 调度和 HTTP/Slack/Discord 通道扩展，开箱即用"
+              "bullets": [
+                "约定式项目结构：agent/ 目录下分 instructions.md（系统提示）、tools/（类型化函数）、skills/（按需加载的过程）、channels/（消息通道，如 Slack、Discord）、schedules/（cron 定时任务）、subagents/ 和 agent.ts（模型与运行时配置）。",
+                "工具系统：通过 defineTool 用 Zod Schema 声明工具，自动提供类型安全的执行环境。",
+                "技能与子代理：支持按需加载的 Markdown 过程（skills）和嵌套子代理（subagents），适合复杂工作流。",
+                "多渠道接入：原生支持 HTTP、Slack、Discord 等通道，可一键接入消息服务。",
+                "评估与清理：eve eval 可本地运行一次性评估，并在退出时清理沙箱计算资源。",
+                "完整文档内置：npm 包中包含全部文档，方便编写代理的 AI 助手直接读取 node_modules/eve/docs。"
+              ]
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "需要长期运行的自主代理：客服机器人、运维助手、数据管道",
-                "多步骤、有状态对话式应用：旅行规划、研究助手",
-                "安全执行代码的 AI 工具：在线编码助手、数据分析脚本",
-                "团队希望以低认知负荷组织代理项目，便于审查和扩展"
+                "需要长期维护、多人协作的 AI 代理（文件结构天然适合版本控制）。",
+                "内部工具自动化，如定时周报生成、Slack 机器人、客服应答。",
+                "原型快速验证：通过 init 一条命令即可搭建可交互的代理。",
+                "对安全有要求的评估环境（沙箱隔离）。"
               ]
             },
             {
               "heading": "同类对比",
-              "body": "与 LangChain、AutoGPT、CrewAI 相比，eve 更强调文件系统即接口，而非代码即接口。LangChain 灵活但抽象层多，AutoGPT 偏自助智能体，CrewAI 面向多角色协作；eve 更底层且内置沙箱，与 Vercel 平台天然集成，适合偏好简洁约定、需安全执行环境的 TypeScript 开发者。"
+              "bullets": [
+                "vs LangChain：LangChain 以代码为中心，eve 以文件约定为中心，结构更清晰，但灵活性不如 LangChain 的链式抽象。",
+                "vs CrewAI：CrewAI 侧重多智能体协作，eve 当前更偏向单代理的模块化，子代理功能可作为扩展。",
+                "vs Vercel 自家 AI SDK：AI SDK 更底层，提供模型统一接口；eve 在其上封装了代理生命周期、工具、调度等全栈功能。"
+              ]
             },
             {
               "heading": "版本动态",
-              "body": "当前 v0.20.0（2026-07-05）主要改进：沙箱在服务关闭时自动停止（含自定义后端破坏性变更）、评估提示更友好、工具上下文暴露 callId、会话恢复处理缺失附件不失败、全链路 AbortSignal 基础（尚无触发入口）。可见重心在安全清理、可观测性和鲁棒性，正迈向生产稳定。 ---"
+              "body": "---",
+              "bullets": [
+                "当前版本 eve@0.21.1（2026-07-07）。",
+                "最近修复：eve eval 在运行后能清理本地沙箱句柄，防止 eval 进程结束后资源残留。",
+                "项目处于 Beta 阶段，API 与行为可能随 GA 变化，但更新频率和问题响应积极。"
+              ]
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
                 "置信度：high",
-                "信息盲区：沙箱引擎的具体环境需求（Docker/微虚拟机的安装和版本）未详细列出；未提供性能基准测试数据；多代理协作的调度细节和上限未说明；持久化状态的存储后端（内存/文件/数据库）未明确；完整的支持模型列表仅示例未列出"
+                "信息盲区：未说明具体支持的全部模型提供商（示例仅出现 Anthropic）；未提供沙箱（microsandbox）的实现细节与隔离级别；无性能基准或资源占用数据；未明确生产环境部署方式（如是否强依赖 Vercel 平台）；Node.js 最低版本要求缺失"
               ]
             }
           ]
@@ -18648,7 +20327,7 @@
           "streakDays": 4,
           "isNew": false,
           "createdAt": "2026-06-18",
-          "pushedAt": "2026-07-06",
+          "pushedAt": "2026-07-07",
           "latestRelease": "v0.1.71-diag",
           "firstSeen": "2026-06-25",
           "topics": [
@@ -18761,6 +20440,13 @@
               "date": "2026-07-07",
               "reason": "lightweight",
               "starsTotal": 1676,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "lightweight",
+              "starsTotal": 1862,
               "starsGained": 0,
               "release": ""
             }
@@ -19186,6 +20872,13 @@
               "date": "2026-07-07",
               "reason": "lightweight",
               "starsTotal": 616,
+              "starsGained": 0,
+              "release": "v0.5.5"
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "lightweight",
+              "starsTotal": 618,
               "starsGained": 0,
               "release": "v0.5.5"
             }
@@ -20459,7 +22152,7 @@
           "streakDays": 6,
           "isNew": false,
           "createdAt": "2026-06-09",
-          "pushedAt": "2026-07-06",
+          "pushedAt": "2026-07-07",
           "latestRelease": "v1.5.0",
           "firstSeen": "2026-06-21",
           "topics": [
@@ -20584,6 +22277,13 @@
               "date": "2026-07-07",
               "reason": "lightweight",
               "starsTotal": 6165,
+              "starsGained": 0,
+              "release": "v1.5.0"
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "lightweight",
+              "starsTotal": 6392,
               "starsGained": 0,
               "release": "v1.5.0"
             }
@@ -20969,8 +22669,8 @@
           "streakDays": 10,
           "isNew": false,
           "createdAt": "2026-06-16",
-          "pushedAt": "2026-07-06",
-          "latestRelease": "eve@0.20.0",
+          "pushedAt": "2026-07-07",
+          "latestRelease": "eve@0.21.1",
           "firstSeen": "2026-06-19",
           "topics": [
             "agent",
@@ -21095,53 +22795,80 @@
               "starsTotal": 3259,
               "starsGained": 0,
               "release": "eve@0.20.0"
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "release_update",
+              "starsTotal": 3297,
+              "starsGained": 0,
+              "release": "eve@0.21.1"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "eve 是 Vercel 推出的面向 AI 代理的框架，以文件系统为核心，将代理的指令、工具、技能、通道、调度等能力映射到约定的目录结构上，实现声明式开发。采用 TypeScript 编写，Apache-2.0 许可，强调持久化和沙箱安全，适合生产级自主代理。"
+              "body": "eve 是 Vercel 开源的“文件系统优先”AI 代理框架。它不要求你写冗长的编排代码，而是通过约定的目录结构（agent/instructions.md、agent/tools/、agent/skills/ 等）来定义代理的行为。代理的能力直接映射到文件系统，方便审查、扩展和团队协作。"
             },
             {
               "heading": "为什么火",
-              "body": "Vercel 的品牌加持、AI 代理开发热浪、内置沙箱和持久会话等生产特性，使其在两周内斩获 3k+ 星。社区活跃，文档完善，且框架文档随包发布，方便 AI 编码工具本地查阅。对厌倦了繁琐配置的开发者而言，约定大于配置的思路非常解渴。"
+              "bullets": [
+                "由 Vercel 官方推出，自带生态光环，发布两个多月即获 3.3k+ star。",
+                "解决了“代理项目逻辑散落、难以维护”的痛点，把提示词、工具、调度等配置实体化为文件，降低了认知负担。",
+                "内置 TUI (npx eve init 后的交互终端) 和本地沙箱，开箱即用，开发体验友好。"
+              ]
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "语言：TypeScript，运行于 Node.js",
-                "模型接入：基于 Vercel AI SDK（推测），示例使用 Claude Sonnet，支持多种模型",
-                "沙箱引擎：微虚拟机（microsandbox VMs）、Docker、Vercel 沙箱、just-bash 解释器",
-                "工具定义：Zod 模式，内置工具审批、子代理、调度、多通道（HTTP、Slack、Discord）",
-                "持久化：会话状态自动持久化，重启后恢复，文件附件缺失可降级"
+                "语言：TypeScript",
+                "运行时：Node.js",
+                "依赖：Zod 用于工具输入校验，支持主流模型（如 Anthropic Claude，示例中为 claude-sonnet-5）。",
+                "部署：可本地运行，推测可部署至 Vercel 或其他 Node 环境。",
+                "沙箱：eve eval 涉及本地沙箱（microsandbox），用于安全执行。"
               ]
             },
             {
               "heading": "核心能力",
-              "body": "1. 文件即代理：agent/ 目录下按约定放置 instructions.md、tools/、skills/、channels/、schedules/，零额外配置即可运行 2. 持久化会话：会话状态自动保存，服务重启或沙箱重建后能无缝恢复，文件缺失时用文本提示降级 3. 沙箱隔离：代码执行、命令运行均在可配置的沙箱环境，服务关闭时统一清理 4. 工具审批：允许工具调用携带 callId，实现全生命周期的审批门控 5. 协作取消：底层已支持 AbortSignal 全链路传播（模型、工具、沙箱），未来可直接触发取消 6. 子代理与技能：技能按需加载，子代理单独管理，支持复杂任务分解 7. 调度与通道：自带 cron 调度和 HTTP/Slack/Discord 通道扩展，开箱即用"
+              "bullets": [
+                "约定式项目结构：agent/ 目录下分 instructions.md（系统提示）、tools/（类型化函数）、skills/（按需加载的过程）、channels/（消息通道，如 Slack、Discord）、schedules/（cron 定时任务）、subagents/ 和 agent.ts（模型与运行时配置）。",
+                "工具系统：通过 defineTool 用 Zod Schema 声明工具，自动提供类型安全的执行环境。",
+                "技能与子代理：支持按需加载的 Markdown 过程（skills）和嵌套子代理（subagents），适合复杂工作流。",
+                "多渠道接入：原生支持 HTTP、Slack、Discord 等通道，可一键接入消息服务。",
+                "评估与清理：eve eval 可本地运行一次性评估，并在退出时清理沙箱计算资源。",
+                "完整文档内置：npm 包中包含全部文档，方便编写代理的 AI 助手直接读取 node_modules/eve/docs。"
+              ]
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "需要长期运行的自主代理：客服机器人、运维助手、数据管道",
-                "多步骤、有状态对话式应用：旅行规划、研究助手",
-                "安全执行代码的 AI 工具：在线编码助手、数据分析脚本",
-                "团队希望以低认知负荷组织代理项目，便于审查和扩展"
+                "需要长期维护、多人协作的 AI 代理（文件结构天然适合版本控制）。",
+                "内部工具自动化，如定时周报生成、Slack 机器人、客服应答。",
+                "原型快速验证：通过 init 一条命令即可搭建可交互的代理。",
+                "对安全有要求的评估环境（沙箱隔离）。"
               ]
             },
             {
               "heading": "同类对比",
-              "body": "与 LangChain、AutoGPT、CrewAI 相比，eve 更强调文件系统即接口，而非代码即接口。LangChain 灵活但抽象层多，AutoGPT 偏自助智能体，CrewAI 面向多角色协作；eve 更底层且内置沙箱，与 Vercel 平台天然集成，适合偏好简洁约定、需安全执行环境的 TypeScript 开发者。"
+              "bullets": [
+                "vs LangChain：LangChain 以代码为中心，eve 以文件约定为中心，结构更清晰，但灵活性不如 LangChain 的链式抽象。",
+                "vs CrewAI：CrewAI 侧重多智能体协作，eve 当前更偏向单代理的模块化，子代理功能可作为扩展。",
+                "vs Vercel 自家 AI SDK：AI SDK 更底层，提供模型统一接口；eve 在其上封装了代理生命周期、工具、调度等全栈功能。"
+              ]
             },
             {
               "heading": "版本动态",
-              "body": "当前 v0.20.0（2026-07-05）主要改进：沙箱在服务关闭时自动停止（含自定义后端破坏性变更）、评估提示更友好、工具上下文暴露 callId、会话恢复处理缺失附件不失败、全链路 AbortSignal 基础（尚无触发入口）。可见重心在安全清理、可观测性和鲁棒性，正迈向生产稳定。 ---"
+              "body": "---",
+              "bullets": [
+                "当前版本 eve@0.21.1（2026-07-07）。",
+                "最近修复：eve eval 在运行后能清理本地沙箱句柄，防止 eval 进程结束后资源残留。",
+                "项目处于 Beta 阶段，API 与行为可能随 GA 变化，但更新频率和问题响应积极。"
+              ]
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
                 "置信度：high",
-                "信息盲区：沙箱引擎的具体环境需求（Docker/微虚拟机的安装和版本）未详细列出；未提供性能基准测试数据；多代理协作的调度细节和上限未说明；持久化状态的存储后端（内存/文件/数据库）未明确；完整的支持模型列表仅示例未列出"
+                "信息盲区：未说明具体支持的全部模型提供商（示例仅出现 Anthropic）；未提供沙箱（microsandbox）的实现细节与隔离级别；无性能基准或资源占用数据；未明确生产环境部署方式（如是否强依赖 Vercel 平台）；Node.js 最低版本要求缺失"
               ]
             }
           ]
@@ -23598,6 +25325,13 @@
               "starsTotal": 572,
               "starsGained": 0,
               "release": ""
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "lightweight",
+              "starsTotal": 572,
+              "starsGained": 0,
+              "release": ""
             }
           ],
           "analysis": [
@@ -23672,7 +25406,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-06-18",
-          "pushedAt": "2026-07-06",
+          "pushedAt": "2026-07-07",
           "latestRelease": "v0.1.71-diag",
           "firstSeen": "2026-06-25",
           "topics": [
@@ -23785,6 +25519,13 @@
               "date": "2026-07-07",
               "reason": "lightweight",
               "starsTotal": 1676,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "lightweight",
+              "starsTotal": 1862,
               "starsGained": 0,
               "release": ""
             }
@@ -24247,8 +25988,8 @@
           "streakDays": 9,
           "isNew": false,
           "createdAt": "2026-06-16",
-          "pushedAt": "2026-07-06",
-          "latestRelease": "eve@0.20.0",
+          "pushedAt": "2026-07-07",
+          "latestRelease": "eve@0.21.1",
           "firstSeen": "2026-06-19",
           "topics": [
             "agent",
@@ -24373,53 +26114,80 @@
               "starsTotal": 3259,
               "starsGained": 0,
               "release": "eve@0.20.0"
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "release_update",
+              "starsTotal": 3297,
+              "starsGained": 0,
+              "release": "eve@0.21.1"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "eve 是 Vercel 推出的面向 AI 代理的框架，以文件系统为核心，将代理的指令、工具、技能、通道、调度等能力映射到约定的目录结构上，实现声明式开发。采用 TypeScript 编写，Apache-2.0 许可，强调持久化和沙箱安全，适合生产级自主代理。"
+              "body": "eve 是 Vercel 开源的“文件系统优先”AI 代理框架。它不要求你写冗长的编排代码，而是通过约定的目录结构（agent/instructions.md、agent/tools/、agent/skills/ 等）来定义代理的行为。代理的能力直接映射到文件系统，方便审查、扩展和团队协作。"
             },
             {
               "heading": "为什么火",
-              "body": "Vercel 的品牌加持、AI 代理开发热浪、内置沙箱和持久会话等生产特性，使其在两周内斩获 3k+ 星。社区活跃，文档完善，且框架文档随包发布，方便 AI 编码工具本地查阅。对厌倦了繁琐配置的开发者而言，约定大于配置的思路非常解渴。"
+              "bullets": [
+                "由 Vercel 官方推出，自带生态光环，发布两个多月即获 3.3k+ star。",
+                "解决了“代理项目逻辑散落、难以维护”的痛点，把提示词、工具、调度等配置实体化为文件，降低了认知负担。",
+                "内置 TUI (npx eve init 后的交互终端) 和本地沙箱，开箱即用，开发体验友好。"
+              ]
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "语言：TypeScript，运行于 Node.js",
-                "模型接入：基于 Vercel AI SDK（推测），示例使用 Claude Sonnet，支持多种模型",
-                "沙箱引擎：微虚拟机（microsandbox VMs）、Docker、Vercel 沙箱、just-bash 解释器",
-                "工具定义：Zod 模式，内置工具审批、子代理、调度、多通道（HTTP、Slack、Discord）",
-                "持久化：会话状态自动持久化，重启后恢复，文件附件缺失可降级"
+                "语言：TypeScript",
+                "运行时：Node.js",
+                "依赖：Zod 用于工具输入校验，支持主流模型（如 Anthropic Claude，示例中为 claude-sonnet-5）。",
+                "部署：可本地运行，推测可部署至 Vercel 或其他 Node 环境。",
+                "沙箱：eve eval 涉及本地沙箱（microsandbox），用于安全执行。"
               ]
             },
             {
               "heading": "核心能力",
-              "body": "1. 文件即代理：agent/ 目录下按约定放置 instructions.md、tools/、skills/、channels/、schedules/，零额外配置即可运行 2. 持久化会话：会话状态自动保存，服务重启或沙箱重建后能无缝恢复，文件缺失时用文本提示降级 3. 沙箱隔离：代码执行、命令运行均在可配置的沙箱环境，服务关闭时统一清理 4. 工具审批：允许工具调用携带 callId，实现全生命周期的审批门控 5. 协作取消：底层已支持 AbortSignal 全链路传播（模型、工具、沙箱），未来可直接触发取消 6. 子代理与技能：技能按需加载，子代理单独管理，支持复杂任务分解 7. 调度与通道：自带 cron 调度和 HTTP/Slack/Discord 通道扩展，开箱即用"
+              "bullets": [
+                "约定式项目结构：agent/ 目录下分 instructions.md（系统提示）、tools/（类型化函数）、skills/（按需加载的过程）、channels/（消息通道，如 Slack、Discord）、schedules/（cron 定时任务）、subagents/ 和 agent.ts（模型与运行时配置）。",
+                "工具系统：通过 defineTool 用 Zod Schema 声明工具，自动提供类型安全的执行环境。",
+                "技能与子代理：支持按需加载的 Markdown 过程（skills）和嵌套子代理（subagents），适合复杂工作流。",
+                "多渠道接入：原生支持 HTTP、Slack、Discord 等通道，可一键接入消息服务。",
+                "评估与清理：eve eval 可本地运行一次性评估，并在退出时清理沙箱计算资源。",
+                "完整文档内置：npm 包中包含全部文档，方便编写代理的 AI 助手直接读取 node_modules/eve/docs。"
+              ]
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "需要长期运行的自主代理：客服机器人、运维助手、数据管道",
-                "多步骤、有状态对话式应用：旅行规划、研究助手",
-                "安全执行代码的 AI 工具：在线编码助手、数据分析脚本",
-                "团队希望以低认知负荷组织代理项目，便于审查和扩展"
+                "需要长期维护、多人协作的 AI 代理（文件结构天然适合版本控制）。",
+                "内部工具自动化，如定时周报生成、Slack 机器人、客服应答。",
+                "原型快速验证：通过 init 一条命令即可搭建可交互的代理。",
+                "对安全有要求的评估环境（沙箱隔离）。"
               ]
             },
             {
               "heading": "同类对比",
-              "body": "与 LangChain、AutoGPT、CrewAI 相比，eve 更强调文件系统即接口，而非代码即接口。LangChain 灵活但抽象层多，AutoGPT 偏自助智能体，CrewAI 面向多角色协作；eve 更底层且内置沙箱，与 Vercel 平台天然集成，适合偏好简洁约定、需安全执行环境的 TypeScript 开发者。"
+              "bullets": [
+                "vs LangChain：LangChain 以代码为中心，eve 以文件约定为中心，结构更清晰，但灵活性不如 LangChain 的链式抽象。",
+                "vs CrewAI：CrewAI 侧重多智能体协作，eve 当前更偏向单代理的模块化，子代理功能可作为扩展。",
+                "vs Vercel 自家 AI SDK：AI SDK 更底层，提供模型统一接口；eve 在其上封装了代理生命周期、工具、调度等全栈功能。"
+              ]
             },
             {
               "heading": "版本动态",
-              "body": "当前 v0.20.0（2026-07-05）主要改进：沙箱在服务关闭时自动停止（含自定义后端破坏性变更）、评估提示更友好、工具上下文暴露 callId、会话恢复处理缺失附件不失败、全链路 AbortSignal 基础（尚无触发入口）。可见重心在安全清理、可观测性和鲁棒性，正迈向生产稳定。 ---"
+              "body": "---",
+              "bullets": [
+                "当前版本 eve@0.21.1（2026-07-07）。",
+                "最近修复：eve eval 在运行后能清理本地沙箱句柄，防止 eval 进程结束后资源残留。",
+                "项目处于 Beta 阶段，API 与行为可能随 GA 变化，但更新频率和问题响应积极。"
+              ]
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
                 "置信度：high",
-                "信息盲区：沙箱引擎的具体环境需求（Docker/微虚拟机的安装和版本）未详细列出；未提供性能基准测试数据；多代理协作的调度细节和上限未说明；持久化状态的存储后端（内存/文件/数据库）未明确；完整的支持模型列表仅示例未列出"
+                "信息盲区：未说明具体支持的全部模型提供商（示例仅出现 Anthropic）；未提供沙箱（microsandbox）的实现细节与隔离级别；无性能基准或资源占用数据；未明确生产环境部署方式（如是否强依赖 Vercel 平台）；Node.js 最低版本要求缺失"
               ]
             }
           ]
@@ -25705,7 +27473,7 @@
           "streakDays": 7,
           "isNew": false,
           "createdAt": "2026-02-24",
-          "pushedAt": "2026-07-06",
+          "pushedAt": "2026-07-07",
           "latestRelease": "v0.8.1",
           "firstSeen": "2026-06-19",
           "topics": [
@@ -25869,6 +27637,13 @@
               "reason": "lightweight",
               "starsTotal": 27228,
               "starsGained": 7945,
+              "release": "v0.8.1"
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "lightweight",
+              "starsTotal": 27915,
+              "starsGained": 6309,
               "release": "v0.8.1"
             }
           ],
@@ -26276,8 +28051,8 @@
           "streakDays": 8,
           "isNew": false,
           "createdAt": "2026-06-16",
-          "pushedAt": "2026-07-06",
-          "latestRelease": "eve@0.20.0",
+          "pushedAt": "2026-07-07",
+          "latestRelease": "eve@0.21.1",
           "firstSeen": "2026-06-19",
           "topics": [
             "agent",
@@ -26402,53 +28177,80 @@
               "starsTotal": 3259,
               "starsGained": 0,
               "release": "eve@0.20.0"
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "release_update",
+              "starsTotal": 3297,
+              "starsGained": 0,
+              "release": "eve@0.21.1"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "eve 是 Vercel 推出的面向 AI 代理的框架，以文件系统为核心，将代理的指令、工具、技能、通道、调度等能力映射到约定的目录结构上，实现声明式开发。采用 TypeScript 编写，Apache-2.0 许可，强调持久化和沙箱安全，适合生产级自主代理。"
+              "body": "eve 是 Vercel 开源的“文件系统优先”AI 代理框架。它不要求你写冗长的编排代码，而是通过约定的目录结构（agent/instructions.md、agent/tools/、agent/skills/ 等）来定义代理的行为。代理的能力直接映射到文件系统，方便审查、扩展和团队协作。"
             },
             {
               "heading": "为什么火",
-              "body": "Vercel 的品牌加持、AI 代理开发热浪、内置沙箱和持久会话等生产特性，使其在两周内斩获 3k+ 星。社区活跃，文档完善，且框架文档随包发布，方便 AI 编码工具本地查阅。对厌倦了繁琐配置的开发者而言，约定大于配置的思路非常解渴。"
+              "bullets": [
+                "由 Vercel 官方推出，自带生态光环，发布两个多月即获 3.3k+ star。",
+                "解决了“代理项目逻辑散落、难以维护”的痛点，把提示词、工具、调度等配置实体化为文件，降低了认知负担。",
+                "内置 TUI (npx eve init 后的交互终端) 和本地沙箱，开箱即用，开发体验友好。"
+              ]
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "语言：TypeScript，运行于 Node.js",
-                "模型接入：基于 Vercel AI SDK（推测），示例使用 Claude Sonnet，支持多种模型",
-                "沙箱引擎：微虚拟机（microsandbox VMs）、Docker、Vercel 沙箱、just-bash 解释器",
-                "工具定义：Zod 模式，内置工具审批、子代理、调度、多通道（HTTP、Slack、Discord）",
-                "持久化：会话状态自动持久化，重启后恢复，文件附件缺失可降级"
+                "语言：TypeScript",
+                "运行时：Node.js",
+                "依赖：Zod 用于工具输入校验，支持主流模型（如 Anthropic Claude，示例中为 claude-sonnet-5）。",
+                "部署：可本地运行，推测可部署至 Vercel 或其他 Node 环境。",
+                "沙箱：eve eval 涉及本地沙箱（microsandbox），用于安全执行。"
               ]
             },
             {
               "heading": "核心能力",
-              "body": "1. 文件即代理：agent/ 目录下按约定放置 instructions.md、tools/、skills/、channels/、schedules/，零额外配置即可运行 2. 持久化会话：会话状态自动保存，服务重启或沙箱重建后能无缝恢复，文件缺失时用文本提示降级 3. 沙箱隔离：代码执行、命令运行均在可配置的沙箱环境，服务关闭时统一清理 4. 工具审批：允许工具调用携带 callId，实现全生命周期的审批门控 5. 协作取消：底层已支持 AbortSignal 全链路传播（模型、工具、沙箱），未来可直接触发取消 6. 子代理与技能：技能按需加载，子代理单独管理，支持复杂任务分解 7. 调度与通道：自带 cron 调度和 HTTP/Slack/Discord 通道扩展，开箱即用"
+              "bullets": [
+                "约定式项目结构：agent/ 目录下分 instructions.md（系统提示）、tools/（类型化函数）、skills/（按需加载的过程）、channels/（消息通道，如 Slack、Discord）、schedules/（cron 定时任务）、subagents/ 和 agent.ts（模型与运行时配置）。",
+                "工具系统：通过 defineTool 用 Zod Schema 声明工具，自动提供类型安全的执行环境。",
+                "技能与子代理：支持按需加载的 Markdown 过程（skills）和嵌套子代理（subagents），适合复杂工作流。",
+                "多渠道接入：原生支持 HTTP、Slack、Discord 等通道，可一键接入消息服务。",
+                "评估与清理：eve eval 可本地运行一次性评估，并在退出时清理沙箱计算资源。",
+                "完整文档内置：npm 包中包含全部文档，方便编写代理的 AI 助手直接读取 node_modules/eve/docs。"
+              ]
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "需要长期运行的自主代理：客服机器人、运维助手、数据管道",
-                "多步骤、有状态对话式应用：旅行规划、研究助手",
-                "安全执行代码的 AI 工具：在线编码助手、数据分析脚本",
-                "团队希望以低认知负荷组织代理项目，便于审查和扩展"
+                "需要长期维护、多人协作的 AI 代理（文件结构天然适合版本控制）。",
+                "内部工具自动化，如定时周报生成、Slack 机器人、客服应答。",
+                "原型快速验证：通过 init 一条命令即可搭建可交互的代理。",
+                "对安全有要求的评估环境（沙箱隔离）。"
               ]
             },
             {
               "heading": "同类对比",
-              "body": "与 LangChain、AutoGPT、CrewAI 相比，eve 更强调文件系统即接口，而非代码即接口。LangChain 灵活但抽象层多，AutoGPT 偏自助智能体，CrewAI 面向多角色协作；eve 更底层且内置沙箱，与 Vercel 平台天然集成，适合偏好简洁约定、需安全执行环境的 TypeScript 开发者。"
+              "bullets": [
+                "vs LangChain：LangChain 以代码为中心，eve 以文件约定为中心，结构更清晰，但灵活性不如 LangChain 的链式抽象。",
+                "vs CrewAI：CrewAI 侧重多智能体协作，eve 当前更偏向单代理的模块化，子代理功能可作为扩展。",
+                "vs Vercel 自家 AI SDK：AI SDK 更底层，提供模型统一接口；eve 在其上封装了代理生命周期、工具、调度等全栈功能。"
+              ]
             },
             {
               "heading": "版本动态",
-              "body": "当前 v0.20.0（2026-07-05）主要改进：沙箱在服务关闭时自动停止（含自定义后端破坏性变更）、评估提示更友好、工具上下文暴露 callId、会话恢复处理缺失附件不失败、全链路 AbortSignal 基础（尚无触发入口）。可见重心在安全清理、可观测性和鲁棒性，正迈向生产稳定。 ---"
+              "body": "---",
+              "bullets": [
+                "当前版本 eve@0.21.1（2026-07-07）。",
+                "最近修复：eve eval 在运行后能清理本地沙箱句柄，防止 eval 进程结束后资源残留。",
+                "项目处于 Beta 阶段，API 与行为可能随 GA 变化，但更新频率和问题响应积极。"
+              ]
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
                 "置信度：high",
-                "信息盲区：沙箱引擎的具体环境需求（Docker/微虚拟机的安装和版本）未详细列出；未提供性能基准测试数据；多代理协作的调度细节和上限未说明；持久化状态的存储后端（内存/文件/数据库）未明确；完整的支持模型列表仅示例未列出"
+                "信息盲区：未说明具体支持的全部模型提供商（示例仅出现 Anthropic）；未提供沙箱（microsandbox）的实现细节与隔离级别；无性能基准或资源占用数据；未明确生产环境部署方式（如是否强依赖 Vercel 平台）；Node.js 最低版本要求缺失"
               ]
             }
           ]
@@ -26659,7 +28461,7 @@
           "streakDays": 4,
           "isNew": false,
           "createdAt": "2026-06-09",
-          "pushedAt": "2026-07-06",
+          "pushedAt": "2026-07-07",
           "latestRelease": "v1.5.0",
           "firstSeen": "2026-06-21",
           "topics": [
@@ -26784,6 +28586,13 @@
               "date": "2026-07-07",
               "reason": "lightweight",
               "starsTotal": 6165,
+              "starsGained": 0,
+              "release": "v1.5.0"
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "lightweight",
+              "starsTotal": 6392,
               "starsGained": 0,
               "release": "v1.5.0"
             }
@@ -30662,8 +32471,8 @@
           "streakDays": 7,
           "isNew": false,
           "createdAt": "2026-06-16",
-          "pushedAt": "2026-07-06",
-          "latestRelease": "eve@0.20.0",
+          "pushedAt": "2026-07-07",
+          "latestRelease": "eve@0.21.1",
           "firstSeen": "2026-06-19",
           "topics": [
             "agent",
@@ -30788,53 +32597,80 @@
               "starsTotal": 3259,
               "starsGained": 0,
               "release": "eve@0.20.0"
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "release_update",
+              "starsTotal": 3297,
+              "starsGained": 0,
+              "release": "eve@0.21.1"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "eve 是 Vercel 推出的面向 AI 代理的框架，以文件系统为核心，将代理的指令、工具、技能、通道、调度等能力映射到约定的目录结构上，实现声明式开发。采用 TypeScript 编写，Apache-2.0 许可，强调持久化和沙箱安全，适合生产级自主代理。"
+              "body": "eve 是 Vercel 开源的“文件系统优先”AI 代理框架。它不要求你写冗长的编排代码，而是通过约定的目录结构（agent/instructions.md、agent/tools/、agent/skills/ 等）来定义代理的行为。代理的能力直接映射到文件系统，方便审查、扩展和团队协作。"
             },
             {
               "heading": "为什么火",
-              "body": "Vercel 的品牌加持、AI 代理开发热浪、内置沙箱和持久会话等生产特性，使其在两周内斩获 3k+ 星。社区活跃，文档完善，且框架文档随包发布，方便 AI 编码工具本地查阅。对厌倦了繁琐配置的开发者而言，约定大于配置的思路非常解渴。"
+              "bullets": [
+                "由 Vercel 官方推出，自带生态光环，发布两个多月即获 3.3k+ star。",
+                "解决了“代理项目逻辑散落、难以维护”的痛点，把提示词、工具、调度等配置实体化为文件，降低了认知负担。",
+                "内置 TUI (npx eve init 后的交互终端) 和本地沙箱，开箱即用，开发体验友好。"
+              ]
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "语言：TypeScript，运行于 Node.js",
-                "模型接入：基于 Vercel AI SDK（推测），示例使用 Claude Sonnet，支持多种模型",
-                "沙箱引擎：微虚拟机（microsandbox VMs）、Docker、Vercel 沙箱、just-bash 解释器",
-                "工具定义：Zod 模式，内置工具审批、子代理、调度、多通道（HTTP、Slack、Discord）",
-                "持久化：会话状态自动持久化，重启后恢复，文件附件缺失可降级"
+                "语言：TypeScript",
+                "运行时：Node.js",
+                "依赖：Zod 用于工具输入校验，支持主流模型（如 Anthropic Claude，示例中为 claude-sonnet-5）。",
+                "部署：可本地运行，推测可部署至 Vercel 或其他 Node 环境。",
+                "沙箱：eve eval 涉及本地沙箱（microsandbox），用于安全执行。"
               ]
             },
             {
               "heading": "核心能力",
-              "body": "1. 文件即代理：agent/ 目录下按约定放置 instructions.md、tools/、skills/、channels/、schedules/，零额外配置即可运行 2. 持久化会话：会话状态自动保存，服务重启或沙箱重建后能无缝恢复，文件缺失时用文本提示降级 3. 沙箱隔离：代码执行、命令运行均在可配置的沙箱环境，服务关闭时统一清理 4. 工具审批：允许工具调用携带 callId，实现全生命周期的审批门控 5. 协作取消：底层已支持 AbortSignal 全链路传播（模型、工具、沙箱），未来可直接触发取消 6. 子代理与技能：技能按需加载，子代理单独管理，支持复杂任务分解 7. 调度与通道：自带 cron 调度和 HTTP/Slack/Discord 通道扩展，开箱即用"
+              "bullets": [
+                "约定式项目结构：agent/ 目录下分 instructions.md（系统提示）、tools/（类型化函数）、skills/（按需加载的过程）、channels/（消息通道，如 Slack、Discord）、schedules/（cron 定时任务）、subagents/ 和 agent.ts（模型与运行时配置）。",
+                "工具系统：通过 defineTool 用 Zod Schema 声明工具，自动提供类型安全的执行环境。",
+                "技能与子代理：支持按需加载的 Markdown 过程（skills）和嵌套子代理（subagents），适合复杂工作流。",
+                "多渠道接入：原生支持 HTTP、Slack、Discord 等通道，可一键接入消息服务。",
+                "评估与清理：eve eval 可本地运行一次性评估，并在退出时清理沙箱计算资源。",
+                "完整文档内置：npm 包中包含全部文档，方便编写代理的 AI 助手直接读取 node_modules/eve/docs。"
+              ]
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "需要长期运行的自主代理：客服机器人、运维助手、数据管道",
-                "多步骤、有状态对话式应用：旅行规划、研究助手",
-                "安全执行代码的 AI 工具：在线编码助手、数据分析脚本",
-                "团队希望以低认知负荷组织代理项目，便于审查和扩展"
+                "需要长期维护、多人协作的 AI 代理（文件结构天然适合版本控制）。",
+                "内部工具自动化，如定时周报生成、Slack 机器人、客服应答。",
+                "原型快速验证：通过 init 一条命令即可搭建可交互的代理。",
+                "对安全有要求的评估环境（沙箱隔离）。"
               ]
             },
             {
               "heading": "同类对比",
-              "body": "与 LangChain、AutoGPT、CrewAI 相比，eve 更强调文件系统即接口，而非代码即接口。LangChain 灵活但抽象层多，AutoGPT 偏自助智能体，CrewAI 面向多角色协作；eve 更底层且内置沙箱，与 Vercel 平台天然集成，适合偏好简洁约定、需安全执行环境的 TypeScript 开发者。"
+              "bullets": [
+                "vs LangChain：LangChain 以代码为中心，eve 以文件约定为中心，结构更清晰，但灵活性不如 LangChain 的链式抽象。",
+                "vs CrewAI：CrewAI 侧重多智能体协作，eve 当前更偏向单代理的模块化，子代理功能可作为扩展。",
+                "vs Vercel 自家 AI SDK：AI SDK 更底层，提供模型统一接口；eve 在其上封装了代理生命周期、工具、调度等全栈功能。"
+              ]
             },
             {
               "heading": "版本动态",
-              "body": "当前 v0.20.0（2026-07-05）主要改进：沙箱在服务关闭时自动停止（含自定义后端破坏性变更）、评估提示更友好、工具上下文暴露 callId、会话恢复处理缺失附件不失败、全链路 AbortSignal 基础（尚无触发入口）。可见重心在安全清理、可观测性和鲁棒性，正迈向生产稳定。 ---"
+              "body": "---",
+              "bullets": [
+                "当前版本 eve@0.21.1（2026-07-07）。",
+                "最近修复：eve eval 在运行后能清理本地沙箱句柄，防止 eval 进程结束后资源残留。",
+                "项目处于 Beta 阶段，API 与行为可能随 GA 变化，但更新频率和问题响应积极。"
+              ]
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
                 "置信度：high",
-                "信息盲区：沙箱引擎的具体环境需求（Docker/微虚拟机的安装和版本）未详细列出；未提供性能基准测试数据；多代理协作的调度细节和上限未说明；持久化状态的存储后端（内存/文件/数据库）未明确；完整的支持模型列表仅示例未列出"
+                "信息盲区：未说明具体支持的全部模型提供商（示例仅出现 Anthropic）；未提供沙箱（microsandbox）的实现细节与隔离级别；无性能基准或资源占用数据；未明确生产环境部署方式（如是否强依赖 Vercel 平台）；Node.js 最低版本要求缺失"
               ]
             }
           ]
@@ -32190,6 +34026,13 @@
               "starsTotal": 616,
               "starsGained": 0,
               "release": "v0.5.5"
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "lightweight",
+              "starsTotal": 618,
+              "starsGained": 0,
+              "release": "v0.5.5"
             }
           ],
           "analysis": [
@@ -33350,8 +35193,8 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-06-16",
-          "pushedAt": "2026-07-06",
-          "latestRelease": "eve@0.20.0",
+          "pushedAt": "2026-07-07",
+          "latestRelease": "eve@0.21.1",
           "firstSeen": "2026-06-19",
           "topics": [
             "agent",
@@ -33476,53 +35319,80 @@
               "starsTotal": 3259,
               "starsGained": 0,
               "release": "eve@0.20.0"
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "release_update",
+              "starsTotal": 3297,
+              "starsGained": 0,
+              "release": "eve@0.21.1"
             }
           ],
           "analysis": [
             {
               "heading": "它是什么",
-              "body": "eve 是 Vercel 推出的面向 AI 代理的框架，以文件系统为核心，将代理的指令、工具、技能、通道、调度等能力映射到约定的目录结构上，实现声明式开发。采用 TypeScript 编写，Apache-2.0 许可，强调持久化和沙箱安全，适合生产级自主代理。"
+              "body": "eve 是 Vercel 开源的“文件系统优先”AI 代理框架。它不要求你写冗长的编排代码，而是通过约定的目录结构（agent/instructions.md、agent/tools/、agent/skills/ 等）来定义代理的行为。代理的能力直接映射到文件系统，方便审查、扩展和团队协作。"
             },
             {
               "heading": "为什么火",
-              "body": "Vercel 的品牌加持、AI 代理开发热浪、内置沙箱和持久会话等生产特性，使其在两周内斩获 3k+ 星。社区活跃，文档完善，且框架文档随包发布，方便 AI 编码工具本地查阅。对厌倦了繁琐配置的开发者而言，约定大于配置的思路非常解渴。"
+              "bullets": [
+                "由 Vercel 官方推出，自带生态光环，发布两个多月即获 3.3k+ star。",
+                "解决了“代理项目逻辑散落、难以维护”的痛点，把提示词、工具、调度等配置实体化为文件，降低了认知负担。",
+                "内置 TUI (npx eve init 后的交互终端) 和本地沙箱，开箱即用，开发体验友好。"
+              ]
             },
             {
               "heading": "技术栈",
               "bullets": [
-                "语言：TypeScript，运行于 Node.js",
-                "模型接入：基于 Vercel AI SDK（推测），示例使用 Claude Sonnet，支持多种模型",
-                "沙箱引擎：微虚拟机（microsandbox VMs）、Docker、Vercel 沙箱、just-bash 解释器",
-                "工具定义：Zod 模式，内置工具审批、子代理、调度、多通道（HTTP、Slack、Discord）",
-                "持久化：会话状态自动持久化，重启后恢复，文件附件缺失可降级"
+                "语言：TypeScript",
+                "运行时：Node.js",
+                "依赖：Zod 用于工具输入校验，支持主流模型（如 Anthropic Claude，示例中为 claude-sonnet-5）。",
+                "部署：可本地运行，推测可部署至 Vercel 或其他 Node 环境。",
+                "沙箱：eve eval 涉及本地沙箱（microsandbox），用于安全执行。"
               ]
             },
             {
               "heading": "核心能力",
-              "body": "1. 文件即代理：agent/ 目录下按约定放置 instructions.md、tools/、skills/、channels/、schedules/，零额外配置即可运行 2. 持久化会话：会话状态自动保存，服务重启或沙箱重建后能无缝恢复，文件缺失时用文本提示降级 3. 沙箱隔离：代码执行、命令运行均在可配置的沙箱环境，服务关闭时统一清理 4. 工具审批：允许工具调用携带 callId，实现全生命周期的审批门控 5. 协作取消：底层已支持 AbortSignal 全链路传播（模型、工具、沙箱），未来可直接触发取消 6. 子代理与技能：技能按需加载，子代理单独管理，支持复杂任务分解 7. 调度与通道：自带 cron 调度和 HTTP/Slack/Discord 通道扩展，开箱即用"
+              "bullets": [
+                "约定式项目结构：agent/ 目录下分 instructions.md（系统提示）、tools/（类型化函数）、skills/（按需加载的过程）、channels/（消息通道，如 Slack、Discord）、schedules/（cron 定时任务）、subagents/ 和 agent.ts（模型与运行时配置）。",
+                "工具系统：通过 defineTool 用 Zod Schema 声明工具，自动提供类型安全的执行环境。",
+                "技能与子代理：支持按需加载的 Markdown 过程（skills）和嵌套子代理（subagents），适合复杂工作流。",
+                "多渠道接入：原生支持 HTTP、Slack、Discord 等通道，可一键接入消息服务。",
+                "评估与清理：eve eval 可本地运行一次性评估，并在退出时清理沙箱计算资源。",
+                "完整文档内置：npm 包中包含全部文档，方便编写代理的 AI 助手直接读取 node_modules/eve/docs。"
+              ]
             },
             {
               "heading": "适用场景",
               "bullets": [
-                "需要长期运行的自主代理：客服机器人、运维助手、数据管道",
-                "多步骤、有状态对话式应用：旅行规划、研究助手",
-                "安全执行代码的 AI 工具：在线编码助手、数据分析脚本",
-                "团队希望以低认知负荷组织代理项目，便于审查和扩展"
+                "需要长期维护、多人协作的 AI 代理（文件结构天然适合版本控制）。",
+                "内部工具自动化，如定时周报生成、Slack 机器人、客服应答。",
+                "原型快速验证：通过 init 一条命令即可搭建可交互的代理。",
+                "对安全有要求的评估环境（沙箱隔离）。"
               ]
             },
             {
               "heading": "同类对比",
-              "body": "与 LangChain、AutoGPT、CrewAI 相比，eve 更强调文件系统即接口，而非代码即接口。LangChain 灵活但抽象层多，AutoGPT 偏自助智能体，CrewAI 面向多角色协作；eve 更底层且内置沙箱，与 Vercel 平台天然集成，适合偏好简洁约定、需安全执行环境的 TypeScript 开发者。"
+              "bullets": [
+                "vs LangChain：LangChain 以代码为中心，eve 以文件约定为中心，结构更清晰，但灵活性不如 LangChain 的链式抽象。",
+                "vs CrewAI：CrewAI 侧重多智能体协作，eve 当前更偏向单代理的模块化，子代理功能可作为扩展。",
+                "vs Vercel 自家 AI SDK：AI SDK 更底层，提供模型统一接口；eve 在其上封装了代理生命周期、工具、调度等全栈功能。"
+              ]
             },
             {
               "heading": "版本动态",
-              "body": "当前 v0.20.0（2026-07-05）主要改进：沙箱在服务关闭时自动停止（含自定义后端破坏性变更）、评估提示更友好、工具上下文暴露 callId、会话恢复处理缺失附件不失败、全链路 AbortSignal 基础（尚无触发入口）。可见重心在安全清理、可观测性和鲁棒性，正迈向生产稳定。 ---"
+              "body": "---",
+              "bullets": [
+                "当前版本 eve@0.21.1（2026-07-07）。",
+                "最近修复：eve eval 在运行后能清理本地沙箱句柄，防止 eval 进程结束后资源残留。",
+                "项目处于 Beta 阶段，API 与行为可能随 GA 变化，但更新频率和问题响应积极。"
+              ]
             },
             {
               "heading": "ℹ️ 置信度与信息盲区",
               "bullets": [
                 "置信度：high",
-                "信息盲区：沙箱引擎的具体环境需求（Docker/微虚拟机的安装和版本）未详细列出；未提供性能基准测试数据；多代理协作的调度细节和上限未说明；持久化状态的存储后端（内存/文件/数据库）未明确；完整的支持模型列表仅示例未列出"
+                "信息盲区：未说明具体支持的全部模型提供商（示例仅出现 Anthropic）；未提供沙箱（microsandbox）的实现细节与隔离级别；无性能基准或资源占用数据；未明确生产环境部署方式（如是否强依赖 Vercel 平台）；Node.js 最低版本要求缺失"
               ]
             }
           ]
@@ -33543,7 +35413,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-06-11",
-          "pushedAt": "2026-07-06",
+          "pushedAt": "2026-07-07",
           "latestRelease": "v0.4.0",
           "firstSeen": "2026-06-19",
           "topics": [
@@ -33695,6 +35565,13 @@
               "date": "2026-07-07",
               "reason": "lightweight",
               "starsTotal": 6382,
+              "starsGained": 0,
+              "release": "v0.4.0"
+            },
+            {
+              "date": "2026-07-08",
+              "reason": "lightweight",
+              "starsTotal": 6604,
               "starsGained": 0,
               "release": "v0.4.0"
             }

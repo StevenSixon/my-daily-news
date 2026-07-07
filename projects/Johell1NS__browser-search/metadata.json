@@ -18,31 +18,32 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "Web search skill for AI agents, AI tool.",
-  "one_liner": "AI代理的自托管搜索浏览技能，防幻觉设计",
-  "why_worth_it": "解决AI代理搜索被反爬问题，三重工具自动升级，强制事实核查防止幻觉。",
+  "classify_reason": "AI image generation WebUI workbench for GPT-image-2 and OpenAI-compatible APIs.",
+  "one_liner": "让AI代理自由搜网浏览，自托管、反封锁、抗幻觉实战技能包。",
+  "why_worth_it": "解决AI代理上网被Cloudflare封锁和幻觉两大痛点，完全本地免费无限量，适合深度研究集成。",
   "tags": [
-    "Agent技能",
-    "浏览器自动化",
-    "反爬虫",
-    "自托管"
+    "Agent Skills",
+    "自托管",
+    "反封锁浏览",
+    "多工具编排"
   ],
   "confidence": "high",
   "info_gaps": [
-    "未提供独立的安全审计报告，CloakBrowser 的反爬成功率数据来自项目方自身，未经第三方验证",
-    "缺少与其他 AI 搜索技能（如 AutoGPT 的搜索插件）的基准对比",
-    "项目主页缺失（仓库描述中主页为空）",
-    "未说明大规模并发下的性能表现"
+    "未提供 Docker Compose 或一键部署脚本，需用户自行配置 SearXNG 和 Camofox 容器",
+    "CloakBrowser 的实际反爬成功率缺乏独立第三方验证",
+    "未展示与其他 AI 搜索工具（如 Tavily、Exa）的直接性能/成本对比",
+    "FAQ 文档仅修复链接但未展示全文，其问题解答细节不明",
+    "缺少针对不同操作系统（Windows/macOS）的具体部署注意事项"
   ],
   "quality_flags": [],
-  "stars_total": 312,
+  "stars_total": 319,
   "created_at": "2026-06-22",
-  "pushed_at": "2026-06-30",
-  "latest_release": "v1.1.0",
+  "pushed_at": "2026-07-07",
+  "latest_release": "v1.2.0",
   "first_seen": "2026-06-30",
-  "last_seen": "2026-07-06",
-  "streak_days": 7,
-  "analysis_updated_at": "2026-06-30T00:50:18+0800",
+  "last_seen": "2026-07-08",
+  "streak_days": 8,
+  "analysis_updated_at": "2026-07-08T03:28:33+0800",
   "appearances": [
     {
       "date": "2026-06-30",
@@ -92,6 +93,13 @@
       "stars_total": 312,
       "stars_gained": 0,
       "release": "v1.1.0"
+    },
+    {
+      "date": "2026-07-08",
+      "reason": "release_update",
+      "stars_total": 319,
+      "stars_gained": 0,
+      "release": "v1.2.0"
     }
   ]
 }

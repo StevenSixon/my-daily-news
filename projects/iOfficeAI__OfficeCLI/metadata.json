@@ -1,0 +1,57 @@
+{
+  "full_name": "iOfficeAI/OfficeCLI",
+  "url": "https://github.com/iOfficeAI/OfficeCLI",
+  "description": "OfficeCLI is the first and best Office suite  purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files. Free, open-source, single binary, no Office installation required.",
+  "language": "C#",
+  "topics": [
+    "agent",
+    "ai",
+    "claude-code",
+    "cli",
+    "codex",
+    "docx",
+    "excel",
+    "office",
+    "openclaw",
+    "pptx",
+    "presentation",
+    "skills",
+    "word",
+    "xlsx"
+  ],
+  "license": "Apache-2.0",
+  "category": "AI 应用",
+  "classify_reason": "Extends Claude to watch and transcribe videos; an AI assistant tool.",
+  "one_liner": "为AI agent打造的Office CLI，无需安装Office，单二进制读写Word/Excel/PPT。",
+  "why_worth_it": "让AI agent直接操作文档，取代笨重的Python库和Office依赖，通过HTML渲染实现视觉反馈，极大简化文档自动化。",
+  "tags": [
+    "AI agent",
+    "Office自动化",
+    "CLI工具",
+    "单二进制"
+  ],
+  "confidence": "high",
+  "info_gaps": [
+    "无正式的 Office 兼容性基准测试或保真度报告（仅声称高保真）",
+    "大文件（>100MB）处理的性能数据未公开",
+    "HTML 渲染引擎的具体实现细节（是不是基于浏览器引擎）没有说明"
+  ],
+  "quality_flags": [],
+  "stars_total": 9713,
+  "created_at": "2026-03-15",
+  "pushed_at": "2026-07-07",
+  "latest_release": "v1.0.129",
+  "first_seen": "2026-07-08",
+  "last_seen": "2026-07-08",
+  "streak_days": 1,
+  "analysis_updated_at": "2026-07-08T03:21:35+0800",
+  "appearances": [
+    {
+      "date": "2026-07-08",
+      "reason": "new",
+      "stars_total": 9713,
+      "stars_gained": 802,
+      "release": "v1.0.129"
+    }
+  ]
+}

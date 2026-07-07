@@ -1,49 +1,42 @@
 ## 它是什么
-
-browser-search 是一个为 AI 代理（如 OpenCode、Claude Code 等）设计的网络搜索与浏览技能。它整合了三个开源工具：SearXNG（元搜索引擎）、Camofox（Firefox 浏览器 REST API）和 CloakBrowser（隐身浏览器），通过自动升级策略绕过 Cloudflare 等反爬系统。整个系统自托管、免费且不限量，强调“先搜索后回答”以消除 AI 幻觉。
+browser-search 是一份写给 AI 代理（OpenCode/Claude Code 等）的技能文件，指导代理通过三个开源工具完成网络搜索与浏览：SearXNG（元搜索）、Camofox（Firefox REST API 浏览器）、CloakBrowser（隐身 Playwright 浏览器）。代理能自动选择工具，遇到反爬站点自动升级到隐蔽浏览器，所有组件免费自托管，无 API 限流。
 
 ## 为什么火
-
-AI 代理越来越依赖实时网络信息，但普通请求常被反爬机制阻挡。该项目提供一站式、零成本的解决方案，并强制事实核查工作流，直击 AI 生成虚假信息的痛点。近期经安全审计修复 22 个漏洞，获得社区信任。
+1. **终结代理幻觉**：强制“先搜再答”工作流，每个事实需多角度交叉验证，绝不编造。
+2. **零成本反封锁**：Cloudflare、Akamai 等反爬不再是障碍，CloakBrowser 58 条 C++ 底层补丁 + 类人指纹通过几乎所有测试，彻底告别付费反反爬服务。
+3. **极简集成**：一行 `npx skills add` 后 AI 代理自动读取文档并适配环境，无需手写胶水代码。
+4. **全本地无限量**：完全在本地运行，无 API 密钥、无订阅、无速率限制，树莓派都跑得动。
 
 ## 技术栈
-
-- **SearXNG**：Docker 部署，元搜索引擎，JSON 输出。
-- **Camofox**：基于 Camoufox（Firefox C++ 分支）的 Docker 容器，通过 REST API 驱动浏览器，内置 Readability.js 提取正文。
-- **CloakBrowser**：基于 Playwright 的 npm 包，带 58 个 C++ 级补丁的隐身 Chromium，自动检测并等待 Cloudflare、DataDome 等挑战。
-- **编排**：SKILL.md 定义指令集，AI 代理根据站点类型自动选择工具。
-- 语言：JavaScript（Node.js），配置文件为 YAML/JSON。
+- **语言/运行时**：Node.js (ESM 模块)
+- **搜索层**：SearXNG (Docker) → 多引擎聚合，返回 JSON
+- **常规浏览**：Camofox (Docker) → Firefox 内核 + REST API，内置 Readability.js 清洗正文
+- **隐身浏览**：CloakBrowser (npm) → Playwright + Chromium，自动检测并绕过反爬挑战
+- **技能定义**：SKILL.md (纯文本)，跨代理通用
 
 ## 核心能力
-
-1. **搜索与浏览一体化**：一次调用即可完成从搜索到浏览的完整流程。
-2. **自动反爬升级**：Camofox 被拦截时自动切换到 CloakBrowser，覆盖约 90% 普通站点和 10% 高防护站点。
-3. **防幻觉设计**：Deep Research 模式强制代理先搜索、交叉验证多个来源后才作答。
-4. **轻量高效**：在树莓派上测试通过，资源占用低，可 24/7 运行。
-5. **安全加固**：最新版本修复了 SSRF、路径遍历等严重漏洞，增加沙箱、限流机制。
-6. **跨代理兼容**：SKILL.md 为 OpenCode 编写，但可转换为其他 AI 代理格式。
+- **智能编排**：代理自主决策使用 SearXNG 搜索、Camofox 浏览、CloakBrowser 突破封锁
+- **自动逃生**：Camofox 被 Cloudflare 阻断时自动升级到 CloakBrowser，覆盖 ~90% 普通站点 + ~10% 防护站点
+- **反幻觉模式**：深度研究工作流强制事实核查，对抗大模型幻觉
+- **隐身引擎**：CloakBrowser 实现 0.9 reCAPTCHA v3 人类级评分，通过 Cloudflare Turnstile
+- **轻量持久**：Camofox 常驻热容器，首次冷启动后所有请求近乎实时；CloakBrowser 按需启动
 
 ## 适用场景
-
-- 需要实时网络信息的 AI 代理，如自动研究、事实核查、新闻聚合。
-- 开发者在受限环境中（如内网、边缘设备）需要自托管的搜索工具。
-- 希望避免 API 费用和限流的个人或小团队。
-- 对抗强反爬网站的场景，如舆情监控、竞品分析。
+- AI 编码助手需要查阅最新文档或社区讨论
+- 自主代理执行深度研究（如市场分析、竞品情报）
+- 低资源设备（树莓派）上搭建个人 RSS/爬虫代理
+- 绕过严格反爬的网站抓取原型验证
 
 ## 同类对比
-
-- 与单独使用 SearXNG 或 Playwright stealth 相比，该项目提供了开箱即用的组合，且自动应对反爬。
-- 对比商业 API（如 SerpApi、ScrapingBee），它完全免费且无调用限制，但需要自行部署维护。
-- 与类似技能项目（如 auto-gpt-search）相比，其防幻觉工作流和多重工具协作是独特优势。
+- **vs. 付费搜索 API（Tavily/SerpAPI）**：完全本地、零成本、无限量，但需自己维护基础设施。
+- **vs. 单独使用 Playwright Stealth**：本技能提供快速浏览（Camofox）与高隐身（CloakBrowser）的自动切换，避免所有请求都用重量级隐身代理造成的延迟。
+- **vs. Perplexity 等闭源产品**：开源、可审计、可自定义规则，敏感数据不离开自己机器。
 
 ## 版本动态
-
-- v1.1.0（2026-06-29）：主要修复 22 个安全漏洞，增加 SSRF 防护、Playwright 沙箱、限流等；新增 40 个测试用例和安全审计脚本。
-- 社区贡献者 @HeDo88TH 参与了安全审计。
-- 项目积极维护，README 承诺随新工具出现持续更新。
+v1.2.0 (2026-07-07) 主要优化健康检查、修正默认输出格式、更新 Camofox 官方镜像引用、依赖升级 cloakbrowser 0.4.8，并重写中英文等多语言文档与安全说明。项目处于活跃迭代期。
 ---
 
 ## ℹ️ 置信度与信息盲区
 
 - 置信度：**high**
-- 信息盲区：未提供独立的安全审计报告，CloakBrowser 的反爬成功率数据来自项目方自身，未经第三方验证；缺少与其他 AI 搜索技能（如 AutoGPT 的搜索插件）的基准对比；项目主页缺失（仓库描述中主页为空）；未说明大规模并发下的性能表现
+- 信息盲区：未提供 Docker Compose 或一键部署脚本，需用户自行配置 SearXNG 和 Camofox 容器；CloakBrowser 的实际反爬成功率缺乏独立第三方验证；未展示与其他 AI 搜索工具（如 Tavily、Exa）的直接性能/成本对比；FAQ 文档仅修复链接但未展示全文，其问题解答细节不明；缺少针对不同操作系统（Windows/macOS）的具体部署注意事项

@@ -1,35 +1,21 @@
-## 安装与上手
+## 安装
+1. 将技能注入你的 AI 代理（支持 OpenCode/Claude Code/Claude 等 70+ 种代理）：
+   ```bash
+   npx skills add Johell1NS/browser-search
+   ```
+2. 克隆仓库并安装 Node 依赖（CloakBrowser 内置于此）：
+   ```bash
+   git clone https://github.com/Johell1NS/browser-search
+   cd browser-search
+   npm install
+   ```
+3. 启动 SearXNG 和 Camofox 的 Docker 容器，具体配置可向你的 AI 代理提问——“帮我按 docs.searxng.org 和 camofox-browser README 在本机部署”。确保 SearXNG 监听 `:8080`，Camofox 监听 `:9377`。
+4. 验证：
+   - 搜索测试：`curl -s "http://localhost:8080/search?format=json&q=test"`
+   - 浏览测试：CloakBrowser 提取示例：`node scripts/cloak/cloak-fetch.mjs "https://example.com"`
 
-### 环境要求
-- Node.js >= 18（可使用 npx）
-- Docker（用于 SearXNG 和 Camofox）
-- Git
-
-### 快速安装技能定义
-```bash
-npx skills add Johell1NS/browser-search
-```
-该命令将 SKILL.md 安装到支持 Skills 规范的 AI 代理中（如 OpenCode）。
-
-### 完整基础设施搭建
-```bash
-git clone https://github.com/Johell1NS/browser-search
-cd browser-search
-npm install
-```
-然后向 AI 代理展示本 README，让其根据你的平台完成 SearXNG、Camofox 服务的 Docker 启动与配置。主要服务：
-- SearXNG：`docker run ... -p 8080:8080` 参见 searxng-docker
-- Camofox：`docker run ... -p 9377:9377` 参见 jo-inc/camofox-browser
-- CloakBrowser：已包含在 `scripts/cloak/cloak-fetch.mjs` 中，无需额外安装。
-
-### 最小可用示例
-假设服务已启动，向 AI 代理提问“搜索最近的大模型基准”时，代理会：
-1. 用 SearXNG 搜索：`curl http://localhost:8080/search?format=json&q=...`
-2. 用 Camofox 打开结果链接：`curl -X POST http://localhost:9377/tabs ...`
-3. 若遇 Cloudflare，切换到 CloakBrowser：`node scripts/cloak/cloak-fetch.mjs <URL>`
-
-### 验证安装
-运行预检脚本：
-```bash
-bash scripts/check-browser-search.sh
-```
+## 依赖前提
+- Node.js ≥ 18
+- Docker 引擎（用于 SearXNG 和 Camofox）
+- npm（随 Node 附带）
+- 防火墙/网络允许本地 8080、9377 端口

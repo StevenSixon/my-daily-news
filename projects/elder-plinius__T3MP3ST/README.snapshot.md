@@ -1,4 +1,4 @@
-# 🌩️ T3MP3ST
+# 🌩️ T3MP3ST 🌩️
 
 <!-- ⊰ sharp eye on the raw source. there's a flag for the curious: T3MP3ST{r3c31pt5_n0t_v1b3z} — the one that counts, you earn: run `npm run verify-claims`. LOVE PLINY ⊱ -->
 
@@ -55,6 +55,9 @@ Offensive security sits behind years of practice and expensive tooling. The bet 
 | 🤖 **Robotics / OT / embedded** | Coordinated-disclosure pipeline for OSS vuln hunting (OSV + live-PoC + refuter) | ✅ Pipeline stable |
 | 📂 **Source code** | White-box repo analysis with blind master-builder decomposition | ⚠️ Python-only ingest |
 | 💰 **Smart contracts** | Damn Vulnerable DeFi | ⚠️ reproduction, not novel discovery |
+| ☁️ **Cloud (IaC)** | Misconfig-detection benchmark (`cloud:bench`) + opt-in cloud arsenal (aws/az/gcloud + scoutsuite/cloudfox/pmapper; pacu gated) | 🚧 IaC-misconfig scaffolding — live-cloud exploitation not yet benchmarked |
+| 📱 **Mobile** | Built-in static analyzer (manifest misconfig + secret/cleartext detection, `mobile:bench`) + opt-in arsenal (mobsfscan/objection/drozer; frida gated) | 🚧 static-detection scaffolding — dynamic exploitation not benchmarked |
+| 🔩 **Binary / RE** | Decompiled-output sink detector (unsafe-copy / format-string / cmd-injection / int-overflow, `binary:bench`) + opt-in arsenal (ghidra/radare2/objdump/checksec/strings; gdb gated) | 🚧 static sink-detection scaffolding — solving/pwn not benchmarked |
 
 ## Quick start
 
@@ -161,6 +164,7 @@ Deeper reading: [WALL_FORENSICS](docs/WALL_FORENSICS.md) (per-challenge misses),
 |---|---|
 | [FEATURES.md](FEATURES.md) | feature-by-feature status (`[x]` shipped / `[~]` partial / `[ ]` planned) |
 | [SCOPE_AND_AUTHORIZATION](docs/SCOPE_AND_AUTHORIZATION.md) | authority model, scope receipts, evidence and retest rules |
+| [VERIFIED_PROVENANCE](docs/VERIFIED_PROVENANCE.md) | how findings become tool-proven instead of model-asserted |
 | [TEAM_PREVIEW](docs/TEAM_PREVIEW.md) | first-run path and review script |
 | [INSTALL_MATRIX](docs/INSTALL_MATRIX.md) | macOS / Linux readiness table |
 | [ARSENAL_ACTIVATION_PLAN](docs/ARSENAL_ACTIVATION_PLAN.md) | optional external-tool setup |

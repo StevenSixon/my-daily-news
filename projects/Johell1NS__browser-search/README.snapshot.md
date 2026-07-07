@@ -90,21 +90,21 @@ flow improvements, and orchestration updates over time. 🚀
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│                    browser-search                        │
+│                    browser-search                       │
 │                                                         │
 │  ┌──────────────┐                                       │
-│  │    Search     │                                       │
-│  │               │                                       │
-│  │  SearXNG      │  search engines → URLs               │
-│  │  (Docker)     │  JSON results, fast                  │
-│  │  :8080        │                                       │
+│  │    Search    │                                       │
+│  │              │                                       │
+│  │  SearXNG     │   search engines → URLs               │
+│  │  (Docker)    │   JSON results, fast                  │
+│  │  :8080       │                                       │
 │  └──────────────┘                                       │
-│         │                                                │
-│         │ results ready → to browse                      │
-│         ↓                                                │
+│         │                                               │
+│         │ results ready → to browse                     │
+│         ↓                                               │
 │  ┌─────────────────────────────────────┐                │
-│  │           Browsing                   │                │
-│  │                                      │                │
+│  │           Browsing                  │                │
+│  │                                     │                │
 │  │  ┌──────────────┐                   │                │
 │  │  │   Camofox    │  browser + REST   │                │
 │  │  │  (Docker)    │  JS, click, eval  │                │
@@ -226,7 +226,7 @@ they cover the entire web with no gaps. The agent decides which to use.
 
 ## Installation
 
-### Quick install (SKILL.md only)
+### Step 1 — Install the skill
 
 Install the skill definition into your AI agent with a single command:
 
@@ -236,7 +236,7 @@ npx skills add Johell1NS/browser-search
 
 This works with 70+ AI agents including OpenCode, Claude Code, Cursor, GitHub Copilot, and more.
 
-### Full setup (with infrastructure)
+### Step 2 — Set up the infrastructure
 
 ```bash
 git clone https://github.com/Johell1NS/browser-search
@@ -244,7 +244,11 @@ cd browser-search
 npm install
 ```
 
+CloakBrowser is installed by npm. SearXNG and Camofox require separate Docker containers — make sure they are running before using the skill.
+
 Show this README to your AI agent for a complete installation tailored to your environment and platform.
+
+browser-search does not provide platform-specific docker-compose files or install scripts. Your AI agent reads the references below and adapts the setup to your OS, architecture, and environment automatically.
 
 **Services overview:**
 
@@ -323,6 +327,11 @@ browser-search is open source and free. If you find it useful:
 - 🧠 **Adapt it** — fork it, tweak the SKILL.md, make it yours
 
 Every contribution, no matter how small, makes this better.
+
+## FAQ
+
+See [FAQ.md](FAQ.md) for frequently asked questions about installation,
+architecture, design decisions, and common issues.
 
 ## License
 

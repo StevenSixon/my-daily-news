@@ -1,0 +1,46 @@
+{
+  "full_name": "modiqo/cliare",
+  "url": "https://github.com/modiqo/cliare",
+  "description": "CLI agent-readiness measurement, command-shape inference, and CI scorecards",
+  "language": "Rust",
+  "topics": [
+    "ai",
+    "ai-agents",
+    "cli"
+  ],
+  "license": "Apache-2.0",
+  "category": "AI 应用",
+  "classify_reason": "Persistent offline memory plugin for Claude Code to reduce re-explanation.",
+  "one_liner": "像 OpenAPI/Swagger 一样的 CLI 代理就绪性测量工具，基于运行时证据推断命令表面与副作用。",
+  "why_worth_it": "用黑盒探测自动发现 CLI 文档、帮助与实际行为间的漂移，为维护者提供修复队列，为代理框架提供可查询的命令索引，减少 token 浪费。",
+  "tags": [
+    "Agent评测",
+    "CLI测试",
+    "黑盒探测",
+    "Rust工具"
+  ],
+  "confidence": "high",
+  "info_gaps": [
+    "未提供大规模 CLI（如包含数百个子命令）下的探测性能基准",
+    "未说明对动态生成的命令（如插件系统）或交互式 CLI 的处理能力",
+    "0.1.9 版本的具体更新内容未在 README 正文中描述"
+  ],
+  "quality_flags": [],
+  "stars_total": 713,
+  "created_at": "2026-06-13",
+  "pushed_at": "2026-07-05",
+  "latest_release": "v0.1.9",
+  "first_seen": "2026-07-08",
+  "last_seen": "2026-07-08",
+  "streak_days": 1,
+  "analysis_updated_at": "2026-07-08T03:23:26+0800",
+  "appearances": [
+    {
+      "date": "2026-07-08",
+      "reason": "new",
+      "stars_total": 713,
+      "stars_gained": 0,
+      "release": "v0.1.9"
+    }
+  ]
+}
