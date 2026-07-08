@@ -25,32 +25,31 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "并行代理管理平台，运行编码代理",
-  "one_liner": "并行运行多个 AI 编程代理，隔离 git worktree 对比结果，手机也能监控。",
-  "why_worth_it": "一个界面同时跑多个 CLI 智能体，选最优输出，移动端实时掌控进度，重度 AI 辅助开发者的高效工具。",
+  "classify_reason": "Agent development environment for managing parallel agents",
+  "one_liner": "并行运行多个 AI 编码代理的桌面编排器",
+  "why_worth_it": "可在一个项目中同时驱动 Claude Code、Codex 等多智能体，在隔离 git worktree 中比较产出并合并最优解，彻底榨干订阅价值",
   "tags": [
     "Agent编排",
-    "多Agent IDE",
     "TypeScript",
-    "YC支持"
+    "多智能体",
+    "CLI原生"
   ],
   "confidence": "high",
   "info_gaps": [
-    "没有提供性能基准测试数据",
-    "移动端具体技术栈未公开",
-    "未说明如何开发自定义代理插件",
-    "源码构建步骤和依赖版本未在 README 中明确给出",
-    "远程服务器端是否需要特殊代理守护进程未知"
+    "未提及自托管/私有部署方案，仅提供桌面安装方式",
+    "移动端依赖后端服务，但未说明后端架构或是否可自部署",
+    "未给出代理并发上限、资源消耗基线数据",
+    "无同场景性能对比（如与手动多终端切换的效率提升数据）"
   ],
   "quality_flags": [],
-  "stars_total": 12765,
+  "stars_total": 14046,
   "created_at": "2026-03-17",
-  "pushed_at": "2026-07-06",
-  "latest_release": "v1.4.124",
+  "pushed_at": "2026-07-08",
+  "latest_release": "v1.4.128",
   "first_seen": "2026-06-24",
-  "last_seen": "2026-07-07",
-  "streak_days": 14,
-  "analysis_updated_at": "2026-07-06T21:13:15+0800",
+  "last_seen": "2026-07-09",
+  "streak_days": 15,
+  "analysis_updated_at": "2026-07-09T01:20:58+0800",
   "appearances": [
     {
       "date": "2026-06-24",
@@ -149,6 +148,13 @@
       "stars_total": 12765,
       "stars_gained": 3783,
       "release": "v1.4.124"
+    },
+    {
+      "date": "2026-07-09",
+      "reason": "release_update",
+      "stars_total": 14046,
+      "stars_gained": 3820,
+      "release": "v1.4.128"
     }
   ]
 }

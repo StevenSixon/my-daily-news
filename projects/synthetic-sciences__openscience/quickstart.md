@@ -1,24 +1,25 @@
 ### 安装
 ```bash
 npm install -g @synsci/openscience
+openscience
 ```
-或者直接使用 npx 免安装运行：
+也可不全局安装，直接使用 npx：
 ```bash
 npx synsci
 ```
 
 ### 最小可用示例
-1. 设置 API 密钥（以 Anthropic 为例）：
+1. 设置 API 密钥（如 Anthropic）：
 ```bash
 export ANTHROPIC_API_KEY=sk-ant-...
 ```
-2. 启动工作台：
+2. 启动工作区：
 ```bash
 openscience
 ```
-浏览器会自动打开本地工作区界面。在输入框中给一个研究目标，代理即开始工作。
+3. 在打开的浏览器界面中输入研究目标（例如“探索 AlphaFold3 在蛋白设计中的改进”），Agent 会自动规划并执行。
 
-### 前置依赖
-- Node.js 环境（无额外数据库或 Docker 要求）
-- 至少一个 LLM 提供商的 API 密钥（支持 Anthropic、OpenAI、Google 等）
-- 浏览器用于访问工作区 UI
+### 依赖前提
+- Node.js（支持 npm）或直接从 GitHub Releases 下载平台二进制
+- 至少一个 LLM 提供商的 API 密钥（也可选 Atlas 托管模型）
+- 如需开发，需要 Bun 1.3+

@@ -22,32 +22,32 @@
   ],
   "license": "Apache-2.0",
   "category": "AI 应用",
-  "classify_reason": "开源AI科研工作台",
-  "one_liner": "给研究目标，自动完成文献、代码、实验、写报告的AI科研工作台。",
-  "why_worth_it": "开源自托管，保护数据隐私；打破科研循环每个环节，超越通用聊天助手，专为科学家设计。",
+  "classify_reason": "Open-source AI workbench for scientific research",
+  "one_liner": "给定目标，自动读文献、写代码、跑实验并生成报告的开源科研AI工作台。",
+  "why_worth_it": "开源、模型无关，可本地运行，把科研全流程交给AI，比闭源工具更透明可控。",
   "tags": [
-    "科研Agent",
-    "本地优先",
+    "AI Agent",
+    "科研自动化",
     "自托管",
     "TypeScript"
   ],
   "confidence": "high",
   "info_gaps": [
-    "Atlas 托管平台的收费细节、免费额度未明确",
-    "未提供具体的科研任务 Benchmark 或成功率数据",
-    "代理运行时的沙箱安全性未详细说明，README 仅警告非隔离",
-    "无实际案例展示或性能指标（如实验运行时间）",
-    "技能和数据库工具的具体能力范围未逐一列举"
+    "无性能基准（如文献检索准确性、实验成功率）或真实案例",
+    "本地模型（如通过 Ollama）的集成方式未详细说明",
+    "Demo 免费模型的速度、能力边界未描述",
+    "Agent 安全风险除容器隔离外无具体防护措施说明",
+    "与其他科研 AI 助手（如 PaperQA2）的量化对比缺失"
   ],
   "quality_flags": [],
-  "stars_total": 630,
+  "stars_total": 1697,
   "created_at": "2026-07-03",
-  "pushed_at": "2026-07-06",
-  "latest_release": "v1.2.10",
+  "pushed_at": "2026-07-08",
+  "latest_release": "v1.3.1",
   "first_seen": "2026-07-07",
-  "last_seen": "2026-07-07",
-  "streak_days": 1,
-  "analysis_updated_at": "2026-07-07T00:36:37+0800",
+  "last_seen": "2026-07-09",
+  "streak_days": 2,
+  "analysis_updated_at": "2026-07-09T01:22:51+0800",
   "appearances": [
     {
       "date": "2026-07-07",
@@ -55,6 +55,13 @@
       "stars_total": 630,
       "stars_gained": 0,
       "release": "v1.2.10"
+    },
+    {
+      "date": "2026-07-09",
+      "reason": "release_update",
+      "stars_total": 1697,
+      "stars_gained": 0,
+      "release": "v1.3.1"
     }
   ]
 }

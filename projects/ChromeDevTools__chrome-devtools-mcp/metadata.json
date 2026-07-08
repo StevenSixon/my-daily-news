@@ -15,7 +15,7 @@
   ],
   "license": "Apache-2.0",
   "category": "AI 应用",
-  "classify_reason": "为编码代理提供Chrome DevTools接口",
+  "classify_reason": "Chrome DevTools adapted for AI coding agents",
   "one_liner": "将Chrome DevTools封装为MCP服务，赋予AI代理浏览器调试与性能分析能力。",
   "why_worth_it": "Chrome DevTools团队官方出品，性能追踪、堆内存分析等专业能力直连AI代理，深度超越纯页面自动化工具。",
   "tags": [
@@ -31,13 +31,13 @@
     "未描述在多浏览标签页或多浏览器实例并发场景下的稳定性与资源开销"
   ],
   "quality_flags": [],
-  "stars_total": 46039,
+  "stars_total": 46361,
   "created_at": "2025-09-11",
-  "pushed_at": "2026-07-06",
+  "pushed_at": "2026-07-08",
   "latest_release": "chrome-devtools-mcp-v1.5.0",
   "first_seen": "2026-07-03",
-  "last_seen": "2026-07-07",
-  "streak_days": 5,
+  "last_seen": "2026-07-09",
+  "streak_days": 6,
   "analysis_updated_at": "2026-07-04T01:12:38+0800",
   "appearances": [
     {
@@ -73,6 +73,13 @@
       "reason": "lightweight",
       "stars_total": 46039,
       "stars_gained": 1375,
+      "release": "chrome-devtools-mcp-v1.5.0"
+    },
+    {
+      "date": "2026-07-09",
+      "reason": "lightweight",
+      "stars_total": 46361,
+      "stars_gained": 1480,
       "release": "chrome-devtools-mcp-v1.5.0"
     }
   ]

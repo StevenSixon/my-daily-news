@@ -15,7 +15,7 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "智能体技能框架及开发方法论",
+  "classify_reason": "Agentic skills framework and methodology for development",
   "one_liner": "为AI编码代理提供强制TDD、分步计划和子代理驱动的完整工作流技能框架",
   "why_worth_it": "根治代理“直接写代码”的毛病，强制遵循TDD和审查流程，适配Claude Code、Cursor等主流AI工具",
   "tags": [
@@ -32,13 +32,13 @@
     "未说明是否支持除 Git 外的版本控制系统"
   ],
   "quality_flags": [],
-  "stars_total": 245342,
+  "stars_total": 249632,
   "created_at": "2025-10-09",
-  "pushed_at": "2026-07-02",
+  "pushed_at": "2026-07-06",
   "latest_release": "v6.1.1",
   "first_seen": "2026-06-19",
-  "last_seen": "2026-07-04",
-  "streak_days": 7,
+  "last_seen": "2026-07-09",
+  "streak_days": 8,
   "analysis_updated_at": "2026-07-04T01:11:49+0800",
   "appearances": [
     {
@@ -88,6 +88,13 @@
       "reason": "release_update",
       "stars_total": 245342,
       "stars_gained": 1205,
+      "release": "v6.1.1"
+    },
+    {
+      "date": "2026-07-09",
+      "reason": "lightweight",
+      "stars_total": 249632,
+      "stars_gained": 999,
       "release": "v6.1.1"
     }
   ]

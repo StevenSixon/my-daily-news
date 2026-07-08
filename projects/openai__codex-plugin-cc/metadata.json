@@ -6,32 +6,30 @@
   "topics": [],
   "license": "Apache-2.0",
   "category": "AI 应用",
-  "classify_reason": "MacOS dictation app with on-device speech-to-text and AI enhancement.",
-  "one_liner": "在Claude Code中直接调用Codex进行代码审查与任务委托",
-  "why_worth_it": "为Claude Code用户提供无缝Codex集成，支持后台异步审查与任务委派，避免阻塞交互，提升开发流效率",
+  "classify_reason": "Plugin to use Codex from Claude Code",
+  "one_liner": "在 Claude Code 中无缝调用 Codex 进行代码审查与任务委托",
+  "why_worth_it": "Claude 用户无需切换工具即可获得 Codex 的审查能力，打通多 AI 协作，适合复杂代码审查与异步长任务",
   "tags": [
-    "AI代码审查",
-    "Claude Code插件",
-    "后台任务",
-    "Codex集成"
+    "Claude Code",
+    "Codex",
+    "代码审查",
+    "插件"
   ],
   "confidence": "high",
   "info_gaps": [
-    "未提供审查质量或与Codex原生审查的对比数据",
-    "未说明后台任务最大并发数限制",
-    "未提及操作系统的明确支持列表（仅提到Node.js，隐含跨平台）",
-    "未描述错误恢复与重试策略",
-    "未给出`/codex:adversarial-review`的具体审查维度差异的量化说明"
+    "未提供性能基准数据（审查耗时、资源占用）",
+    "未说明与原生 Codex CLI 审查结果的差异",
+    "未提及安全审计或权限控制细节"
   ],
   "quality_flags": [],
-  "stars_total": 26579,
+  "stars_total": 26843,
   "created_at": "2026-03-30",
-  "pushed_at": "2026-06-23",
-  "latest_release": "v1.0.5",
+  "pushed_at": "2026-07-08",
+  "latest_release": "v1.0.6",
   "first_seen": "2026-07-03",
-  "last_seen": "2026-07-08",
-  "streak_days": 6,
-  "analysis_updated_at": "2026-07-03T02:21:23+0800",
+  "last_seen": "2026-07-09",
+  "streak_days": 7,
+  "analysis_updated_at": "2026-07-09T01:19:57+0800",
   "appearances": [
     {
       "date": "2026-07-03",
@@ -74,6 +72,13 @@
       "stars_total": 26579,
       "stars_gained": 4329,
       "release": "v1.0.5"
+    },
+    {
+      "date": "2026-07-09",
+      "reason": "release_update",
+      "stars_total": 26843,
+      "stars_gained": 4725,
+      "release": "v1.0.6"
     }
   ]
 }

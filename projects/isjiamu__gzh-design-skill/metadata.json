@@ -1,0 +1,59 @@
+{
+  "full_name": "isjiamu/gzh-design-skill",
+  "url": "https://github.com/isjiamu/gzh-design-skill",
+  "description": "把 Markdown 一键排成可直接粘进公众号编辑器的精致 HTML —— 6 套精选主题 + 主题生成器 + 双关卡校验。An AI-agent skill that turns Markdown into paste-ready WeChat article HTML.",
+  "language": "HTML",
+  "topics": [
+    "agent-skill",
+    "ai-agent",
+    "claude-code",
+    "codex",
+    "cursor",
+    "gongzhonghao",
+    "html",
+    "markdown",
+    "rich-text",
+    "skill",
+    "typesetting",
+    "wechat",
+    "weixin"
+  ],
+  "license": "NOASSERTION",
+  "category": "AI 应用",
+  "classify_reason": "Agent skill for styling Markdown into WeChat article HTML",
+  "one_liner": "Markdown 一键排版成公众号专用 HTML，6 套主题+主题生成器+双校验",
+  "why_worth_it": "解决公众号排版粘贴掉格式的顽疾，全内联样式+脚本校验，天然适配 AI Agent",
+  "tags": [
+    "Agent Skill",
+    "公众号排版",
+    "Markdown 转 HTML",
+    "样式内联"
+  ],
+  "confidence": "medium",
+  "info_gaps": [
+    "未提供独立 CLI 用于非 Agent 环境下直接生成 HTML",
+    "主题生成器产生的组件库质量和一致性未给出量化评估",
+    "图片自适应效果及动图角标功能是否经过大量真实公众号测试无明确说明",
+    "校验脚本的具体依赖（是否有第三方 Python 库）未在 README 中明确列出"
+  ],
+  "quality_flags": [
+    "缺小标题：适用场景"
+  ],
+  "stars_total": 1472,
+  "created_at": "2026-07-01",
+  "pushed_at": "2026-07-08",
+  "latest_release": "v1.0.0",
+  "first_seen": "2026-07-09",
+  "last_seen": "2026-07-09",
+  "streak_days": 1,
+  "analysis_updated_at": "2026-07-09T01:18:50+0800",
+  "appearances": [
+    {
+      "date": "2026-07-09",
+      "reason": "new",
+      "stars_total": 1472,
+      "stars_gained": 0,
+      "release": "v1.0.0"
+    }
+  ]
+}

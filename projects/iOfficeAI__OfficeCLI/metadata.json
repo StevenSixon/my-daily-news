@@ -21,30 +21,32 @@
   ],
   "license": "Apache-2.0",
   "category": "AI 应用",
-  "classify_reason": "Extends Claude to watch and transcribe videos; an AI assistant tool.",
-  "one_liner": "为AI agent打造的Office CLI，无需安装Office，单二进制读写Word/Excel/PPT。",
-  "why_worth_it": "让AI agent直接操作文档，取代笨重的Python库和Office依赖，通过HTML渲染实现视觉反馈，极大简化文档自动化。",
+  "classify_reason": "Office suite designed for AI agent automation",
+  "one_liner": "一行命令让任何AI Agent自由读写Word/Excel/PPT，零依赖、全开源。",
+  "why_worth_it": "解决AI Agent无法直接操作Office文档的痛点，自带渲染引擎让AI有'视觉'反馈闭环，无需安装Office。",
   "tags": [
-    "AI agent",
+    "Agent工具",
+    "CLI",
     "Office自动化",
-    "CLI工具",
-    "单二进制"
+    "AI原生"
   ],
   "confidence": "high",
   "info_gaps": [
-    "无正式的 Office 兼容性基准测试或保真度报告（仅声称高保真）",
-    "大文件（>100MB）处理的性能数据未公开",
-    "HTML 渲染引擎的具体实现细节（是不是基于浏览器引擎）没有说明"
+    "未提供性能基准（大文件处理速度、内存占用）",
+    "PPT 图表、动画、过渡等高级特性支持未明确说明",
+    "未说明对受密码保护文档的支持",
+    "渲染保真度无量化对比（仅定性描述）",
+    "未提及对旧版 Office 格式（.doc/.xls/.ppt）的兼容性"
   ],
   "quality_flags": [],
-  "stars_total": 9713,
+  "stars_total": 11434,
   "created_at": "2026-03-15",
-  "pushed_at": "2026-07-07",
-  "latest_release": "v1.0.129",
+  "pushed_at": "2026-07-08",
+  "latest_release": "v1.0.132",
   "first_seen": "2026-07-08",
-  "last_seen": "2026-07-08",
-  "streak_days": 1,
-  "analysis_updated_at": "2026-07-08T03:21:35+0800",
+  "last_seen": "2026-07-09",
+  "streak_days": 2,
+  "analysis_updated_at": "2026-07-09T01:21:53+0800",
   "appearances": [
     {
       "date": "2026-07-08",
@@ -52,6 +54,13 @@
       "stars_total": 9713,
       "stars_gained": 802,
       "release": "v1.0.129"
+    },
+    {
+      "date": "2026-07-09",
+      "reason": "release_update",
+      "stars_total": 11434,
+      "stars_gained": 1712,
+      "release": "v1.0.132"
     }
   ]
 }

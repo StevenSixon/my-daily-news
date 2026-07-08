@@ -27,7 +27,7 @@
   ],
   "license": "GPL-3.0",
   "category": "AI 应用",
-  "classify_reason": "AI辅助逆向工程实验室",
+  "classify_reason": "Reverse engineering lab with MCP tools and agent-native automation",
   "one_liner": "逆向工程Agent实验室：197篇知识库+100+自动化工具，内藏通用AI越狱漏洞",
   "why_worth_it": "让逆向分析像CTF一样自动化：信号驱动匹配攻击链，节省海量查阅时间，自带越狱研究彩蛋",
   "tags": [
@@ -45,13 +45,13 @@
     "无基准测试数据或成功率统计"
   ],
   "quality_flags": [],
-  "stars_total": 402,
+  "stars_total": 459,
   "created_at": "2026-06-17",
-  "pushed_at": "2026-07-06",
-  "latest_release": null,
+  "pushed_at": "2026-07-08",
+  "latest_release": "v1.1.0-windows",
   "first_seen": "2026-07-02",
-  "last_seen": "2026-07-07",
-  "streak_days": 6,
+  "last_seen": "2026-07-09",
+  "streak_days": 7,
   "analysis_updated_at": "2026-07-02T03:17:45+0800",
   "appearances": [
     {
@@ -95,6 +95,13 @@
       "stars_total": 402,
       "stars_gained": 0,
       "release": null
+    },
+    {
+      "date": "2026-07-09",
+      "reason": "release_update",
+      "stars_total": 459,
+      "stars_gained": 0,
+      "release": "v1.1.0-windows"
     }
   ]
 }

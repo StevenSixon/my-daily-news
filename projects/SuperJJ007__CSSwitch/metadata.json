@@ -20,7 +20,7 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "将自定义API接入Claude Science的代理切换工具",
+  "classify_reason": "Proxy tool to connect Claude Science to custom API endpoints",
   "one_liner": "一键为 Claude Science 接入 DeepSeek/Qwen/Kimi 等第三方 API，本地代理零侵入。",
   "why_worth_it": "无需 Claude 订阅即可用 Science 完成科研工作，支持10+ providers，隔离环境保护真实账号。",
   "tags": [
@@ -38,19 +38,26 @@
     "未提供非macOS平台（Linux/Windows）的支持时间表"
   ],
   "quality_flags": [],
-  "stars_total": 283,
+  "stars_total": 313,
   "created_at": "2026-07-02",
-  "pushed_at": "2026-07-06",
+  "pushed_at": "2026-07-08",
   "latest_release": "v0.3.6",
   "first_seen": "2026-07-07",
-  "last_seen": "2026-07-07",
-  "streak_days": 1,
+  "last_seen": "2026-07-09",
+  "streak_days": 2,
   "analysis_updated_at": "2026-07-07T00:38:04+0800",
   "appearances": [
     {
       "date": "2026-07-07",
       "reason": "new",
       "stars_total": 283,
+      "stars_gained": 0,
+      "release": "v0.3.6"
+    },
+    {
+      "date": "2026-07-09",
+      "reason": "lightweight",
+      "stars_total": 313,
       "stars_gained": 0,
       "release": "v0.3.6"
     }

@@ -16,7 +16,7 @@
   ],
   "license": "Apache-2.0",
   "category": "AI 应用",
-  "classify_reason": "构建本地语音代理的工具集",
+  "classify_reason": "Toolkit for building local voice agents",
   "one_liner": "开源低延迟语音代理管道，VAD→STT→LLM→TTS，OpenAI Realtime兼容，全栈可替换。",
   "why_worth_it": "自托管语音助手开箱即用，告别闭源API；所有模块可本地运行，隐私可控，已用于数千机器人。",
   "tags": [
@@ -34,13 +34,13 @@
     "未说明与其他商业方案的性能对比测试"
   ],
   "quality_flags": [],
-  "stars_total": 5442,
+  "stars_total": 5667,
   "created_at": "2024-08-07",
-  "pushed_at": "2026-07-03",
+  "pushed_at": "2026-07-07",
   "latest_release": "v0.2.10",
   "first_seen": "2026-07-06",
-  "last_seen": "2026-07-07",
-  "streak_days": 2,
+  "last_seen": "2026-07-09",
+  "streak_days": 3,
   "analysis_updated_at": "2026-07-06T21:10:13+0800",
   "appearances": [
     {
@@ -55,6 +55,13 @@
       "reason": "lightweight",
       "stars_total": 5442,
       "stars_gained": 502,
+      "release": "v0.2.10"
+    },
+    {
+      "date": "2026-07-09",
+      "reason": "lightweight",
+      "stars_total": 5667,
+      "stars_gained": 645,
       "release": "v0.2.10"
     }
   ]

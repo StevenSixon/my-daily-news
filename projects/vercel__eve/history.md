@@ -15,3 +15,4 @@
 - 2026-07-06 | release_update | ⭐3251(+0) | release=eve@0.20.0
 - 2026-07-07 | lightweight | ⭐3259(+0) | release=eve@0.20.0
 - 2026-07-08 | release_update | ⭐3297(+0) | release=eve@0.21.1
+- 2026-07-09 | release_update | ⭐3325(+0) | release=eve@0.22.1

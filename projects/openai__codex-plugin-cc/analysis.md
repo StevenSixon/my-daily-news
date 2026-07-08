@@ -1,40 +1,39 @@
 ## 它是什么
-一个Claude Code插件，让开发者在使用Claude Code时可以直接调用OpenAI Codex的服务。它通过复用本地Codex CLI和认证，提供`/codex:review`、`/codex:adversarial-review`等只读审查命令，以及`/codex:rescue`、`/codex:transfer`等任务委派和会话移交命令，所有任务均可选择在后台运行并通过`/codex:status`和`/codex:result`管理。
+一个 Claude Code 插件，通过 `/codex:review` 等命令在 Claude Code 内直接调用本地 Codex CLI，实现代码审查、对抗性评审、任务救援、会话转移等能力。所有操作经过 Codex 应用服务器，使用相同的本地认证和配置。
 
 ## 为什么火
-Star数高达22k+，因为解决了AI编程工具链中的一个真实痛点：在Claude Code中编码时，若想用Codex进行深度审查或长任务，无需切换工具或复制上下文。它让两个AI助手在同一代码仓上协同，并提供后台执行模式，使开发者不被长任务阻塞。加上OpenAI官方维护，信任度高。
+仓库星数 26k+ 说明大量开发者希望结合 Claude 和 Codex 的优势，在熟悉的 Claude Code 流程中引入 Codex 的代码审查和后台任务处理，解决单一模型短板。
 
 ## 技术栈
 - 语言：JavaScript
 - 运行时：Node.js 18.18+
-- 核心依赖：本地Codex CLI及App Server（通过全局`codex`二进制）
-- 配置：复用Codex的`config.toml`（用户级/项目级）
-- 集成方式：Claude Code插件市场安装，通过斜杠命令和子代理（`codex:codex-rescue`）交互
+- 依赖：本地安装的 `@openai/codex` CLI、Claude Code 插件系统
+- 配置：继承 `config.toml`（用户级或项目级）
 
 ## 核心能力
-- **代码审查**：`/codex:review`（标准只读审查，支持`--base`分支对比）、`/codex:adversarial-review`（可定向挑战设计决策与风险区域，支持额外聚焦文本）
-- **任务委派**：`/codex:rescue` 将调试、修复等任务交给Codex子代理，支持`--background`、`--resume`、`--fresh`和模型/努力级别选择
-- **会话移交**：`/codex:transfer` 将当前Claude Code会话上下文转为Codex持久线程，生成`codex resume`命令
-- **后台管理**：`/codex:status`、`/codex:result`、`/codex:cancel` 让用户异步跟踪和停止任务
-- **审查门禁**：可选的`Stop`钩子，在Claude生成输出后自动运行Codex审查，若发现问题则阻止输出
-- **配置透传**：直接使用Codex现有配置，支持项目级或用户级模型与推理努力设置
+- **代码审查**：`/codex:review` 普通审查，`/codex:adversarial-review` 可定制的挑战性审查（质疑设计决策、风险区域）
+- **任务委托**：`/codex:rescue` 将问题交给 Codex 调查修复，支持模型和努力程度选择
+- **后台与状态管理**：`--background` 异步执行，`/codex:status` 查看进度，`/codex:result` 获取结果，`/codex:cancel` 取消
+- **会话转移**：`/codex:transfer` 将 Claude Code 对话上下文导入 Codex 继续
+- **审查门**：可选的 Stop 钩子，在 Claude 生成响应后自动运行 Codex 审查并阻止有问题的输出
+- **环境设置**：`/codex:setup` 检查安装、登录、管理审查门开关
 
 ## 适用场景
-1. **审查前发版**：用`/codex:review --base main`做快速分支审查
-2. **对抗性压力测试**：对关键代码用`/codex:adversarial-review`挑战架构和边界情况
-3. **持续调试**：Claude Code中遇到报错，用`/codex:rescue --background`让Codex并行调查
-4. **跨工具协作**：在Claude Code开始调试，通过`/codex:transfer`移交到Codex TUI继续
+- 团队希望用 Codex 做上线前多角度代码审查
+- 开发者想在 Claude Code 中处理复杂 bug 时委托给 Codex 节省令牌或利用不同模型
+- 长运行任务（如对抗性审查、大规模调查）放入后台异步处理
+- 在不同 AI 工具间保持会话连续性
 
 ## 同类对比
-- **仅用Codex App/TUI**：需切出Claude Code，丧失上下文和流内体验；本插件保持在同一IDE/终端环境
-- **其他AI助手插件**：如使用GitHub Copilot的代码审查，但本插件特性在于双向委托和会话移交，且完全使用Codex的强大审查能力
-- **纯粹Claude Code内任务**：缺少专业审查视角和Codex的模型多样性，本插件补充了外部AI的第二意见
+- 与独立使用 Codex CLI 相比：无需离开 Claude Code，审查结果直接在 Claude 上下文中可见
+- 与仅用 Claude 内置审查相比：引入 Codex 特有的对抗性审查和任务救援能力，多模型协作
+- 区别于纯 Claude 插件生态：首次深度整合第三方 AI 工具，展示了插件系统的可扩展性
 
 ## 版本动态
-v1.0.5新增`/codex:transfer`命令，实现Claude Code到Codex的会话移交，强化了双工具之间的工作流连续性。该版本也包含版本号更新和内部改进。项目维护活跃，由OpenAI团队迭代。
+最新 v1.0.6（2026-07-08）移除了 git 命令的 shell 扩展，提升安全性；持续小幅迭代，社区活跃。
 ---
 
 ## ℹ️ 置信度与信息盲区
 
 - 置信度：**high**
-- 信息盲区：未提供审查质量或与Codex原生审查的对比数据；未说明后台任务最大并发数限制；未提及操作系统的明确支持列表（仅提到Node.js，隐含跨平台）；未描述错误恢复与重试策略；未给出`/codex:adversarial-review`的具体审查维度差异的量化说明
+- 信息盲区：未提供性能基准数据（审查耗时、资源占用）；未说明与原生 Codex CLI 审查结果的差异；未提及安全审计或权限控制细节

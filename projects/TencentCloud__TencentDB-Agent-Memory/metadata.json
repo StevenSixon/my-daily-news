@@ -1,0 +1,48 @@
+{
+  "full_name": "TencentCloud/TencentDB-Agent-Memory",
+  "url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
+  "description": "TencentDB Agent Memory delivers fully local long-term memory for AI Agents via a 4-tier progressive pipeline, with zero external API dependencies.",
+  "language": "TypeScript",
+  "topics": [
+    "agent",
+    "ai-agent",
+    "embedding",
+    "llm",
+    "local-first",
+    "long-term-memory",
+    "memory",
+    "openclaw-plugin",
+    "vector-search"
+  ],
+  "license": "NOASSERTION",
+  "category": "AI 应用",
+  "classify_reason": "Long-term memory system for AI agents",
+  "one_liner": "本地分层长期记忆，零API依赖，为AI Agent提供渐进式语义记忆",
+  "why_worth_it": "它用分层结构替代扁平向量堆，解决长会话记忆膨胀和跨会话遗忘，基准测试token降低超60%，且完全自托管",
+  "tags": [
+    "本地优先",
+    "分层记忆",
+    "Agent框架",
+    "上下文压缩"
+  ],
+  "confidence": "high",
+  "info_gaps": [],
+  "quality_flags": [],
+  "stars_total": 7489,
+  "created_at": "2026-04-07",
+  "pushed_at": "2026-06-26",
+  "latest_release": "v0.3.6",
+  "first_seen": "2026-07-09",
+  "last_seen": "2026-07-09",
+  "streak_days": 1,
+  "analysis_updated_at": "2026-07-09T01:17:26+0800",
+  "appearances": [
+    {
+      "date": "2026-07-09",
+      "reason": "new",
+      "stars_total": 7489,
+      "stars_gained": 351,
+      "release": "v0.3.6"
+    }
+  ]
+}
