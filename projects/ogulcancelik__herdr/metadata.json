@@ -25,7 +25,7 @@
   ],
   "license": "NOASSERTION",
   "category": "AI 应用",
-  "classify_reason": "Agent multiplexer for terminal-based agent management",
+  "classify_reason": "关键词命中",
   "one_liner": "终端里的AI Agent多路复用器：看板式管理多个编码智能体，断开重连、Agent还能自己操控它",
   "why_worth_it": "为需要同时调度多个AI编码Agent（如Claude Code、Codex）的开发者而生，提供tmux式的会话持久化、原生终端UI和纯Socket API让Agent互相协作，比手开多个终端窗口更高效可靠",
   "tags": [
@@ -43,13 +43,13 @@
     "远程持久化的存储后端（本地文件/数据库？）细节未说明"
   ],
   "quality_flags": [],
-  "stars_total": 14231,
+  "stars_total": 14734,
   "created_at": "2026-03-27",
-  "pushed_at": "2026-07-08",
+  "pushed_at": "2026-07-09",
   "latest_release": "v0.7.3",
   "first_seen": "2026-07-01",
-  "last_seen": "2026-07-09",
-  "streak_days": 8,
+  "last_seen": "2026-07-10",
+  "streak_days": 9,
   "analysis_updated_at": "2026-07-09T01:20:26+0800",
   "appearances": [
     {
@@ -106,6 +106,13 @@
       "reason": "release_update",
       "stars_total": 14231,
       "stars_gained": 4557,
+      "release": "v0.7.3"
+    },
+    {
+      "date": "2026-07-10",
+      "reason": "lightweight",
+      "stars_total": 14734,
+      "stars_gained": 4754,
       "release": "v0.7.3"
     }
   ]

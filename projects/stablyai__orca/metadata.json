@@ -25,7 +25,7 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "Agent development environment for managing parallel agents",
+  "classify_reason": "关键词命中",
   "one_liner": "并行运行多个 AI 编码代理的桌面编排器",
   "why_worth_it": "可在一个项目中同时驱动 Claude Code、Codex 等多智能体，在隔离 git worktree 中比较产出并合并最优解，彻底榨干订阅价值",
   "tags": [
@@ -42,13 +42,13 @@
     "无同场景性能对比（如与手动多终端切换的效率提升数据）"
   ],
   "quality_flags": [],
-  "stars_total": 14046,
+  "stars_total": 14944,
   "created_at": "2026-03-17",
-  "pushed_at": "2026-07-08",
-  "latest_release": "v1.4.128",
+  "pushed_at": "2026-07-09",
+  "latest_release": "v1.4.130",
   "first_seen": "2026-06-24",
-  "last_seen": "2026-07-09",
-  "streak_days": 15,
+  "last_seen": "2026-07-10",
+  "streak_days": 16,
   "analysis_updated_at": "2026-07-09T01:20:58+0800",
   "appearances": [
     {
@@ -155,6 +155,13 @@
       "stars_total": 14046,
       "stars_gained": 3820,
       "release": "v1.4.128"
+    },
+    {
+      "date": "2026-07-10",
+      "reason": "release_update",
+      "stars_total": 14944,
+      "stars_gained": 3953,
+      "release": "v1.4.130"
     }
   ]
 }
