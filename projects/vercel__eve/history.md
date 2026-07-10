@@ -17,3 +17,4 @@
 - 2026-07-08 | release_update | ⭐3297(+0) | release=eve@0.21.1
 - 2026-07-09 | release_update | ⭐3325(+0) | release=eve@0.22.1
 - 2026-07-10 | release_update | ⭐3358(+0) | release=eve@0.22.3
+- 2026-07-11 | release_update | ⭐3395(+0) | release=eve@0.22.4

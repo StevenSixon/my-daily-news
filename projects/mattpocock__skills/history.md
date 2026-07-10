@@ -1,3 +1,4 @@
 - 2026-06-22 | 🆕新发现 | ⭐139791(+1443) | release=v1.0.1
 - 2026-06-27 | lightweight | ⭐147315(+11246) | release=v1.0.1
 - 2026-07-05 | lightweight | ⭐156970(+973) | release=v1.0.1
+- 2026-07-11 | release_update | ⭐164379(+1728) | release=v1.1.0
