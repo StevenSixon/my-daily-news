@@ -1,1 +1,2 @@
 - 2026-07-15 | 🆕新发现 | ⭐464(+0) | release=cli-v0.1.7
+- 2026-07-16 | lightweight | ⭐500(+0) | release=cli-v0.1.7
