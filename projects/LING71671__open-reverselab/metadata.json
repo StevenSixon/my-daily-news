@@ -1,24 +1,24 @@
 {
   "full_name": "LING71671/open-reverselab",
   "url": "https://github.com/LING71671/open-reverselab",
-  "description": "Open-source reverse engineering lab: 197-article knowledge base + MCP tools + CTF/APK/PE automation toolchain. Agent-native.  Note:由于场景原因，目前有让几乎所有（除fable5）AI都会越狱的bug,静等官方修复,但是请在合法授权下进行安全测试😉（项目可以让5.6干活，但是会cyber，等作者改改）",
+  "description": "Agent-native reverse-engineering lab with a 197-article knowledge base, MCP tools, and CTF/APK/PE automation workflows.",
   "language": "Python",
   "topics": [
     "ai-agent",
-    "ai-jailbreak",
-    "ai-jailbreak-universal",
     "android-reverse-engineering",
     "binary-analysis",
-    "claude-code",
     "cryptography",
     "ctf",
+    "digital-forensics",
     "frida",
     "ghidra",
+    "ios-reverse-engineering",
     "knowledge-base",
     "malware-analysis",
     "mcp-server",
     "model-context-protocol",
     "pe-analysis",
+    "protocol-analysis",
     "reverse-engineering",
     "security-automation",
     "vulnerability-research",
@@ -45,13 +45,13 @@
     "无基准测试数据或成功率统计"
   ],
   "quality_flags": [],
-  "stars_total": 801,
+  "stars_total": 825,
   "created_at": "2026-06-17",
   "pushed_at": "2026-07-12",
   "latest_release": "v1.1.0-windows",
   "first_seen": "2026-07-02",
-  "last_seen": "2026-07-16",
-  "streak_days": 14,
+  "last_seen": "2026-07-17",
+  "streak_days": 15,
   "analysis_updated_at": "2026-07-02T03:17:45+0800",
   "appearances": [
     {
@@ -149,6 +149,13 @@
       "date": "2026-07-16",
       "reason": "lightweight",
       "stars_total": 801,
+      "stars_gained": 0,
+      "release": "v1.1.0-windows"
+    },
+    {
+      "date": "2026-07-17",
+      "reason": "lightweight",
+      "stars_total": 825,
       "stars_gained": 0,
       "release": "v1.1.0-windows"
     }

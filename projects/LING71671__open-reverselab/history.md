@@ -12,3 +12,4 @@
 - 2026-07-14 | lightweight | ⭐738(+0) | release=v1.1.0-windows
 - 2026-07-15 | lightweight | ⭐774(+0) | release=v1.1.0-windows
 - 2026-07-16 | lightweight | ⭐801(+0) | release=v1.1.0-windows
+- 2026-07-17 | lightweight | ⭐825(+0) | release=v1.1.0-windows

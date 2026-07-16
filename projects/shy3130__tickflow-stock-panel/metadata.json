@@ -2,7 +2,7 @@
   "full_name": "shy3130/tickflow-stock-panel",
   "url": "https://github.com/shy3130/tickflow-stock-panel",
   "description": "自托管、零运维的 A 股「选股 + 监控 + 回测」量化工作台 | 基于 TickFlow 数据源  | LLM能力驱使策略定制+个股分析+复盘 | 自由接入第三方数据源与个性化扩展数据 | 个人开源 ,非TickFlow官方项目",
-  "language": "TypeScript",
+  "language": "Python",
   "topics": [
     "a-stock",
     "ai-agent",
@@ -44,13 +44,13 @@
     "桌面客户端的跨平台兼容性细节（如Linux arm64、Windows ARM）缺失"
   ],
   "quality_flags": [],
-  "stars_total": 2168,
+  "stars_total": 2211,
   "created_at": "2026-06-18",
-  "pushed_at": "2026-07-15",
+  "pushed_at": "2026-07-16",
   "latest_release": "v0.1.71-diag",
   "first_seen": "2026-06-25",
-  "last_seen": "2026-07-16",
-  "streak_days": 22,
+  "last_seen": "2026-07-17",
+  "streak_days": 23,
   "analysis_updated_at": "2026-07-04T01:13:21+0800",
   "appearances": [
     {
@@ -204,6 +204,13 @@
       "date": "2026-07-16",
       "reason": "lightweight",
       "stars_total": 2168,
+      "stars_gained": 0,
+      "release": null
+    },
+    {
+      "date": "2026-07-17",
+      "reason": "lightweight",
+      "stars_total": 2211,
       "stars_gained": 0,
       "release": null
     }
