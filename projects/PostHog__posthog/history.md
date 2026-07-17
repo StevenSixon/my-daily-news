@@ -1,1 +1,2 @@
 - 2026-07-17 | 🆕新发现 | ⭐35716(+146) | release=posthog-cli/v0.8.4
+- 2026-07-18 | lightweight | ⭐36093(+437) | release=posthog-cli/v0.8.4

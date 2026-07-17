@@ -1,2 +1,3 @@
 - 2026-07-16 | 🆕新发现 | ⭐65281(+607) | release=rust-v0.0.24
 - 2026-07-17 | release_update | ⭐65879(+633) | release=rust-v0.0.26
+- 2026-07-18 | release_update | ⭐66251(+431) | release=rust-v0.0.29
