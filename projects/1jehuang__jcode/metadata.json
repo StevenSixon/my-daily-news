@@ -5,6 +5,8 @@
   "language": "Rust",
   "topics": [
     "ai",
+    "ai-agent",
+    "ai-coding-agent",
     "claude",
     "cli",
     "coding-agent",
@@ -17,7 +19,7 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "编码代理harness",
+  "classify_reason": "关键词命中",
   "one_liner": "Rust 编写的终端 AI 编程代理，内存占用 27MB，启动 14ms，内建人类式语义记忆系统。",
   "why_worth_it": "想要极低资源消耗和即时启动的多会话 AI 编码环境，jcode 的内存与速度碾压一切竞品，记忆系统无需手动管理。",
   "tags": [
@@ -34,13 +36,13 @@
     "Mermaid 渲染的 1800x 加速具体实现细节未在 README 中展开"
   ],
   "quality_flags": [],
-  "stars_total": 7385,
+  "stars_total": 8914,
   "created_at": "2026-01-05",
-  "pushed_at": "2026-06-20",
-  "latest_release": "v0.30.2",
+  "pushed_at": "2026-07-20",
+  "latest_release": "v0.53.0",
   "first_seen": "2026-06-20",
-  "last_seen": "2026-06-21",
-  "streak_days": 2,
+  "last_seen": "2026-07-20",
+  "streak_days": 3,
   "analysis_updated_at": "2026-06-20T22:45:16+0800",
   "appearances": [
     {
@@ -56,6 +58,13 @@
       "stars_total": 7385,
       "stars_gained": 108,
       "release": "v0.30.2"
+    },
+    {
+      "date": "2026-07-20",
+      "reason": "release_update",
+      "stars_total": 8914,
+      "stars_gained": 235,
+      "release": "v0.53.0"
     }
   ]
 }
