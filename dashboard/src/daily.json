@@ -1,6 +1,324 @@
 {
   "editions": [
     {
+      "date": "2026-07-22",
+      "count": 5,
+      "projects": [
+        {
+          "id": "ayghri__i-have-adhd",
+          "fullName": "ayghri/i-have-adhd",
+          "owner": "ayghri",
+          "name": "i-have-adhd",
+          "url": "https://github.com/ayghri/i-have-adhd",
+          "oneLiner": "A skill for your coding agent to stop it from burying the answer. ADHD-friendly output.",
+          "description": "A skill for your coding agent to stop it from burying the answer. ADHD-friendly output.",
+          "language": "",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 6863,
+          "starsGained": 1866,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-05-13",
+          "pushedAt": "2026-07-21",
+          "latestRelease": "",
+          "firstSeen": "2026-07-22",
+          "topics": [
+            "adhd",
+            "claude-",
+            "claude-code-plugin",
+            "claude-skills",
+            "developer-tools",
+            "productivity"
+          ],
+          "appearances": [
+            {
+              "date": "2026-07-22",
+              "reason": "new",
+              "starsTotal": 6863,
+              "starsGained": 1866,
+              "release": ""
+            }
+          ],
+          "analysis": []
+        },
+        {
+          "id": "HKUDS__nanobot",
+          "fullName": "HKUDS/nanobot",
+          "owner": "HKUDS",
+          "name": "nanobot",
+          "url": "https://github.com/HKUDS/nanobot",
+          "oneLiner": "Lightweight, open-source AI agent for your tools, chats, and workflows.",
+          "description": "Lightweight, open-source AI agent for your tools, chats, and workflows.",
+          "language": "Python",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 46018,
+          "starsGained": 477,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-02-01",
+          "pushedAt": "2026-07-21",
+          "latestRelease": "v0.2.2",
+          "firstSeen": "2026-07-22",
+          "topics": [
+            "ai",
+            "ai-agent",
+            "ai-agents",
+            "anthropic",
+            "chatgpt",
+            "claude",
+            "claude-code",
+            "codex",
+            "codex-cli",
+            "llm",
+            "nanobot",
+            "openai",
+            "openclaw"
+          ],
+          "appearances": [
+            {
+              "date": "2026-07-22",
+              "reason": "new",
+              "starsTotal": 46018,
+              "starsGained": 477,
+              "release": "v0.2.2"
+            }
+          ],
+          "analysis": []
+        },
+        {
+          "id": "agegr__pi-web",
+          "fullName": "agegr/pi-web",
+          "owner": "agegr",
+          "name": "pi-web",
+          "url": "https://github.com/agegr/pi-web",
+          "oneLiner": "Web UI for the pi coding agent",
+          "description": "Web UI for the pi coding agent",
+          "language": "TypeScript",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 1724,
+          "starsGained": 298,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-03-22",
+          "pushedAt": "2026-07-21",
+          "latestRelease": "v0.7.17",
+          "firstSeen": "2026-07-22",
+          "topics": [],
+          "appearances": [
+            {
+              "date": "2026-07-22",
+              "reason": "new",
+              "starsTotal": 1724,
+              "starsGained": 298,
+              "release": "v0.7.17"
+            }
+          ],
+          "analysis": []
+        },
+        {
+          "id": "earthtojake__text-to-cad",
+          "fullName": "earthtojake/text-to-cad",
+          "owner": "earthtojake",
+          "name": "text-to-cad",
+          "url": "https://github.com/earthtojake/text-to-cad",
+          "oneLiner": "A collection of agent skills for CAD, robotics and hardware design",
+          "description": "A collection of agent skills for CAD, robotics and hardware design",
+          "language": "JavaScript",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 9120,
+          "starsGained": 291,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-04-22",
+          "pushedAt": "2026-07-11",
+          "latestRelease": "0.3.9",
+          "firstSeen": "2026-07-22",
+          "topics": [
+            "3mf",
+            "agents",
+            "ai-agents",
+            "build123d",
+            "cad",
+            "dxf",
+            "glb",
+            "mechanical-engineering",
+            "opencascade",
+            "robotics",
+            "sdf",
+            "srdf",
+            "step",
+            "stl",
+            "stp",
+            "text-to-cad",
+            "urdf"
+          ],
+          "appearances": [
+            {
+              "date": "2026-07-22",
+              "reason": "new",
+              "starsTotal": 9120,
+              "starsGained": 291,
+              "release": "0.3.9"
+            }
+          ],
+          "analysis": []
+        },
+        {
+          "id": "powerycy__goutoujunshi",
+          "fullName": "powerycy/goutoujunshi",
+          "owner": "powerycy",
+          "name": "goutoujunshi",
+          "url": "https://github.com/powerycy/goutoujunshi",
+          "oneLiner": "一个先接住情绪、再分析关系并给出可执行策略的 Codex 恋爱军师，内置心理、法律、社会、人文、哲学、婚姻家庭与性学知识库，支持多元关系。",
+          "description": "一个先接住情绪、再分析关系并给出可执行策略的 Codex 恋爱军师，内置心理、法律、社会、人文、哲学、婚姻家庭与性学知识库，支持多元关系。",
+          "language": "Python",
+          "category": "AI 应用",
+          "license": "NOASSERTION",
+          "starsTotal": 343,
+          "starsGained": 0,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-07-20",
+          "pushedAt": "2026-07-21",
+          "latestRelease": "",
+          "firstSeen": "2026-07-22",
+          "topics": [
+            "ai-agent",
+            "chinese",
+            "codex",
+            "codex-skill",
+            "lgbtq",
+            "psychology",
+            "relationship-advice"
+          ],
+          "appearances": [
+            {
+              "date": "2026-07-22",
+              "reason": "new",
+              "starsTotal": 343,
+              "starsGained": 0,
+              "release": ""
+            }
+          ],
+          "analysis": []
+        }
+      ],
+      "news": [
+        {
+          "title": "Test iOS apps in the simulator",
+          "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5HQTg4UHpiS0RWd0RiNkRDLVpDQXp4TTVDSUg1dFJ6Z2lUTmozVmdObVp2ZEdQMm5DZEhWQURIRUxWTGlJMzBYSV9mZkpBaDJaenpfR21MbmNvU05Yc3BjV0VxTQ?oc=5",
+          "source": "Claude",
+          "sourceType": "official",
+          "published": "2026-07-21",
+          "summary": "",
+          "category": ""
+        },
+        {
+          "title": "How Anthropic secures its AI-native software development lifecycle",
+          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOeVBjLUlubkhvci1MT29aUWRuUHRkSzRCS3R3LUdDblRaekM2dHdjb2d4d3JBV0tESU80VFdRREdoSHJselpOX2JYU2FyZ1NXVzdEQWpvYnYxSkRZRFRxLWtQVVk4NWhBdnlCUXVKa2RQbVNzRGFUblhjRW5mQUtLcnE1YU40eWk2RW9HZkFWLU9sSUtY?oc=5",
+          "source": "Claude",
+          "sourceType": "official",
+          "published": "2026-07-21",
+          "summary": "",
+          "category": ""
+        },
+        {
+          "title": "How Meta’s AI Models Are Powering the First Wave of Genesis Mission Projects",
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQZW9DTHJ3LS1CaUl2WkNOX0NkTmpKQzBtdElNT2FMN1QySGt0RkRnTlc0RTBHZVRjVnFxMHBKRFdoeWV2cEpobE5VVzVDVjk3SEUzR0ZydWVVRnRXaTByb3NIY09Fc29oYmFLWm9QRlpkUDl3MzNxWEV3eThEMlBMcE0yTVYxalpBSENhYVo4MTVMcEZCX2REOE9pejVralJvNEhr?oc=5",
+          "source": "Meta AI",
+          "sourceType": "official",
+          "published": "2026-07-21",
+          "summary": "",
+          "category": ""
+        },
+        {
+          "title": "Introducing the ChatGPT for small business program",
+          "url": "https://openai.com/index/introducing-chatgpt-small-business-program",
+          "source": "OpenAI",
+          "sourceType": "official",
+          "published": "2026-07-21",
+          "summary": "",
+          "category": ""
+        },
+        {
+          "title": "Introducing Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber",
+          "url": "https://deepmind.google/blog/introducing-gemini-36-flash-35-flash-lite-and-35-flash-cyber/",
+          "source": "Google DeepMind",
+          "sourceType": "official",
+          "published": "2026-07-21",
+          "summary": "",
+          "category": ""
+        },
+        {
+          "title": "Claude for Investing Teams",
+          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBleUV6and5RDlsRC1LNHMzd2xPaVVqamtRMEFocE1DcVJTaGhEeFBxMzlTYTN0Rm5oMTV2TTcwd2RMbUE5d1psUFdpOFIxdXBFbFRrakdpSWFPbW5PdVlHMTNwVmNVT2Y1aGdkSGtR?oc=5",
+          "source": "Anthropic",
+          "sourceType": "official",
+          "published": "2026-07-21",
+          "summary": "",
+          "category": ""
+        },
+        {
+          "title": "OpenAI and Hugging Face partner to address security incident during model evaluation",
+          "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident",
+          "source": "OpenAI",
+          "sourceType": "official",
+          "published": "2026-07-21",
+          "summary": "",
+          "category": ""
+        },
+        {
+          "title": "Kimi K3 Is Competitive with Fable; Kimi K3 and Fable Is SoTA",
+          "url": "https://fireworks.ai/blog/kimik3-fable",
+          "source": "Hacker News",
+          "sourceType": "community",
+          "published": "2026-07-21",
+          "summary": "",
+          "category": ""
+        },
+        {
+          "title": "OpenAI and Hugging Face address security incident during model evaluation",
+          "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident/",
+          "source": "Hacker News",
+          "sourceType": "community",
+          "published": "2026-07-21",
+          "summary": "",
+          "category": ""
+        },
+        {
+          "title": "The State of Simulation for Physical AI: An Overview",
+          "url": "https://huggingface.co/blog/nvidia/state-of-simulation-for-physical-ai",
+          "source": "HF Blog",
+          "sourceType": "hf",
+          "published": "2026-07-21",
+          "summary": "",
+          "category": ""
+        },
+        {
+          "title": "Rater State Bias in RLHF Preference Data: An Audit Framework",
+          "url": "https://arxiv.org/abs/2607.16195",
+          "source": "arXiv cs.AI",
+          "sourceType": "paper",
+          "published": "2026-07-21",
+          "summary": "",
+          "category": ""
+        },
+        {
+          "title": "Design and Validation of a Lightweight 1D CNN for Affective Touch Classification in Soft Plush Companions",
+          "url": "https://arxiv.org/abs/2607.16196",
+          "source": "arXiv cs.AI",
+          "sourceType": "paper",
+          "published": "2026-07-21",
+          "summary": "",
+          "category": ""
+        }
+      ]
+    },
+    {
       "date": "2026-07-21",
       "count": 5,
       "projects": [
@@ -93,7 +411,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-07-16",
-          "pushedAt": "2026-07-18",
+          "pushedAt": "2026-07-21",
           "latestRelease": "",
           "firstSeen": "2026-07-21",
           "topics": [
@@ -119,6 +437,13 @@
               "date": "2026-07-21",
               "reason": "new",
               "starsTotal": 311,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "lightweight",
+              "starsTotal": 314,
               "starsGained": 0,
               "release": ""
             }
@@ -154,6 +479,13 @@
               "date": "2026-07-21",
               "reason": "new",
               "starsTotal": 300,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "lightweight",
+              "starsTotal": 316,
               "starsGained": 0,
               "release": ""
             }
@@ -195,6 +527,13 @@
               "date": "2026-07-21",
               "reason": "new",
               "starsTotal": 350,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "lightweight",
+              "starsTotal": 367,
               "starsGained": 0,
               "release": ""
             }
@@ -333,8 +672,8 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2025-08-09",
-          "pushedAt": "2026-07-20",
-          "latestRelease": "v0.80.10",
+          "pushedAt": "2026-07-21",
+          "latestRelease": "v0.81.1",
           "firstSeen": "2026-07-20",
           "topics": [],
           "appearances": [
@@ -351,6 +690,13 @@
               "starsTotal": 73532,
               "starsGained": 2932,
               "release": "v0.80.10"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "release_update",
+              "starsTotal": 74656,
+              "starsGained": 3569,
+              "release": "v0.81.1"
             }
           ],
           "analysis": []
@@ -388,6 +734,13 @@
               "reason": "lightweight",
               "starsTotal": 10240,
               "starsGained": 974,
+              "release": "1.49.0"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "lightweight",
+              "starsTotal": 10509,
+              "starsGained": 1294,
               "release": "1.49.0"
             }
           ],
@@ -496,7 +849,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2022-12-08",
-          "pushedAt": "2026-07-20",
+          "pushedAt": "2026-07-22",
           "latestRelease": "v4.26.7",
           "firstSeen": "2026-07-20",
           "topics": [
@@ -531,6 +884,13 @@
               "reason": "lightweight",
               "starsTotal": 37094,
               "starsGained": 317,
+              "release": "v4.26.7"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "lightweight",
+              "starsTotal": 37463,
+              "starsGained": 416,
               "release": "v4.26.7"
             }
           ],
@@ -605,8 +965,8 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2025-04-13",
-          "pushedAt": "2026-07-21",
-          "latestRelease": "rust-v0.144.6",
+          "pushedAt": "2026-07-22",
+          "latestRelease": "rust-v0.145.0",
           "firstSeen": "2026-07-19",
           "topics": [],
           "appearances": [
@@ -630,6 +990,13 @@
               "starsTotal": 100053,
               "starsGained": 2448,
               "release": "rust-v0.144.6"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "release_update",
+              "starsTotal": 100400,
+              "starsGained": 2445,
+              "release": "rust-v0.145.0"
             }
           ],
           "analysis": []
@@ -650,7 +1017,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-04-12",
-          "pushedAt": "2026-07-20",
+          "pushedAt": "2026-07-21",
           "latestRelease": "v0.2.1",
           "firstSeen": "2026-07-19",
           "topics": [
@@ -695,6 +1062,13 @@
               "reason": "star_jump",
               "starsTotal": 2551,
               "starsGained": 689,
+              "release": "v0.2.1"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "lightweight",
+              "starsTotal": 3152,
+              "starsGained": 642,
               "release": "v0.2.1"
             }
           ],
@@ -1007,8 +1381,8 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-06-30",
-          "pushedAt": "2026-07-19",
-          "latestRelease": "v0.7.15",
+          "pushedAt": "2026-07-21",
+          "latestRelease": "v0.7.16",
           "firstSeen": "2026-07-18",
           "topics": [
             "claude",
@@ -1052,6 +1426,13 @@
               "starsTotal": 1779,
               "starsGained": 0,
               "release": "v0.7.15"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "release_update",
+              "starsTotal": 1810,
+              "starsGained": 0,
+              "release": "v0.7.16"
             }
           ],
           "analysis": []
@@ -1072,7 +1453,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-02-26",
-          "pushedAt": "2026-07-18",
+          "pushedAt": "2026-07-21",
           "latestRelease": "v2.3.7",
           "firstSeen": "2026-07-18",
           "topics": [
@@ -1116,6 +1497,13 @@
               "reason": "lightweight",
               "starsTotal": 23180,
               "starsGained": 3073,
+              "release": "v2.3.7"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "lightweight",
+              "starsTotal": 24545,
+              "starsGained": 4791,
               "release": "v2.3.7"
             }
           ],
@@ -1188,6 +1576,13 @@
               "starsTotal": 217,
               "starsGained": 0,
               "release": "v0.11.1"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "lightweight",
+              "starsTotal": 220,
+              "starsGained": 0,
+              "release": "v0.11.1"
             }
           ],
           "analysis": []
@@ -1208,8 +1603,8 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-07-03",
-          "pushedAt": "2026-07-21",
-          "latestRelease": "v0.5.0",
+          "pushedAt": "2026-07-22",
+          "latestRelease": "v0.5.1",
           "firstSeen": "2026-07-18",
           "topics": [
             "agent",
@@ -1261,6 +1656,13 @@
               "starsTotal": 295,
               "starsGained": 0,
               "release": "v0.5.0"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "release_update",
+              "starsTotal": 317,
+              "starsGained": 0,
+              "release": "v0.5.1"
             }
           ],
           "analysis": []
@@ -1444,6 +1846,13 @@
               "reason": "lightweight",
               "starsTotal": 4087,
               "starsGained": 1342,
+              "release": ""
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "lightweight",
+              "starsTotal": 4246,
+              "starsGained": 1364,
               "release": ""
             }
           ],
@@ -1838,6 +2247,13 @@
               "starsTotal": 66954,
               "starsGained": 2644,
               "release": "rust-v0.0.34"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "lightweight",
+              "starsTotal": 67059,
+              "starsGained": 2205,
+              "release": "rust-v0.0.34"
             }
           ],
           "analysis": []
@@ -1913,6 +2329,13 @@
               "starsTotal": 334,
               "starsGained": 0,
               "release": ""
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "lightweight",
+              "starsTotal": 333,
+              "starsGained": 0,
+              "release": ""
             }
           ],
           "analysis": []
@@ -1933,8 +2356,8 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-06-28",
-          "pushedAt": "2026-07-20",
-          "latestRelease": "v4.3.0",
+          "pushedAt": "2026-07-21",
+          "latestRelease": "v4.4.0",
           "firstSeen": "2026-07-16",
           "topics": [
             "agent",
@@ -1988,6 +2411,13 @@
               "starsTotal": 1117,
               "starsGained": 0,
               "release": "v4.3.0"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "release_update",
+              "starsTotal": 1157,
+              "starsGained": 0,
+              "release": "v4.4.0"
             }
           ],
           "analysis": []
@@ -2058,6 +2488,13 @@
               "date": "2026-07-21",
               "reason": "release_update",
               "starsTotal": 220,
+              "starsGained": 0,
+              "release": "v0.6.8"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "lightweight",
+              "starsTotal": 224,
               "starsGained": 0,
               "release": "v0.6.8"
             }
@@ -2302,6 +2739,13 @@
               "starsTotal": 819,
               "starsGained": 0,
               "release": ""
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "lightweight",
+              "starsTotal": 844,
+              "starsGained": 0,
+              "release": ""
             }
           ],
           "analysis": []
@@ -2440,6 +2884,13 @@
               "starsTotal": 465,
               "starsGained": 0,
               "release": "v0.1.0"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "lightweight",
+              "starsTotal": 465,
+              "starsGained": 0,
+              "release": "v0.1.0"
             }
           ],
           "analysis": []
@@ -2516,6 +2967,13 @@
               "starsTotal": 556,
               "starsGained": 0,
               "release": "cli-v0.1.7"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "lightweight",
+              "starsTotal": 587,
+              "starsGained": 0,
+              "release": "cli-v0.1.7"
             }
           ],
           "analysis": []
@@ -2536,7 +2994,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-06-30",
-          "pushedAt": "2026-07-17",
+          "pushedAt": "2026-07-21",
           "latestRelease": "",
           "firstSeen": "2026-07-15",
           "topics": [
@@ -2608,6 +3066,13 @@
               "date": "2026-07-21",
               "reason": "lightweight",
               "starsTotal": 261,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "star_jump",
+              "starsTotal": 388,
               "starsGained": 0,
               "release": ""
             }
@@ -2838,8 +3303,8 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-07-04",
-          "pushedAt": "2026-07-20",
-          "latestRelease": "v0.6.0",
+          "pushedAt": "2026-07-22",
+          "latestRelease": "v0.8.0",
           "firstSeen": "2026-07-14",
           "topics": [
             "harness",
@@ -2903,6 +3368,13 @@
               "starsTotal": 955,
               "starsGained": 0,
               "release": "v0.6.0"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "release_update",
+              "starsTotal": 1003,
+              "starsGained": 0,
+              "release": "v0.8.0"
             }
           ],
           "analysis": []
@@ -2996,6 +3468,13 @@
               "starsTotal": 486,
               "starsGained": 0,
               "release": "v1.6.0"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "lightweight",
+              "starsTotal": 490,
+              "starsGained": 0,
+              "release": "v1.6.0"
             }
           ],
           "analysis": []
@@ -3084,6 +3563,13 @@
               "date": "2026-07-21",
               "reason": "lightweight",
               "starsTotal": 1751,
+              "starsGained": 0,
+              "release": "v1.4.0"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "lightweight",
+              "starsTotal": 1774,
               "starsGained": 0,
               "release": "v1.4.0"
             }
@@ -3319,6 +3805,13 @@
               "starsTotal": 14210,
               "starsGained": 9173,
               "release": ""
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "lightweight",
+              "starsTotal": 14954,
+              "starsGained": 8948,
+              "release": ""
             }
           ],
           "analysis": []
@@ -3480,6 +3973,13 @@
               "starsTotal": 1145,
               "starsGained": 0,
               "release": ""
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "lightweight",
+              "starsTotal": 1188,
+              "starsGained": 0,
+              "release": ""
             }
           ],
           "analysis": []
@@ -3633,8 +4133,8 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-07-03",
-          "pushedAt": "2026-07-20",
-          "latestRelease": "v0.2.1",
+          "pushedAt": "2026-07-21",
+          "latestRelease": "v0.2.3",
           "firstSeen": "2026-07-12",
           "topics": [
             "ai-agent",
@@ -3728,6 +4228,13 @@
               "starsTotal": 852,
               "starsGained": 0,
               "release": "v0.2.1"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "release_update",
+              "starsTotal": 869,
+              "starsGained": 0,
+              "release": "v0.2.3"
             }
           ],
           "analysis": []
@@ -3748,8 +4255,8 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-07-08",
-          "pushedAt": "2026-07-16",
-          "latestRelease": "v0.3.0",
+          "pushedAt": "2026-07-21",
+          "latestRelease": "v0.3.1",
           "firstSeen": "2026-07-12",
           "topics": [
             "ai",
@@ -3829,6 +4336,13 @@
               "starsTotal": 388,
               "starsGained": 0,
               "release": "v0.3.0"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "release_update",
+              "starsTotal": 403,
+              "starsGained": 0,
+              "release": "v0.3.1"
             }
           ],
           "analysis": []
@@ -3952,7 +4466,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-07-08",
-          "pushedAt": "2026-07-16",
+          "pushedAt": "2026-07-21",
           "latestRelease": "",
           "firstSeen": "2026-07-12",
           "topics": [
@@ -4035,6 +4549,13 @@
               "date": "2026-07-21",
               "reason": "lightweight",
               "starsTotal": 270,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "lightweight",
+              "starsTotal": 273,
               "starsGained": 0,
               "release": ""
             }
@@ -4221,7 +4742,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-04-15",
-          "pushedAt": "2026-07-20",
+          "pushedAt": "2026-07-21",
           "latestRelease": "v2.11.0",
           "firstSeen": "2026-07-11",
           "topics": [
@@ -4284,6 +4805,13 @@
               "reason": "release_update",
               "starsTotal": 6243,
               "starsGained": 2102,
+              "release": "v2.11.0"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "lightweight",
+              "starsTotal": 6722,
+              "starsGained": 2216,
               "release": "v2.11.0"
             }
           ],
@@ -4399,6 +4927,13 @@
               "date": "2026-07-21",
               "reason": "lightweight",
               "starsTotal": 920,
+              "starsGained": 0,
+              "release": "v0.1.3"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "lightweight",
+              "starsTotal": 943,
               "starsGained": 0,
               "release": "v0.1.3"
             }
@@ -5573,6 +6108,13 @@
               "starsTotal": 2376,
               "starsGained": 0,
               "release": "v1.0.0"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "lightweight",
+              "starsTotal": 2403,
+              "starsGained": 0,
+              "release": "v1.0.0"
             }
           ],
           "analysis": [
@@ -6263,7 +6805,7 @@
           "name": "orca",
           "url": "https://github.com/stablyai/orca",
           "oneLiner": "并行运行多个 AI 编码代理的桌面编排器",
-          "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop and mobile.",
+          "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop, mobile and VPS.",
           "language": "TypeScript",
           "category": "AI 应用",
           "license": "MIT",
@@ -6272,8 +6814,8 @@
           "streakDays": 15,
           "isNew": false,
           "createdAt": "2026-03-17",
-          "pushedAt": "2026-07-19",
-          "latestRelease": "v1.4.146",
+          "pushedAt": "2026-07-22",
+          "latestRelease": "v1.4.149",
           "firstSeen": "2026-06-24",
           "topics": [
             "ade",
@@ -6470,6 +7012,13 @@
               "starsTotal": 21977,
               "starsGained": 5520,
               "release": "v1.4.146"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "release_update",
+              "starsTotal": 24963,
+              "starsGained": 5733,
+              "release": "v1.4.149"
             }
           ],
           "analysis": [
@@ -6560,7 +7109,7 @@
           "streakDays": 2,
           "isNew": false,
           "createdAt": "2026-03-15",
-          "pushedAt": "2026-07-19",
+          "pushedAt": "2026-07-21",
           "latestRelease": "v1.0.139",
           "firstSeen": "2026-07-08",
           "topics": [
@@ -6677,6 +7226,13 @@
               "starsTotal": 20171,
               "starsGained": 4140,
               "release": "v1.0.139"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "lightweight",
+              "starsTotal": 20632,
+              "starsGained": 4047,
+              "release": "v1.0.139"
             }
           ],
           "analysis": [
@@ -6751,7 +7307,7 @@
           "streakDays": 2,
           "isNew": false,
           "createdAt": "2026-07-03",
-          "pushedAt": "2026-07-17",
+          "pushedAt": "2026-07-21",
           "latestRelease": "v1.3.4",
           "firstSeen": "2026-07-07",
           "topics": [
@@ -6867,6 +7423,13 @@
               "date": "2026-07-21",
               "reason": "lightweight",
               "starsTotal": 2633,
+              "starsGained": 0,
+              "release": "v1.3.4"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "lightweight",
+              "starsTotal": 2664,
               "starsGained": 0,
               "release": "v1.3.4"
             }
@@ -7156,7 +7719,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-03-15",
-          "pushedAt": "2026-07-19",
+          "pushedAt": "2026-07-21",
           "latestRelease": "v1.0.139",
           "firstSeen": "2026-07-08",
           "topics": [
@@ -7272,6 +7835,13 @@
               "reason": "lightweight",
               "starsTotal": 20171,
               "starsGained": 4140,
+              "release": "v1.0.139"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "lightweight",
+              "starsTotal": 20632,
+              "starsGained": 4047,
               "release": "v1.0.139"
             }
           ],
@@ -7648,7 +8218,7 @@
           "name": "OmniRoute",
           "url": "https://github.com/diegosouzapw/OmniRoute",
           "oneLiner": "一站式免费 AI 网关，聚合237个模型及90+免费额度，自动回退+Token压缩",
-          "description": "Never stop coding. Free MIT AI gateway: one endpoint, 268+ providers (50+ free), 500+ models — Claude, GPT, Gemini, Kimi K3, GLM, DeepSeek. Works with Claude Code, Codex, Cursor, Cline & Copilot. Quota-aware auto-fallback, RTK+Caveman compression saves 15-95% tokens, MCP/A2A, multimodal, Desktop/PWA. Built by 500+ contributors.",
+          "description": "Never stop coding. Free MIT AI gateway: one endpoint, 268+ providers (50+ free), 500+ models — Kimi, Claude, GPT, OpenAI, Gemini, GLM, DeepSeek, MiniMax. Works with Claude Code, Codex, Cursor, OpenCode, Cline & Copilot. Quota-aware auto-fallback, RTK+Caveman compression saves 15-95% tokens, MCP/A2A, Desktop/PWA. Built by 500+ contributors",
           "language": "TypeScript",
           "category": "AI 应用",
           "license": "MIT",
@@ -7657,7 +8227,7 @@
           "streakDays": 8,
           "isNew": false,
           "createdAt": "2026-02-13",
-          "pushedAt": "2026-07-21",
+          "pushedAt": "2026-07-22",
           "latestRelease": "v3.8.48",
           "firstSeen": "2026-07-01",
           "topics": [
@@ -7814,6 +8384,13 @@
               "reason": "lightweight",
               "starsTotal": 21831,
               "starsGained": 1107,
+              "release": "v3.8.48"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "lightweight",
+              "starsTotal": 23608,
+              "starsGained": 2034,
               "release": "v3.8.48"
             }
           ],
@@ -8027,6 +8604,13 @@
               "date": "2026-07-21",
               "reason": "lightweight",
               "starsTotal": 5045,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "lightweight",
+              "starsTotal": 5071,
               "starsGained": 0,
               "release": ""
             }
@@ -8566,8 +9150,8 @@
           "streakDays": 8,
           "isNew": false,
           "createdAt": "2026-06-22",
-          "pushedAt": "2026-07-07",
-          "latestRelease": "v1.2.0",
+          "pushedAt": "2026-07-21",
+          "latestRelease": "v1.3.0",
           "firstSeen": "2026-06-30",
           "topics": [
             "agent-skills",
@@ -8729,6 +9313,13 @@
               "starsTotal": 366,
               "starsGained": 0,
               "release": "v1.2.0"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "release_update",
+              "starsTotal": 366,
+              "starsGained": 0,
+              "release": "v1.3.0"
             }
           ],
           "analysis": [
@@ -9146,7 +9737,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-07-03",
-          "pushedAt": "2026-07-17",
+          "pushedAt": "2026-07-21",
           "latestRelease": "v1.3.4",
           "firstSeen": "2026-07-07",
           "topics": [
@@ -9262,6 +9853,13 @@
               "date": "2026-07-21",
               "reason": "lightweight",
               "starsTotal": 2633,
+              "starsGained": 0,
+              "release": "v1.3.4"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "lightweight",
+              "starsTotal": 2664,
               "starsGained": 0,
               "release": "v1.3.4"
             }
@@ -9449,6 +10047,13 @@
               "starsTotal": 990,
               "starsGained": 0,
               "release": ""
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "lightweight",
+              "starsTotal": 988,
+              "starsGained": 0,
+              "release": ""
             }
           ],
           "analysis": [
@@ -9521,7 +10126,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-07-02",
-          "pushedAt": "2026-07-20",
+          "pushedAt": "2026-07-21",
           "latestRelease": "v0.8.1",
           "firstSeen": "2026-07-07",
           "topics": [
@@ -9635,6 +10240,13 @@
               "date": "2026-07-21",
               "reason": "release_update",
               "starsTotal": 383,
+              "starsGained": 0,
+              "release": "v0.8.1"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "lightweight",
+              "starsTotal": 391,
               "starsGained": 0,
               "release": "v0.8.1"
             }
@@ -10564,7 +11176,7 @@
           "name": "OmniRoute",
           "url": "https://github.com/diegosouzapw/OmniRoute",
           "oneLiner": "一端口聚合231+免费/廉价大模型，RTK压缩节省95% token，开发者零成本接入Claude Code等工具",
-          "description": "Never stop coding. Free MIT AI gateway: one endpoint, 268+ providers (50+ free), 500+ models — Claude, GPT, Gemini, Kimi K3, GLM, DeepSeek. Works with Claude Code, Codex, Cursor, Cline & Copilot. Quota-aware auto-fallback, RTK+Caveman compression saves 15-95% tokens, MCP/A2A, multimodal, Desktop/PWA. Built by 500+ contributors.",
+          "description": "Never stop coding. Free MIT AI gateway: one endpoint, 268+ providers (50+ free), 500+ models — Kimi, Claude, GPT, OpenAI, Gemini, GLM, DeepSeek, MiniMax. Works with Claude Code, Codex, Cursor, OpenCode, Cline & Copilot. Quota-aware auto-fallback, RTK+Caveman compression saves 15-95% tokens, MCP/A2A, Desktop/PWA. Built by 500+ contributors",
           "language": "TypeScript",
           "category": "AI 应用",
           "license": "MIT",
@@ -10573,7 +11185,7 @@
           "streakDays": 6,
           "isNew": false,
           "createdAt": "2026-02-13",
-          "pushedAt": "2026-07-21",
+          "pushedAt": "2026-07-22",
           "latestRelease": "v3.8.48",
           "firstSeen": "2026-07-01",
           "topics": [
@@ -10731,6 +11343,13 @@
               "starsTotal": 21831,
               "starsGained": 1107,
               "release": "v3.8.48"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "lightweight",
+              "starsTotal": 23608,
+              "starsGained": 2034,
+              "release": "v3.8.48"
             }
           ],
           "analysis": [
@@ -10807,7 +11426,7 @@
           "name": "orca",
           "url": "https://github.com/stablyai/orca",
           "oneLiner": "并行运行多个 AI 编程代理，隔离 git worktree 对比结果，手机也能监控。",
-          "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop and mobile.",
+          "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop, mobile and VPS.",
           "language": "TypeScript",
           "category": "AI 应用",
           "license": "MIT",
@@ -10816,8 +11435,8 @@
           "streakDays": 13,
           "isNew": false,
           "createdAt": "2026-03-17",
-          "pushedAt": "2026-07-19",
-          "latestRelease": "v1.4.146",
+          "pushedAt": "2026-07-22",
+          "latestRelease": "v1.4.149",
           "firstSeen": "2026-06-24",
           "topics": [
             "ade",
@@ -11014,6 +11633,13 @@
               "starsTotal": 21977,
               "starsGained": 5520,
               "release": "v1.4.146"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "release_update",
+              "starsTotal": 24963,
+              "starsGained": 5733,
+              "release": "v1.4.149"
             }
           ],
           "analysis": [
@@ -11389,6 +12015,13 @@
               "starsTotal": 5045,
               "starsGained": 0,
               "release": ""
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "lightweight",
+              "starsTotal": 5071,
+              "starsGained": 0,
+              "release": ""
             }
           ],
           "analysis": [
@@ -11483,8 +12116,8 @@
           "streakDays": 9,
           "isNew": false,
           "createdAt": "2026-06-24",
-          "pushedAt": "2026-07-15",
-          "latestRelease": "v0.1.11",
+          "pushedAt": "2026-07-21",
+          "latestRelease": "v0.2.0",
           "firstSeen": "2026-06-28",
           "topics": [
             "ai-agent",
@@ -11657,6 +12290,13 @@
               "starsTotal": 1077,
               "starsGained": 0,
               "release": "v0.1.11"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "release_update",
+              "starsTotal": 1081,
+              "starsGained": 0,
+              "release": "v0.2.0"
             }
           ],
           "analysis": [
@@ -13187,6 +13827,13 @@
               "starsTotal": 5045,
               "starsGained": 0,
               "release": ""
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "lightweight",
+              "starsTotal": 5071,
+              "starsGained": 0,
+              "release": ""
             }
           ],
           "analysis": [
@@ -13402,7 +14049,7 @@
           "name": "OmniRoute",
           "url": "https://github.com/diegosouzapw/OmniRoute",
           "oneLiner": "免费 AI 网关，聚合 237 家提供商免费额度，自动回退与 token 压缩",
-          "description": "Never stop coding. Free MIT AI gateway: one endpoint, 268+ providers (50+ free), 500+ models — Claude, GPT, Gemini, Kimi K3, GLM, DeepSeek. Works with Claude Code, Codex, Cursor, Cline & Copilot. Quota-aware auto-fallback, RTK+Caveman compression saves 15-95% tokens, MCP/A2A, multimodal, Desktop/PWA. Built by 500+ contributors.",
+          "description": "Never stop coding. Free MIT AI gateway: one endpoint, 268+ providers (50+ free), 500+ models — Kimi, Claude, GPT, OpenAI, Gemini, GLM, DeepSeek, MiniMax. Works with Claude Code, Codex, Cursor, OpenCode, Cline & Copilot. Quota-aware auto-fallback, RTK+Caveman compression saves 15-95% tokens, MCP/A2A, Desktop/PWA. Built by 500+ contributors",
           "language": "TypeScript",
           "category": "AI 应用",
           "license": "MIT",
@@ -13411,7 +14058,7 @@
           "streakDays": 5,
           "isNew": false,
           "createdAt": "2026-02-13",
-          "pushedAt": "2026-07-21",
+          "pushedAt": "2026-07-22",
           "latestRelease": "v3.8.48",
           "firstSeen": "2026-07-01",
           "topics": [
@@ -13568,6 +14215,13 @@
               "reason": "lightweight",
               "starsTotal": 21831,
               "starsGained": 1107,
+              "release": "v3.8.48"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "lightweight",
+              "starsTotal": 23608,
+              "starsGained": 2034,
               "release": "v3.8.48"
             }
           ],
@@ -13811,7 +14465,7 @@
           "name": "orca",
           "url": "https://github.com/stablyai/orca",
           "oneLiner": "多Agent并行IDE，以独立worktree运行任意CLI编码Agent并对比结果。",
-          "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop and mobile.",
+          "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop, mobile and VPS.",
           "language": "TypeScript",
           "category": "AI 应用",
           "license": "MIT",
@@ -13820,8 +14474,8 @@
           "streakDays": 12,
           "isNew": false,
           "createdAt": "2026-03-17",
-          "pushedAt": "2026-07-19",
-          "latestRelease": "v1.4.146",
+          "pushedAt": "2026-07-22",
+          "latestRelease": "v1.4.149",
           "firstSeen": "2026-06-24",
           "topics": [
             "ade",
@@ -14018,6 +14672,13 @@
               "starsTotal": 21977,
               "starsGained": 5520,
               "release": "v1.4.146"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "release_update",
+              "starsTotal": 24963,
+              "starsGained": 5733,
+              "release": "v1.4.149"
             }
           ],
           "analysis": [
@@ -14238,6 +14899,13 @@
               "date": "2026-07-21",
               "reason": "lightweight",
               "starsTotal": 872,
+              "starsGained": 0,
+              "release": "v1.4.0"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "lightweight",
+              "starsTotal": 889,
               "starsGained": 0,
               "release": "v1.4.0"
             }
@@ -14546,8 +15214,8 @@
           "streakDays": 8,
           "isNew": false,
           "createdAt": "2026-06-24",
-          "pushedAt": "2026-07-15",
-          "latestRelease": "v0.1.11",
+          "pushedAt": "2026-07-21",
+          "latestRelease": "v0.2.0",
           "firstSeen": "2026-06-28",
           "topics": [
             "ai-agent",
@@ -14720,6 +15388,13 @@
               "starsTotal": 1077,
               "starsGained": 0,
               "release": "v0.1.11"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "release_update",
+              "starsTotal": 1081,
+              "starsGained": 0,
+              "release": "v0.2.0"
             }
           ],
           "analysis": [
@@ -15836,6 +16511,13 @@
               "starsTotal": 872,
               "starsGained": 0,
               "release": "v1.4.0"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "lightweight",
+              "starsTotal": 889,
+              "starsGained": 0,
+              "release": "v1.4.0"
             }
           ],
           "analysis": [
@@ -16241,7 +16923,7 @@
           "name": "orca",
           "url": "https://github.com/stablyai/orca",
           "oneLiner": "多AI代理并行跑在工作树里，桌面+手机一并监控的统一IDE。",
-          "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop and mobile.",
+          "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop, mobile and VPS.",
           "language": "TypeScript",
           "category": "AI 应用",
           "license": "MIT",
@@ -16250,8 +16932,8 @@
           "streakDays": 11,
           "isNew": false,
           "createdAt": "2026-03-17",
-          "pushedAt": "2026-07-19",
-          "latestRelease": "v1.4.146",
+          "pushedAt": "2026-07-22",
+          "latestRelease": "v1.4.149",
           "firstSeen": "2026-06-24",
           "topics": [
             "ade",
@@ -16448,6 +17130,13 @@
               "starsTotal": 21977,
               "starsGained": 5520,
               "release": "v1.4.146"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "release_update",
+              "starsTotal": 24963,
+              "starsGained": 5733,
+              "release": "v1.4.149"
             }
           ],
           "analysis": [
@@ -19221,7 +19910,7 @@
           "name": "orca",
           "url": "https://github.com/stablyai/orca",
           "oneLiner": "并行运行多个 CLI 编码代理，对比输出然后合并最优结果的编排 IDE。",
-          "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop and mobile.",
+          "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop, mobile and VPS.",
           "language": "TypeScript",
           "category": "AI 应用",
           "license": "MIT",
@@ -19230,8 +19919,8 @@
           "streakDays": 10,
           "isNew": false,
           "createdAt": "2026-03-17",
-          "pushedAt": "2026-07-19",
-          "latestRelease": "v1.4.146",
+          "pushedAt": "2026-07-22",
+          "latestRelease": "v1.4.149",
           "firstSeen": "2026-06-24",
           "topics": [
             "ade",
@@ -19428,6 +20117,13 @@
               "starsTotal": 21977,
               "starsGained": 5520,
               "release": "v1.4.146"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "release_update",
+              "starsTotal": 24963,
+              "starsGained": 5733,
+              "release": "v1.4.149"
             }
           ],
           "analysis": [
@@ -19509,7 +20205,7 @@
           "name": "OmniRoute",
           "url": "https://github.com/diegosouzapw/OmniRoute",
           "oneLiner": "免费聚合237+AI的网关，自动失效转移与95%令牌压缩",
-          "description": "Never stop coding. Free MIT AI gateway: one endpoint, 268+ providers (50+ free), 500+ models — Claude, GPT, Gemini, Kimi K3, GLM, DeepSeek. Works with Claude Code, Codex, Cursor, Cline & Copilot. Quota-aware auto-fallback, RTK+Caveman compression saves 15-95% tokens, MCP/A2A, multimodal, Desktop/PWA. Built by 500+ contributors.",
+          "description": "Never stop coding. Free MIT AI gateway: one endpoint, 268+ providers (50+ free), 500+ models — Kimi, Claude, GPT, OpenAI, Gemini, GLM, DeepSeek, MiniMax. Works with Claude Code, Codex, Cursor, OpenCode, Cline & Copilot. Quota-aware auto-fallback, RTK+Caveman compression saves 15-95% tokens, MCP/A2A, Desktop/PWA. Built by 500+ contributors",
           "language": "TypeScript",
           "category": "AI 应用",
           "license": "MIT",
@@ -19518,7 +20214,7 @@
           "streakDays": 3,
           "isNew": false,
           "createdAt": "2026-02-13",
-          "pushedAt": "2026-07-21",
+          "pushedAt": "2026-07-22",
           "latestRelease": "v3.8.48",
           "firstSeen": "2026-07-01",
           "topics": [
@@ -19675,6 +20371,13 @@
               "reason": "lightweight",
               "starsTotal": 21831,
               "starsGained": 1107,
+              "release": "v3.8.48"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "lightweight",
+              "starsTotal": 23608,
+              "starsGained": 2034,
               "release": "v3.8.48"
             }
           ],
@@ -21598,7 +22301,7 @@
           "name": "orca",
           "url": "https://github.com/stablyai/orca",
           "oneLiner": "并行运行多个 AI 代理的桌面 ADE，支持工作树隔离与移动监控",
-          "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop and mobile.",
+          "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop, mobile and VPS.",
           "language": "TypeScript",
           "category": "AI 应用",
           "license": "MIT",
@@ -21607,8 +22310,8 @@
           "streakDays": 9,
           "isNew": false,
           "createdAt": "2026-03-17",
-          "pushedAt": "2026-07-19",
-          "latestRelease": "v1.4.146",
+          "pushedAt": "2026-07-22",
+          "latestRelease": "v1.4.149",
           "firstSeen": "2026-06-24",
           "topics": [
             "ade",
@@ -21805,6 +22508,13 @@
               "starsTotal": 21977,
               "starsGained": 5520,
               "release": "v1.4.146"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "release_update",
+              "starsTotal": 24963,
+              "starsGained": 5733,
+              "release": "v1.4.149"
             }
           ],
           "analysis": [
@@ -23134,7 +23844,7 @@
           "name": "OmniRoute",
           "url": "https://github.com/diegosouzapw/OmniRoute",
           "oneLiner": "免费AI网关：一个端点聚合236家模型，自动回退与95%压缩。",
-          "description": "Never stop coding. Free MIT AI gateway: one endpoint, 268+ providers (50+ free), 500+ models — Claude, GPT, Gemini, Kimi K3, GLM, DeepSeek. Works with Claude Code, Codex, Cursor, Cline & Copilot. Quota-aware auto-fallback, RTK+Caveman compression saves 15-95% tokens, MCP/A2A, multimodal, Desktop/PWA. Built by 500+ contributors.",
+          "description": "Never stop coding. Free MIT AI gateway: one endpoint, 268+ providers (50+ free), 500+ models — Kimi, Claude, GPT, OpenAI, Gemini, GLM, DeepSeek, MiniMax. Works with Claude Code, Codex, Cursor, OpenCode, Cline & Copilot. Quota-aware auto-fallback, RTK+Caveman compression saves 15-95% tokens, MCP/A2A, Desktop/PWA. Built by 500+ contributors",
           "language": "TypeScript",
           "category": "AI 应用",
           "license": "MIT",
@@ -23143,7 +23853,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-02-13",
-          "pushedAt": "2026-07-21",
+          "pushedAt": "2026-07-22",
           "latestRelease": "v3.8.48",
           "firstSeen": "2026-07-01",
           "topics": [
@@ -23300,6 +24010,13 @@
               "reason": "lightweight",
               "starsTotal": 21831,
               "starsGained": 1107,
+              "release": "v3.8.48"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "lightweight",
+              "starsTotal": 23608,
+              "starsGained": 2034,
               "release": "v3.8.48"
             }
           ],
@@ -23576,7 +24293,7 @@
           "name": "orca",
           "url": "https://github.com/stablyai/orca",
           "oneLiner": "并行运行多AI代理的桌面与移动IDE，用自有订阅指挥编码舰队。",
-          "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop and mobile.",
+          "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop, mobile and VPS.",
           "language": "TypeScript",
           "category": "AI 应用",
           "license": "MIT",
@@ -23585,8 +24302,8 @@
           "streakDays": 8,
           "isNew": false,
           "createdAt": "2026-03-17",
-          "pushedAt": "2026-07-19",
-          "latestRelease": "v1.4.146",
+          "pushedAt": "2026-07-22",
+          "latestRelease": "v1.4.149",
           "firstSeen": "2026-06-24",
           "topics": [
             "ade",
@@ -23783,6 +24500,13 @@
               "starsTotal": 21977,
               "starsGained": 5520,
               "release": "v1.4.146"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "release_update",
+              "starsTotal": 24963,
+              "starsGained": 5733,
+              "release": "v1.4.149"
             }
           ],
           "analysis": [
@@ -25045,8 +25769,8 @@
           "streakDays": 4,
           "isNew": false,
           "createdAt": "2026-06-24",
-          "pushedAt": "2026-07-15",
-          "latestRelease": "v0.1.11",
+          "pushedAt": "2026-07-21",
+          "latestRelease": "v0.2.0",
           "firstSeen": "2026-06-28",
           "topics": [
             "ai-agent",
@@ -25219,6 +25943,13 @@
               "starsTotal": 1077,
               "starsGained": 0,
               "release": "v0.1.11"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "release_update",
+              "starsTotal": 1081,
+              "starsGained": 0,
+              "release": "v0.2.0"
             }
           ],
           "analysis": [
@@ -26269,8 +27000,8 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-06-22",
-          "pushedAt": "2026-07-07",
-          "latestRelease": "v1.2.0",
+          "pushedAt": "2026-07-21",
+          "latestRelease": "v1.3.0",
           "firstSeen": "2026-06-30",
           "topics": [
             "agent-skills",
@@ -26432,6 +27163,13 @@
               "starsTotal": 366,
               "starsGained": 0,
               "release": "v1.2.0"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "release_update",
+              "starsTotal": 366,
+              "starsGained": 0,
+              "release": "v1.3.0"
             }
           ],
           "analysis": [
@@ -26714,7 +27452,7 @@
           "name": "orca",
           "url": "https://github.com/stablyai/orca",
           "oneLiner": "AI Orchestrator for 100x builders: run coding agents in parallel git worktrees on desktop & mobile.",
-          "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop and mobile.",
+          "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop, mobile and VPS.",
           "language": "TypeScript",
           "category": "AI 应用",
           "license": "MIT",
@@ -26723,8 +27461,8 @@
           "streakDays": 7,
           "isNew": false,
           "createdAt": "2026-03-17",
-          "pushedAt": "2026-07-19",
-          "latestRelease": "v1.4.146",
+          "pushedAt": "2026-07-22",
+          "latestRelease": "v1.4.149",
           "firstSeen": "2026-06-24",
           "topics": [
             "ade",
@@ -26921,6 +27659,13 @@
               "starsTotal": 21977,
               "starsGained": 5520,
               "release": "v1.4.146"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "release_update",
+              "starsTotal": 24963,
+              "starsGained": 5733,
+              "release": "v1.4.149"
             }
           ],
           "analysis": [
@@ -28839,8 +29584,8 @@
           "streakDays": 2,
           "isNew": false,
           "createdAt": "2026-06-24",
-          "pushedAt": "2026-07-15",
-          "latestRelease": "v0.1.11",
+          "pushedAt": "2026-07-21",
+          "latestRelease": "v0.2.0",
           "firstSeen": "2026-06-28",
           "topics": [
             "ai-agent",
@@ -29013,6 +29758,13 @@
               "starsTotal": 1077,
               "starsGained": 0,
               "release": "v0.1.11"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "release_update",
+              "starsTotal": 1081,
+              "starsGained": 0,
+              "release": "v0.2.0"
             }
           ],
           "analysis": [
@@ -29661,7 +30413,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-04-01",
-          "pushedAt": "2026-07-20",
+          "pushedAt": "2026-07-21",
           "latestRelease": "v0.1.11",
           "firstSeen": "2026-06-28",
           "topics": [
@@ -29781,6 +30533,13 @@
               "starsTotal": 25707,
               "starsGained": 4387,
               "release": "v0.1.11"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "lightweight",
+              "starsTotal": 26131,
+              "starsGained": 3679,
+              "release": "v0.1.11"
             }
           ],
           "analysis": [
@@ -29869,8 +30628,8 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-06-24",
-          "pushedAt": "2026-07-15",
-          "latestRelease": "v0.1.11",
+          "pushedAt": "2026-07-21",
+          "latestRelease": "v0.2.0",
           "firstSeen": "2026-06-28",
           "topics": [
             "ai-agent",
@@ -30043,6 +30802,13 @@
               "starsTotal": 1077,
               "starsGained": 0,
               "release": "v0.1.11"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "release_update",
+              "starsTotal": 1081,
+              "starsGained": 0,
+              "release": "v0.2.0"
             }
           ],
           "analysis": [
@@ -30305,7 +31071,7 @@
           "name": "orca",
           "url": "https://github.com/stablyai/orca",
           "oneLiner": "并行运行多个AI编程代理，自带Git工作树隔离与移动端监控。",
-          "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop and mobile.",
+          "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop, mobile and VPS.",
           "language": "TypeScript",
           "category": "AI 应用",
           "license": "MIT",
@@ -30314,8 +31080,8 @@
           "streakDays": 5,
           "isNew": false,
           "createdAt": "2026-03-17",
-          "pushedAt": "2026-07-19",
-          "latestRelease": "v1.4.146",
+          "pushedAt": "2026-07-22",
+          "latestRelease": "v1.4.149",
           "firstSeen": "2026-06-24",
           "topics": [
             "ade",
@@ -30512,6 +31278,13 @@
               "starsTotal": 21977,
               "starsGained": 5520,
               "release": "v1.4.146"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "release_update",
+              "starsTotal": 24963,
+              "starsGained": 5733,
+              "release": "v1.4.149"
             }
           ],
           "analysis": [
@@ -33756,7 +34529,7 @@
           "name": "orca",
           "url": "https://github.com/stablyai/orca",
           "oneLiner": "开源并行AI代理编排IDE，多worktree+终端+手机监控",
-          "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop and mobile.",
+          "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop, mobile and VPS.",
           "language": "TypeScript",
           "category": "AI 应用",
           "license": "MIT",
@@ -33765,8 +34538,8 @@
           "streakDays": 4,
           "isNew": false,
           "createdAt": "2026-03-17",
-          "pushedAt": "2026-07-19",
-          "latestRelease": "v1.4.146",
+          "pushedAt": "2026-07-22",
+          "latestRelease": "v1.4.149",
           "firstSeen": "2026-06-24",
           "topics": [
             "ade",
@@ -33963,6 +34736,13 @@
               "starsTotal": 21977,
               "starsGained": 5520,
               "release": "v1.4.146"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "release_update",
+              "starsTotal": 24963,
+              "starsGained": 5733,
+              "release": "v1.4.149"
             }
           ],
           "analysis": [
@@ -36562,7 +37342,7 @@
           "name": "orca",
           "url": "https://github.com/stablyai/orca",
           "oneLiner": "并行编排多个AI编码代理，在隔离的Git工作树中自动运行与对比结果。",
-          "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop and mobile.",
+          "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop, mobile and VPS.",
           "language": "TypeScript",
           "category": "AI 应用",
           "license": "MIT",
@@ -36571,8 +37351,8 @@
           "streakDays": 3,
           "isNew": false,
           "createdAt": "2026-03-17",
-          "pushedAt": "2026-07-19",
-          "latestRelease": "v1.4.146",
+          "pushedAt": "2026-07-22",
+          "latestRelease": "v1.4.149",
           "firstSeen": "2026-06-24",
           "topics": [
             "ade",
@@ -36769,6 +37549,13 @@
               "starsTotal": 21977,
               "starsGained": 5520,
               "release": "v1.4.146"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "release_update",
+              "starsTotal": 24963,
+              "starsGained": 5733,
+              "release": "v1.4.149"
             }
           ],
           "analysis": [
@@ -38992,7 +39779,7 @@
           "name": "orca",
           "url": "https://github.com/stablyai/orca",
           "oneLiner": "一站式并行编排多个CLI AI编程Agent，隔离工作树，移动端监控。",
-          "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop and mobile.",
+          "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop, mobile and VPS.",
           "language": "TypeScript",
           "category": "AI 应用",
           "license": "MIT",
@@ -39001,8 +39788,8 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-03-17",
-          "pushedAt": "2026-07-19",
-          "latestRelease": "v1.4.146",
+          "pushedAt": "2026-07-22",
+          "latestRelease": "v1.4.149",
           "firstSeen": "2026-06-24",
           "topics": [
             "ade",
@@ -39199,6 +39986,13 @@
               "starsTotal": 21977,
               "starsGained": 5520,
               "release": "v1.4.146"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "release_update",
+              "starsTotal": 24963,
+              "starsGained": 5733,
+              "release": "v1.4.149"
             }
           ],
           "analysis": [
@@ -47420,7 +48214,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-01-05",
-          "pushedAt": "2026-07-20",
+          "pushedAt": "2026-07-22",
           "latestRelease": "v0.54.4",
           "firstSeen": "2026-06-20",
           "topics": [
@@ -47464,6 +48258,13 @@
               "reason": "release_update",
               "starsTotal": 9632,
               "starsGained": 568,
+              "release": "v0.54.4"
+            },
+            {
+              "date": "2026-07-22",
+              "reason": "lightweight",
+              "starsTotal": 10319,
+              "starsGained": 1769,
               "release": "v0.54.4"
             }
           ],

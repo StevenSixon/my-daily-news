@@ -1,3 +1,4 @@
 - 2026-07-19 | 🆕新发现 | ⭐99490(+2268) | release=rust-v0.144.6
 - 2026-07-20 | lightweight | ⭐99693(+2361) | release=rust-v0.144.6
 - 2026-07-21 | lightweight | ⭐100053(+2448) | release=rust-v0.144.6
+- 2026-07-22 | release_update | ⭐100400(+2445) | release=rust-v0.145.0

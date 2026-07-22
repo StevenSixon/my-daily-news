@@ -19,3 +19,4 @@
 - 2026-07-19 | lightweight | ⭐361(+0) | release=v1.2.0
 - 2026-07-20 | lightweight | ⭐363(+0) | release=v1.2.0
 - 2026-07-21 | lightweight | ⭐366(+0) | release=v1.2.0
+- 2026-07-22 | release_update | ⭐366(+0) | release=v1.3.0
