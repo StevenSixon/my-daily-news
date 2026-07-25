@@ -7,3 +7,4 @@
 - 2026-07-22 | release_update | ⭐1157(+0) | release=v4.4.0
 - 2026-07-23 | release_update | ⭐1167(+0) | release=v4.4.1
 - 2026-07-24 | release_update | ⭐1213(+0) | release=v4.4.4
+- 2026-07-25 | release_update | ⭐1236(+0) | release=v4.4.5
