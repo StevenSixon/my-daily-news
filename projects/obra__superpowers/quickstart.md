@@ -1,31 +1,22 @@
 ## 安装
-根据你使用的编码代理选择一种安装方式：
 
-**Claude Code**（官方市场）：
+以 Claude Code 为例：
 ```bash
 /plugin install superpowers@claude-plugins-official
 ```
 
-**Cursor**：
-在 Agent 聊天中输入 `/add-plugin superpowers`。
-
-**Codex App**：在插件侧边栏搜索 Superpowers 并点击添加。
-
-**GitHub Copilot CLI**：
-```bash
-copilot plugin marketplace add obra/superpowers-marketplace
-copilot plugin install superpowers@superpowers-marketplace
-```
-
-其他工具（Antigravity、Factory Droid、Kimi Code、OpenCode、Pi）参见 [README](https://github.com/obra/superpowers)。
+其他代理（Cursor、Codex、Gemini CLI 等）的安装命令见仓库 README 的对应平台片段。
 
 ## 最小可用示例
-安装后，在代理中开始一个新对话，描述你要开发的功能，如：
-> 我想给现有的 REST API 添加一个速率限制中间件
 
-代理会自动进入 brainstorming 阶段，不会立即写代码，而是反问你设计细节。确认设计后，会生成规划并询问是否开始实现。回答“go”后，它会创建独立工作分支，逐个任务进行 TDD 开发，并子代理审查。
+1. 启动安装了 Superpowers 的编码代理。
+2. 输入一个模糊的需求，例如：“创建一个命令行工具来统计项目中的 TODO 注释”。
+3. 代理将自动触发 brainstorming，引导你明确设计、生成 spec，并等待你批准。
+4. 批准后，代理生成实现计划，再次等待批准。
+5. 然后代理会执行子代理驱动的 TDD 流程，自动提交代码，最终展示合并/PR 选项。
 
 ## 依赖前提
-- 你需要拥有对应编码代理的可用环境（Claude Code、Cursor 等）
-- 项目必须是已有的代码仓库，以便使用 Git worktree 特性（可选但推荐）
-- 无需额外安装语言运行时，技能为纯文本指令
+
+- 一个受支持的编码代理（列表见 README 的 Quickstart 部分）
+- Git（因 workflow 依赖 git worktree 和分支管理）
+- 代理的插件/扩展功能可用（某些代理需先注册市场）

@@ -1,0 +1,64 @@
+{
+  "full_name": "xuzhougeng/wisp-science",
+  "url": "https://github.com/xuzhougeng/wisp-science",
+  "description": "Open-source, local-first desktop AI research workbench for scientific computing with Python/R, MCP bioinformatics tools, SSH/WSL/GPU runtimes, and OpenAI/Anthropic models.",
+  "language": "HTML",
+  "topics": [
+    "agent-skills",
+    "ai-agent",
+    "ai-assistant",
+    "ai-for-science",
+    "ai4science",
+    "bioinformatics",
+    "computational-biology",
+    "desktop-app",
+    "llm",
+    "local-first",
+    "mcp",
+    "model-context-protocol",
+    "python",
+    "reproducible-research",
+    "research-assistant",
+    "rstats",
+    "rust",
+    "scientific-computing",
+    "scientific-workflow",
+    "tauri"
+  ],
+  "license": "Apache-2.0",
+  "category": "AI 应用",
+  "classify_reason": "Desktop AI research workbench for scientific computing.",
+  "one_liner": "开源本地优先的桌面AI科研工作台，集成Python/R、80+生物数据库和远程计算。",
+  "why_worth_it": "将AI助手、科学计算与生物信息学工具无缝聚合于本地桌面，保障数据隐私，适合生信/计算生物学研究者快速构建可复现工作流。",
+  "tags": [
+    "本地优先",
+    "MCP协议",
+    "科研AI",
+    "Rust+Tauri"
+  ],
+  "confidence": "high",
+  "info_gaps": [
+    "未提供基准测试或与其他AI编程助手的性能对比数据",
+    "Linux仅支持源码构建，预编译包未提及",
+    "GPU运行时的具体实现细节和调度策略未在README中详细说明",
+    "版本0.24.0仍为MVP，部分路线图功能延后，稳定性和完整度待观察"
+  ],
+  "quality_flags": [],
+  "stars_total": 437,
+  "created_at": "2026-07-01",
+  "pushed_at": "2026-07-26",
+  "latest_release": "v0.24.0",
+  "first_seen": "2026-07-26",
+  "last_seen": "2026-07-26",
+  "streak_days": 1,
+  "analysis_updated_at": "2026-07-26T09:14:26+0800",
+  "appearances": [
+    {
+      "date": "2026-07-26",
+      "reason": "new",
+      "stars_total": 437,
+      "stars_gained": 0,
+      "release": "v0.24.0"
+    }
+  ]
+}

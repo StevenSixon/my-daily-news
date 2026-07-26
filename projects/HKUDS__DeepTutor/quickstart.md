@@ -1,0 +1,1 @@
+官方文档位于 https://deeptutor.info ，但 README 未提供具体安装步骤。根据仓库配置推断，需 Python 3.11+ 与 Node.js 环境，并使用 Docker 启动。推荐查阅仓库内 `docs/` 或社区 Discord/飞书获取最新部署指南。

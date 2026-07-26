@@ -15,21 +15,32 @@
   ],
   "license": "AGPL-3.0",
   "category": "AI 应用",
-  "classify_reason": "关键词命中",
-  "one_liner": "Think with AI beyond the chat box. A shared canvas for handwriting, equations, diagrams, and spatial reasoning.",
-  "why_worth_it": "",
-  "tags": [],
-  "confidence": "medium",
-  "info_gaps": [],
+  "classify_reason": "AI-powered shared canvas for visual thinking.",
+  "one_liner": "AI手写画布：无缝融合草图、公式与空间推理，超越纯文本对话",
+  "why_worth_it": "为视觉思考者提供无需切换思维模式的AI协作画布，支持自然手写与空间理解，比纯聊天工具更贴合创意与教学场景",
+  "tags": [
+    "AI画布",
+    "视觉思维",
+    "Node.js",
+    "AGPL-3.0"
+  ],
+  "confidence": "high",
+  "info_gaps": [
+    "未提供各模型在画布任务上的量化基准（如笔迹识别准确率、推理延迟）",
+    "插件开发文档还未详细展开，仅有架构文件",
+    "桌面应用技术栈（是否基于 Electron）未在 README 明确说明",
+    "多人实时协作的具体实现机制（如 WebSocket 同步）未提及",
+    "非 Codex/Claude 的第三方模型兼容性细节不完整"
+  ],
   "quality_flags": [],
-  "stars_total": 1490,
+  "stars_total": 1609,
   "created_at": "2026-07-14",
-  "pushed_at": "2026-07-23",
-  "latest_release": "v0.1.0",
+  "pushed_at": "2026-07-25",
+  "latest_release": "v0.7.1",
   "first_seen": "2026-07-23",
-  "last_seen": "2026-07-25",
-  "streak_days": 3,
-  "analysis_updated_at": null,
+  "last_seen": "2026-07-26",
+  "streak_days": 4,
+  "analysis_updated_at": "2026-07-26T09:20:03+0800",
   "appearances": [
     {
       "date": "2026-07-23",
@@ -51,6 +62,13 @@
       "stars_total": 1490,
       "stars_gained": 0,
       "release": "v0.1.0"
+    },
+    {
+      "date": "2026-07-26",
+      "reason": "release_update",
+      "stars_total": 1609,
+      "stars_gained": 0,
+      "release": "v0.7.1"
     }
   ]
 }

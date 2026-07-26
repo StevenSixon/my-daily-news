@@ -25,31 +25,31 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "关键词命中",
-  "one_liner": "并行运行多个 AI 编码代理的桌面编排器",
-  "why_worth_it": "可在一个项目中同时驱动 Claude Code、Codex 等多智能体，在隔离 git worktree 中比较产出并合并最优解，彻底榨干订阅价值",
+  "classify_reason": "Agent development environment for parallel agents.",
+  "one_liner": "在独立工作树中并行运行多个 CLI AI 编码代理的桌面/移动 ADE。",
+  "why_worth_it": "让开发者同时驱动 Claude Code、Codex 等代理，对比结果并合并最优方案，适合频繁用 AI 编码的多任务并行场景。",
   "tags": [
-    "Agent编排",
+    "多代理编排",
+    "AI开发环境",
     "TypeScript",
-    "多智能体",
-    "CLI原生"
+    "并行代理"
   ],
-  "confidence": "high",
+  "confidence": "medium",
   "info_gaps": [
-    "未提及自托管/私有部署方案，仅提供桌面安装方式",
-    "移动端依赖后端服务，但未说明后端架构或是否可自部署",
-    "未给出代理并发上限、资源消耗基线数据",
-    "无同场景性能对比（如与手动多终端切换的效率提升数据）"
+    "桌面端具体框架（推测为 Electron）未在 README 中确认",
+    "没有提供性能基准数据或与单代理使用的效率对比",
+    "安装前提和具体配置步骤 README 未详细说明，依赖官方文档页面",
+    "未说明 VPS 部署的详细环境要求"
   ],
   "quality_flags": [],
-  "stars_total": 24963,
+  "stars_total": 29033,
   "created_at": "2026-03-17",
-  "pushed_at": "2026-07-22",
-  "latest_release": "v1.4.149",
+  "pushed_at": "2026-07-26",
+  "latest_release": "v1.4.156",
   "first_seen": "2026-06-24",
-  "last_seen": "2026-07-22",
-  "streak_days": 26,
-  "analysis_updated_at": "2026-07-09T01:20:58+0800",
+  "last_seen": "2026-07-26",
+  "streak_days": 27,
+  "analysis_updated_at": "2026-07-26T09:15:30+0800",
   "appearances": [
     {
       "date": "2026-06-24",
@@ -232,6 +232,13 @@
       "stars_total": 24963,
       "stars_gained": 5733,
       "release": "v1.4.149"
+    },
+    {
+      "date": "2026-07-26",
+      "reason": "release_update",
+      "stars_total": 29033,
+      "stars_gained": 7327,
+      "release": "v1.4.156"
     }
   ]
 }

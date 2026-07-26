@@ -1,20 +1,18 @@
 ## 安装
+macOS/Linux：
 ```bash
-curl -fsSL https://raw.githubusercontent.com/1jehuang/jcode/master/scripts/install.sh | bash
+curl -fsSL https://jcode.sh/install | bash
 ```
-（需要 Linux/macOS 环境，Windows 及其他安装方式见仓库文档）
+Windows 11（PowerShell）：
+```powershell
+irm https://jcode.sh/install.ps1 | iex
+```
+其他方式包括 Homebrew、源码编译，详见 [官方文档](https://jcode.sh/docs)。
 
-## 配置 LLM Provider
-设置所需 API key，例如：
-```bash
-export OPENAI_API_KEY="sk-..."
-# 或 ANTHROPIC_API_KEY, AWS 凭证等
-```
-详细认证方式参考 `AUTH_CREDENTIAL_SOURCES.md`。
+## 最小可用示例
+安装后运行 `jcode` 进入交互式 TUI，首次启动按提示配置 LLM API 密钥。直接输入自然语言任务即可开始编码交互。多会话可通过快捷键创建新标签或新窗口。
 
-## 启动会话
-在项目目录下运行：
-```bash
-jcode
-```
-即进入终端交互界面，可直接用自然语言描述任务，或利用 `/` 命令进行高级操作。侧面板、记忆等功能默认自动生效，无需额外配置。
+## 依赖前提
+- 系统无特殊依赖，二进制自带所有运行时
+- 如需本地嵌入功能可能需要额外库（但默认开启）
+- 需要有效的 OpenAI / Claude 等 API 密钥

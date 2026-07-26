@@ -1,0 +1,46 @@
+{
+  "full_name": "TencentCloud/Octop",
+  "url": "https://github.com/TencentCloud/Octop",
+  "description": "A smarter, self-hosted AI assistant — multi-user, multi-agent.",
+  "language": "Python",
+  "topics": [
+    "agent",
+    "agentic-ai",
+    "ai"
+  ],
+  "license": "MIT",
+  "category": "AI 应用",
+  "classify_reason": "Self-hosted multi-agent AI assistant.",
+  "one_liner": "自托管全家桶AI助手，集成浏览器/终端/远程桌面，多用户多Agent。",
+  "why_worth_it": "隐私自托管，家庭/小团队共用专家库，内置浏览器和桌面操控，比纯聊天助手更自动化。",
+  "tags": [
+    "自托管",
+    "多Agent",
+    "浏览器自动化",
+    "远程桌面"
+  ],
+  "confidence": "high",
+  "info_gaps": [
+    "未提供性能基准或大规模并发测试数据",
+    "Ollama 等本地模型的具体配置步骤未在 README 中展开",
+    "多用户并发下的资源消耗与隔离细节未说明"
+  ],
+  "quality_flags": [],
+  "stars_total": 301,
+  "created_at": "2026-07-08",
+  "pushed_at": "2026-07-25",
+  "latest_release": "v0.9.14",
+  "first_seen": "2026-07-26",
+  "last_seen": "2026-07-26",
+  "streak_days": 1,
+  "analysis_updated_at": "2026-07-26T09:14:54+0800",
+  "appearances": [
+    {
+      "date": "2026-07-26",
+      "reason": "new",
+      "stars_total": 301,
+      "stars_gained": 0,
+      "release": "v0.9.14"
+    }
+  ]
+}

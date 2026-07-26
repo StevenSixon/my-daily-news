@@ -1,0 +1,53 @@
+{
+  "full_name": "HKUDS/DeepTutor",
+  "url": "https://github.com/HKUDS/DeepTutor",
+  "description": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.",
+  "language": "Python",
+  "topics": [
+    "ai-agents",
+    "ai-tutor",
+    "clawdbot",
+    "cli-tool",
+    "deepresearch",
+    "interactive-learning",
+    "large-language-models",
+    "multi-agent-systems",
+    "rag"
+  ],
+  "license": "Apache-2.0",
+  "category": "AI 应用",
+  "classify_reason": "AI-powered personalized tutoring system.",
+  "one_liner": "多智能体驱动的终身个性化AI辅导系统，支持深度研究与互动学习",
+  "why_worth_it": "将LLM代理与RAG知识库、多通道IM深度融合，为教育场景提供可定制的辅导引擎，适合自建AI教学助手",
+  "tags": [
+    "多智能体系统",
+    "交互式学习",
+    "RAG",
+    "自托管"
+  ],
+  "confidence": "medium",
+  "info_gaps": [
+    "README 未包含安装步骤、环境依赖清单及最小可用示例",
+    "未给出系统架构图或模块划分说明",
+    "未提供基准测试数据或性能指标",
+    "多用户部署的具体权限模型未在 README 中详述"
+  ],
+  "quality_flags": [],
+  "stars_total": 29791,
+  "created_at": "2025-12-28",
+  "pushed_at": "2026-07-24",
+  "latest_release": "v1.5.4",
+  "first_seen": "2026-07-26",
+  "last_seen": "2026-07-26",
+  "streak_days": 1,
+  "analysis_updated_at": "2026-07-26T09:12:37+0800",
+  "appearances": [
+    {
+      "date": "2026-07-26",
+      "reason": "new",
+      "stars_total": 29791,
+      "stars_gained": 2154,
+      "release": "v1.5.4"
+    }
+  ]
+}

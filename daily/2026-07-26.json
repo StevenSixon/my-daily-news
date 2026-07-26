@@ -1,0 +1,1310 @@
+{
+  "date": "2026-07-26",
+  "count": 16,
+  "items": [
+    {
+      "full_name": "HKUDS/DeepTutor",
+      "url": "https://github.com/HKUDS/DeepTutor",
+      "one_liner": "多智能体驱动的终身个性化AI辅导系统，支持深度研究与互动学习",
+      "why_worth_it": "将LLM代理与RAG知识库、多通道IM深度融合，为教育场景提供可定制的辅导引擎，适合自建AI教学助手",
+      "tags": [
+        "多智能体系统",
+        "交互式学习",
+        "RAG",
+        "自托管"
+      ],
+      "confidence": "medium",
+      "info_gaps": [
+        "README 未包含安装步骤、环境依赖清单及最小可用示例",
+        "未给出系统架构图或模块划分说明",
+        "未提供基准测试数据或性能指标",
+        "多用户部署的具体权限模型未在 README 中详述"
+      ],
+      "language": "Python",
+      "stars_total": 29791,
+      "stars_gained": 2154,
+      "streak_days": 1,
+      "is_new": true,
+      "refreshed": true,
+      "revisit_reason": "new",
+      "report_path": "../projects/HKUDS__DeepTutor/analysis.md"
+    },
+    {
+      "full_name": "MoonshotAI/kimi-code",
+      "url": "https://github.com/MoonshotAI/kimi-code",
+      "one_liner": "终端AI编程代理：单二进制、视频输入、MCP、子代理、编辑器集成",
+      "why_worth_it": "极速启动的无依赖终端编码助手，原生视频输入与子代理并行，可直接嵌入Zed/JetBrains",
+      "tags": [
+        "AI编程代理",
+        "终端CLI",
+        "MCP集成",
+        "TypeScript"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "无量化 benchmark 与其他工具对比数据",
+        "插件市场具体内容及审核机制未展开",
+        "第三方模型配置详细指南未在 README 中给出",
+        "视频输入的能力边界未说明"
+      ],
+      "language": "TypeScript",
+      "stars_total": 5061,
+      "stars_gained": 1534,
+      "streak_days": 1,
+      "is_new": true,
+      "refreshed": true,
+      "revisit_reason": "new",
+      "report_path": "../projects/MoonshotAI__kimi-code/analysis.md"
+    },
+    {
+      "full_name": "CoreBunch/Instatic",
+      "url": "https://github.com/CoreBunch/Instatic",
+      "one_liner": "自托管视觉CMS，输出纯净静态HTML，内置设计框架与AI建站代理。",
+      "why_worth_it": "开源自托管无锁定，视觉搭建同时保持代码纯净；集成Core Framework设计引擎与AI代理，极客建站利器。",
+      "tags": [
+        "自托管CMS",
+        "静态站点",
+        "AI代理",
+        "TypeScript"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "无基准性能数据（构建速度、页面加载时间）",
+        "未说明本地开发环境搭建（Bun install / 开发服务器命令）",
+        "插件系统 SDK 详细文档链接需进一步确认",
+        "与 Webflow/Framer/WordPress 的具体功能对比基于 README 自述，未独立验证"
+      ],
+      "language": "TypeScript",
+      "stars_total": 5083,
+      "stars_gained": 426,
+      "streak_days": 1,
+      "is_new": true,
+      "refreshed": true,
+      "revisit_reason": "new",
+      "report_path": "../projects/CoreBunch__Instatic/analysis.md"
+    },
+    {
+      "full_name": "xuzhougeng/wisp-science",
+      "url": "https://github.com/xuzhougeng/wisp-science",
+      "one_liner": "开源本地优先的桌面AI科研工作台，集成Python/R、80+生物数据库和远程计算。",
+      "why_worth_it": "将AI助手、科学计算与生物信息学工具无缝聚合于本地桌面，保障数据隐私，适合生信/计算生物学研究者快速构建可复现工作流。",
+      "tags": [
+        "本地优先",
+        "MCP协议",
+        "科研AI",
+        "Rust+Tauri"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "未提供基准测试或与其他AI编程助手的性能对比数据",
+        "Linux仅支持源码构建，预编译包未提及",
+        "GPU运行时的具体实现细节和调度策略未在README中详细说明",
+        "版本0.24.0仍为MVP，部分路线图功能延后，稳定性和完整度待观察"
+      ],
+      "language": "HTML",
+      "stars_total": 437,
+      "stars_gained": 0,
+      "streak_days": 1,
+      "is_new": true,
+      "refreshed": true,
+      "revisit_reason": "new",
+      "report_path": "../projects/xuzhougeng__wisp-science/analysis.md"
+    },
+    {
+      "full_name": "TencentCloud/Octop",
+      "url": "https://github.com/TencentCloud/Octop",
+      "one_liner": "自托管全家桶AI助手，集成浏览器/终端/远程桌面，多用户多Agent。",
+      "why_worth_it": "隐私自托管，家庭/小团队共用专家库，内置浏览器和桌面操控，比纯聊天助手更自动化。",
+      "tags": [
+        "自托管",
+        "多Agent",
+        "浏览器自动化",
+        "远程桌面"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "未提供性能基准或大规模并发测试数据",
+        "Ollama 等本地模型的具体配置步骤未在 README 中展开",
+        "多用户并发下的资源消耗与隔离细节未说明"
+      ],
+      "language": "Python",
+      "stars_total": 301,
+      "stars_gained": 0,
+      "streak_days": 1,
+      "is_new": true,
+      "refreshed": true,
+      "revisit_reason": "new",
+      "report_path": "../projects/TencentCloud__Octop/analysis.md"
+    },
+    {
+      "full_name": "stablyai/orca",
+      "url": "https://github.com/stablyai/orca",
+      "one_liner": "在独立工作树中并行运行多个 CLI AI 编码代理的桌面/移动 ADE。",
+      "why_worth_it": "让开发者同时驱动 Claude Code、Codex 等代理，对比结果并合并最优方案，适合频繁用 AI 编码的多任务并行场景。",
+      "tags": [
+        "多代理编排",
+        "AI开发环境",
+        "TypeScript",
+        "并行代理"
+      ],
+      "confidence": "medium",
+      "info_gaps": [
+        "桌面端具体框架（推测为 Electron）未在 README 中确认",
+        "没有提供性能基准数据或与单代理使用的效率对比",
+        "安装前提和具体配置步骤 README 未详细说明，依赖官方文档页面",
+        "未说明 VPS 部署的详细环境要求"
+      ],
+      "language": "TypeScript",
+      "stars_total": 29033,
+      "stars_gained": 7327,
+      "streak_days": 27,
+      "is_new": false,
+      "refreshed": true,
+      "revisit_reason": "release_update",
+      "report_path": "../projects/stablyai__orca/analysis.md"
+    },
+    {
+      "full_name": "earendil-works/pi",
+      "url": "https://github.com/earendil-works/pi",
+      "one_liner": "统一LLM API + 可扩展编码代理CLI的工具箱",
+      "why_worth_it": "提供多提供商统一API和即用编码代理，Agent核心可独立集成，适合快速构建AI工具。",
+      "tags": [
+        "Agent框架",
+        "编码助手",
+        "LLM API",
+        "TypeScript"
+      ],
+      "confidence": "medium",
+      "info_gaps": [
+        "未提供独立用户安装指南（如npm全局安装）",
+        "无公开基准测试数据",
+        "代理自我扩展机制未在README展开",
+        "TUI具体交互方式未说明"
+      ],
+      "language": "TypeScript",
+      "stars_total": 77547,
+      "stars_gained": 5167,
+      "streak_days": 7,
+      "is_new": false,
+      "refreshed": true,
+      "revisit_reason": "release_update",
+      "report_path": "../projects/earendil-works__pi/analysis.md"
+    },
+    {
+      "full_name": "1jehuang/jcode",
+      "url": "https://github.com/1jehuang/jcode",
+      "one_liner": "毫秒启动、超低内存的极致性能多会话编码 Agent 框架",
+      "why_worth_it": "专为并发多会话工作流打造，内存仅竞品零头，启速快百倍，适合追求效率的硬核开发者",
+      "tags": [
+        "Agent框架",
+        "Rust",
+        "内存优化",
+        "CLI"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "未提供代码生成准确率或标准基准测试（如 HumanEval 分数）",
+        "未详细说明 MCP 或插件的扩展开发方式",
+        "多会话背后的调度和数据隔离机制细节未披露",
+        "内存对比测试的环境上下文（模型、对话长度）未完全一致"
+      ],
+      "language": "Rust",
+      "stars_total": 11457,
+      "stars_gained": 2914,
+      "streak_days": 9,
+      "is_new": false,
+      "refreshed": true,
+      "revisit_reason": "release_update",
+      "report_path": "../projects/1jehuang__jcode/analysis.md"
+    },
+    {
+      "full_name": "agegr/pi-web",
+      "url": "https://github.com/agegr/pi-web",
+      "one_liner": "Pi 编码代理的本地 Web 界面，将终端会话搬进浏览器。",
+      "why_worth_it": "为 pi 用户提供可视化会话管理、文件预览和模型配置，避免在终端翻历史。",
+      "tags": [
+        "Agent UI",
+        "本地优先",
+        "自托管",
+        "TypeScript"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "未提供与同类工具（如 Open WebUI）的横向对比数据",
+        "未说明大规模会话下的内存占用或性能基准",
+        "缺少 API 文档或扩展/插件机制说明",
+        "多用户共享时的安全隔离未提及"
+      ],
+      "language": "TypeScript",
+      "stars_total": 2743,
+      "stars_gained": 1450,
+      "streak_days": 5,
+      "is_new": false,
+      "refreshed": true,
+      "revisit_reason": "release_update",
+      "report_path": "../projects/agegr__pi-web/analysis.md"
+    },
+    {
+      "full_name": "citrolabs/ego-lite",
+      "url": "https://github.com/citrolabs/ego-lite",
+      "one_liner": "AI代理专用浏览器，并行空间执行网页自动化，零配置共享登录态。",
+      "why_worth_it": "解决代理与用户争用浏览器、登录不共享的痛点，无需额外框架，一条命令即用，比同类快2.5倍。",
+      "tags": [
+        "AI浏览器",
+        "并行空间",
+        "技能集成",
+        "本地优先"
+      ],
+      "confidence": "medium",
+      "info_gaps": [
+        "未公开浏览器内核（是否基于 Chromium 等）",
+        "benchmark 具体数值缺失，仅图表",
+        "Windows/Linux 支持时间表不明确",
+        "技能积累功能尚未发布（README 称 coming soon）"
+      ],
+      "language": "JavaScript",
+      "stars_total": 3593,
+      "stars_gained": 986,
+      "streak_days": 3,
+      "is_new": false,
+      "refreshed": true,
+      "revisit_reason": "star_jump",
+      "report_path": "../projects/citrolabs__ego-lite/analysis.md"
+    },
+    {
+      "full_name": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "one_liner": "为AI编码代理提供TDD+子代理驱动的结构化开发方法论与技能框架",
+      "why_worth_it": "让编码代理从无章法的跳跃写代码，变为遵循设计-计划-审查的全自动流程，适合希望代理长时间自主编程的极客团队。",
+      "tags": [
+        "子代理驱动",
+        "TDD",
+        "编码代理方法",
+        "跨平台适配"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "未提供与其他工作流框架（Aider、Sweep）的效果对比基准",
+        "Windows 支持细节未在 README 中展开（仅有 docs/windows 目录）",
+        "未给出插件在各大代理平台上的兼容性测试覆盖率数据",
+        "未说明对大型仓库（monorepo）的性能影响"
+      ],
+      "language": "Shell",
+      "stars_total": 261106,
+      "stars_gained": 479,
+      "streak_days": 9,
+      "is_new": false,
+      "refreshed": true,
+      "revisit_reason": "release_update",
+      "report_path": "../projects/obra__superpowers/analysis.md"
+    },
+    {
+      "full_name": "alibaba/open-code-review",
+      "url": "https://github.com/alibaba/open-code-review",
+      "one_liner": "阿里巴巴开源AI代码审查，混合确定性管道+LLM Agent，高精度低误报，Token消耗仅为通用Agent的1/9",
+      "why_worth_it": "解决通用Agent代码审查覆盖不全、位置漂移、质量不稳定问题，高精度低Token，自带微调规则集，适合CI集成追求精准反馈的团队",
+      "tags": [
+        "代码审查",
+        "Agent",
+        "Go",
+        "CI/CD"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "未说明确定性规则集具体支持的语言/框架列表（仅提及NPE、线程安全等示例）",
+        "未与其他AI审查工具（如CodeRabbit、CodeReviewBot等）进行量化对比",
+        "安装方式npm分发底层Go二进制流程细节未描述（用户不需要Go环境但未说明如何实现）"
+      ],
+      "language": "Go",
+      "stars_total": 12972,
+      "stars_gained": 431,
+      "streak_days": 2,
+      "is_new": false,
+      "refreshed": true,
+      "revisit_reason": "release_update",
+      "report_path": "../projects/alibaba__open-code-review/analysis.md"
+    },
+    {
+      "full_name": "palmier-io/palmier-pro",
+      "url": "https://github.com/palmier-io/palmier-pro",
+      "one_liner": "开源macOS视频编辑器，原生集成MCP，使AI助手能直接操控时间线协同剪辑。",
+      "why_worth_it": "为macOS打造的原生Swift视频编辑器，免费且开源，通过MCP让Claude等AI代理深度参与编辑，比封闭商业软件更可编程。",
+      "tags": [
+        "开源视频编辑器",
+        "MCP集成",
+        "AI协同",
+        "Swift原生"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "生成式 AI 的订阅费用未说明",
+        "内置生成模型的使用方式与输出格式未详细说明",
+        "视频导出支持的格式与编码未提及",
+        "是否支持插件或扩展系统未说明",
+        "无与其他软件的性能对比数据"
+      ],
+      "language": "Swift",
+      "stars_total": 12222,
+      "stars_gained": 412,
+      "streak_days": 12,
+      "is_new": false,
+      "refreshed": true,
+      "revisit_reason": "release_update",
+      "report_path": "../projects/palmier-io__palmier-pro/analysis.md"
+    },
+    {
+      "full_name": "penecho/penecho",
+      "url": "https://github.com/penecho/penecho",
+      "one_liner": "AI手写画布：无缝融合草图、公式与空间推理，超越纯文本对话",
+      "why_worth_it": "为视觉思考者提供无需切换思维模式的AI协作画布，支持自然手写与空间理解，比纯聊天工具更贴合创意与教学场景",
+      "tags": [
+        "AI画布",
+        "视觉思维",
+        "Node.js",
+        "AGPL-3.0"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "未提供各模型在画布任务上的量化基准（如笔迹识别准确率、推理延迟）",
+        "插件开发文档还未详细展开，仅有架构文件",
+        "桌面应用技术栈（是否基于 Electron）未在 README 明确说明",
+        "多人实时协作的具体实现机制（如 WebSocket 同步）未提及",
+        "非 Codex/Claude 的第三方模型兼容性细节不完整"
+      ],
+      "language": "JavaScript",
+      "stars_total": 1609,
+      "stars_gained": 0,
+      "streak_days": 4,
+      "is_new": false,
+      "refreshed": true,
+      "revisit_reason": "release_update",
+      "report_path": "../projects/penecho__penecho/analysis.md"
+    },
+    {
+      "full_name": "aipoch/open-science",
+      "url": "https://github.com/aipoch/open-science",
+      "one_liner": "开源、模型无关的本地 AI 科学工作台，集规划执行、持久化项目与可审查审计于一体。",
+      "why_worth_it": "将零散的聊天、代码、数据检索与报告整合在可审查的本地桌面环境，适合需要可复现、无供应商锁定的科研个人与团队。",
+      "tags": [
+        "AI for Science",
+        "本地优先",
+        "自托管桌面应用",
+        "模型无关"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "未列出所有内置模型和科学连接器的具体名称与范围（仅示意性描述，实装详见应用内）",
+        "Python Notebook 内核依赖未详细说明环境变量或包管理方式",
+        "无性能指标或 benchmark 数据",
+        "Linux AppImage 具体依赖库未列出",
+        "Claude 订阅模式下的凭据存储细节仅简要提及，未深入安全性分析"
+      ],
+      "language": "TypeScript",
+      "stars_total": 672,
+      "stars_gained": 0,
+      "streak_days": 9,
+      "is_new": false,
+      "refreshed": true,
+      "revisit_reason": "release_update",
+      "report_path": "../projects/aipoch__open-science/analysis.md"
+    },
+    {
+      "full_name": "bkingfilm/lapian-notes",
+      "url": "https://github.com/bkingfilm/lapian-notes",
+      "one_liner": "本地AI拆解电影叙事，自动生成多泳道时间轴与情绪曲线。",
+      "why_worth_it": "为编剧/导演提供纯本地、不绑AI服务的拉片工作台，一键拆解剧情结构与节奏。",
+      "tags": [
+        "本地优先",
+        "AI辅助叙事",
+        "电影分析",
+        "TypeScript/React"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "无性能基准数据（抽帧速度、大文件处理内存消耗）",
+        "未说明4K/蓝光原盘等超大文件的兼容性及转码耗时",
+        "未提供AI分析结果质量的量化评估或对比数据",
+        "未涉及英文/中文字幕以外的其他语言支持细节"
+      ],
+      "language": "TypeScript",
+      "stars_total": 418,
+      "stars_gained": 0,
+      "streak_days": 13,
+      "is_new": false,
+      "refreshed": true,
+      "revisit_reason": "release_update",
+      "report_path": "../projects/bkingfilm__lapian-notes/analysis.md"
+    }
+  ],
+  "streaks": [
+    {
+      "full_name": "stablyai/orca",
+      "url": "https://github.com/stablyai/orca",
+      "one_liner": "在独立工作树中并行运行多个 CLI AI 编码代理的桌面/移动 ADE。",
+      "why_worth_it": "让开发者同时驱动 Claude Code、Codex 等代理，对比结果并合并最优方案，适合频繁用 AI 编码的多任务并行场景。",
+      "tags": [
+        "多代理编排",
+        "AI开发环境",
+        "TypeScript",
+        "并行代理"
+      ],
+      "confidence": "medium",
+      "info_gaps": [
+        "桌面端具体框架（推测为 Electron）未在 README 中确认",
+        "没有提供性能基准数据或与单代理使用的效率对比",
+        "安装前提和具体配置步骤 README 未详细说明，依赖官方文档页面",
+        "未说明 VPS 部署的详细环境要求"
+      ],
+      "language": "TypeScript",
+      "stars_total": 29033,
+      "stars_gained": 7327,
+      "streak_days": 27,
+      "is_new": false,
+      "refreshed": true,
+      "revisit_reason": "release_update",
+      "report_path": "../projects/stablyai__orca/analysis.md"
+    },
+    {
+      "full_name": "elder-plinius/T3MP3ST",
+      "url": "https://github.com/elder-plinius/T3MP3ST",
+      "one_liner": "将你本机的 AI 编码代理直接变成零日猎手的多智能体红队框架",
+      "why_worth_it": "无需新 API 密钥或云服务，即可复用 Claude Code 等已有代理自动完成从侦察到利用的全杀伤链，基准成绩可复现",
+      "tags": [
+        "多智能体",
+        "红队工具",
+        "本地优先",
+        "TypeScript"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "未说明硬件最低要求或推荐配置",
+        "未声明操作系统兼容性（是否支持 Windows）",
+        "基准成绩依赖的模型 'gpt-5.5' 非公开已知模型，可能为内部代号或研发版本，其具体性能与可复现性存疑",
+        "协调披露管道提及的厂商通报草稿未公开，无法核实实际漏洞价值",
+        "Swarm 多智能体协同利用的可靠性未经过基准测试，目前仅单代理成绩有效"
+      ],
+      "language": "TypeScript",
+      "stars_total": 5194,
+      "stars_gained": 0,
+      "streak_days": 22,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/elder-plinius__T3MP3ST/analysis.md"
+    },
+    {
+      "full_name": "uzairansaruzi/hermex",
+      "url": "https://github.com/uzairansaruzi/hermex",
+      "one_liner": "自托管 AI 代理的 SwiftUI 原生客户端，无中间人隐私直连。",
+      "why_worth_it": "为自托管 hermes-webui 的用户提供流畅、私密的 iPhone 控制面板，无追踪、非网页封装，体验远胜通用聊天客户端。",
+      "tags": [
+        "自托管",
+        "SwiftUI",
+        "LLM Agent",
+        "隐私优先"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "未提供性能基准数据",
+        "未说明 hermes-webui 支持的具体模型列表（由用户服务端决定）",
+        "未涉及 Siri/快捷指令集成细节"
+      ],
+      "language": "Swift",
+      "stars_total": 920,
+      "stars_gained": 0,
+      "streak_days": 22,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/uzairansaruzi__hermex/analysis.md"
+    },
+    {
+      "full_name": "synthetic-sciences/openscience",
+      "url": "https://github.com/synthetic-sciences/openscience",
+      "one_liner": "给定目标，自动读文献、写代码、跑实验并生成报告的开源科研AI工作台。",
+      "why_worth_it": "开源、模型无关，可本地运行，把科研全流程交给AI，比闭源工具更透明可控。",
+      "tags": [
+        "AI Agent",
+        "科研自动化",
+        "自托管",
+        "TypeScript"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "无性能基准（如文献检索准确性、实验成功率）或真实案例",
+        "本地模型（如通过 Ollama）的集成方式未详细说明",
+        "Demo 免费模型的速度、能力边界未描述",
+        "Agent 安全风险除容器隔离外无具体防护措施说明",
+        "与其他科研 AI 助手（如 PaperQA2）的量化对比缺失"
+      ],
+      "language": "TypeScript",
+      "stars_total": 2778,
+      "stars_gained": 0,
+      "streak_days": 19,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/synthetic-sciences__openscience/analysis.md"
+    },
+    {
+      "full_name": "SuperJJ007/CSSwitch",
+      "url": "https://github.com/SuperJJ007/CSSwitch",
+      "one_liner": "一键为 Claude Science 接入 DeepSeek/Qwen/Kimi 等第三方 API，本地代理零侵入。",
+      "why_worth_it": "无需 Claude 订阅即可用 Science 完成科研工作，支持10+ providers，隔离环境保护真实账号。",
+      "tags": [
+        "模型代理",
+        "macOS",
+        "Tauri",
+        "Anthropic兼容"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "未提供代理吞吐量、延迟等基准测试数据",
+        "Python代理的具体库依赖（如 httpx、fastapi）未在README中说明",
+        "应用UI尚未完成多语言，未给出具体计划",
+        "未说明与Claude官方订阅同时使用时的详细行为（如配置冲突检测）",
+        "未提供非macOS平台（Linux/Windows）的支持时间表"
+      ],
+      "language": "Rust",
+      "stars_total": 402,
+      "stars_gained": 0,
+      "streak_days": 19,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/SuperJJ007__CSSwitch/analysis.md"
+    },
+    {
+      "full_name": "koala73/worldmonitor",
+      "url": "https://github.com/koala73/worldmonitor",
+      "one_liner": "57000星！AI融合500+信源的全球态势感知OSINT仪表板",
+      "why_worth_it": "自托管开源Palantir替代，本地AI免密钥，双地图+多信号关联，适合地缘/金融极客",
+      "tags": [
+        "OSINT",
+        "态势感知",
+        "本地AI",
+        "TypeScript"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "生产环境详细部署依赖（Redis等）仅在外部文档说明，README未直接列出",
+        "未提供性能基准数据（如大量并发源处理延迟）"
+      ],
+      "language": "TypeScript",
+      "stars_total": 74152,
+      "stars_gained": 12085,
+      "streak_days": 17,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/koala73__worldmonitor/analysis.md"
+    },
+    {
+      "full_name": "jamiepine/voicebox",
+      "url": "https://github.com/jamiepine/voicebox",
+      "one_liner": "本地优先的AI语音工作室，同时替代ElevenLabs和WisprFlow，覆盖TTS/STT/听写/代理语音全链路",
+      "why_worth_it": "一站式解决隐私敏感的本地语音I/O闭环：七引擎多语言TTS与Whisper转录，加上全局热键听写和MCP代理语音输出，比单一云服务更省钱、更可控",
+      "tags": [
+        "TTS/STT 套件",
+        "本地优先",
+        "MCP集成",
+        "TypeScript"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "未提供各模型的VRAM占用、延迟和MOS得分等性能基准数据",
+        "未说明内置LLM的具体模型名称和量化版本",
+        "多GPU/多实例推理支持未提及",
+        "Linux预构建二进制发布时间未定",
+        "跨平台自动粘贴在非macOS上的实现成熟度未详述"
+      ],
+      "language": "TypeScript",
+      "stars_total": 46738,
+      "stars_gained": 4237,
+      "streak_days": 16,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/jamiepine__voicebox/analysis.md"
+    },
+    {
+      "full_name": "simonlin1212/Vibe-Research",
+      "url": "https://github.com/simonlin1212/Vibe-Research",
+      "one_liner": "Vibe-Research: Your Personal Trading Research Agent · A股/美股/港股 的个人投研 Agent：每日复盘、资讯雷达、个股数据、板块中心、我的持仓、研究记录。Vibe-Research 把数据和功能配齐，由你自己的 AI 驱动投资研究。",
+      "why_worth_it": "",
+      "tags": [],
+      "confidence": "medium",
+      "info_gaps": [],
+      "language": "TypeScript",
+      "stars_total": 1001,
+      "stars_gained": 0,
+      "streak_days": 16,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/simonlin1212__Vibe-Research/analysis.md"
+    },
+    {
+      "full_name": "ai4s-research/open-science",
+      "url": "https://github.com/ai4s-research/open-science",
+      "one_liner": "Open Science Desktop — local-first, model-agnostic AI research workbench for macOS, Windows & Linux. Open-source Claude Science desktop alternative built on Tauri + MCP + agent skills.",
+      "why_worth_it": "",
+      "tags": [],
+      "confidence": "medium",
+      "info_gaps": [],
+      "language": "TypeScript",
+      "stars_total": 975,
+      "stars_gained": 0,
+      "streak_days": 15,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/ai4s-research__open-science/analysis.md"
+    },
+    {
+      "full_name": "SmileLikeYe/agent-chief",
+      "url": "https://github.com/SmileLikeYe/agent-chief",
+      "one_liner": "Attention is your scarcest resource. Chief is the local-first layer that guards it — turning every agent, alert, and feed into one honest call: interrupt, or not.",
+      "why_worth_it": "",
+      "tags": [],
+      "confidence": "medium",
+      "info_gaps": [],
+      "language": "Python",
+      "stars_total": 1014,
+      "stars_gained": 0,
+      "streak_days": 13,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/SmileLikeYe__agent-chief/analysis.md"
+    },
+    {
+      "full_name": "ronak-create/FableCut",
+      "url": "https://github.com/ronak-create/FableCut",
+      "one_liner": "Zero-dependency browser video editor that AI agents can drive — JSON timeline, MCP + REST, live-reloading UI",
+      "why_worth_it": "",
+      "tags": [],
+      "confidence": "medium",
+      "info_gaps": [],
+      "language": "JavaScript",
+      "stars_total": 523,
+      "stars_gained": 0,
+      "streak_days": 13,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/ronak-create__FableCut/analysis.md"
+    },
+    {
+      "full_name": "bkingfilm/lapian-notes",
+      "url": "https://github.com/bkingfilm/lapian-notes",
+      "one_liner": "本地AI拆解电影叙事，自动生成多泳道时间轴与情绪曲线。",
+      "why_worth_it": "为编剧/导演提供纯本地、不绑AI服务的拉片工作台，一键拆解剧情结构与节奏。",
+      "tags": [
+        "本地优先",
+        "AI辅助叙事",
+        "电影分析",
+        "TypeScript/React"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "无性能基准数据（抽帧速度、大文件处理内存消耗）",
+        "未说明4K/蓝光原盘等超大文件的兼容性及转码耗时",
+        "未提供AI分析结果质量的量化评估或对比数据",
+        "未涉及英文/中文字幕以外的其他语言支持细节"
+      ],
+      "language": "TypeScript",
+      "stars_total": 418,
+      "stars_gained": 0,
+      "streak_days": 13,
+      "is_new": false,
+      "refreshed": true,
+      "revisit_reason": "release_update",
+      "report_path": "../projects/bkingfilm__lapian-notes/analysis.md"
+    },
+    {
+      "full_name": "palmier-io/palmier-pro",
+      "url": "https://github.com/palmier-io/palmier-pro",
+      "one_liner": "开源macOS视频编辑器，原生集成MCP，使AI助手能直接操控时间线协同剪辑。",
+      "why_worth_it": "为macOS打造的原生Swift视频编辑器，免费且开源，通过MCP让Claude等AI代理深度参与编辑，比封闭商业软件更可编程。",
+      "tags": [
+        "开源视频编辑器",
+        "MCP集成",
+        "AI协同",
+        "Swift原生"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "生成式 AI 的订阅费用未说明",
+        "内置生成模型的使用方式与输出格式未详细说明",
+        "视频导出支持的格式与编码未提及",
+        "是否支持插件或扩展系统未说明",
+        "无与其他软件的性能对比数据"
+      ],
+      "language": "Swift",
+      "stars_total": 12222,
+      "stars_gained": 412,
+      "streak_days": 12,
+      "is_new": false,
+      "refreshed": true,
+      "revisit_reason": "release_update",
+      "report_path": "../projects/palmier-io__palmier-pro/analysis.md"
+    },
+    {
+      "full_name": "William-Lu-stack/Flawless",
+      "url": "https://github.com/William-Lu-stack/Flawless",
+      "one_liner": "AI SRE AgenticOps for Kubernetes and cloud infrastructure.",
+      "why_worth_it": "",
+      "tags": [],
+      "confidence": "medium",
+      "info_gaps": [],
+      "language": "Python",
+      "stars_total": 850,
+      "stars_gained": 0,
+      "streak_days": 12,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/William-Lu-stack__Flawless/analysis.md"
+    },
+    {
+      "full_name": "Orkas-AI/Orkas-VideoStudio",
+      "url": "https://github.com/Orkas-AI/Orkas-VideoStudio",
+      "one_liner": "Turn your coding agent into a video studio: describe a video in plain language, and your agent writes the timeline and produces the file.",
+      "why_worth_it": "",
+      "tags": [],
+      "confidence": "medium",
+      "info_gaps": [],
+      "language": "TypeScript",
+      "stars_total": 530,
+      "stars_gained": 0,
+      "streak_days": 12,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/Orkas-AI__Orkas-VideoStudio/analysis.md"
+    },
+    {
+      "full_name": "deer-flow/llm-space",
+      "url": "https://github.com/deer-flow/llm-space",
+      "one_liner": "A desktop app to prototype agent ideas, inspect every harness step, replay failures, and evaluate performance, all in one place. Local-first.",
+      "why_worth_it": "",
+      "tags": [],
+      "confidence": "medium",
+      "info_gaps": [],
+      "language": "TypeScript",
+      "stars_total": 1246,
+      "stars_gained": 0,
+      "streak_days": 11,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/deer-flow__llm-space/analysis.md"
+    },
+    {
+      "full_name": "EXXETA/exxperts",
+      "url": "https://github.com/EXXETA/exxperts",
+      "one_liner": "Persistent AI rooms with governed, approval-gated memory: local-first, on your machine.",
+      "why_worth_it": "",
+      "tags": [],
+      "confidence": "medium",
+      "info_gaps": [],
+      "language": "TypeScript",
+      "stars_total": 228,
+      "stars_gained": 0,
+      "streak_days": 11,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/EXXETA__exxperts/analysis.md"
+    },
+    {
+      "full_name": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "one_liner": "为AI编码代理提供TDD+子代理驱动的结构化开发方法论与技能框架",
+      "why_worth_it": "让编码代理从无章法的跳跃写代码，变为遵循设计-计划-审查的全自动流程，适合希望代理长时间自主编程的极客团队。",
+      "tags": [
+        "子代理驱动",
+        "TDD",
+        "编码代理方法",
+        "跨平台适配"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "未提供与其他工作流框架（Aider、Sweep）的效果对比基准",
+        "Windows 支持细节未在 README 中展开（仅有 docs/windows 目录）",
+        "未给出插件在各大代理平台上的兼容性测试覆盖率数据",
+        "未说明对大型仓库（monorepo）的性能影响"
+      ],
+      "language": "Shell",
+      "stars_total": 261106,
+      "stars_gained": 479,
+      "streak_days": 9,
+      "is_new": false,
+      "refreshed": true,
+      "revisit_reason": "release_update",
+      "report_path": "../projects/obra__superpowers/analysis.md"
+    },
+    {
+      "full_name": "1jehuang/jcode",
+      "url": "https://github.com/1jehuang/jcode",
+      "one_liner": "毫秒启动、超低内存的极致性能多会话编码 Agent 框架",
+      "why_worth_it": "专为并发多会话工作流打造，内存仅竞品零头，启速快百倍，适合追求效率的硬核开发者",
+      "tags": [
+        "Agent框架",
+        "Rust",
+        "内存优化",
+        "CLI"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "未提供代码生成准确率或标准基准测试（如 HumanEval 分数）",
+        "未详细说明 MCP 或插件的扩展开发方式",
+        "多会话背后的调度和数据隔离机制细节未披露",
+        "内存对比测试的环境上下文（模型、对话长度）未完全一致"
+      ],
+      "language": "Rust",
+      "stars_total": 11457,
+      "stars_gained": 2914,
+      "streak_days": 9,
+      "is_new": false,
+      "refreshed": true,
+      "revisit_reason": "release_update",
+      "report_path": "../projects/1jehuang__jcode/analysis.md"
+    },
+    {
+      "full_name": "HUANGCHIHHUNGLeo/claude-real-video",
+      "url": "https://github.com/HUANGCHIHHUNGLeo/claude-real-video",
+      "one_liner": "Let Claude (or any LLM) actually watch a video — scene-aware, deduplicated frames + transcript, from a URL or local file. Runs locally, MIT.",
+      "why_worth_it": "",
+      "tags": [],
+      "confidence": "medium",
+      "info_gaps": [],
+      "language": "Python",
+      "stars_total": 1856,
+      "stars_gained": 0,
+      "streak_days": 9,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/HUANGCHIHHUNGLeo__claude-real-video/analysis.md"
+    },
+    {
+      "full_name": "aipoch/open-science",
+      "url": "https://github.com/aipoch/open-science",
+      "one_liner": "开源、模型无关的本地 AI 科学工作台，集规划执行、持久化项目与可审查审计于一体。",
+      "why_worth_it": "将零散的聊天、代码、数据检索与报告整合在可审查的本地桌面环境，适合需要可复现、无供应商锁定的科研个人与团队。",
+      "tags": [
+        "AI for Science",
+        "本地优先",
+        "自托管桌面应用",
+        "模型无关"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "未列出所有内置模型和科学连接器的具体名称与范围（仅示意性描述，实装详见应用内）",
+        "Python Notebook 内核依赖未详细说明环境变量或包管理方式",
+        "无性能指标或 benchmark 数据",
+        "Linux AppImage 具体依赖库未列出",
+        "Claude 订阅模式下的凭据存储细节仅简要提及，未深入安全性分析"
+      ],
+      "language": "TypeScript",
+      "stars_total": 672,
+      "stars_gained": 0,
+      "streak_days": 9,
+      "is_new": false,
+      "refreshed": true,
+      "revisit_reason": "release_update",
+      "report_path": "../projects/aipoch__open-science/analysis.md"
+    },
+    {
+      "full_name": "Brain0-ai/brain0",
+      "url": "https://github.com/Brain0-ai/brain0",
+      "one_liner": "The black box for AI-written code. Passive decision graph linking every commit to the agent prompts behind it: drift detection, DLP audit of what agents read, evidence-driven risk, MCP memory for coding agents, signed provenance attestations. One command, offline by default.",
+      "why_worth_it": "",
+      "tags": [],
+      "confidence": "medium",
+      "info_gaps": [],
+      "language": "Rust",
+      "stars_total": 398,
+      "stars_gained": 0,
+      "streak_days": 9,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/Brain0-ai__brain0/analysis.md"
+    },
+    {
+      "full_name": "barretlee/agent-pulse",
+      "url": "https://github.com/barretlee/agent-pulse",
+      "one_liner": "Evidence-backed AI industry intelligence — trends, source updates, daily data refreshes, and weekly decision briefs.",
+      "why_worth_it": "",
+      "tags": [],
+      "confidence": "medium",
+      "info_gaps": [],
+      "language": "TypeScript",
+      "stars_total": 223,
+      "stars_gained": 0,
+      "streak_days": 9,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/barretlee__agent-pulse/analysis.md"
+    },
+    {
+      "full_name": "earendil-works/pi",
+      "url": "https://github.com/earendil-works/pi",
+      "one_liner": "统一LLM API + 可扩展编码代理CLI的工具箱",
+      "why_worth_it": "提供多提供商统一API和即用编码代理，Agent核心可独立集成，适合快速构建AI工具。",
+      "tags": [
+        "Agent框架",
+        "编码助手",
+        "LLM API",
+        "TypeScript"
+      ],
+      "confidence": "medium",
+      "info_gaps": [
+        "未提供独立用户安装指南（如npm全局安装）",
+        "无公开基准测试数据",
+        "代理自我扩展机制未在README展开",
+        "TUI具体交互方式未说明"
+      ],
+      "language": "TypeScript",
+      "stars_total": 77547,
+      "stars_gained": 5167,
+      "streak_days": 7,
+      "is_new": false,
+      "refreshed": true,
+      "revisit_reason": "release_update",
+      "report_path": "../projects/earendil-works__pi/analysis.md"
+    },
+    {
+      "full_name": "MoonshotAI/kimi-cli",
+      "url": "https://github.com/MoonshotAI/kimi-cli",
+      "one_liner": "Kimi Code CLI is your next CLI agent.",
+      "why_worth_it": "",
+      "tags": [],
+      "confidence": "medium",
+      "info_gaps": [],
+      "language": "Python",
+      "stars_total": 10836,
+      "stars_gained": 1537,
+      "streak_days": 7,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/MoonshotAI__kimi-cli/analysis.md"
+    },
+    {
+      "full_name": "yuwen-cool/yuwen-publish-precheck",
+      "url": "https://github.com/yuwen-cool/yuwen-publish-precheck",
+      "one_liner": "发布前审｜发抖音/小红书/视频号前先让 AI 审一遍：哪句踩线、依据哪条官方规则、给能直接用的改法。38 篇真实样本校准判定尺度，72 条官方原文引文可查证，你踩过的坑沉淀成本地规则库越用越准。不承诺过审，不教绕审。",
+      "why_worth_it": "",
+      "tags": [],
+      "confidence": "medium",
+      "info_gaps": [],
+      "language": "Python",
+      "stars_total": 384,
+      "stars_gained": 0,
+      "streak_days": 6,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/yuwen-cool__yuwen-publish-precheck/analysis.md"
+    },
+    {
+      "full_name": "thesysdev/appless",
+      "url": "https://github.com/thesysdev/appless",
+      "one_liner": "What if your phone had no apps",
+      "why_worth_it": "",
+      "tags": [],
+      "confidence": "medium",
+      "info_gaps": [],
+      "language": "TypeScript",
+      "stars_total": 339,
+      "stars_gained": 0,
+      "streak_days": 6,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/thesysdev__appless/analysis.md"
+    },
+    {
+      "full_name": "agegr/pi-web",
+      "url": "https://github.com/agegr/pi-web",
+      "one_liner": "Pi 编码代理的本地 Web 界面，将终端会话搬进浏览器。",
+      "why_worth_it": "为 pi 用户提供可视化会话管理、文件预览和模型配置，避免在终端翻历史。",
+      "tags": [
+        "Agent UI",
+        "本地优先",
+        "自托管",
+        "TypeScript"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "未提供与同类工具（如 Open WebUI）的横向对比数据",
+        "未说明大规模会话下的内存占用或性能基准",
+        "缺少 API 文档或扩展/插件机制说明",
+        "多用户共享时的安全隔离未提及"
+      ],
+      "language": "TypeScript",
+      "stars_total": 2743,
+      "stars_gained": 1450,
+      "streak_days": 5,
+      "is_new": false,
+      "refreshed": true,
+      "revisit_reason": "release_update",
+      "report_path": "../projects/agegr__pi-web/analysis.md"
+    },
+    {
+      "full_name": "powerycy/goutoujunshi",
+      "url": "https://github.com/powerycy/goutoujunshi",
+      "one_liner": "一个先接住情绪、再分析关系并给出可执行策略的 Codex 恋爱军师，内置心理、法律、社会、人文、哲学、婚姻家庭与性学知识库，支持多元关系。",
+      "why_worth_it": "",
+      "tags": [],
+      "confidence": "medium",
+      "info_gaps": [],
+      "language": "Python",
+      "stars_total": 876,
+      "stars_gained": 0,
+      "streak_days": 5,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/powerycy__goutoujunshi/analysis.md"
+    },
+    {
+      "full_name": "penecho/penecho",
+      "url": "https://github.com/penecho/penecho",
+      "one_liner": "AI手写画布：无缝融合草图、公式与空间推理，超越纯文本对话",
+      "why_worth_it": "为视觉思考者提供无需切换思维模式的AI协作画布，支持自然手写与空间理解，比纯聊天工具更贴合创意与教学场景",
+      "tags": [
+        "AI画布",
+        "视觉思维",
+        "Node.js",
+        "AGPL-3.0"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "未提供各模型在画布任务上的量化基准（如笔迹识别准确率、推理延迟）",
+        "插件开发文档还未详细展开，仅有架构文件",
+        "桌面应用技术栈（是否基于 Electron）未在 README 明确说明",
+        "多人实时协作的具体实现机制（如 WebSocket 同步）未提及",
+        "非 Codex/Claude 的第三方模型兼容性细节不完整"
+      ],
+      "language": "JavaScript",
+      "stars_total": 1609,
+      "stars_gained": 0,
+      "streak_days": 4,
+      "is_new": false,
+      "refreshed": true,
+      "revisit_reason": "release_update",
+      "report_path": "../projects/penecho__penecho/analysis.md"
+    },
+    {
+      "full_name": "MIgHTy-alIeN/MEV-Arbitrage-Bot",
+      "url": "https://github.com/MIgHTy-alIeN/MEV-Arbitrage-Bot",
+      "one_liner": "An arbitrage bot is a smart contract connected to an external automation script that controls its operation.",
+      "why_worth_it": "",
+      "tags": [],
+      "confidence": "medium",
+      "info_gaps": [],
+      "language": "Solidity",
+      "stars_total": 1520,
+      "stars_gained": 0,
+      "streak_days": 4,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/MIgHTy-alIeN__MEV-Arbitrage-Bot/analysis.md"
+    },
+    {
+      "full_name": "Kritt-ai/open-kritt",
+      "url": "https://github.com/Kritt-ai/open-kritt",
+      "one_liner": "Orchestrate AI agents to find real vulnerabilities in code.",
+      "why_worth_it": "",
+      "tags": [],
+      "confidence": "medium",
+      "info_gaps": [],
+      "language": "JavaScript",
+      "stars_total": 391,
+      "stars_gained": 0,
+      "streak_days": 4,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/Kritt-ai__open-kritt/analysis.md"
+    },
+    {
+      "full_name": "affaan-m/ECC",
+      "url": "https://github.com/affaan-m/ECC",
+      "one_liner": "跨 AI 编程助手的统一操作系统：261 个技能、session 适配与多 agent 编排",
+      "why_worth_it": "解决多 harness 碎片化：一套 skills/rules/hooks 通吃 Claude Code、Cursor、Codex 等，并内置可观测控制面板",
+      "tags": [
+        "AI Agent 框架",
+        "跨平台适配",
+        "开发者工具",
+        "MCP 生态"
+      ],
+      "confidence": "high",
+      "info_gaps": [
+        "未提供性能 benchmark 数据（如技能加载耗时、跨 harness 切换延迟）",
+        "未展示 MCP 库存漂移检测的具体实现细节和误报率",
+        "v2.0.0 control-pane 的生产可用性未明确（标注为 early build）",
+        "未说明 261 个技能中多少已通过生产验证、多少为实验性",
+        "未列明支持的所有 MCP 服务器及兼容性矩阵"
+      ],
+      "language": "JavaScript",
+      "stars_total": 233312,
+      "stars_gained": 377,
+      "streak_days": 3,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/affaan-m__ECC/analysis.md"
+    },
+    {
+      "full_name": "citrolabs/ego-lite",
+      "url": "https://github.com/citrolabs/ego-lite",
+      "one_liner": "AI代理专用浏览器，并行空间执行网页自动化，零配置共享登录态。",
+      "why_worth_it": "解决代理与用户争用浏览器、登录不共享的痛点，无需额外框架，一条命令即用，比同类快2.5倍。",
+      "tags": [
+        "AI浏览器",
+        "并行空间",
+        "技能集成",
+        "本地优先"
+      ],
+      "confidence": "medium",
+      "info_gaps": [
+        "未公开浏览器内核（是否基于 Chromium 等）",
+        "benchmark 具体数值缺失，仅图表",
+        "Windows/Linux 支持时间表不明确",
+        "技能积累功能尚未发布（README 称 coming soon）"
+      ],
+      "language": "JavaScript",
+      "stars_total": 3593,
+      "stars_gained": 986,
+      "streak_days": 3,
+      "is_new": false,
+      "refreshed": true,
+      "revisit_reason": "star_jump",
+      "report_path": "../projects/citrolabs__ego-lite/analysis.md"
+    },
+    {
+      "full_name": "0xsline/OpenChatCut",
+      "url": "https://github.com/0xsline/OpenChatCut",
+      "one_liner": "Local-first conversational AI video editor with a professional multi-track timeline, Agent Skills, MCP integration, and Remotion-powered rendering.",
+      "why_worth_it": "",
+      "tags": [],
+      "confidence": "medium",
+      "info_gaps": [],
+      "language": "TypeScript",
+      "stars_total": 494,
+      "stars_gained": 0,
+      "streak_days": 3,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/0xsline__OpenChatCut/analysis.md"
+    },
+    {
+      "full_name": "Alisa0808/vox-director",
+      "url": "https://github.com/Alisa0808/vox-director",
+      "one_liner": "Turn one topic into a finished Vox-style paper-collage explainer/ad video — automated end to end on Atlas Cloud + ffmpeg. An agent skill.",
+      "why_worth_it": "",
+      "tags": [],
+      "confidence": "medium",
+      "info_gaps": [],
+      "language": "Python",
+      "stars_total": 430,
+      "stars_gained": 0,
+      "streak_days": 3,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/Alisa0808__vox-director/analysis.md"
+    },
+    {
+      "full_name": "KlaatAI/klaatcode",
+      "url": "https://github.com/KlaatAI/klaatcode",
+      "one_liner": "Open-source AI coding agent for the terminal. Claude Code-grade accuracy with smart model routing — uses the right AI model for each task, cutting costs 10x. Supports Claude, GPT, Gemini, DeepSeek & more.",
+      "why_worth_it": "",
+      "tags": [],
+      "confidence": "medium",
+      "info_gaps": [],
+      "language": "TypeScript",
+      "stars_total": 290,
+      "stars_gained": 0,
+      "streak_days": 3,
+      "is_new": false,
+      "refreshed": false,
+      "revisit_reason": "lightweight",
+      "report_path": "../projects/KlaatAI__klaatcode/analysis.md"
+    }
+  ],
+  "news": [
+    {
+      "title": "How the product designer who built Claude Design uses it to explore ideas before building them",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPWFNYSDdKNnpZSWtXZ2hxbFFCY3BKOW1NemFhVjBaOW1pWWJqcHAyLUdXNzk2cDFiR2cwa004cTZCTWJaTGRYelFveVZMSE1rS1VSMnctYjY0eVpXdnZFOUE4MzJoZ09MLTJ5YURhM1MwTy1WUUgxZnZKVHJuLWNkb0JLZkJDbjQ0Mzd0djRTMXEwSjBsSEdBYS1nSE00MFBYajJfWFhzcFJkbG00dDFOVzQtaEFtTnducmc?oc=5",
+      "source": "Claude",
+      "source_type": "official",
+      "published": "2026-07-24",
+      "summary_zh": "Claude Design 设计师分享如何用该工具在构建前探索创意。",
+      "category": "产品"
+    },
+    {
+      "title": "Prompting Claude Opus 5 - Claude Platform Docs",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNMTBmVGh2aWE0dm9PLWJYRHRNd2wza2ZDT3pRSUFFQTNyQlVhbnZkd3p3bWQxVWU0QlItYnlZQ0xmaTNyTnVodW9FOU1ObVZoaXdGdlZRd0hoS2EtbllXNVZaeWFqbXFXLVF3aXJNTE12WU9VYnd3MkZpR3BWbmQ1V3dnNElidlYwVFBfRENXQU0zdlZsbEY3akFnRXo?oc=5",
+      "source": "Claude",
+      "source_type": "official",
+      "published": "2026-07-24",
+      "summary_zh": "Anthropic 发布 Claude Opus 5 的提示工程官方文档。",
+      "category": "工程"
+    },
+    {
+      "title": "Project Pilot: Can AI models fly drones?",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5tMGRJdGNvVFVLMllZZUF4NFluMlNrekRxVnA0Z0F5UmJCVU9oZ3g1YnAwdWZWLUVyWDEtWUNfa255WkY0WGVkbjk5ay1HTlVSanpLd2hDUEdvZERZ?oc=5",
+      "source": "Anthropic",
+      "source_type": "official",
+      "published": "2026-07-24",
+      "summary_zh": "Anthropic 启动 Project Pilot 测试 AI 模型操控无人机。",
+      "category": "研究"
+    },
+    {
+      "title": "Open-weight AI is having its Kubernetes moment",
+      "url": "https://tobi.knaup.me/2026-07-25-open-weight-ai-is-having-its-kubernetes-moment/",
+      "source": "Hacker News",
+      "source_type": "community",
+      "published": "2026-07-25",
+      "summary_zh": "Open-weight AI 迎来类似 Kubernetes 的发展拐点。",
+      "category": "观点"
+    },
+    {
+      "title": "The new rules of context engineering for Claude 5 generation models",
+      "url": "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models",
+      "source": "Hacker News",
+      "source_type": "community",
+      "published": "2026-07-25",
+      "summary_zh": "针对 Claude 5 系列模型的上下文工程新规则出现。",
+      "category": "观点"
+    },
+    {
+      "title": "Karparthy removed Anthropic from his bio",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v6pkji/karparthy_removed_anthropic_from_his_bio/",
+      "source": "r/LocalLLaMA",
+      "source_type": "community",
+      "published": "2026-07-26",
+      "summary_zh": "Andrej Karpathy 疑似从 X 简介中移除 Anthropic 信息。",
+      "category": "其他"
+    },
+    {
+      "title": "Llama.cpp now has full MCP support!",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1v6n33i/llamacpp_now_has_full_mcp_support/",
+      "source": "r/LocalLLaMA",
+      "source_type": "community",
+      "published": "2026-07-25",
+      "summary_zh": "Llama.cpp 现已全面支持 MCP 协议。",
+      "category": "工程"
+    }
+  ]
+}
