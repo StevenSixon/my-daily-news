@@ -300,14 +300,16 @@ the sidebar on macOS, Windows, and Linux. Use them to rename or delete folders,
 or to rename, organize, copy, move, export, or delete a conversation. The
 conversation action menu keeps folder destinations under **Move to**; hover
 over or activate it, then choose **Ungrouped** or a destination folder. The
-sidebar loads the newest 100 conversations first; use **Load earlier sessions**
-to fetch older pages. Opening a conversation initially loads its newest 20 user
+sidebar loads the 100 most recently active conversations first; use **Load
+earlier sessions** to fetch older pages. Opening a conversation initially loads its newest 20 user
 turns; use **Load earlier messages** at the top of the transcript to fetch older
 complete turns without splitting tool calls from their results. The chat mounts
 at most 40 complete user turns at once; use the earlier/newer controls to move
 through already loaded history without growing the DOM unboundedly. The slim
 conversation outline on the right expands into a list of your questions; select
-one to load its transcript page when needed and jump directly to that turn. Remote
+one to load its transcript page when needed and jump directly to that turn.
+User messages, assistant replies, and outline entries show their saved local
+time. Remote
 file rows also expose a visible download action, while secondary-click remains
 available as an alternate path. Cross-project transfer copies the saved
 transcript only. Project files and runs remain in their source project;

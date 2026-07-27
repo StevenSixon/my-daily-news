@@ -27,32 +27,32 @@
   ],
   "license": "Apache-2.0",
   "category": "AI 应用",
-  "classify_reason": "AI workbench for scientific discovery.",
-  "one_liner": "开源、模型无关的本地 AI 科学工作台，集规划执行、持久化项目与可审查审计于一体。",
-  "why_worth_it": "将零散的聊天、代码、数据检索与报告整合在可审查的本地桌面环境，适合需要可复现、无供应商锁定的科研个人与团队。",
+  "classify_reason": "模型无关的科学发现AI工作台",
+  "one_liner": "开源模型无关的AI科研工作台，本地桌面代理执行科学任务。",
+  "why_worth_it": "将文献、代码、数据、计算统一到本地可审查工作区，模型自由切换，免供应商锁定。",
   "tags": [
-    "AI for Science",
+    "Agent框架",
     "本地优先",
-    "自托管桌面应用",
-    "模型无关"
+    "AI4Science",
+    "自托管"
   ],
   "confidence": "high",
   "info_gaps": [
-    "未列出所有内置模型和科学连接器的具体名称与范围（仅示意性描述，实装详见应用内）",
-    "Python Notebook 内核依赖未详细说明环境变量或包管理方式",
-    "无性能指标或 benchmark 数据",
-    "Linux AppImage 具体依赖库未列出",
-    "Claude 订阅模式下的凭据存储细节仅简要提及，未深入安全性分析"
+    "未明确桌面应用框架（Electron / Tauri 等）",
+    "未提供内置模型提供商完整列表",
+    "无性能基准或资源消耗数据",
+    "未说明是否支持离线模式或本地模型",
+    "技能和连接器具体数量与覆盖范围未完整列出"
   ],
   "quality_flags": [],
-  "stars_total": 672,
+  "stars_total": 760,
   "created_at": "2026-07-03",
-  "pushed_at": "2026-07-26",
-  "latest_release": "v0.7.1",
+  "pushed_at": "2026-07-27",
+  "latest_release": "v0.7.2",
   "first_seen": "2026-07-18",
-  "last_seen": "2026-07-26",
-  "streak_days": 9,
-  "analysis_updated_at": "2026-07-26T09:20:35+0800",
+  "last_seen": "2026-07-27",
+  "streak_days": 10,
+  "analysis_updated_at": "2026-07-27T09:23:23+0800",
   "appearances": [
     {
       "date": "2026-07-18",
@@ -116,6 +116,13 @@
       "stars_total": 672,
       "stars_gained": 0,
       "release": "v0.7.1"
+    },
+    {
+      "date": "2026-07-27",
+      "reason": "release_update",
+      "stars_total": 760,
+      "stars_gained": 0,
+      "release": "v0.7.2"
     }
   ]
 }

@@ -1,0 +1,51 @@
+{
+  "full_name": "nossa-y/activity-frames",
+  "url": "https://github.com/nossa-y/activity-frames",
+  "description": "Episodic memory for AI agents. Records your screen locally, compiles it into structured activity frames, serves them over MCP. No cloud, no LLM in the loop.",
+  "language": "Python",
+  "topics": [
+    "agent-memory",
+    "ai-agents",
+    "computer-use",
+    "context-engineering",
+    "episodic-memory",
+    "llm",
+    "mcp"
+  ],
+  "license": "MIT",
+  "category": "AI 应用",
+  "classify_reason": "为AI代理提供屏幕情节记忆的MCP服务",
+  "one_liner": "本地录屏编译结构化记忆，零token常规重放给AI代理。",
+  "why_worth_it": "解决AI代理日常盲点，录屏编译记忆，零token重放常规任务，全本地确定性。",
+  "tags": [
+    "本地优先",
+    "Agent记忆",
+    "屏幕录制",
+    "MCP"
+  ],
+  "confidence": "high",
+  "info_gaps": [
+    "未提供 routine overhead ratio 具体数值，需查阅 research/ 目录",
+    "Linux 和 Intel macOS 上的捕获引擎稳定性未经充分测试，可能存在未知问题",
+    "OCR 准确度未量化说明",
+    "Windows 支持状况未提及"
+  ],
+  "quality_flags": [],
+  "stars_total": 351,
+  "created_at": "2026-07-04",
+  "pushed_at": "2026-07-26",
+  "latest_release": "v0.2.0",
+  "first_seen": "2026-07-27",
+  "last_seen": "2026-07-27",
+  "streak_days": 1,
+  "analysis_updated_at": "2026-07-27T09:19:05+0800",
+  "appearances": [
+    {
+      "date": "2026-07-27",
+      "reason": "new",
+      "stars_total": 351,
+      "stars_gained": 0,
+      "release": "v0.2.0"
+    }
+  ]
+}

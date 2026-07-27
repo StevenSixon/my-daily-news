@@ -1,0 +1,55 @@
+{
+  "full_name": "ShenSeanChen/waku-agent",
+  "url": "https://github.com/ShenSeanChen/waku-agent",
+  "description": "Waku Waku! Waku agent is your personal AI agent, on your own laptop, in code you can read in an afternoon — harness + loop + memory + eval",
+  "language": "Python",
+  "topics": [
+    "agent-framework",
+    "ai-agent",
+    "ai-assistant",
+    "claude",
+    "evals",
+    "llm",
+    "llmops",
+    "local-first",
+    "openai",
+    "personal-assistant",
+    "python",
+    "sqlite"
+  ],
+  "license": "MIT",
+  "category": "AI 应用",
+  "classify_reason": "本地运行的个人AI代理",
+  "one_liner": "可读可改的个人AI助手，SQLite记忆，95行循环，内置评估",
+  "why_worth_it": "想理解Agent底层？代码一下午读完，无框架，暴露循环、记忆门控与评估全貌。",
+  "tags": [
+    "Agent框架",
+    "本地优先",
+    "LLMOps",
+    "Python"
+  ],
+  "confidence": "high",
+  "info_gaps": [
+    "benchmarks.md 存在但未展示具体基准数据，无法评估性能",
+    "未明确 Python 版本最低要求（推测 3.10+，由 uv 管理）",
+    "未说明非 macOS/Linux 环境下的详细配置注意事项"
+  ],
+  "quality_flags": [],
+  "stars_total": 535,
+  "created_at": "2026-07-10",
+  "pushed_at": "2026-07-26",
+  "latest_release": "v0.1.0",
+  "first_seen": "2026-07-27",
+  "last_seen": "2026-07-27",
+  "streak_days": 1,
+  "analysis_updated_at": "2026-07-27T09:16:59+0800",
+  "appearances": [
+    {
+      "date": "2026-07-27",
+      "reason": "new",
+      "stars_total": 535,
+      "stars_gained": 0,
+      "release": "v0.1.0"
+    }
+  ]
+}

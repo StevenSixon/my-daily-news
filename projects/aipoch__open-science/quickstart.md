@@ -1,18 +1,16 @@
 ## 安装
-前往 GitHub [latest release](https://github.com/aipoch/open-science/releases/latest) 下载对应平台安装包：
-- macOS：Apple Silicon 或 Intel 的 DMG
-- Windows：x64 安装器
-- Linux：x64 AppImage 或 Deb 包
-
-下载后直接安装。首次启动会自动引导环境检查（兼容性、凭证存储、Claude 运行时）和模型供应商配置（API Key / 订阅 token / ChatGPT 登录）。可选启用 Python Notebook 支持。
+从 [GitHub Releases](https://github.com/aipoch/open-science/releases/latest) 下载对应平台的安装包 (macOS Apple Silicon/Intel, Windows x64, Linux x64 AppImage/Deb)，直接安装。
+⚠️ 安全：若出现未认证开发者警告，确认包来自官方后放行。
 
 ## 最小可用示例
-1. 创建新项目，命名并描述。
-2. 开启会话，用自然语言描述研究问题、所需输出，可附加数据文件。
-3. 选择模型和审批模式，发送任务。
-4. 观察 agent 工具调用，批准敏感操作，最终在预览区查看生成的报告/图表。
+1. 首次启动完成环境检测（自动检查兼容性、存储、可选 Claude 运行时和 Python Notebook 支持）  
+2. 配置模型：选择内置提供商、自定义兼容网关，或使用 Claude/ChatGPT 订阅登录  
+3. 创建新项目 → 新建会话 → 用自然语言描述研究任务，附加数据文件  
+4. 发送任务，审批敏感操作（文件编辑、网络调用等）  
+5. 在预览面板查看生成的报告、表格、图表，后续会话用 `@` 引用文件，`/` 选择技能
 
-## 前提
-- 操作系统：macOS, Windows, Linux (x64)
-- 网络：用于模型 API 调用和数据连接器（可离线使用部分本地功能）。
-- 可选：Python 环境用于 Notebook 内核（应用可选自动安装 micromamba 管理）。
+## 依赖前提
+- 操作系统：macOS, Windows, Linux  
+- 离线模型需网络连接（使用云 API）  
+- 可选 Python 安装（用于 Notebook 内核，非必选）  
+- 模型凭证：API Key 或支持的订阅登录方式

@@ -27,30 +27,31 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "基于WiFi的空间智能与生命体征监测，AI驱动工具",
-  "one_liner": "用普通WiFi信号实现穿墙人体感知、呼吸心跳监测，完全无摄像头",
-  "why_worth_it": "零摄像头、零穿戴，靠CSI射频分析做室内空间智能，边缘学习+自托管，隐私成本双优",
+  "classify_reason": "利用WiFi信号实现空间智能和生命体征监测的AI应用",
+  "one_liner": "用普通WiFi信号实现穿墙人体感知、生命体征监测与空间智能",
+  "why_worth_it": "无需摄像头，$9 ESP32+AI模型即可实时测呼吸心率、人员计数与跌倒，本地运行不依赖云，适合极客验真",
   "tags": [
-    "WiFi感知",
-    "边缘AI",
-    "隐私优先",
-    "自托管"
+    "WiFi Sensing",
+    "Edge AI",
+    "Home Assistant",
+    "Rust"
   ],
   "confidence": "high",
   "info_gaps": [
-    "ESP32-S3 具体型号（如 Flash 大小、PSRAM 需求）在 README 截断部分未完全展示，需查阅固件文档。",
-    "105 个边缘模块的完整目录与功能描述仅在外部链接 `seed.cognitum.one/store` 中，文档内仅列出数量。",
-    "Cognitum Seed 硬件的详细规格和购买方式未在本文提供。"
+    "未提供多设备部署的具体拓扑结构说明",
+    "未见长期运行稳定性或生产环境案例数据",
+    "边缘模块具体效果缺少第三方评测",
+    "部分crate发布因auth组件阻塞，完整性暂不明确"
   ],
   "quality_flags": [],
-  "stars_total": 77208,
+  "stars_total": 86653,
   "created_at": "2025-06-07",
-  "pushed_at": "2026-07-06",
-  "latest_release": "v0.8.3-esp32",
+  "pushed_at": "2026-07-27",
+  "latest_release": "v2038",
   "first_seen": "2026-07-07",
-  "last_seen": "2026-07-07",
-  "streak_days": 1,
-  "analysis_updated_at": "2026-07-07T00:35:04+0800",
+  "last_seen": "2026-07-27",
+  "streak_days": 2,
+  "analysis_updated_at": "2026-07-27T09:20:26+0800",
   "appearances": [
     {
       "date": "2026-07-07",
@@ -58,6 +59,13 @@
       "stars_total": 77208,
       "stars_gained": 471,
       "release": "v0.8.3-esp32"
+    },
+    {
+      "date": "2026-07-27",
+      "reason": "release_update",
+      "stars_total": 86653,
+      "stars_gained": 5497,
+      "release": "v2038"
     }
   ]
 }

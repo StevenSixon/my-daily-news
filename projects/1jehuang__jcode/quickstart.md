@@ -1,18 +1,10 @@
-## 安装
-macOS/Linux：
-```bash
-curl -fsSL https://jcode.sh/install | bash
-```
-Windows 11（PowerShell）：
-```powershell
-irm https://jcode.sh/install.ps1 | iex
-```
-其他方式包括 Homebrew、源码编译，详见 [官方文档](https://jcode.sh/docs)。
+**安装**  
+- macOS/Linux：`curl -fsSL https://jcode.sh/install | bash`  
+- Windows：在PowerShell执行 `irm https://jcode.sh/install.ps1 | iex`  
+- 也支持Homebrew或从源码编译（需Rust工具链）
 
-## 最小可用示例
-安装后运行 `jcode` 进入交互式 TUI，首次启动按提示配置 LLM API 密钥。直接输入自然语言任务即可开始编码交互。多会话可通过快捷键创建新标签或新窗口。
+**前置条件**  
+- 需要配置至少一个LLM提供商的API密钥（如设置`ANTHROPIC_API_KEY`环境变量）；具体配置方法参照`https://jcode.sh/docs`（README未展开说明）
 
-## 依赖前提
-- 系统无特殊依赖，二进制自带所有运行时
-- 如需本地嵌入功能可能需要额外库（但默认开启）
-- 需要有效的 OpenAI / Claude 等 API 密钥
+**最小可用**  
+`jcode` 进入交互式TUI，输入问题即可开始对话。可创建多个会话，利用自动记忆功能跨会话关联上下文。

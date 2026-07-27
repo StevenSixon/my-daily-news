@@ -1,29 +1,32 @@
+## 安装
 ### 前提
-- Rust 1.88+ 并添加wasm32-unknown-unknown目标：`rustup target add wasm32-unknown-unknown`
-- `uv`（Python环境管理器）
-- 可选：R（需`Rscript`在PATH并安装`jsonlite`包）
-- Trunk：`cargo install --locked trunk`
-- Tauri CLI v2：`cargo install tauri-cli --version "^2"`
-- Windows需WebView2运行时（通常已自带），macOS需Xcode命令行工具
+- **Rust 1.88+** 及 `wasm32-unknown-unknown` 目标
+- **uv** (Python 环境管理器)
+- **Trunk**: `cargo install --locked trunk`
+- **Tauri CLI v2**: `cargo install tauri-cli --version "^2"`
+- Windows 需 WebView2 运行时（系统自带或从微软下载）；macOS 需 Xcode 命令行工具
+- 可选 R 环境（需 `Rscript` 及 `jsonlite` 包）
 
-### 构建运行
-**桌面应用开发模式**  
-```bash
-cargo tauri dev      # 热重载，前端在1421端口
-cargo tauri build    # 生成安装包（MSI/NSIS于target/release/bundle）
-```
-
-**无头CLI**  
+### 构建
 ```powershell
-$env:WISP_API_KEY = "<your provider key>"
-$env:WISP_PROVIDER = "openai"   # 可选: openai_responses, anthropic
+git clone https://github.com/xuzhougeng/wisp-science
+cd wisp-science
+cargo tauri dev    # 开发模式，热重载
+cargo tauri build  # 生成安装包（MSI/NSIS for Windows, .dmg/.app for macOS）
+```
+Windows 构建生成的安装包未签名，可能触发 SmartScreen，选择“仍要运行”。
+
+### 最小可用示例
+1. 启动应用，按引导输入 DeepSeek API key（其他 provider 后续在 Settings → Models 配置）。
+2. 新建项目，在对话框输入：
+   - “从 NCBI 下载一个基因序列并统计 GC 含量”，agent 将调用内置 MCP 工具获取数据，并通过 Python REPL 计算。
+3. 或加载种子演示项目（seed/ 目录）查看对话记录。
+
+### 无桌面的 Headless CLI 模式
+```powershell
+$env:WISP_API_KEY = "<your key>"
+$env:WISP_PROVIDER = "openai"
 $env:WISP_MODEL = "deepseek-v4-pro"
 cargo run -p wisp-cli
 ```
-CLI将加载内置技能目录，自动配置Python venv（`.wisp/python/.venv`）和R REPL。
-
-### 最小可用示例
-1. 启动桌面应用，在设置中添加模型提供商和API密钥
-2. 新建项目，使用对话输入提示，如“查询UniProt中CRISPR相关蛋白并分析”
-3. 查看右侧研究图谱和Artifact面板，追溯执行结果
-4. （可选）配置SSH远程服务器，将计算任务发送至GPU节点
+CLI 自动加载技能目录并启动 Python/R REPL。

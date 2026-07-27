@@ -16,31 +16,31 @@
   ],
   "license": "Apache-2.0",
   "category": "AI 应用",
-  "classify_reason": "AI-powered personalized tutoring system.",
-  "one_liner": "多智能体驱动的终身个性化AI辅导系统，支持深度研究与互动学习",
-  "why_worth_it": "将LLM代理与RAG知识库、多通道IM深度融合，为教育场景提供可定制的辅导引擎，适合自建AI教学助手",
+  "classify_reason": "终身个性化AI辅导系统",
+  "one_liner": "终身个性化AI辅导系统，多智能体+知识库+技能市场",
+  "why_worth_it": "将RAG、多智能体与社区技能整合为完整教育辅导栈，比单模型聊天更深入教学",
   "tags": [
-    "多智能体系统",
-    "交互式学习",
-    "RAG",
+    "多智能体辅导",
+    "RAG知识库",
+    "个性化学习",
     "自托管"
   ],
   "confidence": "medium",
   "info_gaps": [
-    "README 未包含安装步骤、环境依赖清单及最小可用示例",
-    "未给出系统架构图或模块划分说明",
-    "未提供基准测试数据或性能指标",
-    "多用户部署的具体权限模型未在 README 中详述"
+    "详细安装依赖及完整Get Started步骤未在截断部分展示",
+    "无benchmark或性能数据",
+    "硬件资源要求未明确",
+    "多用户部署的权限模型细节缺失"
   ],
   "quality_flags": [],
-  "stars_total": 29791,
+  "stars_total": 30094,
   "created_at": "2025-12-28",
-  "pushed_at": "2026-07-24",
-  "latest_release": "v1.5.4",
+  "pushed_at": "2026-07-26",
+  "latest_release": "v1.5.5",
   "first_seen": "2026-07-26",
-  "last_seen": "2026-07-26",
-  "streak_days": 1,
-  "analysis_updated_at": "2026-07-26T09:12:37+0800",
+  "last_seen": "2026-07-27",
+  "streak_days": 2,
+  "analysis_updated_at": "2026-07-27T09:21:47+0800",
   "appearances": [
     {
       "date": "2026-07-26",
@@ -48,6 +48,13 @@
       "stars_total": 29791,
       "stars_gained": 2154,
       "release": "v1.5.4"
+    },
+    {
+      "date": "2026-07-27",
+      "reason": "release_update",
+      "stars_total": 30094,
+      "stars_gained": 2199,
+      "release": "v1.5.5"
     }
   ]
 }

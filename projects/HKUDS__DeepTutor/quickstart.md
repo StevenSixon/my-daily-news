@@ -1,1 +1,11 @@
-官方文档位于 https://deeptutor.info ，但 README 未提供具体安装步骤。根据仓库配置推断，需 Python 3.11+ 与 Node.js 环境，并使用 Docker 启动。推荐查阅仓库内 `docs/` 或社区 Discord/飞书获取最新部署指南。
+```bash
+# 安装
+pip install deeptutor
+# 启动本地服务
+deeptutor start
+# 添加模型提供商（例如OpenAI）
+export OPENAI_API_KEY=sk-...
+# 或交互登录
+deeptutor provider login openai-codex
+```
+配置完成后浏览器访问本地Web界面，即可创建知识库、设置导师伙伴并开始对话。支持Docker部署，详见官方文档。

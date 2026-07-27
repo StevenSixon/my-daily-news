@@ -27,7 +27,7 @@
   ],
   "license": "Apache-2.0",
   "category": "AI 应用",
-  "classify_reason": "AI-written code audit and observability tool.",
+  "classify_reason": "AI生成代码的溯源与审计工具",
   "one_liner": "The black box for AI-written code. Passive decision graph linking every commit to the agent prompts behind it: drift detection, DLP audit of what agents read, evidence-driven risk, MCP memory for coding agents, signed provenance attestations. One command, offline by default.",
   "why_worth_it": "",
   "tags": [],
@@ -39,8 +39,8 @@
   "pushed_at": "2026-07-19",
   "latest_release": "v0.1.0",
   "first_seen": "2026-07-15",
-  "last_seen": "2026-07-26",
-  "streak_days": 9,
+  "last_seen": "2026-07-27",
+  "streak_days": 10,
   "analysis_updated_at": null,
   "appearances": [
     {
@@ -101,6 +101,13 @@
     },
     {
       "date": "2026-07-26",
+      "reason": "lightweight",
+      "stars_total": 398,
+      "stars_gained": 0,
+      "release": "v0.1.0"
+    },
+    {
+      "date": "2026-07-27",
       "reason": "lightweight",
       "stars_total": 398,
       "stars_gained": 0,
