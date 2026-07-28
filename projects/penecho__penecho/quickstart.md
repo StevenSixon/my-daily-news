@@ -1,28 +1,18 @@
 ## 安装
-- 桌面版：从 GitHub Releases 下载
-- npm 版（需 Node.js 20.3+）：
-  ```bash
-  npm install -g penecho
-  ```
+**桌面版**：从 [GitHub Releases](https://github.com/penecho/penecho/releases/latest) 下载。
 
-## 配置与启动
-1. 交互式配置（至少配置一个 AI 后端）：
-   ```bash
-   penecho configure
-   ```
-   选择 Claude CLI / Codex CLI / API，并设置模型、effort 等。
-2. 启动服务：
-   ```bash
-   penecho
-   ```
-   默认监听 http://localhost:3888，终端会打印本机局域网地址。
-3. 也可直接指定后端启动：
-   ```bash
-   penecho --codex --model gpt-5.6-sol --effort xhigh
-   penecho --claude --model opus --effort max
-   ```
+**npm 全局安装**（需 Node.js 20.3+）：
+```bash
+npm install -g penecho
+penecho configure   # 交互式配置LLM源
+penecho             # 启动服务，浏览器访问 http://localhost:3888
+```
+若使用 Codex CLI 或 Claude CLI 模式，需先安装并认证对应 CLI（如 `npm install -g @openai/codex@latest && codex login`）。
 
-## 必备前提
-- Codex 后端需先安装并认证 `@openai/codex` CLI，执行 `codex login status` 确认
-- Claude 后端需安装 Claude Code CLI 并完成认证
-- API 后端需提供 OpenAI 或 Anthropic 兼容密钥（明文保存于 `~/.penecho/config.env`，仅本地）
+**源码启动**：
+```bash
+git clone <repo-url>
+npm install
+npm start          # 直接启动
+```
+默认端口 3888，可通过 `--port` 参数修改。服务启动后会要求浏览器设置六位安全码或开放局域网访问。

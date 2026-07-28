@@ -9,7 +9,7 @@
 <p align="center">
   <a href="https://www.python.org/downloads/"><img alt="Python 3.11+" src="https://img.shields.io/badge/python-3.11%2B-blue?logo=python&logoColor=white" /></a>
   <a href="https://github.com/TencentCloud/Octop/blob/main/LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-green" /></a>
-  <a href="https://github.com/TencentCloud/Octop/releases"><img alt="Version" src="https://img.shields.io/badge/version-0.9.14-orange" /></a>
+  <a href="https://github.com/TencentCloud/Octop/releases"><img alt="Version" src="https://img.shields.io/badge/version-0.9.15-orange" /></a>
   <a href="https://pypi.org/project/octop/"><img src="https://img.shields.io/pypi/v/octop" alt="PyPI" /></a>
   <a href="https://github.com/astral-sh/ruff"><img alt="Code Style: Ruff" src="https://img.shields.io/badge/code%20style-ruff-000000?logo=ruff&logoColor=white" /></a>
   <a href="https://github.com/TencentCloud/Octop"><img alt="GitHub stars" src="https://img.shields.io/github/stars/TencentCloud/Octop?style=social" /></a>
@@ -246,6 +246,7 @@ See [`.env.example`](.env.example) for the full list.
   - [Contributing](#-contributing)
   - [Changelog](#-changelog)
   - [Related projects](#-related-projects)
+  - [WeCom customer group](#-wecom-customer-group-cn)
   - [License](#-license)
 
 ## 📦 Install options
@@ -443,6 +444,16 @@ See [CHANGELOG.md](CHANGELOG.md) for release history.
 | harness-browser | CDP browser automation with persistent profiles |
 
 > These `harness-*` projects are being prepared for open-sourcing; repository links will be added once they are published.
+
+## 💬 WeCom Customer Group (CN)
+
+For the customer WeCom support group, scan:
+
+<p align="center">
+  <img src="docs/assets/qrcode.png" alt="WeCom customer group QR code" width="220" />
+</p>
+
+> This QR code is valid until **2026-08-03** (UTC+8). Please ask the maintainer for an updated code after it expires.
 
 ## 📄 License
 

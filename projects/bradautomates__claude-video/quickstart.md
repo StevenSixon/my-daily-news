@@ -1,26 +1,48 @@
-## 安装与上手
-**前置依赖**：首次运行时脚本会自动通过 `brew`（macOS）安装 `ffmpeg` 和 `yt-dlp`，或提示 Linux/Windows 相应命令。确保有相应包管理器权限。
+## 安装
+### 前提
+- 操作系统：macOS、Linux 或 Windows
+- Claude Code 或其他兼容宿主（Codex、Cursor、Copilot、Gemini CLI 等）已安装
+- 首次运行会自动检测并提示安装 `ffmpeg` 和 `yt-dlp`（macOS 使用 brew，Linux/Windows 给出安装命令）
+- 若视频无字幕且需使用回退功能，需要 Groq 或 OpenAI 的 Whisper API 密钥（**可选**）
 
-**安装方式（任选其一）**：
-
-1. **Claude Code（推荐，自动更新）**
+### Claude Code
 ```
 /plugin marketplace add bradautomates/claude-video
 /plugin install watch@claude-video
 ```
 
-2. **Codex / Cursor / Copilot / Gemini CLI 等 50+ 宿主**
+### 其他 Agent 宿主（Codex、Cursor、Copilot、Gemini CLI 等 50+）
 ```bash
 npx skills add bradautomates/claude-video -g
 ```
-（-g 全局安装，也可省略以项目级安装）
+`-g` 全局安装（用户级），去掉则为当前项目安装。
 
-3. **claude.ai（Web 版）**
-- 从 [Release 页](https://github.com/bradautomates/claude-video/releases/latest) 下载 `watch.skill` 文件
-- 设置 → 能力 → 技能 → 点击 + 导入文件
+### claude.ai（网页版）
+1. 从 [Releases](https://github.com/bradautomates/claude-video/releases/latest) 下载 `watch.skill`
+2. 进入 Settings → Capabilities → Skills，点击 `+` 并导入文件
 
-**最小可用示例**：
+## 最小可用示例
+### 分析 YouTube 视频的特定时刻
 ```
 /watch https://youtu.be/dQw4w9WgXcQ what happens at the 30 second mark?
 ```
-首次运行会自动完成环境检查（setup.py --check）并安装缺少的工具。之后即可直接对任何视频提问。
+
+### 诊断录屏 Bug
+```
+/watch bug-repro.mov what's going wrong?
+```
+
+### 长视频总结（仅依赖字幕，零帧提取）
+```
+/watch https://youtu.be/<long-talk> summarize this --detail transcript
+```
+
+### 高精度分析（无帧预算上限）
+```
+/watch https://youtu.be/<launch-video> what's actually new --detail token-burner
+```
+
+### 指定时间段密集分析
+```
+/watch https://youtu.be/<video> what happens between 1:20 and 2:00 --start 1:20 --end 2:00
+```

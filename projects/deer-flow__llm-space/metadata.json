@@ -15,21 +15,32 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "代理原型设计与调试桌面应用",
-  "one_liner": "A desktop app to prototype agent ideas, inspect every harness step, replay failures, and evaluate performance, all in one place. Local-first.",
-  "why_worth_it": "",
-  "tags": [],
-  "confidence": "medium",
-  "info_gaps": [],
+  "classify_reason": "桌面代理原型与评估工具",
+  "one_liner": "桌面版Agent构建调试工具，本地优先，支持SSH远程代理运行。",
+  "why_worth_it": "一站式原型、调试与评估Agent，回放失败步骤，文件由本地管理，比托管服务更自主可控。",
+  "tags": [
+    "Agent开发工具",
+    "本地优先",
+    "TypeScript",
+    "Mac桌面应用"
+  ],
+  "confidence": "high",
+  "info_gaps": [
+    "文档中示例主要针对 macOS，未明确提及 Windows 或 Linux 桌面版本的支持情况",
+    "未提供量化性能基准（如 Agent 循环延迟对比）",
+    "未与 LangSmith、LangFuse 等产品做详细功能矩阵对比",
+    "远程运行时的安全审计细节未展开（SSH 密钥管理、权限控制等）",
+    "内部 Agent 框架 Pi Agent Core 的独立文档与社区成熟度未知"
+  ],
   "quality_flags": [],
-  "stars_total": 1265,
+  "stars_total": 1295,
   "created_at": "2026-06-28",
-  "pushed_at": "2026-07-26",
-  "latest_release": "v4.4.5",
+  "pushed_at": "2026-07-27",
+  "latest_release": "v4.6.0",
   "first_seen": "2026-07-16",
-  "last_seen": "2026-07-27",
-  "streak_days": 12,
-  "analysis_updated_at": null,
+  "last_seen": "2026-07-28",
+  "streak_days": 13,
+  "analysis_updated_at": "2026-07-28T09:14:36+0800",
   "appearances": [
     {
       "date": "2026-07-16",
@@ -114,6 +125,13 @@
       "stars_total": 1265,
       "stars_gained": 0,
       "release": "v4.4.5"
+    },
+    {
+      "date": "2026-07-28",
+      "reason": "release_update",
+      "stars_total": 1295,
+      "stars_gained": 0,
+      "release": "v4.6.0"
     }
   ]
 }

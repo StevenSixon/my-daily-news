@@ -27,32 +27,29 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "AI agent skill for web research and synthesis",
-  "one_liner": "AI代理驱动跨平台搜索，用点赞投注等真实参与度评分，合成接地气简报",
-  "why_worth_it": "打通Reddit/X/YouTube等孤岛，用社区投票代替SEO排序，一次查询获得话题最新社会信号聚合，适合会前调研、工具选型等快速摸底",
+  "classify_reason": "AI agent技能，跨平台研究并合成摘要",
+  "one_liner": "跨15+社交平台的AI代理搜索引擎，按用户互动评分合成摘要",
+  "why_worth_it": "聚合Reddit、X等实时信号，AI加权排序，秒级生成会前简报、趋势追踪，免费零配置起步",
   "tags": [
     "Agent技能",
-    "多源聚合",
-    "社交信号评分",
-    "实时趋势挖掘"
+    "社交搜索",
+    "实时情报",
+    "Claude插件"
   ],
   "confidence": "high",
   "info_gaps": [
-    "无搜索质量基准测试或对比评估数据",
-    "未说明合成阶段使用的具体模型及其token消耗",
-    "未提及隐私政策（是否上传本地数据）",
-    "未提供多语言支持说明",
-    "智能实体解析准确率未量化"
+    "未明确默认的AI模型及是否可配置",
+    "缺乏查询耗时和并发性能数据"
   ],
   "quality_flags": [],
-  "stars_total": 50602,
+  "stars_total": 54179,
   "created_at": "2026-01-23",
-  "pushed_at": "2026-07-08",
-  "latest_release": "v3.11.1",
+  "pushed_at": "2026-07-26",
+  "latest_release": "v3.18.3",
   "first_seen": "2026-07-09",
-  "last_seen": "2026-07-09",
-  "streak_days": 1,
-  "analysis_updated_at": "2026-07-09T01:16:31+0800",
+  "last_seen": "2026-07-28",
+  "streak_days": 2,
+  "analysis_updated_at": "2026-07-28T09:11:05+0800",
   "appearances": [
     {
       "date": "2026-07-09",
@@ -60,6 +57,13 @@
       "stars_total": 50602,
       "stars_gained": 373,
       "release": "v3.11.1"
+    },
+    {
+      "date": "2026-07-28",
+      "reason": "release_update",
+      "stars_total": 54179,
+      "stars_gained": 240,
+      "release": "v3.18.3"
     }
   ]
 }

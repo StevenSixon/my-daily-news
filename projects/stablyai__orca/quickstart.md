@@ -1,5 +1,16 @@
-1. 下载安装：访问 [onorca.dev/download](https://onorca.dev/download) 或 GitHub Releases 页面，获取 macOS/Windows/Linux 安装包。
-2. 启动 Orca，按要求配置你的 CLI 代理的 API 密钥（自行提供，Orca 仅在本地运行）。
-3. 确保系统中已安装 `git` 以及你计划使用的代理命令（如 `claude`、`codex`）。Orca 不捆绑这些代理。
-4. 点击“New Worktree”，选择代理、填写提示，Orca 自动创建 Git 工作树并启动代理。
-5. 移动端（可选）：安装 iOS/Android 应用，扫描桌面端二维码连接，即可远程监控。
+## 安装
+从 [onorca.dev/download](https://onorca.dev/download) 获取 macOS/Windows/Linux 桌面版，或通过 iOS App Store/TestFlight/Android APK 安装移动端。
+
+## 最小可用示例
+1. 确保安装好 git 和至少一个支持的代理 CLI（如 `claude`）。
+2. 启动 Orca，打开终端，执行：
+   ```
+   orca worktree create --agent claude --prompt "实现一个简单的任务管理器"
+   orca worktree create --agent codex --prompt "实现一个简单的任务管理器"
+   ```
+3. 在侧边栏观察两个代理的进度，通过 `Annotate AI Diff` 对比生成结果，选择更优的实现分支合并到主分支。
+
+## 依赖前提
+- Git
+- 相应代理的运行时（Claude Code、Codex 等）及有效的 API 密钥/订阅
+- (远程场景) SSH 访问远程主机

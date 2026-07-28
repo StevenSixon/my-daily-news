@@ -13,7 +13,7 @@
   ],
   "license": "Apache-2.0",
   "category": "AI 应用",
-  "classify_reason": "混合架构的AI代码审查工具",
+  "classify_reason": "基于LLM Agent的代码审查工具",
   "one_liner": "阿里内部验证的AI代码审查工具，混合确定性与LLM Agent，行级精准反馈。",
   "why_worth_it": "解决通用Agent审查大变更集时覆盖不全、行号漂移的痛点，用工程硬约束保证稳定，适合重视噪声控制与CI集成的团队。",
   "tags": [
@@ -30,13 +30,13 @@
     "委托模式下各编码代理的具体操作步骤仅在子文档链接，未在README展开"
   ],
   "quality_flags": [],
-  "stars_total": 13839,
+  "stars_total": 14813,
   "created_at": "2026-05-18",
-  "pushed_at": "2026-07-26",
+  "pushed_at": "2026-07-27",
   "latest_release": "v1.7.17",
   "first_seen": "2026-07-24",
-  "last_seen": "2026-07-27",
-  "streak_days": 3,
+  "last_seen": "2026-07-28",
+  "streak_days": 4,
   "analysis_updated_at": "2026-07-27T09:22:14+0800",
   "appearances": [
     {
@@ -58,6 +58,13 @@
       "reason": "release_update",
       "stars_total": 13839,
       "stars_gained": 832,
+      "release": "v1.7.17"
+    },
+    {
+      "date": "2026-07-28",
+      "reason": "lightweight",
+      "stars_total": 14813,
+      "stars_gained": 979,
       "release": "v1.7.17"
     }
   ]

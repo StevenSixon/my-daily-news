@@ -27,21 +27,32 @@
   ],
   "license": "NOASSERTION",
   "category": "AI 应用",
-  "classify_reason": "终端AI编码代理，支持智能模型路由",
-  "one_liner": "Open-source AI coding agent for the terminal. Claude Code-grade accuracy with smart model routing — uses the right AI model for each task, cutting costs 10x. Supports Claude, GPT, Gemini, DeepSeek & more.",
-  "why_worth_it": "",
-  "tags": [],
-  "confidence": "medium",
-  "info_gaps": [],
+  "classify_reason": "终端AI编码agent，智能模型路由",
+  "one_liner": "终端原生AI编程代理，利用智能模型路由以5.4倍成本节省达到Claude Code级精度",
+  "why_worth_it": "解决AI编程代理的高成本痛点，自动按任务难度分派模型，适合想省钱的终端控和CI集成者",
+  "tags": [
+    "AI编码代理",
+    "智能模型路由",
+    "终端工具",
+    "TypeScript"
+  ],
+  "confidence": "high",
+  "info_gaps": [
+    "README未说明Klaatu路由服务是否需付费订阅或有免费额度",
+    "未提供知识图谱索引的具体实现细节和性能影响",
+    "未说明自带模型（BYO model）时的路由行为",
+    "基准测试中Cursor、opencode成本为估算值，准确度依赖honesty notes中未展示的细节",
+    "CI集成环境的具体配置示例未提供"
+  ],
   "quality_flags": [],
-  "stars_total": 293,
+  "stars_total": 318,
   "created_at": "2026-07-17",
-  "pushed_at": "2026-07-23",
-  "latest_release": "V2.3.0",
+  "pushed_at": "2026-07-27",
+  "latest_release": "V2.3.1",
   "first_seen": "2026-07-24",
-  "last_seen": "2026-07-27",
-  "streak_days": 4,
-  "analysis_updated_at": null,
+  "last_seen": "2026-07-28",
+  "streak_days": 5,
+  "analysis_updated_at": "2026-07-28T09:15:33+0800",
   "appearances": [
     {
       "date": "2026-07-24",
@@ -70,6 +81,13 @@
       "stars_total": 293,
       "stars_gained": 0,
       "release": "V2.3.0"
+    },
+    {
+      "date": "2026-07-28",
+      "reason": "release_update",
+      "stars_total": 318,
+      "stars_gained": 0,
+      "release": "V2.3.1"
     }
   ]
 }

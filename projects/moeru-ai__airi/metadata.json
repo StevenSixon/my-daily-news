@@ -18,21 +18,32 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "关键词命中",
-  "one_liner": "💖🧸 Self hosted, you-owned Grok Companion, a container of souls of waifu, cyber livings to bring them into our worlds, wishing to achieve Neuro-sama's altitude. Capable of realtime voice chat, Minecraft, Factorio playing. Web / macOS / Windows supported.",
-  "why_worth_it": "",
-  "tags": [],
+  "classify_reason": "自托管AI伴侣，容器化角色灵魂，面向终端用户",
+  "one_liner": "自托管的多模态AI伴侣，支持实时语音、游戏与Live2D/VRM形象。",
+  "why_worth_it": "开源复刻Neuro-sama，既能聊天又能玩MC/Factorio，自托管保障隐私与可定制性。",
+  "tags": [
+    "AI伴侣",
+    "自托管",
+    "Live2D/VRM",
+    "TypeScript"
+  ],
   "confidence": "medium",
-  "info_gaps": [],
+  "info_gaps": [
+    "未明确支持的 AI 模型提供商和 API 接口规范（如是否必须依赖 OpenAI、Ollama 本地模型等）。",
+    "游戏集成的具体连接方式和配置说明（Minecraft 需插件？Factorio 需 mod？）。",
+    "自托管后端架构、数据库及硬件要求未在 README 给出。",
+    "离线运行能力是否完全独立，或仍需云端模型服务。",
+    "多语言支持的实际完成度与质量保障流程。"
+  ],
   "quality_flags": [],
-  "stars_total": 42401,
+  "stars_total": 44037,
   "created_at": "2024-12-01",
-  "pushed_at": "2026-07-15",
-  "latest_release": "v0.11.0",
+  "pushed_at": "2026-07-27",
+  "latest_release": "v0.11.3",
   "first_seen": "2026-07-14",
-  "last_seen": "2026-07-16",
-  "streak_days": 2,
-  "analysis_updated_at": null,
+  "last_seen": "2026-07-28",
+  "streak_days": 3,
+  "analysis_updated_at": "2026-07-28T09:08:13+0800",
   "appearances": [
     {
       "date": "2026-07-14",
@@ -47,6 +58,13 @@
       "stars_total": 42401,
       "stars_gained": 144,
       "release": "v0.11.0"
+    },
+    {
+      "date": "2026-07-28",
+      "reason": "release_update",
+      "stars_total": 44037,
+      "stars_gained": 572,
+      "release": "v0.11.3"
     }
   ]
 }

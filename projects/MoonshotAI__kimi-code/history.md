@@ -1,2 +1,3 @@
 - 2026-07-26 | 🆕新发现 | ⭐5061(+1534) | release=@moonshot-ai/kimi-code@0.29.1
 - 2026-07-27 | lightweight | ⭐5194(+1380) | release=@moonshot-ai/kimi-code@0.29.1
+- 2026-07-28 | release_update | ⭐5377(+1263) | release=@moonshot-ai/kimi-code@0.29.2

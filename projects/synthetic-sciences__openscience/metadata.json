@@ -22,32 +22,31 @@
   ],
   "license": "Apache-2.0",
   "category": "AI 应用",
-  "classify_reason": "科学研究开源AI工作台",
-  "one_liner": "给定目标，自动读文献、写代码、跑实验并生成报告的开源科研AI工作台。",
-  "why_worth_it": "开源、模型无关，可本地运行，把科研全流程交给AI，比闭源工具更透明可控。",
+  "classify_reason": "开源AI科学研究工作台",
+  "one_liner": "开源AI科研代理：给定目标，自主研读文献、编码、实验、生成报告",
+  "why_worth_it": "一站式自动化科研循环，覆盖ML/生物/物理/化学，本地运行，自带290+技能与科学数据库，无需注册",
   "tags": [
-    "AI Agent",
-    "科研自动化",
-    "自托管",
-    "TypeScript"
+    "Agent框架",
+    "TypeScript",
+    "本地优先",
+    "科研工具"
   ],
   "confidence": "high",
   "info_gaps": [
-    "无性能基准（如文献检索准确性、实验成功率）或真实案例",
-    "本地模型（如通过 Ollama）的集成方式未详细说明",
-    "Demo 免费模型的速度、能力边界未描述",
-    "Agent 安全风险除容器隔离外无具体防护措施说明",
-    "与其他科研 AI 助手（如 PaperQA2）的量化对比缺失"
+    "未提供技能的实际成功率和 benchmark 数据",
+    "未说明运行代理所需的最低内存/CPU 要求",
+    "示例研究任务的完整执行耗时未提及",
+    "科学数据库查询受限于访问权限，但未详细说明是否都需要额外认证"
   ],
   "quality_flags": [],
-  "stars_total": 2841,
+  "stars_total": 2888,
   "created_at": "2026-07-03",
-  "pushed_at": "2026-07-26",
-  "latest_release": "v1.3.4",
+  "pushed_at": "2026-07-27",
+  "latest_release": "v1.3.5",
   "first_seen": "2026-07-07",
-  "last_seen": "2026-07-27",
-  "streak_days": 20,
-  "analysis_updated_at": "2026-07-09T01:22:51+0800",
+  "last_seen": "2026-07-28",
+  "streak_days": 21,
+  "analysis_updated_at": "2026-07-28T09:14:04+0800",
   "appearances": [
     {
       "date": "2026-07-07",
@@ -188,6 +187,13 @@
       "stars_total": 2841,
       "stars_gained": 0,
       "release": "v1.3.4"
+    },
+    {
+      "date": "2026-07-28",
+      "reason": "release_update",
+      "stars_total": 2888,
+      "stars_gained": 0,
+      "release": "v1.3.5"
     }
   ]
 }

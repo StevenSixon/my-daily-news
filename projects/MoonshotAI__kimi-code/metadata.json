@@ -6,31 +6,31 @@
   "topics": [],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "Kimi代码代理CLI",
-  "one_liner": "终端AI编程代理：单二进制、视频输入、MCP、子代理、编辑器集成",
-  "why_worth_it": "极速启动的无依赖终端编码助手，原生视频输入与子代理并行，可直接嵌入Zed/JetBrains",
+  "classify_reason": "Kimi Code CLI，下一代Agent起点",
+  "one_liner": "终端 AI 编码助手，原生支持视频输入与子代理，单命令安装",
+  "why_worth_it": "为极客提供毫秒级终端编程体验，无 Node 依赖，通过视频与子代理处理复杂任务，并可直接嵌入 Zed 等编辑器",
   "tags": [
     "AI编程代理",
-    "终端CLI",
-    "MCP集成",
-    "TypeScript"
+    "终端TUI",
+    "视频交互",
+    "编辑器集成"
   ],
   "confidence": "high",
   "info_gaps": [
-    "无量化 benchmark 与其他工具对比数据",
-    "插件市场具体内容及审核机制未展开",
-    "第三方模型配置详细指南未在 README 中给出",
-    "视频输入的能力边界未说明"
+    "无性能基准或 token 消耗数据",
+    "视频输入支持的具体格式、最大时长未说明",
+    "同类工具功能对比未提供量化指标",
+    "MCP 服务器的安全审计与信任模型细节未展开"
   ],
   "quality_flags": [],
-  "stars_total": 5194,
+  "stars_total": 5377,
   "created_at": "2026-05-22",
-  "pushed_at": "2026-07-26",
-  "latest_release": "@moonshot-ai/kimi-code@0.29.1",
+  "pushed_at": "2026-07-27",
+  "latest_release": "@moonshot-ai/kimi-code@0.29.2",
   "first_seen": "2026-07-26",
-  "last_seen": "2026-07-27",
-  "streak_days": 2,
-  "analysis_updated_at": "2026-07-26T09:13:08+0800",
+  "last_seen": "2026-07-28",
+  "streak_days": 3,
+  "analysis_updated_at": "2026-07-28T09:07:29+0800",
   "appearances": [
     {
       "date": "2026-07-26",
@@ -45,6 +45,13 @@
       "stars_total": 5194,
       "stars_gained": 1380,
       "release": "@moonshot-ai/kimi-code@0.29.1"
+    },
+    {
+      "date": "2026-07-28",
+      "reason": "release_update",
+      "stars_total": 5377,
+      "stars_gained": 1263,
+      "release": "@moonshot-ai/kimi-code@0.29.2"
     }
   ]
 }

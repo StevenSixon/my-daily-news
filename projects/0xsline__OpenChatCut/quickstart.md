@@ -1,23 +1,22 @@
-## 安装
-**桌面版**：从 [GitHub Releases](https://github.com/0xsline/OpenChatCut/releases/latest) 下载对应平台安装包。注意 macOS 包未签名，首次启动需系统“安全性”中批准。
+### 桌面安装包
+从 [GitHub Releases](https://github.com/0xsline/OpenChatCut/releases/latest) 下载对应平台的 DMG/安装器/AppImage。macOS 版本首次打开需手动允许运行。
 
-**从源码运行**：
+### 从源码运行
+**依赖**：Node.js 24.x、npm（推荐使用 nvm，项目内置 `.nvmrc`）
 ```bash
 git clone https://github.com/0xsline/OpenChatCut.git
 cd OpenChatCut
-npm install          # 需要 Node.js 24.x
-cp .env.example .env.local
+npm install
+cp .env.example .env.local   # 按需填写模型或媒体服务的 API 密钥
 npm run dev
 ```
-浏览器访问 `http://localhost:5199`。仅配置你实际使用的模型/媒体服务密钥到 `.env.local`。
+浏览器访问 `http://localhost:5199`。
 
-## 最小可用示例
-1. 创建项目，导入一段视频或图片。
-2. 在聊天框输入“为这段视频添加淡入淡出转场和自动字幕”。
-3. 代理会读取工程上下文，生成编辑提案，预览后应用。
-4. 如需手动调整，可在时间线上微调，然后导出 MP4。
+### 桌面开发
+```bash
+npm run desktop:dev
+```
+桌面环境与 Web 版共享同一套嵌入式服务。
 
-## 依赖前提
-- Node.js 24.x（`.nvmrc` 提供版本管理）
-- npm（安装依赖）
-- 可选：本地 H.264 导出在 macOS 自动使用 VideoToolbox，Windows 使用 NVENC，或回退软件编码，可通过环境变量调优（见 `.env.example`）。
+### 媒体编码配置
+默认优先使用硬件加速（macOS VideoToolbox，Windows NVENC），可通过 `.env.local` 中的环境变量调整渲染并发、禁用硬件编码或覆盖编码器。详见 `.env.example`。

@@ -154,6 +154,9 @@ cargo tauri build    # produce an MSI/NSIS installer under target/release/bundle
   the `winver` result, WebView2 Runtime version, installer filename, and
   reproduction steps in an issue. Never post API keys, tokens, passwords, or
   private keys.
+- At startup, the desktop app normalizes trailing backslashes in `PATH` and
+  recovers affected entries from the Windows User PATH, so tools such as Pixi
+  remain available to the built-in shell.
 
 Desktop development uses port `1421`. UI tests use `1422`, and their Trunk
 outputs are isolated in `ui/dist-dev` and `ui/dist-test`; release packaging
@@ -247,12 +250,14 @@ safety boundary, and current limits.
 
 ### Composer references and search
 
-In a desktop conversation, type `@` to attach a saved artifact, an uploaded
-file, an execution context, or a language runtime; `#` to attach a saved
-session (including another project) or choose `#project` to search every other
-saved session in the current project (the open conversation is already in the
-main context); or `/` to apply an enabled skill to the next turn. Attachments
-are explicit, removable chips; cross-project artifacts stay at their original
+In a desktop conversation, manually type `@` at the caret to attach a saved
+artifact, an uploaded file, an execution context, or a language runtime; `#`
+to attach a saved session (including another project) or choose `#project` to
+search every other saved session in the current project (the open conversation
+is already in the main context); or `/` to apply an enabled skill to the next
+turn. These pickers work while editing anywhere in the message and do not open
+for pasted text. Attachments are explicit, removable chips; cross-project
+artifacts stay at their original
 local path and are never copied automatically. The same references work with
 ACP Agents: selected skills and Reader evidence are sent as ACP text blocks,
 while artifacts are sent as file links.
@@ -275,6 +280,12 @@ Image previews include a region-selection tool. After you drag a region, Wisp
 keeps it highlighted and asks whether to add the crop to chat while staying in
 the preview, or add it and jump back to the conversation. The crop is not
 attached until you choose an action.
+
+Text selected in a conversation or file preview can be added to the main
+composer, quoted into **Side chat**, or explained immediately in Side chat.
+Quoting opens the Side chat tab with a removable reference card and waits for
+your question before sending. Side chat remains a read-only, temporary Q&A
+surface and does not alter the main conversation or edit workspace files.
 
 `@` also reaches compute. Naming an execution context (`@CPU1`) points the turn
 at that server and turns it on for the conversation, so you do not have to
@@ -315,6 +326,14 @@ available as an alternate path. Cross-project transfer copies the saved
 transcript only. Project files and runs remain in their source project;
 conversation-linked artifact records are not transferred, and the underlying
 workspace files are never deleted.
+
+After a native Wisp turn finishes, the latest assistant reply has **Undo**
+beside **Copy**. The confirmation dialog previews which Markdown, source-code,
+CSV, JSON, and other bounded text files will be restored or removed, then
+returns the original prompt to the composer and removes artifacts owned by that
+turn. If a text file changed again after the turn, Wisp refuses to overwrite
+it. Word, Excel, PDF, images, and other binary files are listed but retained;
+binary-file and ACP-session undo are not supported yet.
 
 During an agent turn, assistant progress notes stay visible as compact
 commentary, model reasoning stays in its own collapsed disclosure, and only
@@ -495,8 +514,14 @@ valuable suggestions:
   worker, with POSIX-only `resource`/`/proc`/`SIGINT` machinery dropped for
   Windows.
 
-See `LICENSE` (Apache-2.0). Upstream notices are preserved in their respective
-directories.
+## License
+
+Except where otherwise noted, Wisp Science is licensed under the
+[GNU Affero General Public License v3.0 only](LICENSE). Third-party and vendored
+components remain under their respective licenses; upstream notices are
+preserved in their directories, and the Apache License 2.0 text is retained in
+[`LICENSES/Apache-2.0.txt`](LICENSES/Apache-2.0.txt). Earlier releases remain
+available under the license published with those releases.
 
 ## Citation
 

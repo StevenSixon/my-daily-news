@@ -1,0 +1,56 @@
+{
+  "full_name": "deerwork-ai/deer-workflow",
+  "url": "https://github.com/deerwork-ai/deer-workflow",
+  "description": "An open-source graph engineering runtime that keeps orchestration in TypeScript and delegates semantic work to replaceable Agent runtimes.",
+  "language": "TypeScript",
+  "topics": [
+    "agent",
+    "ai",
+    "ai-agent",
+    "ai-agents",
+    "ai-coding",
+    "bun",
+    "dynamic-workflow",
+    "dynamic-workflows",
+    "graph-engineering",
+    "llm",
+    "workflow"
+  ],
+  "license": "MIT",
+  "category": "AI 应用",
+  "classify_reason": "图工程运行时，编排Agent工作流",
+  "one_liner": "用TypeScript定义可审查的Agent工作流，运行时Agent可热替换",
+  "why_worth_it": "将AI流程编排从黑盒对话拉回可审计代码，Agent按需换模型，输出可观测，适合想掌控流程的极客",
+  "tags": [
+    "Agent框架",
+    "工作流引擎",
+    "TypeScript",
+    "可观测"
+  ],
+  "confidence": "medium",
+  "info_gaps": [
+    "未提供性能基准数据（如执行延迟、并行吞吐）",
+    "未说明是否支持 Bun 之外的 Node.js 运行时，或是否有额外依赖",
+    "未给出与 LangGraph、CrewAI 等的量化对比或迁移指南",
+    "docs/api.md 内容未在上下文中，API 完整度未知",
+    "仅两个示例，未覆盖复杂错误恢复、人工审批等模式"
+  ],
+  "quality_flags": [],
+  "stars_total": 244,
+  "created_at": "2026-07-26",
+  "pushed_at": "2026-07-27",
+  "latest_release": "v0.2.0",
+  "first_seen": "2026-07-28",
+  "last_seen": "2026-07-28",
+  "streak_days": 1,
+  "analysis_updated_at": "2026-07-28T09:03:03+0800",
+  "appearances": [
+    {
+      "date": "2026-07-28",
+      "reason": "new",
+      "stars_total": 244,
+      "stars_gained": 0,
+      "release": "v0.2.0"
+    }
+  ]
+}

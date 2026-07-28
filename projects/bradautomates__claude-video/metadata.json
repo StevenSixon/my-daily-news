@@ -6,30 +6,32 @@
   "topics": [],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "关键词命中",
-  "one_liner": "让 Claude 真正“观看”视频：自动提取帧、字幕，基于画面和语音回答任何问题",
-  "why_worth_it": "将视频变成 AI 可读的数据源，省去手动看视频的时间，对开发者、内容分析师、运维都极其实用，无缝集成 Claude Code 及 50+ agent 宿主",
+  "classify_reason": "让Claude观看视频的AI工具",
+  "one_liner": "让Claude直接“观看”视频，提取关键帧与字幕实现多模态问答",
+  "why_worth_it": "弥补AI视频盲区，零配置自动获取帧/字幕/转录，成本可控，适配50+ Agent宿主",
   "tags": [
-    "AI工具",
+    "Agent技能",
     "视频分析",
-    "Claude扩展",
-    "自动化"
+    "多模态",
+    "Claude插件"
   ],
   "confidence": "high",
   "info_gaps": [
-    "Linux/Windows 下首次运行时打印的确切安装命令未在 README 中列出",
-    "Whisper API 密钥的获取方式及成本说明未详细展示（仅提及需备密钥）",
-    "未提供不同视频类型（运动激烈、纯静态）下的去重阈值调整经验数据"
+    "v0.2.0 的具体更新内容未在 README 中列出（仅指向完整 Changelog 链接）",
+    "未说明视频上传或音频片段发送到 Whisper API 时的隐私保护策略，用户应知晓数据可能离开本地",
+    "未提供支持的视频最大文件大小或时长硬限制",
+    "未提及是否支持本地 Whisper 模型或其他离线转录方案",
+    "Windows 系统的安装流程仅说明会“打印命令”，未给出具体 choco/winget 示例"
   ],
   "quality_flags": [],
-  "stars_total": 8406,
+  "stars_total": 11090,
   "created_at": "2026-04-24",
   "pushed_at": "2026-07-01",
   "latest_release": "v0.2.0",
   "first_seen": "2026-07-06",
-  "last_seen": "2026-07-15",
-  "streak_days": 10,
-  "analysis_updated_at": "2026-07-06T21:10:42+0800",
+  "last_seen": "2026-07-28",
+  "streak_days": 11,
+  "analysis_updated_at": "2026-07-28T09:09:24+0800",
   "appearances": [
     {
       "date": "2026-07-06",
@@ -99,6 +101,13 @@
       "reason": "lightweight",
       "stars_total": 8406,
       "stars_gained": 4128,
+      "release": "v0.2.0"
+    },
+    {
+      "date": "2026-07-28",
+      "reason": "star_jump",
+      "stars_total": 11090,
+      "stars_gained": 434,
       "release": "v0.2.0"
     }
   ]

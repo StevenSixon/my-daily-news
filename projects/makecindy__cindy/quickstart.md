@@ -1,10 +1,6 @@
-## 前提
-- Node.js 22.x
-- pnpm 10.x（v11 未支持）
-- Git LFS
-- 建议对 GitHub 子模块和 pnpm monorepo 有基本了解
-
-## 安装
+### 前提
+- Node.js 22.x、pnpm 10.x、Git LFS 已安装
+- 克隆仓库并拉取子模块：
 ```bash
 git clone https://github.com/makecindy/cindy.git
 cd cindy
@@ -12,15 +8,13 @@ git submodule update --init --recursive cindy-protocol
 git lfs pull
 pnpm install
 ```
-
-## 最小运行
-启动桌面端开发环境（远程模式，需 Cindy 账号）：
+- 运行桌面开发环境（中国大陆账户用 `--region=cn`，其他用 `global`）：
 ```bash
-# 中国大陆账户
-pnpm restart:desktop:remote --region=cn
-# 全球账户
 pnpm restart:desktop:remote --region=global
 ```
-启动后客户端会连接官方云服务，利用现有登录状态继续开发。
+### 最小示例
+1. 启动后看到登录界面，使用你的 Cindy 云账号登录（或选择“Local mode”跳过登录）。
+2. 在主界面选择一个 harness（如 Claude Code）和模型，输入一个简单任务，例如“用 TypeScript 写一个 Hello World 函数并保存为 hello.ts”。
+3. Agent 将自动生成文件并保存到工作目录，同时输出执行结果。
 
-若不想登录，可在登录界面选择“Local mode”仅使用本地代理（无服务端功能）。移动端及详细验证流程见 `CONTRIBUTING.en.md`。
+> 注意：本地模式不支持服务器相关功能；正式使用前可在官网下载预构建包。

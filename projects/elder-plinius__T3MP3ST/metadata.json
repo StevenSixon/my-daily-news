@@ -12,7 +12,7 @@
   ],
   "license": "AGPL-3.0",
   "category": "AI 应用",
-  "classify_reason": "多代理自动化红队平台",
+  "classify_reason": "多Agent自主红队安全平台",
   "one_liner": "将你本机的 AI 编码代理直接变成零日猎手的多智能体红队框架",
   "why_worth_it": "无需新 API 密钥或云服务，即可复用 Claude Code 等已有代理自动完成从侦察到利用的全杀伤链，基准成绩可复现",
   "tags": [
@@ -30,13 +30,13 @@
     "Swarm 多智能体协同利用的可靠性未经过基准测试，目前仅单代理成绩有效"
   ],
   "quality_flags": [],
-  "stars_total": 5225,
+  "stars_total": 5263,
   "created_at": "2026-07-02",
-  "pushed_at": "2026-07-26",
+  "pushed_at": "2026-07-27",
   "latest_release": null,
   "first_seen": "2026-07-05",
-  "last_seen": "2026-07-27",
-  "streak_days": 23,
+  "last_seen": "2026-07-28",
+  "streak_days": 24,
   "analysis_updated_at": "2026-07-08T03:25:48+0800",
   "appearances": [
     {
@@ -197,6 +197,13 @@
       "date": "2026-07-27",
       "reason": "lightweight",
       "stars_total": 5225,
+      "stars_gained": 0,
+      "release": null
+    },
+    {
+      "date": "2026-07-28",
+      "reason": "lightweight",
+      "stars_total": 5263,
       "stars_gained": 0,
       "release": null
     }

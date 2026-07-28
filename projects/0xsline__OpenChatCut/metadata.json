@@ -27,31 +27,30 @@
   ],
   "license": "AGPL-3.0",
   "category": "AI 应用",
-  "classify_reason": "对话式AI视频编辑器",
-  "one_liner": "本地优先的AI视频编辑器，把会话式Agent接入真正的多轨时间线，编辑结果完全可逆。",
-  "why_worth_it": "让AI直接操作视频工程而非输出一次性文件，适合既要专业控制又想用自然语言驱动的创作者/开发者。",
+  "classify_reason": "对话式AI视频编辑器，支持Agent技能与MCP",
+  "one_liner": "Agent原生、本地优先的AI视频编辑器，带专业多轨时间线与MCP集成。",
+  "why_worth_it": "解决AI生成视频不可编辑的痛点，让代理在真实时间线上执行可撤回的编辑操作，适合追求可控生产的创作者和开发者。",
   "tags": [
-    "AI视频编辑器",
+    "AI视频编辑",
+    "Agent原生",
     "本地优先",
-    "Agent框架",
-    "TypeScript"
+    "MCP集成"
   ],
   "confidence": "high",
   "info_gaps": [
-    "未列出支持的AI模型/服务提供商具体名称",
-    "无性能基准数据（渲染速度、大项目体验）",
-    "MCP 工具集的具体范围和未详细说明",
-    "桌面构建（Electron）所需的其他系统依赖未提及"
+    "具体支持哪些 AI 模型及对应的 .env 配置项未在 README 中列出，需查阅 .env.example 或文档",
+    "MCP 能力的具体接口定义与外部代理支持的完整功能边界未明示",
+    "v0.1.6 版本的详细 changelog 未展开，实际新增/修复内容未知"
   ],
   "quality_flags": [],
-  "stars_total": 530,
+  "stars_total": 559,
   "created_at": "2026-07-15",
-  "pushed_at": "2026-07-26",
-  "latest_release": "v0.1.5",
+  "pushed_at": "2026-07-27",
+  "latest_release": "v0.1.6",
   "first_seen": "2026-07-24",
-  "last_seen": "2026-07-27",
-  "streak_days": 4,
-  "analysis_updated_at": "2026-07-27T09:24:33+0800",
+  "last_seen": "2026-07-28",
+  "streak_days": 5,
+  "analysis_updated_at": "2026-07-28T09:15:12+0800",
   "appearances": [
     {
       "date": "2026-07-24",
@@ -80,6 +79,13 @@
       "stars_total": 530,
       "stars_gained": 0,
       "release": "v0.1.5"
+    },
+    {
+      "date": "2026-07-28",
+      "reason": "release_update",
+      "stars_total": 559,
+      "stars_gained": 0,
+      "release": "v0.1.6"
     }
   ]
 }

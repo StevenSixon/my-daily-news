@@ -6,31 +6,31 @@
   "topics": [],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "pi代码代理的Web用户界面",
-  "one_liner": "Pi 编码代理的本地 Web 界面，将终端会话搬进浏览器。",
-  "why_worth_it": "为 pi 用户提供可视化会话管理、文件预览和模型配置，避免在终端翻历史。",
+  "classify_reason": "pi编码agent的Web UI",
+  "one_liner": "pi coding agent的本地 Web 工作台，集会话管理、实时聊天与文件预览于一体。",
+  "why_worth_it": "为 pi agent 用户提供终端外的高效图形化操作界面，让会话回溯、多分支项目切换和安全配置更直观。",
   "tags": [
-    "Agent UI",
+    "TypeScript",
     "本地优先",
-    "自托管",
-    "TypeScript"
+    "Web UI",
+    "Coding Agent"
   ],
   "confidence": "high",
   "info_gaps": [
-    "未提供与同类工具（如 Open WebUI）的横向对比数据",
-    "未说明大规模会话下的内存占用或性能基准",
-    "缺少 API 文档或扩展/插件机制说明",
-    "多用户共享时的安全隔离未提及"
+    "未提及与 pi CLI 的具体最低版本兼容性",
+    "扩展系统的开发文档或 API 说明未在 README 中给出",
+    "无性能基准测试数据",
+    "未说明是否支持多用户同时访问（README 明确警告不可暴露至互联网，推测为单用户本地使用）"
   ],
   "quality_flags": [],
-  "stars_total": 2876,
+  "stars_total": 3008,
   "created_at": "2026-03-22",
-  "pushed_at": "2026-07-26",
-  "latest_release": "v0.8.1",
+  "pushed_at": "2026-07-27",
+  "latest_release": "v0.8.2",
   "first_seen": "2026-07-22",
-  "last_seen": "2026-07-27",
-  "streak_days": 6,
-  "analysis_updated_at": "2026-07-26T09:17:05+0800",
+  "last_seen": "2026-07-28",
+  "streak_days": 7,
+  "analysis_updated_at": "2026-07-28T09:06:40+0800",
   "appearances": [
     {
       "date": "2026-07-22",
@@ -73,6 +73,13 @@
       "stars_total": 2876,
       "stars_gained": 1551,
       "release": "v0.8.1"
+    },
+    {
+      "date": "2026-07-28",
+      "reason": "release_update",
+      "stars_total": 3008,
+      "stars_gained": 1676,
+      "release": "v0.8.2"
     }
   ]
 }
