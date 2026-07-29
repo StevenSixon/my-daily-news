@@ -1,33 +1,33 @@
 {
   "full_name": "0xsline/OpenChatCut",
   "url": "https://github.com/0xsline/OpenChatCut",
-  "description": "Local-first conversational AI video editor with a professional multi-track timeline, Agent Skills, MCP integration, and Remotion-powered rendering.",
+  "description": "Open-source, local-first conversational AI video editor with a professional multi-track timeline, Agent Skills, MCP integration, and Remotion rendering.",
   "language": "TypeScript",
   "topics": [
     "agent-skills",
     "agentic-ai",
     "ai-agent",
     "ai-video-editor",
+    "capcut",
+    "chatcut",
     "claude-code",
     "codex",
+    "desktop-app",
     "electron",
     "ffmpeg",
-    "generative-ai",
-    "glsl",
     "local-first",
     "mcp",
-    "model-context-protocol",
-    "react",
+    "open-source",
+    "openchatcut",
     "remotion",
+    "text-based-video-editing",
     "timeline-editor",
-    "typescript",
     "video-editing",
-    "video-editor",
-    "webgl"
+    "video-editor"
   ],
   "license": "AGPL-3.0",
   "category": "AI 应用",
-  "classify_reason": "对话式AI视频编辑器，支持Agent技能与MCP",
+  "classify_reason": "关键词命中",
   "one_liner": "Agent原生、本地优先的AI视频编辑器，带专业多轨时间线与MCP集成。",
   "why_worth_it": "解决AI生成视频不可编辑的痛点，让代理在真实时间线上执行可撤回的编辑操作，适合追求可控生产的创作者和开发者。",
   "tags": [
@@ -43,13 +43,13 @@
     "v0.1.6 版本的详细 changelog 未展开，实际新增/修复内容未知"
   ],
   "quality_flags": [],
-  "stars_total": 559,
+  "stars_total": 586,
   "created_at": "2026-07-15",
-  "pushed_at": "2026-07-27",
-  "latest_release": "v0.1.6",
+  "pushed_at": "2026-07-28",
+  "latest_release": "v0.1.7",
   "first_seen": "2026-07-24",
-  "last_seen": "2026-07-28",
-  "streak_days": 5,
+  "last_seen": "2026-07-29",
+  "streak_days": 6,
   "analysis_updated_at": "2026-07-28T09:15:12+0800",
   "appearances": [
     {
@@ -86,6 +86,13 @@
       "stars_total": 559,
       "stars_gained": 0,
       "release": "v0.1.6"
+    },
+    {
+      "date": "2026-07-29",
+      "reason": "release_update",
+      "stars_total": 586,
+      "stars_gained": 0,
+      "release": "v0.1.7"
     }
   ]
 }

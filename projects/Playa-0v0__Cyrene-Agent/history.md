@@ -1,1 +1,2 @@
 - 2026-07-28 | 🆕新发现 | ⭐298(+0) | release=models-bge-m3-v1.0.0
+- 2026-07-29 | lightweight | ⭐307(+0) | release=models-bge-m3-v1.0.0

@@ -27,20 +27,20 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "OWASP LLM安全漏洞培训平台",
+  "classify_reason": "关键词命中",
   "one_liner": "An intentionally vulnerable OWASP LLM Top 10 training platform for AI Security, Prompt Injection, RAG Security, Agent Security, and GenAI penetration testing.",
   "why_worth_it": "",
   "tags": [],
   "confidence": "medium",
   "info_gaps": [],
   "quality_flags": [],
-  "stars_total": 252,
+  "stars_total": 253,
   "created_at": "2026-07-15",
   "pushed_at": "2026-07-18",
   "latest_release": "v1.0.0",
   "first_seen": "2026-07-25",
-  "last_seen": "2026-07-27",
-  "streak_days": 3,
+  "last_seen": "2026-07-29",
+  "streak_days": 4,
   "analysis_updated_at": null,
   "appearances": [
     {
@@ -61,6 +61,13 @@
       "date": "2026-07-27",
       "reason": "lightweight",
       "stars_total": 252,
+      "stars_gained": 0,
+      "release": "v1.0.0"
+    },
+    {
+      "date": "2026-07-29",
+      "reason": "lightweight",
+      "stars_total": 253,
       "stars_gained": 0,
       "release": "v1.0.0"
     }

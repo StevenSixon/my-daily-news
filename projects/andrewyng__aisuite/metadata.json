@@ -6,7 +6,7 @@
   "topics": [],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "统一接口对接多个生成式AI提供商的工具",
+  "classify_reason": "关键词命中",
   "one_liner": "统一接口连接多家 LLM，内建 Agent、工具调用与 MCP 支持。",
   "why_worth_it": "一个轻量库消除多供应商 API 差异，适合想快速切换模型并构建带工具调用的智能体的开发者。",
   "tags": [
@@ -23,13 +23,13 @@
     "TypeScript 版本尚处初始阶段，功能完整性未知"
   ],
   "quality_flags": [],
-  "stars_total": 15402,
+  "stars_total": 15684,
   "created_at": "2024-06-30",
   "pushed_at": "2026-07-25",
   "latest_release": "v0.1.3",
   "first_seen": "2026-07-27",
-  "last_seen": "2026-07-27",
-  "streak_days": 1,
+  "last_seen": "2026-07-29",
+  "streak_days": 2,
   "analysis_updated_at": "2026-07-27T09:15:22+0800",
   "appearances": [
     {
@@ -37,6 +37,13 @@
       "reason": "new",
       "stars_total": 15402,
       "stars_gained": 187,
+      "release": "v0.1.3"
+    },
+    {
+      "date": "2026-07-29",
+      "reason": "lightweight",
+      "stars_total": 15684,
+      "stars_gained": 62,
       "release": "v0.1.3"
     }
   ]

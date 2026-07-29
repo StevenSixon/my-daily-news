@@ -6,7 +6,7 @@
   "topics": [],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "让Claude观看视频的AI工具",
+  "classify_reason": "关键词命中",
   "one_liner": "让Claude直接“观看”视频，提取关键帧与字幕实现多模态问答",
   "why_worth_it": "弥补AI视频盲区，零配置自动获取帧/字幕/转录，成本可控，适配50+ Agent宿主",
   "tags": [
@@ -24,13 +24,13 @@
     "Windows 系统的安装流程仅说明会“打印命令”，未给出具体 choco/winget 示例"
   ],
   "quality_flags": [],
-  "stars_total": 11090,
+  "stars_total": 12105,
   "created_at": "2026-04-24",
   "pushed_at": "2026-07-01",
   "latest_release": "v0.2.0",
   "first_seen": "2026-07-06",
-  "last_seen": "2026-07-28",
-  "streak_days": 11,
+  "last_seen": "2026-07-29",
+  "streak_days": 12,
   "analysis_updated_at": "2026-07-28T09:09:24+0800",
   "appearances": [
     {
@@ -108,6 +108,13 @@
       "reason": "star_jump",
       "stars_total": 11090,
       "stars_gained": 434,
+      "release": "v0.2.0"
+    },
+    {
+      "date": "2026-07-29",
+      "reason": "lightweight",
+      "stars_total": 12105,
+      "stars_gained": 988,
       "release": "v0.2.0"
     }
   ]

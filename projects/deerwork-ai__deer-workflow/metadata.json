@@ -18,7 +18,7 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "图工程运行时，编排Agent工作流",
+  "classify_reason": "关键词命中",
   "one_liner": "用TypeScript定义可审查的Agent工作流，运行时Agent可热替换",
   "why_worth_it": "将AI流程编排从黑盒对话拉回可审计代码，Agent按需换模型，输出可观测，适合想掌控流程的极客",
   "tags": [
@@ -36,19 +36,26 @@
     "仅两个示例，未覆盖复杂错误恢复、人工审批等模式"
   ],
   "quality_flags": [],
-  "stars_total": 244,
+  "stars_total": 319,
   "created_at": "2026-07-26",
   "pushed_at": "2026-07-27",
   "latest_release": "v0.2.0",
   "first_seen": "2026-07-28",
-  "last_seen": "2026-07-28",
-  "streak_days": 1,
+  "last_seen": "2026-07-29",
+  "streak_days": 2,
   "analysis_updated_at": "2026-07-28T09:03:03+0800",
   "appearances": [
     {
       "date": "2026-07-28",
       "reason": "new",
       "stars_total": 244,
+      "stars_gained": 0,
+      "release": "v0.2.0"
+    },
+    {
+      "date": "2026-07-29",
+      "reason": "star_jump",
+      "stars_total": 319,
       "stars_gained": 0,
       "release": "v0.2.0"
     }
