@@ -1,18 +1,23 @@
 {
   "full_name": "citrolabs/ego-lite",
   "url": "https://github.com/citrolabs/ego-lite",
-  "description": "The fastest browser for AI agents to run web automation, built for sharing your logged-in browser state with your AI agents, like Codex or Claude Code, without disturbing you. Zero cost, zero config.",
+  "description": "The fastest browser for AI agents to run browser automation, built for sharing your logged-in browser state with your AI agents, like Codex or Claude Code, without disturbing you. Zero cost, zero config.",
   "language": "JavaScript",
   "topics": [
     "agent-skills",
     "ai-agent",
+    "automation",
     "browser",
+    "browser-automation",
+    "claude-code",
+    "codex",
+    "hermes-agent",
     "skills",
     "skills-sh"
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "为AI代理提供浏览器状态共享的自动化工具",
+  "classify_reason": "关键词命中",
   "one_liner": "AI代理专用浏览器，并行空间执行网页自动化，零配置共享登录态。",
   "why_worth_it": "解决代理与用户争用浏览器、登录不共享的痛点，无需额外框架，一条命令即用，比同类快2.5倍。",
   "tags": [
@@ -29,13 +34,13 @@
     "技能积累功能尚未发布（README 称 coming soon）"
   ],
   "quality_flags": [],
-  "stars_total": 4548,
+  "stars_total": 6020,
   "created_at": "2026-04-16",
-  "pushed_at": "2026-07-26",
+  "pushed_at": "2026-07-29",
   "latest_release": "v1.2.5",
   "first_seen": "2026-07-24",
-  "last_seen": "2026-07-27",
-  "streak_days": 4,
+  "last_seen": "2026-07-30",
+  "streak_days": 5,
   "analysis_updated_at": "2026-07-26T09:17:35+0800",
   "appearances": [
     {
@@ -64,6 +69,13 @@
       "reason": "lightweight",
       "stars_total": 4548,
       "stars_gained": 900,
+      "release": "v1.2.5"
+    },
+    {
+      "date": "2026-07-30",
+      "reason": "star_jump",
+      "stars_total": 6020,
+      "stars_gained": 4863,
       "release": "v1.2.5"
     }
   ]
