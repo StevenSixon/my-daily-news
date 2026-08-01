@@ -4,10 +4,15 @@
   "description": "The first open-source compression model trained specifically for coding agents. 4B, Apache 2.0.",
   "language": "Python",
   "topics": [
+    "agentic-coding",
     "ai",
+    "ai-agents",
+    "ai-coding",
     "ai-infrastructure",
     "developer-tools",
-    "llms"
+    "llm-gateway",
+    "llms",
+    "token-optimization"
   ],
   "license": "Apache-2.0",
   "category": "AI 应用",
@@ -18,19 +23,26 @@
   "confidence": "medium",
   "info_gaps": [],
   "quality_flags": [],
-  "stars_total": 342,
+  "stars_total": 341,
   "created_at": "2026-07-15",
   "pushed_at": "2026-07-31",
   "latest_release": null,
   "first_seen": "2026-07-31",
-  "last_seen": "2026-07-31",
-  "streak_days": 1,
+  "last_seen": "2026-08-01",
+  "streak_days": 2,
   "analysis_updated_at": null,
   "appearances": [
     {
       "date": "2026-07-31",
       "reason": "new",
       "stars_total": 342,
+      "stars_gained": 0,
+      "release": null
+    },
+    {
+      "date": "2026-08-01",
+      "reason": "lightweight",
+      "stars_total": 341,
       "stars_gained": 0,
       "release": null
     }

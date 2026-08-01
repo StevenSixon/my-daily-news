@@ -13,3 +13,4 @@
 - 2026-07-29 | lightweight | ⭐240(+0) | release=v0.7.0
 - 2026-07-30 | lightweight | ⭐240(+0) | release=v0.7.0
 - 2026-07-31 | release_update | ⭐271(+0) | release=v0.8.0
+- 2026-08-01 | lightweight | ⭐285(+0) | release=v0.8.0
