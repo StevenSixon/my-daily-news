@@ -1,7 +1,7 @@
 {
   "full_name": "TencentCloud/TencentDB-Agent-Memory",
   "url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
-  "description": "TencentDB Agent Memory delivers fully local long-term memory for AI Agents via a 4-tier progressive pipeline, with zero external API dependencies.",
+  "description": "TencentDB Agent Memory is a team-level memory hub for AI Agents — turning conversations, docs, and code into four reusable memory assets (Chat Memory, Skill, LLM-Wiki, Code-Graph) that are governed, shared, and equipped across agents and frameworks.",
   "language": "TypeScript",
   "topics": [
     "agent",
@@ -28,13 +28,13 @@
   "confidence": "high",
   "info_gaps": [],
   "quality_flags": [],
-  "stars_total": 8830,
+  "stars_total": 10297,
   "created_at": "2026-04-07",
-  "pushed_at": "2026-07-14",
-  "latest_release": "v0.3.6",
+  "pushed_at": "2026-07-29",
+  "latest_release": "v1.0.1",
   "first_seen": "2026-07-09",
-  "last_seen": "2026-07-15",
-  "streak_days": 3,
+  "last_seen": "2026-08-02",
+  "streak_days": 4,
   "analysis_updated_at": "2026-07-09T01:17:26+0800",
   "appearances": [
     {
@@ -57,6 +57,13 @@
       "stars_total": 8830,
       "stars_gained": 2231,
       "release": "v0.3.6"
+    },
+    {
+      "date": "2026-08-02",
+      "reason": "release_update",
+      "stars_total": 10297,
+      "stars_gained": 227,
+      "release": "v1.0.1"
     }
   ]
 }

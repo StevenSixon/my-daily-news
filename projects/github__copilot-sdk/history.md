@@ -2,3 +2,4 @@
 - 2026-07-18 | lightweight | ⭐9761(+234) | release=rust/v1.0.7
 - 2026-07-20 | lightweight | ⭐9961(+39) | release=rust/v1.0.7
 - 2026-08-01 | release_update | ⭐10137(+7) | release=rust/v1.0.8
+- 2026-08-02 | lightweight | ⭐10276(+142) | release=rust/v1.0.8
