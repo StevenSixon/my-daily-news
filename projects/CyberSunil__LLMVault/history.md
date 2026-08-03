@@ -5,3 +5,4 @@
 - 2026-07-30 | lightweight | ⭐256(+0) | release=v1.0.0
 - 2026-07-31 | lightweight | ⭐260(+0) | release=v1.0.0
 - 2026-08-01 | lightweight | ⭐261(+0) | release=v1.0.0
+- 2026-08-03 | release_update | ⭐262(+0) | release=v1.1.0
