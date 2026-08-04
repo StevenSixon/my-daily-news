@@ -1,6 +1,321 @@
 {
   "editions": [
     {
+      "date": "2026-08-04",
+      "count": 5,
+      "projects": [
+        {
+          "id": "FareedKhan-dev__kimi-k3-in-c",
+          "fullName": "FareedKhan-dev/kimi-k3-in-c",
+          "owner": "FareedKhan-dev",
+          "name": "kimi-k3-in-c",
+          "url": "https://github.com/FareedKhan-dev/kimi-k3-in-c",
+          "oneLiner": "A 2.78-trillion-parameter Kimi K3 running inference on a single CPU in 8.24 GB of RAM. Portable C99: no BLAS, no framework, no GPU.",
+          "description": "A 2.78-trillion-parameter Kimi K3 running inference on a single CPU in 8.24 GB of RAM. Portable C99: no BLAS, no framework, no GPU.",
+          "language": "C",
+          "category": "AI 应用",
+          "license": "Apache-2.0",
+          "starsTotal": 1244,
+          "starsGained": 0,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-08-01",
+          "pushedAt": "2026-08-01",
+          "latestRelease": "v0.1.0",
+          "firstSeen": "2026-08-04",
+          "topics": [
+            "avx2",
+            "c99",
+            "cpu-inference",
+            "deep-learning",
+            "from-scratch",
+            "inference-engine",
+            "kimi-k3",
+            "linear-attention",
+            "llm",
+            "llm-inference",
+            "machine-learning",
+            "memory-efficient",
+            "mixture-of-experts",
+            "moe",
+            "mxfp4",
+            "quantization",
+            "simd",
+            "systems-programming",
+            "transformer",
+            "zero-dependencies"
+          ],
+          "appearances": [
+            {
+              "date": "2026-08-04",
+              "reason": "new",
+              "starsTotal": 1244,
+              "starsGained": 0,
+              "release": "v0.1.0"
+            }
+          ],
+          "analysis": []
+        },
+        {
+          "id": "Alishahryar1__free-claude-code",
+          "fullName": "Alishahryar1/free-claude-code",
+          "owner": "Alishahryar1",
+          "name": "free-claude-code",
+          "url": "https://github.com/Alishahryar1/free-claude-code",
+          "oneLiner": "Use Claude Code, Codex and Pi for free from your terminal, app, IDE, or phone like OpenClaw (voice supported)",
+          "description": "Use Claude Code, Codex and Pi for free from your terminal, app, IDE, or phone like OpenClaw (voice supported)",
+          "language": "Python",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 44048,
+          "starsGained": 278,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-01-28",
+          "pushedAt": "2026-08-03",
+          "latestRelease": "",
+          "firstSeen": "2026-08-04",
+          "topics": [],
+          "appearances": [
+            {
+              "date": "2026-08-04",
+              "reason": "new",
+              "starsTotal": 44048,
+              "starsGained": 278,
+              "release": ""
+            }
+          ],
+          "analysis": []
+        },
+        {
+          "id": "genspark-ai__genoffice",
+          "fullName": "genspark-ai/genoffice",
+          "owner": "genspark-ai",
+          "name": "genoffice",
+          "url": "https://github.com/genspark-ai/genoffice",
+          "oneLiner": "An AI-native office suite for macOS and Windows: word processor, spreadsheet, presentations, and PDF.",
+          "description": "An AI-native office suite for macOS and Windows: word processor, spreadsheet, presentations, and PDF.",
+          "language": "TypeScript",
+          "category": "AI 应用",
+          "license": "Apache-2.0",
+          "starsTotal": 653,
+          "starsGained": 0,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-07-31",
+          "pushedAt": "2026-08-03",
+          "latestRelease": "v0.4.110",
+          "firstSeen": "2026-08-04",
+          "topics": [
+            "ai",
+            "docx",
+            "electron",
+            "office-suite",
+            "pdf",
+            "pptx",
+            "xlsx"
+          ],
+          "appearances": [
+            {
+              "date": "2026-08-04",
+              "reason": "new",
+              "starsTotal": 653,
+              "starsGained": 0,
+              "release": "v0.4.110"
+            }
+          ],
+          "analysis": []
+        },
+        {
+          "id": "livekit__agents",
+          "fullName": "livekit/agents",
+          "owner": "livekit",
+          "name": "agents",
+          "url": "https://github.com/livekit/agents",
+          "oneLiner": "A framework for building realtime voice AI agents 🤖🎙️📹 ",
+          "description": "A framework for building realtime voice AI agents 🤖🎙️📹 ",
+          "language": "Python",
+          "category": "AI 应用",
+          "license": "Apache-2.0",
+          "starsTotal": 11988,
+          "starsGained": 148,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2023-10-19",
+          "pushedAt": "2026-08-04",
+          "latestRelease": "livekit-agents@1.6.8",
+          "firstSeen": "2026-08-04",
+          "topics": [
+            "agents",
+            "ai",
+            "openai",
+            "real-time",
+            "video",
+            "voice"
+          ],
+          "appearances": [
+            {
+              "date": "2026-08-04",
+              "reason": "new",
+              "starsTotal": 11988,
+              "starsGained": 148,
+              "release": "livekit-agents@1.6.8"
+            }
+          ],
+          "analysis": []
+        },
+        {
+          "id": "vercel-labs__marketing-team-eve-template",
+          "fullName": "vercel-labs/marketing-team-eve-template",
+          "owner": "vercel-labs",
+          "name": "marketing-team-eve-template",
+          "url": "https://github.com/vercel-labs/marketing-team-eve-template",
+          "oneLiner": "Team of marketing agents built on eve.",
+          "description": "Team of marketing agents built on eve.",
+          "language": "TypeScript",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 297,
+          "starsGained": 0,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-07-26",
+          "pushedAt": "2026-08-03",
+          "latestRelease": "",
+          "firstSeen": "2026-08-04",
+          "topics": [
+            "ai",
+            "eve",
+            "marketing",
+            "notion",
+            "resend",
+            "typefully",
+            "vercel"
+          ],
+          "appearances": [
+            {
+              "date": "2026-08-04",
+              "reason": "new",
+              "starsTotal": 297,
+              "starsGained": 0,
+              "release": ""
+            }
+          ],
+          "analysis": []
+        }
+      ],
+      "news": [
+        {
+          "title": "Use Claude for Outlook",
+          "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9aa2ZjUkJ6UzItQ0xBak5LamhPOWFUOWtmcnN4cE5iZ1Jsa2pvV3kzekVmWV9BRVhBa0ZjVnkydnprT0FsSmdCc0U4bDRCWFVDMktxbFhCSmduM3BvVjZUUzBDOUt1VjZmc192WHoxMERiX2R4MkN2VUtn?oc=5",
+          "source": "Claude",
+          "sourceType": "official",
+          "published": "2026-08-03",
+          "summary": "",
+          "category": ""
+        },
+        {
+          "title": "Use Claude Cowork on web, desktop, and mobile",
+          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPMFhwNFJsOU53NjFJdElaNDhTVjRkZ3p4SjFHUVYxblJKMC1rdjNLS0RJa3JhYUZBbFJIM0VFTUZLUk5YRkNHY2dxT3FZdklFeUloQW50eTRIaHBkZnB1N2xGVEJMT2ppZnBLT3dTa2tRYWxOd0Voa1hpT0JvUXZZa2FaNl84M296Wm9USUZ4dEpvVE0wWEE?oc=5",
+          "source": "Claude",
+          "sourceType": "official",
+          "published": "2026-08-03",
+          "summary": "",
+          "category": ""
+        },
+        {
+          "title": "How we built a realtime system for responsive voice AI in six months",
+          "url": "https://openai.com/index/continuous-voice-interaction-with-gpt-live",
+          "source": "OpenAI",
+          "sourceType": "official",
+          "published": "2026-08-03",
+          "summary": "",
+          "category": ""
+        },
+        {
+          "title": "Circles powers telco personalization with OpenAI technology",
+          "url": "https://openai.com/index/circles",
+          "source": "OpenAI",
+          "sourceType": "official",
+          "published": "2026-08-03",
+          "summary": "",
+          "category": ""
+        },
+        {
+          "title": "SQLite Critical CVEs or LLM Slop?",
+          "url": "https://research.jfrog.com/post/sqlite-critical-cves-or-llm-slops/",
+          "source": "Hacker News",
+          "sourceType": "community",
+          "published": "2026-08-03",
+          "summary": "",
+          "category": ""
+        },
+        {
+          "title": "Prevent cognitive debt by manually retyping LLM-generated code",
+          "url": "https://ankursethi.com/blog/prevent-cognitive-debt-by-manually-retyping-llm-generated-code/",
+          "source": "Hacker News",
+          "sourceType": "community",
+          "published": "2026-08-03",
+          "summary": "",
+          "category": ""
+        },
+        {
+          "title": "OpenClaw and Ollama in Agentic AI: Toward Fully Autonomous and Scalable AI Agent Systems",
+          "url": "https://arxiv.org/abs/2607.28629",
+          "source": "arXiv cs.AI",
+          "sourceType": "paper",
+          "published": "2026-08-03",
+          "summary": "",
+          "category": ""
+        },
+        {
+          "title": "Can AI Evaluate AI Scientists? A Benchmarking Study of Autonomous Research Generation Systems Using Automated Multi-Model Review",
+          "url": "https://arxiv.org/abs/2607.28631",
+          "source": "arXiv cs.AI",
+          "sourceType": "paper",
+          "published": "2026-08-03",
+          "summary": "",
+          "category": ""
+        },
+        {
+          "title": "Can LLMs Really Understand Item Difficulty Levels? Implications for Automated Item Generation Using LLMs",
+          "url": "https://arxiv.org/abs/2607.28634",
+          "source": "arXiv cs.CL",
+          "sourceType": "paper",
+          "published": "2026-08-03",
+          "summary": "",
+          "category": ""
+        },
+        {
+          "title": "Imbalanced Data Clustering via Targeted Data Augmentation Using GMM and LLM",
+          "url": "https://arxiv.org/abs/2607.28635",
+          "source": "arXiv cs.CL",
+          "sourceType": "paper",
+          "published": "2026-08-03",
+          "summary": "",
+          "category": ""
+        },
+        {
+          "title": "DeepSeek V4-Flash (284B MoE) at 33 tok/s single / 68 tok/s aggregate on 2× RTX 3090 + a used quad-Xeon DDR4 server — full config",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1veow4b/deepseek_v4flash_284b_moe_at_33_toks_single_68/",
+          "source": "r/LocalLLaMA",
+          "sourceType": "community",
+          "published": "2026-08-03",
+          "summary": "",
+          "category": ""
+        },
+        {
+          "title": "Qwen3.8-Max matches Kimi K3 and DeepSeek V4 Flash",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1vellf2/qwen38max_matches_kimi_k3_and_deepseek_v4_flash/",
+          "source": "r/LocalLLaMA",
+          "sourceType": "community",
+          "published": "2026-08-03",
+          "summary": "",
+          "category": ""
+        }
+      ]
+    },
+    {
       "date": "2026-08-03",
       "count": 5,
       "projects": [
@@ -20,8 +335,8 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-04-21",
-          "pushedAt": "2026-08-02",
-          "latestRelease": "desktop-v1.19.3",
+          "pushedAt": "2026-08-04",
+          "latestRelease": "desktop-v1.19.5",
           "firstSeen": "2026-08-03",
           "topics": [
             "agent",
@@ -48,6 +363,13 @@
               "starsTotal": 29069,
               "starsGained": 333,
               "release": "desktop-v1.19.3"
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "release_update",
+              "starsTotal": 29936,
+              "starsGained": 883,
+              "release": "desktop-v1.19.5"
             }
           ],
           "analysis": []
@@ -68,7 +390,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-05-06",
-          "pushedAt": "2026-08-01",
+          "pushedAt": "2026-08-03",
           "latestRelease": "",
           "firstSeen": "2026-08-03",
           "topics": [],
@@ -78,6 +400,13 @@
               "reason": "new",
               "starsTotal": 20001,
               "starsGained": 139,
+              "release": ""
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "lightweight",
+              "starsTotal": 20363,
+              "starsGained": 384,
               "release": ""
             }
           ],
@@ -99,7 +428,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-07-17",
-          "pushedAt": "2026-08-03",
+          "pushedAt": "2026-08-04",
           "latestRelease": "",
           "firstSeen": "2026-08-03",
           "topics": [
@@ -118,6 +447,13 @@
               "date": "2026-08-03",
               "reason": "new",
               "starsTotal": 1932,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "lightweight",
+              "starsTotal": 2051,
               "starsGained": 0,
               "release": ""
             }
@@ -140,7 +476,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-08-01",
-          "pushedAt": "2026-08-02",
+          "pushedAt": "2026-08-03",
           "latestRelease": "",
           "firstSeen": "2026-08-03",
           "topics": [
@@ -159,6 +495,13 @@
               "date": "2026-08-03",
               "reason": "new",
               "starsTotal": 201,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "lightweight",
+              "starsTotal": 253,
               "starsGained": 0,
               "release": ""
             }
@@ -201,6 +544,13 @@
               "date": "2026-08-03",
               "reason": "new",
               "starsTotal": 230,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "lightweight",
+              "starsTotal": 271,
               "starsGained": 0,
               "release": ""
             }
@@ -298,6 +648,13 @@
               "starsTotal": 411,
               "starsGained": 0,
               "release": ""
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "lightweight",
+              "starsTotal": 424,
+              "starsGained": 0,
+              "release": ""
             }
           ],
           "analysis": []
@@ -392,6 +749,13 @@
               "starsTotal": 114780,
               "starsGained": 588,
               "release": ""
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "lightweight",
+              "starsTotal": 115555,
+              "starsGained": 775,
+              "release": ""
             }
           ],
           "analysis": []
@@ -466,7 +830,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-07-24",
-          "pushedAt": "2026-08-01",
+          "pushedAt": "2026-08-03",
           "latestRelease": "",
           "firstSeen": "2026-08-02",
           "topics": [
@@ -494,6 +858,13 @@
               "date": "2026-08-03",
               "reason": "star_jump",
               "starsTotal": 293,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "lightweight",
+              "starsTotal": 374,
               "starsGained": 0,
               "release": ""
             }
@@ -578,7 +949,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-05-13",
-          "pushedAt": "2026-08-02",
+          "pushedAt": "2026-08-03",
           "latestRelease": "v1.0.0",
           "firstSeen": "2026-08-01",
           "topics": [],
@@ -603,6 +974,13 @@
               "starsTotal": 13481,
               "starsGained": 1141,
               "release": "v1.0.0"
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "lightweight",
+              "starsTotal": 15792,
+              "starsGained": 6154,
+              "release": "v1.0.0"
             }
           ],
           "analysis": []
@@ -623,7 +1001,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-07-15",
-          "pushedAt": "2026-08-01",
+          "pushedAt": "2026-08-04",
           "latestRelease": "v0.3.0",
           "firstSeen": "2026-08-01",
           "topics": [
@@ -661,6 +1039,13 @@
               "starsTotal": 345,
               "starsGained": 0,
               "release": "v0.3.0"
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "lightweight",
+              "starsTotal": 354,
+              "starsGained": 0,
+              "release": "v0.3.0"
             }
           ],
           "analysis": []
@@ -681,8 +1066,8 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-07-05",
-          "pushedAt": "2026-08-02",
-          "latestRelease": "v0.67.0",
+          "pushedAt": "2026-08-03",
+          "latestRelease": "v0.68.0",
           "firstSeen": "2026-08-01",
           "topics": [
             "ai",
@@ -726,6 +1111,13 @@
               "starsTotal": 291,
               "starsGained": 0,
               "release": "v0.67.0"
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "release_update",
+              "starsTotal": 294,
+              "starsGained": 0,
+              "release": "v0.68.0"
             }
           ],
           "analysis": []
@@ -887,6 +1279,13 @@
               "starsTotal": 59045,
               "starsGained": 5601,
               "release": ""
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "lightweight",
+              "starsTotal": 60745,
+              "starsGained": 7554,
+              "release": ""
             }
           ],
           "analysis": []
@@ -955,7 +1354,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-07-15",
-          "pushedAt": "2026-08-02",
+          "pushedAt": "2026-08-03",
           "latestRelease": "",
           "firstSeen": "2026-07-31",
           "topics": [
@@ -997,6 +1396,13 @@
               "starsTotal": 344,
               "starsGained": 0,
               "release": ""
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "lightweight",
+              "starsTotal": 344,
+              "starsGained": 0,
+              "release": ""
             }
           ],
           "analysis": []
@@ -1017,7 +1423,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-07-16",
-          "pushedAt": "2026-07-31",
+          "pushedAt": "2026-08-03",
           "latestRelease": "v1.0.4",
           "firstSeen": "2026-07-31",
           "topics": [
@@ -1068,6 +1474,13 @@
               "date": "2026-08-03",
               "reason": "lightweight",
               "starsTotal": 526,
+              "starsGained": 0,
+              "release": "v1.0.4"
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "lightweight",
+              "starsTotal": 542,
               "starsGained": 0,
               "release": "v1.0.4"
             }
@@ -1299,8 +1712,8 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-01-14",
-          "pushedAt": "2026-08-02",
-          "latestRelease": "v0.18.12",
+          "pushedAt": "2026-08-03",
+          "latestRelease": "v0.18.13",
           "firstSeen": "2026-07-30",
           "topics": [],
           "appearances": [
@@ -1338,6 +1751,13 @@
               "starsTotal": 20322,
               "starsGained": 2925,
               "release": "v0.18.12"
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "release_update",
+              "starsTotal": 20678,
+              "starsGained": 3429,
+              "release": "v0.18.13"
             }
           ],
           "analysis": []
@@ -1358,8 +1778,8 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-07-24",
-          "pushedAt": "2026-08-02",
-          "latestRelease": "v0.6.0",
+          "pushedAt": "2026-08-03",
+          "latestRelease": "v0.7.0",
           "firstSeen": "2026-07-30",
           "topics": [
             "agent-observability",
@@ -1417,6 +1837,13 @@
               "starsTotal": 541,
               "starsGained": 0,
               "release": "v0.6.0"
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "release_update",
+              "starsTotal": 546,
+              "starsGained": 0,
+              "release": "v0.7.0"
             }
           ],
           "analysis": []
@@ -1438,7 +1865,7 @@
           "isNew": true,
           "createdAt": "2026-07-27",
           "pushedAt": "2026-08-03",
-          "latestRelease": "v1.2.0",
+          "latestRelease": "v1.3.0",
           "firstSeen": "2026-07-30",
           "topics": [
             "agent",
@@ -1482,6 +1909,13 @@
               "starsTotal": 1735,
               "starsGained": 0,
               "release": "v1.2.0"
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "release_update",
+              "starsTotal": 1813,
+              "starsGained": 0,
+              "release": "v1.3.0"
             }
           ],
           "analysis": []
@@ -2032,6 +2466,13 @@
               "starsTotal": 567,
               "starsGained": 0,
               "release": ""
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "lightweight",
+              "starsTotal": 568,
+              "starsGained": 0,
+              "release": ""
             }
           ],
           "analysis": [
@@ -2182,6 +2623,13 @@
               "starsTotal": 377,
               "starsGained": 0,
               "release": "v0.2.0"
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "lightweight",
+              "starsTotal": 384,
+              "starsGained": 0,
+              "release": "v0.2.0"
             }
           ],
           "analysis": [
@@ -2263,8 +2711,8 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-07-19",
-          "pushedAt": "2026-07-31",
-          "latestRelease": "v0.1.5",
+          "pushedAt": "2026-08-03",
+          "latestRelease": "v0.2.0",
           "firstSeen": "2026-07-28",
           "topics": [
             "agent",
@@ -2330,6 +2778,13 @@
               "starsTotal": 257,
               "starsGained": 0,
               "release": "v0.1.5"
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "release_update",
+              "starsTotal": 345,
+              "starsGained": 0,
+              "release": "v0.2.0"
             }
           ],
           "analysis": [
@@ -2475,6 +2930,13 @@
               "date": "2026-08-03",
               "reason": "lightweight",
               "starsTotal": 343,
+              "starsGained": 0,
+              "release": "models-bge-m3-v1.0.0"
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "lightweight",
+              "starsTotal": 345,
               "starsGained": 0,
               "release": "models-bge-m3-v1.0.0"
             }
@@ -3021,6 +3483,13 @@
               "starsTotal": 15695,
               "starsGained": 5225,
               "release": ""
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "lightweight",
+              "starsTotal": 16299,
+              "starsGained": 5012,
+              "release": ""
             }
           ],
           "analysis": [
@@ -3338,7 +3807,7 @@
           "streakDays": 3,
           "isNew": false,
           "createdAt": "2024-12-01",
-          "pushedAt": "2026-08-02",
+          "pushedAt": "2026-08-03",
           "latestRelease": "v0.11.3",
           "firstSeen": "2026-07-14",
           "topics": [
@@ -3416,6 +3885,13 @@
               "reason": "lightweight",
               "starsTotal": 46547,
               "starsGained": 3431,
+              "release": "v0.11.3"
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "lightweight",
+              "starsTotal": 46715,
+              "starsGained": 2978,
               "release": "v0.11.3"
             }
           ],
@@ -3672,8 +4148,8 @@
           "streakDays": 2,
           "isNew": false,
           "createdAt": "2026-07-22",
-          "pushedAt": "2026-08-03",
-          "latestRelease": "v0.1.26",
+          "pushedAt": "2026-08-04",
+          "latestRelease": "v0.1.27",
           "firstSeen": "2026-07-27",
           "topics": [
             "agent",
@@ -3746,6 +4222,13 @@
               "starsTotal": 1482,
               "starsGained": 0,
               "release": "v0.1.26"
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "release_update",
+              "starsTotal": 1634,
+              "starsGained": 0,
+              "release": "v0.1.27"
             }
           ],
           "analysis": [
@@ -3982,7 +4465,7 @@
           "streakDays": 3,
           "isNew": false,
           "createdAt": "2026-07-08",
-          "pushedAt": "2026-08-02",
+          "pushedAt": "2026-08-03",
           "latestRelease": "v0.9.18",
           "firstSeen": "2026-07-26",
           "topics": [
@@ -4055,6 +4538,13 @@
               "date": "2026-08-03",
               "reason": "release_update",
               "starsTotal": 635,
+              "starsGained": 0,
+              "release": "v0.9.18"
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "lightweight",
+              "starsTotal": 653,
               "starsGained": 0,
               "release": "v0.9.18"
             }
@@ -4457,6 +4947,13 @@
               "date": "2026-08-03",
               "reason": "lightweight",
               "starsTotal": 1855,
+              "starsGained": 0,
+              "release": "v0.8.1"
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "lightweight",
+              "starsTotal": 1878,
               "starsGained": 0,
               "release": "v0.8.1"
             }
@@ -5130,7 +5627,7 @@
           "streakDays": 5,
           "isNew": false,
           "createdAt": "2026-07-15",
-          "pushedAt": "2026-08-02",
+          "pushedAt": "2026-08-03",
           "latestRelease": "v0.1.7",
           "firstSeen": "2026-07-24",
           "topics": [
@@ -5232,6 +5729,13 @@
               "starsTotal": 764,
               "starsGained": 0,
               "release": "v0.1.7"
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "lightweight",
+              "starsTotal": 779,
+              "starsGained": 0,
+              "release": "v0.1.7"
             }
           ],
           "analysis": [
@@ -5310,8 +5814,8 @@
           "streakDays": 5,
           "isNew": false,
           "createdAt": "2026-07-17",
-          "pushedAt": "2026-08-02",
-          "latestRelease": "V2.4.0",
+          "pushedAt": "2026-08-03",
+          "latestRelease": "V2.4.2",
           "firstSeen": "2026-07-24",
           "topics": [
             "agentic-ai",
@@ -5412,6 +5916,13 @@
               "starsTotal": 353,
               "starsGained": 0,
               "release": "V2.4.0"
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "release_update",
+              "starsTotal": 354,
+              "starsGained": 0,
+              "release": "V2.4.2"
             }
           ],
           "analysis": [
@@ -5635,6 +6146,13 @@
               "starsTotal": 15901,
               "starsGained": 576,
               "release": "v0.1.3"
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "lightweight",
+              "starsTotal": 15963,
+              "starsGained": 444,
+              "release": "v0.1.3"
             }
           ],
           "analysis": [
@@ -5712,8 +6230,8 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-07-22",
-          "pushedAt": "2026-08-03",
-          "latestRelease": "v0.1.26",
+          "pushedAt": "2026-08-04",
+          "latestRelease": "v0.1.27",
           "firstSeen": "2026-07-27",
           "topics": [
             "agent",
@@ -5786,6 +6304,13 @@
               "starsTotal": 1482,
               "starsGained": 0,
               "release": "v0.1.26"
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "release_update",
+              "starsTotal": 1634,
+              "starsGained": 0,
+              "release": "v0.1.27"
             }
           ],
           "analysis": [
@@ -5873,7 +6398,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-07-10",
-          "pushedAt": "2026-08-01",
+          "pushedAt": "2026-08-03",
           "latestRelease": "v0.1.1",
           "firstSeen": "2026-07-27",
           "topics": [
@@ -5944,6 +6469,13 @@
               "date": "2026-08-03",
               "reason": "lightweight",
               "starsTotal": 784,
+              "starsGained": 0,
+              "release": "v0.1.1"
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "lightweight",
+              "starsTotal": 818,
               "starsGained": 0,
               "release": "v0.1.1"
             }
@@ -6983,7 +7515,7 @@
           "name": "open-code-review",
           "url": "https://github.com/alibaba/open-code-review",
           "oneLiner": "阿里内部验证的AI代码审查工具，混合确定性与LLM Agent，行级精准反馈。",
-          "description": "Open-source & free — Battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+          "description": "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
           "language": "Go",
           "category": "AI 应用",
           "license": "Apache-2.0",
@@ -6992,8 +7524,8 @@
           "streakDays": 3,
           "isNew": false,
           "createdAt": "2026-05-18",
-          "pushedAt": "2026-08-02",
-          "latestRelease": "v1.8.5",
+          "pushedAt": "2026-08-03",
+          "latestRelease": "v1.8.6",
           "firstSeen": "2026-07-24",
           "topics": [
             "agent",
@@ -7066,6 +7598,13 @@
               "starsTotal": 17894,
               "starsGained": 4365,
               "release": "v1.8.5"
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "release_update",
+              "starsTotal": 18437,
+              "starsGained": 3881,
+              "release": "v1.8.6"
             }
           ],
           "analysis": [
@@ -7647,7 +8186,7 @@
           "streakDays": 4,
           "isNew": false,
           "createdAt": "2026-07-15",
-          "pushedAt": "2026-08-02",
+          "pushedAt": "2026-08-03",
           "latestRelease": "v0.1.7",
           "firstSeen": "2026-07-24",
           "topics": [
@@ -7747,6 +8286,13 @@
               "date": "2026-08-03",
               "reason": "lightweight",
               "starsTotal": 764,
+              "starsGained": 0,
+              "release": "v0.1.7"
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "lightweight",
+              "starsTotal": 779,
               "starsGained": 0,
               "release": "v0.1.7"
             }
@@ -8012,6 +8558,13 @@
               "date": "2026-08-03",
               "reason": "lightweight",
               "starsTotal": 1721,
+              "starsGained": 0,
+              "release": "v0.3.0"
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "lightweight",
+              "starsTotal": 1774,
               "starsGained": 0,
               "release": "v0.3.0"
             }
@@ -8605,7 +9158,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-07-08",
-          "pushedAt": "2026-08-02",
+          "pushedAt": "2026-08-03",
           "latestRelease": "v0.9.18",
           "firstSeen": "2026-07-26",
           "topics": [
@@ -8678,6 +9231,13 @@
               "date": "2026-08-03",
               "reason": "release_update",
               "starsTotal": 635,
+              "starsGained": 0,
+              "release": "v0.9.18"
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "lightweight",
+              "starsTotal": 653,
               "starsGained": 0,
               "release": "v0.9.18"
             }
@@ -9535,7 +10095,7 @@
           "streakDays": 3,
           "isNew": false,
           "createdAt": "2026-04-16",
-          "pushedAt": "2026-08-02",
+          "pushedAt": "2026-08-03",
           "latestRelease": "v1.2.5",
           "firstSeen": "2026-07-24",
           "topics": [
@@ -9612,6 +10172,13 @@
               "reason": "lightweight",
               "starsTotal": 7676,
               "starsGained": 3582,
+              "release": "v1.2.5"
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "lightweight",
+              "starsTotal": 8039,
+              "starsGained": 2625,
               "release": "v1.2.5"
             }
           ],
@@ -9819,7 +10386,7 @@
           "name": "open-code-review",
           "url": "https://github.com/alibaba/open-code-review",
           "oneLiner": "阿里巴巴开源AI代码审查，混合确定性管道+LLM Agent，高精度低误报，Token消耗仅为通用Agent的1/9",
-          "description": "Open-source & free — Battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+          "description": "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
           "language": "Go",
           "category": "AI 应用",
           "license": "Apache-2.0",
@@ -9828,8 +10395,8 @@
           "streakDays": 2,
           "isNew": false,
           "createdAt": "2026-05-18",
-          "pushedAt": "2026-08-02",
-          "latestRelease": "v1.8.5",
+          "pushedAt": "2026-08-03",
+          "latestRelease": "v1.8.6",
           "firstSeen": "2026-07-24",
           "topics": [
             "agent",
@@ -9902,6 +10469,13 @@
               "starsTotal": 17894,
               "starsGained": 4365,
               "release": "v1.8.5"
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "release_update",
+              "starsTotal": 18437,
+              "starsGained": 3881,
+              "release": "v1.8.6"
             }
           ],
           "analysis": [
@@ -10270,6 +10844,13 @@
               "date": "2026-08-03",
               "reason": "lightweight",
               "starsTotal": 1855,
+              "starsGained": 0,
+              "release": "v0.8.1"
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "lightweight",
+              "starsTotal": 1878,
               "starsGained": 0,
               "release": "v0.8.1"
             }
@@ -10913,7 +11494,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-07-20",
-          "pushedAt": "2026-07-30",
+          "pushedAt": "2026-08-03",
           "latestRelease": "v0.1.2",
           "firstSeen": "2026-07-25",
           "topics": [
@@ -10992,6 +11573,13 @@
               "date": "2026-08-03",
               "reason": "lightweight",
               "starsTotal": 404,
+              "starsGained": 0,
+              "release": "v0.1.2"
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "lightweight",
+              "starsTotal": 430,
               "starsGained": 0,
               "release": "v0.1.2"
             }
@@ -11109,6 +11697,13 @@
               "starsTotal": 742,
               "starsGained": 0,
               "release": "v0.2.1"
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "lightweight",
+              "starsTotal": 749,
+              "starsGained": 0,
+              "release": "v0.2.1"
             }
           ],
           "analysis": []
@@ -11210,6 +11805,13 @@
               "starsTotal": 262,
               "starsGained": 0,
               "release": "v1.1.0"
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "lightweight",
+              "starsTotal": 263,
+              "starsGained": 0,
+              "release": "v1.1.0"
             }
           ],
           "analysis": []
@@ -11230,7 +11832,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-07-06",
-          "pushedAt": "2026-08-01",
+          "pushedAt": "2026-08-03",
           "latestRelease": "v0.1.35",
           "firstSeen": "2026-07-25",
           "topics": [
@@ -11314,6 +11916,13 @@
               "date": "2026-08-03",
               "reason": "lightweight",
               "starsTotal": 499,
+              "starsGained": 0,
+              "release": "v0.1.35"
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "lightweight",
+              "starsTotal": 501,
               "starsGained": 0,
               "release": "v0.1.35"
             }
@@ -11452,7 +12061,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-04-16",
-          "pushedAt": "2026-08-02",
+          "pushedAt": "2026-08-03",
           "latestRelease": "v1.2.5",
           "firstSeen": "2026-07-24",
           "topics": [
@@ -11530,6 +12139,13 @@
               "starsTotal": 7676,
               "starsGained": 3582,
               "release": "v1.2.5"
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "lightweight",
+              "starsTotal": 8039,
+              "starsGained": 2625,
+              "release": "v1.2.5"
             }
           ],
           "analysis": [
@@ -11592,7 +12208,7 @@
           "name": "open-code-review",
           "url": "https://github.com/alibaba/open-code-review",
           "oneLiner": "Open-source & free — Battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in fine-tuned ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
-          "description": "Open-source & free — Battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+          "description": "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
           "language": "Go",
           "category": "AI 应用",
           "license": "Apache-2.0",
@@ -11601,8 +12217,8 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-05-18",
-          "pushedAt": "2026-08-02",
-          "latestRelease": "v1.8.5",
+          "pushedAt": "2026-08-03",
+          "latestRelease": "v1.8.6",
           "firstSeen": "2026-07-24",
           "topics": [
             "agent",
@@ -11675,6 +12291,13 @@
               "starsTotal": 17894,
               "starsGained": 4365,
               "release": "v1.8.5"
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "release_update",
+              "starsTotal": 18437,
+              "starsGained": 3881,
+              "release": "v1.8.6"
             }
           ],
           "analysis": [
@@ -11765,7 +12388,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-07-15",
-          "pushedAt": "2026-08-02",
+          "pushedAt": "2026-08-03",
           "latestRelease": "v0.1.7",
           "firstSeen": "2026-07-24",
           "topics": [
@@ -11867,6 +12490,13 @@
               "starsTotal": 764,
               "starsGained": 0,
               "release": "v0.1.7"
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "lightweight",
+              "starsTotal": 779,
+              "starsGained": 0,
+              "release": "v0.1.7"
             }
           ],
           "analysis": [
@@ -11945,8 +12575,8 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-07-17",
-          "pushedAt": "2026-08-02",
-          "latestRelease": "V2.4.0",
+          "pushedAt": "2026-08-03",
+          "latestRelease": "V2.4.2",
           "firstSeen": "2026-07-24",
           "topics": [
             "agentic-ai",
@@ -12047,6 +12677,13 @@
               "starsTotal": 353,
               "starsGained": 0,
               "release": "V2.4.0"
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "release_update",
+              "starsTotal": 354,
+              "starsGained": 0,
+              "release": "V2.4.2"
             }
           ],
           "analysis": [
@@ -12138,7 +12775,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-07-10",
-          "pushedAt": "2026-07-30",
+          "pushedAt": "2026-08-03",
           "latestRelease": "",
           "firstSeen": "2026-07-24",
           "topics": [
@@ -12234,6 +12871,13 @@
               "date": "2026-08-03",
               "reason": "lightweight",
               "starsTotal": 969,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "lightweight",
+              "starsTotal": 1021,
               "starsGained": 0,
               "release": ""
             }
@@ -12585,6 +13229,13 @@
               "starsTotal": 1855,
               "starsGained": 0,
               "release": "v0.8.1"
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "lightweight",
+              "starsTotal": 1878,
+              "starsGained": 0,
+              "release": "v0.8.1"
             }
           ],
           "analysis": [
@@ -12656,7 +13307,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-07-20",
-          "pushedAt": "2026-08-02",
+          "pushedAt": "2026-08-03",
           "latestRelease": "v1.2.0",
           "firstSeen": "2026-07-23",
           "topics": [
@@ -12751,6 +13402,13 @@
               "date": "2026-08-03",
               "reason": "star_jump",
               "starsTotal": 911,
+              "starsGained": 0,
+              "release": "v1.2.0"
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "star_jump",
+              "starsTotal": 1251,
               "starsGained": 0,
               "release": "v1.2.0"
             }
@@ -13028,6 +13686,13 @@
               "starsTotal": 15695,
               "starsGained": 5225,
               "release": ""
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "lightweight",
+              "starsTotal": 16299,
+              "starsGained": 5012,
+              "release": ""
             }
           ],
           "analysis": [
@@ -13289,7 +13954,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-04-22",
-          "pushedAt": "2026-08-02",
+          "pushedAt": "2026-08-03",
           "latestRelease": "0.3.13",
           "firstSeen": "2026-07-22",
           "topics": [
@@ -13359,6 +14024,13 @@
               "starsTotal": 12523,
               "starsGained": 2063,
               "release": "0.3.13"
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "lightweight",
+              "starsTotal": 12691,
+              "starsGained": 1908,
+              "release": "0.3.13"
             }
           ],
           "analysis": []
@@ -13379,7 +14051,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-07-20",
-          "pushedAt": "2026-07-26",
+          "pushedAt": "2026-08-03",
           "latestRelease": "",
           "firstSeen": "2026-07-22",
           "topics": [
@@ -13480,6 +14152,13 @@
               "date": "2026-08-03",
               "reason": "lightweight",
               "starsTotal": 1497,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "lightweight",
+              "starsTotal": 1603,
               "starsGained": 0,
               "release": ""
             }
@@ -14763,6 +15442,13 @@
               "reason": "release_update",
               "starsTotal": 25669,
               "starsGained": 819,
+              "release": "v3.1.0"
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "lightweight",
+              "starsTotal": 27112,
+              "starsGained": 2410,
               "release": "v3.1.0"
             }
           ],
@@ -16275,6 +16961,13 @@
               "starsTotal": 338,
               "starsGained": 0,
               "release": ""
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "star_jump",
+              "starsTotal": 519,
+              "starsGained": 0,
+              "release": ""
             }
           ],
           "analysis": []
@@ -16482,7 +17175,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-07-07",
-          "pushedAt": "2026-07-30",
+          "pushedAt": "2026-08-03",
           "latestRelease": "v0.8.0",
           "firstSeen": "2026-07-16",
           "topics": [
@@ -16618,6 +17311,13 @@
               "date": "2026-08-03",
               "reason": "lightweight",
               "starsTotal": 291,
+              "starsGained": 0,
+              "release": "v0.8.0"
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "lightweight",
+              "starsTotal": 297,
               "starsGained": 0,
               "release": "v0.8.0"
             }
@@ -16796,7 +17496,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-07-10",
-          "pushedAt": "2026-07-29",
+          "pushedAt": "2026-08-03",
           "latestRelease": "",
           "firstSeen": "2026-07-15",
           "topics": [
@@ -16951,6 +17651,13 @@
               "date": "2026-08-03",
               "reason": "lightweight",
               "starsTotal": 859,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "lightweight",
+              "starsTotal": 860,
               "starsGained": 0,
               "release": ""
             }
@@ -17586,7 +18293,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2024-12-01",
-          "pushedAt": "2026-08-02",
+          "pushedAt": "2026-08-03",
           "latestRelease": "v0.11.3",
           "firstSeen": "2026-07-14",
           "topics": [
@@ -17664,6 +18371,13 @@
               "reason": "lightweight",
               "starsTotal": 46547,
               "starsGained": 3431,
+              "release": "v0.11.3"
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "lightweight",
+              "starsTotal": 46715,
+              "starsGained": 2978,
               "release": "v0.11.3"
             }
           ],
@@ -18083,6 +18797,13 @@
               "date": "2026-08-03",
               "reason": "lightweight",
               "starsTotal": 569,
+              "starsGained": 0,
+              "release": "v1.6.0"
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "lightweight",
+              "starsTotal": 572,
               "starsGained": 0,
               "release": "v1.6.0"
             }
@@ -18647,7 +19368,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-07-10",
-          "pushedAt": "2026-07-31",
+          "pushedAt": "2026-08-03",
           "latestRelease": "",
           "firstSeen": "2026-07-13",
           "topics": [
@@ -18787,6 +19508,13 @@
               "date": "2026-08-03",
               "reason": "lightweight",
               "starsTotal": 1853,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "lightweight",
+              "starsTotal": 1890,
               "starsGained": 0,
               "release": ""
             }
@@ -19607,6 +20335,13 @@
               "starsTotal": 279,
               "starsGained": 0,
               "release": ""
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "lightweight",
+              "starsTotal": 279,
+              "starsGained": 0,
+              "release": ""
             }
           ],
           "analysis": []
@@ -20067,6 +20802,13 @@
               "date": "2026-08-03",
               "reason": "lightweight",
               "starsTotal": 1721,
+              "starsGained": 0,
+              "release": "v0.3.0"
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "lightweight",
+              "starsTotal": 1774,
               "starsGained": 0,
               "release": "v0.3.0"
             }
@@ -21109,8 +21851,8 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-04-07",
-          "pushedAt": "2026-07-29",
-          "latestRelease": "v1.0.1",
+          "pushedAt": "2026-08-03",
+          "latestRelease": "v2.0.0",
           "firstSeen": "2026-07-09",
           "topics": [
             "agent",
@@ -21158,6 +21900,13 @@
               "starsTotal": 11059,
               "starsGained": 602,
               "release": "v1.0.1"
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "release_update",
+              "starsTotal": 12096,
+              "starsGained": 1090,
+              "release": "v2.0.0"
             }
           ],
           "analysis": [
@@ -64460,7 +65209,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-01-25",
-          "pushedAt": "2026-07-21",
+          "pushedAt": "2026-07-28",
           "latestRelease": "v0.5.0",
           "firstSeen": "2026-06-20",
           "topics": [
@@ -64584,6 +65333,13 @@
               "reason": "lightweight",
               "starsTotal": 46738,
               "starsGained": 4237,
+              "release": "v0.5.0"
+            },
+            {
+              "date": "2026-08-04",
+              "reason": "lightweight",
+              "starsTotal": 48679,
+              "starsGained": 412,
               "release": "v0.5.0"
             }
           ],

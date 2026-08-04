@@ -1,1 +1,2 @@
 - 2026-08-03 | 🆕新发现 | ⭐29069(+333) | release=desktop-v1.19.3
+- 2026-08-04 | release_update | ⭐29936(+883) | release=desktop-v1.19.5

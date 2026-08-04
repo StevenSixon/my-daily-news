@@ -5,3 +5,4 @@
 - 2026-08-01 | lightweight | ⭐334(+0) | release=models-bge-m3-v1.0.0
 - 2026-08-02 | lightweight | ⭐338(+0) | release=models-bge-m3-v1.0.0
 - 2026-08-03 | lightweight | ⭐343(+0) | release=models-bge-m3-v1.0.0
+- 2026-08-04 | lightweight | ⭐345(+0) | release=models-bge-m3-v1.0.0
