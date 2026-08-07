@@ -1,7 +1,7 @@
 {
   "full_name": "Anionex/agent-vision-toolkit",
   "url": "https://github.com/Anionex/agent-vision-toolkit",
-  "description": "给纯文本 LLM agent 装上眼睛：图片问答、OCR、截图分析、视觉定位等一套视觉工具箱 + skill，并可无缝接入 Codex、Claude Code、OpenCode、Pi ｜ Give text-only LLM agents vision: image Q&A, OCR, screenshot understanding, visual grounding, image-to-SVG - a vision toolkit & skill, with drop-in integration for Codex, Claude Code, OpenCode, Pi",
+  "description": "为纯文本模型设计的视觉工具箱和技能——多图理解、图片问答、长图识别、前端 UI 还原、GUI 自动化，并可选无缝接入 Codex、Claude Code、Pi、Oh My Pi、OpenCode ｜ A vision toolkit and skill designed for text-only models — image Q&A, long-screenshot OCR, frontend UI restoration, and GUI automation, with optional seamless integration for Codex, Claude Code, Pi, Oh My Pi, and OpenCode",
   "language": "Python",
   "topics": [
     "agent",
@@ -11,13 +11,11 @@
     "codex",
     "computer-use",
     "deepseek",
-    "deepseek-v4",
     "glm",
     "harness-engineering",
     "kimi",
     "llm",
     "multimodal",
-    "ocr",
     "opencode",
     "vision",
     "vision-language-model"
@@ -31,13 +29,13 @@
   "confidence": "medium",
   "info_gaps": [],
   "quality_flags": [],
-  "stars_total": 301,
+  "stars_total": 332,
   "created_at": "2026-08-01",
-  "pushed_at": "2026-08-05",
-  "latest_release": null,
+  "pushed_at": "2026-08-06",
+  "latest_release": "v0.1.0",
   "first_seen": "2026-08-06",
-  "last_seen": "2026-08-06",
-  "streak_days": 1,
+  "last_seen": "2026-08-07",
+  "streak_days": 2,
   "analysis_updated_at": null,
   "appearances": [
     {
@@ -46,6 +44,13 @@
       "stars_total": 301,
       "stars_gained": 0,
       "release": null
+    },
+    {
+      "date": "2026-08-07",
+      "reason": "release_update",
+      "stars_total": 332,
+      "stars_gained": 0,
+      "release": "v0.1.0"
     }
   ]
 }

@@ -1,0 +1,1 @@
+- 2026-08-07 | 🆕新发现 | ⭐186025(+37) | release=autogpt-platform-beta-v0.7.0

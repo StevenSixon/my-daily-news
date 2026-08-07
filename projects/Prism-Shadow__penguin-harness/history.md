@@ -8,3 +8,4 @@
 - 2026-08-04 | release_update | ⭐345(+0) | release=v0.2.0
 - 2026-08-05 | release_update | ⭐498(+0) | release=v0.2.1
 - 2026-08-06 | lightweight | ⭐599(+0) | release=v0.2.1
+- 2026-08-07 | star_jump | ⭐908(+0) | release=v0.2.1
