@@ -1,7 +1,7 @@
 {
   "full_name": "Paritok-official/paritok-4b-v1",
   "url": "https://github.com/Paritok-official/paritok-4b-v1",
-  "description": "Non-destructive compression gateway that cuts AI coding-agent token bills 25% on a single turn, climbing past 60% across long multi-turn sessions and past 85% in context-saturated deployments. Powered by the first open-source code-native 4B compression model. Drop-in for Claude Code, Cursor, Codex, OpenHands. No agent code changes.",
+  "description": "Non-destructive compression gateway for AI coding agents. Cuts token bills 25% on turn 1 to past 85% in long or saturated sessions, and fits ~3× more turns in the same context window. Powered by our open-source code-native 4B model. Drop-in for Claude Code, Cursor, Codex, OpenHands, and any BASE_URL agent.",
   "language": "Python",
   "topics": [
     "agentic-coding",
@@ -23,13 +23,13 @@
   "confidence": "medium",
   "info_gaps": [],
   "quality_flags": [],
-  "stars_total": 577,
+  "stars_total": 599,
   "created_at": "2026-07-15",
-  "pushed_at": "2026-08-05",
+  "pushed_at": "2026-08-07",
   "latest_release": null,
   "first_seen": "2026-07-31",
-  "last_seen": "2026-08-07",
-  "streak_days": 8,
+  "last_seen": "2026-08-08",
+  "streak_days": 9,
   "analysis_updated_at": null,
   "appearances": [
     {
@@ -85,6 +85,13 @@
       "date": "2026-08-07",
       "reason": "star_jump",
       "stars_total": 577,
+      "stars_gained": 0,
+      "release": null
+    },
+    {
+      "date": "2026-08-08",
+      "reason": "lightweight",
+      "stars_total": 599,
       "stars_gained": 0,
       "release": null
     }

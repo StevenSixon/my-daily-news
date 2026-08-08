@@ -1,1 +1,2 @@
 - 2026-08-07 | 🆕新发现 | ⭐186025(+37) | release=autogpt-platform-beta-v0.7.0
+- 2026-08-08 | lightweight | ⭐186313(+355) | release=autogpt-platform-beta-v0.7.0

@@ -1,1 +1,2 @@
 - 2026-08-07 | 🆕新发现 | ⭐221(+0) | release=frog@1.1.0
+- 2026-08-08 | lightweight | ⭐225(+0) | release=frog@1.1.0
