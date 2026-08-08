@@ -1,7 +1,7 @@
 {
   "full_name": "Anionex/agent-vision-toolkit",
   "url": "https://github.com/Anionex/agent-vision-toolkit",
-  "description": "为纯文本模型\"看图“设计更好的视觉工具箱和技能，支持多图理解，图片问答，前端UI还原、GUI 自动化等，并可选无缝接入多个主流agent｜ A vision toolkit and skill designed for text-only llms — image Q&A, long-screenshot OCR, frontend UI restoration, and GUI automation, with optional seamless integration for Codex, Claude Code, Pi, Oh My Pi, and OpenCode",
+  "description": "为纯文本模型\"看图“设计更好的视觉工具箱和技能，支持多图理解，图片问答，前端UI还原、GUI 自动化等，并可选无缝接入多个主流agent，直接识别粘贴图片｜ A vision toolkit and skill designed for text-only llms — image Q&A, long-screenshot OCR, frontend UI restoration, and GUI automation, with optional seamless integration for Codex, Claude Code, Pi, Oh My Pi, and OpenCode",
   "language": "Python",
   "topics": [
     "agent",
@@ -30,13 +30,13 @@
   "confidence": "medium",
   "info_gaps": [],
   "quality_flags": [],
-  "stars_total": 348,
+  "stars_total": 361,
   "created_at": "2026-08-01",
-  "pushed_at": "2026-08-07",
+  "pushed_at": "2026-08-08",
   "latest_release": "v0.1.0",
   "first_seen": "2026-08-06",
-  "last_seen": "2026-08-08",
-  "streak_days": 3,
+  "last_seen": "2026-08-09",
+  "streak_days": 4,
   "analysis_updated_at": null,
   "appearances": [
     {
@@ -57,6 +57,13 @@
       "date": "2026-08-08",
       "reason": "lightweight",
       "stars_total": 348,
+      "stars_gained": 0,
+      "release": "v0.1.0"
+    },
+    {
+      "date": "2026-08-09",
+      "reason": "lightweight",
+      "stars_total": 361,
       "stars_gained": 0,
       "release": "v0.1.0"
     }

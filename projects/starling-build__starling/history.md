@@ -1,3 +1,4 @@
 - 2026-08-02 | 🆕新发现 | ⭐230(+0) | release=-
 - 2026-08-03 | lightweight | ⭐254(+0) | release=-
 - 2026-08-08 | release_update | ⭐298(+0) | release=sdk-v0.2.0
+- 2026-08-09 | lightweight | ⭐299(+0) | release=sdk-v0.2.0
