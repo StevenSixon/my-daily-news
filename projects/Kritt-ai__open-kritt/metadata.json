@@ -1,17 +1,24 @@
 {
   "full_name": "Kritt-ai/open-kritt",
   "url": "https://github.com/Kritt-ai/open-kritt",
-  "description": "Orchestrate AI agents to find real vulnerabilities in code.",
+  "description": "Open-source, self-hosted AI vulnerability research tool that orchestrates agents to find and validate security issues in code.",
   "language": "JavaScript",
   "topics": [
-    "agent",
-    "agents",
     "ai",
+    "ai-agents",
+    "ai-security",
     "bug-bounty",
-    "bugbounty",
     "bugbounty-tools",
-    "security",
-    "security-research"
+    "code-security",
+    "hackenproof",
+    "hackerone",
+    "immunefi",
+    "security-automation",
+    "security-research",
+    "security-tools",
+    "self-hosted",
+    "source-code-analysis",
+    "vulnerability-scanner"
   ],
   "license": "AGPL-3.0",
   "category": "AI 应用",
@@ -22,13 +29,13 @@
   "confidence": "medium",
   "info_gaps": [],
   "quality_flags": [],
-  "stars_total": 1598,
+  "stars_total": 1626,
   "created_at": "2026-07-20",
-  "pushed_at": "2026-08-08",
+  "pushed_at": "2026-08-09",
   "latest_release": "v1.3.0",
   "first_seen": "2026-07-23",
-  "last_seen": "2026-08-09",
-  "streak_days": 18,
+  "last_seen": "2026-08-10",
+  "streak_days": 19,
   "analysis_updated_at": null,
   "appearances": [
     {
@@ -154,6 +161,13 @@
       "date": "2026-08-09",
       "reason": "lightweight",
       "stars_total": 1598,
+      "stars_gained": 0,
+      "release": "v1.3.0"
+    },
+    {
+      "date": "2026-08-10",
+      "reason": "lightweight",
+      "stars_total": 1626,
       "stars_gained": 0,
       "release": "v1.3.0"
     }

@@ -1,2 +1,3 @@
 - 2026-08-04 | 🆕新发现 | ⭐11988(+148) | release=livekit-agents@1.6.8
 - 2026-08-05 | lightweight | ⭐12412(+432) | release=livekit-agents@1.6.8
+- 2026-08-10 | release_update | ⭐12817(+1138) | release=livekit-agents@1.6.9

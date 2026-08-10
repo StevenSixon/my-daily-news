@@ -4,3 +4,4 @@
 - 2026-08-07 | release_update | ⭐2054(+0) | release=linux-v0.5.149
 - 2026-08-08 | lightweight | ⭐2170(+0) | release=linux-v0.5.149
 - 2026-08-09 | lightweight | ⭐2254(+0) | release=linux-v0.5.149
+- 2026-08-10 | release_update | ⭐2357(+0) | release=v0.6.13
