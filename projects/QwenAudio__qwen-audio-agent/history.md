@@ -10,3 +10,4 @@
 - 2026-08-08 | release_update | ⭐1982(+0) | release=v1.7.0
 - 2026-08-09 | lightweight | ⭐1991(+0) | release=v1.7.0
 - 2026-08-10 | release_update | ⭐2028(+0) | release=v1.8.0
+- 2026-08-11 | release_update | ⭐2060(+0) | release=v1.8.1

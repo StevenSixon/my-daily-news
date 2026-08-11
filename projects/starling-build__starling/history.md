@@ -3,3 +3,4 @@
 - 2026-08-08 | release_update | ⭐298(+0) | release=sdk-v0.2.0
 - 2026-08-09 | lightweight | ⭐299(+0) | release=sdk-v0.2.0
 - 2026-08-10 | lightweight | ⭐301(+0) | release=sdk-v0.2.0
+- 2026-08-11 | lightweight | ⭐305(+0) | release=sdk-v0.2.0
