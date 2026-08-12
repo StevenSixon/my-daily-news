@@ -25,7 +25,7 @@
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "并行Agent管理与运行平台",
+  "classify_reason": "关键词命中",
   "one_liner": "并行运行多个AI编码代理，用git工作树隔离结果，择优合并。",
   "why_worth_it": "让多代理竞速解决同一问题，适合追求极速迭代的开发者，比单代理IDE更激进。",
   "tags": [
@@ -41,13 +41,13 @@
     "未提及是否支持自托管 relay/后端服务"
   ],
   "quality_flags": [],
-  "stars_total": 30843,
+  "stars_total": 42744,
   "created_at": "2026-03-17",
-  "pushed_at": "2026-07-28",
-  "latest_release": "v1.4.159",
+  "pushed_at": "2026-08-12",
+  "latest_release": "v1.4.180",
   "first_seen": "2026-06-24",
-  "last_seen": "2026-07-28",
-  "streak_days": 29,
+  "last_seen": "2026-08-12",
+  "streak_days": 30,
   "analysis_updated_at": "2026-07-28T09:05:18+0800",
   "appearances": [
     {
@@ -252,6 +252,13 @@
       "stars_total": 30843,
       "stars_gained": 7546,
       "release": "v1.4.159"
+    },
+    {
+      "date": "2026-08-12",
+      "reason": "release_update",
+      "stars_total": 42744,
+      "stars_gained": 875,
+      "release": "v1.4.180"
     }
   ]
 }

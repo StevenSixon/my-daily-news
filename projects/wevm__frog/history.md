@@ -3,3 +3,4 @@
 - 2026-08-09 | lightweight | ⭐228(+0) | release=frog@1.1.0
 - 2026-08-10 | lightweight | ⭐232(+0) | release=frog@1.1.0
 - 2026-08-11 | lightweight | ⭐234(+0) | release=frog@1.1.0
+- 2026-08-12 | lightweight | ⭐235(+0) | release=frog@1.1.0

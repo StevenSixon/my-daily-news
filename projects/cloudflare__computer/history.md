@@ -1,3 +1,4 @@
 - 2026-08-06 | 🆕新发现 | ⭐2952(+891) | release=-
 - 2026-08-07 | star_jump | ⭐4838(+2802) | release=-
 - 2026-08-08 | lightweight | ⭐5678(+872) | release=-
+- 2026-08-12 | release_update | ⭐7596(+6775) | release=@cloudflare/computer@0.2.0

@@ -2,3 +2,4 @@
 - 2026-08-09 | star_jump | ⭐8867(+2483) | release=v0.7.1
 - 2026-08-10 | lightweight | ⭐11001(+2356) | release=v0.7.1
 - 2026-08-11 | lightweight | ⭐13039(+2642) | release=v0.7.1
+- 2026-08-12 | release_update | ⭐14074(+1138) | release=v0.7.2
