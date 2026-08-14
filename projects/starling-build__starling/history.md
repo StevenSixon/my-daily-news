@@ -5,3 +5,4 @@
 - 2026-08-10 | lightweight | ⭐301(+0) | release=sdk-v0.2.0
 - 2026-08-11 | lightweight | ⭐305(+0) | release=sdk-v0.2.0
 - 2026-08-12 | release_update | ⭐309(+0) | release=v0.3.0
+- 2026-08-15 | lightweight | ⭐314(+0) | release=v0.3.0
