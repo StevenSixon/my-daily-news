@@ -3,3 +3,4 @@
 - 2026-08-08 | lightweight | ⭐5678(+872) | release=-
 - 2026-08-12 | release_update | ⭐7596(+6775) | release=@cloudflare/computer@0.2.0
 - 2026-08-13 | lightweight | ⭐7796(+6020) | release=@cloudflare/computer@0.2.0
+- 2026-08-14 | lightweight | ⭐7978(+3599) | release=@cloudflare/computer@0.2.0
