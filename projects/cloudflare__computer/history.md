@@ -5,3 +5,4 @@
 - 2026-08-13 | lightweight | ⭐7796(+6020) | release=@cloudflare/computer@0.2.0
 - 2026-08-14 | lightweight | ⭐7978(+3599) | release=@cloudflare/computer@0.2.0
 - 2026-08-15 | lightweight | ⭐8127(+3599) | release=@cloudflare/computer@0.2.0
+- 2026-08-16 | lightweight | ⭐8248(+2856) | release=@cloudflare/computer@0.2.0
