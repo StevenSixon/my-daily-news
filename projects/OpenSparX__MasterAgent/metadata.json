@@ -15,7 +15,7 @@
     "on-device",
     "qualcomm"
   ],
-  "license": "NOASSERTION",
+  "license": null,
   "category": "AI 应用",
   "classify_reason": "关键词命中",
   "one_liner": "Build AI agents that run 100% on-device. Sub-100ms latency on Qualcomm NPU. Zero cloud dependency.",
@@ -26,16 +26,23 @@
   "quality_flags": [],
   "stars_total": 344,
   "created_at": "2026-08-10",
-  "pushed_at": "2026-08-14",
+  "pushed_at": "2026-08-17",
   "latest_release": "v2.1.15",
   "first_seen": "2026-08-17",
-  "last_seen": "2026-08-17",
-  "streak_days": 1,
+  "last_seen": "2026-08-18",
+  "streak_days": 2,
   "analysis_updated_at": null,
   "appearances": [
     {
       "date": "2026-08-17",
       "reason": "new",
+      "stars_total": 344,
+      "stars_gained": 0,
+      "release": "v2.1.15"
+    },
+    {
+      "date": "2026-08-18",
+      "reason": "lightweight",
       "stars_total": 344,
       "stars_gained": 0,
       "release": "v2.1.15"

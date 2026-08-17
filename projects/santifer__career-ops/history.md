@@ -1,1 +1,2 @@
 - 2026-07-03 | 🆕新发现 | ⭐57625(+322) | release=career-ops-v1.16.0
+- 2026-08-18 | release_update | ⭐64608(+147) | release=career-ops-v1.26.0
