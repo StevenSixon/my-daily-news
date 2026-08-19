@@ -3,3 +3,4 @@
 - 2026-06-27 | lightweight | ⭐21713(+4596) | release=v1.3.0
 - 2026-08-18 | star_jump | ⭐28401(+156) | release=v1.3.0
 - 2026-08-19 | lightweight | ⭐29164(+726) | release=v1.3.0
+- 2026-08-20 | lightweight | ⭐29822(+767) | release=v1.3.0
