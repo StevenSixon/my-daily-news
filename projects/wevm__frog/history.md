@@ -12,3 +12,4 @@
 - 2026-08-18 | lightweight | ⭐245(+0) | release=frog@1.1.0
 - 2026-08-19 | lightweight | ⭐245(+0) | release=frog@1.1.0
 - 2026-08-20 | lightweight | ⭐247(+0) | release=frog@1.1.0
+- 2026-08-21 | lightweight | ⭐248(+0) | release=frog@1.1.0

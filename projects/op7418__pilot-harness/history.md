@@ -1,1 +1,2 @@
 - 2026-08-20 | 🆕新发现 | ⭐224(+0) | release=v0.1.0-rc.7-pilot.1
+- 2026-08-21 | lightweight | ⭐241(+0) | release=v0.1.0-rc.7-pilot.1

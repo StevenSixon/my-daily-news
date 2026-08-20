@@ -2,7 +2,7 @@
   "full_name": "JuliusBrussee/caveman",
   "url": "https://github.com/JuliusBrussee/caveman",
   "description": "🪨 why use many token when few token do trick — Claude Code skill that cuts 65% of tokens by talking like caveman",
-  "language": "JavaScript",
+  "language": "Go",
   "topics": [
     "ai",
     "anthropic",
@@ -15,7 +15,7 @@
     "skill",
     "tokens"
   ],
-  "license": "MIT",
+  "license": "NOASSERTION",
   "category": "AI 应用",
   "classify_reason": "关键词命中",
   "one_liner": "把AI助手的话压缩成穴居人风格，输出Token直降65%",
@@ -33,13 +33,13 @@
     "wenyan模式的具体效果范围及非中文语言下的行为未阐明"
   ],
   "quality_flags": [],
-  "stars_total": 88793,
+  "stars_total": 99619,
   "created_at": "2026-04-04",
-  "pushed_at": "2026-07-03",
-  "latest_release": "v1.9.1",
+  "pushed_at": "2026-08-20",
+  "latest_release": "v2.2.0",
   "first_seen": "2026-07-03",
-  "last_seen": "2026-07-13",
-  "streak_days": 9,
+  "last_seen": "2026-08-21",
+  "streak_days": 10,
   "analysis_updated_at": "2026-07-04T01:10:10+0800",
   "appearances": [
     {
@@ -104,6 +104,13 @@
       "stars_total": 88793,
       "stars_gained": 3992,
       "release": "v1.9.1"
+    },
+    {
+      "date": "2026-08-21",
+      "reason": "release_update",
+      "stars_total": 99619,
+      "stars_gained": 309,
+      "release": "v2.2.0"
     }
   ]
 }

@@ -1,3 +1,4 @@
 - 2026-08-18 | 🆕新发现 | ⭐18977(+96) | release=v0.6.1
 - 2026-08-19 | release_update | ⭐19383(+366) | release=v0.6.2
 - 2026-08-20 | release_update | ⭐19829(+720) | release=v0.6.3rc1
+- 2026-08-21 | release_update | ⭐20104(+1102) | release=v0.6.3rc2

@@ -1,2 +1,3 @@
 - 2026-08-19 | 🆕新发现 | ⭐204(+0) | release=v0.1.0
 - 2026-08-20 | lightweight | ⭐229(+0) | release=v0.1.0
+- 2026-08-21 | lightweight | ⭐251(+0) | release=v0.1.0

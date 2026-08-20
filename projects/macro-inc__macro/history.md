@@ -6,3 +6,4 @@
 - 2026-08-18 | release_update | ⭐3556(+2588) | release=v2026.8.17.0
 - 2026-08-19 | lightweight | ⭐3670(+2724) | release=v2026.8.17.0
 - 2026-08-20 | release_update | ⭐3777(+2627) | release=v2026.8.18.2
+- 2026-08-21 | release_update | ⭐3869(+2557) | release=v2026.8.20.2
