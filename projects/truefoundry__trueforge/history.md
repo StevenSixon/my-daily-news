@@ -1,2 +1,3 @@
 - 2026-08-20 | 🆕新发现 | ⭐1868(+0) | release=@truefoundry/trueforge-ui@0.2.4
 - 2026-08-21 | star_jump | ⭐2474(+0) | release=@truefoundry/trueforge-ui@0.2.4
+- 2026-08-22 | lightweight | ⭐2924(+0) | release=@truefoundry/trueforge-ui@0.2.4

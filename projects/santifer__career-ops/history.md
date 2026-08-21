@@ -2,3 +2,4 @@
 - 2026-08-18 | release_update | ⭐64608(+147) | release=career-ops-v1.26.0
 - 2026-08-20 | release_update | ⭐65768(+193) | release=career-ops-v1.27.0
 - 2026-08-21 | release_update | ⭐66644(+855) | release=career-ops-v1.28.0
+- 2026-08-22 | lightweight | ⭐67432(+918) | release=career-ops-v1.28.0

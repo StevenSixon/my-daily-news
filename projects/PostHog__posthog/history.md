@@ -3,3 +3,4 @@
 - 2026-07-19 | lightweight | ⭐36701(+338) | release=posthog-cli/v0.8.4
 - 2026-07-20 | lightweight | ⭐36933(+411) | release=posthog-cli/v0.8.4
 - 2026-08-21 | release_update | ⭐37983(+100) | release=posthog-cli/v0.13.3
+- 2026-08-22 | release_update | ⭐38284(+334) | release=desktop-v0.60.372

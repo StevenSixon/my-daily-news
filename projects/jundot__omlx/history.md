@@ -2,3 +2,4 @@
 - 2026-08-19 | release_update | ⭐19383(+366) | release=v0.6.2
 - 2026-08-20 | release_update | ⭐19829(+720) | release=v0.6.3rc1
 - 2026-08-21 | release_update | ⭐20104(+1102) | release=v0.6.3rc2
+- 2026-08-22 | lightweight | ⭐20224(+1388) | release=v0.6.3rc2
