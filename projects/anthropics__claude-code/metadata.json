@@ -6,7 +6,7 @@
   "topics": [],
   "license": null,
   "category": "AI 应用",
-  "classify_reason": "终端内的智能编码工具(Claude Code)",
+  "classify_reason": "关键词命中",
   "one_liner": "终端里的自然语言编程代理，深度理解代码库，帮你自动完成日常编码和 Git 操作",
   "why_worth_it": "Anthropic 官方出品，直接在终端用自然语言指挥 AI 改代码、解释逻辑、操作 Git，适合想快速验证 AI 编码效率的开发者",
   "tags": [
@@ -24,13 +24,13 @@
     "examples 目录内容未展开，具体插件功能细节需查阅文档"
   ],
   "quality_flags": [],
-  "stars_total": 135728,
+  "stars_total": 142523,
   "created_at": "2025-02-22",
-  "pushed_at": "2026-07-03",
-  "latest_release": "v2.1.200",
+  "pushed_at": "2026-08-22",
+  "latest_release": "v2.1.240",
   "first_seen": "2026-07-04",
-  "last_seen": "2026-07-04",
-  "streak_days": 1,
+  "last_seen": "2026-08-23",
+  "streak_days": 2,
   "analysis_updated_at": "2026-07-04T01:07:01+0800",
   "appearances": [
     {
@@ -39,6 +39,13 @@
       "stars_total": 135728,
       "stars_gained": 245,
       "release": "v2.1.200"
+    },
+    {
+      "date": "2026-08-23",
+      "reason": "release_update",
+      "stars_total": 142523,
+      "stars_gained": 141,
+      "release": "v2.1.240"
     }
   ]
 }

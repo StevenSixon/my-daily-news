@@ -1,14 +1,19 @@
 {
   "full_name": "zouyuxuan122/Deepseek-Harness-EAC",
   "url": "https://github.com/zouyuxuan122/Deepseek-Harness-EAC",
-  "description": "DeepSeek Harness (dsh) Windows / Linux desktop client - bundled Node.js + dsh CLI, one-click launch, 10 built-in UI skins. EAC: Embracing All Creation 揽尽万象",
+  "description": "DeepSeek Harness Desktop (dsh-desktop). EAC: Embracing All Creation (揽尽万象). Bundled Node.js runtime with full dsh-CLI kernel, one-click startup, 10 built-in UI themes.",
   "language": "JavaScript",
   "topics": [
     "ai-agent",
     "deepseek",
+    "deepseek-harness",
+    "desktop",
     "desktop-app",
     "dsh",
+    "dsh-plugins",
+    "dshdesktop",
     "electron",
+    "tauri",
     "windows"
   ],
   "license": null,
@@ -20,13 +25,13 @@
   "confidence": "medium",
   "info_gaps": [],
   "quality_flags": [],
-  "stars_total": 1093,
+  "stars_total": 1147,
   "created_at": "2026-08-14",
-  "pushed_at": "2026-08-21",
+  "pushed_at": "2026-08-22",
   "latest_release": "v4.4.1",
   "first_seen": "2026-08-16",
-  "last_seen": "2026-08-22",
-  "streak_days": 7,
+  "last_seen": "2026-08-23",
+  "streak_days": 8,
   "analysis_updated_at": null,
   "appearances": [
     {
@@ -75,6 +80,13 @@
       "date": "2026-08-22",
       "reason": "lightweight",
       "stars_total": 1093,
+      "stars_gained": 0,
+      "release": "v4.4.1"
+    },
+    {
+      "date": "2026-08-23",
+      "reason": "lightweight",
+      "stars_total": 1147,
       "stars_gained": 0,
       "release": "v4.4.1"
     }
