@@ -1,3 +1,4 @@
 - 2026-08-22 | 🆕新发现 | ⭐224(+0) | release=-
 - 2026-08-23 | lightweight | ⭐243(+0) | release=-
 - 2026-08-24 | lightweight | ⭐252(+0) | release=-
+- 2026-08-25 | lightweight | ⭐265(+0) | release=-

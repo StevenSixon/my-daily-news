@@ -1,7 +1,7 @@
 {
   "full_name": "HarnessRouter/harnessrouter",
   "url": "https://github.com/HarnessRouter/harnessrouter",
-  "description": "HarnessRouter Community Edition: the self-hosted, Apache-2.0 edition of the unified interface for agent harnesses. Run Codex, Claude Code, Hermes, and more through one API, with sessions, streaming, files, cancellation, and failure handling. Implements the Unified Harness Protocol (UHP), an open standard. Your keys, your infrastructure.",
+  "description": "HarnessRouter Community Edition: the self-hosted, Apache-2.0 edition of the unified interface for agent harnesses. Run Codex, Claude Code, Hermes, PI, DSH, and more through one API, with sessions, streaming, files, cancellation, and failure handling. Implements the Unified Harness Protocol (UHP), an open standard. Your keys, your infrastructure.",
   "language": "Python",
   "topics": [
     "agent-api",
@@ -11,11 +11,14 @@
     "ai-infrastructure",
     "coding-agent",
     "conformance-testing",
+    "deepseek-harness",
     "harness-engineering",
+    "hermes",
     "llm",
     "open-protocol",
     "open-source",
     "open-standard",
+    "pi-coding-agent",
     "self-hosted",
     "uhp",
     "unified-api",
@@ -31,13 +34,13 @@
   "confidence": "medium",
   "info_gaps": [],
   "quality_flags": [],
-  "stars_total": 541,
+  "stars_total": 576,
   "created_at": "2026-08-09",
-  "pushed_at": "2026-08-23",
-  "latest_release": "v0.8.3",
+  "pushed_at": "2026-08-24",
+  "latest_release": "v0.9.1",
   "first_seen": "2026-08-24",
-  "last_seen": "2026-08-24",
-  "streak_days": 1,
+  "last_seen": "2026-08-25",
+  "streak_days": 2,
   "analysis_updated_at": null,
   "appearances": [
     {
@@ -46,6 +49,13 @@
       "stars_total": 541,
       "stars_gained": 0,
       "release": "v0.8.3"
+    },
+    {
+      "date": "2026-08-25",
+      "reason": "release_update",
+      "stars_total": 576,
+      "stars_gained": 0,
+      "release": "v0.9.1"
     }
   ]
 }

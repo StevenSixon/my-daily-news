@@ -25,7 +25,7 @@
     "threat-research",
     "vulnerability-scanner"
   ],
-  "license": "NOASSERTION",
+  "license": "Apache-2.0",
   "category": "AI 应用",
   "classify_reason": "关键词命中",
   "one_liner": "Autonomous Offensive Security, Bug Bounty & Red Teaming Agent Framework powered by Hermes Agent, specialized reasoning skills, and multi-model LLM orchestration.",
@@ -34,13 +34,13 @@
   "confidence": "medium",
   "info_gaps": [],
   "quality_flags": [],
-  "stars_total": 256,
+  "stars_total": 444,
   "created_at": "2026-08-19",
-  "pushed_at": "2026-08-23",
-  "latest_release": "v1.5.0",
+  "pushed_at": "2026-08-24",
+  "latest_release": "v2.1.0",
   "first_seen": "2026-08-24",
-  "last_seen": "2026-08-24",
-  "streak_days": 1,
+  "last_seen": "2026-08-25",
+  "streak_days": 2,
   "analysis_updated_at": null,
   "appearances": [
     {
@@ -49,6 +49,13 @@
       "stars_total": 256,
       "stars_gained": 0,
       "release": "v1.5.0"
+    },
+    {
+      "date": "2026-08-25",
+      "reason": "release_update",
+      "stars_total": 444,
+      "stars_gained": 0,
+      "release": "v2.1.0"
     }
   ]
 }
