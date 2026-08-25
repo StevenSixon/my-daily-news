@@ -8,3 +8,4 @@
 - 2026-08-23 | lightweight | ⭐1147(+0) | release=v4.4.1
 - 2026-08-24 | lightweight | ⭐1196(+0) | release=v4.4.1
 - 2026-08-25 | release_update | ⭐1265(+0) | release=v4.6-lite
+- 2026-08-26 | release_update | ⭐1305(+0) | release=v5.1.0
