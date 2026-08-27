@@ -1,7 +1,7 @@
 {
   "full_name": "santifer/career-ops",
   "url": "https://github.com/santifer/career-ops",
-  "description": "Open-source AI job search: scan job portals, evaluate listings with a structured A-F rubric into a 1.0-5.0 score, tailor your CV, track applications — runs locally in your AI coding CLI (Claude Code, Codex, OpenCode, Antigravity…)",
+  "description": "Open-source AI job search: scan job portals, evaluate listings into a structured A-H report with a global 1-5 score, tailor your CV, track applications — runs locally in your AI coding CLI (Claude Code, Codex, OpenCode, Antigravity…)",
   "language": "JavaScript",
   "topics": [
     "ai",
@@ -42,13 +42,13 @@
     "未提供不同 AI CLI 的使用成本对比数据（如 Claude Code vs OpenCode 的 API 消费）"
   ],
   "quality_flags": [],
-  "stars_total": 67432,
+  "stars_total": 68867,
   "created_at": "2026-04-04",
-  "pushed_at": "2026-08-21",
-  "latest_release": "career-ops-v1.28.0",
+  "pushed_at": "2026-08-27",
+  "latest_release": "career-ops-v1.30.0",
   "first_seen": "2026-07-03",
-  "last_seen": "2026-08-22",
-  "streak_days": 5,
+  "last_seen": "2026-08-28",
+  "streak_days": 6,
   "analysis_updated_at": "2026-07-03T02:22:15+0800",
   "appearances": [
     {
@@ -85,6 +85,13 @@
       "stars_total": 67432,
       "stars_gained": 918,
       "release": "career-ops-v1.28.0"
+    },
+    {
+      "date": "2026-08-28",
+      "reason": "release_update",
+      "stars_total": 68867,
+      "stars_gained": 3061,
+      "release": "career-ops-v1.30.0"
     }
   ]
 }
