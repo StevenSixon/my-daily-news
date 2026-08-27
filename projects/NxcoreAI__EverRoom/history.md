@@ -1,1 +1,2 @@
 - 2026-08-26 | 🆕新发现 | ⭐472(+0) | release=desktop-v0.1.5
+- 2026-08-27 | lightweight | ⭐473(+0) | release=desktop-v0.1.5

@@ -7,3 +7,4 @@
 - 2026-08-23 | release_update | ⭐38607(+288) | release=desktop-v0.60.382
 - 2026-08-25 | release_update | ⭐38987(+106) | release=desktop-v0.61.8
 - 2026-08-26 | release_update | ⭐39158(+1186) | release=desktop-v0.61.30
+- 2026-08-27 | release_update | ⭐39268(+1485) | release=desktop-v0.61.61

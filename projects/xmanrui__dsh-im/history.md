@@ -3,3 +3,4 @@
 - 2026-08-24 | release_update | ⭐673(+0) | release=v2.0.0
 - 2026-08-25 | release_update | ⭐777(+0) | release=v2.3.0
 - 2026-08-26 | release_update | ⭐849(+0) | release=v3.0.0
+- 2026-08-27 | release_update | ⭐891(+0) | release=v3.0.6

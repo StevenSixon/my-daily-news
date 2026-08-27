@@ -6,3 +6,4 @@
 - 2026-08-23 | release_update | ⭐4081(+2404) | release=v1.31.0
 - 2026-08-24 | release_update | ⭐4238(+2575) | release=v1.31.1
 - 2026-08-25 | release_update | ⭐4404(+2614) | release=v1.32.0
+- 2026-08-27 | release_update | ⭐4870(+1714) | release=v1.32.2
