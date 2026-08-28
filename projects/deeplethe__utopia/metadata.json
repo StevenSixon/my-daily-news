@@ -1,20 +1,24 @@
 {
   "full_name": "deeplethe/utopia",
   "url": "https://github.com/deeplethe/utopia",
-  "description": "Self-hosted knowledge platform: RAG over your documents on a knowledge graph that remembers when each fact was true. Rust + PostgreSQL, one binary.",
+  "description": "World's first open-source enterprise world model.",
   "language": "Rust",
   "topics": [
     "agent-memory",
+    "bitemporal",
+    "graphrag",
     "knowledge-base",
     "knowledge-graph",
     "llm",
+    "ontology",
     "pgvector",
     "postgresql",
     "rag",
     "rust",
     "self-hosted",
     "semantic-search",
-    "temporal-database"
+    "temporal-knowledge-graph",
+    "world-model"
   ],
   "license": "Apache-2.0",
   "category": "AI 应用",
@@ -25,19 +29,26 @@
   "confidence": "medium",
   "info_gaps": [],
   "quality_flags": [],
-  "stars_total": 569,
+  "stars_total": 605,
   "created_at": "2026-08-07",
-  "pushed_at": "2026-08-27",
+  "pushed_at": "2026-08-28",
   "latest_release": null,
   "first_seen": "2026-08-28",
-  "last_seen": "2026-08-28",
-  "streak_days": 1,
+  "last_seen": "2026-08-29",
+  "streak_days": 2,
   "analysis_updated_at": null,
   "appearances": [
     {
       "date": "2026-08-28",
       "reason": "new",
       "stars_total": 569,
+      "stars_gained": 0,
+      "release": null
+    },
+    {
+      "date": "2026-08-29",
+      "reason": "lightweight",
+      "stars_total": 605,
       "stars_gained": 0,
       "release": null
     }
