@@ -1,7 +1,7 @@
 {
   "full_name": "guillaumemeyer/watermarks-remover",
   "url": "https://github.com/guillaumemeyer/watermarks-remover",
-  "description": "Strip multi-vendor AI provenance marks: Unicode text hygiene, statistical rewrite hooks, and C2PA/metadata from PNG/JPEG/SVG/PDF/DOCX/HTML/MD",
+  "description": "A privacy-first app that strips AI watermarks from content you own.",
   "language": "Python",
   "topics": [
     "agent-skill",
@@ -29,13 +29,13 @@
   "confidence": "medium",
   "info_gaps": [],
   "quality_flags": [],
-  "stars_total": 18996,
+  "stars_total": 19194,
   "created_at": "2026-08-11",
-  "pushed_at": "2026-08-28",
+  "pushed_at": "2026-08-29",
   "latest_release": "v0.6.0",
   "first_seen": "2026-08-13",
-  "last_seen": "2026-08-29",
-  "streak_days": 17,
+  "last_seen": "2026-08-30",
+  "streak_days": 18,
   "analysis_updated_at": null,
   "appearances": [
     {
@@ -154,6 +154,13 @@
       "date": "2026-08-29",
       "reason": "lightweight",
       "stars_total": 18996,
+      "stars_gained": 0,
+      "release": "v0.6.0"
+    },
+    {
+      "date": "2026-08-30",
+      "reason": "lightweight",
+      "stars_total": 19194,
       "stars_gained": 0,
       "release": "v0.6.0"
     }

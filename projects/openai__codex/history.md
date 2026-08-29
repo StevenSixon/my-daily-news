@@ -9,3 +9,4 @@
 - 2026-08-27 | release_update | ⭐118895(+12120) | release=rust-v0.150.1
 - 2026-08-28 | lightweight | ⭐119191(+12120) | release=rust-v0.150.1
 - 2026-08-29 | lightweight | ⭐119503(+12358) | release=rust-v0.150.1
+- 2026-08-30 | release_update | ⭐119765(+9109) | release=rust-v0.151.0
