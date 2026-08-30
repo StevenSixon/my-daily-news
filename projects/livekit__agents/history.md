@@ -3,3 +3,4 @@
 - 2026-08-10 | release_update | ⭐12817(+1138) | release=livekit-agents@1.6.9
 - 2026-08-29 | release_update | ⭐13259(+14) | release=livekit-agents@1.7.1
 - 2026-08-30 | lightweight | ⭐13508(+256) | release=livekit-agents@1.7.1
+- 2026-08-31 | lightweight | ⭐13654(+131) | release=livekit-agents@1.7.1

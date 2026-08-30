@@ -3,3 +3,4 @@
 - 2026-08-28 | lightweight | ⭐486(+0) | release=desktop-v0.1.5
 - 2026-08-29 | lightweight | ⭐518(+0) | release=desktop-v0.1.5
 - 2026-08-30 | release_update | ⭐538(+0) | release=desktop-v0.1.5-nightly.20260829.25
+- 2026-08-31 | lightweight | ⭐538(+0) | release=desktop-v0.1.5-nightly.20260829.25
