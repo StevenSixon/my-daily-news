@@ -6,3 +6,4 @@
 - 2026-08-30 | release_update | ⭐384(+0) | release=rome-web-components-v0.1.10
 - 2026-08-31 | lightweight | ⭐390(+0) | release=rome-web-components-v0.1.10
 - 2026-09-01 | lightweight | ⭐427(+0) | release=rome-web-components-v0.1.10
+- 2026-09-02 | release_update | ⭐434(+0) | release=app-runtime-v0.6.3
