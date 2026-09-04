@@ -1,20 +1,21 @@
 {
   "full_name": "2akouwu/reverify",
   "url": "https://github.com/2akouwu/reverify",
-  "description": "AI makes things up when it reads a binary. Reverify checks its every claim against the real bytes, so you see what's actually true — AI-assisted reverse engineering you can trust. LLM proposes, deterministic tools verify. MCP server + CLI.",
+  "description": "Anti-hallucination for AI agents that read binaries. The model proposes, deterministic tools decide: every claim is VERIFIED or REFUTED against the real bytes, with evidence, and grounded facts survive context resets. MCP server + CLI.",
   "language": "Python",
   "topics": [
     "ai",
     "ai-agents",
+    "anti-hallucination",
     "binary-analysis",
-    "capstone",
+    "context-engineering",
     "ctf",
-    "decompiler",
     "developer-tools",
     "disassembler",
     "frida",
+    "grounding",
     "hallucination",
-    "hex",
+    "hallucination-detection",
     "llm",
     "malware-analysis",
     "mcp",
@@ -22,7 +23,6 @@
     "python",
     "reverse-engineering",
     "security-tools",
-    "unicorn",
     "verification"
   ],
   "license": "MIT",
@@ -34,13 +34,13 @@
   "confidence": "medium",
   "info_gaps": [],
   "quality_flags": [],
-  "stars_total": 711,
+  "stars_total": 861,
   "created_at": "2026-08-31",
-  "pushed_at": "2026-09-03",
-  "latest_release": "v0.5.0",
+  "pushed_at": "2026-09-04",
+  "latest_release": "v0.10.0",
   "first_seen": "2026-09-04",
-  "last_seen": "2026-09-04",
-  "streak_days": 1,
+  "last_seen": "2026-09-05",
+  "streak_days": 2,
   "analysis_updated_at": null,
   "appearances": [
     {
@@ -49,6 +49,13 @@
       "stars_total": 711,
       "stars_gained": 0,
       "release": "v0.5.0"
+    },
+    {
+      "date": "2026-09-05",
+      "reason": "release_update",
+      "stars_total": 861,
+      "stars_gained": 0,
+      "release": "v0.10.0"
     }
   ]
 }

@@ -1,18 +1,19 @@
 {
   "full_name": "shanliuling/dsh-image-gen",
   "url": "https://github.com/shanliuling/dsh-image-gen",
-  "description": "Generate images directly in DeepSeek Harness chats",
+  "description": "AI image studio for DeepSeek Harness — generate, edit & compare images in chat, with 500+ prompts, gallery, multi-model workflows and ComfyUI.",
   "language": "TypeScript",
   "topics": [
     "ai-agent",
-    "cordis",
+    "ai-image-generation-api",
+    "comfyui",
     "deepseek",
     "deepseek-harness",
     "dsh-plugin",
     "gemini",
     "image-generation",
     "openai",
-    "plugin",
+    "prompt-library",
     "seedream"
   ],
   "license": "MIT",
@@ -24,13 +25,13 @@
   "confidence": "medium",
   "info_gaps": [],
   "quality_flags": [],
-  "stars_total": 304,
+  "stars_total": 313,
   "created_at": "2026-08-17",
-  "pushed_at": "2026-09-03",
+  "pushed_at": "2026-09-04",
   "latest_release": "v0.4.0",
   "first_seen": "2026-08-29",
-  "last_seen": "2026-09-04",
-  "streak_days": 6,
+  "last_seen": "2026-09-05",
+  "streak_days": 7,
   "analysis_updated_at": null,
   "appearances": [
     {
@@ -72,6 +73,13 @@
       "date": "2026-09-04",
       "reason": "release_update",
       "stars_total": 304,
+      "stars_gained": 0,
+      "release": "v0.4.0"
+    },
+    {
+      "date": "2026-09-05",
+      "reason": "lightweight",
+      "stars_total": 313,
       "stars_gained": 0,
       "release": "v0.4.0"
     }
