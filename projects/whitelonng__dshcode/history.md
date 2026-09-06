@@ -8,3 +8,4 @@
 - 2026-09-03 | lightweight | ⭐687(+0) | release=desktop-v1.0.8
 - 2026-09-04 | lightweight | ⭐711(+0) | release=desktop-v1.0.8
 - 2026-09-05 | lightweight | ⭐712(+0) | release=desktop-v1.0.8
+- 2026-09-06 | lightweight | ⭐712(+0) | release=desktop-v1.0.8
