@@ -1,1 +1,2 @@
 - 2026-09-08 | 🆕新发现 | ⭐9498(+285) | release=camoufox-backup-380139564
+- 2026-09-09 | lightweight | ⭐10309(+872) | release=camoufox-backup-380139564
