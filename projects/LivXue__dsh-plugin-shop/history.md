@@ -3,3 +3,4 @@
 - 2026-09-08 | release_update | ⭐312(+0) | release=v0.8.0
 - 2026-09-09 | lightweight | ⭐375(+0) | release=v0.8.0
 - 2026-09-10 | lightweight | ⭐442(+0) | release=v0.8.0
+- 2026-09-11 | release_update | ⭐502(+0) | release=v0.8.1
