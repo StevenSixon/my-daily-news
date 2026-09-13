@@ -2,3 +2,4 @@
 - 2026-09-10 | lightweight | ⭐373(+0) | release=hpx-registry-578f2128ec8819fcc9b5b8fa92e86675595fa5d2
 - 2026-09-11 | release_update | ⭐373(+0) | release=hpx-registry-f684eadb663872e759cfdb9a9093dc9a88d44304
 - 2026-09-12 | lightweight | ⭐372(+0) | release=hpx-registry-f684eadb663872e759cfdb9a9093dc9a88d44304
+- 2026-09-13 | lightweight | ⭐372(+0) | release=hpx-registry-f684eadb663872e759cfdb9a9093dc9a88d44304

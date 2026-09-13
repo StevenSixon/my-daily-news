@@ -9,3 +9,4 @@
 - 2026-09-10 | lightweight | ⭐284(+0) | release=v0.0.3
 - 2026-09-11 | lightweight | ⭐284(+0) | release=v0.0.3
 - 2026-09-12 | lightweight | ⭐286(+0) | release=v0.0.3
+- 2026-09-13 | release_update | ⭐304(+0) | release=native-runtime-90dc3ebbb74b
