@@ -1,1 +1,2 @@
 - 2026-09-14 | 🆕新发现 | ⭐5484(+215) | release=skills-catalog-v0.17.8
+- 2026-09-15 | lightweight | ⭐5971(+506) | release=skills-catalog-v0.17.8
