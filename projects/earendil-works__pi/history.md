@@ -11,3 +11,4 @@
 - 2026-07-30 | release_update | ⭐80345(+4979) | release=v0.83.0
 - 2026-07-31 | lightweight | ⭐80927(+4799) | release=v0.83.0
 - 2026-08-01 | lightweight | ⭐81490(+4571) | release=v0.83.0
+- 2026-09-16 | release_update | ⭐105550(+437) | release=v0.85.1
