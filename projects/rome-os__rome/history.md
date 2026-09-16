@@ -21,3 +21,4 @@
 - 2026-09-14 | lightweight | ⭐495(+0) | release=rome-web-components-v0.1.14
 - 2026-09-15 | release_update | ⭐498(+0) | release=rome-web-components-v0.1.15
 - 2026-09-16 | release_update | ⭐502(+0) | release=rome-web-components-v0.1.16
+- 2026-09-17 | release_update | ⭐501(+0) | release=rome-web-components-v0.1.17
