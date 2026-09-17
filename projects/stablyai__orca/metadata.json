@@ -1,7 +1,7 @@
 {
   "full_name": "stablyai/orca",
   "url": "https://github.com/stablyai/orca",
-  "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop, mobile and VPS.",
+  "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
   "language": "TypeScript",
   "topics": [
     "ade",
@@ -41,13 +41,13 @@
     "未提及是否支持自托管 relay/后端服务"
   ],
   "quality_flags": [],
-  "stars_total": 43865,
+  "stars_total": 70923,
   "created_at": "2026-03-17",
-  "pushed_at": "2026-08-13",
-  "latest_release": "v1.4.181",
+  "pushed_at": "2026-09-17",
+  "latest_release": "v1.4.205",
   "first_seen": "2026-06-24",
-  "last_seen": "2026-08-13",
-  "streak_days": 31,
+  "last_seen": "2026-09-18",
+  "streak_days": 32,
   "analysis_updated_at": "2026-07-28T09:05:18+0800",
   "appearances": [
     {
@@ -266,6 +266,13 @@
       "stars_total": 43865,
       "stars_gained": 1235,
       "release": "v1.4.181"
+    },
+    {
+      "date": "2026-09-18",
+      "reason": "release_update",
+      "stars_total": 70923,
+      "stars_gained": 5337,
+      "release": "v1.4.205"
     }
   ]
 }
