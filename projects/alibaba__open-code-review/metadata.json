@@ -1,7 +1,7 @@
 {
   "full_name": "alibaba/open-code-review",
   "url": "https://github.com/alibaba/open-code-review",
-  "description": "Fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+  "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
   "language": "Go",
   "topics": [
     "agent",
@@ -30,13 +30,13 @@
     "委托模式下各编码代理的具体操作步骤仅在子文档链接，未在README展开"
   ],
   "quality_flags": [],
-  "stars_total": 34224,
+  "stars_total": 36379,
   "created_at": "2026-05-18",
-  "pushed_at": "2026-09-17",
-  "latest_release": "v1.12.5",
+  "pushed_at": "2026-09-18",
+  "latest_release": "v1.12.6",
   "first_seen": "2026-07-24",
-  "last_seen": "2026-09-18",
-  "streak_days": 16,
+  "last_seen": "2026-09-19",
+  "streak_days": 17,
   "analysis_updated_at": "2026-07-27T09:22:14+0800",
   "appearances": [
     {
@@ -150,6 +150,13 @@
       "stars_total": 34224,
       "stars_gained": 8594,
       "release": "v1.12.5"
+    },
+    {
+      "date": "2026-09-19",
+      "reason": "release_update",
+      "stars_total": 36379,
+      "stars_gained": 11489,
+      "release": "v1.12.6"
     }
   ]
 }
