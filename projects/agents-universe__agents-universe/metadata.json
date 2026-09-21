@@ -1,25 +1,24 @@
 {
   "full_name": "agents-universe/agents-universe",
   "url": "https://github.com/agents-universe/agents-universe",
-  "description": "让智能体像人一样学习和工作，共享智能体和项目记忆",
+  "description": "共享智能体，共享项目上下文，让项目所有成员一起协同工作。同时智能体会像人一样通过资料或者工作抽象和总结经验到项目上下文中",
   "language": "Python",
   "topics": [
     "agent",
     "agent-framework",
     "agent-orchestration",
-    "agentic",
-    "agentic-workflow",
+    "agent-skill",
+    "agentic-ai",
     "ai-agents",
     "ai-governance",
     "ai-tools",
-    "context-engineering",
-    "llm",
-    "model-context-protocol",
+    "harness",
+    "harness-engineering",
+    "harness-framework",
     "python",
-    "shared-agent-memory",
-    "shared-services",
+    "python3",
     "vue3",
-    "webapp"
+    "vuejs"
   ],
   "license": "Apache-2.0",
   "category": "AI 应用",
@@ -30,13 +29,13 @@
   "confidence": "medium",
   "info_gaps": [],
   "quality_flags": [],
-  "stars_total": 372,
-  "created_at": "2026-08-18",
-  "pushed_at": "2026-09-09",
+  "stars_total": 207,
+  "created_at": "2026-09-10",
+  "pushed_at": "2026-09-20",
   "latest_release": "v1.4.0",
   "first_seen": "2026-09-05",
-  "last_seen": "2026-09-10",
-  "streak_days": 6,
+  "last_seen": "2026-09-22",
+  "streak_days": 7,
   "analysis_updated_at": null,
   "appearances": [
     {
@@ -80,6 +79,13 @@
       "stars_total": 372,
       "stars_gained": 0,
       "release": "v1.4.0"
+    },
+    {
+      "date": "2026-09-22",
+      "reason": "lightweight",
+      "stars_total": 207,
+      "stars_gained": 0,
+      "release": null
     }
   ]
 }

@@ -1,3 +1,4 @@
 - 2026-09-10 | 🆕新发现 | ⭐1544(+393) | release=v0.14.5
 - 2026-09-11 | release_update | ⭐2162(+636) | release=v0.14.6
 - 2026-09-12 | lightweight | ⭐2681(+545) | release=v0.14.6
+- 2026-09-22 | release_update | ⭐4942(+1457) | release=v0.15.2

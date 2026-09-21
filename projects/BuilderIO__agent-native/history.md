@@ -5,3 +5,4 @@
 - 2026-06-28 | release_update | ⭐2776(+1474) | release=@agent-native/skills@0.2.153
 - 2026-07-01 | release_update | ⭐3187(+1679) | release=@agent-native/core@0.81.3
 - 2026-09-21 | release_update | ⭐5237(+98) | release=@agent-native/toolkit@0.20.4
+- 2026-09-22 | lightweight | ⭐5751(+607) | release=@agent-native/toolkit@0.20.4
