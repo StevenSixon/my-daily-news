@@ -1,16 +1,18 @@
 {
   "full_name": "BuilderIO/agent-native",
   "url": "https://github.com/BuilderIO/agent-native",
-  "description": "A framework for building agent-native applications.",
+  "description": "A framework for building agentic apps",
   "language": "TypeScript",
   "topics": [
+    "agent-native",
     "agents",
     "ai",
-    "react"
+    "react",
+    "typescript"
   ],
   "license": null,
   "category": "AI 应用",
-  "classify_reason": "构建代理原生应用的框架，属于AI开发工具",
+  "classify_reason": "关键词命中",
   "one_liner": "定义一次Action，UI/Agent/API/MCP全域共用，Agent融入应用本体",
   "why_worth_it": "解决Agent与UI割裂问题，让Agent成为应用原住民而非聊天插件，适合构建产品级AI软件",
   "tags": [
@@ -28,13 +30,13 @@
     "0.x版本API稳定性及正式版路线图未披露"
   ],
   "quality_flags": [],
-  "stars_total": 3187,
+  "stars_total": 5237,
   "created_at": "2026-03-12",
-  "pushed_at": "2026-06-30",
-  "latest_release": "@agent-native/core@0.81.3",
+  "pushed_at": "2026-09-21",
+  "latest_release": "@agent-native/toolkit@0.20.4",
   "first_seen": "2026-06-19",
-  "last_seen": "2026-07-01",
-  "streak_days": 6,
+  "last_seen": "2026-09-21",
+  "streak_days": 7,
   "analysis_updated_at": "2026-07-01T02:30:13+0800",
   "appearances": [
     {
@@ -78,6 +80,13 @@
       "stars_total": 3187,
       "stars_gained": 1679,
       "release": "@agent-native/core@0.81.3"
+    },
+    {
+      "date": "2026-09-21",
+      "reason": "release_update",
+      "stars_total": 5237,
+      "stars_gained": 98,
+      "release": "@agent-native/toolkit@0.20.4"
     }
   ]
 }
