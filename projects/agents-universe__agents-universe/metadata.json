@@ -1,7 +1,7 @@
 {
   "full_name": "agents-universe/agents-universe",
   "url": "https://github.com/agents-universe/agents-universe",
-  "description": "共享智能体，共享项目上下文，让项目所有成员一起协同工作。同时智能体会像人一样通过资料或者工作抽象和总结经验到项目上下文中",
+  "description": "不是问答机器人，而是能真正干活的数字分身。共享智能体，共享项目上下文，让项目所有成员一起协同工作。同时智能体会像人一样通过资料或者工作抽象和总结经验到项目上下文中",
   "language": "Python",
   "topics": [
     "agent",
@@ -12,13 +12,16 @@
     "ai-agents",
     "ai-governance",
     "ai-tools",
+    "deepseek-harness",
     "harness",
     "harness-engineering",
     "harness-framework",
     "python",
     "python3",
     "vue3",
-    "vuejs"
+    "vuejs",
+    "workbuddy",
+    "workbuddy-alternative"
   ],
   "license": "Apache-2.0",
   "category": "AI 应用",
@@ -29,13 +32,13 @@
   "confidence": "medium",
   "info_gaps": [],
   "quality_flags": [],
-  "stars_total": 282,
+  "stars_total": 299,
   "created_at": "2026-09-10",
-  "pushed_at": "2026-09-23",
+  "pushed_at": "2026-09-24",
   "latest_release": "v1.4.0",
   "first_seen": "2026-09-05",
-  "last_seen": "2026-09-24",
-  "streak_days": 9,
+  "last_seen": "2026-09-25",
+  "streak_days": 10,
   "analysis_updated_at": null,
   "appearances": [
     {
@@ -98,6 +101,13 @@
       "date": "2026-09-24",
       "reason": "lightweight",
       "stars_total": 282,
+      "stars_gained": 0,
+      "release": null
+    },
+    {
+      "date": "2026-09-25",
+      "reason": "lightweight",
+      "stars_total": 299,
       "stars_gained": 0,
       "release": null
     }

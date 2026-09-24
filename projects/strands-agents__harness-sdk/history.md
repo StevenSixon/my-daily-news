@@ -1,1 +1,2 @@
 - 2026-09-24 | 🆕新发现 | ⭐7732(+96) | release=harness-cli/v0.1.1
+- 2026-09-25 | release_update | ⭐8163(+463) | release=mcp/v0.3.0
