@@ -6,3 +6,4 @@
 - 2026-07-18 | lightweight | ⭐47557(+2360) | release=skill-v3.9.1
 - 2026-07-27 | release_update | ⭐50685(+413) | release=skill-v4.0.2
 - 2026-09-24 | release_update | ⭐70189(+287) | release=skill-v4.3.1
+- 2026-09-26 | release_update | ⭐71052(+326) | release=engine-v0.1.6
