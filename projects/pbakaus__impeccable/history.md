@@ -8,3 +8,4 @@
 - 2026-09-24 | release_update | ⭐70189(+287) | release=skill-v4.3.1
 - 2026-09-26 | release_update | ⭐71052(+326) | release=engine-v0.1.6
 - 2026-09-30 | release_update | ⭐72454(+2547) | release=engine-v0.1.7
+- 2026-10-01 | release_update | ⭐72906(+2644) | release=engine-v0.1.8
