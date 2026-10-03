@@ -1,1 +1,2 @@
 - 2026-10-03 | 🆕新发现 | ⭐203(+0) | release=skills-v0.3.0
+- 2026-10-04 | lightweight | ⭐218(+0) | release=skills-v0.3.0
