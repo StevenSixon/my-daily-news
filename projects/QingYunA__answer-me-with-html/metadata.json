@@ -7,6 +7,9 @@
     "agent-skill",
     "ai-agent",
     "claude-code",
+    "claude-code-skill",
+    "claude-skill",
+    "claude-skills",
     "cli",
     "diagram",
     "explainer",
@@ -23,13 +26,13 @@
   "confidence": "medium",
   "info_gaps": [],
   "quality_flags": [],
-  "stars_total": 1505,
+  "stars_total": 1738,
   "created_at": "2026-10-02",
   "pushed_at": "2026-10-06",
-  "latest_release": "v0.4.11",
+  "latest_release": "v0.4.12",
   "first_seen": "2026-10-04",
-  "last_seen": "2026-10-06",
-  "streak_days": 3,
+  "last_seen": "2026-10-07",
+  "streak_days": 4,
   "analysis_updated_at": null,
   "appearances": [
     {
@@ -52,6 +55,13 @@
       "stars_total": 1505,
       "stars_gained": 0,
       "release": "v0.4.11"
+    },
+    {
+      "date": "2026-10-07",
+      "reason": "release_update",
+      "stars_total": 1738,
+      "stars_gained": 0,
+      "release": "v0.4.12"
     }
   ]
 }

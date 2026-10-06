@@ -7,3 +7,4 @@
 - 2026-10-04 | release_update | ⭐619(+0) | release=v1.6.0
 - 2026-10-05 | release_update | ⭐619(+0) | release=v1.7.1
 - 2026-10-06 | release_update | ⭐619(+0) | release=v1.8.0
+- 2026-10-07 | lightweight | ⭐619(+0) | release=v1.8.0

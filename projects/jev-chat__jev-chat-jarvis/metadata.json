@@ -1,7 +1,7 @@
 {
   "full_name": "jev-chat/jev-chat-jarvis",
   "url": "https://github.com/jev-chat/jev-chat-jarvis",
-  "description": "装在手机上的对话副驾：在 QQ / X / 飞书里读懂对方、给出候选回复、一键填入输入框，发不发由你。非侵入，只读屏幕，不 hook 不改包。",
+  "description": "The chat decision assistant: before you reply, Jev reads the chat, judges intent and risk, and drafts replies you fill in with one tap. You press send. Android · Windows · macOS · iOS | 聊天辅助决策工具：先看懂对方再回复，发不发由你。",
   "language": "Kotlin",
   "topics": [
     "accessibility-service",
@@ -11,7 +11,8 @@
     "chat-copilot",
     "llm",
     "ocr",
-    "qq"
+    "qq",
+    "whatsapp"
   ],
   "license": "MIT",
   "category": "AI 应用",
@@ -22,13 +23,13 @@
   "confidence": "medium",
   "info_gaps": [],
   "quality_flags": [],
-  "stars_total": 7364,
+  "stars_total": 7393,
   "created_at": "2026-09-21",
-  "pushed_at": "2026-10-05",
+  "pushed_at": "2026-10-06",
   "latest_release": "v1.7",
   "first_seen": "2026-09-23",
-  "last_seen": "2026-10-06",
-  "streak_days": 14,
+  "last_seen": "2026-10-07",
+  "streak_days": 15,
   "analysis_updated_at": null,
   "appearances": [
     {
@@ -126,6 +127,13 @@
       "date": "2026-10-06",
       "reason": "release_update",
       "stars_total": 7364,
+      "stars_gained": 0,
+      "release": "v1.7"
+    },
+    {
+      "date": "2026-10-07",
+      "reason": "lightweight",
+      "stars_total": 7393,
       "stars_gained": 0,
       "release": "v1.7"
     }
