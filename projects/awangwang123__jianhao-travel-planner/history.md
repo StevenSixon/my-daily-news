@@ -1,2 +1,3 @@
 - 2026-10-08 | 🆕新发现 | ⭐256(+0) | release=v1.7
 - 2026-10-09 | star_jump | ⭐343(+0) | release=v1.7
+- 2026-10-10 | release_update | ⭐358(+0) | release=v1.8
