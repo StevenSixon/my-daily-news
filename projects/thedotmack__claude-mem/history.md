@@ -9,3 +9,4 @@
 - 2026-10-10 | release_update | ⭐98925(+3153) | release=v13.35.0
 - 2026-10-11 | lightweight | ⭐99160(+3850) | release=v13.35.0
 - 2026-10-12 | lightweight | ⭐99625(+4035) | release=v13.35.0
+- 2026-10-13 | release_update | ⭐100054(+3803) | release=v13.36.1
