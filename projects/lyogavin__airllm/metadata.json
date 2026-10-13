@@ -1,7 +1,7 @@
 {
   "full_name": "lyogavin/airllm",
   "url": "https://github.com/lyogavin/airllm",
-  "description": "AirLLM 70B inference with single 4GB GPU",
+  "description": "AirLLM 2.8T LLM inference with single 4GB GPU",
   "language": "Jupyter Notebook",
   "topics": [
     "chinese-llm",
@@ -27,13 +27,13 @@
   "confidence": "medium",
   "info_gaps": [],
   "quality_flags": [],
-  "stars_total": 37428,
+  "stars_total": 38188,
   "created_at": "2023-06-12",
-  "pushed_at": "2026-10-12",
+  "pushed_at": "2026-10-13",
   "latest_release": "v4.0.0",
   "first_seen": "2026-07-19",
-  "last_seen": "2026-10-13",
-  "streak_days": 14,
+  "last_seen": "2026-10-14",
+  "streak_days": 15,
   "analysis_updated_at": null,
   "appearances": [
     {
@@ -132,6 +132,13 @@
       "reason": "lightweight",
       "stars_total": 37428,
       "stars_gained": 886,
+      "release": "v4.0.0"
+    },
+    {
+      "date": "2026-10-14",
+      "reason": "lightweight",
+      "stars_total": 38188,
+      "stars_gained": 1004,
       "release": "v4.0.0"
     }
   ]
