@@ -1,1 +1,2 @@
 - 2026-10-14 | 🆕新发现 | ⭐317(+0) | release=bolt-v0.8.5
+- 2026-10-15 | lightweight | ⭐327(+0) | release=bolt-v0.8.5
