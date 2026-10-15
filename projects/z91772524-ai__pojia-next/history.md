@@ -3,3 +3,4 @@
 - 2026-10-13 | release_update | ⭐317(+0) | release=v8.14
 - 2026-10-14 | release_update | ⭐353(+0) | release=v8.15
 - 2026-10-15 | release_update | ⭐388(+0) | release=v8.16
+- 2026-10-16 | release_update | ⭐417(+0) | release=v8.17
