@@ -10,3 +10,4 @@
 - 2026-10-15 | release_update | ⭐15961(+0) | release=v2.2.0
 - 2026-10-16 | release_update | ⭐17674(+0) | release=v2.3.0
 - 2026-10-17 | lightweight | ⭐19110(+0) | release=v2.3.0
+- 2026-10-18 | release_update | ⭐21883(+0) | release=v2.5.2
