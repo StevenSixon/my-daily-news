@@ -1,14 +1,29 @@
 {
   "full_name": "trhhubsd/ARTEX",
   "url": "https://github.com/trhhubsd/ARTEX",
-  "description": "ARTEX，AI 自主渗透测试系统。百度 agent+ 攻防挑战赛冠军项目。",
+  "description": "ARTEX · AI autonomous penetration testing system (multi-agent LLM, Go + Next.js) · AI 自主渗透测试系统 · 百度 agent+ 攻防挑战赛冠军",
   "language": "Go",
   "topics": [
     "ai-agent",
+    "ai-security",
     "artex",
+    "autonomous-agents",
     "cybersecurity",
-    "korean",
-    "security"
+    "go",
+    "hacking",
+    "llm",
+    "llm-agent",
+    "mcp",
+    "nextjs",
+    "offensive-security",
+    "penetration-testing",
+    "pentest",
+    "red-team",
+    "security",
+    "security-tools",
+    "vulnerability",
+    "vulnerability-scanners",
+    "web-security"
   ],
   "license": "AGPL-3.0",
   "category": "AI 应用",
@@ -19,13 +34,13 @@
   "confidence": "medium",
   "info_gaps": [],
   "quality_flags": [],
-  "stars_total": 1228,
+  "stars_total": 1253,
   "created_at": "2026-10-08",
-  "pushed_at": "2026-10-16",
-  "latest_release": null,
+  "pushed_at": "2026-10-18",
+  "latest_release": "v0.3.15",
   "first_seen": "2026-10-17",
-  "last_seen": "2026-10-18",
-  "streak_days": 2,
+  "last_seen": "2026-10-19",
+  "streak_days": 3,
   "analysis_updated_at": null,
   "appearances": [
     {
@@ -41,6 +56,13 @@
       "stars_total": 1228,
       "stars_gained": 0,
       "release": null
+    },
+    {
+      "date": "2026-10-19",
+      "reason": "release_update",
+      "stars_total": 1253,
+      "stars_gained": 0,
+      "release": "v0.3.15"
     }
   ]
 }
