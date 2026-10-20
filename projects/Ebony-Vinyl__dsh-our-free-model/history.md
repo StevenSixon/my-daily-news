@@ -13,3 +13,4 @@
 - 2026-10-18 | release_update | ⭐21883(+0) | release=v2.5.2
 - 2026-10-19 | release_update | ⭐24882(+0) | release=v2.5.3
 - 2026-10-20 | release_update | ⭐27539(+0) | release=v2.5.6-macos-unofficial
+- 2026-10-21 | release_update | ⭐30621(+0) | release=v2.5.7
