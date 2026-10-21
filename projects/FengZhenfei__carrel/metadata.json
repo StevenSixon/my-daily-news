@@ -6,12 +6,10 @@
   "topics": [
     "agent-skills",
     "ai-agents",
-    "chinese",
-    "claude-code-skill",
-    "codex-skill",
+    "dgx-spark",
     "document-parsing",
+    "icloud-sync",
     "knowledge-graph",
-    "knowledge-graphs",
     "mineru",
     "neo4j",
     "ontology",
@@ -29,13 +27,13 @@
   "confidence": "medium",
   "info_gaps": [],
   "quality_flags": [],
-  "stars_total": 312,
+  "stars_total": 373,
   "created_at": "2026-09-28",
-  "pushed_at": "2026-10-15",
+  "pushed_at": "2026-10-20",
   "latest_release": "v0.2.0",
   "first_seen": "2026-10-19",
-  "last_seen": "2026-10-21",
-  "streak_days": 3,
+  "last_seen": "2026-10-22",
+  "streak_days": 4,
   "analysis_updated_at": null,
   "appearances": [
     {
@@ -56,6 +54,13 @@
       "date": "2026-10-21",
       "reason": "lightweight",
       "stars_total": 312,
+      "stars_gained": 0,
+      "release": "v0.2.0"
+    },
+    {
+      "date": "2026-10-22",
+      "reason": "lightweight",
+      "stars_total": 373,
       "stars_gained": 0,
       "release": "v0.2.0"
     }

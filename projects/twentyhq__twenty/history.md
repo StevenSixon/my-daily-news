@@ -1,1 +1,2 @@
 - 2026-06-20 | 🆕新发现 | ⭐50715(+140) | release=twenty/v2.14.0
+- 2026-10-22 | release_update | ⭐58954(+105) | release=twenty/v2.50.0

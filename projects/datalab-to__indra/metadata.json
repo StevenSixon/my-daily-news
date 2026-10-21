@@ -1,7 +1,7 @@
 {
   "full_name": "datalab-to/indra",
   "url": "https://github.com/datalab-to/indra",
-  "description": "Fast CPU OCR: line detection, CTC recognition, reading order, markdown",
+  "description": "1M param OCR model - runs on CPU, 15x faster than tesseract, close to 1B+ param models in accuracy",
   "language": "Python",
   "topics": [
     "ai",
@@ -20,13 +20,13 @@
   "confidence": "medium",
   "info_gaps": [],
   "quality_flags": [],
-  "stars_total": 810,
+  "stars_total": 883,
   "created_at": "2026-10-13",
   "pushed_at": "2026-10-20",
   "latest_release": "v1.1.2",
   "first_seen": "2026-10-16",
-  "last_seen": "2026-10-21",
-  "streak_days": 6,
+  "last_seen": "2026-10-22",
+  "streak_days": 7,
   "analysis_updated_at": null,
   "appearances": [
     {
@@ -68,6 +68,13 @@
       "date": "2026-10-21",
       "reason": "release_update",
       "stars_total": 810,
+      "stars_gained": 0,
+      "release": "v1.1.2"
+    },
+    {
+      "date": "2026-10-22",
+      "reason": "lightweight",
+      "stars_total": 883,
       "stars_gained": 0,
       "release": "v1.1.2"
     }
