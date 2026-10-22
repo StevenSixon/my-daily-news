@@ -15,3 +15,4 @@
 - 2026-10-20 | release_update | ⭐27539(+0) | release=v2.5.6-macos-unofficial
 - 2026-10-21 | release_update | ⭐30621(+0) | release=v2.5.7
 - 2026-10-22 | release_update | ⭐33485(+0) | release=v2.5.8
+- 2026-10-23 | release_update | ⭐36521(+0) | release=v2.5.9-macos-unofficial

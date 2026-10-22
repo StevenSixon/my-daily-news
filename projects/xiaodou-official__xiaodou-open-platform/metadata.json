@@ -1,7 +1,7 @@
 {
   "full_name": "xiaodou-official/xiaodou-open-platform",
   "url": "https://github.com/xiaodou-official/xiaodou-open-platform",
-  "description": "个人支付接口｜个人网站/个人开发者/个人用户接入支付宝+微信聚合支付接口 API：个人/小微无需营业执照，卡密/虚拟商品收款，持牌清算、次日中午前到账（含节假日），兼容易支付。Alipay/WeChat Pay API for individual developers in China; Epay-compatible; licensed settlement.",
+  "description": "小豆支付开放平台：个人也能申请的支付宝+微信聚合收款接口——RSA2 签名 + webhook 验签、持牌机构清算、次日到账；兼容易支付 / 彩虹支付类插件协议零代码迁移（submit.php / mapi.php / api.php，网关 / 商家 ID / 密钥三格配置）；已兼容 Sub2API、New API（源码级核对）；支持多到账账号收款分配与分账；含 14 篇文档、四语言签名示例与本地 demo。Payment API for individuals & digital-goods merchants: Alipay + WeChat Pay, Epay-compatible, Sub2API & New API ready, licensed settlement.",
   "language": null,
   "topics": [
     "aggregate-payment",
@@ -12,15 +12,15 @@
     "epay",
     "epay-protocol",
     "faka",
-    "h5-payment",
     "llm-tools",
+    "new-api",
     "openapi",
     "payment",
     "payment-api",
     "payment-gateway",
     "payment-integration",
-    "qr-code",
     "rsa2",
+    "sub2api",
     "virtual-goods",
     "webhook",
     "wechat-pay"
@@ -34,13 +34,13 @@
   "confidence": "medium",
   "info_gaps": [],
   "quality_flags": [],
-  "stars_total": 346,
+  "stars_total": 319,
   "created_at": "2026-09-27",
-  "pushed_at": "2026-10-21",
+  "pushed_at": "2026-10-22",
   "latest_release": null,
   "first_seen": "2026-10-20",
-  "last_seen": "2026-10-22",
-  "streak_days": 3,
+  "last_seen": "2026-10-23",
+  "streak_days": 4,
   "analysis_updated_at": null,
   "appearances": [
     {
@@ -61,6 +61,13 @@
       "date": "2026-10-22",
       "reason": "lightweight",
       "stars_total": 346,
+      "stars_gained": 0,
+      "release": null
+    },
+    {
+      "date": "2026-10-23",
+      "reason": "lightweight",
+      "stars_total": 319,
       "stars_gained": 0,
       "release": null
     }
