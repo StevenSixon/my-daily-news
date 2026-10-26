@@ -1,25 +1,37 @@
 {
   "full_name": "NVIDIA/SkillSpector",
   "url": "https://github.com/NVIDIA/SkillSpector",
-  "description": "Security scanner for AI agent skills. Detect vulnerabilities, malicious patterns, and security risks.",
+  "description": "Security scanner for AI agent skills. Detect vulnerabilities, malicious patterns, security risks, prompt injection, data exfiltration, and supply-chain risks in Claude Code, Codex, and MCP skills before you install them.",
   "language": "Python",
-  "topics": [],
+  "topics": [
+    "agent-security",
+    "agent-skills",
+    "agentic-ai",
+    "ai-security",
+    "claude-code",
+    "mcp",
+    "prompt-injection",
+    "security-scanner",
+    "security-tools",
+    "security-workflow",
+    "supply-chain-security"
+  ],
   "license": "Apache-2.0",
   "category": "AI 应用",
-  "classify_reason": "Security scanner for AI agent skills, an AI security tool.",
+  "classify_reason": "关键词命中",
   "one_liner": "AI agent技能安全扫描，静态+LLM双阶段检测64种漏洞",
   "why_worth_it": "",
   "tags": [],
   "confidence": "medium",
   "info_gaps": [],
   "quality_flags": [],
-  "stars_total": 10292,
+  "stars_total": 21973,
   "created_at": "2026-03-21",
-  "pushed_at": "2026-06-24",
-  "latest_release": null,
+  "pushed_at": "2026-10-23",
+  "latest_release": "v2.13.1",
   "first_seen": "2026-06-19",
-  "last_seen": "2026-06-25",
-  "streak_days": 9,
+  "last_seen": "2026-10-27",
+  "streak_days": 10,
   "analysis_updated_at": "2026-06-19T22:12:07+0800",
   "appearances": [
     {
@@ -84,6 +96,13 @@
       "stars_total": 10292,
       "stars_gained": 2849,
       "release": null
+    },
+    {
+      "date": "2026-10-27",
+      "reason": "release_update",
+      "stars_total": 21973,
+      "stars_gained": 203,
+      "release": "v2.13.1"
     }
   ]
 }

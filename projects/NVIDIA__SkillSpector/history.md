@@ -7,3 +7,4 @@
 - 2026-06-22 | lightweight | ⭐9034(+4055) | release=-
 - 2026-06-24 | lightweight | ⭐10056(+2849) | release=-
 - 2026-06-25 | lightweight | ⭐10292(+2849) | release=-
+- 2026-10-27 | release_update | ⭐21973(+203) | release=v2.13.1

@@ -2,7 +2,7 @@
   "full_name": "mw00/project-maya",
   "url": "https://github.com/mw00/project-maya",
   "description": "Project Maya - run GLM-5.3-Flash (321B MoE) and DeepSeek-V4.1-Flash-1017 (748B MoE) privately on your own GPU(s), from one card to 16, NVIDIA or AMD, Linux or Windows. Engine, server, dashboard, OpenAI- and Anthropic-compatible API, quant tools.",
-  "language": "C++",
+  "language": "Cuda",
   "topics": [
     "cuda",
     "deepseek",
@@ -28,13 +28,13 @@
   "confidence": "medium",
   "info_gaps": [],
   "quality_flags": [],
-  "stars_total": 1836,
+  "stars_total": 1970,
   "created_at": "2026-10-06",
-  "pushed_at": "2026-10-24",
-  "latest_release": "v1.1.27",
+  "pushed_at": "2026-10-26",
+  "latest_release": "v1.1.29",
   "first_seen": "2026-10-15",
-  "last_seen": "2026-10-26",
-  "streak_days": 12,
+  "last_seen": "2026-10-27",
+  "streak_days": 13,
   "analysis_updated_at": null,
   "appearances": [
     {
@@ -120,6 +120,13 @@
       "stars_total": 1836,
       "stars_gained": 0,
       "release": "v1.1.27"
+    },
+    {
+      "date": "2026-10-27",
+      "reason": "release_update",
+      "stars_total": 1970,
+      "stars_gained": 0,
+      "release": "v1.1.29"
     }
   ]
 }
