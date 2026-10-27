@@ -19,3 +19,4 @@
 - 2026-10-25 | release_update | ⭐79056(+3241) | release=v3.62.0
 - 2026-10-26 | release_update | ⭐79206(+3241) | release=v3.63.0
 - 2026-10-27 | release_update | ⭐79476(+2987) | release=v3.63.3
+- 2026-10-28 | release_update | ⭐79721(+2683) | release=v3.63.4
