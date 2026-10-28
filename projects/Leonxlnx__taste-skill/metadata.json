@@ -1,26 +1,24 @@
 {
   "full_name": "Leonxlnx/taste-skill",
   "url": "https://github.com/Leonxlnx/taste-skill",
-  "description": "Taste-Skill - gives your AI good taste. stops the AI from generating boring, generic slop ",
+  "description": "Agent skills that give coding agents taste: art direction, reference images and a browser check instead of generic AI pages",
   "language": "JavaScript",
   "topics": [
-    "agent",
-    "ai",
-    "claude",
+    "agent-skills",
+    "ai-agents",
+    "anti-slop",
     "claude-code",
     "codex",
-    "coding",
-    "design",
+    "cursor",
+    "design-system",
     "frontend",
-    "lowcode",
-    "nocode",
-    "skill",
-    "skills",
-    "vibecoding"
+    "landing-page",
+    "ui-design",
+    "web-design"
   ],
   "license": "MIT",
   "category": "AI 应用",
-  "classify_reason": "Tool to improve AI output taste, directly used with AI agents.",
+  "classify_reason": "关键词命中",
   "one_liner": "为AI代理注入设计品味的轻量级技能包，消灭平庸前端样板",
   "why_worth_it": "直接教AI模型‘怎么设计’，而非提供新库；解决vibe coding产出的界面不忍直视的问题，对用AI写前端的开发者极其实用",
   "tags": [
@@ -38,13 +36,13 @@
     "未明确该技能是否对 token 消耗或生成速度有明显影响"
   ],
   "quality_flags": [],
-  "stars_total": 58362,
+  "stars_total": 104234,
   "created_at": "2026-02-19",
-  "pushed_at": "2026-07-04",
-  "latest_release": null,
+  "pushed_at": "2026-10-28",
+  "latest_release": "v2.1.5",
   "first_seen": "2026-07-06",
-  "last_seen": "2026-07-06",
-  "streak_days": 1,
+  "last_seen": "2026-10-29",
+  "streak_days": 2,
   "analysis_updated_at": "2026-07-06T21:09:00+0800",
   "appearances": [
     {
@@ -53,6 +51,13 @@
       "stars_total": 58362,
       "stars_gained": 1453,
       "release": null
+    },
+    {
+      "date": "2026-10-29",
+      "reason": "release_update",
+      "stars_total": 104234,
+      "stars_gained": 3941,
+      "release": "v2.1.5"
     }
   ]
 }
