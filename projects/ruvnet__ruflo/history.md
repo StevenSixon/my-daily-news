@@ -21,3 +21,4 @@
 - 2026-10-27 | release_update | ⭐79476(+2987) | release=v3.63.3
 - 2026-10-28 | release_update | ⭐79721(+2683) | release=v3.63.4
 - 2026-10-29 | release_update | ⭐79935(+2296) | release=v3.63.7
+- 2026-10-30 | release_update | ⭐80103(+1930) | release=v3.63.9

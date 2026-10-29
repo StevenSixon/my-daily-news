@@ -1,18 +1,19 @@
 {
   "full_name": "flohoeller/affectui",
   "url": "https://github.com/flohoeller/affectui",
-  "description": "Handcrafted React components, illustrations and motion for AI products. One file each, calm motion, dark mode built in. Install with the shadcn CLI – free and open source.",
+  "description": "UI for AI agents. React components for what agents do – agent trees, tool calls, traces, handoffs and approvals – and for the rest of your app. One file each, install with shadcn or via MCP. Free and open source.",
   "language": "TypeScript",
   "topics": [
+    "agent-ui",
     "ai",
+    "ai-agents",
     "ai-ui",
     "animation",
     "components",
-    "copy-paste",
     "dark-mode",
-    "design-system",
     "illustrations",
-    "micro-interactions",
+    "llm",
+    "mcp",
     "motion",
     "nextjs",
     "react",
@@ -21,7 +22,6 @@
     "shadcn-registry",
     "shadcn-ui",
     "typescript",
-    "ui",
     "ui-components",
     "ui-library"
   ],
@@ -34,13 +34,13 @@
   "confidence": "medium",
   "info_gaps": [],
   "quality_flags": [],
-  "stars_total": 365,
+  "stars_total": 381,
   "created_at": "2026-10-03",
-  "pushed_at": "2026-10-27",
+  "pushed_at": "2026-10-29",
   "latest_release": null,
   "first_seen": "2026-10-25",
-  "last_seen": "2026-10-29",
-  "streak_days": 5,
+  "last_seen": "2026-10-30",
+  "streak_days": 6,
   "analysis_updated_at": null,
   "appearances": [
     {
@@ -75,6 +75,13 @@
       "date": "2026-10-29",
       "reason": "lightweight",
       "stars_total": 365,
+      "stars_gained": 0,
+      "release": null
+    },
+    {
+      "date": "2026-10-30",
+      "reason": "lightweight",
+      "stars_total": 381,
       "stars_gained": 0,
       "release": null
     }
