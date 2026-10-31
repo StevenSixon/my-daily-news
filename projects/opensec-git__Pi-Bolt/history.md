@@ -16,3 +16,4 @@
 - 2026-10-29 | release_update | ⭐640(+0) | release=bolt-v1.0.7
 - 2026-10-30 | lightweight | ⭐654(+0) | release=bolt-v1.0.7
 - 2026-10-31 | lightweight | ⭐667(+0) | release=bolt-v1.0.7
+- 2026-11-01 | release_update | ⭐678(+0) | release=bolt-v1.0.8
