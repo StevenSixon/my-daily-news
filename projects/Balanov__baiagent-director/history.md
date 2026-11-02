@@ -1,2 +1,3 @@
 - 2026-11-01 | 🆕新发现 | ⭐303(+0) | release=v1.2.0
 - 2026-11-02 | release_update | ⭐305(+0) | release=v1.3.0
+- 2026-11-03 | lightweight | ⭐306(+0) | release=v1.3.0
