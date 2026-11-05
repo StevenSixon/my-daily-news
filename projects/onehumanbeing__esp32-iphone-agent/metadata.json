@@ -2,12 +2,13 @@
   "full_name": "onehumanbeing/esp32-iphone-agent",
   "url": "https://github.com/onehumanbeing/esp32-iphone-agent",
   "description": "Let an AI model use a real iPhone with a $7 ESP32: AirPlay eyes, USB HID hands, any OpenAI-compatible vision model. No Mac, no developer account, no jailbreak.",
-  "language": "C",
+  "language": "Swift",
   "topics": [
     "ai-agent",
     "airplay",
     "automation",
     "computer-use",
+    "dsh-plugin",
     "esp32",
     "esp32-s3",
     "iphone",
@@ -23,13 +24,13 @@
   "confidence": "medium",
   "info_gaps": [],
   "quality_flags": [],
-  "stars_total": 4366,
+  "stars_total": 4436,
   "created_at": "2026-10-11",
-  "pushed_at": "2026-11-04",
-  "latest_release": "cli-v0.1.0",
+  "pushed_at": "2026-11-05",
+  "latest_release": "cli-v0.1.1",
   "first_seen": "2026-10-13",
-  "last_seen": "2026-11-05",
-  "streak_days": 24,
+  "last_seen": "2026-11-06",
+  "streak_days": 25,
   "analysis_updated_at": null,
   "appearances": [
     {
@@ -199,6 +200,13 @@
       "stars_total": 4366,
       "stars_gained": 0,
       "release": "cli-v0.1.0"
+    },
+    {
+      "date": "2026-11-06",
+      "reason": "release_update",
+      "stars_total": 4436,
+      "stars_gained": 0,
+      "release": "cli-v0.1.1"
     }
   ]
 }
