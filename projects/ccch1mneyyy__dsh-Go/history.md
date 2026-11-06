@@ -5,3 +5,4 @@
 - 2026-11-04 | release_update | ⭐7325(+0) | release=v1.0.10
 - 2026-11-05 | lightweight | ⭐9332(+0) | release=v1.0.10
 - 2026-11-06 | release_update | ⭐11336(+0) | release=v1.0.11
+- 2026-11-07 | release_update | ⭐12866(+0) | release=v1.0.12

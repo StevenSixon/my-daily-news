@@ -1,7 +1,7 @@
 {
   "full_name": "zgsfsec/Full-Chain-Sentinel-System",
   "url": "https://github.com/zgsfsec/Full-Chain-Sentinel-System",
-  "description": "全链哨兵，是集Web 渗透、安卓 App 安全测试、iOS APP安全厕所、攻防批量打点、自动化应急响应、开源漏洞监测为一体的网络安全 Agent，用于安全服务交付自动化辅助，禁止用于非法用途。",
+  "description": "全链哨兵，是集Web 渗透、安卓 App 安全测试、iOS APP安全测试、攻防批量打点、自动化应急响应、开源漏洞监测为一体的网络安全 Agent，用于安全服务交付自动化辅助，禁止用于非法用途。",
   "language": "TypeScript",
   "topics": [
     "agent",
@@ -24,19 +24,26 @@
   "confidence": "medium",
   "info_gaps": [],
   "quality_flags": [],
-  "stars_total": 677,
+  "stars_total": 691,
   "created_at": "2026-10-16",
   "pushed_at": "2026-11-04",
   "latest_release": "v2.2.13",
   "first_seen": "2026-11-06",
-  "last_seen": "2026-11-06",
-  "streak_days": 1,
+  "last_seen": "2026-11-07",
+  "streak_days": 2,
   "analysis_updated_at": null,
   "appearances": [
     {
       "date": "2026-11-06",
       "reason": "new",
       "stars_total": 677,
+      "stars_gained": 0,
+      "release": "v2.2.13"
+    },
+    {
+      "date": "2026-11-07",
+      "reason": "lightweight",
+      "stars_total": 691,
       "stars_gained": 0,
       "release": "v2.2.13"
     }
