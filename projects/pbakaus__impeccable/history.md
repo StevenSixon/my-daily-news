@@ -29,3 +29,4 @@
 - 2026-11-05 | lightweight | ⭐102608(+11405) | release=cli-v4.8.0
 - 2026-11-06 | lightweight | ⭐103766(+10921) | release=cli-v4.8.0
 - 2026-11-07 | lightweight | ⭐104655(+9303) | release=cli-v4.8.0
+- 2026-11-08 | release_update | ⭐105329(+8172) | release=engine-v0.1.19
