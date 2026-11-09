@@ -1,1 +1,2 @@
 - 2026-11-09 | 🆕新发现 | ⭐361(+0) | release=mac-v0.7.6
+- 2026-11-10 | release_update | ⭐412(+0) | release=mac-v0.7.7
