@@ -7,3 +7,4 @@
 - 2026-11-09 | lightweight | ⭐728(+0) | release=v0.8.1
 - 2026-11-10 | release_update | ⭐741(+0) | release=v0.8.2
 - 2026-11-11 | release_update | ⭐780(+0) | release=v0.8.3
+- 2026-11-12 | lightweight | ⭐814(+0) | release=v0.8.3
