@@ -1,1 +1,2 @@
 - 2026-11-13 | 🆕新发现 | ⭐1070(+0) | release=desktop-v0.8.4
+- 2026-11-14 | release_update | ⭐1324(+0) | release=desktop-v0.8.5

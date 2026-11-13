@@ -3,3 +3,4 @@
 - 2026-11-11 | release_update | ⭐444(+0) | release=mac-v0.8.2
 - 2026-11-12 | release_update | ⭐492(+0) | release=mac-v0.9.0
 - 2026-11-13 | release_update | ⭐530(+0) | release=mac-v0.9.3
+- 2026-11-14 | release_update | ⭐514(+0) | release=mac-v0.9.7
