@@ -17,3 +17,4 @@
 - 2026-11-16 | release_update | ⭐23673(+0) | release=v1.1.0
 - 2026-11-17 | lightweight | ⭐24735(+0) | release=v1.1.0
 - 2026-11-18 | lightweight | ⭐25951(+0) | release=v1.1.0
+- 2026-11-19 | release_update | ⭐27121(+0) | release=v1.2.0
