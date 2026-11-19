@@ -15,3 +15,4 @@
 - 2026-11-17 | lightweight | ⭐2136(+0) | release=v18-champion
 - 2026-11-18 | lightweight | ⭐2311(+0) | release=v18-champion
 - 2026-11-19 | lightweight | ⭐2431(+0) | release=v18-champion
+- 2026-11-20 | lightweight | ⭐2486(+0) | release=v18-champion

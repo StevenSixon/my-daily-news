@@ -1,2 +1,3 @@
 - 2026-11-18 | 🆕新发现 | ⭐850(+0) | release=-
 - 2026-11-19 | lightweight | ⭐1059(+0) | release=-
+- 2026-11-20 | lightweight | ⭐1247(+0) | release=-
