@@ -1,1 +1,2 @@
 - 2026-11-20 | 🆕新发现 | ⭐1643(+0) | release=app-0.4.5-beta.1
+- 2026-11-21 | release_update | ⭐1696(+0) | release=app-0.4.6-beta.1

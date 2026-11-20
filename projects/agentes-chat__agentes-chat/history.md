@@ -6,3 +6,4 @@
 - 2026-11-18 | lightweight | ⭐1677(+0) | release=desktop-v0.8.11
 - 2026-11-19 | release_update | ⭐1712(+0) | release=v0.1.6
 - 2026-11-20 | release_update | ⭐1747(+0) | release=v0.1.8
+- 2026-11-21 | release_update | ⭐1835(+0) | release=desktop-v0.8.14
