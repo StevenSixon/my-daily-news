@@ -33,3 +33,4 @@
 - 2026-11-19 | release_update | ⭐54158(+3675) | release=v1.13.12
 - 2026-11-20 | release_update | ⭐54354(+4383) | release=v1.13.13
 - 2026-11-21 | lightweight | ⭐54703(+4492) | release=v1.13.13
+- 2026-11-22 | release_update | ⭐55036(+4457) | release=v1.14.0
