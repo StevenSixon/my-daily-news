@@ -1,6 +1,350 @@
 {
   "editions": [
     {
+      "date": "2026-11-24",
+      "count": 5,
+      "projects": [
+        {
+          "id": "pierridotite__mobile-agent-testers",
+          "fullName": "pierridotite/mobile-agent-testers",
+          "owner": "pierridotite",
+          "name": "mobile-agent-testers",
+          "url": "https://github.com/pierridotite/mobile-agent-testers",
+          "oneLiner": "20 AI testers on 20 different phones, in parallel, on GitHub's free runners: Claude Code agents on iOS Simulators and Android emulators that find broken flows, translation, layout and accessibility bugs",
+          "description": "20 AI testers on 20 different phones, in parallel, on GitHub's free runners: Claude Code agents on iOS Simulators and Android emulators that find broken flows, translation, layout and accessibility bugs",
+          "language": "Python",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 1450,
+          "starsGained": 0,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-11-16",
+          "pushedAt": "2026-11-23",
+          "latestRelease": "v0.1.0",
+          "firstSeen": "2026-11-24",
+          "topics": [
+            "accessibility-testing",
+            "ai-agents",
+            "ai-testing",
+            "android",
+            "android-emulator",
+            "claude",
+            "claude-code",
+            "e2e-testing",
+            "exploratory-testing",
+            "expo",
+            "flutter",
+            "github-actions",
+            "ios",
+            "ios-simulator",
+            "llm",
+            "mobile-testing",
+            "qa",
+            "react-native",
+            "test-automation",
+            "ui-testing"
+          ],
+          "appearances": [
+            {
+              "date": "2026-11-24",
+              "reason": "new",
+              "starsTotal": 1450,
+              "starsGained": 0,
+              "release": "v0.1.0"
+            }
+          ],
+          "analysis": []
+        },
+        {
+          "id": "wisemeadowlarkspike__Gemini-Config-Checker-",
+          "fullName": "wisemeadowlarkspike/Gemini-Config-Checker-",
+          "owner": "wisemeadowlarkspike",
+          "name": "Gemini-Config-Checker-",
+          "url": "https://github.com/wisemeadowlarkspike/Gemini-Config-Checker-",
+          "oneLiner": "Chain region scanner: find proxy configs that get you into Google AI Studio and Gemini (signed-in browser check, anti-DPI, Windows/macOS/Linux/Android) ",
+          "description": "Chain region scanner: find proxy configs that get you into Google AI Studio and Gemini (signed-in browser check, anti-DPI, Windows/macOS/Linux/Android) ",
+          "language": "Go",
+          "category": "AI 应用",
+          "license": "Apache-2.0",
+          "starsTotal": 464,
+          "starsGained": 0,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-11-15",
+          "pushedAt": "2026-11-15",
+          "latestRelease": "",
+          "firstSeen": "2026-11-24",
+          "topics": [
+            "ai",
+            "ai-search",
+            "aichecker",
+            "chatgpt",
+            "cli",
+            "config-checker",
+            "gemeni",
+            "gemeni-checker",
+            "generative-ai",
+            "lim-seo",
+            "llm",
+            "mcp-server",
+            "nextjs",
+            "open-code",
+            "seo-checker",
+            "seo-tool",
+            "typescript"
+          ],
+          "appearances": [
+            {
+              "date": "2026-11-24",
+              "reason": "new",
+              "starsTotal": 464,
+              "starsGained": 0,
+              "release": ""
+            }
+          ],
+          "analysis": []
+        },
+        {
+          "id": "WyrmClimberManacle__Gemini-Config-Checker-",
+          "fullName": "WyrmClimberManacle/Gemini-Config-Checker-",
+          "owner": "WyrmClimberManacle",
+          "name": "Gemini-Config-Checker-",
+          "url": "https://github.com/WyrmClimberManacle/Gemini-Config-Checker-",
+          "oneLiner": "Chain region scanner: find proxy configs that get you into Google AI Studio and Gemini (signed-in browser check, anti-DPI, Windows/macOS/Linux/Android) ",
+          "description": "Chain region scanner: find proxy configs that get you into Google AI Studio and Gemini (signed-in browser check, anti-DPI, Windows/macOS/Linux/Android) ",
+          "language": "Makefile",
+          "category": "AI 应用",
+          "license": "Apache-2.0",
+          "starsTotal": 464,
+          "starsGained": 0,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-11-15",
+          "pushedAt": "2026-11-15",
+          "latestRelease": "",
+          "firstSeen": "2026-11-24",
+          "topics": [
+            "ai",
+            "ai-search",
+            "aichecker",
+            "chatgpt",
+            "cli",
+            "config-checker",
+            "gemeni",
+            "gemeni-checker",
+            "generative-ai",
+            "lim-seo",
+            "llm",
+            "mcp-server",
+            "nextjs",
+            "open-code",
+            "seo-checker",
+            "seo-tool",
+            "typescript"
+          ],
+          "appearances": [
+            {
+              "date": "2026-11-24",
+              "reason": "new",
+              "starsTotal": 464,
+              "starsGained": 0,
+              "release": ""
+            }
+          ],
+          "analysis": []
+        },
+        {
+          "id": "fendouai__ViralForge",
+          "fullName": "fendouai/ViralForge",
+          "owner": "fendouai",
+          "name": "ViralForge",
+          "url": "https://github.com/fendouai/ViralForge",
+          "oneLiner": "Agent-native viral video studio: deconstruct scripts, replicate structures, export editable projects and costed variants. Website: https://wearai.net/ai-video-generator",
+          "description": "Agent-native viral video studio: deconstruct scripts, replicate structures, export editable projects and costed variants. Website: https://wearai.net/ai-video-generator",
+          "language": "TypeScript",
+          "category": "AI 应用",
+          "license": "Apache-2.0",
+          "starsTotal": 554,
+          "starsGained": 0,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-11-11",
+          "pushedAt": "2026-11-23",
+          "latestRelease": "",
+          "firstSeen": "2026-11-24",
+          "topics": [
+            "ai-agent",
+            "ai-agents",
+            "short-video",
+            "short-video-generator",
+            "video-editing",
+            "video-script-deconstruction",
+            "viral-video",
+            "viral-video-generator"
+          ],
+          "appearances": [
+            {
+              "date": "2026-11-24",
+              "reason": "new",
+              "starsTotal": 554,
+              "starsGained": 0,
+              "release": ""
+            }
+          ],
+          "analysis": []
+        },
+        {
+          "id": "beiwocaishijia__gezhi-sheets",
+          "fullName": "beiwocaishijia/gezhi-sheets",
+          "owner": "beiwocaishijia",
+          "name": "gezhi-sheets",
+          "url": "https://github.com/beiwocaishijia/gezhi-sheets",
+          "oneLiner": "格知 AI · Gezhi Sheets｜让表格听懂你的话。支持 GLM、Kimi、豆包、DeepSeek、Qwen 的本地 AI 表格助手。",
+          "description": "格知 AI · Gezhi Sheets｜让表格听懂你的话。支持 GLM、Kimi、豆包、DeepSeek、Qwen 的本地 AI 表格助手。",
+          "language": "JavaScript",
+          "category": "AI 应用",
+          "license": "MIT",
+          "starsTotal": 600,
+          "starsGained": 0,
+          "streakDays": 1,
+          "isNew": true,
+          "createdAt": "2026-11-09",
+          "pushedAt": "2026-11-18",
+          "latestRelease": "",
+          "firstSeen": "2026-11-24",
+          "topics": [
+            "ai",
+            "deepseek",
+            "javascript",
+            "kimi",
+            "qwen",
+            "spreadsheet"
+          ],
+          "appearances": [
+            {
+              "date": "2026-11-24",
+              "reason": "new",
+              "starsTotal": 600,
+              "starsGained": 0,
+              "release": ""
+            }
+          ],
+          "analysis": []
+        }
+      ],
+      "news": [
+        {
+          "title": "Claude Ship | Automate pull requests review and fixes",
+          "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1jTnNFWkF2OUZJbUVGd2I3MUZfWG02Ulg4SG0wYlBrQkJ0dXRhbURVdy1zTzFRQ25lSHhBX1NDejFkem00aFBKOHBTRE5xaXc?oc=5",
+          "source": "Claude",
+          "sourceType": "official",
+          "published": "2026-11-23",
+          "summary": "",
+          "category": ""
+        },
+        {
+          "title": "OpenAI and Cisco introduce Shirudo",
+          "url": "https://openai.com/index/introducing-shirudo",
+          "source": "OpenAI",
+          "sourceType": "official",
+          "published": "2026-11-23",
+          "summary": "",
+          "category": ""
+        },
+        {
+          "title": "Introducing Claude Ship",
+          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1kclhxaXlKYU41UkRoVVZlOXpQN0hpQUp4OFYzeGxvT3lvVHd6blhPVEVYQzRCWUstYXBpa0VibUs3MkZ0ckgyRlhFQ0w2U0p2dy15dHc4MUZMaWhNV2dTd09xQmZtVnFiN2ZPN3FB?oc=5",
+          "source": "Claude",
+          "sourceType": "official",
+          "published": "2026-11-23",
+          "summary": "",
+          "category": ""
+        },
+        {
+          "title": "A more tailored Google Search that’s uniquely yours",
+          "url": "https://blog.google/products-and-platforms/products/search/google-search-personal-intelligence-apps/",
+          "source": "Google AI",
+          "sourceType": "official",
+          "published": "2026-11-23",
+          "summary": "",
+          "category": ""
+        },
+        {
+          "title": "Finding faster quantum algorithms with agents and formal verification",
+          "url": "https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/",
+          "source": "Google DeepMind",
+          "sourceType": "official",
+          "published": "2026-11-23",
+          "summary": "",
+          "category": ""
+        },
+        {
+          "title": "Connected intelligence for in-house legal",
+          "url": "https://openai.com/business/learn/connected-intelligence-for-in-house-legal",
+          "source": "OpenAI",
+          "sourceType": "official",
+          "published": "2026-11-23",
+          "summary": "",
+          "category": ""
+        },
+        {
+          "title": "GLM-5.4: Toward generalized coding with our first loop transformer",
+          "url": "https://z.ai/blog/glm-5.4",
+          "source": "Hacker News",
+          "sourceType": "community",
+          "published": "2026-11-23",
+          "summary": "",
+          "category": ""
+        },
+        {
+          "title": "RoboTrack: Point tracking for real-world robotic manipulation",
+          "url": "https://huggingface.co/blog/allenai/robotrack",
+          "source": "HF Blog",
+          "sourceType": "hf",
+          "published": "2026-11-23",
+          "summary": "",
+          "category": ""
+        },
+        {
+          "title": "A Beginner's Guide to Local AI with Inkling, Qwen, and Unsloth",
+          "url": "https://www.gpupartner.com/blog/beginners-guide-local-ai-inkling-qwen-unsloth",
+          "source": "Hacker News",
+          "sourceType": "community",
+          "published": "2026-11-22",
+          "summary": "",
+          "category": ""
+        },
+        {
+          "title": "Adding One More Agent: How AI Team Size and Formation Shape Productivity and Diversity in Human-AI Brainstorming Teams",
+          "url": "https://arxiv.org/abs/2611.26663",
+          "source": "arXiv cs.AI",
+          "sourceType": "paper",
+          "published": "2026-11-23",
+          "summary": "",
+          "category": ""
+        },
+        {
+          "title": "Coherence by Construction: Synthesizing CTI Knowledge Graphs and the Formal Limits of Coherence Validation",
+          "url": "https://arxiv.org/abs/2611.26717",
+          "source": "arXiv cs.AI",
+          "sourceType": "paper",
+          "published": "2026-11-23",
+          "summary": "",
+          "category": ""
+        },
+        {
+          "title": "SkillPrivus: Uncovering PRIVacy of USe Harms in Agentic Skills",
+          "url": "https://arxiv.org/abs/2611.26747",
+          "source": "arXiv cs.CL",
+          "sourceType": "paper",
+          "published": "2026-11-23",
+          "summary": "",
+          "category": ""
+        }
+      ]
+    },
+    {
       "date": "2026-11-23",
       "count": 5,
       "projects": [
@@ -20,7 +364,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-11-21",
-          "pushedAt": "2026-11-22",
+          "pushedAt": "2026-11-23",
           "latestRelease": "v0.0.3",
           "firstSeen": "2026-11-23",
           "topics": [
@@ -50,6 +394,13 @@
               "date": "2026-11-23",
               "reason": "new",
               "starsTotal": 349,
+              "starsGained": 0,
+              "release": "v0.0.3"
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "star_jump",
+              "starsTotal": 499,
               "starsGained": 0,
               "release": "v0.0.3"
             }
@@ -167,7 +518,7 @@
           "name": "MROffice",
           "url": "https://github.com/XinaTian/MROffice",
           "oneLiner": "The editors of MR Office, the free office closest to Microsoft Office: documents, spreadsheets, presentations, PDF, handwriting and code in the browser. Embed them in your app with one line, or use them from AI apps via MCP.",
-          "description": "The editors of MR Office, the free office closest to Microsoft Office: documents, spreadsheets, presentations, PDF, handwriting and code in the browser. Embed them in your app with one line, or use them from AI apps via MCP.",
+          "description": "MR Office — the open-source editors of the AI office suite closest to Microsoft Office: documents, spreadsheets, presentations, PDF and code in the browser. Copilot in every editor edits real Word, Excel and PowerPoint files with you; an MCP server lets Claude, ChatGPT, Cursor and Codex create and edit them; embed it in your app with one line.",
           "language": "TypeScript",
           "category": "AI 应用",
           "license": "AGPL-3.0",
@@ -176,29 +527,29 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-11-10",
-          "pushedAt": "2026-11-22",
-          "latestRelease": "v0.1.6",
+          "pushedAt": "2026-11-23",
+          "latestRelease": "v0.1.8",
           "firstSeen": "2026-11-23",
           "topics": [
             "ai",
-            "collaboration",
+            "ai-agent",
+            "claude-code",
+            "codex",
+            "copilot",
+            "cursor",
             "document-editor",
             "docx",
             "embed",
             "excel",
             "mcp",
-            "office",
+            "mcp-server",
+            "microsoft-office-alternative",
             "office-suite",
-            "pdf",
             "pdf-editor",
             "powerpoint",
             "pptx",
-            "presentation",
-            "sdk",
             "spreadsheet",
-            "typescript",
             "word",
-            "wordprocessor",
             "xlsx"
           ],
           "appearances": [
@@ -208,6 +559,13 @@
               "starsTotal": 2069,
               "starsGained": 0,
               "release": "v0.1.6"
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "release_update",
+              "starsTotal": 2752,
+              "starsGained": 0,
+              "release": "v0.1.8"
             }
           ],
           "analysis": []
@@ -228,8 +586,8 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-11-19",
-          "pushedAt": "2026-11-22",
-          "latestRelease": "v0.2.10",
+          "pushedAt": "2026-11-23",
+          "latestRelease": "v0.3.0",
           "firstSeen": "2026-11-23",
           "topics": [
             "ai-agent",
@@ -260,6 +618,13 @@
               "starsTotal": 478,
               "starsGained": 0,
               "release": "v0.2.10"
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "release_update",
+              "starsTotal": 779,
+              "starsGained": 0,
+              "release": "v0.3.0"
             }
           ],
           "analysis": []
@@ -367,6 +732,13 @@
               "date": "2026-11-23",
               "reason": "lightweight",
               "starsTotal": 469,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 464,
               "starsGained": 0,
               "release": ""
             }
@@ -513,6 +885,13 @@
               "starsTotal": 493,
               "starsGained": 0,
               "release": "v1.3.2"
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 496,
+              "starsGained": 0,
+              "release": "v1.3.2"
             }
           ],
           "analysis": []
@@ -533,11 +912,12 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-11-11",
-          "pushedAt": "2026-11-17",
-          "latestRelease": "",
+          "pushedAt": "2026-11-23",
+          "latestRelease": "v0.1.0",
           "firstSeen": "2026-11-22",
           "topics": [
             "ai-teacher",
+            "ai-teaching",
             "ai-tutor",
             "ai-tutoring",
             "ai-whiteboard",
@@ -545,11 +925,16 @@
             "deepseek",
             "edtech",
             "education",
+            "educational-ai",
             "gemini",
+            "intelligent-tutoring-systems",
             "llm",
             "llm-benchmark",
             "math-tutor",
-            "whiteboard"
+            "teaching-tools",
+            "visual-learning",
+            "whiteboard",
+            "whiteboard-animation"
           ],
           "appearances": [
             {
@@ -565,6 +950,13 @@
               "starsTotal": 548,
               "starsGained": 0,
               "release": ""
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "release_update",
+              "starsTotal": 556,
+              "starsGained": 0,
+              "release": "v0.1.0"
             }
           ],
           "analysis": []
@@ -647,8 +1039,8 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-01-13",
-          "pushedAt": "2026-11-22",
-          "latestRelease": "v0.1.2026.11.22",
+          "pushedAt": "2026-11-23",
+          "latestRelease": "v0.1.2026.11.23",
           "firstSeen": "2026-11-21",
           "topics": [
             "alerting",
@@ -688,6 +1080,13 @@
               "starsTotal": 14322,
               "starsGained": 395,
               "release": "v0.1.2026.11.22"
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "release_update",
+              "starsTotal": 14819,
+              "starsGained": 438,
+              "release": "v0.1.2026.11.23"
             }
           ],
           "analysis": []
@@ -748,6 +1147,13 @@
               "starsTotal": 1078,
               "starsGained": 0,
               "release": ""
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 1104,
+              "starsGained": 0,
+              "release": ""
             }
           ],
           "analysis": []
@@ -804,6 +1210,13 @@
               "date": "2026-11-23",
               "reason": "lightweight",
               "starsTotal": 686,
+              "starsGained": 0,
+              "release": "v1.0.0"
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 772,
               "starsGained": 0,
               "release": "v1.0.0"
             }
@@ -869,6 +1282,13 @@
               "starsTotal": 469,
               "starsGained": 0,
               "release": ""
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 464,
+              "starsGained": 0,
+              "release": ""
             }
           ],
           "analysis": []
@@ -930,6 +1350,13 @@
               "date": "2026-11-23",
               "reason": "lightweight",
               "starsTotal": 469,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 464,
               "starsGained": 0,
               "release": ""
             }
@@ -1068,7 +1495,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2018-10-15",
-          "pushedAt": "2026-11-22",
+          "pushedAt": "2026-11-23",
           "latestRelease": "2026.4.1",
           "firstSeen": "2026-11-20",
           "topics": [
@@ -1120,6 +1547,13 @@
               "starsTotal": 12064,
               "starsGained": 155,
               "release": "2026.4.1"
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 12275,
+              "starsGained": 183,
+              "release": "2026.4.1"
             }
           ],
           "analysis": []
@@ -1140,7 +1574,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-11-05",
-          "pushedAt": "2026-11-22",
+          "pushedAt": "2026-11-23",
           "latestRelease": "app-0.4.7-beta.1",
           "firstSeen": "2026-11-20",
           "topics": [
@@ -1188,6 +1622,13 @@
               "date": "2026-11-23",
               "reason": "lightweight",
               "starsTotal": 1830,
+              "starsGained": 0,
+              "release": "app-0.4.7-beta.1"
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 1889,
               "starsGained": 0,
               "release": "app-0.4.7-beta.1"
             }
@@ -1260,6 +1701,13 @@
               "starsTotal": 469,
               "starsGained": 0,
               "release": ""
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 464,
+              "starsGained": 0,
+              "release": ""
             }
           ],
           "analysis": []
@@ -1330,6 +1778,13 @@
               "starsTotal": 469,
               "starsGained": 0,
               "release": ""
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 464,
+              "starsGained": 0,
+              "release": ""
             }
           ],
           "analysis": []
@@ -1398,6 +1853,13 @@
               "date": "2026-11-23",
               "reason": "lightweight",
               "starsTotal": 469,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 464,
               "starsGained": 0,
               "release": ""
             }
@@ -1536,7 +1998,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-10-29",
-          "pushedAt": "2026-11-22",
+          "pushedAt": "2026-11-23",
           "latestRelease": "v1.13.19",
           "firstSeen": "2026-11-19",
           "topics": [
@@ -1594,6 +2056,13 @@
               "date": "2026-11-23",
               "reason": "lightweight",
               "starsTotal": 6809,
+              "starsGained": 0,
+              "release": "v1.13.19"
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 7050,
               "starsGained": 0,
               "release": "v1.13.19"
             }
@@ -1673,6 +2142,13 @@
               "starsTotal": 469,
               "starsGained": 0,
               "release": ""
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 464,
+              "starsGained": 0,
+              "release": ""
             }
           ],
           "analysis": []
@@ -1748,6 +2224,13 @@
               "date": "2026-11-23",
               "reason": "lightweight",
               "starsTotal": 469,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 464,
               "starsGained": 0,
               "release": ""
             }
@@ -1827,6 +2310,13 @@
               "starsTotal": 469,
               "starsGained": 0,
               "release": ""
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 464,
+              "starsGained": 0,
+              "release": ""
             }
           ],
           "analysis": []
@@ -1902,6 +2392,13 @@
               "date": "2026-11-23",
               "reason": "lightweight",
               "starsTotal": 469,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 464,
               "starsGained": 0,
               "release": ""
             }
@@ -2134,6 +2631,13 @@
               "starsTotal": 1924,
               "starsGained": 0,
               "release": ""
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 2118,
+              "starsGained": 0,
+              "release": ""
             }
           ],
           "analysis": []
@@ -2216,6 +2720,13 @@
               "date": "2026-11-23",
               "reason": "lightweight",
               "starsTotal": 471,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 467,
               "starsGained": 0,
               "release": ""
             }
@@ -2302,6 +2813,13 @@
               "starsTotal": 469,
               "starsGained": 0,
               "release": ""
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 464,
+              "starsGained": 0,
+              "release": ""
             }
           ],
           "analysis": []
@@ -2384,6 +2902,13 @@
               "date": "2026-11-23",
               "reason": "lightweight",
               "starsTotal": 469,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 464,
               "starsGained": 0,
               "release": ""
             }
@@ -2477,7 +3002,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-05-05",
-          "pushedAt": "2026-11-22",
+          "pushedAt": "2026-11-23",
           "latestRelease": "v2.1",
           "firstSeen": "2026-11-17",
           "topics": [
@@ -2546,6 +3071,13 @@
               "reason": "lightweight",
               "starsTotal": 17428,
               "starsGained": 1721,
+              "release": "v2.1"
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 19703,
+              "starsGained": 2037,
               "release": "v2.1"
             }
           ],
@@ -2624,7 +3156,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2025-05-07",
-          "pushedAt": "2026-11-21",
+          "pushedAt": "2026-11-22",
           "latestRelease": "release/2026-11-21",
           "firstSeen": "2026-11-17",
           "topics": [
@@ -2683,6 +3215,13 @@
               "starsTotal": 21162,
               "starsGained": 3792,
               "release": "release/2026-11-21"
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 21377,
+              "starsGained": 3620,
+              "release": "release/2026-11-21"
             }
           ],
           "analysis": []
@@ -2703,8 +3242,8 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-09-03",
-          "pushedAt": "2026-11-22",
-          "latestRelease": "v4.7.0",
+          "pushedAt": "2026-11-23",
+          "latestRelease": "v4.7.1",
           "firstSeen": "2026-11-17",
           "topics": [
             "agent-skills",
@@ -2763,6 +3302,13 @@
               "starsTotal": 9634,
               "starsGained": 3598,
               "release": "v4.7.0"
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "release_update",
+              "starsTotal": 10214,
+              "starsGained": 3748,
+              "release": "v4.7.1"
             }
           ],
           "analysis": []
@@ -3088,6 +3634,13 @@
               "starsTotal": 470,
               "starsGained": 0,
               "release": ""
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 465,
+              "starsGained": 0,
+              "release": ""
             }
           ],
           "analysis": []
@@ -3184,6 +3737,13 @@
               "date": "2026-11-23",
               "reason": "lightweight",
               "starsTotal": 469,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 464,
               "starsGained": 0,
               "release": ""
             }
@@ -3284,6 +3844,13 @@
               "starsTotal": 469,
               "starsGained": 0,
               "release": ""
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 464,
+              "starsGained": 0,
+              "release": ""
             }
           ],
           "analysis": []
@@ -3380,6 +3947,13 @@
               "date": "2026-11-23",
               "reason": "lightweight",
               "starsTotal": 469,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 464,
               "starsGained": 0,
               "release": ""
             }
@@ -3849,8 +4423,8 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-11-06",
-          "pushedAt": "2026-11-22",
-          "latestRelease": "v2026.1123.1",
+          "pushedAt": "2026-11-23",
+          "latestRelease": "v2026.1123.6",
           "firstSeen": "2026-11-14",
           "topics": [
             "ai-agent",
@@ -3932,6 +4506,13 @@
               "starsTotal": 2672,
               "starsGained": 0,
               "release": "v2026.1123.1"
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "release_update",
+              "starsTotal": 2715,
+              "starsGained": 0,
+              "release": "v2026.1123.6"
             }
           ],
           "analysis": []
@@ -3990,7 +4571,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-10-26",
-          "pushedAt": "2026-11-22",
+          "pushedAt": "2026-11-23",
           "latestRelease": "",
           "firstSeen": "2026-11-14",
           "topics": [
@@ -4081,6 +4662,13 @@
               "starsTotal": 6532,
               "starsGained": 0,
               "release": ""
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 6794,
+              "starsGained": 0,
+              "release": ""
             }
           ],
           "analysis": []
@@ -4101,7 +4689,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-11-04",
-          "pushedAt": "2026-11-19",
+          "pushedAt": "2026-11-23",
           "latestRelease": "",
           "firstSeen": "2026-11-14",
           "topics": [
@@ -4185,6 +4773,13 @@
               "starsTotal": 1105,
               "starsGained": 0,
               "release": ""
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 1123,
+              "starsGained": 0,
+              "release": ""
             }
           ],
           "analysis": []
@@ -4205,7 +4800,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2025-10-19",
-          "pushedAt": "2026-11-22",
+          "pushedAt": "2026-11-23",
           "latestRelease": "",
           "firstSeen": "2026-11-14",
           "topics": [],
@@ -4278,6 +4873,13 @@
               "reason": "lightweight",
               "starsTotal": 7761,
               "starsGained": 3113,
+              "release": ""
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 8032,
+              "starsGained": 2616,
               "release": ""
             }
           ],
@@ -4406,7 +5008,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-01-27",
-          "pushedAt": "2026-11-22",
+          "pushedAt": "2026-11-23",
           "latestRelease": "",
           "firstSeen": "2026-11-13",
           "topics": [],
@@ -4487,6 +5089,13 @@
               "starsTotal": 10157,
               "starsGained": 4400,
               "release": ""
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 10503,
+              "starsGained": 3575,
+              "release": ""
             }
           ],
           "analysis": []
@@ -4540,7 +5149,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-11-09",
-          "pushedAt": "2026-11-22",
+          "pushedAt": "2026-11-23",
           "latestRelease": "desktop-v0.8.14",
           "firstSeen": "2026-11-13",
           "topics": [
@@ -4640,6 +5249,13 @@
               "date": "2026-11-23",
               "reason": "lightweight",
               "starsTotal": 1940,
+              "starsGained": 0,
+              "release": "desktop-v0.8.14"
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 1990,
               "starsGained": 0,
               "release": "desktop-v0.8.14"
             }
@@ -4808,6 +5424,13 @@
             },
             {
               "date": "2026-11-23",
+              "reason": "lightweight",
+              "starsTotal": 355,
+              "starsGained": 0,
+              "release": "v6.0.0"
+            },
+            {
+              "date": "2026-11-24",
               "reason": "lightweight",
               "starsTotal": 355,
               "starsGained": 0,
@@ -5048,6 +5671,13 @@
               "date": "2026-11-23",
               "reason": "lightweight",
               "starsTotal": 641,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 686,
               "starsGained": 0,
               "release": ""
             }
@@ -5520,7 +6150,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-10-30",
-          "pushedAt": "2026-11-21",
+          "pushedAt": "2026-11-22",
           "latestRelease": "v0.1.0",
           "firstSeen": "2026-11-11",
           "topics": [
@@ -5624,6 +6254,13 @@
               "date": "2026-11-23",
               "reason": "lightweight",
               "starsTotal": 1658,
+              "starsGained": 0,
+              "release": "v0.1.0"
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 1661,
               "starsGained": 0,
               "release": "v0.1.0"
             }
@@ -6245,6 +6882,13 @@
               "date": "2026-11-23",
               "reason": "lightweight",
               "starsTotal": 815,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 852,
               "starsGained": 0,
               "release": ""
             }
@@ -6963,7 +7607,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-01-09",
-          "pushedAt": "2026-11-22",
+          "pushedAt": "2026-11-23",
           "latestRelease": "v0.7.17",
           "firstSeen": "2026-11-08",
           "topics": [],
@@ -7071,6 +7715,13 @@
               "reason": "lightweight",
               "starsTotal": 32148,
               "starsGained": 3967,
+              "release": "v0.7.17"
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 32563,
+              "starsGained": 3626,
               "release": "v0.7.17"
             }
           ],
@@ -7222,7 +7873,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-10-26",
-          "pushedAt": "2026-11-22",
+          "pushedAt": "2026-11-23",
           "latestRelease": "v4.1.8.2",
           "firstSeen": "2026-11-08",
           "topics": [
@@ -7346,6 +7997,13 @@
               "date": "2026-11-23",
               "reason": "release_update",
               "starsTotal": 913,
+              "starsGained": 0,
+              "release": "v4.1.8.2"
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 953,
               "starsGained": 0,
               "release": "v4.1.8.2"
             }
@@ -7548,7 +8206,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-11-03",
-          "pushedAt": "2026-11-20",
+          "pushedAt": "2026-11-23",
           "latestRelease": "v1.6.3",
           "firstSeen": "2026-11-07",
           "topics": [
@@ -7677,6 +8335,13 @@
               "date": "2026-11-23",
               "reason": "lightweight",
               "starsTotal": 2231,
+              "starsGained": 0,
+              "release": "v1.6.3"
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 2247,
               "starsGained": 0,
               "release": "v1.6.3"
             }
@@ -8674,7 +9339,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-10-30",
-          "pushedAt": "2026-11-22",
+          "pushedAt": "2026-11-23",
           "latestRelease": "",
           "firstSeen": "2026-11-06",
           "topics": [
@@ -8781,6 +9446,13 @@
               "date": "2026-11-23",
               "reason": "lightweight",
               "starsTotal": 562,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 599,
               "starsGained": 0,
               "release": ""
             }
@@ -9188,7 +9860,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-11-01",
-          "pushedAt": "2026-11-21",
+          "pushedAt": "2026-11-23",
           "latestRelease": "v0.2.6",
           "firstSeen": "2026-11-05",
           "topics": [
@@ -9333,6 +10005,13 @@
               "date": "2026-11-23",
               "reason": "lightweight",
               "starsTotal": 740,
+              "starsGained": 0,
+              "release": "v0.2.6"
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 751,
               "starsGained": 0,
               "release": "v0.2.6"
             }
@@ -9841,6 +10520,13 @@
               "starsTotal": 334,
               "starsGained": 0,
               "release": "v2.1.28"
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 336,
+              "starsGained": 0,
+              "release": "v2.1.28"
             }
           ],
           "analysis": []
@@ -10249,6 +10935,13 @@
               "starsTotal": 4972,
               "starsGained": 0,
               "release": "v0.1.47"
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 4988,
+              "starsGained": 0,
+              "release": "v0.1.47"
             }
           ],
           "analysis": []
@@ -10431,6 +11124,13 @@
               "date": "2026-11-23",
               "reason": "lightweight",
               "starsTotal": 2552,
+              "starsGained": 0,
+              "release": "v18-champion"
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 2590,
               "starsGained": 0,
               "release": "v18-champion"
             }
@@ -11201,6 +11901,13 @@
               "date": "2026-11-23",
               "reason": "lightweight",
               "starsTotal": 792,
+              "starsGained": 0,
+              "release": ""
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 794,
               "starsGained": 0,
               "release": ""
             }
@@ -12070,7 +12777,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-10-29",
-          "pushedAt": "2026-11-22",
+          "pushedAt": "2026-11-23",
           "latestRelease": "v0.1.50",
           "firstSeen": "2026-10-31",
           "topics": [
@@ -12251,6 +12958,13 @@
               "starsTotal": 9617,
               "starsGained": 0,
               "release": "v0.1.50"
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 9762,
+              "starsGained": 0,
+              "release": "v0.1.50"
             }
           ],
           "analysis": []
@@ -12271,7 +12985,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-10-25",
-          "pushedAt": "2026-11-22",
+          "pushedAt": "2026-11-23",
           "latestRelease": "v1.3.0",
           "firstSeen": "2026-10-31",
           "topics": [
@@ -12455,6 +13169,13 @@
               "starsTotal": 30136,
               "starsGained": 0,
               "release": "v1.3.0"
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 30748,
+              "starsGained": 0,
+              "release": "v1.3.0"
             }
           ],
           "analysis": []
@@ -12514,7 +13235,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-10-26",
-          "pushedAt": "2026-11-21",
+          "pushedAt": "2026-11-23",
           "latestRelease": "v0.7.6",
           "firstSeen": "2026-10-31",
           "topics": [
@@ -12695,6 +13416,13 @@
               "date": "2026-11-23",
               "reason": "lightweight",
               "starsTotal": 589,
+              "starsGained": 0,
+              "release": "v0.7.6"
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 593,
               "starsGained": 0,
               "release": "v0.7.6"
             }
@@ -13852,6 +14580,13 @@
               "starsTotal": 655,
               "starsGained": 0,
               "release": "examples-v1"
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 658,
+              "starsGained": 0,
+              "release": "examples-v1"
             }
           ],
           "analysis": []
@@ -13872,7 +14607,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-10-26",
-          "pushedAt": "2026-11-22",
+          "pushedAt": "2026-11-23",
           "latestRelease": "v1.5.1",
           "firstSeen": "2026-10-29",
           "topics": [
@@ -14068,6 +14803,13 @@
               "date": "2026-11-23",
               "reason": "lightweight",
               "starsTotal": 421,
+              "starsGained": 0,
+              "release": "v1.5.1"
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 426,
               "starsGained": 0,
               "release": "v1.5.1"
             }
@@ -37259,8 +38001,8 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2022-09-29",
-          "pushedAt": "2026-11-22",
-          "latestRelease": "v1.6.0",
+          "pushedAt": "2026-11-23",
+          "latestRelease": "v1.6.1",
           "firstSeen": "2026-09-23",
           "topics": [
             "board",
@@ -37417,6 +38159,13 @@
               "starsTotal": 31230,
               "starsGained": 7240,
               "release": "v1.6.0"
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "release_update",
+              "starsTotal": 31454,
+              "starsGained": 6436,
+              "release": "v1.6.1"
             }
           ],
           "analysis": []
@@ -37859,8 +38608,8 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2025-07-08",
-          "pushedAt": "2026-11-22",
-          "latestRelease": "v1.5.8",
+          "pushedAt": "2026-11-23",
+          "latestRelease": "v1.5.9",
           "firstSeen": "2026-09-22",
           "topics": [
             "ai-agent",
@@ -37914,6 +38663,13 @@
               "starsTotal": 13352,
               "starsGained": 640,
               "release": "v1.5.8"
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "release_update",
+              "starsTotal": 14364,
+              "starsGained": 908,
+              "release": "v1.5.9"
             }
           ],
           "analysis": []
@@ -51128,7 +51884,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2024-07-27",
-          "pushedAt": "2026-11-22",
+          "pushedAt": "2026-11-23",
           "latestRelease": "v2",
           "firstSeen": "2026-09-01",
           "topics": [
@@ -51225,6 +51981,13 @@
               "reason": "lightweight",
               "starsTotal": 68569,
               "starsGained": 473,
+              "release": "v2"
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 69430,
+              "starsGained": 828,
               "release": "v2"
             }
           ],
@@ -64157,6 +64920,13 @@
               "starsTotal": 62650,
               "starsGained": 687,
               "release": "v0.4.0"
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 63593,
+              "starsGained": 783,
+              "release": "v0.4.0"
             }
           ],
           "analysis": []
@@ -65840,7 +66610,7 @@
           "name": "diagram-design",
           "url": "https://github.com/cathrynlavery/diagram-design",
           "oneLiner": "29 editorial diagram types for Claude Code. Self-contained HTML + SVG. No shadows, no Mermaid-slop.",
-          "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 45 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+          "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 52 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
           "language": "HTML",
           "category": "AI 应用",
           "license": "MIT",
@@ -65849,7 +66619,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-04-16",
-          "pushedAt": "2026-11-22",
+          "pushedAt": "2026-11-23",
           "latestRelease": "",
           "firstSeen": "2026-08-13",
           "topics": [
@@ -66141,6 +66911,13 @@
               "reason": "lightweight",
               "starsTotal": 70209,
               "starsGained": 513,
+              "release": ""
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 70945,
+              "starsGained": 624,
               "release": ""
             }
           ],
@@ -79030,29 +79807,29 @@
           "streakDays": 2,
           "isNew": false,
           "createdAt": "2026-01-23",
-          "pushedAt": "2026-11-22",
+          "pushedAt": "2026-11-23",
           "latestRelease": "v4.6.0",
           "firstSeen": "2026-07-09",
           "topics": [
-            "ai-prompts",
-            "ai-skill",
-            "bluesky",
-            "claude",
-            "claude-code",
-            "clawhub",
-            "deep-research",
-            "hackernews",
+            "agent-skills",
+            "artificial-intelligence",
+            "automation",
+            "bot",
+            "command-line",
+            "data-science",
+            "dsh",
+            "dsh-plugin",
+            "golang",
             "instagram",
-            "openclaw",
+            "llms",
+            "nlp",
+            "osint",
             "polymarket",
-            "recency",
+            "python3",
             "reddit",
-            "research",
-            "social-media",
+            "terminal",
             "tiktok",
-            "trends",
             "twitter",
-            "web-search",
             "youtube"
           ],
           "appearances": [
@@ -79145,6 +79922,13 @@
               "reason": "release_update",
               "starsTotal": 72597,
               "starsGained": 4198,
+              "release": "v4.6.0"
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 73422,
+              "starsGained": 4731,
               "release": "v4.6.0"
             }
           ],
@@ -83038,8 +83822,8 @@
           "streakDays": 3,
           "isNew": false,
           "createdAt": "2026-05-18",
-          "pushedAt": "2026-11-22",
-          "latestRelease": "v1.14.1",
+          "pushedAt": "2026-11-23",
+          "latestRelease": "v1.14.2",
           "firstSeen": "2026-07-24",
           "topics": [
             "agent",
@@ -83308,6 +84092,13 @@
               "starsTotal": 55355,
               "starsGained": 4032,
               "release": "v1.14.1"
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "release_update",
+              "starsTotal": 55682,
+              "starsGained": 3700,
+              "release": "v1.14.2"
             }
           ],
           "analysis": [
@@ -86722,8 +87513,8 @@
           "streakDays": 2,
           "isNew": false,
           "createdAt": "2026-05-18",
-          "pushedAt": "2026-11-22",
-          "latestRelease": "v1.14.1",
+          "pushedAt": "2026-11-23",
+          "latestRelease": "v1.14.2",
           "firstSeen": "2026-07-24",
           "topics": [
             "agent",
@@ -86992,6 +87783,13 @@
               "starsTotal": 55355,
               "starsGained": 4032,
               "release": "v1.14.1"
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "release_update",
+              "starsTotal": 55682,
+              "starsGained": 3700,
+              "release": "v1.14.2"
             }
           ],
           "analysis": [
@@ -89006,8 +89804,8 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-05-18",
-          "pushedAt": "2026-11-22",
-          "latestRelease": "v1.14.1",
+          "pushedAt": "2026-11-23",
+          "latestRelease": "v1.14.2",
           "firstSeen": "2026-07-24",
           "topics": [
             "agent",
@@ -89276,6 +90074,13 @@
               "starsTotal": 55355,
               "starsGained": 4032,
               "release": "v1.14.1"
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "release_update",
+              "starsTotal": 55682,
+              "starsGained": 3700,
+              "release": "v1.14.2"
             }
           ],
           "analysis": [
@@ -99947,7 +100752,7 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-01-16",
-          "pushedAt": "2026-11-20",
+          "pushedAt": "2026-11-23",
           "latestRelease": "v1.0",
           "firstSeen": "2026-07-11",
           "topics": [],
@@ -100041,6 +100846,13 @@
               "reason": "lightweight",
               "starsTotal": 11843,
               "starsGained": 2431,
+              "release": "v1.0"
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 12265,
+              "starsGained": 2683,
               "release": "v1.0"
             }
           ],
@@ -100902,29 +101714,29 @@
           "streakDays": 1,
           "isNew": true,
           "createdAt": "2026-01-23",
-          "pushedAt": "2026-11-22",
+          "pushedAt": "2026-11-23",
           "latestRelease": "v4.6.0",
           "firstSeen": "2026-07-09",
           "topics": [
-            "ai-prompts",
-            "ai-skill",
-            "bluesky",
-            "claude",
-            "claude-code",
-            "clawhub",
-            "deep-research",
-            "hackernews",
+            "agent-skills",
+            "artificial-intelligence",
+            "automation",
+            "bot",
+            "command-line",
+            "data-science",
+            "dsh",
+            "dsh-plugin",
+            "golang",
             "instagram",
-            "openclaw",
+            "llms",
+            "nlp",
+            "osint",
             "polymarket",
-            "recency",
+            "python3",
             "reddit",
-            "research",
-            "social-media",
+            "terminal",
             "tiktok",
-            "trends",
             "twitter",
-            "web-search",
             "youtube"
           ],
           "appearances": [
@@ -101017,6 +101829,13 @@
               "reason": "release_update",
               "starsTotal": 72597,
               "starsGained": 4198,
+              "release": "v4.6.0"
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "lightweight",
+              "starsTotal": 73422,
+              "starsGained": 4731,
               "release": "v4.6.0"
             }
           ],
