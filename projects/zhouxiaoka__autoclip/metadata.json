@@ -1,22 +1,27 @@
 {
   "full_name": "zhouxiaoka/autoclip",
   "url": "https://github.com/zhouxiaoka/autoclip",
-  "description": "AutoClip｜一个链接，一键出片。开源 AI 视频剪辑桌面工具，将播客、访谈、课程等长视频自动剪成短视频，生成字幕、封面和发布文案，适配抖音、小红书、TikTok、Reels 与 YouTube Shorts。Open-source AI video clipping & content repurposing.",
+  "description": "AutoClip｜The open-source OpusClip alternative — local-first AI clipping & MCP server, zero subscriptions. 一个链接，一键出片。开源 AI 视频剪辑桌面工具，将播客、访谈、课程等长视频自动剪成短视频，生成字幕、封面和发布文案，适配抖音、小红书、TikTok、Reels 与 YouTube Shorts。",
   "language": "Python",
   "topics": [
     "ai-agent",
     "ai-video-editor",
+    "claude-code",
     "content-repurposing",
     "desktop-app",
     "douyin",
     "instagram-reels",
+    "local-first",
     "mcp",
+    "mcp-server",
     "open-source",
+    "opusclip-alternative",
     "podcast",
     "subtitles",
     "tiktok",
     "video-clipping",
     "video-editing-software",
+    "whisper",
     "xiaohongshu",
     "youtube-shorts"
   ],
@@ -29,13 +34,13 @@
   "confidence": "medium",
   "info_gaps": [],
   "quality_flags": [],
-  "stars_total": 16104,
+  "stars_total": 16873,
   "created_at": "2025-07-08",
-  "pushed_at": "2026-11-25",
+  "pushed_at": "2026-11-26",
   "latest_release": "v1.6.1",
   "first_seen": "2026-09-22",
-  "last_seen": "2026-11-26",
-  "streak_days": 8,
+  "last_seen": "2026-11-27",
+  "streak_days": 9,
   "analysis_updated_at": null,
   "appearances": [
     {
@@ -92,6 +97,13 @@
       "reason": "release_update",
       "stars_total": 16104,
       "stars_gained": 868,
+      "release": "v1.6.1"
+    },
+    {
+      "date": "2026-11-27",
+      "reason": "lightweight",
+      "stars_total": 16873,
+      "stars_gained": 770,
       "release": "v1.6.1"
     }
   ]
