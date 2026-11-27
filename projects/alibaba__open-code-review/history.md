@@ -39,3 +39,4 @@
 - 2026-11-25 | release_update | ⭐56037(+3015) | release=v1.14.3
 - 2026-11-26 | lightweight | ⭐56327(+2638) | release=v1.14.3
 - 2026-11-27 | release_update | ⭐56625(+2259) | release=v1.14.4
+- 2026-11-28 | lightweight | ⭐56875(+2284) | release=v1.14.4

@@ -1,2 +1,3 @@
 - 2026-11-26 | 🆕新发现 | ⭐279(+0) | release=v2.2.0
 - 2026-11-27 | lightweight | ⭐291(+0) | release=v2.2.0
+- 2026-11-28 | lightweight | ⭐309(+0) | release=v2.2.0

@@ -6,3 +6,4 @@
 - 2026-11-25 | release_update | ⭐1914(+0) | release=app-0.5.0-beta.1
 - 2026-11-26 | lightweight | ⭐2074(+0) | release=app-0.5.0-beta.1
 - 2026-11-27 | lightweight | ⭐2141(+0) | release=app-0.5.0-beta.1
+- 2026-11-28 | release_update | ⭐2197(+0) | release=app-0.5.1

@@ -12,3 +12,4 @@
 - 2026-11-25 | release_update | ⭐2753(+0) | release=v2026.1125.3
 - 2026-11-26 | release_update | ⭐2782(+0) | release=v2026.1125.9
 - 2026-11-27 | release_update | ⭐2809(+0) | release=v2026.1126.8
+- 2026-11-28 | release_update | ⭐2836(+0) | release=v2026.1128.1
